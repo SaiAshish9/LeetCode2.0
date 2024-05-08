@@ -90,8 +90,7 @@ const Navbar = () => {
         <NavItemContainer>
           <StyledImage
             alt="img"
-            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
-            // src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
+            src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
           />
           <OptionsContainer>
             {options.map((i, _) => (
@@ -108,13 +107,17 @@ const Navbar = () => {
         </NavItemContainer>
         <CircularContainer>
           <NavIcon>
-            <StyledImage alt="img" src={BellSvg}/>
+            <StyledImage alt="img" src={BellSvg} />
           </NavIcon>
           <NavIcon>
             <StyledImage alt="img" src={FireSvg} />
             <ScoreText>0</ScoreText>
           </NavIcon>
-          <CircularAvatar alt="pic" src={AvatarPic} />
+          <CircularAvatar
+            alt="pic"
+            //   src={AvatarPic}
+            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
+          />
           <NavIcon noMR>
             <PremiumButton>
               <PremiumText>Premium</PremiumText>
