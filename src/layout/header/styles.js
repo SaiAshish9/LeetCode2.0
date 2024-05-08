@@ -65,6 +65,7 @@ export const NavItem = styled.p`
       : route
       ? css`
           border-bottom: 2.4px solid #fff;
+          color: #fff;
         `
       : css``};
 `;
