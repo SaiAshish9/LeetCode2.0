@@ -101,7 +101,7 @@ export const ScoreText = styled.p`
   font-size: 14px;
   margin-left: 0.27rem;
   position: relative;
-  top: 2px;
+  top: 4px;
 `;
 
 export const PremiumButton = styled.div`
