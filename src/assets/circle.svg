@@ -1,0 +1,20 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-full w-full origin-center -rotate-90 transform" viewBox="0 0 100 100">
+    <circle fill="none" cx="50px" cy="50px" r="42px" stroke-width="3" stroke-linecap="round"
+        stroke="currentColor" class="text-gray-4 dark:text-dark-gray-4"></circle>
+    <circle fill="none" cx="50px" cy="50px" r="42px" stroke-width="3" stroke-linecap="round"
+        stroke="currentColor" class="cursor-pointer text-olive dark:text-dark-olive"
+        stroke-dasharray="21.289932542959644 242.603850358583" stroke-dashoffset="0"
+        data-difficulty="EASY"></circle>
+    <circle fill="none" cx="50px" cy="50px" r="42px" stroke-width="3" stroke-linecap="round"
+        stroke="currentColor" class="cursor-pointer text-yellow dark:text-dark-yellow"
+        stroke-dasharray="46.330948438726466 217.56283446281617"
+        stroke-dashoffset="-21.289932542959644" data-difficulty="MEDIUM"></circle>
+    <circle fill="none" cx="50px" cy="50px" r="42px" stroke-width="3" stroke-linecap="round"
+        stroke="currentColor" class="cursor-pointer text-pink dark:text-dark-pink"
+        stroke-dasharray="17.53884919015247 246.35493371139017"
+        stroke-dashoffset="-67.62088098168611" data-difficulty="HARD"></circle>
+</svg>
+
+<!-- rotate: -90deg; -->
