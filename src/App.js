@@ -6,12 +6,14 @@ import {
   Route,
 } from "react-router-dom";
 import { Fab, Header } from './layout';
+import { Home } from './screens';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Header/>
+        <Home />
         <Fab />
         {/* <Routes>
         <Route path="/" element={<Home />} />
