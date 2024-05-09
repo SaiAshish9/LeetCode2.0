@@ -6,7 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import { Header } from './layout';
-import { Home } from './screens';
+import { Home, QSList } from './screens';
 
 function App() {
   return (
@@ -14,10 +14,10 @@ function App() {
       <div className="App">
         <Header/>
         <Home />
-        {/* <Routes>
+        <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="users/*" element={<Users />} />
-      </Routes> */}
+        <Route path="tag/*" element={<QSList />} />
+      </Routes>
       </div>
     </BrowserRouter>
   );

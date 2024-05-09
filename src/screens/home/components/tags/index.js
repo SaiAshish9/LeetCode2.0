@@ -24,7 +24,7 @@ const Tags = () => {
       .then((res) => res.json())
       .then((res) => {
         setInitialTags(res);
-        setTags(tags);
+        setTags(res);
       })
       .catch((err) => console.log(err));
   }
