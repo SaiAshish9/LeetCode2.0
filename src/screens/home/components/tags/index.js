@@ -42,11 +42,18 @@ const Tags = () => {
     setIsExpanded((isExpanded) => !isExpanded);
   }
 
+  function handleTagClick(e, tag) {
+    e.preventDefault();
+    e.stopPropagation();
+    // navigate("tag/" + tag.toLowerCase().replace(" ", "_"));
+    window.open("tag/" + tag.toLowerCase().replace(" ", "_"),'_blank', 'rel=noopener noreferrer')
+  }
+
   return (
     <Container>
       <TagContent>
         {tags.map((i, _) => (
-          <TagContainer key={i.tag}>
+          <TagContainer onClick={(e) => handleTagClick(e, i.tag)} key={i.tag}>
             <TagName>{i.tag}</TagName>
             <TagCount>{i.count}</TagCount>
           </TagContainer>

@@ -1,23 +1,18 @@
-import './App.css';
+import "./App.css";
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import { Header } from './layout';
-import { Home, QSList } from './screens';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Header } from "./layout";
+import { Home, QSList } from "./screens";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header/>
-        <Home />
+        <Header />
         <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="tag/*" element={<QSList />} />
-      </Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="tag/*" element={<QSList />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

@@ -5,6 +5,7 @@ export const HomeComponent = styled.div`
   padding-top: 50px;
   background-color: rgb(26 26 26);
   color: #fff;
+  min-height: 100vh;
 `;
 
 // padding: 0 10vw;

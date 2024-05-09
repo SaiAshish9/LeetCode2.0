@@ -13,12 +13,12 @@ body {
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
-  background-color: rgb(26 26 26);
+  background-color: transparent;
 }
 
-body {
+/* body {
   background-color: rgb(26 26 26);
-}
+} */
 
 a {
   color: inherit;
