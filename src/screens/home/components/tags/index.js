@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   ArrowImg,
   Container,
@@ -7,42 +7,40 @@ import {
   TagContainer,
   TagCount,
   TagName,
-  TagContent
+  TagContent,
 } from "./styles";
 
 import DoubleArrowDownImg from "../../../../assets/doubleArrowDown.svg";
 
 const Tags = () => {
-  const tags = [
-    {
-      tag: "Array",
-      count: 1325,
-    },
-    {
-      tag: "String",
-      count: 604,
-    },
-    {
-      tag: "Hash Table",
-      count: 460,
-    },
-    {
-      tag: "Dynamic Programming",
-      count: 421,
-    },
-    {
-      tag: "Math",
-      count: 419,
-    },
-    {
-      tag: "Sorting",
-      count: 301,
-    },
-    {
-      tag: "Greedy",
-      count: 296,
-    },
-  ];
+  const [tags, setTags] = useState([]);
+  const [initialTags, setInitialTags] = useState([]);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  function fetchData() {
+    fetch(
+      "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/tags.json"
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setInitialTags(res);
+        setTags(tags);
+      })
+      .catch((err) => console.log(err));
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  function handleToggleClick() {
+    if (!isExpanded) {
+      setTags((tags) => tags.slice(0, 7));
+    } else {
+      setTags(initialTags);
+    }
+    setIsExpanded((isExpanded) => !isExpanded);
+  }
 
   return (
     <Container>
@@ -54,8 +52,10 @@ const Tags = () => {
           </TagContainer>
         ))}
       </TagContent>
-      <ExpandContainer>
-        <ExpandContainerText>Expand</ExpandContainerText>
+      <ExpandContainer onClick={() => handleToggleClick()}>
+        <ExpandContainerText>
+          {isExpanded ? "Expand" : "Collapse"}
+        </ExpandContainerText>
         <ArrowImg src={DoubleArrowDownImg} alt="img" />
       </ExpandContainer>
     </Container>

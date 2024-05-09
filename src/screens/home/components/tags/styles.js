@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -13,9 +12,11 @@ export const TagContent = styled.div`
   padding-right: 3rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   width: 100%;
+  flex-wrap: wrap;
+  overflow-x: hidden;
 `;
 
 export const TagName = styled.p`
@@ -46,8 +47,7 @@ export const TagContainer = styled.div`
   align-items: center;
   overflow: hidden;
   justify-content: space-between;
-  overflow-x: hidden;
-  flex-wrap: wrap:
+  margin: 10px;
 `;
 
 export const ExpandContainer = styled.div`

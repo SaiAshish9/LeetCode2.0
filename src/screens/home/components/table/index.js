@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   DifficultyTag,
   StyledTableContainer,
@@ -143,11 +144,11 @@ const columns = [
     ),
   },
 ];
+
 const data = [
   {
     key: "1",
     status: "scheduled",
-    title: "2601. Prime Subtraction Operation",
     acceptance: "36.5%",
     solution: "tick",
     difficulty: "medium",
@@ -155,7 +156,6 @@ const data = [
   {
     key: "2",
     status: "done",
-    title: "1. Two Sum",
     acceptance: "49.7%",
     solution: "done",
     difficulty: "easy",
@@ -163,19 +163,48 @@ const data = [
   {
     key: "3",
     status: "done",
-    title: "2. Add Two Numbers",
     acceptance: "40.3%",
     solution: "tick",
     difficulty: "medium",
   },
 ];
-const TableContainer = () => (
-  <>
-    <StyledTableContainer
-      columns={columns}
-      dataSource={data}
-      pagination={false}
-    />
-  </>
-);
+
+const TableContainer = () => {
+  const [tableData, setTableData] = useState(data);
+
+  function fetchData() {
+    fetch(
+      "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/questions.json"
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setTableData(
+          res.map((item, key) => {
+            return {
+              title: item,
+              status: "done",
+              solution: "tick",
+              acceptance: data[key]?.acceptance ?? "50%",
+              difficulty: data[key]?.difficulty ?? "hard"
+            };
+          })
+        );
+      })
+      .catch((err) => console.log(err));
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return (
+    <>
+      <StyledTableContainer
+        columns={columns}
+        dataSource={tableData}
+        pagination={{ defaultPageSize: 100, showSizeChanger: true, pageSizeOptions: ['20', '50', '100']}}
+        />
+    </>
+  );
+};
 export default TableContainer;
