@@ -1,8 +1,13 @@
 import React from 'react'
+import { Container, Switch } from './styles'
 
 const QSList = () => {
   return (
-    <div style={{width:"100vw", minHeight:"100vh", backgroundColor: "#fff"}}>QSList</div>
+    <Container>
+      <Switch>
+        Biconnected Component
+      </Switch>
+    </Container>
   )
 }
 

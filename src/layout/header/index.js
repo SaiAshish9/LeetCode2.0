@@ -85,7 +85,7 @@ const Navbar = () => {
   useEffect(() => {}, [pathname]);
 
   return (
-    <NavContainer>
+    <NavContainer tags={pathname?.includes("tag")}>
       <NavContent>
         <NavItemContainer>
           <StyledImage

@@ -1,17 +1,24 @@
 import styled, { css } from "styled-components";
 
 export const NavContainer = styled.div`
-  background-color: rgb(40 40 40);
   width: 100%;
   position: fixed;
   z-index: 10;
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0px 1px 3px #0000003d,
-    0px 2px 8px #00000029;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0px;
+  ${({ tags }) =>
+    tags
+      ? css`
+          background-color: #fff;
+        `
+      : css`
+          background-color: rgb(40 40 40);
+          box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,
+            0px 1px 3px #0000003d, 0px 2px 8px #00000029;
+        `};
 `;
 
 export const NavContent = styled.div`
@@ -44,6 +51,7 @@ export const CircularAvatar = styled.img`
 
 export const NavItem = styled.p`
   color: #eff1f6bf;
+  color: rgba(0,0,0,.55);
   align-self: flex-end;
   margin-left: 1.75rem;
   cursor: pointer;
@@ -51,14 +59,15 @@ export const NavItem = styled.p`
   padding-bottom: 0.75rem;
   font-weight: 400;
   border-bottom: 2.4px solid transparent;
-  :hover {
-    color: rgba(255, 255, 255);
+  &:hover {
+    color: rgba(255, 255, 255) !important;
+    color: rgb(0,0,0) !important;
   }
   ${({ text, route }) =>
     ["HLD", "LLD"].includes(text)
       ? css`
           color: rgb(255 161 22);
-          :hover {
+          &:hover {
             color: rgb(255 161 22);
           }
         `
