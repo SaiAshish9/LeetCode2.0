@@ -9,7 +9,11 @@ function App() {
 
   useEffect(() => {
     document.body.style.backgroundColor =
-      pathname === "/" ? "rgb(26 26 26)" : "#fff";
+      pathname === "/"
+        ? "rgb(26 26 26)"
+        : pathname?.includes("tags")
+        ? "#fff"
+        : "#0f0f0f";
   }, [pathname]);
 
   return (
