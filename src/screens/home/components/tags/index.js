@@ -45,8 +45,7 @@ const Tags = () => {
   function handleTagClick(e, tag) {
     e.preventDefault();
     e.stopPropagation();
-    // navigate("tag/" + tag.toLowerCase().replace(" ", "_"));
-    window.open("tag/" + tag.toLowerCase().replace(" ", "_"),'_blank', 'rel=noopener noreferrer')
+    window.open("/tag/" + tag.toLowerCase().replace(" ", "_"),'_blank', 'rel=noopener noreferrer')
   }
 
   return (

@@ -59,7 +59,19 @@ const QSList = () => {
       key: "title",
       dataIndex: "title",
       render: (_, { title }) => {
-        return <TitleContainer>{title}</TitleContainer>;
+        return (
+          <TitleContainer
+            onClick={() => {
+              window.open(
+                "/problems/" + title.toLowerCase().replaceAll(" ", "_"),
+                "_blank",
+                "rel=noopener noreferrer"
+              );
+            }}
+          >
+            {title}
+          </TitleContainer>
+        );
       },
     },
     {
@@ -72,7 +84,11 @@ const QSList = () => {
             {tags.map((tag, key) => (
               <Tag
                 onClick={() => {
-                  navigate("/tag/" + tag.toLowerCase().replaceAll(" ", "_"));
+                  window.open(
+                    "tag/" + tag.toLowerCase().replaceAll(" ", "_"),
+                    "_blank",
+                    "rel=noopener noreferrer"
+                  );
                 }}
                 key={key}
               >

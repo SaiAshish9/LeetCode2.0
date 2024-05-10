@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "./layout";
-import { Home, QSList } from "./screens";
+import { Home, Problem, QSList } from "./screens";
 import { Container } from "./styles";
 import { useEffect } from "react";
 
@@ -14,10 +14,11 @@ function App() {
 
   return (
     <Container isHome={pathname === "/"}>
-      <Header />
+      {["problems"].includes(pathname?.split("/")?.[0]) && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="tag/*" element={<QSList />} />
+        <Route path="problems/*" element={<Problem />} />
       </Routes>
     </Container>
   );

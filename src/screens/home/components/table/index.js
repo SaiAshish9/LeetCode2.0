@@ -55,6 +55,20 @@ const columns = [
     dataIndex: "title",
     key: "title",
     sorter: (a, b) => a.title - b.title,
+    render: (_, { title }) => (
+      <p
+        onClick={() => {
+          window.open(
+            "/problems/" +
+              title?.split(".")?.[1]?.trim()?.toLowerCase().replaceAll(" ", "_"),
+            "_blank",
+            "rel=noopener noreferrer"
+          );
+        }}
+      >
+        {title}
+      </p>
+    ),
   },
   {
     title: "Solution",
@@ -185,7 +199,7 @@ const TableContainer = () => {
               status: "done",
               solution: "tick",
               acceptance: data[key]?.acceptance ?? "50%",
-              difficulty: data[key]?.difficulty ?? "hard"
+              difficulty: data[key]?.difficulty ?? "hard",
             };
           })
         );
@@ -202,8 +216,12 @@ const TableContainer = () => {
       <StyledTableContainer
         columns={columns}
         dataSource={tableData}
-        pagination={{ defaultPageSize: 100, showSizeChanger: true, pageSizeOptions: ['20', '50', '100']}}
-        />
+        pagination={{
+          defaultPageSize: 100,
+          showSizeChanger: true,
+          pageSizeOptions: ["20", "50", "100"],
+        }}
+      />
     </>
   );
 };
