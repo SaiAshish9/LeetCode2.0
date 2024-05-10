@@ -51,7 +51,6 @@ export const CircularAvatar = styled.img`
 
 export const NavItem = styled.p`
   color: #eff1f6bf;
-  color: rgba(0,0,0,.55);
   align-self: flex-end;
   margin-left: 1.75rem;
   cursor: pointer;
@@ -61,7 +60,6 @@ export const NavItem = styled.p`
   border-bottom: 2.4px solid transparent;
   &:hover {
     color: rgba(255, 255, 255);
-    color: rgb(0,0,0);
   }
   ${({ text, route }) =>
     ["HLD", "LLD"].includes(text)
@@ -75,6 +73,16 @@ export const NavItem = styled.p`
       ? css`
           border-bottom: 2.4px solid #fff;
           color: #fff;
+        `
+      : css``};
+
+  ${({ isHome }) =>
+    !isHome
+      ? css`
+          color: rgba(0, 0, 0, 0.55);
+          &:hover {
+            color: rgb(0, 0, 0);
+          }
         `
       : css``};
 `;

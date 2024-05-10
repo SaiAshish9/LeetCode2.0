@@ -1,20 +1,25 @@
-import "./App.css";
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "./layout";
 import { Home, QSList } from "./screens";
+import { Container } from "./styles";
+import { useEffect } from "react";
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.body.style.backgroundColor =
+      pathname === "/" ? "rgb(26 26 26)" : "#fff";
+  }, [pathname]);
+
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="tag/*" element={<QSList />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <Container isHome={pathname === "/"}>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="tag/*" element={<QSList />} />
+      </Routes>
+    </Container>
   );
 }
 
