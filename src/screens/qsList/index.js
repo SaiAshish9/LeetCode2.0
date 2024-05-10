@@ -1,14 +1,14 @@
-import React from 'react'
-import { Container, Switch } from './styles'
+import React from "react";
+import { Container, Switch } from "./styles";
 
 const QSList = () => {
   return (
     <Container>
       <Switch>
-        Biconnected Component
+        <p>Biconnected Component</p>
       </Switch>
     </Container>
-  )
-}
+  );
+};
 
-export default QSList
+export default QSList;

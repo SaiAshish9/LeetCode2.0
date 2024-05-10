@@ -60,8 +60,8 @@ export const NavItem = styled.p`
   font-weight: 400;
   border-bottom: 2.4px solid transparent;
   &:hover {
-    color: rgba(255, 255, 255) !important;
-    color: rgb(0,0,0) !important;
+    color: rgba(255, 255, 255);
+    color: rgb(0,0,0);
   }
   ${({ text, route }) =>
     ["HLD", "LLD"].includes(text)

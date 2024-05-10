@@ -13,4 +13,6 @@ export const Switch = styled.div`
   padding-top: 20px;
   width: 100%;
   padding-bottom: 0.5em;
+  padding-left: 21vw;
+  font-weight: 500;
 `;
