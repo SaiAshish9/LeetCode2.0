@@ -119,11 +119,10 @@ export const ScoreText = styled.p`
   font-size: 14px;
   margin-left: 0.27rem;
   position: relative;
-  top: 4px;
+  top: 2px;
 `;
 
 export const PremiumButton = styled.div`
-  // background-color: #1a202c;
   border-radius: 5px;
   color: rgb(255 161 22);
   cursor: pointer;

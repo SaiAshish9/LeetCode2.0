@@ -91,10 +91,10 @@ const Navbar = () => {
         </NavItemContainer>
         <CircularContainer>
           <NavIcon>
-            <StyledImage alt="img" src={BellSvg} />
+            <StyledImage style={{ height: "20px" }} alt="img" src={BellSvg} />
           </NavIcon>
           <NavIcon>
-            <StyledImage alt="img" src={FireSvg} />
+            <StyledImage style={{ height: "20px" }} alt="img" src={FireSvg} />
             <ScoreText>0</ScoreText>
           </NavIcon>
           <CircularAvatar

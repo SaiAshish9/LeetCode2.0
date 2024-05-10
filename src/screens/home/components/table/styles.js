@@ -97,9 +97,6 @@ export const StyledTableContainer = styled(Table)`
     }
   }
   margin-bottom: 3rem;
-
-
-
 `;
 
 export const StyledStatusIcon = styled.img`
