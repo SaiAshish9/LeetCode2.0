@@ -3,6 +3,7 @@ import {
   BookmarkIcon,
   BookmarkSpan,
   BookmarkText,
+  Check,
   Container,
   Content,
   ContentSpan,
@@ -40,7 +41,7 @@ const QSList = () => {
           You have solved <ContentTextBold>1 / 1</ContentTextBold> problems.
         </ContentText>
         <ContentText>
-          <input type="chekbox" checked />
+         <Check checked={true} onChange={null}/>
           <ContentTextBold>Show problem tags</ContentTextBold>
         </ContentText>
       </Content>

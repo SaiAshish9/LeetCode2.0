@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { FaBookmark } from "react-icons/fa";
+import { Checkbox } from "antd";
 
 export const Container = styled.div`
   width: 100vw;
@@ -79,4 +80,27 @@ export const ContentSpan = styled.span`
 
 export const ContentTextBold = styled.span`
   font-weight: 700;
+`;
+
+export const Check = styled(Checkbox)`
+  margin-right: 5px;
+  .ant-checkbox-wrapper {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .ant-checkbox {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .ant-checkbox-input {
+    height: 100%; 
+    width: 100%;
+  }
+
+  .ant-checkbox-inner {
+    max-width: 100%;
+    max-height: 100%; 
+  }
 `;
