@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Container isHome={pathname === "/"}>
-      {["problems"].includes(pathname?.split("/")?.[0]) && <Header />}
+      {!["problems"].includes(pathname?.split("/")?.[1]) && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="tag/*" element={<QSList />} />
