@@ -109,6 +109,7 @@ export const TabText = styled.p`
     inActive &&
     css`
       color: #fff9;
+      font-weight: 400;
     `};
   font-size: 0.875rem;
   padding: 0 8px;
@@ -117,5 +118,3 @@ export const TabText = styled.p`
 export const InActiveText = styled.p`
   color: #fff9;
 `;
-
-// hsl(211 100% 50%)

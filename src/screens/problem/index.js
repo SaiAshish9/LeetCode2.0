@@ -30,6 +30,9 @@ import BarsLeftSvg from "../../assets/bars_left.svg";
 import ArrowLeft from "../../assets/arrow_left.svg";
 import ArrowRight from "../../assets/arrow_right1.svg";
 import ShuffleImg from "../../assets/shuffle.svg";
+import CodeSvg from "../../assets/code.svg";
+import DescriptionSvg from "../../assets/description.svg";
+import SolutioningSvg from "../../assets/solutioning.svg";
 
 const Problem = () => {
   // https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png
@@ -109,9 +112,23 @@ const Problem = () => {
         <LeftContainer>
           <TabHeader>
             <TabItem>
+              <NavIcon style={{ marginRight: 0 }}>
+                <StyledImage
+                  style={{ height: "14px", top: 0 }}
+                  alt="img"
+                  src={DescriptionSvg}
+                />
+              </NavIcon>
               <TabText>Description</TabText>
             </TabItem>
             <TabItem>
+              <NavIcon style={{ marginRight: 0 }}>
+                <StyledImage
+                  style={{ height: "14px", top: 0 }}
+                  alt="img"
+                  src={SolutioningSvg}
+                />
+              </NavIcon>
               <TabText inActive>Solutioning</TabText>
             </TabItem>
           </TabHeader>
@@ -119,6 +136,13 @@ const Problem = () => {
         <RightContainer>
           <TabHeader>
             <TabItem>
+              <NavIcon style={{ marginRight: 0 }}>
+                <StyledImage
+                  style={{ height: "14px", top: 0 }}
+                  alt="img"
+                  src={CodeSvg}
+                />
+              </NavIcon>
               <TabText>Code</TabText>
             </TabItem>
           </TabHeader>
