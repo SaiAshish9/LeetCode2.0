@@ -236,3 +236,17 @@ export const TestCaseContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
 `;
+
+export const LeftTag = styled.div`
+  color: #f8615c;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 9999px;
+  background-color: #ffffff1a;
+  cursor: pointer;
+`;

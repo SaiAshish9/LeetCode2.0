@@ -9,6 +9,7 @@ import {
   LeftContentTitle,
   LeftIconContainer,
   LeftLI,
+  LeftTag,
   LogoImg,
   ProblemText,
   RightContainer,
@@ -143,6 +144,9 @@ const Problem = () => {
             <LeftContentTitle>
               1192. Critical Connections in a Network
             </LeftContentTitle>
+            <LeftTag>
+              Hard
+            </LeftTag>
             <LeftContentDescription>
               <div class="elfjS" data-track-load="description_content">
                 <p>
