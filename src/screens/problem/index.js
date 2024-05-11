@@ -5,10 +5,14 @@ import {
   Header,
   LeftContainer,
   LeftIconContainer,
+  LeftLI,
   LogoImg,
   ProblemText,
   RightContainer,
   RightIconContainer,
+  TabHeader,
+  TabItem,
+  TabText,
 } from "./styles";
 import {
   CircularAvatar,
@@ -34,25 +38,27 @@ const Problem = () => {
       <Header>
         <LeftIconContainer>
           <LogoImg
+            style={{ paddingRight: "0.5rem" }}
             alt="img"
             src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
           />
-           <NavIcon>
+          <LeftLI />
+          <NavIcon
+            style={{
+              marginRight: "0.7rem",
+              position: "relative",
+              bottom: "1px",
+            }}
+          >
             <StyledImage
               style={{ height: "16px" }}
               alt="img"
               src={BarsLeftSvg}
             />
           </NavIcon>
-          <ProblemText>
-            Problem Text
-          </ProblemText>
+          <ProblemText>Problem List</ProblemText>
           <NavIcon>
-            <StyledImage
-              style={{ height: "16px" }}
-              alt="img"
-              src={ArrowLeft}
-            />
+            <StyledImage style={{ height: "16px" }} alt="img" src={ArrowLeft} />
           </NavIcon>
           <NavIcon>
             <StyledImage
@@ -100,8 +106,23 @@ const Problem = () => {
         </RightIconContainer>
       </Header>
       <Content>
-        <LeftContainer></LeftContainer>
-        <RightContainer></RightContainer>
+        <LeftContainer>
+          <TabHeader>
+            <TabItem>
+              <TabText>Description</TabText>
+            </TabItem>
+            <TabItem>
+              <TabText>Solutioning</TabText>
+            </TabItem>
+          </TabHeader>
+        </LeftContainer>
+        <RightContainer>
+          <TabHeader>
+            <TabItem>
+              <TabText>Code</TabText>
+            </TabItem>
+          </TabHeader>
+        </RightContainer>
       </Content>
     </Container>
   );

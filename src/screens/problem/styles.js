@@ -66,6 +66,50 @@ export const LeftIconContainer = styled.div`
 `;
 
 export const ProblemText = styled.p`
-  color: #fff;
+  color: #f5f5f5;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  margin-right: 1.2rem;
+  position: relative;
+  top: 2px;
 `;
 
+export const LeftLI = styled.li`
+  background-color: #ffffff14;
+  width: 1px;
+  height: 16px;
+  margin-right: 1.2rem;
+  list-style: none;
+`;
+
+export const TabHeader = styled.div`
+  background-color: #ffffff0f;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+`;
+
+export const TabItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const TabText = styled.p`
+  font-weight: 500;
+  color: #f5f5f5;
+  font-size: 0.875rem;
+`;
+
+export const InActiveText = styled.p`
+  color: #fff9; 
+`;
+
+// hsl(211 100% 50%)
