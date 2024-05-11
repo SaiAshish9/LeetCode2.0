@@ -121,8 +121,9 @@ const Problem = () => {
               </NavIcon>
               <TabText>Description</TabText>
             </TabItem>
+            <LeftLI style={{ marginRight: 8 }} />
             <TabItem>
-              <NavIcon style={{ marginRight: 0 }}>
+              <NavIcon style={{ marginRight: 0, opacity: 0.45 }}>
                 <StyledImage
                   style={{ height: "14px", top: 0 }}
                   alt="img"

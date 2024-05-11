@@ -113,6 +113,17 @@ export const TabText = styled.p`
     `};
   font-size: 0.875rem;
   padding: 0 8px;
+  &::before {
+    background: #ffffff24;
+    content: "";
+    display: block;
+    height: 12px;
+    left: -1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+  }
 `;
 
 export const InActiveText = styled.p`
