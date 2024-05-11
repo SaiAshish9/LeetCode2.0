@@ -26,15 +26,7 @@ export const LeftContainer = styled.div`
   border-radius: 8px;
   border-color: hsl(0, 0%, 100%, 0.1);
   border: 0 solid;
-`;
-
-export const RightContainer = styled.div`
-  width: calc(50% - 3.5px);
-  height: 100%;
-  background-color: #262626;
-  border-radius: 8px;
-  border-color: hsl(0, 0%, 100%, 0.1);
-  border: 0 solid;
+  overflow-y: scroll;
 `;
 
 export const LogoImg = styled.img`
@@ -51,12 +43,6 @@ export const Header = styled.div`
   width: 100%;
   padding: 0 10px;
   padding-left: 1.25rem;
-`;
-
-export const RightIconContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 export const LeftIconContainer = styled.div`
@@ -128,4 +114,125 @@ export const TabText = styled.p`
 
 export const InActiveText = styled.p`
   color: #fff9;
+`;
+
+export const LeftContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.25rem 1rem;
+`;
+
+export const LeftContentTitle = styled.p`
+  color: #f5f5f5;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+`;
+
+export const LeftContentDescription = styled.div`
+  width: 100%;
+  text-align: start;
+
+  p {
+    color: #f5f5f5;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  code {
+    background-color: #ffffff12;
+    border-color: #f7faff1f;
+    color: #eff1f6bf;
+    border-radius: 5px;
+    border-width: 1px;
+    font-family: Menlo, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.125rem;
+    white-space: pre-wrap;
+  }
+
+  pre {
+    border-color: #ffffff24;
+    border-left-width: 2px;
+    color: #fff9;
+    font-family: Menlo, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    overflow: visible;
+    padding-left: 1rem;
+    white-space: pre-line;
+  }
+
+  strong {
+    color: rgb(255 255 255);
+    font-weight: 500;
+  }
+
+  div {
+    white-space: pre-line;
+  }
+
+  white-space: pre-line;
+
+  ul {
+    list-style-type: disc;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 16px;
+    unicode-bidi: isolate;
+    color: rgb(255 255 255);
+  }
+
+  li {
+    margin-bottom: 0.75rem;
+    font-size: 14px;
+  }
+`;
+
+export const RightIconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const RightParentContainer = styled.div`
+  width: calc(50% - 3.5px);
+  height: 100%;
+  display: flex;
+  align-items: space-between;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const RightContainer = styled.div`
+  width: 100%;
+  background-color: #262626;
+  border-radius: 8px;
+  border-color: hsl(0, 0%, 100%, 0.1);
+  border: 0 solid;
+  height: fit-content;
+  flex-grow: 1;
+`;
+
+export const TestCaseContainer = styled.div`
+  background-color: #262626;
+  border-radius: 8px;
+  border-color: hsl(0, 0%, 100%, 0.1);
+  border: 0 solid;
+  padding: 8px 12px;
+  width: 100%;
+  margin-top: 8px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 `;
