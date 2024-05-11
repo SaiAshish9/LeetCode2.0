@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   background-color: #0f0f0f;
@@ -105,11 +105,17 @@ export const TabItem = styled.div`
 export const TabText = styled.p`
   font-weight: 500;
   color: #f5f5f5;
+  ${({ inActive }) =>
+    inActive &&
+    css`
+      color: #fff9;
+    `};
   font-size: 0.875rem;
+  padding: 0 8px;
 `;
 
 export const InActiveText = styled.p`
-  color: #fff9; 
+  color: #fff9;
 `;
 
 // hsl(211 100% 50%)

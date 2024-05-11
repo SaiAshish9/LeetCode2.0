@@ -112,7 +112,7 @@ const Problem = () => {
               <TabText>Description</TabText>
             </TabItem>
             <TabItem>
-              <TabText>Solutioning</TabText>
+              <TabText inActive>Solutioning</TabText>
             </TabItem>
           </TabHeader>
         </LeftContainer>
