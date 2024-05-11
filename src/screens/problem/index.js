@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Container,
   Content,
@@ -40,9 +40,35 @@ import CodeSvg from "../../assets/code.svg";
 import DescriptionSvg from "../../assets/description.svg";
 import SolutioningSvg from "../../assets/solutioning.svg";
 import TestCaseSvg from "../../assets/testcase.svg";
+import { Editor } from "@monaco-editor/react";
 
 const Problem = () => {
   // https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png
+
+  const editorRef = useRef(null);
+
+  useEffect(() => {
+    const resizeHandler = () => {
+      if (editorRef.current) {
+        const parentHeight = editorRef.current.parentElement.clientHeight;
+        editorRef.current.style.height = `${parentHeight}px`;
+        // Trigger layout update after resizing
+        if (editorRef.current.editor) {
+          editorRef.current.editor.layout();
+        }
+      }
+    };
+
+    // Resize editor on window resize
+    window.addEventListener("resize", resizeHandler);
+    // Initial resize
+    resizeHandler();
+
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
+  }, []);
+
   return (
     <Container>
       <Header>
@@ -144,9 +170,7 @@ const Problem = () => {
             <LeftContentTitle>
               1192. Critical Connections in a Network
             </LeftContentTitle>
-            <LeftTag>
-              Hard
-            </LeftTag>
+            <LeftTag>Hard</LeftTag>
             <LeftContentDescription>
               <div class="elfjS" data-track-load="description_content">
                 <p>
@@ -246,6 +270,72 @@ const Problem = () => {
                 <TabText>Code</TabText>
               </TabItem>
             </TabHeader>
+            <div ref={editorRef} style={{ width: "100%", height: "100%" }}>
+              <Editor
+                width="100%"
+                height="100%"
+                theme="vs-dark"
+                defaultLanguage="java"
+                userSelect={false}
+                ref={editorRef}
+                defaultValue={`
+import java.util.*;
+
+class Solution {
+    List<List<Integer>> graph;
+    int[] low;
+    int[] disc;
+    int time;
+    List<List<Integer>> result;
+    
+    public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
+        graph = new ArrayList<>();
+        low = new int[n];
+        disc = new int[n];
+        result = new ArrayList<>();
+        time = 0;
+        
+        // Initialize graph
+        for (int i = 0; i < n; i++) {
+            graph.add(new ArrayList<>());
+        }
+        
+        // Build graph
+        for (List<Integer> conn : connections) {
+            int u = conn.get(0);
+            int v = conn.get(1);
+            graph.get(u).add(v);
+            graph.get(v).add(u);
+        }
+        
+        // Perform DFS
+        dfs(0, -1);
+        
+        return result;
+    }
+    
+    private void dfs(int u, int parent) {
+        low[u] = disc[u] = ++time;
+        
+        for (int v : graph.get(u)) {
+            if (v == parent) continue;
+            
+            if (disc[v] == 0) { // If v is not visited
+                dfs(v, u);
+                low[u] = Math.min(low[u], low[v]);
+                if (low[v] > disc[u]) {
+                    // (u, v) is a critical connection
+                    result.add(Arrays.asList(u, v));
+                }
+            } else { // v is already visited
+                low[u] = Math.min(low[u], disc[v]);
+            }
+        }
+    }
+}
+`}
+              />
+            </div>
           </RightContainer>
           <TestCaseContainer>
             <NavIcon style={{ marginRight: 0 }}>

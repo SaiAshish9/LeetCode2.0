@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Editor as MonacoEditor } from "@monaco-editor/react";
 
 export const Container = styled.div`
   background-color: #0f0f0f;
@@ -221,6 +222,21 @@ export const RightContainer = styled.div`
   border: 0 solid;
   height: fit-content;
   flex-grow: 1;
+  .monaco-editor, .monaco-editor-background {
+    background-color: #262626 !important;
+  }
+  .monaco-editor .margin {
+    background-color: #262626 !important;
+  }
+  canvas {
+    background-color: #262626 !important;
+  }
+  .decorationsOverviewRuler, .scrollbar, .slider {
+    background-color: #262626 !important;
+  }
+  .monaco-editor.vs-dark .monaco-editor .overflow-guard {
+    overflow-y: hidden !important;
+  }
 `;
 
 export const TestCaseContainer = styled.div`
@@ -250,3 +266,5 @@ export const LeftTag = styled.div`
   background-color: #ffffff1a;
   cursor: pointer;
 `;
+
+export const Editor = styled(MonacoEditor)``;
