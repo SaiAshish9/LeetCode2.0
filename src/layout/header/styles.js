@@ -123,7 +123,7 @@ export const ScoreText = styled.p`
 `;
 
 export const PremiumButton = styled.div`
-  border-radius: 5px;
+  border-radius: 8px;
   color: rgb(255 161 22);
   cursor: pointer;
 `;

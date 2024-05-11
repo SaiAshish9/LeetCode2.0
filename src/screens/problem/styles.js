@@ -40,8 +40,32 @@ export const RightContainer = styled.div`
 export const LogoImg = styled.img`
   height: 22px;
   width: auto;
+  padding-right: 1rem;
 `;
 
 export const Header = styled.div`
   height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+  padding-left: 1.25rem;
 `;
+
+export const RightIconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const LeftIconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const ProblemText = styled.p`
+  color: #fff;
+`;
+
