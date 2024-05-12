@@ -50,7 +50,7 @@ const Problem = () => {
   useEffect(() => {
     const resizeHandler = () => {
       if (editorRef.current) {
-        const parentHeight = editorRef.current.parentElement.clientHeight;
+        const parentHeight = editorRef.current.parentElement.clientHeight ;
         editorRef.current.style.height = `${parentHeight}px`;
         // Trigger layout update after resizing
         if (editorRef.current.editor) {
@@ -270,16 +270,13 @@ const Problem = () => {
                 <TabText>Code</TabText>
               </TabItem>
             </TabHeader>
-            <div ref={editorRef} style={{ width: "100%", height: "100%" }}>
               <Editor
                 width="100%"
-                height="100%"
+                height="85vh"
                 theme="vs-dark"
                 defaultLanguage="java"
                 userSelect={false}
-                ref={editorRef}
-                defaultValue={`
-import java.util.*;
+                defaultValue={`import java.util.*;
 
 class Solution {
     List<List<Integer>> graph;
@@ -335,7 +332,6 @@ class Solution {
 }
 `}
               />
-            </div>
           </RightContainer>
           <TestCaseContainer>
             <NavIcon style={{ marginRight: 0 }}>

@@ -222,7 +222,8 @@ export const RightContainer = styled.div`
   border: 0 solid;
   height: fit-content;
   flex-grow: 1;
-  .monaco-editor, .monaco-editor-background {
+  .monaco-editor,
+  .monaco-editor-background {
     background-color: #262626 !important;
   }
   .monaco-editor .margin {
@@ -231,12 +232,42 @@ export const RightContainer = styled.div`
   canvas {
     background-color: #262626 !important;
   }
-  .decorationsOverviewRuler, .scrollbar, .slider {
+  .decorationsOverviewRuler,
+  .scrollbar,
+  .slider {
     background-color: #262626 !important;
   }
   .monaco-editor.vs-dark .monaco-editor .overflow-guard {
     overflow-y: hidden !important;
   }
+  .monaco-scrollable-element > .visible {
+    opacity: 0;
+  }
+  section {
+    border-radius: 8px;
+  }
+  .decorationsOverviewRuler,
+  .scrollbar {
+    display: none !important;
+  }
+  .margin {
+    box-shadow: none !important;
+  }
+  .minimap.slider-mouseover {
+    display: none !important;
+  }
+  .overflow-guard {
+    border-radius: 8px;
+  }
+  .scroll-decoration {
+    box-shadow: none !important;
+  }
+  .mtk1 {
+    color: #4ec9b0 !important;
+  }
+  // .mtk8 {
+  //   color: #9cdcfe;
+  // }
 `;
 
 export const TestCaseContainer = styled.div`
