@@ -317,14 +317,19 @@ export const TabOptionsContainer = styled.div`
   padding: 0.25rem;
   border-color: #ffffff1a;
   border-bottom-width: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const TabOptionsText = styled.div`
-  color: #fff;
+  color: #fff9;
+  font-size: .875rem;
 `;
 
 export const TabOptionsContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 0 0.25rem;
 `;

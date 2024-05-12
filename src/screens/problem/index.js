@@ -31,6 +31,8 @@ import {
   ScoreText,
   StyledImage,
 } from "../../layout/header/styles";
+import { Editor } from "@monaco-editor/react";
+
 import BellSvg from "../../assets/bell.svg";
 import FireSvg from "../../assets/fire.svg";
 import SettingsIconSvg from "../../assets/settings_icon.svg";
@@ -43,13 +45,21 @@ import CodeSvg from "../../assets/code.svg";
 import DescriptionSvg from "../../assets/description.svg";
 import SolutioningSvg from "../../assets/solutioning.svg";
 import TestCaseSvg from "../../assets/testcase.svg";
-import { Editor } from "@monaco-editor/react";
+import ExpandSvg from "../../assets/expand.svg";
+import ReloadSvg from "../../assets/reload.svg";
+import BracesSvg from "../../assets/braces.svg";
+import BookmarkSvg from "../../assets/bookmark.svg";
+import LinesSvg from "../../assets/lines.svg";
+import Bell1Svg from "../../assets/lock1.svg";
+import ArrowDownSvg from "../../assets/arrowDown.svg";
 
 const Problem = () => {
   // https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png
 
   const editorRef = useRef(null);
   const [selected, setSelected] = useState(0);
+
+  const rightIcons = [LinesSvg, BookmarkSvg, BracesSvg, ReloadSvg, ExpandSvg];
 
   useEffect(() => {
     const resizeHandler = () => {
@@ -279,7 +289,33 @@ const Problem = () => {
             <TabOptionsContainer>
               <TabOptionsContent>
                 <TabOptionsText>Java</TabOptionsText>
+                <NavIcon>
+                  <StyledImage
+                    style={{ height: "12px" }}
+                    alt="img"
+                    src={ArrowDownSvg}
+                  />
+                </NavIcon>
+                <NavIcon noMR>
+                  <StyledImage
+                    style={{ height: 12 }}
+                    alt="img"
+                    src={Bell1Svg}
+                  />
+                </NavIcon>
                 <TabOptionsText>Auto</TabOptionsText>
+              </TabOptionsContent>
+              <TabOptionsContent>
+                {rightIcons.map((i, k) => (
+                  <NavIcon noMR={k === 4}>
+                    <StyledImage
+                      key={k}
+                      style={{ height: "14px" }}
+                      alt="img"
+                      src={i}
+                    />
+                  </NavIcon>
+                ))}
               </TabOptionsContent>
             </TabOptionsContainer>
             <Editor
