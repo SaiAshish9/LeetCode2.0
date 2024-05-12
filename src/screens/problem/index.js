@@ -5,6 +5,7 @@ import {
   DropdownContainer,
   DropdownContainerContent,
   DropdownContainerItem,
+  DropdownContainerLeftItem,
   DropdownContainerText,
   Header,
   LeftContainer,
@@ -57,19 +58,20 @@ import BookmarkSvg from "../../assets/bookmark.svg";
 import LinesSvg from "../../assets/lines.svg";
 import Bell1Svg from "../../assets/lock1.svg";
 import ArrowDownSvg from "../../assets/arrowDown.svg";
+import TickSvg1 from "../../assets/tick1.svg";
+import InfoSvg from "../../assets/info.svg";
 
 const Problem = () => {
   // https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png
 
-  const editorRef = useRef(null);
   const [selected, setSelected] = useState(0);
   const [hovered, setHovered] = useState(-1);
 
+  const [itemSelected, setItemSelected] = useState(false);
+
   const rightIcons = [LinesSvg, BookmarkSvg, BracesSvg, ReloadSvg, ExpandSvg];
 
-  useEffect(() => {
-
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <Container>
@@ -276,7 +278,11 @@ const Problem = () => {
             </TabHeader>
             <TabOptionsContainer>
               <TabOptionsContent>
-                <TabOptionsInnerContent>
+                <TabOptionsInnerContent
+                  onClick={() =>
+                    setItemSelected((itemSelected) => !itemSelected)
+                  }
+                >
                   <TabOptionsText style={{ marginRight: "0.25rem" }}>
                     Biconnected Component
                   </TabOptionsText>
@@ -311,22 +317,51 @@ const Problem = () => {
                   </NavIcon>
                 ))}
               </TabOptionsContent>
-              <DropdownContainer>
-                <DropdownContainerContent>
-                  {["Depth First Search", "Biconnected Component", "Graph"].map(
-                    (item, k) => (
+
+              {itemSelected && (
+                <DropdownContainer>
+                  <DropdownContainerContent>
+                    {[
+                      "Depth First Search",
+                      "Biconnected Component",
+                      "Graph",
+                    ].map((item, k) => (
                       <DropdownContainerItem
                         onMouseEnter={() => setHovered(k)}
                         onMouseLeave={() => setHovered(-1)}
                         key={k}
                         hovered={k === hovered}
+                        onClick={() => setItemSelected(k)}
                       >
-                        <DropdownContainerText>{item}</DropdownContainerText>
+                        <DropdownContainerLeftItem>
+                          {k === 1 && (
+                            <NavIcon noMR style={{ marginRight: "0.5rem" }}>
+                              <StyledImage
+                                style={{ height: 14, top: 0 }}
+                                alt="img"
+                                src={TickSvg1}
+                              />
+                            </NavIcon>
+                          )}
+                          <DropdownContainerText noML={k !== 1}>
+                            {item}
+                          </DropdownContainerText>
+                        </DropdownContainerLeftItem>
+
+                        {k === hovered && (
+                          <NavIcon noMR style={{ marginRight: "0rem" }}>
+                            <StyledImage
+                              style={{ height: 14, top: -1 }}
+                              alt="img"
+                              src={InfoSvg}
+                            />
+                          </NavIcon>
+                        )}
                       </DropdownContainerItem>
-                    )
-                  )}
-                </DropdownContainerContent>
-              </DropdownContainer>
+                    ))}
+                  </DropdownContainerContent>
+                </DropdownContainer>
+              )}
             </TabOptionsContainer>
             <Editor
               width="100%"

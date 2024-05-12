@@ -376,6 +376,10 @@ export const DropdownContainerItem = styled.div`
   padding-top: 6px;
   border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  min-width: 17rem;
+  align-items: center;
+  justify-content: space-between;
   ${({ hovered }) =>
     hovered
       ? css`
@@ -384,8 +388,21 @@ export const DropdownContainerItem = styled.div`
       : css``};
 `;
 
+export const DropdownContainerLeftItem = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const DropdownContainerRightItem = styled.div``;
+
 export const DropdownContainerText = styled.p`
   font-size: 14px;
   color: #f5f5f5;
   margin-right: 0.75rem;
+  ${({ noML }) =>
+    noML
+      ? css`
+          margin-left: calc(14px + 0.5rem);
+        `
+      : css``};
 `;
