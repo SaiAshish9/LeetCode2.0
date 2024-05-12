@@ -3,6 +3,9 @@ import {
   Container,
   Content,
   DropdownContainer,
+  DropdownContainerContent,
+  DropdownContainerItem,
+  DropdownContainerText,
   Header,
   LeftContainer,
   LeftContent,
@@ -60,29 +63,12 @@ const Problem = () => {
 
   const editorRef = useRef(null);
   const [selected, setSelected] = useState(0);
+  const [hovered, setHovered] = useState(-1);
 
   const rightIcons = [LinesSvg, BookmarkSvg, BracesSvg, ReloadSvg, ExpandSvg];
 
   useEffect(() => {
-    const resizeHandler = () => {
-      if (editorRef.current) {
-        const parentHeight = editorRef.current.parentElement.clientHeight;
-        editorRef.current.style.height = `${parentHeight}px`;
-        // Trigger layout update after resizing
-        if (editorRef.current.editor) {
-          editorRef.current.editor.layout();
-        }
-      }
-    };
 
-    // Resize editor on window resize
-    window.addEventListener("resize", resizeHandler);
-    // Initial resize
-    resizeHandler();
-
-    return () => {
-      window.removeEventListener("resize", resizeHandler);
-    };
   }, []);
 
   return (
@@ -326,7 +312,20 @@ const Problem = () => {
                 ))}
               </TabOptionsContent>
               <DropdownContainer>
-                
+                <DropdownContainerContent>
+                  {["Depth First Search", "Biconnected Component", "Graph"].map(
+                    (item, k) => (
+                      <DropdownContainerItem
+                        onMouseEnter={() => setHovered(k)}
+                        onMouseLeave={() => setHovered(-1)}
+                        key={k}
+                        hovered={k === hovered}
+                      >
+                        <DropdownContainerText>{item}</DropdownContainerText>
+                      </DropdownContainerItem>
+                    )
+                  )}
+                </DropdownContainerContent>
               </DropdownContainer>
             </TabOptionsContainer>
             <Editor

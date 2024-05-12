@@ -315,7 +315,7 @@ export const Editor = styled(MonacoEditor)``;
 
 export const TabOptionsContainer = styled.div`
   padding: 0.25rem;
-  border-color: #ffffff1a;
+  border-color: #ffffff0f;
   border-bottom-width: 1px;
   display: flex;
   align-items: center;
@@ -349,14 +349,43 @@ export const TabOptionsInnerContent = styled.div`
 `;
 
 export const DropdownContainer = styled.div`
-  background-color: #ffffff1a;
+  background-color: #323232;
   border-radius: 0.5rem;
   position: absolute;
   top: 1rem;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24), 0px 6px 16px rgba(0, 0, 0, 0.16);
-  padding: 0.5rem;
   z-index: 40;
   top: calc(100%);
-  font-size: .875rem;
+  font-size: 0.875rem;
   color: #f5f5f5;
+  text-align: start;
+`;
+
+export const DropdownContainerContent = styled.div`
+  text-align: start;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+`;
+
+export const DropdownContainerItem = styled.div`
+  padding-right: 0.75rem;
+  padding-left: 6px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  ${({ hovered }) =>
+    hovered
+      ? css`
+          background-color: #ffffff1a;
+        `
+      : css``};
+`;
+
+export const DropdownContainerText = styled.p`
+  font-size: 14px;
+  color: #f5f5f5;
+  margin-right: 0.75rem;
 `;
