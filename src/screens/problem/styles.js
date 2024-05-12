@@ -320,16 +320,43 @@ export const TabOptionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 `;
 
 export const TabOptionsText = styled.div`
   color: #fff9;
-  font-size: .875rem;
+  font-size: 0.875rem;
 `;
 
 export const TabOptionsContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 0.25rem;
+  cursor: pointer;
+`;
+
+export const TabOptionsInnerContent = styled.div`
+  border-radius: 0.5rem;
+  padding: 0.125rem 0.375rem;
+
+  &:hover {
+    background-color: #ffffff1a;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+`;
+
+export const DropdownContainer = styled.div`
+  background-color: #ffffff1a;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24), 0px 6px 16px rgba(0, 0, 0, 0.16);
+  padding: 0.5rem;
+  z-index: 40;
+  top: calc(100%);
+  font-size: .875rem;
+  color: #f5f5f5;
 `;

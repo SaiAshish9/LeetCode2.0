@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   Container,
   Content,
+  DropdownContainer,
   Header,
   LeftContainer,
   LeftContent,
@@ -19,6 +20,7 @@ import {
   TabItem,
   TabOptionsContainer,
   TabOptionsContent,
+  TabOptionsInnerContent,
   TabOptionsText,
   TabText,
   TestCaseContainer,
@@ -288,22 +290,28 @@ const Problem = () => {
             </TabHeader>
             <TabOptionsContainer>
               <TabOptionsContent>
-                <TabOptionsText>Java</TabOptionsText>
-                <NavIcon>
-                  <StyledImage
-                    style={{ height: "12px" }}
-                    alt="img"
-                    src={ArrowDownSvg}
-                  />
-                </NavIcon>
-                <NavIcon noMR>
-                  <StyledImage
-                    style={{ height: 12 }}
-                    alt="img"
-                    src={Bell1Svg}
-                  />
-                </NavIcon>
-                <TabOptionsText>Auto</TabOptionsText>
+                <TabOptionsInnerContent>
+                  <TabOptionsText style={{ marginRight: "0.25rem" }}>
+                    Biconnected Component
+                  </TabOptionsText>
+                  <NavIcon style={{ marginRight: "0rem" }}>
+                    <StyledImage
+                      style={{ height: "12px", top: -1 }}
+                      alt="img"
+                      src={ArrowDownSvg}
+                    />
+                  </NavIcon>
+                </TabOptionsInnerContent>
+                <TabOptionsInnerContent>
+                  <NavIcon noMR style={{ marginRight: "0.25rem" }}>
+                    <StyledImage
+                      style={{ height: 12, top: -1 }}
+                      alt="img"
+                      src={Bell1Svg}
+                    />
+                  </NavIcon>
+                  <TabOptionsText>Auto</TabOptionsText>
+                </TabOptionsInnerContent>
               </TabOptionsContent>
               <TabOptionsContent>
                 {rightIcons.map((i, k) => (
@@ -317,6 +325,9 @@ const Problem = () => {
                   </NavIcon>
                 ))}
               </TabOptionsContent>
+              <DropdownContainer>
+                
+              </DropdownContainer>
             </TabOptionsContainer>
             <Editor
               width="100%"
@@ -340,12 +351,10 @@ class Solution {
         result = new ArrayList<>();
         time = 0;
         
-        // Initialize graph
         for (int i = 0; i < n; i++) {
             graph.add(new ArrayList<>());
         }
         
-        // Build graph
         for (List<Integer> conn : connections) {
             int u = conn.get(0);
             int v = conn.get(1);
@@ -353,7 +362,6 @@ class Solution {
             graph.get(v).add(u);
         }
         
-        // Perform DFS
         dfs(0, -1);
         
         return result;
@@ -372,7 +380,7 @@ class Solution {
                     // (u, v) is a critical connection
                     result.add(Arrays.asList(u, v));
                 }
-            } else { // v is already visited
+            } else {
                 low[u] = Math.min(low[u], disc[v]);
             }
         }
