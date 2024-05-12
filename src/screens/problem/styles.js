@@ -263,11 +263,11 @@ export const RightContainer = styled.div`
     box-shadow: none !important;
   }
   .mtk1 {
-    color: #4ec9b0 !important;
+    // color: #4ec9b0 !important;
   }
-  // .mtk8 {
-  //   color: #9cdcfe;
-  // }
+  .mtk8 {
+    // color: #9cdcfe;
+  }
 `;
 
 export const TestCaseContainer = styled.div`
