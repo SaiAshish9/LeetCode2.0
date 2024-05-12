@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Container,
   Content,
@@ -17,6 +17,9 @@ import {
   RightParentContainer,
   TabHeader,
   TabItem,
+  TabOptionsContainer,
+  TabOptionsContent,
+  TabOptionsText,
   TabText,
   TestCaseContainer,
 } from "./styles";
@@ -46,11 +49,12 @@ const Problem = () => {
   // https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png
 
   const editorRef = useRef(null);
+  const [selected, setSelected] = useState(0);
 
   useEffect(() => {
     const resizeHandler = () => {
       if (editorRef.current) {
-        const parentHeight = editorRef.current.parentElement.clientHeight ;
+        const parentHeight = editorRef.current.parentElement.clientHeight;
         editorRef.current.style.height = `${parentHeight}px`;
         // Trigger layout update after resizing
         if (editorRef.current.editor) {
@@ -131,7 +135,6 @@ const Problem = () => {
           </NavIcon>
           <CircularAvatar
             alt="pic"
-            //   src={AvatarPic}
             src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
           />
           <NavIcon noMR>
@@ -142,7 +145,7 @@ const Problem = () => {
         </RightIconContainer>
       </Header>
       <Content>
-        <LeftContainer>
+        <LeftContainer selected={selected === 1} onClick={() => setSelected(1)}>
           <TabHeader>
             <TabItem>
               <NavIcon style={{ marginRight: 0 }}>
@@ -257,7 +260,10 @@ const Problem = () => {
           </LeftContent>
         </LeftContainer>
         <RightParentContainer>
-          <RightContainer>
+          <RightContainer
+            selected={selected === 2}
+            onClick={() => setSelected(2)}
+          >
             <TabHeader>
               <TabItem>
                 <NavIcon style={{ marginRight: 0 }}>
@@ -270,13 +276,19 @@ const Problem = () => {
                 <TabText>Code</TabText>
               </TabItem>
             </TabHeader>
-              <Editor
-                width="100%"
-                height="85vh"
-                theme="vs-dark"
-                defaultLanguage="java"
-                userSelect={false}
-                defaultValue={`import java.util.*;
+            <TabOptionsContainer>
+              <TabOptionsContent>
+                <TabOptionsText>Java</TabOptionsText>
+                <TabOptionsText>Auto</TabOptionsText>
+              </TabOptionsContent>
+            </TabOptionsContainer>
+            <Editor
+              width="100%"
+              height="85vh"
+              theme="vs-dark"
+              defaultLanguage="java"
+              userSelect={false}
+              defaultValue={`import java.util.*;
 
 class Solution {
     List<List<Integer>> graph;
@@ -331,9 +343,12 @@ class Solution {
     }
 }
 `}
-              />
+            />
           </RightContainer>
-          <TestCaseContainer>
+          <TestCaseContainer
+            selected={selected === 3}
+            onClick={() => setSelected(3)}
+          >
             <NavIcon style={{ marginRight: 0 }}>
               <StyledImage
                 style={{ height: "14px", top: 0 }}

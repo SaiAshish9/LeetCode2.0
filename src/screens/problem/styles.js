@@ -195,7 +195,6 @@ export const RightIconContainer = styled.div`
   justify-content: space-between;
 `;
 
-
 export const RightParentContainer = styled.div`
   width: calc(50% - 3.5px);
   height: 100%;
@@ -207,7 +206,8 @@ export const RightParentContainer = styled.div`
 
 export const LeftContainer = styled.div`
   width: calc(50% - 3.5px);
-  border: 1.2px solid #ffffff38;
+  border: ${({ selected }) =>
+    selected ? css`1px solid #ffffff38` : css`0px solid`};
   height: 100%;
   background-color: #262626;
   border-radius: 8px;
@@ -219,8 +219,8 @@ export const TestCaseContainer = styled.div`
   background-color: #262626;
   border-radius: 8px;
   border-color: hsl(0, 0%, 100%, 0.1);
-  border: 1.2px solid #ffffff38;
-  border: 0 solid;
+  border: ${({ selected }) =>
+    selected ? css`1px solid #ffffff38` : css`0px solid`};
   padding: 8px 12px;
   width: 100%;
   margin-top: 8px;
@@ -233,7 +233,8 @@ export const TestCaseContainer = styled.div`
 export const RightContainer = styled.div`
   width: 100%;
   background-color: #262626;
-  border: 1.2px solid #ffffff38;
+  border: ${({ selected }) =>
+    selected ? css`1px solid #ffffff38` : css`0px solid`};
   overflow: hidden;
   border-radius: 8px;
   height: fit-content;
@@ -284,6 +285,16 @@ export const RightContainer = styled.div`
   .mtk8 {
     // color: #9cdcfe;
   }
+  .margin {
+    padding-top: 0.5rem;
+  }
+  .lines-content.monaco-editor-background {
+    padding-top: 0.5rem;
+  }
+  .scroll-decoration,
+  .textAreaCover {
+    height: 0px;
+  }
 `;
 
 export const LeftTag = styled.div`
@@ -301,3 +312,19 @@ export const LeftTag = styled.div`
 `;
 
 export const Editor = styled(MonacoEditor)``;
+
+export const TabOptionsContainer = styled.div`
+  padding: 0.25rem;
+  border-color: #ffffff1a;
+  border-bottom-width: 1px;
+`;
+
+export const TabOptionsText = styled.div`
+  color: #fff;
+`;
+
+export const TabOptionsContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
