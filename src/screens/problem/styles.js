@@ -20,16 +20,6 @@ export const Content = styled.div`
   margin-top: 0px;
 `;
 
-export const LeftContainer = styled.div`
-  width: calc(50% - 3.5px);
-  height: 100%;
-  background-color: #262626;
-  border-radius: 8px;
-  border-color: hsl(0, 0%, 100%, 0.1);
-  border: 0 solid;
-  overflow-y: scroll;
-`;
-
 export const LogoImg = styled.img`
   height: 22px;
   width: auto;
@@ -205,6 +195,7 @@ export const RightIconContainer = styled.div`
   justify-content: space-between;
 `;
 
+
 export const RightParentContainer = styled.div`
   width: calc(50% - 3.5px);
   height: 100%;
@@ -214,12 +205,37 @@ export const RightParentContainer = styled.div`
   justify-content: center;
 `;
 
-export const RightContainer = styled.div`
-  width: 100%;
+export const LeftContainer = styled.div`
+  width: calc(50% - 3.5px);
+  border: 1.2px solid #ffffff38;
+  height: 100%;
   background-color: #262626;
   border-radius: 8px;
   border-color: hsl(0, 0%, 100%, 0.1);
+  overflow-y: scroll;
+`;
+
+export const TestCaseContainer = styled.div`
+  background-color: #262626;
+  border-radius: 8px;
+  border-color: hsl(0, 0%, 100%, 0.1);
+  border: 1.2px solid #ffffff38;
   border: 0 solid;
+  padding: 8px 12px;
+  width: 100%;
+  margin-top: 8px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
+
+export const RightContainer = styled.div`
+  width: 100%;
+  background-color: #262626;
+  border: 1.2px solid #ffffff38;
+  overflow: hidden;
+  border-radius: 8px;
   height: fit-content;
   flex-grow: 1;
   .monaco-editor,
@@ -268,20 +284,6 @@ export const RightContainer = styled.div`
   .mtk8 {
     // color: #9cdcfe;
   }
-`;
-
-export const TestCaseContainer = styled.div`
-  background-color: #262626;
-  border-radius: 8px;
-  border-color: hsl(0, 0%, 100%, 0.1);
-  border: 0 solid;
-  padding: 8px 12px;
-  width: 100%;
-  margin-top: 8px;
-  text-align: start;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 `;
 
 export const LeftTag = styled.div`
