@@ -84,6 +84,12 @@ const Problem = () => {
   const BASE_URl =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
 
+  function toTitleCase(str) {
+    return str.replace(/\b\w/g, function (char) {
+      return char.toUpperCase();
+    });
+  }
+
   async function fetchData() {
     const Q = location?.pathname?.split("/problems/")?.[1];
     const search = location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-");
@@ -109,7 +115,13 @@ const Problem = () => {
             ]
           );
           if (dropdownItemSelected == -1) {
-            setDropdownItemSelected(tags.indexOf(search ?? defaultTag.toLowerCase().split(" ").join("-")));
+            setDropdownItemSelected(
+              tags.indexOf(
+                search
+                  ? toTitleCase(search)
+                  : defaultTag.toLowerCase().split(" ").join("-")
+              )
+            );
           }
         })
         .catch((err) => console.log(err));
