@@ -60,9 +60,13 @@ const columns = [
         onClick={() => {
           window.open(
             "/problems/" +
-              title?.split(".")?.[1]?.trim()?.toLowerCase().replaceAll(" ", "-") + "/",
-            "_blank",
-            "rel=noopener noreferrer"
+              title
+                ?.split(".")?.[1]
+                ?.trim()
+                ?.toLowerCase()
+                .replaceAll(" ", "-") +
+              "/",
+            "_blank"
           );
         }}
       >

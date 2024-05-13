@@ -369,58 +369,7 @@ const Problem = () => {
               theme="vs-dark"
               defaultLanguage="java"
               userSelect={false}
-              defaultValue={`import java.util.*;
-
-class Solution {
-    List<List<Integer>> graph;
-    int[] low;
-    int[] disc;
-    int time;
-    List<List<Integer>> result;
-    
-    public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
-        graph = new ArrayList<>();
-        low = new int[n];
-        disc = new int[n];
-        result = new ArrayList<>();
-        time = 0;
-        
-        for (int i = 0; i < n; i++) {
-            graph.add(new ArrayList<>());
-        }
-        
-        for (List<Integer> conn : connections) {
-            int u = conn.get(0);
-            int v = conn.get(1);
-            graph.get(u).add(v);
-            graph.get(v).add(u);
-        }
-        
-        dfs(0, -1);
-        
-        return result;
-    }
-    
-    private void dfs(int u, int parent) {
-        low[u] = disc[u] = ++time;
-        
-        for (int v : graph.get(u)) {
-            if (v == parent) continue;
-            
-            if (disc[v] == 0) { // If v is not visited
-                dfs(v, u);
-                low[u] = Math.min(low[u], low[v]);
-                if (low[v] > disc[u]) {
-                    // (u, v) is a critical connection
-                    result.add(Arrays.asList(u, v));
-                }
-            } else {
-                low[u] = Math.min(low[u], disc[v]);
-            }
-        }
-    }
-}
-`}
+              defaultValue={``}
             />
           </RightContainer>
           <TestCaseContainer

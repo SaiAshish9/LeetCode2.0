@@ -64,8 +64,7 @@ const QSList = () => {
             onClick={() => {
               window.open(
                 "/problems/" + title.toLowerCase().replaceAll(" ", "_"),
-                "_blank",
-                "rel=noopener noreferrer"
+                "_blank"
               );
             }}
           >
@@ -86,8 +85,7 @@ const QSList = () => {
                 onClick={() => {
                   window.open(
                     "tag/" + tag.toLowerCase().replaceAll(" ", "_"),
-                    "_blank",
-                    "rel=noopener noreferrer"
+                    "_blank"
                   );
                 }}
                 key={key}
