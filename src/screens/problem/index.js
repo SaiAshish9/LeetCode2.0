@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from "react";
 import {
   Container,
@@ -60,6 +61,7 @@ import Bell1Svg from "../../assets/lock1.svg";
 import ArrowDownSvg from "../../assets/arrowDown.svg";
 import TickSvg1 from "../../assets/tick1.svg";
 import InfoSvg from "../../assets/info.svg";
+import { useLocation } from "react-router-dom";
 
 const Problem = () => {
   // https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png
@@ -67,11 +69,53 @@ const Problem = () => {
   const [selected, setSelected] = useState(0);
   const [hovered, setHovered] = useState(-1);
 
-  const [itemSelected, setItemSelected] = useState(false);
+  const [solution, setSolution] = useState(null);
+  const [qInfo, setQInfo] = useState(null);
 
+  const [itemSelected, setItemSelected] = useState(false);
   const rightIcons = [LinesSvg, BookmarkSvg, BracesSvg, ReloadSvg, ExpandSvg];
 
-  useEffect(() => {}, []);
+  const [dropdownItemSelected, setDropdownItemSelected] = useState(-1);
+
+  const location = useLocation();
+
+  const BASE_URl =
+    "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
+
+  async function fetchData() {
+    const Q = location?.pathname?.split("/problems/")?.[1];
+
+    fetch(BASE_URl + "q_info.json")
+      .then((res) => res.json())
+      .then((res) => {
+        Q?.replaceAll("_", "-");
+        setQInfo(res?.[Q]);
+      })
+      .catch((err) => console.log(err));
+
+    if (qInfo?.["qno"]) {
+      fetch(BASE_URl + "solutions.json")
+        .then((res) => res.json())
+        .then((res) => {
+          const qno = qInfo["qno"];
+          const tags = qInfo["tags"];
+          const defaultTag = qInfo["default"];
+          setSolution(res?.[qno]?.["java"]?.["biconnected-component"]);
+          if (dropdownItemSelected == -1) {
+            setDropdownItemSelected(tags.indexOf(defaultTag));
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData, solution]);
 
   return (
     <Container>
@@ -284,7 +328,9 @@ const Problem = () => {
                   }
                 >
                   <TabOptionsText style={{ marginRight: "0.25rem" }}>
-                    Biconnected Component
+                    {qInfo &&
+                      dropdownItemSelected !== -1 &&
+                      qInfo.tags[dropdownItemSelected]}
                   </TabOptionsText>
                   <NavIcon style={{ marginRight: "0rem" }}>
                     <StyledImage
@@ -321,56 +367,60 @@ const Problem = () => {
               {itemSelected && (
                 <DropdownContainer>
                   <DropdownContainerContent>
-                    {[
-                      "Depth First Search",
-                      "Biconnected Component",
-                      "Graph",
-                    ].map((item, k) => (
-                      <DropdownContainerItem
-                        onMouseEnter={() => setHovered(k)}
-                        onMouseLeave={() => setHovered(-1)}
-                        key={k}
-                        hovered={k === hovered}
-                        onClick={() => setItemSelected(k)}
-                      >
-                        <DropdownContainerLeftItem>
-                          {k === 1 && (
-                            <NavIcon noMR style={{ marginRight: "0.5rem" }}>
+                    {qInfo &&
+                      qInfo.tags.map((item, k) => (
+                        <DropdownContainerItem
+                          onMouseEnter={() => setHovered(k)}
+                          onMouseLeave={() => setHovered(-1)}
+                          key={k}
+                          hovered={k === hovered}
+                          onClick={() => {
+                            setDropdownItemSelected(k);
+                            setItemSelected((itemSelected) => !itemSelected);
+                          }}
+                        >
+                          <DropdownContainerLeftItem>
+                            {dropdownItemSelected === k && (
+                              <NavIcon noMR style={{ marginRight: "0.5rem" }}>
+                                <StyledImage
+                                  style={{ height: 14, top: 0 }}
+                                  alt="img"
+                                  src={TickSvg1}
+                                />
+                              </NavIcon>
+                            )}
+                            <DropdownContainerText
+                              noML={dropdownItemSelected !== k}
+                            >
+                              {item}
+                            </DropdownContainerText>
+                          </DropdownContainerLeftItem>
+
+                          {k === hovered && (
+                            <NavIcon noMR style={{ marginRight: "0rem" }}>
                               <StyledImage
-                                style={{ height: 14, top: 0 }}
+                                style={{ height: 14, top: -1 }}
                                 alt="img"
-                                src={TickSvg1}
+                                src={InfoSvg}
                               />
                             </NavIcon>
                           )}
-                          <DropdownContainerText noML={k !== 1}>
-                            {item}
-                          </DropdownContainerText>
-                        </DropdownContainerLeftItem>
-
-                        {k === hovered && (
-                          <NavIcon noMR style={{ marginRight: "0rem" }}>
-                            <StyledImage
-                              style={{ height: 14, top: -1 }}
-                              alt="img"
-                              src={InfoSvg}
-                            />
-                          </NavIcon>
-                        )}
-                      </DropdownContainerItem>
-                    ))}
+                        </DropdownContainerItem>
+                      ))}
                   </DropdownContainerContent>
                 </DropdownContainer>
               )}
             </TabOptionsContainer>
-            <Editor
-              width="100%"
-              height="85vh"
-              theme="vs-dark"
-              defaultLanguage="java"
-              userSelect={false}
-              defaultValue={``}
-            />
+            {solution && (
+              <Editor
+                width="100%"
+                height="85vh"
+                theme="vs-dark"
+                defaultLanguage="java"
+                userSelect={false}
+                defaultValue={solution ?? ""}
+              />
+            )}
           </RightContainer>
           <TestCaseContainer
             selected={selected === 3}
