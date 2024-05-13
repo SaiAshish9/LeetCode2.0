@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from "react";
 import {
   BookmarkIcon,
   BookmarkSpan,
@@ -22,23 +23,20 @@ import {
 } from "./styles";
 
 import { FaCheck } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const data = [
   {
     key: "1",
     qno: "1192",
     title: "Critical Connections in a Network",
-    status: "scheduled",
     acceptance: "55.7%",
-    solution: "tick",
     difficulty: "hard",
     tags: ["Depth First Search", "Graph", "Biconnected Component"],
   },
 ];
 
 const QSList = () => {
-
   const columns = [
     {
       title: "",
@@ -62,7 +60,10 @@ const QSList = () => {
           <TitleContainer
             onClick={() => {
               window.open(
-                "/problems/" + title.toLowerCase().replaceAll(" ", "_") + "?tag=" + "biconnected_component",
+                "/problems/" +
+                  title.toLowerCase().replaceAll(" ", "_") +
+                  "?tag=" +
+                  "biconnected_component",
                 "_blank"
               );
             }}
@@ -108,15 +109,11 @@ const QSList = () => {
       render: (_, { difficulty }) => (
         <>
           <DifficultyTag
-            easy={difficulty === "easy"}
-            medium={difficulty === "medium"}
-            hard={difficulty === "hard"}
+            easy={difficulty === "Easy"}
+            medium={difficulty === "Medium"}
+            hard={difficulty === "Hard"}
           >
-            {difficulty === "easy"
-              ? "Easy"
-              : difficulty === "hard"
-              ? "Hard"
-              : "Medium"}
+            {difficulty}
           </DifficultyTag>
         </>
       ),
@@ -131,12 +128,50 @@ const QSList = () => {
     },
   ];
 
+  const [tableData, setTableData] = useState(null);
+  const [path, setPath] = useState(null);
+  const { pathname } = useLocation();
+
+  const BASE_URl =
+    "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
+
+  function toTitleCase(str) {
+    return str.replace(/\b\w/g, function (char) {
+      return char.toUpperCase();
+    });
+  }
+
+  async function fetchData() {
+    fetch(BASE_URl + "q_info.json")
+      .then((res) => res.json())
+      .then((res) => {
+        let path = pathname?.split("/tag/")?.[1];
+        path = path?.replaceAll("_", " ");
+        path = toTitleCase(path)
+        setPath(path);
+        const values = Object.values(res);
+        const filteredData = values.filter((x) => x?.tags.includes(path));
+        setTableData(
+          filteredData.map((x, k) => {
+            const obj = { ...x };
+            obj["key"] = "" + k;
+            return obj;
+          })
+        );
+      })
+      .catch((err) => console.log(err));
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   return (
     <Container>
       <Switch>
         <BookmarkText>
           <BookmarkIcon />
-          <BookmarkSpan>Biconnected Component</BookmarkSpan>
+          <BookmarkSpan>{pathname && path}</BookmarkSpan>
         </BookmarkText>
         <TabContainer>
           <Tab>
@@ -159,11 +194,13 @@ const QSList = () => {
           <Check checked={true} onChange={null} />
           <ContentTextBold>Show problem tags</ContentTextBold>
         </ContentText>
-        <StyledTableContainer
-          columns={columns}
-          dataSource={data}
-          pagination={false}
-        />
+        {tableData && (
+          <StyledTableContainer
+            columns={columns}
+            dataSource={tableData}
+            pagination={false}
+          />
+        )}
       </Content>
     </Container>
   );
