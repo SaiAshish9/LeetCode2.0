@@ -86,6 +86,7 @@ const Problem = () => {
 
   async function fetchData() {
     const Q = location?.pathname?.split("/problems/")?.[1];
+    const search = location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-");
 
     fetch(BASE_URl + "q_info.json")
       .then((res) => res.json())
@@ -102,7 +103,11 @@ const Problem = () => {
           const qno = qInfo["qno"];
           const tags = qInfo["tags"];
           const defaultTag = qInfo["default"];
-          setSolution(res?.[qno]?.["java"]?.["biconnected-component"]);
+          setSolution(
+            res?.[qno]?.["java"]?.[
+              search ?? defaultTag.toLowerCase().split(" ").join("-")
+            ]
+          );
           if (dropdownItemSelected == -1) {
             setDropdownItemSelected(tags.indexOf(defaultTag));
           }
@@ -127,6 +132,7 @@ const Problem = () => {
   }
 
   useEffect(() => {
+    console.log(location); // location.search: '?tag=biconnected_component'
     fetchData();
     handleDropdownCLickOutside();
   }, []);
