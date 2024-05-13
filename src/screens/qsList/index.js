@@ -38,7 +38,6 @@ const data = [
 ];
 
 const QSList = () => {
-  const navigate = useNavigate();
 
   const columns = [
     {
@@ -63,7 +62,7 @@ const QSList = () => {
           <TitleContainer
             onClick={() => {
               window.open(
-                "/problems/" + title.toLowerCase().replaceAll(" ", "_"),
+                "/problems/" + title.toLowerCase().replaceAll(" ", "_") + "?tag=" + "biconnected_component",
                 "_blank"
               );
             }}
