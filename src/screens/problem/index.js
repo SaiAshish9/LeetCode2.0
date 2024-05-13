@@ -109,7 +109,7 @@ const Problem = () => {
             ]
           );
           if (dropdownItemSelected == -1) {
-            setDropdownItemSelected(tags.indexOf(defaultTag));
+            setDropdownItemSelected(tags.indexOf(search ?? defaultTag.toLowerCase().split(" ").join("-")));
           }
         })
         .catch((err) => console.log(err));
