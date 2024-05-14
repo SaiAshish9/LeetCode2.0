@@ -115,12 +115,12 @@ const Problem = () => {
               search ?? defaultTag.toLowerCase().split(" ").join("-")
             ]
           );
-          if (dropdownItemSelected == -1) {
+          if (dropdownItemSelected === -1) {
             setDropdownItemSelected(
               tags.indexOf(
                 search
-                  ? toTitleCase(search)
-                  : defaultTag.toLowerCase().split(" ").join("-")
+                  ? toTitleCase(search.split("-").join(" "))
+                  : defaultTag
               )
             );
           }
