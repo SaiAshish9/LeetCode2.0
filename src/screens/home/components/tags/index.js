@@ -11,6 +11,7 @@ import {
 } from "./styles";
 
 import DoubleArrowDownImg from "../../../../assets/doubleArrowDown.svg";
+import DoubleArrowUpImg from "../../../../assets/arrow_double_up.svg";
 
 const Tags = () => {
   const [tags, setTags] = useState([]);
@@ -24,7 +25,7 @@ const Tags = () => {
       .then((res) => res.json())
       .then((res) => {
         setInitialTags(res);
-        setTags(res);
+        setTags(isExpanded ? res : res.slice(0, 7));
       })
       .catch((err) => console.log(err));
   }
@@ -34,7 +35,7 @@ const Tags = () => {
   }, []);
 
   function handleToggleClick() {
-    if (!isExpanded) {
+    if (isExpanded) {
       setTags((tags) => tags.slice(0, 7));
     } else {
       setTags(initialTags);
@@ -45,12 +46,12 @@ const Tags = () => {
   function handleTagClick(e, tag) {
     e.preventDefault();
     e.stopPropagation();
-    window.open("/tag/" + tag.toLowerCase().replace(" ", "_"),'_blank')
+    window.open("/tag/" + tag.toLowerCase().replace(" ", "_"), "_blank");
   }
 
   return (
     <Container>
-      <TagContent>
+      <TagContent isExpanded={isExpanded}>
         {tags.map((i, _) => (
           <TagContainer onClick={(e) => handleTagClick(e, i.tag)} key={i.tag}>
             <TagName>{i.tag}</TagName>
@@ -58,11 +59,17 @@ const Tags = () => {
           </TagContainer>
         ))}
       </TagContent>
-      <ExpandContainer onClick={() => handleToggleClick()}>
+      <ExpandContainer
+        isExpanded={isExpanded}
+        onClick={() => handleToggleClick()}
+      >
         <ExpandContainerText>
-          {isExpanded ? "Expand" : "Collapse"}
+          {!isExpanded ? "Expand" : "Collapse"}
         </ExpandContainerText>
-        <ArrowImg src={DoubleArrowDownImg} alt="img" />
+        <ArrowImg
+          src={!isExpanded ? DoubleArrowDownImg : DoubleArrowUpImg}
+          alt="img"
+        />
       </ExpandContainer>
     </Container>
   );

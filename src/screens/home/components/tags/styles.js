@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -9,14 +9,20 @@ export const Container = styled.div`
 `;
 
 export const TagContent = styled.div`
-  padding-right: 3rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   width: 100%;
-  flex-wrap: wrap;
   overflow-x: hidden;
+  ${({ isExpanded }) =>
+    isExpanded
+      ? css`
+          flex-wrap: wrap;
+        `
+      : css`
+          flex-wrap: nowrap;
+        `}
 `;
 
 export const TagName = styled.p`
@@ -60,6 +66,15 @@ export const ExpandContainer = styled.div`
   justify-content: center;
   position: absolute;
   right: 0px;
+  z-index: 100;
+  ${({ isExpanded }) =>
+    isExpanded
+      ? css`
+          bottom: 10px;
+        `
+      : css`
+          top: 10px;
+        `}
   padding: 0.125rem 0.5rem;
   padding-right: 0px;
 `;
