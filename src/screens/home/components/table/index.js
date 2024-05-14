@@ -123,15 +123,11 @@ const columns = [
     render: (_, { difficulty }) => (
       <>
         <DifficultyTag
-          easy={difficulty === "easy"}
-          medium={difficulty === "medium"}
-          hard={difficulty === "hard"}
+          easy={difficulty === "Easy"}
+          medium={difficulty === "Medium"}
+          hard={difficulty === "Hard"}
         >
-          {difficulty === "easy"
-            ? "Easy"
-            : difficulty === "hard"
-            ? "Hard"
-            : "Medium"}
+          {difficulty}
         </DifficultyTag>
       </>
     ),
@@ -163,32 +159,8 @@ const columns = [
   },
 ];
 
-const data = [
-  {
-    key: "1",
-    status: "scheduled",
-    acceptance: "36.5%",
-    solution: "tick",
-    difficulty: "medium",
-  },
-  {
-    key: "2",
-    status: "done",
-    acceptance: "49.7%",
-    solution: "done",
-    difficulty: "easy",
-  },
-  {
-    key: "3",
-    status: "done",
-    acceptance: "40.3%",
-    solution: "tick",
-    difficulty: "medium",
-  },
-];
-
 const TableContainer = () => {
-  const [tableData, setTableData] = useState(data);
+  const [tableData, setTableData] = useState([]);
 
   function fetchData() {
     fetch(
@@ -199,11 +171,46 @@ const TableContainer = () => {
         setTableData(
           res.map((item, key) => {
             return {
+              key: "" + key,
               title: item,
               status: "done",
               solution: "tick",
-              acceptance: data[key]?.acceptance ?? "50%",
-              difficulty: data[key]?.difficulty ?? "hard",
+            };
+          })
+        );
+      })
+      .catch((err) => console.log(err));
+  }
+
+  function fetchDifficulty() {
+    fetch(
+      "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/difficulty.json"
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setTableData(
+          tableData => tableData.map((item, key) => {
+            return {
+              ...item,
+              difficulty: res[key] ?? "Hard",
+            };
+          })
+        );
+      })
+      .catch((err) => console.log(err));
+  }
+
+  function fetchAcceptance() {
+    fetch(
+      "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/acceptance.json"
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setTableData(
+          tableData => tableData.map((item, key) => {
+            return {
+              ...item,
+              acceptance: res[key] ?? "50%",
             };
           })
         );
@@ -213,19 +220,23 @@ const TableContainer = () => {
 
   useEffect(() => {
     fetchData();
+    fetchAcceptance();
+    fetchDifficulty();
   }, []);
 
   return (
     <>
-      <StyledTableContainer
-        columns={columns}
-        dataSource={tableData}
-        pagination={{
-          defaultPageSize: 100,
-          showSizeChanger: true,
-          pageSizeOptions: ["20", "50", "100"],
-        }}
-      />
+      {tableData?.length > 0 && (
+        <StyledTableContainer
+          columns={columns}
+          dataSource={tableData}
+          pagination={{
+            defaultPageSize: 100,
+            showSizeChanger: true,
+            pageSizeOptions: ["20", "50", "100"],
+          }}
+        />
+      )}
     </>
   );
 };
