@@ -165,6 +165,7 @@ export const LeftContentDescription = styled.div`
     white-space: pre-line;
   }
 
+  h2,
   strong {
     color: rgb(255 255 255);
     font-weight: 500;
@@ -175,6 +176,23 @@ export const LeftContentDescription = styled.div`
   }
 
   white-space: pre-line;
+
+  ol {
+    counter-reset: step-counter;
+    padding-left: 20px;
+  }
+  ol > li {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  ol > li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter) ". ";
+    position: absolute;
+    left: -2em;
+    font-weight: bold;
+    color: rgb(255 255 255);
+  }
 
   ul {
     list-style-type: disc;
@@ -192,6 +210,31 @@ export const LeftContentDescription = styled.div`
     margin-bottom: 0.75rem;
     font-size: 14px;
   }
+
+  ${({ desc }) =>
+    desc &&
+    css`
+      padding-left: 1rem;
+      h2 {
+        margin-bottom: 1rem;
+        margin-left: -1rem;
+      }
+
+      ul {
+        padding-inline-start: 32px;
+      }
+      
+      strong::after {
+        content: "";
+        display: block;
+        margin-bottom: 1.5em;
+      }
+      strong::before {
+        content: "";
+        display: block;
+        margin-top: 1.5em;
+      }
+    `};
 `;
 
 export const RightIconContainer = styled.div`
