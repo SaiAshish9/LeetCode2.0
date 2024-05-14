@@ -20,21 +20,11 @@ import {
   FrequencyBar,
   Tag,
   TagsContainer,
+  DescriptionContainer,
 } from "./styles";
 
 import { FaCheck } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
-
-const data = [
-  {
-    key: "1",
-    qno: "1192",
-    title: "Critical Connections in a Network",
-    acceptance: "55.7%",
-    difficulty: "hard",
-    tags: ["Depth First Search", "Graph", "Biconnected Component"],
-  },
-];
 
 const QSList = () => {
   const columns = [
@@ -131,6 +121,8 @@ const QSList = () => {
   const [tableData, setTableData] = useState(null);
   const [path, setPath] = useState(null);
   const { pathname } = useLocation();
+  const [selected, setSelected] = useState(0);
+  const [description, setDescription] = useState(null);
 
   const BASE_URl =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -147,7 +139,7 @@ const QSList = () => {
       .then((res) => {
         let path = pathname?.split("/tag/")?.[1];
         path = path?.replaceAll("_", " ");
-        path = toTitleCase(path)
+        path = toTitleCase(path);
         setPath(path);
         const values = Object.values(res);
         const filteredData = values.filter((x) => x?.tags.includes(path));
@@ -162,9 +154,19 @@ const QSList = () => {
       .catch((err) => console.log(err));
   }
 
+  async function fetchDesc() {
+    fetch(BASE_URl + "tagDescription.json")
+      .then((res) => res.json())
+      .then((res) => {
+        setDescription(res[pathname?.split("/tag/")?.[1]]);
+      })
+      .catch((err) => console.log(err));
+  }
+
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+    fetchDesc();
+  }, []);
 
   return (
     <Container>
@@ -174,32 +176,42 @@ const QSList = () => {
           <BookmarkSpan>{pathname && path}</BookmarkSpan>
         </BookmarkText>
         <TabContainer>
-          <Tab>
+          <Tab onClick={() => setSelected(0)} inactive={selected === 1}>
             <TabText>Problems</TabText>
           </Tab>
-          <Tab inactive>
+          <Tab onClick={() => setSelected(1)} inactive={selected === 0}>
             <TabText>Description</TabText>
           </Tab>
         </TabContainer>
       </Switch>
       <Content>
-        <ContentText>
-          <ContentSpan>Subscribe </ContentSpan>
-          to see which companies asked this question
-        </ContentText>
-        <ContentText>
-          You have solved <ContentTextBold>1 / 1</ContentTextBold> problems.
-        </ContentText>
-        <ContentText>
-          <Check checked={true} onChange={null} />
-          <ContentTextBold>Show problem tags</ContentTextBold>
-        </ContentText>
-        {tableData && (
-          <StyledTableContainer
-            columns={columns}
-            dataSource={tableData}
-            pagination={false}
-          />
+        {selected === 0 ? (
+          <>
+            <ContentText>
+              <ContentSpan>Subscribe </ContentSpan>
+              to see which companies asked this question
+            </ContentText>
+            <ContentText>
+              You have solved <ContentTextBold>1 / 1</ContentTextBold> problems.
+            </ContentText>
+            <ContentText>
+              <Check checked={true} onChange={null} />
+              <ContentTextBold>Show problem tags</ContentTextBold>
+            </ContentText>
+            {tableData && (
+              <StyledTableContainer
+                columns={columns}
+                dataSource={tableData}
+                pagination={false}
+              />
+            )}
+          </>
+        ) : (
+          <DescriptionContainer>
+            {description?.map((desc, k) => (
+              <ContentText key={k}>{desc}</ContentText>
+            ))}
+          </DescriptionContainer>
         )}
       </Content>
     </Container>

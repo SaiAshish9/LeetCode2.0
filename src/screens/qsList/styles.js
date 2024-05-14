@@ -72,6 +72,7 @@ export const ContentText = styled.p`
   font-size: 14px;
   color: rgba(0, 0, 0, 0.65);
   padding-top: 1em;
+  text-align: start;
 `;
 
 export const ContentSpan = styled.span`
@@ -198,4 +199,9 @@ export const Tag = styled.p`
   &:hover {
     background-color: #ddd;
   }
+`;
+
+export const DescriptionContainer = styled.div`
+  padding-right: 28%;
+  padding-top: 1rem;
 `;
