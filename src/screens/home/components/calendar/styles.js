@@ -1,4 +1,3 @@
-
 import styled, { css } from "styled-components";
 
 export const Container = styled.div``;
@@ -130,9 +129,8 @@ export const Dot = styled.div`
 `;
 
 export const WeeklyCard = styled.div`
-  background-image: url("/bg.svg");
+  background-image: url("https://leetcode.com/_next/static/images/background-5ebcfd14b8131f79ce1a1c2d7075ab3e.svg");
   width: 100%;
-  height: 5rem;
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -140,6 +138,58 @@ export const WeeklyCard = styled.div`
   padding-right: 0.625rem;
   border-radius: 0.5rem;
   margin-top: 0.25rem;
+  text-align: start;
+  padding-top: 0.5rem;
+  padding-bottom: 0.875rem;
+  margin-top: 0.5rem;
+`;
+
+export const WeeklyCardTextCircularText = styled.p`
+  font-size: 0.75rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 50%;
+  margin-top: 1rem;
+
+  ${({ active, inactive }) =>
+    active
+      ? css`
+          background: #ffa116;
+          color: #fff;
+        `
+      : inactive
+      ? css`
+          color: #ebebf54d;
+        `
+      : css`
+          color: #ffa116;
+        `}
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const WeeklyCardTextContainer = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const WeeklyCardText = styled.p`
+  font-size: 0.78rem;
+  color: #ffa116;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+`;
+
+export const WeeklyCardSubText = styled.p`
+  color: #ebebf54d;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 0.72rem;
 `;
 
 export const CalendarFoot = styled.div`

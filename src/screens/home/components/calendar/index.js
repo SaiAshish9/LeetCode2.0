@@ -19,7 +19,11 @@ import {
   RedeemCont,
   RedeemContText,
   StyledArrowLeftImg,
-  StyledArrowRightImg
+  StyledArrowRightImg,
+  WeeklyCardText,
+  WeeklyCardSubText,
+  WeeklyCardTextContainer,
+  WeeklyCardTextCircularText,
 } from "./styles";
 
 import CalendarImg from "../../../../assets/calendar.png";
@@ -59,7 +63,23 @@ const Calender = () => {
             </LabelTextContainer>
           ))}
         </LabelsCont>
-        <WeeklyCard />
+        <WeeklyCard>
+          <WeeklyCardTextContainer>
+            <WeeklyCardText>Weekly Premium</WeeklyCardText>
+            <WeeklyCardSubText>Less than a day</WeeklyCardSubText>
+          </WeeklyCardTextContainer>
+          <WeeklyCardTextContainer>
+            {["W1", "W2", "W3", "W4", "W5"].map((i, k) => (
+              <WeeklyCardTextCircularText
+                active={k === 1}
+                inactive={k > 1}
+                key={k}
+              >
+                {i}
+              </WeeklyCardTextCircularText>
+            ))}
+          </WeeklyCardTextContainer>
+        </WeeklyCard>
         <CalendarFoot>
           <RedeemCont>
             <RedeemV src={RedeemImg} alt="img" />
