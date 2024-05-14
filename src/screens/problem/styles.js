@@ -70,13 +70,18 @@ export const TabHeader = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: 4px 6px;
 `;
 
 export const TabItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 4px 6px;
+  border-radius: 5px;
+  &:hover {
+    background-color: #ffffff1a;
+  }
 `;
 
 export const TabText = styled.p`

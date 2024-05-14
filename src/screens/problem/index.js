@@ -77,6 +77,7 @@ const Problem = () => {
   const rightIcons = [LinesSvg, BookmarkSvg, BracesSvg, ReloadSvg, ExpandSvg];
 
   const [dropdownItemSelected, setDropdownItemSelected] = useState(-1);
+  const [step, setStep] = useState(0);
 
   const location = useLocation();
   const containerRef = useRef(null);
@@ -144,7 +145,6 @@ const Problem = () => {
   }
 
   useEffect(() => {
-    console.log(location); // location.search: '?tag=biconnected_component'
     fetchData();
     handleDropdownCLickOutside();
   }, []);
@@ -227,36 +227,42 @@ const Problem = () => {
       <Content>
         <LeftContainer selected={selected === 1} onClick={() => setSelected(1)}>
           <TabHeader>
-            <TabItem>
-              <NavIcon style={{ marginRight: 0 }}>
+            <TabItem onClick={() => setStep(0)}>
+              <NavIcon
+                style={{ marginRight: 0, opacity: step === 1 ? 0.45 : 1 }}
+              >
                 <StyledImage
-                  style={{ height: "14px", top: 0 }}
+                  style={{ height: "14px", top: -1 }}
                   alt="img"
                   src={DescriptionSvg}
                 />
               </NavIcon>
-              <TabText>Description</TabText>
+              <TabText inActive={step === 1}>Description</TabText>
             </TabItem>
             <LeftLI style={{ marginRight: 8 }} />
-            <TabItem>
-              <NavIcon style={{ marginRight: 0, opacity: 0.45 }}>
+            <TabItem onClick={() => setStep(1)}>
+              <NavIcon
+                style={{ marginRight: 0, opacity: step === 0 ? 0.45 : 1 }}
+              >
                 <StyledImage
-                  style={{ height: "14px", top: 0 }}
+                  style={{ height: "14px", top: -1 }}
                   alt="img"
                   src={SolutioningSvg}
                 />
               </NavIcon>
-              <TabText inActive>Solutioning</TabText>
+              <TabText inActive={step === 0}>Solutioning</TabText>
             </TabItem>
           </TabHeader>
           <LeftContent>
             <LeftContentTitle>
-              1192. Critical Connections in a Network
+              {QUESTIONS && qInfo && `${qInfo["qno"]}. ${qInfo["title"]}`}
             </LeftContentTitle>
             <LeftTag>Hard</LeftTag>
-            <LeftContentDescription>
-              {QUESTIONS && qInfo && QUESTIONS[qInfo["qno"]]}
-            </LeftContentDescription>
+            {step === 0 && (
+              <LeftContentDescription>
+                {QUESTIONS && qInfo && QUESTIONS[qInfo["qno"]]}
+              </LeftContentDescription>
+            )}
           </LeftContent>
         </LeftContainer>
         <RightParentContainer>
