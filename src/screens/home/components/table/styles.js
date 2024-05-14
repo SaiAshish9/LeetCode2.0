@@ -105,10 +105,12 @@ export const StyledTableContainer = styled(Table)`
 
   .ant-select-item-option-content {
     color: #fff !important;
+    font-weight: 300;
   }
 
   .ant-select-item-option-active, .ant-select-item-option-selected {
     background: rgb(92 92 92) !important;
+    font-weight: 400;
   }
 
   .ant-pagination-item,
