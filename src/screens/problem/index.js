@@ -81,6 +81,7 @@ const Problem = () => {
 
   const location = useLocation();
   const containerRef = useRef(null);
+  const dropdownRef = useRef(null);
 
   const BASE_URl =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -131,7 +132,9 @@ const Problem = () => {
     const handleClickOutside = (event) => {
       if (
         containerRef.current &&
-        !containerRef.current.contains(event.target)
+        !containerRef.current.contains(event.target) &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
       ) {
         setItemSelected(false);
       }
@@ -141,6 +144,20 @@ const Problem = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }
+
+  let toggleTimeout;
+  const debounceToggle = (func, delay) => {
+    return (...args) => {
+      if (toggleTimeout) clearTimeout(toggleTimeout);
+      toggleTimeout = setTimeout(() => {
+        func(...args);
+      }, delay);
+    };
+  };
+
+  const handleToggle = debounceToggle(() => {
+    setItemSelected(itemSelected => !itemSelected);
+  }, 100);
 
   useEffect(() => {
     fetchData();
@@ -284,9 +301,12 @@ const Problem = () => {
             <TabOptionsContainer>
               <TabOptionsContent>
                 <TabOptionsInnerContent
-                  onClick={() =>
-                    setItemSelected((itemSelected) => !itemSelected)
-                  }
+                  ref={dropdownRef}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleToggle();
+                  }}
                 >
                   <TabOptionsText style={{ marginRight: "0.25rem" }}>
                     {qInfo &&
@@ -325,7 +345,7 @@ const Problem = () => {
                 ))}
               </TabOptionsContent>
 
-              {itemSelected && (
+              {itemSelected && qInfo && dropdownItemSelected > -1 && (
                 <DropdownContainer ref={containerRef}>
                   <DropdownContainerContent>
                     {qInfo &&
