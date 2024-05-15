@@ -111,6 +111,12 @@ export const NavIcon = styled.div`
           margin-right: 1.2rem;
         `
       : css``};
+
+  ${({ hidden }) =>
+    hidden &&
+    css`
+      visibility: hidden;
+    `}
 `;
 
 export const ScoreText = styled.p`

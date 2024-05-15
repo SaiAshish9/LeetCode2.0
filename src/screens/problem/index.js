@@ -60,6 +60,7 @@ import LinesSvg from "../../assets/lines.svg";
 import Bell1Svg from "../../assets/lock1.svg";
 import ArrowDownSvg from "../../assets/arrowDown.svg";
 import TickSvg1 from "../../assets/tick1.svg";
+import TickSvg2 from "../../assets/tick2.svg";
 import InfoSvg from "../../assets/info.svg";
 import { useLocation } from "react-router-dom";
 import { QUESTIONS, SOLUTIONING } from "./data";
@@ -156,7 +157,7 @@ const Problem = () => {
   };
 
   const handleToggle = debounceToggle(() => {
-    setItemSelected(itemSelected => !itemSelected);
+    setItemSelected((itemSelected) => !itemSelected);
   }, 100);
 
   useEffect(() => {
@@ -361,18 +362,29 @@ const Problem = () => {
                           }}
                         >
                           <DropdownContainerLeftItem>
-                            {dropdownItemSelected === k && (
-                              <NavIcon noMR style={{ marginRight: "0.5rem" }}>
-                                <StyledImage
-                                  style={{ height: 14, top: 0 }}
-                                  alt="img"
-                                  src={TickSvg1}
-                                />
-                              </NavIcon>
-                            )}
-                            <DropdownContainerText
-                              noML={dropdownItemSelected !== k}
+                            <NavIcon
+                              hidden={dropdownItemSelected !== k}
+                              noMR
+                              style={{ marginRight: "0.5rem" }}
                             >
+                              <StyledImage
+                                style={{ height: 14, top: 0 }}
+                                alt="img"
+                                src={TickSvg1}
+                              />
+                            </NavIcon>
+                            <NavIcon
+                              hidden={dropdownItemSelected === k}
+                              noMR
+                              style={{ marginRight: "0.5rem" }}
+                            >
+                              <StyledImage
+                                style={{ height: 14, top: 0 }}
+                                alt="img"
+                                src={TickSvg2}
+                              />
+                            </NavIcon>
+                            <DropdownContainerText>
                               {item}
                             </DropdownContainerText>
                           </DropdownContainerLeftItem>

@@ -447,10 +447,4 @@ export const DropdownContainerText = styled.p`
   font-size: 14px;
   color: #f5f5f5;
   margin-right: 0.75rem;
-  ${({ noML }) =>
-    noML
-      ? css`
-          margin-left: calc(14px + 0.5rem);
-        `
-      : css``};
 `;
