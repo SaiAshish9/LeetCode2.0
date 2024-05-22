@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
-import { FaBookmark } from "react-icons/fa";
+import { FaBookmark, FaCheck } from "react-icons/fa";
 import { Checkbox, Table } from "antd";
+import { BREAKPOINTS } from "../constants/index";
 
 export const Container = styled.div`
   width: 100vw;
@@ -138,6 +139,14 @@ export const StyledTableContainer = styled(Table)`
     padding: 8px !important;
     border-bottom: 1px solid #dddddd !important;
   }
+
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    .ant-table-row {
+      .ant-table-cell {
+        vertical-align: top;
+      }
+    }
+  }
 `;
 
 export const TitleContainer = styled.p`
@@ -176,6 +185,9 @@ export const FrequencyBar = styled.div`
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   height: 12px;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    margin-top: 2px;
+  }
 `;
 
 export const TagsContainer = styled.div`
@@ -204,4 +216,10 @@ export const Tag = styled.p`
 export const DescriptionContainer = styled.div`
   padding-right: 28%;
   padding-top: 1rem;
+`;
+
+export const CheckIcon = styled(FaCheck)`
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    margin-top: 5px;
+  }
 `;

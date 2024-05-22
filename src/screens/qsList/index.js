@@ -21,9 +21,9 @@ import {
   Tag,
   TagsContainer,
   DescriptionContainer,
+  CheckIcon,
 } from "./styles";
 
-import { FaCheck } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
 const QSList = () => {
@@ -33,7 +33,7 @@ const QSList = () => {
       key: "tick",
       dataIndex: "tick",
       render: (_, {}) => {
-        return <FaCheck size={12} color="#449d44" />;
+        return <CheckIcon size={12} color="#449d44" />;
       },
     },
     {
