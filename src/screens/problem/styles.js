@@ -117,14 +117,14 @@ export const TabHeaderParentContainer = styled.div`
     display: none;
   }
   overflow: hidden;
-  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
-    width: calc(50%);
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    width: calc(100%);
+    border-radius: 0px;
   }
 `;
 
 export const TabHeader = styled.div`
   background-color: #ffffff0f;
-  border-radius: 8px 8px 0 0;
   cursor: pointer;
   width: 100%;
   display: flex;
