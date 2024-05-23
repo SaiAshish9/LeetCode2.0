@@ -32,6 +32,9 @@ export const Header = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     height: 3rem;
   }
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
 `;
 
 export const Content = styled.div`
@@ -44,6 +47,11 @@ export const Content = styled.div`
   margin-top: 0px;
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     height: calc(100% - 8px - 3rem);
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    width: 100%;
+    margin: 0px;
+    height: calc(100%);
   }
 `;
 
@@ -87,6 +95,11 @@ export const LeftContainer = styled.div`
   border-color: hsl(0, 0%, 100%, 0.1);
   overflow-y: scroll;
   overflow-x: hidden;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+  }
 `;
 
 export const TabHeaderParentContainer = styled.div`
@@ -104,6 +117,9 @@ export const TabHeaderParentContainer = styled.div`
     display: none;
   }
   overflow: hidden;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    width: calc(50%);
+  }
 `;
 
 export const TabHeader = styled.div`
@@ -296,6 +312,9 @@ export const RightParentContainer = styled.div`
   align-items: space-between;
   flex-direction: column;
   justify-content: center;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
 `;
 
 export const TestCaseContainer = styled.div`
