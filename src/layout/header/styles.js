@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { BREAKPOINTS } from "../../screens/constants";
 
 export const NavContainer = styled.div`
   width: 100%;
@@ -29,6 +30,9 @@ export const NavContent = styled.div`
   justify-content: space-between;
   padding: 0 1.25rem;
   height: 3.1rem;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    max-width: 82vw;
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -37,6 +41,9 @@ export const StyledImage = styled.img`
   height: 22px;
   position: relative;
   top: 2px;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    top: -1px;
+  }
 `;
 
 export const CircularAvatar = styled.img`
@@ -126,6 +133,9 @@ export const ScoreText = styled.p`
   margin-left: 0.27rem;
   position: relative;
   top: 2px;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    top: -1px;
+  }
 `;
 
 export const PremiumButton = styled.div`
