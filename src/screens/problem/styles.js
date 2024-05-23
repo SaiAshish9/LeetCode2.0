@@ -77,6 +77,35 @@ export const LeftLI = styled.li`
   list-style: none;
 `;
 
+export const LeftContainer = styled.div`
+  width: calc(50% - 3.5px);
+  border: ${({ selected }) =>
+    selected ? css`1px solid #ffffff38` : css`0px solid`};
+  height: 100%;
+  background-color: #262626;
+  border-radius: 8px;
+  border-color: hsl(0, 0%, 100%, 0.1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+`;
+
+export const TabHeaderParentContainer = styled.div`
+  background-color: #262626;
+  border-radius: 8px 8px 0 0;
+  position: absolute;
+  z-index: 5;
+  width: calc(50% - 11.5px);
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  &:before {
+    display: none;
+  }
+  overflow: hidden;
+`;
+
 export const TabHeader = styled.div`
   background-color: #ffffff0f;
   border-radius: 8px 8px 0 0;
@@ -133,6 +162,8 @@ export const LeftContent = styled.div`
   align-items: flex-start;
   width: 100%;
   padding: 1.25rem 1rem;
+  margin-top: 2.5rem;
+  position: relative;
 `;
 
 export const LeftContentTitle = styled.p`
@@ -267,17 +298,6 @@ export const RightParentContainer = styled.div`
   justify-content: center;
 `;
 
-export const LeftContainer = styled.div`
-  width: calc(50% - 3.5px);
-  border: ${({ selected }) =>
-    selected ? css`1px solid #ffffff38` : css`0px solid`};
-  height: 100%;
-  background-color: #262626;
-  border-radius: 8px;
-  border-color: hsl(0, 0%, 100%, 0.1);
-  overflow-y: scroll;
-`;
-
 export const TestCaseContainer = styled.div`
   background-color: #262626;
   border-radius: 8px;
@@ -384,11 +404,17 @@ export const TabOptionsContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
+  text-align: start;
+  @media only screen and (max-width: ${BREAKPOINTS.xs}) {
+    padding: 0.125rem;
+    display: none;
+  }
 `;
 
 export const TabOptionsText = styled.div`
   color: #fff9;
   font-size: 0.875rem;
+  text-align: start;
 `;
 
 export const TabOptionsContent = styled.div`
@@ -396,6 +422,17 @@ export const TabOptionsContent = styled.div`
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
+
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding: 0.125rem;
+
+    ${({ icons }) =>
+      icons
+        ? css`
+            display: none;
+          `
+        : css``};
+  }
 `;
 
 export const TabOptionsInnerContent = styled.div`
@@ -462,6 +499,7 @@ export const DropdownContainerText = styled.p`
   font-size: 14px;
   color: #f5f5f5;
   margin-right: 0.75rem;
+  text-align: start;
 `;
 
 export const MiddleLeftHeaderContainer = styled.div`
