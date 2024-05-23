@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Editor as MonacoEditor } from "@monaco-editor/react";
+import { BREAKPOINTS } from "../constants";
 
 export const Container = styled.div`
   background-color: #0f0f0f;
@@ -10,20 +11,14 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Content = styled.div`
-  margin: 10px;
-  height: calc(100% - 8px - 5vh);
-  width: calc(100% - 16px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 0px;
-`;
-
 export const LogoImg = styled.img`
   height: 22px;
   width: auto;
   padding-right: 1rem;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    position: relative;
+    top: -1px;
+  }
 `;
 
 export const Header = styled.div`
@@ -34,6 +29,22 @@ export const Header = styled.div`
   width: 100%;
   padding: 0 10px;
   padding-left: 1.25rem;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    height: 3rem;
+  }
+`;
+
+export const Content = styled.div`
+  margin: 10px;
+  height: calc(100% - 8px - 5vh);
+  width: calc(100% - 16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    height: calc(100% - 8px - 3rem);
+  }
 `;
 
 export const LeftIconContainer = styled.div`
@@ -52,7 +63,10 @@ export const ProblemText = styled.p`
   margin-block-end: 0em !important;
   margin-right: 1.2rem;
   position: relative;
-  top: 2px;
+  top: 1.5px;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    top: -1.5px;
+  }
 `;
 
 export const LeftLI = styled.li`
@@ -126,6 +140,7 @@ export const LeftContentTitle = styled.p`
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-align: start;
 `;
 
 export const LeftContentDescription = styled.div`
@@ -223,7 +238,7 @@ export const LeftContentDescription = styled.div`
       ul {
         padding-inline-start: 32px;
       }
-      
+
       strong::after {
         content: "";
         display: block;
@@ -447,4 +462,13 @@ export const DropdownContainerText = styled.p`
   font-size: 14px;
   color: #f5f5f5;
   margin-right: 0.75rem;
+`;
+
+export const MiddleLeftHeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (max-width: ${BREAKPOINTS.xs}) {
+    display: none;
+  }
 `;

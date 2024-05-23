@@ -56,11 +56,14 @@ export const StyledImage = styled.img`
 export const CircularAvatar = styled.img`
   border-radius: 50%;
   background: #fff;
-  width: 24px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
   position: relative;
   top: 2px;
   margin-right: 1.2rem;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    top: 0px;
+  }
 `;
 
 export const NavItem = styled.p`

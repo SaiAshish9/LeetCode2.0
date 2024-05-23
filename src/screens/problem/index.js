@@ -17,6 +17,7 @@ import {
   LeftLI,
   LeftTag,
   LogoImg,
+  MiddleLeftHeaderContainer,
   ProblemText,
   RightContainer,
   RightIconContainer,
@@ -178,38 +179,44 @@ const Problem = () => {
             alt="img"
             src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
           />
-          <LeftLI />
-          <NavIcon
-            style={{
-              marginRight: "0.7rem",
-              position: "relative",
-              bottom: "1px",
-            }}
-          >
-            <StyledImage
-              style={{ height: "16px" }}
-              alt="img"
-              src={BarsLeftSvg}
-            />
-          </NavIcon>
-          <ProblemText>Problem List</ProblemText>
-          <NavIcon>
-            <StyledImage style={{ height: "16px" }} alt="img" src={ArrowLeft} />
-          </NavIcon>
-          <NavIcon>
-            <StyledImage
-              style={{ height: "16px" }}
-              alt="img"
-              src={ArrowRight}
-            />
-          </NavIcon>
-          <NavIcon>
-            <StyledImage
-              style={{ height: "16px" }}
-              alt="img"
-              src={ShuffleImg}
-            />
-          </NavIcon>
+          <MiddleLeftHeaderContainer>
+            <LeftLI />
+            <NavIcon
+              style={{
+                marginRight: "0.7rem",
+                position: "relative",
+                bottom: "1px",
+              }}
+            >
+              <StyledImage
+                style={{ height: "16px" }}
+                alt="img"
+                src={BarsLeftSvg}
+              />
+            </NavIcon>
+            <ProblemText>Problem List</ProblemText>
+            <NavIcon>
+              <StyledImage
+                style={{ height: "16px" }}
+                alt="img"
+                src={ArrowLeft}
+              />
+            </NavIcon>
+            <NavIcon>
+              <StyledImage
+                style={{ height: "16px" }}
+                alt="img"
+                src={ArrowRight}
+              />
+            </NavIcon>
+            <NavIcon>
+              <StyledImage
+                style={{ height: "16px" }}
+                alt="img"
+                src={ShuffleImg}
+              />
+            </NavIcon>
+          </MiddleLeftHeaderContainer>
         </LeftIconContainer>
         <RightIconContainer>
           <NavIcon>
