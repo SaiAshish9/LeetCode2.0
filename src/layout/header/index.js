@@ -13,11 +13,13 @@ import {
   ScoreText,
   PremiumButton,
   PremiumText,
+  BarsIcon,
 } from "./styles";
 
 import BellSvg from "../../assets/bell.svg";
 import FireSvg from "../../assets/fire.svg";
 import LogoDark from "../../assets/logo_dark.svg";
+import { HiBars3 } from "react-icons/hi2";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -108,6 +110,7 @@ const Navbar = () => {
             </PremiumButton>
           </NavIcon>
         </CircularContainer>
+        <BarsIcon />
       </NavContent>
     </NavContainer>
   );

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { BREAKPOINTS } from "../../screens/constants";
+import { HiBars3 } from "react-icons/hi2";
 
 export const NavContainer = styled.div`
   width: 100%;
@@ -32,6 +33,12 @@ export const NavContent = styled.div`
   height: 3.1rem;
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     max-width: 82vw;
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.xl}) {
+    max-width: 90vw;
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    max-width: 100vw;
   }
 `;
 
@@ -100,12 +107,18 @@ export const NavItemContainer = styled.div`
 
 export const OptionsContainer = styled.div`
   display: flex;
+  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+    display: none;
+  }
 `;
 
 export const CircularContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
 `;
 
 export const NavIcon = styled.div`
@@ -142,6 +155,9 @@ export const PremiumButton = styled.div`
   border-radius: 8px;
   color: rgb(255 161 22);
   cursor: pointer;
+  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+    display: none;
+  }
 `;
 
 export const PremiumText = styled.p`
@@ -156,4 +172,10 @@ export const PremiumText = styled.p`
 export const StudyPlanContent = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const BarsIcon = styled(HiBars3)`
+  font-size: 24px;
+  align-self: center;
+  cursor: pointer;
 `;

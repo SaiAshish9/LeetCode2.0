@@ -9,6 +9,7 @@ export const Container = styled.div`
   background-color: #fff;
   padding-top: 50px;
   text-align: start;
+  padding-bottom: 5rem;
 `;
 
 export const Switch = styled.div`
