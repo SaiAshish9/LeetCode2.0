@@ -64,7 +64,7 @@ import ArrowDownSvg from "../../assets/arrowDown.svg";
 import TickSvg1 from "../../assets/tick1.svg";
 import TickSvg2 from "../../assets/tick2.svg";
 import InfoSvg from "../../assets/info.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { QUESTIONS, SOLUTIONING } from "./data";
 
 const Problem = () => {
@@ -170,6 +170,8 @@ const Problem = () => {
   useEffect(() => {
     fetchData();
   }, [fetchData, solution]);
+
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -369,6 +371,10 @@ const Problem = () => {
                           hovered={k === hovered}
                           onClick={() => {
                             setDropdownItemSelected(k);
+                            navigate(
+                              "/problems/critical_connections_in_a_network?tag=" +
+                                item.toLowerCase().split(" ").join("_")
+                            );
                             setItemSelected((itemSelected) => !itemSelected);
                           }}
                         >
