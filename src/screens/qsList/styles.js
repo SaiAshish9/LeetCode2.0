@@ -17,6 +17,9 @@ export const Switch = styled.div`
   padding-top: 20px;
   width: 100%;
   padding-left: 21vw;
+  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+    padding-left: 4.25vw;
+  }
 `;
 
 export const BookmarkIcon = styled(FaBookmark)`
@@ -68,6 +71,9 @@ export const TabText = styled.p`
 
 export const Content = styled.div`
   padding-left: 21vw;
+  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+    padding-left: 4.25vw;
+  }
 `;
 
 export const ContentText = styled.p`
@@ -147,6 +153,10 @@ export const StyledTableContainer = styled(Table)`
         vertical-align: top;
       }
     }
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+    width: 91.5%;
+    overflow-x: scroll;
   }
 `;
 
