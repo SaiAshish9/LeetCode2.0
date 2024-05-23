@@ -10,6 +10,9 @@ export const Container = styled.div`
   padding-top: 50px;
   text-align: start;
   padding-bottom: 5rem;
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
 `;
 
 export const Switch = styled.div`
@@ -18,7 +21,7 @@ export const Switch = styled.div`
   width: 100%;
   padding-left: 21vw;
   @media only screen and (max-width: ${BREAKPOINTS.x175}) {
-    padding-left: 4.25vw;
+    padding-left: 4.25%;
   }
 `;
 
@@ -155,9 +158,9 @@ export const StyledTableContainer = styled(Table)`
     }
   }
   @media only screen and (max-width: ${BREAKPOINTS.x175}) {
-    width: 91.5%;
-    overflow-x: scroll;
+    width: 95.75%;
   }
+  overflow-x: scroll;
 `;
 
 export const TitleContainer = styled.p`

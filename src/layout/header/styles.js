@@ -116,7 +116,7 @@ export const CircularContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
     display: none;
   }
 `;
@@ -178,4 +178,7 @@ export const BarsIcon = styled(HiBars3)`
   font-size: 24px;
   align-self: center;
   cursor: pointer;
+  @media only screen and (min-width: ${BREAKPOINTS.x175}) {
+    display: none;
+  }
 `;
