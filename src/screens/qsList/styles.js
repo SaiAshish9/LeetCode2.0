@@ -9,9 +9,12 @@ export const Container = styled.div`
   background-color: #fff;
   padding-top: 50px;
   text-align: start;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
   &::-webkit-scrollbar {
     height: 3px;
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+    padding-bottom: 2.5rem;
   }
 `;
 
@@ -230,6 +233,9 @@ export const Tag = styled.p`
 export const DescriptionContainer = styled.div`
   padding-right: 28%;
   padding-top: 1rem;
+  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
+    padding-right: 4.25%;
+  }
 `;
 
 export const CheckIcon = styled(FaCheck)`
