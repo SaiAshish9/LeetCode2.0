@@ -66,9 +66,9 @@ export const Container = styled.div`
   .textAreaCover {
     height: 0px;
   }
-  @media only screen and (max-width: ${BREAKPOINTS.md}) {
-    .monaco-scrollable-element.editor-scrollable {
-      left: 0px;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    .monaco-scrollable-element {
+      left: 10px !important;
     }
     .monaco-editor {
       border: 1px solid #ffffff0f;
