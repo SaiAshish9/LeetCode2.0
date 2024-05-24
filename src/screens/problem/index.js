@@ -418,7 +418,7 @@ const Problem = () => {
                 </TabOptionsContainer>
                 <Editor
                   width="100%"
-                  height="85vh"
+                  height="63vh"
                   theme="vs-dark"
                   defaultLanguage="java"
                   userSelect={false}
