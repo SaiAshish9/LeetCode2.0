@@ -424,7 +424,7 @@ const Problem = () => {
                   }}
                 >
                   <Editor
-                    width="100%"
+                    width="95vw"
                     height="100%"
                     theme="vs-dark"
                     defaultLanguage="java"
@@ -436,12 +436,12 @@ const Problem = () => {
                       position: "absolute",
                       top: 0,
                       left: 0,
-                      width: "100%",
+                      width: "95vw",
                       height: "100%",
                       background: "transparent",
                       zIndex: 1,
                       userSelect: "none",
-                      pointerEvents: "none", // This ensures no clicks pass through
+                      pointerEvents: "all", // This ensures no clicks pass through
                     }}
                   />
                 </div>
