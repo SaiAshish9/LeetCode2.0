@@ -611,3 +611,10 @@ export const MiddleLeftHeaderContainer = styled.div`
     display: none;
   }
 `;
+
+export const SEditor = styled.div`
+  width: 100%;
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
+`;

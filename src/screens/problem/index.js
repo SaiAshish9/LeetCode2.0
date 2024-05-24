@@ -23,6 +23,7 @@ import {
   RightContainer,
   RightIconContainer,
   RightParentContainer,
+  SEditor,
   TabHeader,
   TabHeaderMContent,
   TabHeaderParentContainer,
@@ -81,6 +82,7 @@ const Problem = () => {
   const [qInfo, setQInfo] = useState(null);
 
   const [itemSelected, setItemSelected] = useState(false);
+  const [itemSelected1, setItemSelected1] = useState(false);
   const rightIcons = [LinesSvg, BookmarkSvg, BracesSvg, ReloadSvg, ExpandSvg];
 
   const [dropdownItemSelected, setDropdownItemSelected] = useState(-1);
@@ -89,6 +91,9 @@ const Problem = () => {
   const location = useLocation();
   const containerRef = useRef(null);
   const dropdownRef = useRef(null);
+
+  const containerRef1 = useRef(null);
+  const dropdownRef1 = useRef(null);
 
   const BASE_URl =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -152,6 +157,23 @@ const Problem = () => {
     };
   }
 
+  function handleDropdownCLickOutside1() {
+    const handleClickOutside = (event) => {
+      if (
+        containerRef1.current &&
+        !containerRef1.current.contains(event.target) &&
+        dropdownRef1.current &&
+        !dropdownRef1.current.contains(event.target)
+      ) {
+        setItemSelected1(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }
+
   let toggleTimeout;
   const debounceToggle = (func, delay) => {
     return (...args) => {
@@ -162,6 +184,11 @@ const Problem = () => {
     };
   };
 
+
+  const handleToggle1 = debounceToggle(() => {
+    setItemSelected1((itemSelected1) => !itemSelected1);
+  }, 100);
+
   const handleToggle = debounceToggle(() => {
     setItemSelected((itemSelected) => !itemSelected);
   }, 100);
@@ -169,6 +196,7 @@ const Problem = () => {
   useEffect(() => {
     fetchData();
     handleDropdownCLickOutside();
+    handleDropdownCLickOutside1();
   }, []);
 
   useEffect(() => {
@@ -326,15 +354,15 @@ const Problem = () => {
             )}
             {step === 1 && qInfo && SOLUTIONING[qInfo["qno"]]}
             {step === 2 && solution && (
-              <>
+              <SEditor>
                 <TabOptionsContainer>
                   <TabOptionsContent>
                     <TabOptionsInnerContent
-                      ref={dropdownRef}
+                      ref={dropdownRef1}
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        handleToggle();
+                        handleToggle1();
                       }}
                     >
                       <TabOptionsText style={{ marginRight: "0.25rem" }}>
@@ -352,8 +380,8 @@ const Problem = () => {
                     </TabOptionsInnerContent>
                   </TabOptionsContent>
 
-                  {itemSelected && qInfo && dropdownItemSelected > -1 && (
-                    <DropdownContainer ref={containerRef}>
+                  {itemSelected1 && qInfo && dropdownItemSelected > -1 && (
+                    <DropdownContainer ref={containerRef1}>
                       <DropdownContainerContent>
                         {qInfo &&
                           qInfo.tags.map((item, k) => (
@@ -362,14 +390,16 @@ const Problem = () => {
                               onMouseLeave={() => setHovered(-1)}
                               key={k}
                               hovered={k === hovered}
-                              onClick={() => {
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
                                 setDropdownItemSelected(k);
                                 navigate(
                                   "/problems/critical_connections_in_a_network?tag=" +
                                     item.toLowerCase().split(" ").join("_")
                                 );
-                                setItemSelected(
-                                  (itemSelected) => !itemSelected
+                                setItemSelected1(
+                                  (itemSelected1) => !itemSelected1
                                 );
                               }}
                             >
@@ -424,7 +454,7 @@ const Problem = () => {
                   defaultValue={solution ?? ""}
                   options={{ readOnly: true, domReadOnly: true }}
                 />
-              </>
+              </SEditor>
             )}
           </LeftContent>
         </LeftContainer>
