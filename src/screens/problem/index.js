@@ -416,7 +416,6 @@ const Problem = () => {
                     </DropdownContainer>
                   )}
                 </TabOptionsContainer>
-
                 <Editor
                   width="100%"
                   height="54vh"

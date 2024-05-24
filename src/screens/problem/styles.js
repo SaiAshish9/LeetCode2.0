@@ -69,6 +69,7 @@ export const Container = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     .monaco-scrollable-element {
       left: 10px !important;
+      width: calc(98%) !important;
     }
     .monaco-editor {
       border: 1px solid #ffffff0f;
