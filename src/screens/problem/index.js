@@ -441,7 +441,8 @@ const Problem = () => {
                       background: "transparent",
                       zIndex: 1,
                       userSelect: "none",
-                      pointerEvents: "all", // This ensures no clicks pass through
+                      touchAction: 'none',
+                      pointerEvents: "none", // This ensures no clicks pass through
                     }}
                   />
                 </div>
