@@ -416,36 +416,15 @@ const Problem = () => {
                     </DropdownContainer>
                   )}
                 </TabOptionsContainer>
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: "53vh",
-                  }}
-                >
-                  <Editor
-                    width="95vw"
-                    height="100%"
-                    theme="vs-dark"
-                    defaultLanguage="java"
-                    defaultValue={solution ?? ""}
-                    options={{ readOnly: true }}
-                  />
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "95vw",
-                      height: "100%",
-                      background: "transparent",
-                      zIndex: 1,
-                      userSelect: "none",
-                      touchAction: 'manipulation',
-                      pointerEvents: "none", // This ensures no clicks pass through
-                    }}
-                  />
-                </div>
+
+                <Editor
+                  width="100%"
+                  height="54vh"
+                  theme="vs-dark"
+                  defaultLanguage="java"
+                  defaultValue={solution ?? ""}
+                  options={{ readOnly: true, domReadOnly: true }}
+                />
               </>
             )}
           </LeftContent>
