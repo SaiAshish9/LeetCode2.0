@@ -15,6 +15,7 @@ export const TagContent = styled.div`
   position: relative;
   width: 100%;
   overflow-x: hidden;
+  white-space: nowrap;
   ${({ isExpanded }) =>
     isExpanded
       ? css`

@@ -8,17 +8,21 @@ const BREAKPOINTS = {
   x100: 1450,
   x175: 850,
   x200: 800,
+  x75: 1920,
+  x67: 2150,
+  x50: 2880,
+  x33: 4320,
+  x25: 5760,
 };
 
 function appendPxToValues(obj) {
-    for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        obj[key] = obj[key] + 'px';
-      }
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      obj[key] = obj[key] + "px";
     }
   }
-  
+}
+
 appendPxToValues(BREAKPOINTS);
-  
 
 export default BREAKPOINTS;

@@ -40,6 +40,21 @@ export const NavContent = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     max-width: 100vw;
   }
+  @media only screen and (min-width: ${BREAKPOINTS.x75}) {
+    max-width: 64.5vw;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.x67}) {
+    max-width: 50.5vw;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.x50}) {
+    max-width: 40vw;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.x33}) {
+    max-width: 30vw;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.x25}) {
+    max-width: 20vw;
+  }
 `;
 
 export const StyledImage = styled.img`
