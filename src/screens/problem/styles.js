@@ -142,6 +142,26 @@ export const TabHeader = styled.div`
   display: flex;
   align-items: center;
   padding: 4px 6px;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding-bottom: 0px;
+  }
+`;
+
+export const TabHeaderMContent = styled.div`
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
+`;
+
+export const TabHeaderSContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
 `;
 
 export const TabItem = styled.div`
@@ -150,8 +170,22 @@ export const TabItem = styled.div`
   justify-content: space-between;
   padding: 4px 6px;
   border-radius: 5px;
-  &:hover {
-    background-color: #ffffff1a;
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+    &:hover {
+      background-color: #ffffff1a;
+    }
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    border-bottom: 2px solid #fff;
+    border-radius: 0px;
+    padding: 4px 0px;
+    margin: 0 10px;
+    padding-bottom: 8px;
+    ${({ inActive }) =>
+      inActive &&
+      css`
+        border-bottom: 2px solid transparent;
+      `}
   }
 `;
 
@@ -163,9 +197,18 @@ export const TabText = styled.p`
     css`
       color: #fff9;
       font-weight: 400;
+      @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+        font-weight: 500;
+      }
     `};
   font-size: 0.875rem;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    font-size: 0.72rem;
+  }
   padding: 0 8px;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding: 0px;
+  }
   &::before {
     background: #ffffff24;
     content: "";
