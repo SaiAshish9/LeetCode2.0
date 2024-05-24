@@ -66,7 +66,7 @@ export const Container = styled.div`
   .textAreaCover {
     height: 0px;
   }
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     .monaco-scrollable-element.editor-scrollable {
       left: 0px;
     }
@@ -98,7 +98,7 @@ export const Header = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     height: 3rem;
   }
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     display: none;
   }
 `;
@@ -114,7 +114,7 @@ export const Content = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     height: calc(100% - 8px - 3rem);
   }
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     width: 100%;
     margin: 0px;
     height: calc(100%);
@@ -161,7 +161,7 @@ export const LeftContainer = styled.div`
   border-color: hsl(0, 0%, 100%, 0.1);
   overflow-y: scroll;
   overflow-x: hidden;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     border: none;
     border-radius: 0px;
     width: 100%;
@@ -183,7 +183,7 @@ export const TabHeaderParentContainer = styled.div`
     display: none;
   }
   overflow: hidden;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     width: calc(100%);
     border-radius: 0px;
   }
@@ -196,7 +196,7 @@ export const LogoTopHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (min-width: ${BREAKPOINTS.x200}) {
     display: none;
   }
 `;
@@ -208,7 +208,7 @@ export const TabHeader = styled.div`
   display: flex;
   align-items: center;
   padding: 4px 6px;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     padding-bottom: 0px;
   }
 `;
@@ -216,7 +216,7 @@ export const TabHeader = styled.div`
 export const TabHeaderMContent = styled.div`
   display: flex;
   align-items: center;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     display: none;
   }
 `;
@@ -225,7 +225,7 @@ export const TabHeaderSContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (min-width: ${BREAKPOINTS.x200}) {
     display: none;
   }
 `;
@@ -236,12 +236,12 @@ export const TabItem = styled.div`
   justify-content: space-between;
   padding: 4px 6px;
   border-radius: 5px;
-  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (min-width: ${BREAKPOINTS.x200}) {
     &:hover {
       background-color: #ffffff1a;
     }
   }
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     border-bottom: 2px solid #fff;
     border-radius: 0px;
     padding: 4px 0px;
@@ -263,16 +263,16 @@ export const TabText = styled.p`
     css`
       color: #fff9;
       font-weight: 400;
-      @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+      @media only screen and (max-width: ${BREAKPOINTS.md}) {
         font-weight: 500;
       }
     `};
   font-size: 0.875rem;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     font-size: 0.72rem;
   }
   padding: 0 8px;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     padding: 0px;
   }
   &::before {
@@ -301,7 +301,7 @@ export const LeftContent = styled.div`
   padding: 1.25rem 1rem;
   margin-top: 2.5rem;
   position: relative;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     margin-top: 5.4rem;
   }
 `;
@@ -312,7 +312,7 @@ export const LeftContentTitle = styled.p`
   font-size: 1.5rem;
   margin-bottom: 1rem;
   text-align: start;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     font-size: 1.2rem;
     font-weight: 500;
   }
@@ -440,7 +440,7 @@ export const RightParentContainer = styled.div`
   align-items: space-between;
   flex-direction: column;
   justify-content: center;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     display: none;
   }
 `;
@@ -483,7 +483,7 @@ export const LeftTag = styled.div`
   border-radius: 9999px;
   background-color: #ffffff1a;
   cursor: pointer;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     background-color: transparent;
     color: rgb(255 55 95);
     padding-left: 0rem;
@@ -504,9 +504,10 @@ export const TabOptionsContainer = styled.div`
   justify-content: space-between;
   position: relative;
   text-align: start;
-  @media only screen and (max-width: ${BREAKPOINTS.xs}) {
-    padding: 0.125rem;
-    display: none;
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
+    padding: 0.125rem 0;
+    margin-bottom: 1rem;
+    border-bottom-width: 0px;
   }
 `;
 
@@ -522,8 +523,8 @@ export const TabOptionsContent = styled.div`
   justify-content: flex-start;
   cursor: pointer;
 
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
-    padding: 0.125rem;
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
+    padding: 0.125rem 0;
 
     ${({ icons }) =>
       icons

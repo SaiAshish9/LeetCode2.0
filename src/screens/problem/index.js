@@ -326,14 +326,105 @@ const Problem = () => {
             )}
             {step === 1 && qInfo && SOLUTIONING[qInfo["qno"]]}
             {step === 2 && solution && (
-              <Editor
-                width="100%"
-                height="85vh"
-                theme="vs-dark"
-                defaultLanguage="java"
-                userSelect={false}
-                defaultValue={solution ?? ""}
-              />
+              <>
+                <TabOptionsContainer>
+                  <TabOptionsContent>
+                    <TabOptionsInnerContent
+                      ref={dropdownRef}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        handleToggle();
+                      }}
+                    >
+                      <TabOptionsText style={{ marginRight: "0.25rem" }}>
+                        {qInfo &&
+                          dropdownItemSelected !== -1 &&
+                          qInfo.tags[dropdownItemSelected]}
+                      </TabOptionsText>
+                      <NavIcon style={{ marginRight: "0rem" }}>
+                        <StyledImage
+                          style={{ height: "12px", top: -1 }}
+                          alt="img"
+                          src={ArrowDownSvg}
+                        />
+                      </NavIcon>
+                    </TabOptionsInnerContent>
+                  </TabOptionsContent>
+                
+                  {itemSelected && qInfo && dropdownItemSelected > -1 && (
+                    <DropdownContainer ref={containerRef}>
+                      <DropdownContainerContent>
+                        {qInfo &&
+                          qInfo.tags.map((item, k) => (
+                            <DropdownContainerItem
+                              onMouseEnter={() => setHovered(k)}
+                              onMouseLeave={() => setHovered(-1)}
+                              key={k}
+                              hovered={k === hovered}
+                              onClick={() => {
+                                setDropdownItemSelected(k);
+                                navigate(
+                                  "/problems/critical_connections_in_a_network?tag=" +
+                                    item.toLowerCase().split(" ").join("_")
+                                );
+                                setItemSelected(
+                                  (itemSelected) => !itemSelected
+                                );
+                              }}
+                            >
+                              <DropdownContainerLeftItem>
+                                <NavIcon
+                                  hidden={dropdownItemSelected !== k}
+                                  noMR
+                                  style={{ marginRight: "0.5rem" }}
+                                >
+                                  <StyledImage
+                                    style={{ height: 14, top: 0 }}
+                                    alt="img"
+                                    src={TickSvg1}
+                                  />
+                                </NavIcon>
+                                <NavIcon
+                                  hidden={dropdownItemSelected === k}
+                                  noMR
+                                  style={{ marginRight: "0.5rem" }}
+                                >
+                                  <StyledImage
+                                    style={{ height: 14, top: 0 }}
+                                    alt="img"
+                                    src={TickSvg2}
+                                  />
+                                </NavIcon>
+                                <DropdownContainerText>
+                                  {item}
+                                </DropdownContainerText>
+                              </DropdownContainerLeftItem>
+
+                              {k === hovered && (
+                                <NavIcon noMR style={{ marginRight: "0rem" }}>
+                                  <StyledImage
+                                    style={{ height: 14, top: -1 }}
+                                    alt="img"
+                                    src={InfoSvg}
+                                  />
+                                </NavIcon>
+                              )}
+                            </DropdownContainerItem>
+                          ))}
+                      </DropdownContainerContent>
+                    </DropdownContainer>
+                  )}
+                </TabOptionsContainer>
+                <Editor
+                  width="100%"
+                  height="85vh"
+                  theme="vs-dark"
+                  defaultLanguage="java"
+                  userSelect={false}
+                  defaultValue={solution ?? ""}
+                />
+              </>
             )}
           </LeftContent>
         </LeftContainer>

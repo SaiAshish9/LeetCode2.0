@@ -6,7 +6,8 @@ const BREAKPOINTS = {
   xl: 1200,
   xxl: 1600,
   x100: 1450,
-  x175: 850
+  x175: 850,
+  x200: 800,
 };
 
 function appendPxToValues(obj) {
