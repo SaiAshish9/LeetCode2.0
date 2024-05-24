@@ -325,6 +325,16 @@ const Problem = () => {
               </LeftContentDescription>
             )}
             {step === 1 && qInfo && SOLUTIONING[qInfo["qno"]]}
+            {step === 2 && solution && (
+              <Editor
+                width="100%"
+                height="85vh"
+                theme="vs-dark"
+                defaultLanguage="java"
+                userSelect={false}
+                defaultValue={solution ?? ""}
+              />
+            )}
           </LeftContent>
         </LeftContainer>
         <RightParentContainer>

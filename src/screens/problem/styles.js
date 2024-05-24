@@ -9,6 +9,72 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .monaco-editor,
+  .monaco-editor-background {
+    background-color: #262626 !important;
+  }
+  .monaco-editor .margin {
+    background-color: #262626 !important;
+  }
+  canvas {
+    background-color: #262626 !important;
+  }
+  .decorationsOverviewRuler,
+  .scrollbar,
+  .slider {
+    background-color: #262626 !important;
+  }
+  .monaco-editor.vs-dark .monaco-editor .overflow-guard {
+    overflow-y: hidden !important;
+  }
+  .monaco-scrollable-element > .visible {
+    opacity: 0;
+  }
+  section {
+    border-radius: 8px;
+  }
+  .decorationsOverviewRuler,
+  .scrollbar {
+    display: none !important;
+  }
+  .margin {
+    box-shadow: none !important;
+  }
+  .minimap.slider-mouseover {
+    display: none !important;
+  }
+  .overflow-guard {
+    border-radius: 8px;
+  }
+  .scroll-decoration {
+    box-shadow: none !important;
+  }
+  .mtk1 {
+    // color: #4ec9b0 !important;
+  }
+  .mtk8 {
+    // color: #9cdcfe;
+  }
+  .margin {
+    padding-top: 0.5rem;
+  }
+  .lines-content.monaco-editor-background {
+    padding-top: 0.5rem;
+  }
+  .scroll-decoration,
+  .textAreaCover {
+    height: 0px;
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    .monaco-scrollable-element.editor-scrollable {
+      left: 0px;
+    }
+    .monaco-editor {
+      border: 1px solid #ffffff0f;
+      border-radius: 4px;
+    }
+  }
 `;
 
 export const LogoImg = styled.img`
@@ -403,62 +469,6 @@ export const RightContainer = styled.div`
   border-radius: 8px;
   height: fit-content;
   flex-grow: 1;
-  .monaco-editor,
-  .monaco-editor-background {
-    background-color: #262626 !important;
-  }
-  .monaco-editor .margin {
-    background-color: #262626 !important;
-  }
-  canvas {
-    background-color: #262626 !important;
-  }
-  .decorationsOverviewRuler,
-  .scrollbar,
-  .slider {
-    background-color: #262626 !important;
-  }
-  .monaco-editor.vs-dark .monaco-editor .overflow-guard {
-    overflow-y: hidden !important;
-  }
-  .monaco-scrollable-element > .visible {
-    opacity: 0;
-  }
-  section {
-    border-radius: 8px;
-  }
-  .decorationsOverviewRuler,
-  .scrollbar {
-    display: none !important;
-  }
-  .margin {
-    box-shadow: none !important;
-  }
-  .minimap.slider-mouseover {
-    display: none !important;
-  }
-  .overflow-guard {
-    border-radius: 8px;
-  }
-  .scroll-decoration {
-    box-shadow: none !important;
-  }
-  .mtk1 {
-    // color: #4ec9b0 !important;
-  }
-  .mtk8 {
-    // color: #9cdcfe;
-  }
-  .margin {
-    padding-top: 0.5rem;
-  }
-  .lines-content.monaco-editor-background {
-    padding-top: 0.5rem;
-  }
-  .scroll-decoration,
-  .textAreaCover {
-    height: 0px;
-  }
 `;
 
 export const LeftTag = styled.div`
