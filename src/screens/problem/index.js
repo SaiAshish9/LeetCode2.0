@@ -312,7 +312,7 @@ const Problem = () => {
                       src={DescriptionSvg}
                     />
                   </NavIcon>
-                  <TabText inActive={step === 1}>Description</TabText>
+                  <TabText inActive={step !== 0}>Description</TabText>
                 </TabItem>
                 <LeftLI style={{ marginRight: 8 }} />
                 <TabItem onClick={() => setStep(1)}>
@@ -325,7 +325,7 @@ const Problem = () => {
                       src={SolutioningSvg}
                     />
                   </NavIcon>
-                  <TabText inActive={step === 0}>Solutioning</TabText>
+                  <TabText inActive={step !== 1}>Solutioning</TabText>
                 </TabItem>
               </TabHeaderMContent>
               <TabHeaderSContent>
