@@ -35,6 +35,7 @@ import {
   TabOptionsText,
   TabText,
   TestCaseContainer,
+  TickOutlined,
 } from "./styles";
 import {
   BarsIcon,
@@ -81,6 +82,8 @@ const Problem = () => {
 
   const [solution, setSolution] = useState(null);
   const [qInfo, setQInfo] = useState(null);
+
+  const [copied, setCopied] = useState(false);
 
   const [itemSelected, setItemSelected] = useState(false);
   const [itemSelected1, setItemSelected1] = useState(false);
@@ -204,6 +207,14 @@ const Problem = () => {
   }, [fetchData, solution]);
 
   const navigate = useNavigate();
+
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
 
   return (
     <Container>
@@ -445,11 +456,26 @@ const Problem = () => {
                       </DropdownContainerContent>
                     </DropdownContainer>
                   )}
-                  <MdContentCopy
-                    size={14}
-                    color="#fff9"
-                    style={{ cursor: "pointer", marginRight: "6px" }}
-                  />
+                  {copied ? (
+                    <TickOutlined
+                      onClick={() => {
+                        setCopied(false);
+                      }}
+                    />
+                  ) : (
+                    <MdContentCopy
+                      size={14}
+                      color="#fff9"
+                      style={{ cursor: "pointer", marginRight: "6px" }}
+                      onClick={async () => {
+                        await copyToClipboard(solution ?? "");
+                        setCopied((copied) => !copied);
+                        setTimeout(() => {
+                          setCopied((copied) => !copied);
+                        }, 1200);
+                      }}
+                    />
+                  )}
                 </TabOptionsContainer>
 
                 <Editor

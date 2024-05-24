@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { Editor as MonacoEditor } from "@monaco-editor/react";
 import { BREAKPOINTS } from "../constants";
+import { SiTicktick } from "react-icons/si";
 
 export const Container = styled.div`
   background-color: #0f0f0f;
@@ -617,4 +618,11 @@ export const SEditor = styled.div`
   @media only screen and (min-width: ${BREAKPOINTS.lg}) {
     display: none;
   }
+`;
+
+export const TickOutlined = styled(SiTicktick)`
+  cursor: pointer;
+  margin-right: 6px;
+  font-size: 14px;
+  color: #fff9;
 `;

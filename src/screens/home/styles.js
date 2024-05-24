@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BREAKPOINTS } from "../../screens/constants";
 
 export const HomeComponent = styled.div`
   width: 100%;
@@ -6,6 +7,9 @@ export const HomeComponent = styled.div`
   background-color: rgb(26 26 26);
   color: #fff;
   min-height: 100vh;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    max-width: 100vw;
+  }
 `;
 
 // padding: 0 10vw;
