@@ -128,7 +128,8 @@ export const LogoTopHeader = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 4px 6px;
+  justify-content: space-between;
+  padding: 1rem;
   @media only screen and (min-width: ${BREAKPOINTS.lg}) {
     display: none;
   }
@@ -191,6 +192,9 @@ export const LeftContent = styled.div`
   padding: 1.25rem 1rem;
   margin-top: 2.5rem;
   position: relative;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    margin-top: 5.4rem;
+  }
 `;
 
 export const LeftContentTitle = styled.p`
@@ -199,6 +203,10 @@ export const LeftContentTitle = styled.p`
   font-size: 1.5rem;
   margin-bottom: 1rem;
   text-align: start;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
 `;
 
 export const LeftContentDescription = styled.div`
@@ -422,6 +430,14 @@ export const LeftTag = styled.div`
   border-radius: 9999px;
   background-color: #ffffff1a;
   cursor: pointer;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    background-color: transparent;
+    color: rgb(255 55 95);
+    padding-left: 0rem;
+    padding-top: 0rem;
+    font-weight: 500;
+    font-size: 14px;
+  }
 `;
 
 export const Editor = styled(MonacoEditor)``;

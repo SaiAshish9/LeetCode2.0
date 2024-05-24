@@ -34,6 +34,7 @@ import {
   TestCaseContainer,
 } from "./styles";
 import {
+  BarsIcon,
   CircularAvatar,
   NavIcon,
   PremiumButton,
@@ -253,8 +254,22 @@ const Problem = () => {
       </Header>
       <Content>
         <LeftContainer selected={selected === 1} onClick={() => setSelected(1)}>
-          <LogoTopHeader />
           <TabHeaderParentContainer>
+            <LogoTopHeader>
+              <BarsIcon color="#fff9" size={20.5} />
+              <LogoImg
+                style={{ height: "19px" }}
+                alt="img"
+                src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
+              />
+              <NavIcon style={{ marginRight: 0 }}>
+                <StyledImage
+                  style={{ height: "19px", top: 0 }}
+                  alt="img"
+                  src={BellSvg}
+                />
+              </NavIcon>
+            </LogoTopHeader>
             <TabHeader>
               <TabItem onClick={() => setStep(0)}>
                 <NavIcon
@@ -280,19 +295,6 @@ const Problem = () => {
                   />
                 </NavIcon>
                 <TabText inActive={step === 0}>Solutioning</TabText>
-              </TabItem>
-              <LeftLI style={{ marginRight: 8 }} />
-              <TabItem onClick={() => setStep(1)}>
-                <NavIcon
-                  style={{ marginRight: 0, opacity: step === 0 ? 0.45 : 1 }}
-                >
-                  <StyledImage
-                    style={{ height: "14px", top: -1 }}
-                    alt="img"
-                    src={SolutioningSvg}
-                  />
-                </NavIcon>
-                <TabText inActive={step === 0}>Code</TabText>
               </TabItem>
             </TabHeader>
           </TabHeaderParentContainer>
