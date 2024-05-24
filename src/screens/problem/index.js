@@ -351,7 +351,7 @@ const Problem = () => {
                       </NavIcon>
                     </TabOptionsInnerContent>
                   </TabOptionsContent>
-                
+
                   {itemSelected && qInfo && dropdownItemSelected > -1 && (
                     <DropdownContainer ref={containerRef}>
                       <DropdownContainerContent>
@@ -416,15 +416,35 @@ const Problem = () => {
                     </DropdownContainer>
                   )}
                 </TabOptionsContainer>
-                <Editor
-                  width="100%"
-                  height="53vh"
-                  theme="vs-dark"
-                  defaultLanguage="java"
-                  userSelect={false}
-                  defaultValue={solution ?? ""}
-                  options={{ readOnly: true }}
-                />
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    height: "53vh",
+                  }}
+                >
+                  <Editor
+                    width="100%"
+                    height="100%"
+                    theme="vs-dark"
+                    defaultLanguage="java"
+                    defaultValue={solution ?? ""}
+                    options={{ readOnly: true }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      background: "transparent",
+                      zIndex: 1,
+                      userSelect: "none",
+                      pointerEvents: "none", // This ensures no clicks pass through
+                    }}
+                  />
+                </div>
               </>
             )}
           </LeftContent>
