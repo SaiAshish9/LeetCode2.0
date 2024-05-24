@@ -71,6 +71,7 @@ import TickSvg2 from "../../assets/tick2.svg";
 import InfoSvg from "../../assets/info.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { QUESTIONS, SOLUTIONING } from "./data";
+import { MdContentCopy } from "react-icons/md";
 
 const Problem = () => {
   // https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png
@@ -183,7 +184,6 @@ const Problem = () => {
       }, delay);
     };
   };
-
 
   const handleToggle1 = debounceToggle(() => {
     setItemSelected1((itemSelected1) => !itemSelected1);
@@ -445,7 +445,13 @@ const Problem = () => {
                       </DropdownContainerContent>
                     </DropdownContainer>
                   )}
+                  <MdContentCopy
+                    size={14}
+                    color="#fff9"
+                    style={{ cursor: "pointer", marginRight: "6px" }}
+                  />
                 </TabOptionsContainer>
+
                 <Editor
                   width="100%"
                   height="54vh"
