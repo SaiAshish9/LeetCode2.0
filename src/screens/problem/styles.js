@@ -123,6 +123,17 @@ export const TabHeaderParentContainer = styled.div`
   }
 `;
 
+export const LogoTopHeader = styled.div`
+  background-color: #262626;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
+`;
+
 export const TabHeader = styled.div`
   background-color: #ffffff0f;
   cursor: pointer;

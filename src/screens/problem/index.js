@@ -17,6 +17,7 @@ import {
   LeftLI,
   LeftTag,
   LogoImg,
+  LogoTopHeader,
   MiddleLeftHeaderContainer,
   ProblemText,
   RightContainer,
@@ -252,6 +253,7 @@ const Problem = () => {
       </Header>
       <Content>
         <LeftContainer selected={selected === 1} onClick={() => setSelected(1)}>
+          <LogoTopHeader />
           <TabHeaderParentContainer>
             <TabHeader>
               <TabItem onClick={() => setStep(0)}>
@@ -278,6 +280,19 @@ const Problem = () => {
                   />
                 </NavIcon>
                 <TabText inActive={step === 0}>Solutioning</TabText>
+              </TabItem>
+              <LeftLI style={{ marginRight: 8 }} />
+              <TabItem onClick={() => setStep(1)}>
+                <NavIcon
+                  style={{ marginRight: 0, opacity: step === 0 ? 0.45 : 1 }}
+                >
+                  <StyledImage
+                    style={{ height: "14px", top: -1 }}
+                    alt="img"
+                    src={SolutioningSvg}
+                  />
+                </NavIcon>
+                <TabText inActive={step === 0}>Code</TabText>
               </TabItem>
             </TabHeader>
           </TabHeaderParentContainer>
