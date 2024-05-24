@@ -423,6 +423,7 @@ const Problem = () => {
                   defaultLanguage="java"
                   userSelect={false}
                   defaultValue={solution ?? ""}
+                  options={{ readOnly: true }}
                 />
               </>
             )}
