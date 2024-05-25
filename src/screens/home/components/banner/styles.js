@@ -64,10 +64,17 @@ export const ArrowContainer = styled.div`
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 0.8rem;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const TopSliderContainer = styled.div`
-  padding-top: 2.7rem;
+  padding-top: 1rem;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Border = styled.hr`
