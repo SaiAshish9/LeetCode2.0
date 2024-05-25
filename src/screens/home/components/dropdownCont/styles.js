@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BREAKPOINTS } from "../../../constants";
 
 export const Container = styled.div`
@@ -50,6 +50,13 @@ export const Dropdown = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
+  ${({ ss }) =>
+    ss &&
+    css`
+      @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+        display: none;
+      }
+    `}
 `;
 
 export const PickOneContainer = styled.div`
@@ -124,6 +131,9 @@ export const TextInputContainer = styled.div`
   align-items: center;
   color: rgb(138 138 138);
   font-size: 1rem;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding-right: 0.3rem;
+  }
 `;
 
 export const StyledSearchImage = styled.img`
