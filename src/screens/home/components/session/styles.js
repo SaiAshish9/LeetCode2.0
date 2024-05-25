@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
-
-
+import { BREAKPOINTS } from "../../../constants";
 
 export const SessionContainer = styled.div`
   width: 100%;
@@ -140,6 +139,9 @@ export const PlanContent = styled.div`
 export const PlanTitle = styled.p`
   font-size: 0.8rem;
   font-weight: 500;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    text-align: start;
+  }
 `;
 
 export const PlanSubTitle = styled.p`
