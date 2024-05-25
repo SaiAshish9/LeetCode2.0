@@ -1,5 +1,5 @@
-
 import styled, { css } from "styled-components";
+import { BREAKPOINTS } from "../../../constants/index";
 
 export const FabBtn = styled.div`
   height: 48px;
@@ -15,11 +15,20 @@ export const FabBtn = styled.div`
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  z-index: 20;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    bottom: 1rem;
+    right: 0.8rem;
+  }
   ${({ fab }) =>
     fab &&
     css`
       bottom: 5.7rem;
       right: 2rem;
+      @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+        bottom: 4.5rem;
+        right: 0.8rem;
+      }
     `}
 `;
 
