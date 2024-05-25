@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { BREAKPOINTS } from "../../../constants";
 
 export const StyledImg = styled.img`
   width: 32%;
@@ -76,4 +76,7 @@ export const Border = styled.hr`
   width: 100%;
   margin-top: 1.8rem;
   margin-bottom: 2.1rem;
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
+    margin-bottom: 1rem;
+  }
 `;

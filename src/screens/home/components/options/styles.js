@@ -1,11 +1,14 @@
 import styled, { css } from "styled-components";
-
+import { BREAKPOINTS } from "../../../constants";
 
 export const Container = styled.div`
   margin-top: 1.8rem;
   display: flex;
   flex-wrap: wrap;
   row-gap: 0.8rem;
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
+    margin-top: 1rem;
+  }
 `;
 
 export const Button = styled.div`
