@@ -9,7 +9,7 @@ export const StyledImg = styled.img`
   box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0px 1px 3px #0000003d,
     0px 2px 8px #00000029;
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
-    width: 48.5%;
+    width: 49%;
   }
 `;
 
@@ -47,7 +47,7 @@ export const SContainer = styled.div`
           column-gap: 8.5%;
         `
       : css`
-          column-gap: 3%;
+          column-gap: 2%;
         `}
 `;
 
@@ -115,6 +115,7 @@ export const TopSliderContainer = styled.div`
   padding-top: 1rem;
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     margin-bottom: 1rem;
+    padding-top: 0rem;
   }
 `;
 
