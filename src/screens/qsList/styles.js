@@ -86,7 +86,9 @@ export const ContentText = styled.p`
   font-size: 14px;
   color: rgba(0, 0, 0, 0.65);
   padding-top: 1em;
-  text-align: start;
+  flex-wrap: wrap;
+  white-space: pre-wrap;
+  max-width: 100%;
 `;
 
 export const ContentSpan = styled.span`
@@ -232,6 +234,7 @@ export const Tag = styled.p`
 
 export const DescriptionContainer = styled.div`
   padding-right: 28%;
+  width: 100%;
   padding-top: 1rem;
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     padding-right: 4.25%;
