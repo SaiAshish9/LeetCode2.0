@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BREAKPOINTS } from "../../../constants";
 
 export const StyledImg = styled.img`
@@ -8,14 +8,47 @@ export const StyledImg = styled.img`
   cursor: pointer;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0px 1px 3px #0000003d,
     0px 2px 8px #00000029;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    width: 48.5%;
+  }
 `;
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  max-width: 100%;
+  padding-right: 0px;
+  margin-right: 0px;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding: 0 2%;
+    display: none;
+  }
+`;
+
+export const SContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
   width: 100%;
   padding-right: 0px;
   margin-right: 0px;
+  padding: 0 2%;
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
+  ${({ second }) =>
+    second &&
+    css`
+      margin-top: 1rem;
+    `}
+
+  ${({ nogap }) =>
+    !nogap
+      ? css`
+          column-gap: 8.5%;
+        `
+      : css`
+          column-gap: 3%;
+        `}
 `;
 
 export const StyledSliderImage = styled.img`
@@ -35,11 +68,18 @@ export const StyledSliderText = styled.p`
   text-align: center;
   line-height: 1.5;
   margin: 0.4rem auto 0;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    text-align: center;
+    font-size: 0.7rem;
+  }
 `;
 
 export const Content = styled.div`
   text-align: center;
   width: 18%;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    width: 28%;
+  }
 `;
 
 export const ArrowBox = styled.div`
@@ -67,6 +107,7 @@ export const ArrowContainer = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    margin-right: 0.5rem;
   }
 `;
 

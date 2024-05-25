@@ -12,7 +12,8 @@ import {
   StyledSliderImage,
   StyledSliderText,
   TopSliderContainer,
-  Border
+  Border,
+  SContainer,
 } from "./styles";
 
 import L1Img from "../../../../assets/l1.png";
@@ -58,6 +59,11 @@ const Banner = () => {
             <StyledImg key={k} src={i} alt="img" />
           ))}
         </Container>
+        <SContainer nogap>
+          {images.slice(0, 2).map((i, k) => (
+            <StyledImg key={k} src={i} alt="img" />
+          ))}
+        </SContainer>
       </TopSliderContainer>
       <ArrowContainer>
         <ArrowBox>
@@ -75,6 +81,22 @@ const Banner = () => {
           </Content>
         ))}
       </Container>
+      <SContainer>
+        {LImages.slice(0, 3).map((i, _) => (
+          <Content key={i.text}>
+            <StyledSliderImage src={i.img} alt="img" />
+            <StyledSliderText>{i.text}</StyledSliderText>
+          </Content>
+        ))}
+      </SContainer>
+      <SContainer second>
+        {LImages.slice(3).map((i, _) => (
+          <Content key={i.text}>
+            <StyledSliderImage src={i.img} alt="img" />
+            <StyledSliderText>{i.text}</StyledSliderText>
+          </Content>
+        ))}
+      </SContainer>
       <Border />
     </>
   );
