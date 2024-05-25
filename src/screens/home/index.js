@@ -28,6 +28,8 @@ const HomeScreen = () => {
           <Options />
           <DropdownCont />
           <Table />
+          <Calendar />
+          <SessionCard />
         </TopLeftContainer>
         <TopRightContainer>
           <SessionCard />
