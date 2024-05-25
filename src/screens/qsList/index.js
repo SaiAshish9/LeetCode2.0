@@ -27,6 +27,7 @@ import {
 import { useLocation } from "react-router-dom";
 
 const QSList = () => {
+
   const columns = [
     {
       title: "",
@@ -51,10 +52,9 @@ const QSList = () => {
             onClick={() => {
               window.open(
                 "/problems/" +
-                  title.toLowerCase().replaceAll(" ", "_") 
-                  // + "?tag=" +
-                  // "biconnected_component"
-                  ,
+                  title.toLowerCase().replaceAll(" ", "_") +
+                  "?tag=" +
+                  pathname?.split("/tag/")?.[1],
                 "_blank"
               );
             }}
@@ -148,7 +148,7 @@ const QSList = () => {
           filteredData.map((x, k) => {
             const obj = { ...x };
             obj["key"] = "" + k;
-            obj["acceptance"] = x["acceptance"] + "%"
+            obj["acceptance"] = x["acceptance"] + "%";
             return obj;
           })
         );
