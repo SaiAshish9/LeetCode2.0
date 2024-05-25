@@ -109,7 +109,7 @@ const Navbar = () => {
             </PremiumButton>
           </NavIcon>
         </CircularContainer>
-        <BarsIcon />
+        <BarsIcon w={pathname === "/"} />
       </NavContent>
     </NavContainer>
   );

@@ -31,16 +31,28 @@ export const NavContent = styled.div`
   justify-content: space-between;
   padding: 0 1.25rem;
   height: 3.1rem;
-
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     max-width: 100vw;
   }
-
-
+  @media only screen and (max-width: ${BREAKPOINTS.x125}) {
+    max-width: 95vw;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.x125}) {
+    max-width: 90vw;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.xl}) {
+    max-width: 72vw;
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.x110}) {
+    max-width: 90vw;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.x110}) {
+    max-width: 90vw;
+  }
   @media only screen and (min-width: ${BREAKPOINTS.x100}) {
     max-width: 82vw;
   }
-  @media only screen and (min-width: ${BREAKPOINTS.xl}) {
+  @media only screen and (min-width: ${BREAKPOINTS.xxl}) {
     max-width: 72vw;
   }
   @media only screen and (min-width: ${BREAKPOINTS.x75}) {
@@ -57,6 +69,12 @@ export const NavContent = styled.div`
   }
   @media only screen and (min-width: ${BREAKPOINTS.x25}) {
     max-width: 20vw;
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+    max-width: 98vw;
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.x200}) {
+    max-width: 100vw;
   }
 `;
 
@@ -202,4 +220,9 @@ export const BarsIcon = styled(HiBars3)`
   @media only screen and (min-width: ${BREAKPOINTS.x175}) {
     display: none;
   }
+  ${({ w }) =>
+    w &&
+    css`
+      color: #fff9;
+    `}
 `;
