@@ -136,9 +136,7 @@ export const TextInputContainer = styled.div`
   }
 `;
 
-export const StyledSearchImage = styled.img`
-  font-size: 1rem;
-`;
+export const StyledSearchImage = styled.img``;
 
 export const InputContainer = styled.input`
   border: none;
