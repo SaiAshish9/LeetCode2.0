@@ -6,8 +6,9 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   row-gap: 0.8rem;
-  @media only screen and (max-width: ${BREAKPOINTS.md}) {
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     margin-top: 1rem;
+    padding: 0 2%;
   }
 `;
 

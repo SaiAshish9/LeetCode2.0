@@ -15,6 +15,7 @@ import {
   DropDownRightContainer,
   DropDownLeftContainer,
   PickOneContainer1,
+  PickOneText,
 } from "./styles";
 
 import DropdownArrorDownImg from "../../../../assets/dropdown_arrow_down.svg";
@@ -42,7 +43,7 @@ const DropdownCont = () => {
     <Container>
       <DropdownContainer>
         <DropDownLeftContainer>
-          {options.map((i, _) => (
+          {options.slice(0, 3).map((i, _) => (
             <Dropdown key={i.text}>
               {i.text}
               <ArrowDowmImage src={DropdownArrorDownImg} alt="img" />
@@ -54,22 +55,25 @@ const DropdownCont = () => {
             <StyledSearchImage src={SearchIcon} alt="img" />
             <InputContainer placeholder="Search questions" />
           </TextInputContainer>
+
           <StyledSettingsImageContainer>
             <StyledSettingsImage src={SettingsImg} alt="img" />
           </StyledSettingsImageContainer>
+
           <PickOneContainer1>
             <BubbleContainer>
               <PickOneBubble src={PickImg} alt="img" />
             </BubbleContainer>
-            Pick One
+            <PickOneText>Pick One</PickOneText>
           </PickOneContainer1>
         </DropDownRightContainer>
       </DropdownContainer>
+
       <PickOneContainer>
         <BubbleContainer>
           <PickOneBubble src={PickImg} alt="img" />
         </BubbleContainer>
-        Pick One
+        <PickOneText>Pick One</PickOneText>
       </PickOneContainer>
     </Container>
   );

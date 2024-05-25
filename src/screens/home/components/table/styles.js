@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Table, Image } from "antd";
+import { Table } from "antd";
 import { BREAKPOINTS } from "../../../constants";
 
 export const Container = styled.div`

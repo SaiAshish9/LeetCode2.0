@@ -7,6 +7,9 @@ export const Container = styled.div`
   justify-content: space-between;
   margin-top: 1.7rem;
   margin-bottom: 1rem;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding: 0 2%;
+  }
 `;
 // margin-bottom: 1.8rem;
 
@@ -137,5 +140,11 @@ export const InputContainer = styled.input`
   color: #fff !important;
   &:placeholder {
     color: rgba(138 138 138, 0.7);
+  }
+`;
+
+export const PickOneText = styled.span`
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    display: none;
   }
 `;

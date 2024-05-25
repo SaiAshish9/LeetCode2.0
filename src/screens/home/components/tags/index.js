@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   ArrowImg,
   Container,
@@ -18,25 +18,35 @@ const Tags = () => {
   const [initialTags, setInitialTags] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  function fetchData() {
+  const fetchData = useCallback(() => {
     fetch(
       "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/tags.json"
     )
       .then((res) => res.json())
       .then((res) => {
         setInitialTags(res);
-        setTags(isExpanded ? res : res.slice(0, 7));
+        setTags(
+          isExpanded
+            ? res
+            : res.slice(0, document.body.scrollWidth < 968 ? 3 : 7)
+        );
       })
       .catch((err) => console.log(err));
-  }
+  }, [isExpanded]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+
+    window.addEventListener("resize", fetchData);
+
+    return () => {
+      window.removeEventListener("resize", fetchData);
+    };
+  }, [fetchData]);
 
   function handleToggleClick() {
     if (isExpanded) {
-      setTags((tags) => tags.slice(0, 7));
+      setTags((tags) => tags.slice(0, document.body.scrollWidth < 968 ? 3 : 7));
     } else {
       setTags(initialTags);
     }

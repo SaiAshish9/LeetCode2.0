@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { BREAKPOINTS } from "../../../constants";
 
 export const Container = styled.div`
   display: flex;
@@ -6,6 +7,9 @@ export const Container = styled.div`
   justify-content: space-between;
   position: relative;
   width: 100%;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding: 0 1%;
+  }
 `;
 
 export const TagContent = styled.div`
@@ -78,6 +82,9 @@ export const ExpandContainer = styled.div`
         `}
   padding: 0.125rem 0.5rem;
   padding-right: 0px;
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
+    right: 1.5%;
+  }
 `;
 
 export const ExpandContainerText = styled.p`
