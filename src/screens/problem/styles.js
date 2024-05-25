@@ -476,7 +476,20 @@ export const RightContainer = styled.div`
 `;
 
 export const LeftTag = styled.div`
-  color: #f8615c;
+  ${({ diff }) =>
+    diff === "Hard"
+      ? css`
+          color: #f8615c;
+        `
+      : diff === "Medium"
+      ? css`
+          color: #fac31d;
+        `
+      : diff === "Easy"
+      ? css`
+          color: #46c6c2;
+        `
+      : css``}
   padding-bottom: 0.25rem;
   padding-top: 0.25rem;
   padding-left: 0.5rem;
@@ -489,7 +502,18 @@ export const LeftTag = styled.div`
   cursor: pointer;
   @media only screen and (max-width: ${BREAKPOINTS.md}) {
     background-color: transparent;
-    color: rgb(255 55 95);
+    ${({ diff }) =>
+      diff === "Hard"
+        ? css`
+            color: rgb(255 55 95);
+          `
+        : diff === "Medium"
+        ? css`
+            color: rgb(255 192 30);
+          `
+        : diff === "Easy"
+        ? css`color: rgb(0 184 163);`
+        : css``}
     padding-left: 0rem;
     padding-top: 0rem;
     font-weight: 500;

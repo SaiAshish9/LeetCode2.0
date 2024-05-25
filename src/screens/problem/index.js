@@ -357,7 +357,9 @@ const Problem = () => {
             <LeftContentTitle>
               {QUESTIONS && qInfo && `${qInfo["qno"]}. ${qInfo["title"]}`}
             </LeftContentTitle>
-            <LeftTag>Hard</LeftTag>
+            <LeftTag diff={qInfo?.["difficulty"]}>
+              {QUESTIONS && qInfo && `${qInfo["difficulty"]}`}
+            </LeftTag>
             {step === 0 && (
               <LeftContentDescription>
                 {qInfo && QUESTIONS[qInfo["qno"]]}
@@ -405,7 +407,8 @@ const Problem = () => {
                                 e.preventDefault();
                                 e.stopPropagation();
                                 setDropdownItemSelected(k);
-                                const path = location?.pathname?.split("/problems/")?.[1]
+                                const path =
+                                  location?.pathname?.split("/problems/")?.[1];
                                 navigate(
                                   `/problems/${path}?tag=` +
                                     item.toLowerCase().split(" ").join("_")
@@ -567,7 +570,8 @@ const Problem = () => {
                           hovered={k === hovered}
                           onClick={() => {
                             setDropdownItemSelected(k);
-                            const path = location?.pathname?.split("/problems/")?.[1]
+                            const path =
+                              location?.pathname?.split("/problems/")?.[1];
                             navigate(
                               `/problems/${path}?tag=` +
                                 item.toLowerCase().split(" ").join("_")
