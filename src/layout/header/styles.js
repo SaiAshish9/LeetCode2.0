@@ -139,6 +139,16 @@ export const NavItem = styled.p`
           }
         `
       : css``};
+
+  ${({ isHome, text }) =>
+    !isHome && ["HLD", "LLD"].includes(text)
+      ? css`
+          color: rgb(255 161 22);
+          &:hover {
+            color: rgb(255 161 22);
+          }
+        `
+      : css``};
 `;
 
 export const NavItemContainer = styled.div`
