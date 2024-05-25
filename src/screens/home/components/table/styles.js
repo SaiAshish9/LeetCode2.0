@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Table, Image } from "antd";
+import { BREAKPOINTS } from "../../../constants";
 
 export const Container = styled.div`
   background-color: red;
@@ -9,12 +10,20 @@ export const Container = styled.div`
 `;
 
 export const StyledTableContainer = styled(Table)`
+  overflow-x: scroll;
   tr {
     color: #fff;
     font-size: 0.8rem;
     cursor: pointer;
     &:hover {
       color: rgb(10 132 255);
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 3px;
+    @media only screen and (max-width: ${BREAKPOINTS.md}) {
+      display: none;
     }
   }
 
@@ -108,7 +117,8 @@ export const StyledTableContainer = styled(Table)`
     font-weight: 300;
   }
 
-  .ant-select-item-option-active, .ant-select-item-option-selected {
+  .ant-select-item-option-active,
+  .ant-select-item-option-selected {
     background: rgb(92 92 92) !important;
     font-weight: 400;
   }
