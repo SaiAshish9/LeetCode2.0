@@ -83,3 +83,9 @@ export const TopRightContainer = styled.div`
     display: none;
   }
 `;
+
+export const SBottomContainer = styled.div`
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
+`;

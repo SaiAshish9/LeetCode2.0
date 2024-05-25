@@ -4,6 +4,7 @@ import {
   Content,
   TopLeftContainer,
   TopRightContainer,
+  SBottomContainer,
 } from "./styles";
 import {
   Banner,
@@ -28,8 +29,10 @@ const HomeScreen = () => {
           <Options />
           <DropdownCont />
           <Table />
-          <Calendar />
-          <SessionCard />
+          <SBottomContainer>
+            <Calendar />
+            <SessionCard />
+          </SBottomContainer>
         </TopLeftContainer>
         <TopRightContainer>
           <SessionCard />

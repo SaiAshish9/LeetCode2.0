@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { BREAKPOINTS } from "../../../constants";
 
 export const Container = styled.div``;
 
@@ -13,6 +14,9 @@ export const Card = styled.div`
   margin-top: 3.6rem;
   position: relative;
   padding: 1rem 0.8rem;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    margin-top: -0.4rem;
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -234,6 +238,12 @@ export const StyledArrowLeftImg = styled.img`
   height: 14px;
   width: 14px;
   margin-left: 21%;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    margin-left: 0%;
+    position: absolute;
+    right: 4.8rem;
+    top: 1.36rem;
+  }
 `;
 
 export const StyledArrowRightImg = styled.img`
