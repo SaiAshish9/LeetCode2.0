@@ -241,7 +241,7 @@ export const StyledArrowLeftImg = styled.img`
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     margin-left: 0%;
     position: absolute;
-    right: 4.8rem;
+    right: 4.9rem;
     top: 1.36rem;
   }
 `;
