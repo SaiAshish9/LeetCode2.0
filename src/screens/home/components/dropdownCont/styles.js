@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { BREAKPOINTS } from "../../../constants";
 
 export const Container = styled.div`
   display: flex;
@@ -15,6 +15,23 @@ export const DropdownContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: fit-content;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+export const DropDownLeftContainer = styled.div`
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    margin-bottom: 0.8rem;
+  }
+`;
+
+export const DropDownRightContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const Dropdown = styled.div`
@@ -37,6 +54,20 @@ export const PickOneContainer = styled.div`
   font-size: 0.85rem;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
+`;
+
+export const PickOneContainer1 = styled.div`
+  color: rgb(44 187 93);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
+    display: none;
+  }
 `;
 
 export const ArrowDowmImage = styled.img`

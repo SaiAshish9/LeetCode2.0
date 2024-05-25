@@ -12,6 +12,9 @@ import {
   StyledSettingsImage,
   TextInputContainer,
   StyledSettingsImageContainer,
+  DropDownRightContainer,
+  DropDownLeftContainer,
+  PickOneContainer1,
 } from "./styles";
 
 import DropdownArrorDownImg from "../../../../assets/dropdown_arrow_down.svg";
@@ -38,19 +41,29 @@ const DropdownCont = () => {
   return (
     <Container>
       <DropdownContainer>
-        {options.map((i, _) => (
-          <Dropdown key={i.text}>
-            {i.text}
-            <ArrowDowmImage src={DropdownArrorDownImg} alt="img" />
-          </Dropdown>
-        ))}
-        <TextInputContainer>
-          <StyledSearchImage src={SearchIcon} alt="img" />
-          <InputContainer placeholder="Search questions" />
-        </TextInputContainer>
-        <StyledSettingsImageContainer>
-          <StyledSettingsImage src={SettingsImg} alt="img" />
-        </StyledSettingsImageContainer>
+        <DropDownLeftContainer>
+          {options.map((i, _) => (
+            <Dropdown key={i.text}>
+              {i.text}
+              <ArrowDowmImage src={DropdownArrorDownImg} alt="img" />
+            </Dropdown>
+          ))}
+        </DropDownLeftContainer>
+        <DropDownRightContainer>
+          <TextInputContainer>
+            <StyledSearchImage src={SearchIcon} alt="img" />
+            <InputContainer placeholder="Search questions" />
+          </TextInputContainer>
+          <StyledSettingsImageContainer>
+            <StyledSettingsImage src={SettingsImg} alt="img" />
+          </StyledSettingsImageContainer>
+          <PickOneContainer1>
+            <BubbleContainer>
+              <PickOneBubble src={PickImg} alt="img" />
+            </BubbleContainer>
+            Pick One
+          </PickOneContainer1>
+        </DropDownRightContainer>
       </DropdownContainer>
       <PickOneContainer>
         <BubbleContainer>
