@@ -130,7 +130,7 @@ const SOLUTIONING = {
                   <code>u</code> based on the low value of <code>v</code>.
                 </li>
                 <li>
-                  If the condition <code>low[v] {'>'} disc[u]</code> is met, it
+                  If the condition <code>low[v] {">"} disc[u]</code> is met, it
                   means that removing the edge (<code>u, v</code>) will increase
                   the number of connected components, hence it is a critical
                   connection.
@@ -150,6 +150,200 @@ const SOLUTIONING = {
             a. After completing the DFS traversal, return the{" "}
             <code>result</code> list containing all critical connections.
           </p>
+        </li>
+      </ol>
+    </LeftContentDescription>
+  ),
+  470: (
+    <LeftContentDescription desc>
+      <h2>Explanation:</h2>
+      <ol>
+        <li>
+          <h3>Uniform Distribution:</h3>
+          <ul>
+            <li>
+              The goal is to generate a random integer in the range 1 to 10
+              using the <code>rand7()</code> method, ensuring a uniform
+              distribution where each number has an equal probability of being
+              selected.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Generating Numbers from 1 to 49:</h3>
+          <ul>
+            <li>
+              By using <code>rand7()</code> twice, we can generate numbers in
+              the range 1 to 49. This is achieved by calculating{" "}
+              <code>num = (rand7() - 1) * 7 + rand7()</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Acceptance Criteria:</h3>
+          <ul>
+            <li>
+              We want to accept numbers from 1 to 40 because this range allows
+              us to map them uniformly to the range 1 to 10 without bias.
+            </li>
+            <li>
+              Accepting numbers from 1 to 40 ensures that each number in the
+              range 1 to 10 has an equal probability of being generated.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Rejection of Numbers from 41 to 49:</h3>
+          <ul>
+            <li>
+              If we accepted numbers from 41 to 49, we would not have a uniform
+              distribution when mapping them to the range 1 to 10.
+            </li>
+            <li>
+              {" "}
+              Specifically, if we accepted numbers from 41 to 49 and mapped them
+              to the range 1 to 10, the numbers 1 to 9 would have a lower
+              probability of being generated compared to the number 10.
+            </li>
+            <li>
+              {" "}
+              This bias occurs because there are fewer numbers in the range 1 to
+              9 when compared to the number 10 in the range 41 to 49.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Reasoning behind 40:</h3>
+          <ul>
+            <li>
+              We choose to accept numbers up to 40 because it is the largest
+              multiple of 10 less than 49.
+            </li>
+            <li>
+              By accepting numbers up to 40, we ensure that when we map them to
+              the range 1 to 10, each number has an equal probability of being
+              generated.
+            </li>
+            <li>
+              Rejecting numbers beyond 40 maintains the integrity of the uniform
+              distribution and prevents biases in the generated numbers.
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        In summary, rejecting numbers from 41 to 49 ensures that the generated
+        random integer in the range 1 to 10 has a uniform distribution. This
+        rejection ensures fairness in the selection process and prevents biases
+        in the generated numbers, as 40 is the largest multiple of 10 less than
+        49.
+      </p>
+    </LeftContentDescription>
+  ),
+  478: (
+    <LeftContentDescription desc>
+      <h2>Explanation:</h2>
+      <ol>
+        <li>We define a Solution class to encapsulate the functionality.</li>
+        <li>
+          The constructor initializes the radius and center coordinates of the
+          circle, and creates a Random object.
+        </li>
+        <li>
+          The randPoint() method generates random coordinates within a square
+          circumscribing the circle and checks if they lie within the circle. If
+          not, it generates new coordinates until a point inside the circle is
+          found.
+        </li>
+        <li>
+          <h3>
+            <code>
+              double x = x_center - radius + 2 * radius * random.nextDouble();
+            </code>
+          </h3>
+          <ul>
+            <li>
+              This line of code is used to generate a random value{" "}
+              <code>x</code> within the range [<code>x_center - radius</code>,{" "}
+              <code>x_center + radius</code>], which corresponds to the possible
+              x-coordinates of points within the circle.
+            </li>
+          </ul>
+          <ol>
+            <li>
+              <h4>
+                <code>random.nextDouble():</code>
+              </h4>
+              <ul>
+                <li>
+                  <code>random.nextDouble()</code> is a method call that returns
+                  a random double value between 0.0 (inclusive) and 1.0
+                  (exclusive).
+                </li>
+                <li>
+                  It generates a random number uniformly distributed in the
+                  interval {"["}0.0, 1.0{")"}.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                <code>2 * radius * random.nextDouble():</code>
+              </h4>
+              <ul>
+                <li>
+                  Multiplying <code>random.nextDouble()</code> by{" "}
+                  <code>2 * radius</code> scales the random value to the
+                  interval {"["}0.0, <code>2 * radius</code>
+                  {")"}.{" "}
+                </li>
+                <li>
+                  This effectively distributes random values evenly across the
+                  width of the square bounding the circle.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                <code>
+                  x_center - radius + 2 * radius * random.nextDouble():
+                </code>
+              </h4>
+              <ul>
+                <li>
+                  By subtracting <code>radius</code> from <code>x_center</code>,
+                  we shift the starting point of the range to the left by{" "}
+                  <code>radius</code> units, making it [
+                  <code>x_center - radius</code>, <code>x_center + radius</code>
+                  ].
+                </li>
+                <li>
+                  Adding the scaled random value (
+                  <code>2 * radius * random.nextDouble()</code>) to the shifted
+                  starting point distributes the random values within the
+                  desired range [<code>x_center - radius</code>,{" "}
+                  <code>x_center + radius</code>].{" "}
+                </li>
+                <li>
+                  The resulting <code>x</code> value lies within the specified
+                  range [<code>x_center - radius</code>,{" "}
+                  <code>x_center + radius</code>], effectively covering the
+                  possible x-coordinates of points within the circle.{" "}
+                </li>
+                <li>
+                  This approach ensures that the random points are uniformly
+                  distributed within the circle's bounding square.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h3>
+            The isInCircle() method checks if a point is inside the circle based
+            on the circle's equation{" "}
+            <code>(x - x_center)^2 + (y - y_center)^2 &lt;= radius^2</code>.
+          </h3>
         </li>
       </ol>
     </LeftContentDescription>

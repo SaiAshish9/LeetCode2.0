@@ -358,7 +358,8 @@ export const LeftContentDescription = styled.div`
   }
 
   h2,
-  strong {
+  strong,
+  h3 {
     color: rgb(255 255 255);
     font-weight: 500;
   }
@@ -376,6 +377,7 @@ export const LeftContentDescription = styled.div`
   ol > li {
     margin-bottom: 20px;
     position: relative;
+    color: rgb(255 255 255);
   }
   ol > li::before {
     counter-increment: step-counter;
