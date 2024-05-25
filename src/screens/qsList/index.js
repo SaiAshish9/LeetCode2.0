@@ -51,9 +51,10 @@ const QSList = () => {
             onClick={() => {
               window.open(
                 "/problems/" +
-                  title.toLowerCase().replaceAll(" ", "_") +
-                  "?tag=" +
-                  "biconnected_component",
+                  title.toLowerCase().replaceAll(" ", "_") 
+                  // + "?tag=" +
+                  // "biconnected_component"
+                  ,
                 "_blank"
               );
             }}
