@@ -31,14 +31,17 @@ export const NavContent = styled.div`
   justify-content: space-between;
   padding: 0 1.25rem;
   height: 3.1rem;
-  @media only screen and (max-width: ${BREAKPOINTS.x100}) {
-    max-width: 82vw;
-  }
-  @media only screen and (max-width: ${BREAKPOINTS.xl}) {
-    max-width: 90vw;
-  }
+
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     max-width: 100vw;
+  }
+
+
+  @media only screen and (min-width: ${BREAKPOINTS.x100}) {
+    max-width: 82vw;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.xl}) {
+    max-width: 72vw;
   }
   @media only screen and (min-width: ${BREAKPOINTS.x75}) {
     max-width: 64.5vw;

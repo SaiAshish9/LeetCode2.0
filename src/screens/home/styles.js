@@ -16,6 +16,13 @@ export const Content = styled.div`
   justify-content: space-between;
   padding: 1.5rem 15vw 0;
   padding-right: 15.5vw;
+  @media only screen and (min-width: ${BREAKPOINTS.x100}) {
+    padding: 1.5rem 10.5vw 0;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.xl}) {
+    padding: 1.5rem 15vw 0;
+    padding-right: 15.5vw;
+  }
   @media only screen and (min-width: ${BREAKPOINTS.x75}) {
     padding: 1.5rem 18.5vw 0;
   }

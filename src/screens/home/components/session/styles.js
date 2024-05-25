@@ -173,6 +173,7 @@ export const StyledFeaturedImg = styled.img`
 
 export const FeaturedContent = styled.div`
   margin-top: 1rem;
+  text-align: start;
 `;
 
 export const FeaturedContentItem = styled.div`
