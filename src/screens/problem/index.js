@@ -405,8 +405,9 @@ const Problem = () => {
                                 e.preventDefault();
                                 e.stopPropagation();
                                 setDropdownItemSelected(k);
+                                const path = location?.pathname?.split("/problems/")?.[1]
                                 navigate(
-                                  "/problems/critical_connections_in_a_network?tag=" +
+                                  `/problems/${path}?tag=` +
                                     item.toLowerCase().split(" ").join("_")
                                 );
                                 setItemSelected1(
@@ -566,8 +567,9 @@ const Problem = () => {
                           hovered={k === hovered}
                           onClick={() => {
                             setDropdownItemSelected(k);
+                            const path = location?.pathname?.split("/problems/")?.[1]
                             navigate(
-                              "/problems/critical_connections_in_a_network?tag=" +
+                              `/problems/${path}?tag=` +
                                 item.toLowerCase().split(" ").join("_")
                             );
                             setItemSelected((itemSelected) => !itemSelected);
