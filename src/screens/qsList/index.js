@@ -147,6 +147,7 @@ const QSList = () => {
           filteredData.map((x, k) => {
             const obj = { ...x };
             obj["key"] = "" + k;
+            obj["acceptance"] = x["acceptance"] + "%"
             return obj;
           })
         );
