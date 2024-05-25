@@ -21,11 +21,11 @@ export const Card = styled.div`
 
 export const StyledImage = styled.img`
   cursor: pointer;
-  width: 100%;
-  height: 70px;
+  height: 4.4rem;
   width: fit-content;
   position: absolute;
   right: 1.2rem;
+  max-height: 4.4rem;
   margin: 0px;
   padding: 0px;
   cursor: pointer;
