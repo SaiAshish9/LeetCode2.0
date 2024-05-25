@@ -16,9 +16,6 @@ export const Content = styled.div`
   justify-content: space-between;
   padding: 1.5rem 15vw 0;
   padding-right: 15.5vw;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
-    padding: 1.5rem 2vw 0;
-  }
   @media only screen and (max-width: ${BREAKPOINTS.x125}) {
     padding: 1.5rem 2.5vw 0;
   }
@@ -30,7 +27,7 @@ export const Content = styled.div`
     padding-right: 15.5vw;
   }
   @media only screen and (max-width: ${BREAKPOINTS.x110}) {
-    padding: 1.5rem 5.5vw 0;
+    padding: 1.5rem 2.5vw 0;
   }
   @media only screen and (min-width: ${BREAKPOINTS.x110}) {
     padding: 1.5rem 5.5vw 0;
@@ -62,6 +59,9 @@ export const Content = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.x200}) {
     padding: 1.5rem 0vw 0;
   }
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding: 1.5rem 1vw 0;
+  }
 `;
 
 export const TopLeftContainer = styled.div`
@@ -69,7 +69,7 @@ export const TopLeftContainer = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     width: 71%;
   }
-  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+  @media only screen and (max-width: ${BREAKPOINTS.x125}) {
     width: 100%;
   }
 `;
@@ -79,7 +79,7 @@ export const TopRightContainer = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     width: 27%;
   }
-  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+  @media only screen and (max-width: ${BREAKPOINTS.x125}) {
     display: none;
   }
 `;

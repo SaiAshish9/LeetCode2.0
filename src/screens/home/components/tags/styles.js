@@ -67,7 +67,7 @@ export const ExpandContainer = styled.div`
   justify-content: center;
   position: absolute;
   right: 0px;
-  z-index: 100;
+  z-index: 8;
   ${({ isExpanded }) =>
     isExpanded
       ? css`

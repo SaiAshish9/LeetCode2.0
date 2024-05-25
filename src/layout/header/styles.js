@@ -11,6 +11,7 @@ export const NavContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0px;
+  z-index: 20;
   ${({ tags }) =>
     tags
       ? css`
@@ -31,9 +32,6 @@ export const NavContent = styled.div`
   justify-content: space-between;
   padding: 0 1.25rem;
   height: 3.1rem;
-  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
-    max-width: 100vw;
-  }
   @media only screen and (max-width: ${BREAKPOINTS.x125}) {
     max-width: 95vw;
   }
@@ -44,7 +42,7 @@ export const NavContent = styled.div`
     max-width: 72vw;
   }
   @media only screen and (max-width: ${BREAKPOINTS.x110}) {
-    max-width: 90vw;
+    max-width: 95vw;
   }
   @media only screen and (min-width: ${BREAKPOINTS.x110}) {
     max-width: 90vw;
@@ -74,6 +72,9 @@ export const NavContent = styled.div`
     max-width: 98vw;
   }
   @media only screen and (max-width: ${BREAKPOINTS.x200}) {
+    max-width: 100vw;
+  }
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     max-width: 100vw;
   }
 `;
