@@ -4,13 +4,13 @@ import { BREAKPOINTS } from "../../../constants";
 export const StyledImg = styled.img`
   width: 32%;
   height: 100%;
-  max-height: 6rem;
   border-radius: 13px;
   cursor: pointer;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0px 1px 3px #0000003d,
     0px 2px 8px #00000029;
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     width: 49%;
+    max-height: 6rem;
   }
 `;
 
@@ -57,9 +57,11 @@ export const StyledSliderImage = styled.img`
   height: fit-content;
   border-radius: 13px;
   cursor: pointer;
-  max-height: 8rem;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0px 1px 3px #0000003d,
     0px 2px 8px #00000029;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    max-height: 7rem;
+  }
 `;
 
 export const StyledSliderText = styled.p`
