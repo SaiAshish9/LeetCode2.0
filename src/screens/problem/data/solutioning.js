@@ -423,6 +423,127 @@ const SOLUTIONING = {
       </ul>
     </LeftContentDescription>
   ),
+  912: (
+    <LeftContentDescription desc>
+      <h2>Explanation of Sort an Array Solution:</h2>
+
+      <p>
+        {" "}
+        The provided solution using radix sort does not have a time complexity
+        of O(nlogn). Radix sort typically has a time complexity of O(d⋅(n+k)),
+        where d is the number of digits in the largest number, n is the number
+        of elements, and k is the range of the digits.
+      </p>
+
+      <p>
+        {" "}
+        While radix sort is often more efficient than comparison-based sorting
+        algorithms like quicksort or mergesort in certain scenarios, it is not
+        O(nlogn). Radix sort's time complexity depends on the range of the keys
+        (digits) and the number of digits in the input numbers rather than being
+        dependent on the number of elements alone.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Method Setup:</strong>
+          <ul>
+            <li>
+              The <code>sortArray</code> method in the <code>Solution</code>{" "}
+              class is the entry point for sorting the array.
+            </li>
+            <li>
+              It first checks if the array is null or has less than 2 elements.
+              If so, it returns the array as it is.
+            </li>
+            <li>Otherwise, it proceeds with the radix sort algorithm.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Finding Maximum Absolute Value:</strong>
+          <ul>
+            <li>
+              Before sorting, the algorithm finds the maximum absolute value in
+              the array to handle negative numbers.
+            </li>
+            <li>
+              It uses{" "}
+              <code>Arrays.stream(nums).map(Math::abs).max().getAsInt()</code>{" "}
+              to find the maximum absolute value.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Radix Sort:</strong>
+          <ul>
+            <li>
+              The algorithm iterates through each digit position, starting from
+              the least significant digit (units place).
+            </li>
+            <li>
+              It uses the <code>countingSort</code> method to perform the
+              sorting based on the current digit position.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Counting Sort:</strong>
+          <ul>
+            <li>
+              In the <code>countingSort</code> method, the algorithm first
+              initializes an array <code>output</code> to store the sorted
+              elements.
+            </li>
+            <li>
+              It also initializes an array <code>count</code> to store the count
+              of occurrences of each digit.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Counting Occurrences of Digits:</strong>
+          <ul>
+            <li>
+              The algorithm iterates through the array and calculates the count
+              of occurrences of each digit.
+            </li>
+            <li>
+              Since the range of values includes negative numbers, it shifts the
+              index by 9 to handle negative numbers properly.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Calculating Cumulative Counts:</strong>
+          <ul>
+            <li>
+              We transform this array so that each entry at index i contains the
+              cumulative sum of counts up to i. This tells us the position where
+              each digit should be placed in the output array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Building the Output Array:</strong>
+          <ul>
+            <li>
+              Using the cumulative counts, the algorithm places each element in
+              its correct position in the <code>output</code> array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Copying Sorted Array:</strong>
+          <ul>
+            <li>
+              Finally, the algorithm copies the sorted elements from the{" "}
+              <code>output</code> array back to the original array.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </LeftContentDescription>
+  ),
 };
 
 export default SOLUTIONING;
