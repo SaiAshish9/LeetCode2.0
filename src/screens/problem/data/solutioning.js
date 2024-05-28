@@ -544,6 +544,135 @@ const SOLUTIONING = {
       </ul>
     </LeftContentDescription>
   ),
+  2343: (
+    <LeftContentDescription desc>
+      <h2>Step-by-Step Explanation of the Java Solution:</h2>
+      <ol>
+        <li>
+          <strong>
+            Define the <code>Solution</code> Class and Methods:
+          </strong>
+          <ul>
+            <li>
+              The <code>Solution</code> class contains the method{" "}
+              <code>smallestTrimmedNumbers</code> which processes the queries
+              and uses helper methods for sorting.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method: <code>smallestTrimmedNumbers</code>:
+          </strong>
+          <ul>
+            <li>
+              This method takes in an array of strings <code>nums</code> and a
+              2D array of queries.
+            </li>
+            <li>
+              It iterates over each query and uses the{" "}
+              <code>getKSmallestIndex</code> method to find the required
+              indices.
+            </li>
+            <li>
+              The results are stored in an array <code>ans</code> which is then
+              returned.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method: <code>getKSmallestIndex</code>:
+          </strong>
+          <ul>
+            <li>
+              This method processes each number in <code>nums</code> to extract
+              the trimmed part as specified by the query.
+            </li>
+            <li>
+              It creates a list of pairs where each pair contains the trimmed
+              number as a string and its original index.
+            </li>
+            <li>
+              The list of pairs is then converted into arrays for the trimmed
+              numbers and their indices.
+            </li>
+            <li>
+              The <code>radixSort</code> method is called to sort these arrays.
+            </li>
+            <li>
+              The method returns the index of the k-th smallest trimmed number.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method: <code>radixSort</code>:
+          </strong>
+          <ul>
+            <li>
+              This method sorts the array of strings (trimmed numbers) using
+              radix sort.
+            </li>
+            <li>
+              It determines the maximum length of the strings to decide the
+              number of sorting passes.
+            </li>
+            <li>
+              It calls the <code>countingSort</code> method for each digit
+              position starting from the least significant digit.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method: <code>countingSort</code>:
+          </strong>
+          <ul>
+            <li>
+              This method performs counting sort on the strings based on the
+              current digit position.
+            </li>
+            <li>
+              It counts the occurrences of each character, calculates the
+              positions, and rearranges the array accordingly.
+            </li>
+            <li>
+              Change <code>count[i]</code> so that it contains the actual
+              position of this digit in <code>output[]</code>. We transform this
+              array so that each entry at index <code>i</code> contains the
+              cumulative sum of counts up to <code>i</code>. This tells us the
+              position where each digit should be placed in the output array.
+            </li>
+            <li>
+              The indices are also rearranged to maintain the correspondence
+              with the sorted numbers.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Helper Class: <code>Pair</code>:
+          </strong>
+          <ul>
+            <li>
+              This class is used to store the trimmed number as a string and its
+              original index.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Main Method:</strong>
+          <ul>
+            <li>
+              The <code>main</code> method is provided for testing the solution
+              with a sample input.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </LeftContentDescription>
+  ),
 };
 
 export default SOLUTIONING;

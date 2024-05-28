@@ -357,7 +357,7 @@ export const LeftContentDescription = styled.div`
     white-space: pre-line;
   }
 
-  h2,
+  h1, h2,
   strong,
   h3 {
     color: rgb(255 255 255);
@@ -409,7 +409,7 @@ export const LeftContentDescription = styled.div`
     desc &&
     css`
       padding-left: 1rem;
-      h2 {
+      h1, h2, h3 {
         margin-bottom: 1rem;
         margin-left: -1rem;
       }
