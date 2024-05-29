@@ -161,8 +161,11 @@ const columns = [
 
 const TableContainer = () => {
   const [tableData, setTableData] = useState([]);
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+  const [isAcceptanceLoaded, setIsAcceptanceLoaded] = useState(false);
+  const [isDifficultyLoaded, setIsDifficultyLoaded] = useState(false);
 
-  function fetchData() {
+  async function fetchData() {
     fetch(
       "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/questions.json"
     )
@@ -178,55 +181,62 @@ const TableContainer = () => {
             };
           })
         );
+        setIsDataLoaded(true);
       })
       .catch((err) => console.log(err));
   }
 
-  function fetchDifficulty() {
+  async function fetchDifficulty() {
     fetch(
       "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/difficulty.json"
     )
       .then((res) => res.json())
       .then((res) => {
-        setTableData(
-          tableData => tableData.map((item, key) => {
+        setTableData((tableData) =>
+          tableData.map((item, key) => {
             return {
               ...item,
               difficulty: res[key] ?? "Hard",
             };
           })
         );
+        setIsDifficultyLoaded(true);
       })
       .catch((err) => console.log(err));
   }
 
-  function fetchAcceptance() {
+  async function fetchAcceptance() {
     fetch(
       "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/acceptance.json"
     )
       .then((res) => res.json())
       .then((res) => {
-        setTableData(
-          tableData => tableData.map((item, key) => {
+        setTableData((tableData) =>
+          tableData.map((item, key) => {
             return {
               ...item,
               acceptance: res[key] ?? "50%",
             };
           })
         );
+        setIsAcceptanceLoaded(true);
       })
       .catch((err) => console.log(err));
   }
 
+  async function fetchContent() {
+    await fetchData();
+    await fetchAcceptance();
+    await fetchDifficulty();
+  }
+
   useEffect(() => {
-    fetchData();
-    fetchAcceptance();
-    fetchDifficulty();
+    fetchContent();
   }, []);
 
   return (
     <>
-      {tableData?.length > 0 && (
+      {tableData?.length > 0 && isDataLoaded && isAcceptanceLoaded && isDifficultyLoaded && (
         <StyledTableContainer
           columns={columns}
           dataSource={tableData}
