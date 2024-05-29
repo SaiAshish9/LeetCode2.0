@@ -22,9 +22,9 @@ export const Card = styled.div`
 export const StyledImage = styled.img`
   cursor: pointer;
   height: 4.4rem;
-  width: fit-content;
+  width: 4.4rem;
   position: absolute;
-  right: 1.2rem;
+  right: 1rem;
   max-height: 4.4rem;
   margin: 0px;
   padding: 0px;
@@ -33,8 +33,8 @@ export const StyledImage = styled.img`
   ${({ img }) =>
     img
       ? css`
-          right: 0.95rem;
           top: -2rem;
+          width: 4.4rem;
           opacity: 0.6;
           &:hover {
             opacity: 1;
