@@ -231,7 +231,7 @@ const TableContainer = () => {
   }
 
   useEffect(() => {
-    if (!(tableData?.length > 0 || isAcceptanceLoaded || isDifficultyLoaded))
+    if (!tableData?.length > 0 && !isAcceptanceLoaded && !isDifficultyLoaded)
       fetchContent();
   }, [isAcceptanceLoaded, isDifficultyLoaded, tableData, fetchContent]);
 
