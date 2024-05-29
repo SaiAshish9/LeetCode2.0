@@ -256,9 +256,6 @@ const TableContainer = () => {
         <>
           <br />
           <br />
-          <br />
-          <br />
-          <br />
         </>
       )}
     </>
