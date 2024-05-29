@@ -231,27 +231,36 @@ const TableContainer = () => {
   }
 
   useEffect(() => {
-    fetchContent();
-  }, []);
+    if (!(tableData?.length > 0 || isAcceptanceLoaded || isDifficultyLoaded))
+      fetchContent();
+  }, [isAcceptanceLoaded, isDifficultyLoaded, tableData, fetchContent]);
 
   return (
     <>
       {tableData?.length > 0 &&
-        tableData[0]?.acceptance &&
-        tableData[0]?.difficulty &&
-        isDataLoaded &&
-        isAcceptanceLoaded &&
-        isDifficultyLoaded && (
-          <StyledTableContainer
-            columns={columns}
-            dataSource={tableData}
-            pagination={{
-              defaultPageSize: 100,
-              showSizeChanger: true,
-              pageSizeOptions: ["20", "50", "100"],
-            }}
-          />
-        )}
+      tableData[0]?.acceptance &&
+      tableData[0]?.difficulty &&
+      isDataLoaded &&
+      isAcceptanceLoaded &&
+      isDifficultyLoaded ? (
+        <StyledTableContainer
+          columns={columns}
+          dataSource={tableData}
+          pagination={{
+            defaultPageSize: 100,
+            showSizeChanger: true,
+            pageSizeOptions: ["20", "50", "100"],
+          }}
+        />
+      ) : (
+        <>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </>
+      )}
     </>
   );
 };
