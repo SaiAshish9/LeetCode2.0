@@ -56,12 +56,44 @@ const Calender = () => {
           ))}
         </TagsCont>
         <LabelsCont>
-          {keys.map((date, k) => (
+          {keys.slice(0, 7).map((date, k) => (
             <LabelTextContainer highlighted={date === 28} key={k}>
               <LabelText highlighted={date === 28}>{date}</LabelText>
               {k > 2 && k < 30 && <Dot />}
             </LabelTextContainer>
           ))}
+        </LabelsCont>
+        <LabelsCont>
+          {keys.slice(7, 14).map((date, k) => (
+            <LabelTextContainer highlighted={date === 28} key={k}>
+              <LabelText highlighted={date === 28}>{date}</LabelText>
+              {k + 7 < 30 && <Dot />}
+            </LabelTextContainer>
+          ))}{" "}
+        </LabelsCont>
+        <LabelsCont>
+          {keys.slice(14, 21).map((date, k) => (
+            <LabelTextContainer highlighted={date === 28} key={k}>
+              <LabelText highlighted={date === 28}>{date}</LabelText>
+              {k + 14 < 30 && <Dot />}
+            </LabelTextContainer>
+          ))}{" "}
+        </LabelsCont>
+        <LabelsCont>
+          {keys.slice(21, 28).map((date, k) => (
+            <LabelTextContainer highlighted={date === 28} key={k}>
+              <LabelText highlighted={date === 28}>{date}</LabelText>
+              {k + 21 < 30 && <Dot />}
+            </LabelTextContainer>
+          ))}{" "}
+        </LabelsCont>
+        <LabelsCont>
+          {keys.slice(28).map((date, k) => (
+            <LabelTextContainer highlighted={date === 28} key={k}>
+              <LabelText highlighted={date === 28}>{date}</LabelText>
+              {k + 28 < 30 && <Dot />}
+            </LabelTextContainer>
+          ))}{" "}
         </LabelsCont>
         <WeeklyCard>
           <WeeklyCardTextContainer>

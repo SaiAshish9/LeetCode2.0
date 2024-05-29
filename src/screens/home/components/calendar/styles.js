@@ -66,7 +66,7 @@ export const TagsCont = styled.div`
   margin: 0.5rem 0px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: ${({ start }) => (start ? "flex-start" : "space-between")};
   width: 100%;
 `;
 
@@ -82,7 +82,7 @@ export const TagText = styled.span`
 export const LabelsCont = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: ${({ start }) => (start ? "flex-start" : "space-between")};
   flex-wrap: wrap;
 `;
 
@@ -98,7 +98,7 @@ export const LabelText = styled.div`
     css`
       color: #fff;
       border-radius: 50%;
-      top: 0.4rem;
+      top: 0.42rem;
       font-weight: 500;
     `};
 `;
