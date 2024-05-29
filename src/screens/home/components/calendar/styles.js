@@ -63,27 +63,26 @@ export const TimelineText = styled.p`
 `;
 
 export const TagsCont = styled.div`
-  margin: 0.5rem 0px 0.5rem;
+  margin: 0.5rem 0px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 `;
 
 export const TagText = styled.span`
   color: #ebebf54d;
-  width: 2rem;
-  height: 2rem;
   font-size: 0.75rem;
   display: flex;
   align-items: center;
+  width: 2rem;
   justify-content: center;
 `;
 
 export const LabelsCont = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 `;
 
