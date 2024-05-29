@@ -170,7 +170,7 @@ const TableContainer = () => {
       "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/questions.json"
     )
       .then((res) => res.json())
-      .then((res) => {
+      .then(async (res) => {
         setTableData(
           res.map((item, key) => {
             return {
@@ -181,6 +181,8 @@ const TableContainer = () => {
             };
           })
         );
+        await fetchAcceptance();
+        await fetchDifficulty();
         setIsDataLoaded(true);
       })
       .catch((err) => console.log(err));
@@ -224,22 +226,27 @@ const TableContainer = () => {
       .catch((err) => console.log(err));
   }
 
-  async function fetchContent() {
-    await fetchData();
-    await fetchAcceptance();
-    await fetchDifficulty();
-  }
-
   useEffect(() => {
-    if (!tableData?.length > 0 && !isDataLoaded && !isAcceptanceLoaded && !isDifficultyLoaded)
-      fetchContent();
-    if (tableData?.length > 0 && isDataLoaded && !isAcceptanceLoaded) fetchContent();
-    if (tableData?.length > 0 && isDataLoaded && isAcceptanceLoaded && !isDifficultyLoaded) fetchContent();
-  }, [fetchContent, isAcceptanceLoaded, isDifficultyLoaded, isDataLoaded, tableData?.length]);
+    if (
+      !tableData?.length > 0 &&
+      !isDataLoaded &&
+      !isAcceptanceLoaded &&
+      !isDifficultyLoaded
+    )
+      fetchData();
+  }, [
+    fetchData,
+    isAcceptanceLoaded,
+    isDifficultyLoaded,
+    isDataLoaded,
+    tableData?.length,
+  ]);
 
   return (
     <>
       {tableData?.length > 0 &&
+      tableData[0]?.acceptance &&
+      tableData[0]?.difficulty &&
       isDataLoaded &&
       isAcceptanceLoaded &&
       isDifficultyLoaded ? (
