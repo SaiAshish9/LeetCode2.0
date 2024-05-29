@@ -234,8 +234,8 @@ const TableContainer = () => {
     if (!tableData?.length > 0 && !isAcceptanceLoaded && !isDifficultyLoaded)
       fetchContent();
     if (tableData?.length > 0 && !isAcceptanceLoaded) fetchContent();
-    if (tableData?.length > 0 && !isDifficultyLoaded) fetchContent();
-  }, [isAcceptanceLoaded, isDifficultyLoaded, tableData, fetchContent]);
+    if (tableData?.length > 0 && isAcceptanceLoaded && !isDifficultyLoaded) fetchContent();
+  }, [fetchContent, isAcceptanceLoaded, isDifficultyLoaded, tableData?.length]);
 
   return (
     <>
