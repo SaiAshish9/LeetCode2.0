@@ -231,17 +231,15 @@ const TableContainer = () => {
   }
 
   useEffect(() => {
-    if (!tableData?.length > 0 && !isAcceptanceLoaded && !isDifficultyLoaded)
+    if (!tableData?.length > 0 && !isDataLoaded && !isAcceptanceLoaded && !isDifficultyLoaded)
       fetchContent();
-    if (tableData?.length > 0 && !isAcceptanceLoaded) fetchContent();
-    if (tableData?.length > 0 && isAcceptanceLoaded && !isDifficultyLoaded) fetchContent();
-  }, [fetchContent, isAcceptanceLoaded, isDifficultyLoaded, tableData?.length]);
+    if (tableData?.length > 0 && isDataLoaded && !isAcceptanceLoaded) fetchContent();
+    if (tableData?.length > 0 && isDataLoaded && isAcceptanceLoaded && !isDifficultyLoaded) fetchContent();
+  }, [fetchContent, isAcceptanceLoaded, isDifficultyLoaded, isDataLoaded, tableData?.length]);
 
   return (
     <>
       {tableData?.length > 0 &&
-      tableData[0]?.acceptance &&
-      tableData[0]?.difficulty &&
       isDataLoaded &&
       isAcceptanceLoaded &&
       isDifficultyLoaded ? (
