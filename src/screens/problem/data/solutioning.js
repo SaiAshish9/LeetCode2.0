@@ -675,6 +675,29 @@ const SOLUTIONING = {
   ),
   332: (
     <LeftContentDescription desc>
+      <p>
+        To reconstruct an itinerary given a list of airline tickets, we can
+        model this problem as finding an Eulerian path in a directed graph. The
+        Eulerian path is a trail in a graph that visits every edge exactly once.
+        Given the nature of flight itineraries (where you may have multiple
+        tickets between the same cities), this problem ensures the existence of
+        an Eulerian path rather than an Eulerian circuit (where the path must
+        start and end at the same vertex).
+      </p>
+      <br />
+      <h2>Problem Statement:</h2>
+      <p>
+        You are given a list of airline tickets represented as pairs of
+        departure and arrival airports [from, to], and you need to reconstruct
+        the itinerary in such a way that:
+      </p>
+      <p>1. The itinerary starts at "JFK".</p>
+      <p>2. The itinerary uses all the tickets exactly once.</p>
+      <p>
+        3. The itinerary is lexicographically smallest when there are multiple
+        valid itineraries.
+      </p>
+      <br/>
       <h1>Reconstruct Itinerary Explanation:</h1>
 
       <p>
