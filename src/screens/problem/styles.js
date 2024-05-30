@@ -414,6 +414,10 @@ export const LeftContentDescription = styled.div`
         margin-left: -1rem;
       }
 
+      p {
+        margin-left: -1rem;
+      }
+
       ul {
         padding-inline-start: 32px;
       }

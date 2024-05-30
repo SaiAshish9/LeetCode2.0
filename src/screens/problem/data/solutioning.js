@@ -673,6 +673,98 @@ const SOLUTIONING = {
       </ol>
     </LeftContentDescription>
   ),
+  332: (
+    <LeftContentDescription desc>
+      <h1>Reconstruct Itinerary Explanation:</h1>
+
+      <p>
+        <strong>Hierholzer's Algorithm:</strong>
+      </p>
+      <p>
+        Hierholzer’s algorithm is used to find an Eulerian path or circuit in a
+        graph. In this problem, we adapt the algorithm to find an Eulerian path
+        in a directed graph, where we must visit every edge (flight) exactly
+        once. The algorithm involves traversing the graph and backtracking as
+        necessary to cover all edges.
+      </p>
+
+      <ol>
+        <li>
+          <strong>Graph Construction:</strong>
+          <ul>
+            <li>
+              We represent the graph using a{" "}
+              <code>Map&lt;String, PriorityQueue&lt;String&gt;&gt;</code>. Each
+              airport points to a priority queue of destination airports,
+              ensuring destinations are processed in lexicographical order.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterative Depth-First Search Using Stack:</strong>
+          <ul>
+            <li>
+              This part of the solution implements a variation of Hierholzer’s
+              algorithm. Instead of using recursion for DFS, we use an explicit
+              stack to manage the traversal.
+            </li>
+            <li>
+              Initialize a <code>Stack&lt;String&gt;</code> and push "JFK" to
+              start the journey.
+            </li>
+            <li>
+              While the stack is not empty:
+              <ul>
+                <li>
+                  Peek at the top of the stack to get the current airport.
+                </li>
+                <li>
+                  Retrieve the priority queue of next possible airports from the
+                  graph.
+                </li>
+                <li>
+                  If there are any destinations left from the current airport,
+                  push the next airport onto the stack.
+                </li>
+                <li>
+                  If no destinations are left, pop the current airport from the
+                  stack and add it to the front of the itinerary using{" "}
+                  <code>addFirst</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Result Construction:</strong>
+          <ul>
+            <li>
+              The itinerary is constructed in reverse order because we add
+              airports to the front of the list during backtracking. This
+              ensures the final itinerary is in the correct order when traversal
+              is complete.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Example Usage:</strong>
+          <ul>
+            <li>
+              The <code>main</code> method demonstrates using the{" "}
+              <code>findItinerary</code> method with a sample list of tickets
+              and prints the resulting itinerary to verify the output.
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <p>
+        By following Hierholzer’s algorithm iteratively with a stack, this
+        solution ensures that all tickets are used exactly once and the
+        resulting itinerary is the lexicographically smallest possible.
+      </p>
+    </LeftContentDescription>
+  ),
 };
 
 export default SOLUTIONING;
