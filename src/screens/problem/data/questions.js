@@ -510,6 +510,326 @@ const QUESTIONS = {
       </p>
     </div>
   ),
+  332: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a list of airline <code>tickets</code> where{" "}
+        <code>
+          tickets[i] = [from<sub>i</sub>, to<sub>i</sub>]
+        </code>{" "}
+        represent the departure and the arrival airports of one flight.
+        Reconstruct the itinerary in order and return it.
+      </p>
+
+      <p>
+        All of the tickets belong to a man who departs from <code>"JFK"</code>,
+        thus, the itinerary must begin with <code>"JFK"</code>. If there are
+        multiple valid itineraries, you should return the itinerary that has the
+        smallest lexical order when read as a single string.
+      </p>
+
+      <ul>
+        <li>
+          For example, the itinerary <code>["JFK", "LGA"]</code> has a smaller
+          lexical order than <code>["JFK", "LGB"]</code>.
+        </li>
+      </ul>
+
+      <p>
+        You may assume all tickets form at least one valid itinerary. You must
+        use all the tickets once and only once.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/03/14/itinerary1-graph.jpg"
+        style={{ width: "382px", height: "222px" }}
+      />
+      <pre>
+        <strong>Input:</strong> tickets =
+        [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
+        <br />
+        <strong>Output:</strong> ["JFK","MUC","LHR","SFO","SJC"]
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/03/14/itinerary2-graph.jpg"
+        style={{ width: "222px", height: "230px" }}
+      />
+      <pre>
+        <strong>Input:</strong> tickets =
+        [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+        <br />
+        <strong>Output:</strong> ["JFK","ATL","JFK","SFO","ATL","SFO"]
+        <br />
+        <strong>Explanation:</strong> Another possible reconstruction is
+        ["JFK","SFO","ATL","JFK","ATL","SFO"] but it is larger in lexical order.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= tickets.length &lt;= 300</code>
+        </li>
+        <li>
+          <code>tickets[i].length == 2</code>
+        </li>
+        <li>
+          <code>
+            from<sub>i</sub>.length == 3
+          </code>
+        </li>
+        <li>
+          <code>
+            to<sub>i</sub>.length == 3
+          </code>
+        </li>
+        <li>
+          <code>
+            from<sub>i</sub>
+          </code>{" "}
+          and{" "}
+          <code>
+            to<sub>i</sub>
+          </code>{" "}
+          consist of uppercase English letters.
+        </li>
+        <li>
+          <code>
+            from<sub>i</sub> != to<sub>i</sub>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
+  753: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        There is a safe protected by a password. The password is a sequence of{" "}
+        <code>n</code> digits where each digit can be in the range{" "}
+        <code>[0, k - 1]</code>.
+      </p>
+
+      <p>
+        The safe has a peculiar way of checking the password. When you enter in
+        a sequence, it checks the <strong>most recent </strong>
+        <code>n</code>
+        <strong> digits</strong> that were entered each time you type a digit.
+      </p>
+
+      <ul>
+        <li>
+          For example, the correct password is <code>"345"</code> and you enter
+          in <code>"012345"</code>:
+          <ul>
+            <li>
+              After typing <code>0</code>, the most recent <code>3</code> digits
+              is <code>"0"</code>, which is incorrect.
+            </li>
+            <li>
+              After typing <code>1</code>, the most recent <code>3</code> digits
+              is <code>"01"</code>, which is incorrect.
+            </li>
+            <li>
+              After typing <code>2</code>, the most recent <code>3</code> digits
+              is <code>"012"</code>, which is incorrect.
+            </li>
+            <li>
+              After typing <code>3</code>, the most recent <code>3</code> digits
+              is <code>"123"</code>, which is incorrect.
+            </li>
+            <li>
+              After typing <code>4</code>, the most recent <code>3</code> digits
+              is <code>"234"</code>, which is incorrect.
+            </li>
+            <li>
+              After typing <code>5</code>, the most recent <code>3</code> digits
+              is <code>"345"</code>, which is correct and the safe unlocks.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>
+        Return{" "}
+        <em>
+          any string of <strong>minimum length</strong> that will unlock the
+          safe <strong>at some point</strong> of entering it
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 1, k = 2<br />
+        <strong>Output:</strong> "10"
+        <br />
+        <strong>Explanation:</strong> The password is a single digit, so enter
+        each digit. "01" would also unlock the safe.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 2, k = 2 <br />
+        <strong>Output:</strong> "01100"
+        <br />
+        <strong>Explanation:</strong> For each possible password:
+        <br />- "00" is typed in starting from the 4<sup>th</sup> digit.
+        <br />- "01" is typed in starting from the 1<sup>st</sup> digit.
+        <br />- "10" is typed in starting from the 3<sup>rd</sup> digit.
+        <br />- "11" is typed in starting from the 2<sup>nd</sup> digit. Thus
+        "01100" will unlock the safe. "10011", and "11001" would also unlock the
+        safe.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= n &lt;= 4</code>
+        </li>
+        <li>
+          <code>1 &lt;= k &lt;= 10</code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= k<sup>n</sup> &lt;= 4096
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
+  2097: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> 2D integer array{" "}
+        <code>pairs</code> where{" "}
+        <code>
+          pairs[i] = [start<sub>i</sub>, end<sub>i</sub>]
+        </code>
+        . An arrangement of <code>pairs</code> is <strong>valid</strong> if for
+        every index <code>i</code> where{" "}
+        <code>1 &lt;= i &lt; pairs.length</code>, we have{" "}
+        <code>
+          end<sub>i-1</sub> == start<sub>i</sub>
+        </code>
+        .
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          <strong>any</strong> valid arrangement of{" "}
+        </em>
+        <code>pairs</code>.
+      </p>
+
+      <p>
+        <strong>Note:</strong> The inputs will be generated such that there
+        exists a valid arrangement of <code>pairs</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> pairs = [[5,1],[4,5],[11,9],[9,4]] <br />
+        <strong>Output:</strong> [[11,9],[9,4],[4,5],[5,1]] <br />
+        <strong>
+          Explanation: <br />
+        </strong>
+        This is a valid arrangement since end<sub>i-1</sub> always equals start
+        <sub>i</sub>. end<sub>0</sub> = 9 == 9 = start<sub>1</sub> <br />
+        end<sub>1</sub> = 4 == 4 = start<sub>2</sub> <br />
+        end<sub>2</sub> = 5 == 5 = start<sub>3</sub> <br />
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> pairs = [[1,3],[3,2],[2,1]] <br />
+        <strong>Output:</strong> [[1,3],[3,2],[2,1]] <br />
+        <strong>Explanation:</strong> <br />
+        This is a valid arrangement since end<sub>i-1</sub> always equals start
+        <sub>i</sub>. <br />
+        end<sub>0</sub> = 3 == 3 = start<sub>1</sub> <br />
+        end<sub>1</sub> = 2 == 2 = start<sub>2</sub> <br />
+        The arrangements [[2,1],[1,3],[3,2]] and [[3,2],[2,1],[1,3]] are also
+        valid.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> pairs = [[1,2],[1,3],[2,1]] <br />
+        <strong>Output:</strong> [[1,2],[2,1],[1,3]] <br />
+        <strong>Explanation:</strong> <br />
+        This is a valid arrangement since end<sub>i-1</sub> always equals start
+        <sub>i</sub>. <br />
+        end<sub>0</sub> = 2 == 2 = start<sub>1</sub> <br />
+        end<sub>1</sub> = 1 == 1 = start<sub>2</sub> <br />
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= pairs.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>pairs[i].length == 2</code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= start<sub>i</sub>, end<sub>i</sub> &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            start<sub>i</sub> != end<sub>i</sub>
+          </code>
+        </li>
+        <li>No two pairs are exactly the same.</li>
+        <li>
+          There <strong>exists</strong> a valid arrangement of{" "}
+          <code>pairs</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
