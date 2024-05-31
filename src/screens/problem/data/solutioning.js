@@ -697,7 +697,7 @@ const SOLUTIONING = {
         3. The itinerary is lexicographically smallest when there are multiple
         valid itineraries.
       </p>
-      <br/>
+      <br />
       <h1>Reconstruct Itinerary Explanation:</h1>
 
       <p>
@@ -786,6 +786,121 @@ const SOLUTIONING = {
         solution ensures that all tickets are used exactly once and the
         resulting itinerary is the lexicographically smallest possible.
       </p>
+    </LeftContentDescription>
+  ),
+  753: (
+    <LeftContentDescription desc>
+      <h1>Explanation for "Cracking the Safe" Solution</h1>
+
+      <ol>
+        <li>
+          <strong>De Bruijn Graph: </strong>
+          <ul>
+            <li>
+              A De Bruijn graph is a directed graph that represents overlapping
+              subsequences of symbols from a larger sequence. It has
+              applications in various fields, including computer science,
+              bioinformatics, and cryptography. Here's an explanation of the De
+              Bruijn graph:
+            </li>
+            <li>
+              Consider a De Bruijn graph 𝐵 ( 2 , 3 ) B(2,3) over the binary
+              alphabet {(0, 1)} {(0, 1)}. It consists of vertices representing
+              all possible 3-bit binary sequences: 000 000, 001 001, 010 010,
+              011 011, 100 100, 101 101, 110 110, and 111 111. The edges are
+              determined by the overlapping subsequences of length 𝑛 − 1 = 2
+              n−1=2.
+            </li>
+            <li>
+              For example, there is an edge from 001 001 to 010 010 because the
+              last 2 bits of 001 001 match the first 2 bits of 010 010.
+              Similarly, there is an edge from 110 110 to 101 101 because the
+              last 2 bits of 110 110 match the first 2 bits of 101 101.
+            </li>
+            <li>
+              Construct a graph where each node represents a string of length
+              n-1, and each edge represents adding a new digit 0 to k-1 to this
+              string, leading to another string of length n-1. This graph is a
+              De Bruijn graph.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Eulerian Path:</strong>
+          <ul>
+            <li>
+              The problem can be reduced to finding an Eulerian path in this
+              graph. An Eulerian path visits every edge exactly once, which
+              corresponds to visiting every possible combination exactly once.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Hierholzer’s Algorithm:</strong>
+          <ul>
+            <li>
+              Use Hierholzer's algorithm to find the Eulerian path, which is
+              suitable for finding an Eulerian circuit in a graph.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Edge Case Handling:</strong>
+          <ul>
+            <li>
+              If <code>n == 1</code>, construct the result by concatenating
+              digits from 0 to <code>k-1</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Main Logic for <code>n &gt; 1</code>:
+          </strong>
+          <ul>
+            <li>
+              Initialize the <code>result</code> <code>StringBuilder</code>.
+            </li>
+            <li>
+              Use a <code>Set</code> <code>visited</code> to track visited
+              edges.
+            </li>
+            <li>
+              Use a stack <code>stack</code> for iterative DFS, starting with a
+              string of <code>n-1</code> zeros.
+            </li>
+            <li>
+              While the stack is not empty, perform DFS and backtrack as needed
+              to construct the sequence.
+            </li>
+            <li>
+              For each node, try all possible edges (formed by appending digits
+              0 to <code>k-1</code>), checking if the edge has been visited.
+              <ul>
+                <li>
+                  If an edge has not been visited, mark it as visited, push the
+                  suffix of the new string onto the stack, and set{" "}
+                  <code>hasUnvisitedEdge</code> to true.
+                </li>
+              </ul>
+            </li>
+            <li>
+              If all edges from the current node are visited, backtrack by
+              popping the stack and appending the last character of the current
+              node to <code>result</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Final Sequence Construction:</strong>
+          <ul>
+            <li>
+              After visiting all edges, append the initial starting string minus
+              its last character to the <code>result</code> to avoid redundancy.
+            </li>
+          </ul>
+        </li>
+      </ol>
     </LeftContentDescription>
   ),
 };
