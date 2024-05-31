@@ -27,7 +27,6 @@ import {
 import { useLocation } from "react-router-dom";
 
 const QSList = () => {
-
   const columns = [
     {
       title: "",
@@ -139,7 +138,7 @@ const QSList = () => {
       .then((res) => res.json())
       .then((res) => {
         let path = pathname?.split("/tag/")?.[1];
-        path = path?.replaceAll("_", " ");
+        path = path ? decodeURIComponent(path)?.replaceAll("_", " ") : "";
         path = toTitleCase(path);
         setPath(path);
         const values = Object.values(res);
@@ -175,7 +174,7 @@ const QSList = () => {
       <Switch>
         <BookmarkText>
           <BookmarkIcon />
-          <BookmarkSpan>{pathname && path}</BookmarkSpan>
+          <BookmarkSpan>{pathname && decodeURIComponent(path)}</BookmarkSpan>
         </BookmarkText>
         <TabContainer>
           <Tab onClick={() => setSelected(0)} inactive={selected === 1}>
