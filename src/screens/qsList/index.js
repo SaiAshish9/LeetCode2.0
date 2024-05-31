@@ -159,7 +159,7 @@ const QSList = () => {
     fetch(BASE_URl + "tagDescription.json")
       .then((res) => res.json())
       .then((res) => {
-        setDescription(res[pathname?.split("/tag/")?.[1]]);
+        setDescription(res[decodeURIComponent(pathname)?.split("/tag/")?.[1]]);
       })
       .catch((err) => console.log(err));
   }
