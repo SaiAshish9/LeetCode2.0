@@ -903,6 +903,96 @@ const SOLUTIONING = {
       </ol>
     </LeftContentDescription>
   ),
+  2097: (
+    <LeftContentDescription desc>
+      <h2>Explanation of the Solution:</h2>
+
+      <ol>
+        <li>
+          <strong>validArrangement(int[][] pairs):</strong>
+          <ul>
+            <li>
+              This method takes a 2D array of pairs as input and returns a 2D
+              array representing a valid arrangement of pairs.
+            </li>
+            <li>
+              It initializes a list <code>ans</code> to store the resulting
+              pairs, and three maps: <code>graph</code>, <code>outDegree</code>,
+              and <code>inDegrees</code>.
+            </li>
+            <li>
+              It iterates through the pairs and constructs the directed graph{" "}
+              <code>graph</code>, where each vertex is a start point and each
+              edge is a pair.
+            </li>
+            <li>
+              For each start point, it counts its out-degree (number of outgoing
+              edges) and in-degree (number of incoming edges).
+            </li>
+            <li>
+              It then finds the start node for the Eulerian circuit using the{" "}
+              <code>getStartNode</code> method.
+            </li>
+            <li>
+              After finding the start node, it performs a depth-first search
+              (DFS) using the <code>eulerDFS</code> method to find the Eulerian
+              circuit.
+            </li>
+            <li>
+              Finally, it reverses the resulting list <code>ans</code> and
+              converts it into a 2D array before returning.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>
+            getStartNode(Map&lt;Integer, Stack&lt;Integer&gt;&gt; graph,
+            Map&lt;Integer, Integer&gt; outDegree, Map&lt;Integer, Integer&gt;
+            inDegrees, int[][] pairs):
+          </strong>
+          <ol>
+            <li>This method finds the start node for the Eulerian circuit.</li>
+            <li>
+              It iterates through the vertices in the graph and checks if the
+              difference between the out-degree and in-degree of each vertex is
+              1 (except for the last vertex).
+            </li>
+            <li>
+              If found, it returns the start node. If no such node is found, it
+              returns the first start node from the input pairs.
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <strong>
+            eulerDFS(Map&lt;Integer, Stack&lt;Integer&gt;&gt; graph, int u,
+            List&lt;int[]&gt; ans):
+          </strong>
+          <ol>
+            <li>
+              This method performs a depth-first search (DFS) to find the
+              Eulerian circuit.
+            </li>
+            <li>
+              It takes the current vertex <code>u</code> and a list{" "}
+              <code>ans</code> to store the resulting pairs.
+            </li>
+            <li>
+              It pops vertices from the stack of outgoing edges for the current
+              vertex <code>u</code> until the stack is empty.
+            </li>
+            <li>
+              For each popped vertex <code>v</code>, it recursively calls{" "}
+              <code>eulerDFS</code> with <code>v</code> and adds the pair{" "}
+              <code>(u, v)</code> to the list <code>ans</code>.
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </LeftContentDescription>
+  ),
 };
 
 export default SOLUTIONING;
