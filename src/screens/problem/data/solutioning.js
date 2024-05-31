@@ -808,8 +808,7 @@ const SOLUTIONING = {
               alphabet {(0, 1)} {(0, 1)}. It consists of vertices representing
               all possible 3-bit binary sequences: 000 000, 001 001, 010 010,
               011 011, 100 100, 101 101, 110 110, and 111 111. The edges are
-              determined by the overlapping subsequences of length 𝑛 − 1 = 2
-              n−1=2.
+              determined by the overlapping subsequences of length 𝑛 − 1 = 2.{" "}
             </li>
             <li>
               For example, there is an edge from 001 001 to 010 010 because the
