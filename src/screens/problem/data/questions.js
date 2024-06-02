@@ -875,7 +875,7 @@ const QUESTIONS = {
         <img
           alt=""
           src="https://assets.leetcode.com/uploads/2020/06/04/ex1.png"
-          style="width: 259px; height: 262px;"
+          style={{ width: 259, height: 262 }}
         />
       </p>
 
@@ -891,7 +891,7 @@ const QUESTIONS = {
         <img
           alt=""
           src="https://assets.leetcode.com/uploads/2020/06/04/msts.png"
-          style="width: 540px; height: 553px;"
+          style={{ width: 540, height: 553 }}
         />
         Notice that the two edges 0 and 1 appear in all MSTs, therefore they are
         critical edges, so we return them in the first list of the output. The
@@ -908,7 +908,7 @@ const QUESTIONS = {
         <img
           alt=""
           src="https://assets.leetcode.com/uploads/2020/06/04/ex2.png"
-          style="width: 247px; height: 253px;"
+          style={{ width: 247, height: 253 }}
         />
       </p>
 
