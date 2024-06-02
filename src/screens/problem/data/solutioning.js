@@ -1176,6 +1176,126 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1568: (
+    <>
+      <p>
+        One common approach is to iterate through all the edges, removing one
+        edge at a time and checking if the resulting graph becomes disconnected.
+      </p>
+
+      <p>
+        While using Strongly Connected Components (SCCs) to solve this problem
+        is feasible, it's not the most straightforward or efficient approach.
+        SCCs are more commonly used for problems related to cycle detection,
+        connectivity, and certain graph algorithms like Kosaraju's algorithm for
+        finding strongly connected components.
+      </p>
+
+      <p>
+        Here's why SCCs might not be the ideal approach for solving this
+        particular problem:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Complexity:</strong> SCC algorithms, like Tarjan's algorithm
+          or Kosaraju's algorithm, have a complexity of O(V+E), where V is the
+          number of vertices and E is the number of edges. While this might seem
+          reasonable, it's important to note that SCC algorithms typically
+          require preprocessing the entire graph to find SCCs, which might not
+          be necessary for this problem.
+        </li>
+        <li>
+          <strong>Extra Overhead:</strong> SCC algorithms involve additional
+          steps such as DFS traversal and stack operations to identify SCCs. For
+          this problem, where the goal is to simply find whether removing a
+          single edge disconnects the island, this extra overhead might not be
+          justified.
+        </li>
+        <li>
+          <strong>Scalability:</strong> The SCC approach might not scale well
+          for larger graphs. As the size of the graph increases, the complexity
+          of finding SCCs also increases, potentially leading to longer
+          execution times.
+        </li>
+      </ul>
+
+      <p>
+        Instead, a more straightforward and efficient approach for this problem
+        would be to use a simple graph traversal algorithm, such as Depth First
+        Search (DFS) or Breadth First Search (BFS), to iterate through all the
+        edges and check if removing an edge disconnects the island.
+      </p>
+      <h1>Code Explanation</h1>
+      <h2>Disconnected Check</h2>
+      <p>
+        First, it checks if the island is already disconnected by counting the
+        number of connected components (islands) in the grid. If there is more
+        than one connected component, the grid is already disconnected, and the
+        function returns 0.
+      </p>
+
+      <h2>Try Removing One Land Cell</h2>
+      <p>
+        The function then iterates through each cell in the grid. For each land
+        cell (<code>grid[i][j] == 1</code>), it temporarily removes the cell
+        (sets it to 0) and checks if this operation disconnects the island. If
+        it does, the function returns 1. After checking, it restores the cell
+        back to 1.
+      </p>
+
+      <h2>Remove Two Land Cells</h2>
+      <p>
+        If removing one land cell does not disconnect the island, the function
+        concludes that at least two cells must be removed to disconnect the
+        island, and it returns 2.
+      </p>
+
+      <h2>Detailed Steps</h2>
+      <h3>Check Initial Disconnection</h3>
+      <p>
+        The <code>disconnected</code> method checks if the island is already
+        disconnected by counting the number of islands using DFS.
+      </p>
+      <ol>
+        <li>
+          It initializes <code>islandsCount</code> to 0.
+        </li>
+        <li>
+          It iterates through each cell in the grid. If it finds an unvisited
+          land cell (<code>grid[i][j] == 1</code> and <code>!seen[i][j]</code>),
+          it starts a DFS from that cell, marking all connected land cells as
+          visited.
+        </li>
+        <li>
+          If it finds more than one island during this process, it returns{" "}
+          <code>true</code>, indicating that the grid is disconnected.
+        </li>
+      </ol>
+
+      <h3>Try Removing One Land Cell</h3>
+      <p>The main method iterates through each cell. For each land cell:</p>
+      <ol>
+        <li>
+          It temporarily removes the cell (<code>grid[i][j] = 0</code>).
+        </li>
+        <li>
+          It calls <code>disconnected</code> to check if this removal
+          disconnects the island.
+        </li>
+        <li>If it does, it returns 1.</li>
+        <li>
+          Otherwise, it restores the cell (<code>grid[i][j] = 1</code>).
+        </li>
+      </ol>
+
+      <h3>Return 2 If Needed</h3>
+      <p>
+        If no single cell removal disconnects the island, it returns 2, meaning
+        that at least two cells need to be removed to disconnect the island.
+      </p>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
