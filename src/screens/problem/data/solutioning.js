@@ -1226,8 +1226,8 @@ const SOLUTIONING = {
         Search (DFS) or Breadth First Search (BFS), to iterate through all the
         edges and check if removing an edge disconnects the island.
       </p>
-      <h1>Code Explanation</h1>
-      <h2>Disconnected Check</h2>
+      <h1>Code Explanation:</h1>
+      <h2>Disconnected Check:</h2>
       <p>
         First, it checks if the island is already disconnected by counting the
         number of connected components (islands) in the grid. If there is more
@@ -1235,7 +1235,7 @@ const SOLUTIONING = {
         function returns 0.
       </p>
 
-      <h2>Try Removing One Land Cell</h2>
+      <h2>Try Removing One Land Cell:</h2>
       <p>
         The function then iterates through each cell in the grid. For each land
         cell (<code>grid[i][j] == 1</code>), it temporarily removes the cell
@@ -1244,15 +1244,15 @@ const SOLUTIONING = {
         back to 1.
       </p>
 
-      <h2>Remove Two Land Cells</h2>
+      <h2>Remove Two Land Cells:</h2>
       <p>
         If removing one land cell does not disconnect the island, the function
         concludes that at least two cells must be removed to disconnect the
         island, and it returns 2.
       </p>
 
-      <h2>Detailed Steps</h2>
-      <h3>Check Initial Disconnection</h3>
+      <h2>Detailed Steps:</h2>
+      <h3>Check Initial Disconnection:</h3>
       <p>
         The <code>disconnected</code> method checks if the island is already
         disconnected by counting the number of islands using DFS.
@@ -1273,7 +1273,7 @@ const SOLUTIONING = {
         </li>
       </ol>
 
-      <h3>Try Removing One Land Cell</h3>
+      <h3>Try Removing One Land Cell:</h3>
       <p>The main method iterates through each cell. For each land cell:</p>
       <ol>
         <li>
@@ -1289,7 +1289,7 @@ const SOLUTIONING = {
         </li>
       </ol>
 
-      <h3>Return 2 If Needed</h3>
+      <h3>Return 2 If Needed:</h3>
       <p>
         If no single cell removal disconnects the island, it returns 2, meaning
         that at least two cells need to be removed to disconnect the island.
