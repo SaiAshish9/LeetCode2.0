@@ -2,7 +2,7 @@ import { LeftContentDescription } from "../styles";
 
 const SOLUTIONING = {
   1192: (
-    <LeftContentDescription desc>
+    <>
       <h2>Step-by-Step Explanation:</h2>
       <ol>
         <li>
@@ -152,10 +152,10 @@ const SOLUTIONING = {
           </p>
         </li>
       </ol>
-    </LeftContentDescription>
+    </>
   ),
   470: (
-    <LeftContentDescription desc>
+    <>
       <h2>Explanation:</h2>
       <ol>
         <li>
@@ -238,10 +238,10 @@ const SOLUTIONING = {
         in the generated numbers, as 40 is the largest multiple of 10 less than
         49.
       </p>
-    </LeftContentDescription>
+    </>
   ),
   478: (
-    <LeftContentDescription desc>
+    <>
       <h2>Explanation:</h2>
       <ol>
         <li>We define a Solution class to encapsulate the functionality.</li>
@@ -346,10 +346,10 @@ const SOLUTIONING = {
           </h3>
         </li>
       </ol>
-    </LeftContentDescription>
+    </>
   ),
   164: (
-    <LeftContentDescription desc>
+    <>
       <h2>Explanation of Maximum Gap Solution</h2>
 
       <h3>
@@ -421,10 +421,10 @@ const SOLUTIONING = {
           <code>output</code> back to the original array <code>nums</code>.
         </li>
       </ul>
-    </LeftContentDescription>
+    </>
   ),
   912: (
-    <LeftContentDescription desc>
+    <>
       <h2>Explanation of Sort an Array Solution:</h2>
 
       <p>
@@ -542,10 +542,10 @@ const SOLUTIONING = {
           </ul>
         </li>
       </ul>
-    </LeftContentDescription>
+    </>
   ),
   2343: (
-    <LeftContentDescription desc>
+    <>
       <h2>Step-by-Step Explanation of the Java Solution:</h2>
       <ol>
         <li>
@@ -671,10 +671,10 @@ const SOLUTIONING = {
           </ul>
         </li>
       </ol>
-    </LeftContentDescription>
+    </>
   ),
   332: (
-    <LeftContentDescription desc>
+    <>
       <p>
         To reconstruct an itinerary given a list of airline tickets, we can
         model this problem as finding an Eulerian path in a directed graph. The
@@ -786,10 +786,10 @@ const SOLUTIONING = {
         solution ensures that all tickets are used exactly once and the
         resulting itinerary is the lexicographically smallest possible.
       </p>
-    </LeftContentDescription>
+    </>
   ),
   753: (
-    <LeftContentDescription desc>
+    <>
       <h1>Explanation for "Cracking the Safe" Solution</h1>
 
       <ol>
@@ -900,10 +900,10 @@ const SOLUTIONING = {
           </ul>
         </li>
       </ol>
-    </LeftContentDescription>
+    </>
   ),
   2097: (
-    <LeftContentDescription desc>
+    <>
       <h2>Explanation of the Solution:</h2>
 
       <ol>
@@ -990,8 +990,108 @@ const SOLUTIONING = {
           </ol>
         </li>
       </ol>
-    </LeftContentDescription>
+    </>
+  ),
+  1489: (
+    <>
+      <p>
+        Using Strongly Connected Components (SCCs) is not typically how one
+        would solve the problem of finding critical and pseudo-critical edges in
+        a Minimum Spanning Tree (MST). The problem fundamentally relies on the
+        properties of MSTs, which are efficiently addressed using algorithms
+        like Kruskal's or Prim's in combination with Union-Find for cycle
+        detection.
+      </p>
+
+      <p>
+        However, I can provide a brief explanation of how SCCs might
+        theoretically relate to this problem, though it's not a practical or
+        efficient approach for this particular task:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Strongly Connected Components (SCCs)</strong>
+          <ul>
+            <li>
+              SCCs are a feature of directed graphs where each vertex is
+              reachable from every other vertex in the same component.
+            </li>
+            <li>Tarjan's algorithm is a well-known method to find SCCs.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>MST and Edge Criticality</strong>
+          <ul>
+            <li>
+              The problem of finding critical and pseudo-critical edges in an
+              MST is different:
+            </li>
+            <ol>
+              <li>
+                <strong>Critical Edge</strong>: An edge is critical if its
+                removal increases the weight of the MST or disconnects the
+                graph.
+              </li>
+              <li>
+                <strong>Pseudo-Critical Edge</strong>: An edge is
+                pseudo-critical if it is part of some MST but not necessarily
+                every MST.
+              </li>
+            </ol>
+          </ul>
+        </li>
+        <li>
+          <strong>Applying SCCs</strong>
+          <ul>
+            <li>
+              In theory, if you consider the undirected graph as a directed
+              graph by treating each edge as bidirectional, you could use SCCs
+              to understand certain properties of reachability and connectivity.
+            </li>
+            <li>
+              However, this does not directly help with MST properties, which
+              depend on weights and not just connectivity.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Efficient Approach</strong>
+          <ul>
+            <li>
+              The efficient approach for the problem, as previously provided, is
+              based on:
+            </li>
+            <ol>
+              <li>
+                <strong>Kruskal's Algorithm</strong>: To construct the MST.
+              </li>
+              <li>
+                <strong>Union-Find</strong>: For efficient cycle detection and
+                union operations.
+              </li>
+              <li>
+                <strong>Edge Exclusion/Inclusion</strong>: To determine the
+                criticality of each edge.
+              </li>
+            </ol>
+          </ul>
+        </li>
+      </ul>
+    </>
   ),
 };
+
+function appendPxToValues(obj) {
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      obj[key] = (
+        <LeftContentDescription desc>{obj[key]}</LeftContentDescription>
+      );
+    }
+  }
+}
+
+appendPxToValues(SOLUTIONING);
 
 export default SOLUTIONING;

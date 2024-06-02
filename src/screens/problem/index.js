@@ -109,8 +109,8 @@ const Problem = () => {
   }
 
   async function fetchData() {
-    const Q = location?.pathname?.split("/problems/")?.[1];
-    const search = location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-");
+    const Q = decodeURIComponent(location?.pathname?.split("/problems/")?.[1]);
+    const search = decodeURIComponent(location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-"));
 
     fetch(BASE_URl + "q_info.json")
       .then((res) => res.json())
