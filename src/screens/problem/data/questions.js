@@ -1233,6 +1233,288 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  382: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a singly linked list, return a random node's value from the linked
+        list. Each node must have the <strong>same probability</strong> of being
+        chosen.
+      </p>
+
+      <p>
+        Implement the <code>Solution</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>Solution(ListNode head)</code> Initializes the object with the
+          head of the singly-linked list <code>head</code>.
+        </li>
+        <li>
+          <code>int getRandom()</code> Chooses a node randomly from the list and
+          returns its value. All the nodes of the list should be equally likely
+          to be chosen.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/03/16/getrand-linked-list.jpg"
+        style={{ width: 302, height: 62 }}
+      />
+      <pre>
+        <strong>Input</strong>
+        <br />
+        ["Solution", "getRandom", "getRandom", "getRandom", "getRandom",
+        "getRandom"] [[[1, 2, 3]], [], [], [], [], []]
+        <br />
+        <strong>Output</strong>
+        [null, 1, 3, 2, 2, 3]
+        <br />
+        <strong>Explanation</strong>
+        <br />
+        Solution solution = new Solution([1, 2, 3]);
+        <br />
+        solution.getRandom(); // return 1<br />
+        solution.getRandom(); // return 3<br />
+        solution.getRandom(); // return 2<br />
+        solution.getRandom(); // return 2<br />
+        solution.getRandom(); // return 3<br />
+        // getRandom() should return either 1, 2, or 3 randomly. Each element
+        should have equal probability of returning.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the linked list will be in the range{" "}
+          <code>
+            [1, 10<sup>4</sup>]
+          </code>
+          .
+        </li>
+        <li>
+          <code>
+            -10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            10<sup>4</sup>
+          </code>{" "}
+          calls will be made to <code>getRandom</code>.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Follow up:</strong>
+      </p>
+
+      <ul>
+        <li>
+          What if the linked list is extremely large and its length is unknown
+          to you?
+        </li>
+        <li>Could you solve this efficiently without using extra space?</li>
+      </ul>
+    </div>
+  ),
+  398: (
+    <>
+      <div class="elfjS" data-track-load="description_content">
+        <p>
+          Given an integer array <code>nums</code> with possible{" "}
+          <strong>duplicates</strong>, randomly output the index of a given{" "}
+          <code>target</code> number. You can assume that the given target
+          number must exist in the array.
+        </p>
+
+        <p>
+          Implement the <code>Solution</code> class:
+        </p>
+
+        <ul>
+          <li>
+            <code>Solution(int[] nums)</code> Initializes the object with the
+            array <code>nums</code>.
+          </li>
+          <li>
+            <code>int pick(int target)</code> Picks a random index{" "}
+            <code>i</code> from <code>nums</code> where{" "}
+            <code>nums[i] == target</code>. If there are multiple valid i's,
+            then each index should have an equal probability of returning.
+          </li>
+        </ul>
+
+        <p>&nbsp;</p>
+        <p>
+          <strong class="example">Example 1:</strong>
+        </p>
+
+        <pre>
+          <strong>Input</strong> <br />
+          ["Solution", "pick", "pick", "pick"]
+          <br />
+          [[[1, 2, 3, 3, 3]], [3], [1], [3]]
+          <br />
+          <strong>Output</strong>
+          [null, 4, 0, 2]
+          <br />
+          <strong>Explanation</strong>
+          <br />
+          Solution solution = new Solution([1, 2, 3, 3, 3]);
+          <br />
+          solution.pick(3); // It should return either index 2, 3, or 4
+          randomly. Each index should have equal probability of returning.
+          <br />
+          solution.pick(1); // It should return 0. Since in the array only
+          nums[0] is equal to 1.
+          <br />
+          solution.pick(3); // It should return either index 2, 3, or 4
+          randomly. Each index should have equal probability of returning.
+        </pre>
+
+        <p>&nbsp;</p>
+        <p>
+          <strong>Constraints:</strong>
+        </p>
+
+        <ul>
+          <li>
+            <code>
+              1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup>
+            </code>
+          </li>
+          <li>
+            <code>
+              -2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1
+            </code>
+          </li>
+          <li>
+            <code>target</code> is an integer from <code>nums</code>.
+          </li>
+          <li>
+            At most{" "}
+            <code>
+              10<sup>4</sup>
+            </code>{" "}
+            calls will be made to <code>pick</code>.
+          </li>
+        </ul>
+      </div>
+    </>
+  ),
+  519: (
+    <>
+      <div class="elfjS" data-track-load="description_content">
+        <p>
+          There is an <code>m x n</code> binary grid <code>matrix</code> with
+          all the values set <code>0</code> initially. Design an algorithm to
+          randomly pick an index <code>(i, j)</code> where{" "}
+          <code>matrix[i][j] == 0</code> and flips it to <code>1</code>. All the
+          indices <code>(i, j)</code> where <code>matrix[i][j] == 0</code>{" "}
+          should be equally likely to be returned.
+        </p>
+
+        <p>
+          Optimize your algorithm to minimize the number of calls made to the{" "}
+          <strong>built-in</strong> random function of your language and
+          optimize the time and space complexity.
+        </p>
+
+        <p>
+          Implement the <code>Solution</code> class:
+        </p>
+
+        <ul>
+          <li>
+            <code>Solution(int m, int n)</code> Initializes the object with the
+            size of the binary matrix <code>m</code> and <code>n</code>.
+          </li>
+          <li>
+            <code>int[] flip()</code> Returns a random index <code>[i, j]</code>{" "}
+            of the matrix where <code>matrix[i][j] == 0</code> and flips it to{" "}
+            <code>1</code>.
+          </li>
+          <li>
+            <code>void reset()</code> Resets all the values of the matrix to be{" "}
+            <code>0</code>.
+          </li>
+        </ul>
+
+        <p>&nbsp;</p>
+        <p>
+          <strong class="example">Example 1:</strong>
+        </p>
+
+        <pre>
+          <strong>Input</strong>
+          <br />
+          ["Solution", "flip", "flip", "flip", "reset", "flip"]
+          <br />
+          [[3, 1], [], [], [], [], []]
+          <br />
+          <strong>Output</strong>
+          <br />
+          [null, [1, 0], [2, 0], [0, 0], null, [2, 0]]
+          <br />
+          <strong>Explanation</strong>
+          <br />
+          Solution solution = new Solution(3, 1);
+          <br />
+          solution.flip(); // return [1, 0], [0,0], [1,0], and [2,0] should be
+          equally likely to be returned.
+          <br />
+          solution.flip(); // return [2, 0], Since [1,0] was returned, [2,0] and
+          [0,0]
+          <br />
+          solution.flip(); // return [0, 0], Based on the previously returned
+          indices, only [0,0] can be returned.
+          <br />
+          solution.reset(); // All the values are reset to 0 and can be
+          returned.
+          <br />
+          solution.flip(); // return [2, 0], [0,0], [1,0], and [2,0] should be
+          equally likely to be returned.
+        </pre>
+
+        <p>&nbsp;</p>
+        <p>
+          <strong>Constraints:</strong>
+        </p>
+
+        <ul>
+          <li>
+            <code>
+              1 &lt;= m, n &lt;= 10<sup>4</sup>
+            </code>
+          </li>
+          <li>
+            There will be at least one free cell for each call to{" "}
+            <code>flip</code>.
+          </li>
+          <li>
+            At most <code>1000</code> calls will be made to <code>flip</code>{" "}
+            and <code>reset</code>.
+          </li>
+        </ul>
+      </div>
+    </>
+  ),
+  497: (
+    <>
+    </>
+  )
 };
 
 export default QUESTIONS;
