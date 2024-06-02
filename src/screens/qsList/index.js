@@ -174,7 +174,7 @@ const QSList = () => {
       <Switch>
         <BookmarkText>
           <BookmarkIcon />
-          <BookmarkSpan>{pathname && (decodeURIComponent(path) ?? "")}</BookmarkSpan>
+          <BookmarkSpan>{pathname ? decodeURIComponent(path) : ""}</BookmarkSpan>
         </BookmarkText>
         <TabContainer>
           <Tab onClick={() => setSelected(0)} inactive={selected === 1}>
