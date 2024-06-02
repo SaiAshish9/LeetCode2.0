@@ -888,11 +888,13 @@ const QUESTIONS = {
         <strong>Explanation:</strong> The figure above describes the graph.
         <br />
         The following figure shows all the possible MSTs:
+        <br /> <br />
         <img
           alt=""
           src="https://assets.leetcode.com/uploads/2020/06/04/msts.png"
           style={{ width: 540, height: 553 }}
         />
+        <br />
         Notice that the two edges 0 and 1 appear in all MSTs, therefore they are
         critical edges, so we return them in the first list of the output. The
         edges 2, 3, 4, and 5 are only part of some MSTs, therefore they are
