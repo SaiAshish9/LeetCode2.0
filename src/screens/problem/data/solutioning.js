@@ -1296,6 +1296,188 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  2846: (
+    <>
+      <p>
+        Strongly Connected Components (SCCs) are typically used in the context
+        of directed graphs to identify subgraphs where every vertex is reachable
+        from every other vertex within the same subgraph. This concept is
+        crucial for solving problems related to cycle detection, graph
+        condensation, and other connectivity issues in directed graphs. However,
+        the problem at hand involves a tree structure, which is an undirected
+        and acyclic graph.
+      </p>
+      <p>
+        Here are the key reasons why SCCs are not applicable or ideal for
+        solving this problem:
+      </p>
+      <ul>
+        <li>
+          <strong>Tree Structure:</strong> A tree is inherently an acyclic
+          connected graph. Each node is connected by exactly one path, and there
+          are no cycles. SCCs are used to identify cycles and strongly connected
+          subgraphs in directed graphs, which is irrelevant in the context of a
+          tree where such cycles do not exist.
+        </li>
+
+        <li>
+          <strong>Nature of Queries:</strong> The problem requires determining
+          the minimum number of operations (edge removals) to equalize edge
+          weights between given pairs of nodes in a tree. This involves finding
+          the Lowest Common Ancestor (LCA) of the nodes and analyzing paths in
+          an undirected graph. SCCs do not provide a mechanism to efficiently
+          handle such path queries in trees.
+        </li>
+
+        <li>
+          <strong>DFS and LCA Sufficiency:</strong> Depth-First Search (DFS)
+          combined with Binary Lifting for LCA preprocessing is sufficient and
+          efficient for handling queries in a tree. These techniques allow for
+          efficient traversal and ancestor queries, which are directly related
+          to the problem's requirements. SCCs do not offer any additional
+          advantage for these types of operations in trees.
+        </li>
+
+        <li>
+          <strong>Complexity and Overhead:</strong> Using SCC algorithms like
+          Tarjan's or Kosaraju's in this context would introduce unnecessary
+          complexity and computational overhead. These algorithms have a time
+          complexity of O(V + E) and are designed for directed graphs. In
+          contrast, the combination of DFS and Binary Lifting operates
+          efficiently within the constraints of the problem and is optimized for
+          trees.
+        </li>
+      </ul>
+
+      <p>
+        <strong>Summary:</strong> SCCs are specialized for directed graphs to
+        identify strongly connected components where each vertex is reachable
+        from any other vertex within the same component. The problem at hand
+        involves undirected trees, where the primary operations revolve around
+        path queries and ancestor relationships, making techniques like DFS and
+        Binary Lifting much more suitable and efficient.
+      </p>
+
+      <p>
+        <strong>Correct Approach:</strong> The correct approach for solving this
+        problem is using DFS for tree traversal and Binary Lifting for LCA
+        preprocessing. This method ensures that all queries can be answered
+        efficiently after a preprocessing step, making it well-suited for the
+        given problem constraints.
+      </p>
+
+      <h1>Code Explanation:</h1>
+      <ul>
+        <li>
+          <strong>Method minOperationsQueries:</strong>
+          <ul>
+            <li>
+              This method takes three parameters: <code>n</code> (the number of
+              nodes in the tree), <code>edges</code> (an array of edges with
+              weights), and <code>queries</code> (an array of queries).
+            </li>
+            <li>
+              It returns an array of integers representing the minimum number of
+              operations required to equalize edge weights for each query.
+            </li>
+            <li>
+              Inside the method:
+              <ul>
+                <li>
+                  It initializes constants <code>kMax</code> and <code>m</code>:
+                  <ul>
+                    <li>
+                      <code>kMax</code> represents the maximum possible weight
+                      of an edge.
+                    </li>
+                    <li>
+                      <code>m</code> represents the number of bits required to
+                      represent the maximum node count <code>n</code>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  It initializes several data structures:
+                  <ul>
+                    <li>
+                      <code>ans</code>: An array to store the answers for each
+                      query.
+                    </li>
+                    <li>
+                      <code>graph</code>: An array of lists to represent the
+                      adjacency list of the graph.
+                    </li>
+                    <li>
+                      <code>jump</code>: A 2D array to store the ancestor nodes
+                      for binary lifting.
+                    </li>
+                    <li>
+                      <code>count</code>: A 2D array to store the frequency of
+                      edge weights for each node.
+                    </li>
+                    <li>
+                      <code>depth</code>: An array to store the depth of each
+                      node in the tree.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  It initializes the graph by iterating through the edges and
+                  adding them to the adjacency list.
+                </li>
+                <li>
+                  It initializes the count array for the root node (node 0).
+                </li>
+                <li>
+                  It calls the <code>dfs</code> method to perform depth-first
+                  search traversal and populate the <code>jump</code> and{" "}
+                  <code>count</code> arrays.
+                </li>
+                <li>
+                  It performs binary lifting by filling the <code>jump</code>{" "}
+                  array to enable efficient LCA (Lowest Common Ancestor)
+                  queries.
+                </li>
+                <li>
+                  It iterates through each query and calculates the minimum
+                  number of operations required to equalize edge weights:
+                  <ul>
+                    <li>
+                      It finds the LCA of the two nodes involved in the query.
+                    </li>
+                    <li>
+                      It calculates the number of edges between the nodes and
+                      the maximum frequency of edge weights.
+                    </li>
+                    <li>
+                      It computes the answer for the query by subtracting the
+                      maximum frequency from the total number of edges.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  It returns the array containing answers for all queries.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Helper Methods:</strong>
+          <ul>
+            <li>
+              <code>dfs</code>: Performs depth-first search traversal to
+              populate the <code>jump</code> and <code>count</code> arrays.
+            </li>
+            <li>
+              <code>getLCA</code>: Finds the Lowest Common Ancestor (LCA) of two
+              nodes using binary lifting.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
