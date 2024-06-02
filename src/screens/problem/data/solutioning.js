@@ -1064,14 +1064,14 @@ const SOLUTIONING = {
             </li>
             <ol>
               <li>
-                <strong>Kruskal's Algorithm</strong>: To construct the MST.
+                <strong>Kruskal's Algorithm:</strong> To construct the MST.
               </li>
               <li>
-                <strong>Union-Find</strong>: For efficient cycle detection and
+                <strong>Union-Find:</strong> For efficient cycle detection and
                 union operations.
               </li>
               <li>
-                <strong>Edge Exclusion/Inclusion</strong>: To determine the
+                <strong>Edge Exclusion/Inclusion:</strong> To determine the
                 criticality of each edge.
               </li>
             </ol>
