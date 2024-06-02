@@ -1078,6 +1078,102 @@ const SOLUTIONING = {
           </ul>
         </li>
       </ul>
+      <h2>Explanation of the Solution:</h2>
+      <ul>
+        <li>
+          <strong>Solution class:</strong>
+          <ul>
+            <li>
+              The `Solution` class contains the main logic to find critical and
+              pseudo-critical edges in a Minimum Spanning Tree (MST).
+            </li>
+            <li>The `findCriticalAndPseudoCriticalEdges` method:</li>
+            <ul>
+              <li>
+                Takes the number of vertices `n` and the array of edges `edges`
+                as input.
+              </li>
+              <li>
+                Initializes two lists to store critical and pseudo-critical
+                edges.
+              </li>
+              <li>
+                Iterates through the edges array and modifies each edge to
+                include its index.
+              </li>
+              <li>
+                Sorts the edges array based on their weights in ascending order.
+              </li>
+              <li>
+                Calculates the weight of the MST without considering any edge (
+                <code>firstEdge</code> is an empty array) and stores it in{" "}
+                <code>mstWeight</code>.
+              </li>
+              <li>Iterates through the sorted edges array:</li>
+              <ul>
+                <li>
+                  For each edge, checks if deleting it increases the MST's
+                  weight or makes the MST invalid. If so, adds its index to the
+                  list of critical edges.
+                </li>
+                <li>
+                  Otherwise, if the edge can be in any MST (i.e., deleting it
+                  doesn't change the MST's weight), adds its index to the list
+                  of pseudo-critical edges.
+                </li>
+              </ul>
+              <li>
+                Returns a list containing the lists of critical and
+                pseudo-critical edges.
+              </li>
+            </ul>
+            <li>The `getMSTWeight` method:</li>
+            <ul>
+              <li>
+                Takes the number of vertices `n`, the array of edges `edges`, an
+                array representing the first edge to consider, and the index of
+                the edge to exclude from the MST.
+              </li>
+              <li>
+                Initializes the MST's weight to 0 and creates a `UnionFind`
+                instance to track connected components.
+              </li>
+              <li>
+                If the firstEdge array is not empty, unions the vertices of the
+                first edge and adds its weight to the MST's weight.
+              </li>
+              <li>Iterates through the edges array:</li>
+              <ul>
+                <li>For each edge, if it's the edge to exclude, skips it.</li>
+                <li>
+                  If the vertices of the edge are not already in the same
+                  connected component, unions them and adds the edge's weight to
+                  the MST's weight.
+                </li>
+              </ul>
+              <li>
+                Checks if all vertices belong to the same connected component.
+                If not, returns <code>Integer.MAX_VALUE</code> to indicate an
+                invalid MST.
+              </li>
+              <li>Returns the weight of the MST.</li>
+            </ul>
+            <li>The `main` method:</li>
+            <ul>
+              <li>Creates an instance of `Solution`.</li>
+              <li>
+                Defines the number of vertices `n` and initializes the array of
+                edges.
+              </li>
+              <li>
+                Calls the `findCriticalAndPseudoCriticalEdges` method to obtain
+                the result.
+              </li>
+              <li>Prints the result.</li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
     </>
   ),
 };
