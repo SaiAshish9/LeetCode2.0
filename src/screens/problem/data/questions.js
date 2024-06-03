@@ -1650,6 +1650,74 @@ const QUESTIONS = {
       </div>
     </>
   ),
+  382: (
+    <>
+      <h1>Steps:</h1>
+      <ol>
+        <li>
+          <strong>Initialize the reservoir:</strong> This problem requires
+          selecting a random node from a linked list, which can be done using
+          reservoir sampling with a reservoir size of 1.
+        </li>
+        <li>
+          <strong>Traverse the linked list:</strong> As we traverse the linked
+          list, we maintain a count of the nodes we have seen so far.
+        </li>
+      </ol>
+
+      <h2>Explanation:</h2>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <strong>head:</strong> The head of the linked list.
+            </li>
+            <li>
+              <strong>rand:</strong> An instance of <code>Random</code> used to
+              generate random numbers.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>getRandom() Method:</strong>
+          <ol>
+            <li>
+              We initialize <code>current</code> to point to the head of the
+              list and <code>reservoir</code> to store the value of the randomly
+              selected node.
+            </li>
+            <li>
+              <code>count</code> keeps track of the number of nodes visited so
+              far.
+            </li>
+            <li>
+              As we traverse the linked list, for each node:
+              <ol>
+                <li>
+                  Generate a random number between 0 and <code>count-1</code>.
+                </li>
+                <li>
+                  If this number is 0, we update <code>reservoir</code> with the
+                  current node's value. This ensures that each node has an equal
+                  probability of being selected.
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ul>
+
+      <h2>Apply Reservoir Sampling:</h2>
+      <ol>
+        <li>
+          For each node, we decide whether to include it in the reservoir based
+          on a probability that ensures each node has an equal chance of being
+          selected.
+        </li>
+      </ol>
+    </>
+  ),
 };
 
 export default QUESTIONS;
