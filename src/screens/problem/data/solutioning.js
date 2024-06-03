@@ -1549,7 +1549,7 @@ const SOLUTIONING = {
   398: (
     <>
       <h1>Steps:</h1>
-      <ol>
+      <ul>
         <li>
           <strong>Initialize the reservoir:</strong> This problem requires
           selecting a random node from a linked list, which can be done using
@@ -1559,7 +1559,7 @@ const SOLUTIONING = {
           <strong>Traverse the linked list:</strong> As we traverse the linked
           list, we maintain a count of the nodes we have seen so far.
         </li>
-      </ol>
+      </ul>
 
       <h2>Explanation:</h2>
       <ul>
@@ -1577,7 +1577,7 @@ const SOLUTIONING = {
         </li>
         <li>
           <strong>getRandom() Method:</strong>
-          <ol>
+          <ul>
             <li>
               We initialize <code>current</code> to point to the head of the
               list and <code>reservoir</code> to store the value of the randomly
@@ -1589,7 +1589,7 @@ const SOLUTIONING = {
             </li>
             <li>
               As we traverse the linked list, for each node:
-              <ol>
+              <ul>
                 <li>
                   Generate a random number between 0 and <code>count-1</code>.
                 </li>
@@ -1598,20 +1598,20 @@ const SOLUTIONING = {
                   current node's value. This ensures that each node has an equal
                   probability of being selected.
                 </li>
-              </ol>
+              </ul>
             </li>
-          </ol>
+          </ul>
         </li>
       </ul>
 
-      <h2>Apply Reservoir Sampling:</h2>
+      <ul>Apply Reservoir Sampling:</h2>
       <ol>
         <li>
           For each node, we decide whether to include it in the reservoir based
           on a probability that ensures each node has an equal chance of being
           selected.
         </li>
-      </ol>
+      </ul>
     </>
   ),
 };
