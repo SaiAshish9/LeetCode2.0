@@ -1272,7 +1272,7 @@ const QUESTIONS = {
         ["Solution", "getRandom", "getRandom", "getRandom", "getRandom",
         "getRandom"] [[[1, 2, 3]], [], [], [], [], []]
         <br />
-        <strong>Output</strong>
+        <strong>Output:</strong> <br />
         [null, 1, 3, 2, 2, 3]
         <br />
         <strong>Explanation</strong>
@@ -1649,7 +1649,7 @@ const QUESTIONS = {
         </ul>
       </div>
     </>
-  )
+  ),
 };
 
 export default QUESTIONS;
