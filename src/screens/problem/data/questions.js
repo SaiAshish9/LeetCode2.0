@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 const QUESTIONS = {
   1192: (
     <div class="elfjS" data-track-load="description_content">
