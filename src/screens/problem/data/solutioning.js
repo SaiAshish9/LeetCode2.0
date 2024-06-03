@@ -1614,6 +1614,146 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  497: (
+    <>
+      {" "}
+      <h1>Steps:</h1>
+      <ol>
+        <li>
+          <strong>Initialize the rectangles:</strong> Store the given list of
+          non-overlapping rectangles and calculate the total number of points in
+          all rectangles combined.
+        </li>
+        <li>
+          <strong>Calculate cumulative area:</strong> Maintain a cumulative area
+          sum to assist in selecting a rectangle based on its area.
+        </li>
+        <li>
+          <strong>Select a rectangle based on area:</strong> Use a random number
+          to pick a rectangle proportionally to its area.
+        </li>
+        <li>
+          <strong>Pick a random point within the selected rectangle:</strong>{" "}
+          Generate random coordinates within the bounds of the selected
+          rectangle.
+        </li>
+      </ol>
+      <h2>Explanation:</h2>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <strong>rects:</strong> The list of non-overlapping rectangles.
+            </li>
+            <li>
+              <strong>rand:</strong> An instance of <code>Random</code> used to
+              generate random numbers.
+            </li>
+            <li>
+              <strong>areas:</strong> An array to store the cumulative number of
+              points up to each rectangle.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>pick() Method:</strong>
+          <ul>
+            <li>
+              Generate a random integer up to the total number of points across
+              all rectangles.
+            </li>
+            <li>
+              Use binary search to determine which rectangle this random integer
+              falls into.
+            </li>
+            <li>Generate random coordinates within the selected rectangle.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  519: (
+    <>
+      {" "}
+      <h1>Steps:</h1>
+      <ul>
+        <li>
+          <strong>Initialize the matrix dimensions:</strong>
+          <ul>
+            <li>
+              Store the number of rows (<code>m</code>) and columns (
+              <code>n</code>).
+            </li>
+            <li>Use a map to keep track of flipped positions.</li>
+            <li>Maintain a count of the remaining unflipped cells.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Use reservoir sampling to select a random unflipped cell:
+          </strong>
+          <ul>
+            <li>
+              Each time a cell is flipped, it is marked and won't be chosen
+              again.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Reset the matrix:</strong>
+          <ul>
+            <li>
+              Provide functionality to reset the matrix to its original state.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Explanation:</h2>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <strong>m and n:</strong> Dimensions of the matrix.
+            </li>
+            <li>
+              <strong>totalCells:</strong> Total number of cells in the matrix.
+            </li>
+            <li>
+              <strong>map:</strong> A hash map to keep track of the mapping
+              between the original and shuffled positions.
+            </li>
+            <li>
+              <strong>rand:</strong> An instance of <code>Random</code> used to
+              generate random numbers.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>flip() Method:</strong>
+          <ul>
+            <li>
+              Generate a random integer up to the number of remaining unflipped
+              cells.
+            </li>
+            <li>
+              Use the hash map to keep track of the shuffled positions to avoid
+              duplicates.
+            </li>
+            <li>Decrement the count of remaining unflipped cells.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>reset() Method:</strong>
+          <ul>
+            <li>Reset the count of remaining unflipped cells.</li>
+            <li>Clear the hash map.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
