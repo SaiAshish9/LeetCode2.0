@@ -1604,8 +1604,8 @@ const SOLUTIONING = {
         </li>
       </ul>
 
-      <ul>Apply Reservoir Sampling:</h2>
-      <ol>
+      <h2>Apply Reservoir Sampling:</h2>
+      <ul>
         <li>
           For each node, we decide whether to include it in the reservoir based
           on a probability that ensures each node has an equal chance of being
