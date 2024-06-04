@@ -1738,7 +1738,6 @@ const QUESTIONS = {
         <p>
           <strong class="example">Example 1:</strong>
         </p>
-        <br />
         <img
           alt=""
           src="https://assets.leetcode.com/uploads/2020/12/01/merged.jpg"
@@ -1760,7 +1759,6 @@ const QUESTIONS = {
         <p>
           <strong class="example">Example 2:</strong>
         </p>
-        <br />
         <pre>
           <strong>Input:</strong> buildings = [[0,2,3],[2,5,3]]
           <br />
@@ -1831,7 +1829,6 @@ const QUESTIONS = {
       <p>
         <strong class="example">Example 1:</strong>
       </p>{" "}
-      <br />
       <img
         alt=""
         src="https://assets.leetcode.com/uploads/2021/03/27/perectrec1-plane.jpg"
@@ -1848,7 +1845,6 @@ const QUESTIONS = {
       <p>
         <strong class="example">Example 2:</strong>
       </p>
-      <br />
       <img
         alt=""
         src="https://assets.leetcode.com/uploads/2021/03/27/perfectrec2-plane.jpg"
@@ -1867,7 +1863,6 @@ const QUESTIONS = {
       <p>
         <strong class="example">Example 3:</strong>
       </p>
-      <br />
       <img
         alt=""
         src="https://assets.leetcode.com/uploads/2021/03/27/perfecrrec4-plane.jpg"
