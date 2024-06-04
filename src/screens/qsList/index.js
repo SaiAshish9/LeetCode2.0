@@ -193,7 +193,13 @@ const QSList = () => {
               to see which companies asked this question
             </ContentText>
             <ContentText>
-              You have solved <ContentTextBold>1 / 1</ContentTextBold> problems.
+              {tableData && (
+                <>
+                  You have solved{" "}
+                  <ContentTextBold>{tableData.length} / {tableData.length}</ContentTextBold>{" "}
+                  problems.
+                </>
+              )}
             </ContentText>
             <ContentText>
               <Check checked={true} onChange={null} />
