@@ -244,9 +244,9 @@ export const BarsIcon = styled(HiBars3)`
 `;
 
 export const StyledDrawer = styled(Drawer)`
-  @media only screen and (max-width: ${BREAKPOINTS.sm}) {
+  @media only screen and (max-width: ${BREAKPOINTS.xs}) {
     .ant-drawer-content-wrapper {
-      max-width: 63vw !important;
+      width: 63vw !important;
     }
   }
 `;
