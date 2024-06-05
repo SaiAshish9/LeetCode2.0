@@ -117,7 +117,7 @@ const Navbar = () => {
             onClick={() => setOpen((open) => !open)}
           />
         ) : (
-          <IoMdClose />
+          <IoMdClose color="#fff9" />
         )}
       </NavContent>
       <StyledDrawer
