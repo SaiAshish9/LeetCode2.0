@@ -245,6 +245,6 @@ export const BarsIcon = styled(HiBars3)`
 
 export const StyledDrawer = styled(Drawer)`
   .ant-drawer-content {
-    background-color: rgb(40 40 40);
+    background-color: rgb(40 40 40) !important;
   }
 `;
