@@ -123,6 +123,7 @@ export const NavItem = styled.p`
           &:hover {
             color: rgb(255 161 22);
           }
+          border-bottom: ${route ? "2.4px solid rgb(255 161 22)" : "2.4px solid transparent"};
         `
       : route
       ? css`
@@ -148,8 +149,6 @@ export const NavItem = styled.p`
           &:hover {
             color: rgb(255 161 22);
           }
-
-          border-bottom: ${route ? "2.4px solid #fff" : "2.4px solid transparent"};
         `
       : css``};
 `;
