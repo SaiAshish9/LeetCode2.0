@@ -99,6 +99,7 @@ export const CircularAvatar = styled.img`
   width: 21px;
   height: 21px;
   position: relative;
+  cursor: pointer;
   top: 2px;
   margin-right: 1.2rem;
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
