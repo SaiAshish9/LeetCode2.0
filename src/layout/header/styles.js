@@ -88,6 +88,7 @@ export const StyledImage = styled.img`
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     top: -1px;
   }
+  cursor: pointer;
 `;
 
 export const CircularAvatar = styled.img`
