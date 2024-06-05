@@ -23,6 +23,7 @@ import {
   DescriptionContainer,
   CheckIcon,
 } from "./styles";
+import { Helmet } from "react-helmet";
 
 import { useLocation } from "react-router-dom";
 
@@ -171,6 +172,24 @@ const QSList = () => {
 
   return (
     <Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>LeetCode2.0: {path ? decodeURIComponent(path) : ""}</title>
+        <meta
+          property="og:title"
+          content={`LeetCode2.0: ${path ? decodeURIComponent(path) : ""}`}
+        />
+        <meta property="og:description" content="Useful for problems involving intersections" />
+        <meta
+          property="og:image"
+          content="https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/LeetCode2.0.png"
+        />
+        <meta
+          property="og:url"
+          content="https://leetcodev2.vercel.app/tag/line_sweep"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Switch>
         <BookmarkText>
           <BookmarkIcon />
@@ -196,7 +215,9 @@ const QSList = () => {
               {tableData && (
                 <>
                   You have solved{" "}
-                  <ContentTextBold>{tableData.length} / {tableData.length}</ContentTextBold>{" "}
+                  <ContentTextBold>
+                    {tableData.length} / {tableData.length}
+                  </ContentTextBold>{" "}
                   problems.
                 </>
               )}
