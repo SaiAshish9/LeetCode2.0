@@ -2124,7 +2124,7 @@ const QUESTIONS = {
         </ul>
       </div>
     </>
-  )
+  ),
 };
 
 export default QUESTIONS;

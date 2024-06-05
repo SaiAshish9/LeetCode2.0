@@ -1757,7 +1757,7 @@ const SOLUTIONING = {
   218: (
     <>
       {" "}
-      <h1>Skyline Problem Solution using Line Sweep Algorithm</h1>
+      <h1>Skyline Problem Solution using Line Sweep Algorithm:</h1>
       <ul>
         <li>
           Collect Events:
@@ -1802,6 +1802,76 @@ const SOLUTIONING = {
           Output the Result:
           <ul>
             <li>The result is a list of key points defining the skyline.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  391: (
+    <>
+      {" "}
+      <h1>Perfect Rectangle Solution using Line Sweep Algorithm</h1>
+      <ul>
+        <li>
+          Initialize Variables:
+          <ul>
+            <li>Set `area` to 0 to track the total area of all rectangles.</li>
+            <li>
+              Initialize `x1`, `y1` to `Integer.MAX_VALUE` to find the minimum
+              coordinates.
+            </li>
+            <li>
+              Initialize `x2`, `y2` to `Integer.MIN_VALUE` to find the maximum
+              coordinates.
+            </li>
+            <li>Create a `Set` called `corners` to track corner points.</li>
+          </ul>
+        </li>
+        <li>
+          Process Each Rectangle:
+          <ul>
+            <li>
+              Update `x1`, `y1` with the minimum x and y coordinates
+              respectively.
+            </li>
+            <li>
+              Update `x2`, `y2` with the maximum x and y coordinates
+              respectively.
+            </li>
+            <li>
+              Calculate the area of the current rectangle and add it to `area`.
+            </li>
+            <li>For each rectangle, get its four corners.</li>
+            <li>
+              For each corner:
+              <ul>
+                <li>
+                  If the corner is already in the `corners` set, remove it
+                  (toggle).
+                </li>
+                <li>If the corner is not in the set, add it.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Check for Perfect Rectangle:
+          <ul>
+            <li>
+              Ensure the set `corners` contains exactly four corners of the
+              bounding rectangle.
+            </li>
+            <li>
+              Check if these four corners are the min and max coordinates found.
+            </li>
+            <li>
+              Compare the total area of all rectangles with the area of the
+              bounding rectangle.
+            </li>
+            <li>
+              If both conditions are met, the rectangles form a perfect
+              rectangle; otherwise, they do not.
+            </li>
           </ul>
         </li>
       </ul>
