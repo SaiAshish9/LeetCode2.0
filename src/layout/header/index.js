@@ -104,7 +104,10 @@ const Navbar = () => {
           </NavIcon>
           <CircularAvatar
             onClick={() => {
-              window.open("https://www.linkedin.com/in/%F0%9F%9A%80-sai-ashish-237784188/", "_blank");
+              window.open(
+                "https://www.linkedin.com/in/%F0%9F%9A%80-sai-ashish-237784188/",
+                "_blank"
+              );
             }}
             alt="pic"
             src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
@@ -140,7 +143,10 @@ const Navbar = () => {
             route={i.route === pathname}
             isHome={!pathname.includes("/tag")}
             text={i.text}
-            onClick={(e) => handleClick(e, i.route)}
+            onClick={(e) => {
+              handleClick(e, i.route);
+              setOpen((open) => !open);
+            }}
           >
             {i.text}
           </NavItem>
