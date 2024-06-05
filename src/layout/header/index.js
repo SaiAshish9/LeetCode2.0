@@ -114,12 +114,12 @@ const Navbar = () => {
         </CircularContainer>
         {!open ? (
           <BarsIcon
-            w={pathname === "/"}
+            w={!pathname.includes("/tag")}
             onClick={() => setOpen((open) => !open)}
           />
         ) : (
           <CloseIcon
-            w={pathname === "/"}
+            w={!pathname.includes("/tag")}
             onClick={() => setOpen((open) => !open)}
           />
         )}
