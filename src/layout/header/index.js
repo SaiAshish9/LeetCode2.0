@@ -120,6 +120,7 @@ const Navbar = () => {
         onClose={() => setOpen((open) => !open)}
         placement="left"
         closeIcon={false}
+        width={window.innerWidth < 576 ? "63vw" : "40vw"}
       />
     </NavContainer>
   );
