@@ -157,7 +157,7 @@ export const NavItem = styled.p`
       : css``};
   @media only screen and (max-width: ${BREAKPOINTS.sm}) {
     margin-bottom: 1rem;
-  }
+    font-size: 1.08rem;
   ${({ text, route }) =>
     ["HLD", "LLD"].includes(text)
       ? css`
@@ -169,6 +169,7 @@ export const NavItem = styled.p`
         `
       : css``};
   }
+}
 `;
 
 export const NavItemContainer = styled.div`
@@ -274,4 +275,5 @@ export const CloseIcon = styled(IoMdClose)`
 
 export const StyledDrawer = styled(Drawer)`
   background: rgb(40 40 40) !important;
+  padding-top: 1.5rem;
 `;
