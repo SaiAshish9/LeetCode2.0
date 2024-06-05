@@ -141,13 +141,19 @@ export const NavItem = styled.p`
         `
       : css``};
 
-  ${({ isHome, text }) =>
+  ${({ isHome, text, route }) =>
     !isHome && ["HLD", "LLD"].includes(text)
       ? css`
           color: rgb(255 161 22);
           &:hover {
             color: rgb(255 161 22);
           }
+          ${({ route }) =>
+            route
+              ? css`
+                  border-bottom: 2.4px solid #fff;
+                `
+              : css``}
         `
       : css``};
 `;
