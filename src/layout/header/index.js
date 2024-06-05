@@ -135,6 +135,7 @@ const Navbar = () => {
         onClose={() => setOpen((open) => !open)}
         placement="left"
         closeIcon={false}
+        isHome={!pathname.includes("/tag")}
         width={window.innerWidth < 576 ? "63vw" : "40vw"}
       >
         {options.map((i, _) => (

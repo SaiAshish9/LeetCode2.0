@@ -277,4 +277,10 @@ export const CloseIcon = styled(IoMdClose)`
 export const StyledDrawer = styled(Drawer)`
   background: rgb(40 40 40) !important;
   padding-top: 1.8rem;
+  ${({ isHome }) =>
+    !isHome
+      ? css`
+          background: #fff !important;
+        `
+      : css``};
 `;
