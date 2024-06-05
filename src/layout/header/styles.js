@@ -146,7 +146,7 @@ export const NavItem = styled.p`
         `
       : css``};
 
-  ${({ isHome, text, route }) =>
+  ${({ isHome, text }) =>
     !isHome && ["HLD", "LLD"].includes(text)
       ? css`
           color: rgb(255 161 22);
@@ -155,6 +155,20 @@ export const NavItem = styled.p`
           }
         `
       : css``};
+  @media only screen and (max-width: ${BREAKPOINTS.sm}) {
+    margin-bottom: 1rem;
+  }
+  ${({ text, route }) =>
+    ["HLD", "LLD"].includes(text)
+      ? css`
+          border-bottom: 2.4px solid transparent;
+        `
+      : route
+      ? css`
+          border-bottom: 2.4px solid transparent;
+        `
+      : css``};
+  }
 `;
 
 export const NavItemContainer = styled.div`

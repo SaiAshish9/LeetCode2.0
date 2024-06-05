@@ -130,7 +130,19 @@ const Navbar = () => {
         placement="left"
         closeIcon={false}
         width={window.innerWidth < 576 ? "63vw" : "40vw"}
-      />
+      >
+        {options.map((i, _) => (
+          <NavItem
+            key={i.text}
+            route={i.route === pathname}
+            isHome={!pathname.includes("/tag")}
+            text={i.text}
+            onClick={(e) => handleClick(e, i.route)}
+          >
+            {i.text}
+          </NavItem>
+        ))}
+      </StyledDrawer>
     </NavContainer>
   );
 };
