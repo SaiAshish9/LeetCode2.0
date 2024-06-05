@@ -1877,6 +1877,133 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  850: (
+    <>
+      {" "}
+      <h1>Rectangle Area II Solution using Line Sweep Algorithm</h1>
+      <ul>
+        <li>
+          Create an `Event` class to represent each event:
+          <ul>
+            <li>
+              An event has an x-coordinate (`x`), a starting y-coordinate
+              (`y1`), an ending y-coordinate (`y2`), and a type (`type`).
+            </li>
+          </ul>
+        </li>
+        <li>
+          In the `rectangleArea` method:
+          <ul>
+            <li>Initialize `kMod` to 1,000,000,007 for modular arithmetic.</li>
+            <li>
+              Create a list of `events` to store all entering and leaving
+              events.
+            </li>
+          </ul>
+        </li>
+        <li>
+          For each rectangle, create two events:
+          <ul>
+            <li>Add a 'start' event (`s`) when the rectangle starts.</li>
+            <li>Add an 'end' event (`e`) when the rectangle ends.</li>
+          </ul>
+        </li>
+        <li>Sort the events by their x-coordinate.</li>
+        <li>
+          Initialize variables:
+          <ul>
+            <li>`ans` to accumulate the total area.</li>
+            <li>`prevX` to store the previous x-coordinate.</li>
+            <li>`yPairs` to maintain the active y-intervals.</li>
+          </ul>
+        </li>
+        <li>
+          For each event in the sorted list:
+          <ul>
+            <li>
+              If the current x-coordinate is greater than `prevX`:
+              <ul>
+                <li>
+                  Calculate the width as the difference between the current x
+                  and `prevX`.
+                </li>
+                <li>
+                  Update the total area `ans` by adding the product of width and
+                  the total height of active y-intervals.
+                </li>
+                <li>Update `prevX` to the current x-coordinate.</li>
+              </ul>
+            </li>
+            <li>
+              If the event is a 'start' event (`s`):
+              <ul>
+                <li>Add the y-interval (`y1`, `y2`) to `yPairs`.</li>
+                <li>Sort `yPairs` by the starting y-coordinate.</li>
+              </ul>
+            </li>
+            <li>
+              If the event is an 'end' event (`e`):
+              <ul>
+                <li>Remove the y-interval (`y1`, `y2`) from `yPairs`.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          In the `getHeight` method:
+          <ul>
+            <li>Initialize `height` to 0 and `prevY` to 0.</li>
+            <li>
+              For each y-interval in `yPairs`:
+              <ul>
+                <li>
+                  Update `prevY` to the maximum of `prevY` and the starting
+                  y-coordinate (`y1`).
+                </li>
+                <li>
+                  If the ending y-coordinate (`y2`) is greater than `prevY`:
+                  <ul>
+                    <li>
+                      Add the difference between `y2` and `prevY` to `height`.
+                    </li>
+                    <li>Update `prevY` to `y2`.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Return the total `height` of the active y-intervals.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  1851: (
+    <>
+      <h1>Explanation:</h1>
+      <ul>
+        <li>
+          We initialize an answer array to store the minimum interval size for
+          each query.
+        </li>
+        <li>A minHeap is used to store intervals sorted by their size.</li>
+        <li>
+          We sort the intervals by their start time and queries by their value.
+        </li>
+        <li>
+          For each query, we add intervals to the minHeap that start before or
+          at the current query.
+        </li>
+        <li>
+          We remove intervals from the minHeap that end before the current
+          query.
+        </li>
+        <li>
+          The size of the smallest interval remaining in the minHeap is assigned
+          to the current query.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
