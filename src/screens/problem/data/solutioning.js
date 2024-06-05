@@ -1754,6 +1754,59 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  218: (
+    <>
+      {" "}
+      <h1>Skyline Problem Solution using Line Sweep Algorithm</h1>
+      <ul>
+        <li>
+          Collect Events:
+          <ul>
+            <li>
+              For each building, create two events: a start event and an end
+              event.
+            </li>
+            <li>
+              The start event is represented by the left coordinate and the
+              height (negative value to denote the start).
+            </li>
+            <li>
+              The end event is represented by the right coordinate and the
+              height (positive value to denote the end).
+            </li>
+          </ul>
+        </li>
+        <li>
+          Sort Events:
+          <ul>
+            <li>Sort all events primarily by the x-coordinate.</li>
+            <li>
+              If two events have the same x-coordinate, sort them by height,
+              with start events coming before end events.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Process Events:
+          <ul>
+            <li>
+              Use a priority queue (max-heap) to track current building heights.
+            </li>
+            <li>
+              Traverse through the sorted events, updating the heap and
+              recording the critical points where the height changes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Output the Result:
+          <ul>
+            <li>The result is a list of key points defining the skyline.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
