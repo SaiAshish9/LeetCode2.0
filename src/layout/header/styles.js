@@ -156,7 +156,7 @@ export const NavItem = styled.p`
           }
         `
       : css``};
-  @media only screen and (max-width: ${BREAKPOINTS.sm}) {
+  @media only screen and (max-width: ${BREAKPOINTS.md}) {
     margin-bottom: 1rem;
     font-size: 0.9rem;
   ${({ text, route }) =>
