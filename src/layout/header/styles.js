@@ -24,8 +24,10 @@ export const NavContainer = styled.div`
         `};
 
   @media only screen and (max-width: ${BREAKPOINTS.sm}) {
-    .ant-drawer-content-wrapper {
-      max-width: 63vw;
+    .ant-drawer {
+      .ant-drawer-content-wrapper {
+        max-width: 63vw !important;
+      }
     }
   }
 `;
