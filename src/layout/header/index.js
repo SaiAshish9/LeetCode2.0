@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   NavContainer,
@@ -21,6 +21,7 @@ import FireSvg from "../../assets/fire.svg";
 import LogoDark from "../../assets/logo_dark.svg";
 
 import { useNavigate, useLocation } from "react-router-dom";
+import { Drawer } from "antd";
 
 const options = [
   {
@@ -56,6 +57,7 @@ const options = [
 const Navbar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const [open, setOpen] = useState(false);
 
   const handleClick = (e, route) => {
     e.preventDefault();
@@ -108,8 +110,17 @@ const Navbar = () => {
             </PremiumButton>
           </NavIcon>
         </CircularContainer>
-        <BarsIcon w={pathname === "/"} />
+        <BarsIcon
+          w={pathname === "/"}
+          onClick={() => setOpen((open) => !open)}
+        />
       </NavContent>
+      <Drawer
+        open={open}
+        onClose={() => setOpen((open) => !open)}
+        placement="left"
+        closeIcon={false}
+      />
     </NavContainer>
   );
 };
