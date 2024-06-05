@@ -148,12 +148,8 @@ export const NavItem = styled.p`
           &:hover {
             color: rgb(255 161 22);
           }
-          ${({ route }) =>
-            route
-              ? css`
-                  border-bottom: 2.4px solid #fff;
-                `
-              : css``}
+
+          border-bottom: ${route ? "2.4px solid #fff" : "2.4px solid transparent"};
         `
       : css``};
 `;
