@@ -71,7 +71,7 @@ const Navbar = () => {
           <StyledImage
             alt="img"
             src={
-              pathname.includes("/")
+              !pathname.includes("/tag")
                 ? "https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
                 : LogoDark
             }
@@ -81,7 +81,7 @@ const Navbar = () => {
               <NavItem
                 key={i.text}
                 route={i.route === pathname}
-                isHome={pathname === "/"}
+                isHome={!pathname.includes("/tag")}
                 text={i.text}
                 onClick={(e) => handleClick(e, i.route)}
               >
