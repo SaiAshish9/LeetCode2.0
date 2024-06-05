@@ -15,6 +15,7 @@ import {
   PremiumText,
   BarsIcon,
   StyledDrawer,
+  CloseIcon,
 } from "./styles";
 
 import BellSvg from "../../assets/bell.svg";
@@ -111,13 +112,16 @@ const Navbar = () => {
             </PremiumButton>
           </NavIcon>
         </CircularContainer>
-        {open ? (
+        {!open ? (
           <BarsIcon
             w={pathname === "/"}
             onClick={() => setOpen((open) => !open)}
           />
         ) : (
-          <IoMdClose color="#fff9" />
+          <CloseIcon
+            w={pathname === "/"}
+            onClick={() => setOpen((open) => !open)}
+          />
         )}
       </NavContent>
       <StyledDrawer

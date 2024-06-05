@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { BREAKPOINTS } from "../../screens/constants";
 import { HiBars3 } from "react-icons/hi2";
 import { Drawer } from "antd";
+import { IoMdClose } from "react-icons/io";
 
 export const NavContainer = styled.div`
   width: 100%;
@@ -230,6 +231,20 @@ export const StudyPlanContent = styled.div`
 `;
 
 export const BarsIcon = styled(HiBars3)`
+  font-size: 24px;
+  align-self: center;
+  cursor: pointer;
+  @media only screen and (min-width: ${BREAKPOINTS.x175}) {
+    display: none;
+  }
+  ${({ w }) =>
+    w &&
+    css`
+      color: #fff9;
+    `}
+`;
+
+export const CloseIcon = styled(IoMdClose)`
   font-size: 24px;
   align-self: center;
   cursor: pointer;
