@@ -186,7 +186,7 @@ const QSList = () => {
         />
         <meta
           property="og:url"
-          content="https://leetcodev2.vercel.app/tag/line_sweep"
+          content="https://leetcodev2.vercel.app/tag/line_sweep/"
         />
         <meta property="og:type" content="website" />
       </Helmet>
