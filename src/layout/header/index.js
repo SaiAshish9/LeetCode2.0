@@ -14,6 +14,7 @@ import {
   PremiumButton,
   PremiumText,
   BarsIcon,
+  StyledDrawer,
 } from "./styles";
 
 import BellSvg from "../../assets/bell.svg";
@@ -21,7 +22,6 @@ import FireSvg from "../../assets/fire.svg";
 import LogoDark from "../../assets/logo_dark.svg";
 
 import { useNavigate, useLocation } from "react-router-dom";
-import { Drawer } from "antd";
 
 const options = [
   {
@@ -115,7 +115,7 @@ const Navbar = () => {
           onClick={() => setOpen((open) => !open)}
         />
       </NavContent>
-      <Drawer
+      <StyledDrawer
         open={open}
         onClose={() => setOpen((open) => !open)}
         placement="left"

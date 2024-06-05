@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { BREAKPOINTS } from "../../screens/constants";
 import { HiBars3 } from "react-icons/hi2";
+import { Drawer } from "antd";
 
 export const NavContainer = styled.div`
   width: 100%;
@@ -22,14 +23,6 @@ export const NavContainer = styled.div`
           box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,
             0px 1px 3px #0000003d, 0px 2px 8px #00000029;
         `};
-
-  @media only screen and (max-width: ${BREAKPOINTS.sm}) {
-    .ant-drawer {
-      .ant-drawer-content-wrapper {
-        max-width: 63vw !important;
-      }
-    }
-  }
 `;
 
 export const NavContent = styled.div`
@@ -248,4 +241,12 @@ export const BarsIcon = styled(HiBars3)`
     css`
       color: #fff9;
     `}
+`;
+
+export const StyledDrawer = styled(Drawer)`
+  @media only screen and (max-width: ${BREAKPOINTS.sm}) {
+    .ant-drawer-content-wrapper {
+      max-width: 63vw !important;
+    }
+  }
 `;
