@@ -2002,6 +2002,73 @@ const SOLUTIONING = {
           to the current query.
         </li>
       </ul>
+      <br />
+      <p>
+        The solution uses a line sweep technique, a common algorithmic paradigm
+        used to solve problems involving a set of intervals or events along a
+        line. Here's how it applies the line sweep technique:
+      </p>
+      <ul>
+        <li>
+          <strong>Sorting:</strong>
+          <ul>
+            <li>Sort the intervals by their start times.</li>
+            <li>Sort the queries by their values.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Processing:</strong>
+          <ul>
+            <li>Iterate through each query in ascending order.</li>
+            <li>
+              As each query is processed, simulate sweeping forward along the
+              line:
+            </li>
+            <ul>
+              <li>
+                Add intervals to the minHeap that start before or at the current
+                query's value.
+              </li>
+              <li>
+                Remove intervals from the minHeap that end before the current
+                query's value.
+              </li>
+            </ul>
+          </ul>
+        </li>
+        <li>
+          <strong>Heap Management:</strong>
+          <ul>
+            <li>Use a priority queue (minHeap) to manage active intervals.</li>
+            <li>Sort the minHeap by interval size.</li>
+            <li>
+              Add intervals to the minHeap that start before or at the current
+              query's value.
+            </li>
+            <li>
+              Remove intervals from the minHeap that end before the current
+              query's value.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Query Processing:</strong>
+          <ul>
+            <li>For each query, check if the minHeap is empty.</li>
+            <li>
+              If not empty, retrieve the size of the smallest interval remaining
+              in the minHeap.
+            </li>
+            <li>
+              This size represents the minimum interval that includes the
+              current query value.
+            </li>
+            <li>
+              Assign this size to the corresponding index in the answer array.
+            </li>
+          </ul>
+        </li>
+      </ul>
     </>
   ),
 };
