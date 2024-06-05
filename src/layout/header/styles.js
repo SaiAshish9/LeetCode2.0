@@ -244,6 +244,7 @@ export const BarsIcon = styled(HiBars3)`
 `;
 
 export const StyledDrawer = styled(Drawer)`
+  background-color: rgb(40 40 40);
   @media only screen and (max-width: ${BREAKPOINTS.xs}) {
     .ant-drawer-content-wrapper {
       width: 63vw !important;
