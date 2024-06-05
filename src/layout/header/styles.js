@@ -22,6 +22,12 @@ export const NavContainer = styled.div`
           box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,
             0px 1px 3px #0000003d, 0px 2px 8px #00000029;
         `};
+
+  @media only screen and (max-width: ${BREAKPOINTS.sm}) {
+    .ant-drawer-content-wrapper {
+      max-width: 63vw;
+    }
+  }
 `;
 
 export const NavContent = styled.div`
@@ -123,7 +129,9 @@ export const NavItem = styled.p`
           &:hover {
             color: rgb(255 161 22);
           }
-          border-bottom: ${route ? "2.4px solid rgb(255 161 22)" : "2.4px solid transparent"};
+          border-bottom: ${route
+            ? "2.4px solid rgb(255 161 22)"
+            : "2.4px solid transparent"};
         `
       : route
       ? css`
