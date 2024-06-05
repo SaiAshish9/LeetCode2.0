@@ -22,6 +22,7 @@ import FireSvg from "../../assets/fire.svg";
 import LogoDark from "../../assets/logo_dark.svg";
 
 import { useNavigate, useLocation } from "react-router-dom";
+import { IoMdClose } from "react-icons/io";
 
 const options = [
   {
@@ -110,10 +111,14 @@ const Navbar = () => {
             </PremiumButton>
           </NavIcon>
         </CircularContainer>
-        <BarsIcon
-          w={pathname === "/"}
-          onClick={() => setOpen((open) => !open)}
-        />
+        {open ? (
+          <BarsIcon
+            w={pathname === "/"}
+            onClick={() => setOpen((open) => !open)}
+          />
+        ) : (
+          <IoMdClose />
+        )}
       </NavContent>
       <StyledDrawer
         open={open}
