@@ -638,14 +638,6 @@ export const DropdownContainerText = styled.p`
   margin-right: 0.75rem;
   text-align: start;
   position: relative;
-  ${({ noML }) =>
-    !noML
-      ? css`
-          left: 1.41rem;
-        `
-      : css`
-          left: 0rem;
-        `};
 `;
 
 export const MiddleLeftHeaderContainer = styled.div`

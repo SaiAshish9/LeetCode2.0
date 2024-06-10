@@ -577,31 +577,31 @@ const Problem = () => {
                                     location?.pathname?.split(
                                       "/problems/"
                                     )?.[1];
-                                  navigate(
-                                    `/problems/${path}?tag=` +
-                                      item
-                                  );
+                                  navigate(`/problems/${path}?tag=` + item);
                                   setItemSelected(
                                     (itemSelected) => !itemSelected
                                   );
                                 }}
                               >
                                 <DropdownContainerLeftItem>
-                                  {dropdownItemSelected === k && (
+                                  {
                                     <NavIcon
                                       noMR
-                                      style={{ marginRight: "0.5rem" }}
+                                      style={{
+                                        marginRight: "0.5rem",
+                                        width: "1.41rem",
+                                      }}
                                     >
-                                      <StyledImage
-                                        style={{ height: 14, top: 0 }}
-                                        alt="img"
-                                        src={TickSvg1}
-                                      />
+                                      {dropdownItemSelected === k && (
+                                        <StyledImage
+                                          style={{ height: 14, top: 0 }}
+                                          alt="img"
+                                          src={TickSvg1}
+                                        />
+                                      )}
                                     </NavIcon>
-                                  )}
-                                  <DropdownContainerText
-                                    noML={dropdownItemSelected === k}
-                                  >
+                                  }
+                                  <DropdownContainerText>
                                     {item}
                                   </DropdownContainerText>
                                 </DropdownContainerLeftItem>
