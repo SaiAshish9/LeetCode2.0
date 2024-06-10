@@ -110,38 +110,44 @@ const Problem = () => {
 
   async function fetchData() {
     const Q = decodeURIComponent(location?.pathname?.split("/problems/")?.[1]);
-    const search = decodeURIComponent(location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-"));
+    const search = decodeURIComponent(
+      location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-")
+    );
 
     fetch(BASE_URl + "q_info.json")
       .then((res) => res.json())
       .then((res) => {
         Q?.replaceAll("_", "-");
         setQInfo(res?.[Q]);
+        if (qInfo?.["qno"]) {
+          fetch(BASE_URl + "solutions.json")
+            .then((res) => res.json())
+            .then((res) => {
+              const qno = qInfo["qno"];
+              const tags = qInfo["tags"];
+              const defaultTag = qInfo["default"];
+              setSolution(
+                res?.[qno]?.["java"]?.[
+                  search ?? defaultTag.toLowerCase().split(" ").join("-")
+                ]
+              );
+              if (dropdownItemSelected === -1) {
+                setDropdownItemSelected(
+                  tags.indexOf(
+                    search
+                      ? toTitleCase(search.split("-").join(" "))
+                      : defaultTag
+                  )
+                );
+              }
+            })
+            .catch((err) => console.log(err));
+        }
       })
       .catch((err) => console.log(err));
 
-    if (qInfo?.["qno"]) {
-      fetch(BASE_URl + "solutions.json")
-        .then((res) => res.json())
-        .then((res) => {
-          const qno = qInfo["qno"];
-          const tags = qInfo["tags"];
-          const defaultTag = qInfo["default"];
-          setSolution(
-            res?.[qno]?.["java"]?.[
-              search ?? defaultTag.toLowerCase().split(" ").join("-")
-            ]
-          );
-          if (dropdownItemSelected === -1) {
-            setDropdownItemSelected(
-              tags.indexOf(
-                search ? toTitleCase(search.split("-").join(" ")) : defaultTag
-              )
-            );
-          }
-        })
-        .catch((err) => console.log(err));
-    }
+    handleDropdownCLickOutside();
+    handleDropdownCLickOutside1();
   }
 
   function handleDropdownCLickOutside() {
@@ -198,13 +204,7 @@ const Problem = () => {
 
   useEffect(() => {
     fetchData();
-    handleDropdownCLickOutside();
-    handleDropdownCLickOutside1();
   }, []);
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData, solution]);
 
   const navigate = useNavigate();
 
