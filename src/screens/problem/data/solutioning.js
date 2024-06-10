@@ -102,10 +102,10 @@ const SOLUTIONING = {
         </li>
         <li>
           <strong>Start DFS Traversal:</strong>
-          <p>
-            a. Call the <code>dfs</code> method starting from vertex 0 with
-            parent as -1 (indicating no parent).
-          </p>
+          <ul>
+            Call the <code>dfs</code> method starting from vertex 0 with parent
+            as -1 (indicating no parent).
+          </ul>
         </li>
         <li>
           <strong>
@@ -113,14 +113,14 @@ const SOLUTIONING = {
           </strong>
           <ul>
             <li>
-              a. Set the discovery time and low value of vertex <code>u</code>{" "}
-              to the current time.
+              Set the discovery time and low value of vertex <code>u</code> to
+              the current time.
             </li>
             <li>
-              b. Increment the <code>time</code>.
+              Increment the <code>time</code>.
             </li>
             <li>
-              c. Traverse all the adjacent vertices (<code>v</code>) of vertex{" "}
+              Traverse all the adjacent vertices (<code>v</code>) of vertex{" "}
               <code>u</code>.
             </li>
           </ul>
@@ -157,8 +157,8 @@ const SOLUTIONING = {
           <strong>Return the Result:</strong>
           <ul>
             <li>
-              a. After completing the DFS traversal, return the{" "}
-              <code>result</code> list containing all critical connections.
+              After completing the DFS traversal, return the <code>result</code>{" "}
+              list containing all critical connections.
             </li>
           </ul>
         </li>
