@@ -102,53 +102,55 @@ const Problem = () => {
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
 
+  const Q = decodeURIComponent(location?.pathname?.split("/problems/")?.[1]);
+  const search = decodeURIComponent(
+    location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-")
+  );
+
   function toTitleCase(str) {
     return str.replace(/\b\w/g, function (char) {
       return char.toUpperCase();
     });
   }
 
-  async function fetchData() {
-    const Q = decodeURIComponent(location?.pathname?.split("/problems/")?.[1]);
-    const search = decodeURIComponent(
-      location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-")
-    );
+  const fetchData = async () => {
+    try {
+      const fetchQInfo = fetch(BASE_URL + "q_info.json").then((res) =>
+        res.json()
+      );
+      const fetchSolutions = fetch(BASE_URL + "solutions.json").then((res) =>
+        res.json()
+      );
 
-    const fetchQInfo = fetch(BASE_URL + "q_info.json").then((res) =>
-      res.json()
-    );
-    const fetchSolutions = fetch(BASE_URL + "solutions.json").then((res) =>
-      res.json()
-    );
+      const [qInfoData, solutionsData] = await Promise.all([
+        fetchQInfo,
+        fetchSolutions,
+      ]);
 
-    Promise.all([fetchQInfo, fetchSolutions])
-      .then(([qInfoData, solutionsData]) => {
-        const QFormatted = Q?.replaceAll("_", "-");
-        const qInfo = qInfoData?.[QFormatted];
-        setQInfo(qInfo);
+      const QFormatted = Q?.replaceAll("_", "-");
+      const qInfo = qInfoData?.[QFormatted];
+      setQInfo(qInfo);
 
-        if (qInfo?.["qno"]) {
-          const qno = qInfo["qno"];
-          const tags = qInfo["tags"];
-          const defaultTag = qInfo["default"];
-          const solutionKey =
-            search ?? defaultTag.toLowerCase().split(" ").join("-");
-          setSolution(solutionsData?.[qno]?.["java"]?.[solutionKey]);
+      if (qInfo?.["qno"]) {
+        const qno = qInfo["qno"];
+        const tags = qInfo["tags"];
+        const defaultTag = qInfo["default"];
+        const solutionKey =
+          search ?? defaultTag.toLowerCase().split(" ").join("-");
+        setSolution(solutionsData?.[qno]?.["java"]?.[solutionKey]);
 
-          if (dropdownItemSelected === -1) {
-            setDropdownItemSelected(
-              tags.indexOf(
-                search ? toTitleCase(search.split("-").join(" ")) : defaultTag
-              )
-            );
-          }
+        if (dropdownItemSelected === -1) {
+          setDropdownItemSelected(
+            tags.indexOf(
+              search ? toTitleCase(search.split("-").join(" ")) : defaultTag
+            )
+          );
         }
-      })
-      .catch((err) => console.log(err));
-
-    handleDropdownCLickOutside();
-    handleDropdownCLickOutside1();
-  }
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   function handleDropdownCLickOutside() {
     const handleClickOutside = (event) => {
