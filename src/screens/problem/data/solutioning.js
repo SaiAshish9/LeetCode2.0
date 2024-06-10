@@ -2085,7 +2085,7 @@ const SOLUTIONING = {
         </li>
       </ul>
     </>
-  ),
+  )
 };
 
 function appendPxToValues(obj) {
