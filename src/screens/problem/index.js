@@ -99,7 +99,7 @@ const Problem = () => {
   const containerRef1 = useRef(null);
   const dropdownRef1 = useRef(null);
 
-  const BASE_URl =
+  const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
 
   function toTitleCase(str) {
@@ -114,34 +114,34 @@ const Problem = () => {
       location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-")
     );
 
-    fetch(BASE_URl + "q_info.json")
-      .then((res) => res.json())
-      .then((res) => {
-        Q?.replaceAll("_", "-");
-        setQInfo(res?.[Q]);
+    const fetchQInfo = fetch(BASE_URL + "q_info.json").then((res) =>
+      res.json()
+    );
+    const fetchSolutions = fetch(BASE_URL + "solutions.json").then((res) =>
+      res.json()
+    );
+
+    Promise.all([fetchQInfo, fetchSolutions])
+      .then(([qInfoData, solutionsData]) => {
+        const QFormatted = Q?.replaceAll("_", "-");
+        const qInfo = qInfoData?.[QFormatted];
+        setQInfo(qInfo);
+
         if (qInfo?.["qno"]) {
-          fetch(BASE_URl + "solutions.json")
-            .then((res) => res.json())
-            .then((res) => {
-              const qno = qInfo["qno"];
-              const tags = qInfo["tags"];
-              const defaultTag = qInfo["default"];
-              setSolution(
-                res?.[qno]?.["java"]?.[
-                  search ?? defaultTag.toLowerCase().split(" ").join("-")
-                ]
-              );
-              if (dropdownItemSelected === -1) {
-                setDropdownItemSelected(
-                  tags.indexOf(
-                    search
-                      ? toTitleCase(search.split("-").join(" "))
-                      : defaultTag
-                  )
-                );
-              }
-            })
-            .catch((err) => console.log(err));
+          const qno = qInfo["qno"];
+          const tags = qInfo["tags"];
+          const defaultTag = qInfo["default"];
+          const solutionKey =
+            search ?? defaultTag.toLowerCase().split(" ").join("-");
+          setSolution(solutionsData?.[qno]?.["java"]?.[solutionKey]);
+
+          if (dropdownItemSelected === -1) {
+            setDropdownItemSelected(
+              tags.indexOf(
+                search ? toTitleCase(search.split("-").join(" ")) : defaultTag
+              )
+            );
+          }
         }
       })
       .catch((err) => console.log(err));
@@ -495,7 +495,7 @@ const Problem = () => {
           </LeftContent>
         </LeftContainer>
         <RightParentContainer>
-          {qInfo && solution && dropdownItemSelected !== null && (
+          {qInfo && solution && (
             <>
               {" "}
               <RightContainer
