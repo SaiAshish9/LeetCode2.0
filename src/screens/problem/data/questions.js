@@ -2212,7 +2212,7 @@ const QUESTIONS = {
         You may also assume each line in the text file must not contain leading
         or trailing white spaces.
       </p>
-
+      <br />
       <p>
         <strong class="example">Example:</strong>
       </p>
