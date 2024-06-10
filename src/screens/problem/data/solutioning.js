@@ -365,74 +365,76 @@ const SOLUTIONING = {
     <>
       <h2>Explanation of Maximum Gap Solution</h2>
 
-      <h3>
-        1. <code>maximumGap</code> Method:
-      </h3>
       <ul>
         <li>
-          <strong>Input Validation:</strong> Checks if the input array{" "}
-          <code>nums</code> is <code>null</code> or has fewer than 2 elements.
-          If so, it returns 0 because no gaps can be calculated.
+          <code>maximumGap</code> Method:
         </li>
-        <li>
-          <strong>Sorting:</strong> Calls <code>radixSort</code> to sort the
-          array.
-        </li>
-        <li>
-          <strong>Calculate Maximum Gap:</strong> Iterates through the sorted
-          array, calculates the gap between each pair of consecutive elements,
-          and keeps track of the maximum gap.
-        </li>
-      </ul>
+        <ul>
+          <li>
+            <strong>Input Validation:</strong> Checks if the input array{" "}
+            <code>nums</code> is <code>null</code> or has fewer than 2 elements.
+            If so, it returns 0 because no gaps can be calculated.
+          </li>
+          <li>
+            <strong>Sorting:</strong> Calls <code>radixSort</code> to sort the
+            array.
+          </li>
+          <li>
+            <strong>Calculate Maximum Gap:</strong> Iterates through the sorted
+            array, calculates the gap between each pair of consecutive elements,
+            and keeps track of the maximum gap.
+          </li>
+        </ul>
 
-      <h3>
-        2. <code>radixSort</code> Method:
-      </h3>
-      <ul>
         <li>
-          <strong>Find Maximum Number:</strong> Uses{" "}
-          <code>Arrays.stream(nums).max().getAsInt()</code> to find the maximum
-          number in the array.
+          <code>radixSort</code> Method:
         </li>
-        <li>
-          <strong>Digit-by-Digit Sorting:</strong> Initializes <code>exp</code>{" "}
-          to 1 and uses a while loop to sort the array by each digit, starting
-          from the least significant digit to the most significant digit. In
-          each iteration, <code>exp</code> is multiplied by 10 to move to the
-          next digit.
-        </li>
-      </ul>
+        <ul>
+          <li>
+            <strong>Find Maximum Number:</strong> Uses{" "}
+            <code>Arrays.stream(nums).max().getAsInt()</code> to find the
+            maximum number in the array.
+          </li>
+          <li>
+            <strong>Digit-by-Digit Sorting:</strong> Initializes{" "}
+            <code>exp</code> to 1 and uses a while loop to sort the array by
+            each digit, starting from the least significant digit to the most
+            significant digit. In each iteration, <code>exp</code> is multiplied
+            by 10 to move to the next digit.
+          </li>
+        </ul>
 
-      <h3>
-        3. <code>countingSort</code> Method:
-      </h3>
-      <ul>
         <li>
-          <strong>Initialize Auxiliary Arrays:</strong> Creates an{" "}
-          <code>output</code> array to store sorted numbers and a{" "}
-          <code>count</code> array to count occurrences of each digit.
+          <code>countingSort</code> Method:
         </li>
-        <li>
-          <strong>Count Digit Occurrences:</strong> Iterates through the array
-          and updates the <code>count</code> array based on the current digit at
-          the <code>exp</code> position.
-        </li>
-        <li>
-          <strong>Calculate Cumulative Count:</strong> Transforms the{" "}
-          <code>count</code> array so that each entry at index <code>i</code>{" "}
-          contains the cumulative sum of counts up to <code>i</code>. This
-          transformation tells us the position where each digit should be placed
-          in the <code>output</code> array.
-        </li>
-        <li>
-          <strong>Build Output Array:</strong> Iterates through the array in
-          reverse order, places each number in its correct position in the{" "}
-          <code>output</code> array, and decrements the corresponding count.
-        </li>
-        <li>
-          <strong>Copy Sorted Numbers:</strong> Copies the sorted numbers from{" "}
-          <code>output</code> back to the original array <code>nums</code>.
-        </li>
+        <ul>
+          <li>
+            <strong>Initialize Auxiliary Arrays:</strong> Creates an{" "}
+            <code>output</code> array to store sorted numbers and a{" "}
+            <code>count</code> array to count occurrences of each digit.
+          </li>
+          <li>
+            <strong>Count Digit Occurrences:</strong> Iterates through the array
+            and updates the <code>count</code> array based on the current digit
+            at the <code>exp</code> position.
+          </li>
+          <li>
+            <strong>Calculate Cumulative Count:</strong> Transforms the{" "}
+            <code>count</code> array so that each entry at index <code>i</code>{" "}
+            contains the cumulative sum of counts up to <code>i</code>. This
+            transformation tells us the position where each digit should be
+            placed in the <code>output</code> array.
+          </li>
+          <li>
+            <strong>Build Output Array:</strong> Iterates through the array in
+            reverse order, places each number in its correct position in the{" "}
+            <code>output</code> array, and decrements the corresponding count.
+          </li>
+          <li>
+            <strong>Copy Sorted Numbers:</strong> Copies the sorted numbers from{" "}
+            <code>output</code> back to the original array <code>nums</code>.
+          </li>
+        </ul>
       </ul>
     </>
   ),

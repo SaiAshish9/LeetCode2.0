@@ -384,7 +384,6 @@ export const LeftContentDescription = styled.div`
     counter-increment: step-counter;
     content: counter(step-counter) ". ";
     position: absolute;
-    left: -2em;
     font-weight: bold;
     color: rgb(255 255 255);
   }
@@ -409,16 +408,10 @@ export const LeftContentDescription = styled.div`
   ${({ desc }) =>
     desc &&
     css`
-      padding-left: 1rem;
       h1,
       h2,
       h3 {
         margin-bottom: 1rem;
-        margin-left: -1rem;
-      }
-
-      p {
-        margin-left: -1rem;
       }
 
       ul {
