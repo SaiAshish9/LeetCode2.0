@@ -116,9 +116,7 @@ const Problem = () => {
       const Q = decodeURIComponent(
         location?.pathname?.split("/problems/")?.[1]
       );
-      const search = decodeURIComponent(
-        location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-")
-      );
+      const search = decodeURIComponent(location?.search?.split("?tag=")?.[1]);
       const QFormatted = Q?.replaceAll("_", "_");
       const qInfo = qInfoData?.[QFormatted];
       setQInfo(qInfo);
@@ -126,17 +124,24 @@ const Problem = () => {
       if (qInfo?.["qno"]) {
         const qno = qInfo["qno"];
         const tags = qInfo["tags"];
-        const defaultTag = qInfo["default"];
-        const solutionKey =
-          search ?? defaultTag.toLowerCase().split(" ").join("-");
-        setSolution(solutionsData?.[qno]?.["java"]?.[solutionKey]);
+        const defaultTag = decodeURIComponent(qInfo["default"]);
+
+        const solutionKey = search ?? defaultTag;
+
+        setSolution(
+          solutionsData?.[qno]?.["java"]?.[
+            solutionKey.toLowerCase().split(" ").join("-")
+          ]
+        );
 
         if (dropdownItemSelected === -1) {
-          setDropdownItemSelected(
-            tags.indexOf(
-              search ? toTitleCase(search.split("-").join(" ")) : defaultTag
-            )
+          console.log(
+            search ? toTitleCase(search.split("-").join(" ")) : defaultTag,
+            tags,
+            solutionKey,
+            search
           );
+          setDropdownItemSelected(tags.indexOf(solutionKey));
         }
       }
       handleDropdownCLickOutside();
@@ -417,10 +422,7 @@ const Problem = () => {
                                     location?.pathname?.split(
                                       "/problems/"
                                     )?.[1];
-                                  navigate(
-                                    `/problems/${path}?tag=` +
-                                      item.toLowerCase().split(" ").join("_")
-                                  );
+                                  navigate(`/problems/${path}?tag=` + item);
                                   setItemSelected1(
                                     (itemSelected1) => !itemSelected1
                                   );
@@ -440,7 +442,7 @@ const Problem = () => {
                                     </NavIcon>
                                   )}
                                   <DropdownContainerText
-                                    mL={dropdownItemSelected !== k}
+                                    noML={dropdownItemSelected !== k}
                                   >
                                     {item}
                                   </DropdownContainerText>
@@ -563,69 +565,58 @@ const Problem = () => {
                       {itemSelected && dropdownItemSelected > -1 && (
                         <DropdownContainer ref={containerRef}>
                           <DropdownContainerContent>
-                            {qInfo.tags.map(
-                              (item, k) =>
-                                item && (
-                                  <DropdownContainerItem
-                                    onMouseEnter={() => setHovered(k)}
-                                    onMouseLeave={() => setHovered(-1)}
-                                    key={k}
-                                    hovered={k === hovered}
-                                    onClick={() => {
-                                      setDropdownItemSelected(k);
-                                      const path =
-                                        location?.pathname?.split(
-                                          "/problems/"
-                                        )?.[1];
-                                      navigate(
-                                        `/problems/${path}?tag=` +
-                                          item
-                                            .toLowerCase()
-                                            .split(" ")
-                                            .join("_")
-                                      );
-                                      setItemSelected(
-                                        (itemSelected) => !itemSelected
-                                      );
-                                    }}
+                            {qInfo.tags.map((item, k) => (
+                              <DropdownContainerItem
+                                onMouseEnter={() => setHovered(k)}
+                                onMouseLeave={() => setHovered(-1)}
+                                key={k}
+                                hovered={k === hovered}
+                                onClick={() => {
+                                  setDropdownItemSelected(k);
+                                  const path =
+                                    location?.pathname?.split(
+                                      "/problems/"
+                                    )?.[1];
+                                  navigate(
+                                    `/problems/${path}?tag=` +
+                                      item
+                                  );
+                                  setItemSelected(
+                                    (itemSelected) => !itemSelected
+                                  );
+                                }}
+                              >
+                                <DropdownContainerLeftItem>
+                                  {dropdownItemSelected === k && (
+                                    <NavIcon
+                                      noMR
+                                      style={{ marginRight: "0.5rem" }}
+                                    >
+                                      <StyledImage
+                                        style={{ height: 14, top: 0 }}
+                                        alt="img"
+                                        src={TickSvg1}
+                                      />
+                                    </NavIcon>
+                                  )}
+                                  <DropdownContainerText
+                                    noML={dropdownItemSelected === k}
                                   >
-                                    <DropdownContainerLeftItem>
-                                      {item && (
-                                        <NavIcon
-                                          noMR
-                                          style={{ marginRight: "0.5rem" }}
-                                        >
-                                          <StyledImage
-                                            style={{ height: 14, top: 0 }}
-                                            alt="img"
-                                            src={
-                                              dropdownItemSelected !== k
-                                                ? TickSvg2
-                                                : TickSvg1
-                                            }
-                                          />
-                                        </NavIcon>
-                                      )}
-                                      <DropdownContainerText>
-                                        {item}
-                                      </DropdownContainerText>
-                                    </DropdownContainerLeftItem>
+                                    {item}
+                                  </DropdownContainerText>
+                                </DropdownContainerLeftItem>
 
-                                    {k === hovered && (
-                                      <NavIcon
-                                        noMR
-                                        style={{ marginRight: "0rem" }}
-                                      >
-                                        <StyledImage
-                                          style={{ height: 14, top: -1 }}
-                                          alt="img"
-                                          src={InfoSvg}
-                                        />
-                                      </NavIcon>
-                                    )}
-                                  </DropdownContainerItem>
-                                )
-                            )}
+                                {k === hovered && (
+                                  <NavIcon noMR style={{ marginRight: "0rem" }}>
+                                    <StyledImage
+                                      style={{ height: 14, top: -1 }}
+                                      alt="img"
+                                      src={InfoSvg}
+                                    />
+                                  </NavIcon>
+                                )}
+                              </DropdownContainerItem>
+                            ))}
                           </DropdownContainerContent>
                         </DropdownContainer>
                       )}

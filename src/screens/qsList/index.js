@@ -54,7 +54,7 @@ const QSList = () => {
                 "/problems/" +
                   title.toLowerCase().replaceAll(" ", "_") +
                   "?tag=" +
-                  pathname?.split("/tag/")?.[1],
+                  path,
                 "_blank"
               );
             }}
