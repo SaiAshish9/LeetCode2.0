@@ -497,13 +497,13 @@ const Problem = () => {
               </LeftContent>
             </LeftContainer>
             <RightParentContainer>
-              {solution && (
-                <>
-                  {" "}
-                  <RightContainer
-                    selected={selected === 2}
-                    onClick={() => setSelected(2)}
-                  >
+              {" "}
+              <RightContainer
+                selected={selected === 2}
+                onClick={() => setSelected(2)}
+              >
+                {solution && (
+                  <>
                     <TabHeader>
                       <TabItem>
                         <NavIcon style={{ marginRight: 0 }}>
@@ -631,22 +631,22 @@ const Problem = () => {
                         defaultValue={solution ?? ""}
                       />
                     )}
-                  </RightContainer>
-                  <TestCaseContainer
-                    selected={selected === 3}
-                    onClick={() => setSelected(3)}
-                  >
-                    <NavIcon style={{ marginRight: 0 }}>
-                      <StyledImage
-                        style={{ height: "14px", top: 0 }}
-                        alt="img"
-                        src={TestCaseSvg}
-                      />
-                    </NavIcon>
-                    <TabText>Testcase</TabText>
-                  </TestCaseContainer>
-                </>
-              )}
+                  </>
+                )}
+              </RightContainer>
+              <TestCaseContainer
+                selected={selected === 3}
+                onClick={() => setSelected(3)}
+              >
+                <NavIcon style={{ marginRight: 0 }}>
+                  <StyledImage
+                    style={{ height: "14px", top: 0 }}
+                    alt="img"
+                    src={TestCaseSvg}
+                  />
+                </NavIcon>
+                <TabText>Testcase</TabText>
+              </TestCaseContainer>
             </RightParentContainer>
           </Content>
         </>
