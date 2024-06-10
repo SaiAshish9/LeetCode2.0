@@ -103,8 +103,10 @@ const SOLUTIONING = {
         <li>
           <strong>Start DFS Traversal:</strong>
           <ul>
-            Call the <code>dfs</code> method starting from vertex 0 with parent
-            as -1 (indicating no parent).
+            <li>
+              Call the <code>dfs</code> method starting from vertex 0 with
+              parent as -1 (indicating no parent).
+            </li>
           </ul>
         </li>
         <li>
