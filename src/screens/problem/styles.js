@@ -330,6 +330,12 @@ export const LeftContentDescription = styled.div`
     margin-bottom: 1rem;
   }
 
+  .spoilers {
+    color: #f5f5f5;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
   code {
     background-color: #ffffff12;
     border-color: #f7faff1f;
