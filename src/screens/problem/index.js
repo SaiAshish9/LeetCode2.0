@@ -427,29 +427,21 @@ const Problem = () => {
                                 }}
                               >
                                 <DropdownContainerLeftItem>
-                                  <NavIcon
-                                    hidden={dropdownItemSelected !== k}
-                                    noMR
-                                    style={{ marginRight: "0.5rem" }}
+                                  {item && dropdownItemSelected === k && (
+                                    <NavIcon
+                                      noMR
+                                      style={{ marginRight: "0.5rem" }}
+                                    >
+                                      <StyledImage
+                                        style={{ height: 14, top: 0 }}
+                                        alt="img"
+                                        src={TickSvg1}
+                                      />
+                                    </NavIcon>
+                                  )}
+                                  <DropdownContainerText
+                                    mL={dropdownItemSelected !== k}
                                   >
-                                    <StyledImage
-                                      style={{ height: 14, top: 0 }}
-                                      alt="img"
-                                      src={TickSvg1}
-                                    />
-                                  </NavIcon>
-                                  <NavIcon
-                                    hidden={dropdownItemSelected === k}
-                                    noMR
-                                    style={{ marginRight: "0.5rem" }}
-                                  >
-                                    <StyledImage
-                                      style={{ height: 14, top: 0 }}
-                                      alt="img"
-                                      src={TickSvg2}
-                                    />
-                                  </NavIcon>
-                                  <DropdownContainerText>
                                     {item}
                                   </DropdownContainerText>
                                 </DropdownContainerLeftItem>
@@ -607,7 +599,7 @@ const Problem = () => {
                                             style={{ height: 14, top: 0 }}
                                             alt="img"
                                             src={
-                                              dropdownItemSelected === k
+                                              dropdownItemSelected !== k
                                                 ? TickSvg2
                                                 : TickSvg1
                                             }

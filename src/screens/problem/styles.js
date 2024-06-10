@@ -357,7 +357,8 @@ export const LeftContentDescription = styled.div`
     white-space: pre-line;
   }
 
-  h1, h2,
+  h1,
+  h2,
   strong,
   h3 {
     color: rgb(255 255 255);
@@ -409,7 +410,9 @@ export const LeftContentDescription = styled.div`
     desc &&
     css`
       padding-left: 1rem;
-      h1, h2, h3 {
+      h1,
+      h2,
+      h3 {
         margin-bottom: 1rem;
         margin-left: -1rem;
       }
@@ -516,7 +519,9 @@ export const LeftTag = styled.div`
             color: rgb(255 192 30);
           `
         : diff === "Easy"
-        ? css`color: rgb(0 184 163);`
+        ? css`
+            color: rgb(0 184 163);
+          `
         : css``}
     padding-left: 0rem;
     padding-top: 0rem;
@@ -632,6 +637,12 @@ export const DropdownContainerText = styled.p`
   color: #f5f5f5;
   margin-right: 0.75rem;
   text-align: start;
+  ${({ mL }) =>
+    mL
+      ? css`
+          margin-left: 2rem;
+        `
+      : css``};
 `;
 
 export const MiddleLeftHeaderContainer = styled.div`
