@@ -4,11 +4,11 @@ const SOLUTIONING = {
   1192: (
     <>
       <h2>Step-by-Step Explanation:</h2>
-      <ol>
+      <ul>
         <li>
           <strong>Class Initialization:</strong>
           <p>
-            a. Define the class <code>Solution</code> with necessary member
+            Define the class <code>Solution</code> with necessary member
             variables:
           </p>
           <ul>
@@ -44,7 +44,7 @@ const SOLUTIONING = {
           </strong>
         </li>
         <p>
-          a. In <code>Tarjan's</code> Algorithm, which is used to find strongly
+          In <code>Tarjan's</code> Algorithm, which is used to find strongly
           connected components (SCCs) or bridges (critical connections) in a
           graph, discovery time plays a crucial role:
         </p>
@@ -75,24 +75,30 @@ const SOLUTIONING = {
           <strong>
             Method <code>criticalConnections</code>:
           </strong>
-          <p>
-            a. Initialize <code>graph</code>, <code>low</code>,{" "}
-            <code>disc</code>, <code>result</code>, and <code>time</code>.
-          </p>
-          <p>b. Create an empty adjacency list for each vertex in the graph.</p>
-          <p>
-            c. Build the graph using the given <code>connections</code>.
-          </p>
+          <ul>
+            <li>
+              Initialize <code>graph</code>, <code>low</code>, <code>disc</code>
+              , <code>result</code>, and <code>time</code>.
+            </li>
+            <li>
+              Create an empty adjacency list for each vertex in the graph.
+            </li>
+            <li>
+              Build the graph using the given <code>connections</code>.
+            </li>
+          </ul>
         </li>
         <li>
           <strong>Build the Graph:</strong>
-          <p>
-            a. Iterate over each connection in <code>connections</code>.
-          </p>
-          <p>
-            b. Add each connection to the adjacency list of both vertices
-            involved (since the graph is undirected).
-          </p>
+          <ul>
+            <li>
+              Iterate over each connection in <code>connections</code>.
+            </li>
+            <li>
+              Add each connection to the adjacency list of both vertices
+              involved (since the graph is undirected).
+            </li>
+          </ul>
         </li>
         <li>
           <strong>Start DFS Traversal:</strong>
@@ -105,17 +111,20 @@ const SOLUTIONING = {
           <strong>
             Depth-First Search (DFS) Method <code>dfs</code>:
           </strong>
-          <p>
-            a. Set the discovery time and low value of vertex <code>u</code> to
-            the current time.
-          </p>
-          <p>
-            b. Increment the <code>time</code>.
-          </p>
-          <p>
-            c. Traverse all the adjacent vertices (<code>v</code>) of vertex{" "}
-            <code>u</code>.
-          </p>
+          <ul>
+            <li>
+              a. Set the discovery time and low value of vertex <code>u</code>{" "}
+              to the current time.
+            </li>
+            <li>
+              b. Increment the <code>time</code>.
+            </li>
+            <li>
+              c. Traverse all the adjacent vertices (<code>v</code>) of vertex{" "}
+              <code>u</code>.
+            </li>
+          </ul>
+
           <ul>
             <li>Skip the parent vertex to avoid backtracking.</li>
             <li>
@@ -146,18 +155,20 @@ const SOLUTIONING = {
         </li>
         <li>
           <strong>Return the Result:</strong>
-          <p>
-            a. After completing the DFS traversal, return the{" "}
-            <code>result</code> list containing all critical connections.
-          </p>
+          <ul>
+            <li>
+              a. After completing the DFS traversal, return the{" "}
+              <code>result</code> list containing all critical connections.
+            </li>
+          </ul>
         </li>
-      </ol>
+      </ul>
     </>
   ),
   470: (
     <>
       <h2>Explanation:</h2>
-      <ol>
+      <ul>
         <li>
           <h3>Uniform Distribution:</h3>
           <ul>
@@ -230,7 +241,7 @@ const SOLUTIONING = {
             </li>
           </ul>
         </li>
-      </ol>
+      </ul>
       <p>
         In summary, rejecting numbers from 41 to 49 ensures that the generated
         random integer in the range 1 to 10 has a uniform distribution. This
@@ -243,7 +254,7 @@ const SOLUTIONING = {
   478: (
     <>
       <h2>Explanation:</h2>
-      <ol>
+      <ul>
         <li>We define a Solution class to encapsulate the functionality.</li>
         <li>
           The constructor initializes the radius and center coordinates of the
@@ -269,7 +280,7 @@ const SOLUTIONING = {
               x-coordinates of points within the circle.
             </li>
           </ul>
-          <ol>
+          <ul>
             <li>
               <h4>
                 <code>random.nextDouble():</code>
@@ -336,7 +347,7 @@ const SOLUTIONING = {
                 </li>
               </ul>
             </li>
-          </ol>
+          </ul>
         </li>
         <li>
           <h3>
@@ -345,7 +356,7 @@ const SOLUTIONING = {
             <code>(x - x_center)^2 + (y - y_center)^2 &lt;= radius^2</code>.
           </h3>
         </li>
-      </ol>
+      </ul>
     </>
   ),
   164: (
@@ -547,7 +558,7 @@ const SOLUTIONING = {
   2343: (
     <>
       <h2>Step-by-Step Explanation of the Java Solution:</h2>
-      <ol>
+      <ul>
         <li>
           <strong>
             Define the <code>Solution</code> Class and Methods:
@@ -670,7 +681,7 @@ const SOLUTIONING = {
             </li>
           </ul>
         </li>
-      </ol>
+      </ul>
     </>
   ),
   332: (
@@ -711,7 +722,7 @@ const SOLUTIONING = {
         necessary to cover all edges.
       </p>
 
-      <ol>
+      <ul>
         <li>
           <strong>Graph Construction:</strong>
           <ul>
@@ -779,7 +790,7 @@ const SOLUTIONING = {
             </li>
           </ul>
         </li>
-      </ol>
+      </ul>
 
       <p>
         By following Hierholzer’s algorithm iteratively with a stack, this
@@ -792,7 +803,7 @@ const SOLUTIONING = {
     <>
       <h1>Explanation for "Cracking the Safe" Solution</h1>
 
-      <ol>
+      <ul>
         <li>
           <strong>De Bruijn Graph: </strong>
           <ul>
@@ -899,14 +910,14 @@ const SOLUTIONING = {
             </li>
           </ul>
         </li>
-      </ol>
+      </ul>
     </>
   ),
   2097: (
     <>
       <h2>Explanation of the Solution:</h2>
 
-      <ol>
+      <ul>
         <li>
           <strong>validArrangement(int[][] pairs):</strong>
           <ul>
@@ -950,7 +961,7 @@ const SOLUTIONING = {
             Map&lt;Integer, Integer&gt; outDegree, Map&lt;Integer, Integer&gt;
             inDegrees, int[][] pairs):
           </strong>
-          <ol>
+          <ul>
             <li>This method finds the start node for the Eulerian circuit.</li>
             <li>
               It iterates through the vertices in the graph and checks if the
@@ -961,7 +972,7 @@ const SOLUTIONING = {
               If found, it returns the start node. If no such node is found, it
               returns the first start node from the input pairs.
             </li>
-          </ol>
+          </ul>
         </li>
 
         <li>
@@ -969,7 +980,7 @@ const SOLUTIONING = {
             eulerDFS(Map&lt;Integer, Stack&lt;Integer&gt;&gt; graph, int u,
             List&lt;int[]&gt; ans):
           </strong>
-          <ol>
+          <ul>
             <li>
               This method performs a depth-first search (DFS) to find the
               Eulerian circuit.
@@ -987,9 +998,9 @@ const SOLUTIONING = {
               <code>eulerDFS</code> with <code>v</code> and adds the pair{" "}
               <code>(u, v)</code> to the list <code>ans</code>.
             </li>
-          </ol>
+          </ul>
         </li>
-      </ol>
+      </ul>
     </>
   ),
   1489: (
@@ -1027,7 +1038,7 @@ const SOLUTIONING = {
               The problem of finding critical and pseudo-critical edges in an
               MST is different:
             </li>
-            <ol>
+            <ul>
               <li>
                 <strong>Critical Edge</strong>: An edge is critical if its
                 removal increases the weight of the MST or disconnects the
@@ -1038,7 +1049,7 @@ const SOLUTIONING = {
                 pseudo-critical if it is part of some MST but not necessarily
                 every MST.
               </li>
-            </ol>
+            </ul>
           </ul>
         </li>
         <li>
@@ -1062,7 +1073,7 @@ const SOLUTIONING = {
               The efficient approach for the problem, as previously provided, is
               based on:
             </li>
-            <ol>
+            <ul>
               <li>
                 <strong>Kruskal's Algorithm:</strong> To construct the MST.
               </li>
@@ -1074,7 +1085,7 @@ const SOLUTIONING = {
                 <strong>Edge Exclusion/Inclusion:</strong> To determine the
                 criticality of each edge.
               </li>
-            </ol>
+            </ul>
           </ul>
         </li>
       </ul>
@@ -1257,7 +1268,7 @@ const SOLUTIONING = {
         The <code>disconnected</code> method checks if the island is already
         disconnected by counting the number of islands using DFS.
       </p>
-      <ol>
+      <ul>
         <li>
           It initializes <code>islandsCount</code> to 0.
         </li>
@@ -1271,11 +1282,11 @@ const SOLUTIONING = {
           If it finds more than one island during this process, it returns{" "}
           <code>true</code>, indicating that the grid is disconnected.
         </li>
-      </ol>
+      </ul>
 
       <h3>Try Removing One Land Cell:</h3>
       <p>The main method iterates through each cell. For each land cell:</p>
-      <ol>
+      <ul>
         <li>
           It temporarily removes the cell (<code>grid[i][j] = 0</code>).
         </li>
@@ -1287,7 +1298,7 @@ const SOLUTIONING = {
         <li>
           Otherwise, it restores the cell (<code>grid[i][j] = 1</code>).
         </li>
-      </ol>
+      </ul>
 
       <h3>Return 2 If Needed:</h3>
       <p>
@@ -1618,7 +1629,7 @@ const SOLUTIONING = {
     <>
       {" "}
       <h1>Steps:</h1>
-      <ol>
+      <ul>
         <li>
           <strong>Initialize the rectangles:</strong> Store the given list of
           non-overlapping rectangles and calculate the total number of points in
@@ -1637,7 +1648,7 @@ const SOLUTIONING = {
           Generate random coordinates within the bounds of the selected
           rectangle.
         </li>
-      </ol>
+      </ul>
       <h2>Explanation:</h2>
       <ul>
         <li>
