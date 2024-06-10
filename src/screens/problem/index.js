@@ -495,7 +495,7 @@ const Problem = () => {
           </LeftContent>
         </LeftContainer>
         <RightParentContainer>
-          {qInfo && solution && dropdownItemSelected && (
+          {qInfo && solution && dropdownItemSelected !== null && (
             <>
               {" "}
               <RightContainer
