@@ -188,7 +188,7 @@ export const DifficultyTag = styled.p`
   ${({ easy, medium }) =>
     easy
       ? css`
-          background-color: rgb(0 184 163);
+          background-color: #5cb85c;
         `
       : medium
       ? css`
