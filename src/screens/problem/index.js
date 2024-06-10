@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Container,
   Content,
@@ -103,11 +103,6 @@ const Problem = () => {
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
 
-  const Q = decodeURIComponent(location?.pathname?.split("/problems/")?.[1]);
-  const search = decodeURIComponent(
-    location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-")
-  );
-
   function toTitleCase(str) {
     return str.replace(/\b\w/g, function (char) {
       return char.toUpperCase();
@@ -116,19 +111,19 @@ const Problem = () => {
 
   const fetchData = async () => {
     try {
-      const qInfoData = await axios(BASE_URL + "q_info.json");
-      const solutionsData = await axios(BASE_URL + "solutions.json");
-      console.log({ qInfoData, solutionsData });
-
-      const QFormatted = Q?.replaceAll("_", "-");
+      const qInfoData = (await axios(BASE_URL + "q_info.json")).data;
+      const solutionsData = (await axios(BASE_URL + "solutions.json")).data;
+      const Q = decodeURIComponent(
+        location?.pathname?.split("/problems/")?.[1]
+      );
+      const search = decodeURIComponent(
+        location?.search?.split("?tag=")?.[1]?.replaceAll("_", "-")
+      );
+      const QFormatted = Q?.replaceAll("_", "_");
       const qInfo = qInfoData?.[QFormatted];
-
       setQInfo(qInfo);
 
-      console.log({ qInfo });
-
       if (qInfo?.["qno"]) {
-        console.log({ qInfo });
         const qno = qInfo["qno"];
         const tags = qInfo["tags"];
         const defaultTag = qInfo["default"];
@@ -203,7 +198,7 @@ const Problem = () => {
     setItemSelected((itemSelected) => !itemSelected);
   }, 100);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -576,66 +571,69 @@ const Problem = () => {
                       {itemSelected && dropdownItemSelected > -1 && (
                         <DropdownContainer ref={containerRef}>
                           <DropdownContainerContent>
-                            {qInfo.tags.map((item, k) => (
-                              <DropdownContainerItem
-                                onMouseEnter={() => setHovered(k)}
-                                onMouseLeave={() => setHovered(-1)}
-                                key={k}
-                                hovered={k === hovered}
-                                onClick={() => {
-                                  setDropdownItemSelected(k);
-                                  const path =
-                                    location?.pathname?.split(
-                                      "/problems/"
-                                    )?.[1];
-                                  navigate(
-                                    `/problems/${path}?tag=` +
-                                      item.toLowerCase().split(" ").join("_")
-                                  );
-                                  setItemSelected(
-                                    (itemSelected) => !itemSelected
-                                  );
-                                }}
-                              >
-                                <DropdownContainerLeftItem>
-                                  <NavIcon
-                                    hidden={dropdownItemSelected !== k}
-                                    noMR
-                                    style={{ marginRight: "0.5rem" }}
+                            {qInfo.tags.map(
+                              (item, k) =>
+                                item && (
+                                  <DropdownContainerItem
+                                    onMouseEnter={() => setHovered(k)}
+                                    onMouseLeave={() => setHovered(-1)}
+                                    key={k}
+                                    hovered={k === hovered}
+                                    onClick={() => {
+                                      setDropdownItemSelected(k);
+                                      const path =
+                                        location?.pathname?.split(
+                                          "/problems/"
+                                        )?.[1];
+                                      navigate(
+                                        `/problems/${path}?tag=` +
+                                          item
+                                            .toLowerCase()
+                                            .split(" ")
+                                            .join("_")
+                                      );
+                                      setItemSelected(
+                                        (itemSelected) => !itemSelected
+                                      );
+                                    }}
                                   >
-                                    <StyledImage
-                                      style={{ height: 14, top: 0 }}
-                                      alt="img"
-                                      src={TickSvg1}
-                                    />
-                                  </NavIcon>
-                                  <NavIcon
-                                    hidden={dropdownItemSelected === k}
-                                    noMR
-                                    style={{ marginRight: "0.5rem" }}
-                                  >
-                                    <StyledImage
-                                      style={{ height: 14, top: 0 }}
-                                      alt="img"
-                                      src={TickSvg2}
-                                    />
-                                  </NavIcon>
-                                  <DropdownContainerText>
-                                    {item}
-                                  </DropdownContainerText>
-                                </DropdownContainerLeftItem>
+                                    <DropdownContainerLeftItem>
+                                      {item && (
+                                        <NavIcon
+                                          noMR
+                                          style={{ marginRight: "0.5rem" }}
+                                        >
+                                          <StyledImage
+                                            style={{ height: 14, top: 0 }}
+                                            alt="img"
+                                            src={
+                                              dropdownItemSelected === k
+                                                ? TickSvg2
+                                                : TickSvg1
+                                            }
+                                          />
+                                        </NavIcon>
+                                      )}
+                                      <DropdownContainerText>
+                                        {item}
+                                      </DropdownContainerText>
+                                    </DropdownContainerLeftItem>
 
-                                {k === hovered && (
-                                  <NavIcon noMR style={{ marginRight: "0rem" }}>
-                                    <StyledImage
-                                      style={{ height: 14, top: -1 }}
-                                      alt="img"
-                                      src={InfoSvg}
-                                    />
-                                  </NavIcon>
-                                )}
-                              </DropdownContainerItem>
-                            ))}
+                                    {k === hovered && (
+                                      <NavIcon
+                                        noMR
+                                        style={{ marginRight: "0rem" }}
+                                      >
+                                        <StyledImage
+                                          style={{ height: 14, top: -1 }}
+                                          alt="img"
+                                          src={InfoSvg}
+                                        />
+                                      </NavIcon>
+                                    )}
+                                  </DropdownContainerItem>
+                                )
+                            )}
                           </DropdownContainerContent>
                         </DropdownContainer>
                       )}
