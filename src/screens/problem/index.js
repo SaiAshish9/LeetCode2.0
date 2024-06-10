@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import {
   Container,
   Content,
@@ -73,6 +73,7 @@ import InfoSvg from "../../assets/info.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { QUESTIONS, SOLUTIONING } from "./data";
 import { MdContentCopy } from "react-icons/md";
+import axios from "axios";
 
 const Problem = () => {
   // https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png
@@ -115,23 +116,19 @@ const Problem = () => {
 
   const fetchData = async () => {
     try {
-      const fetchQInfo = fetch(BASE_URL + "q_info.json").then((res) =>
-        res.json()
-      );
-      const fetchSolutions = fetch(BASE_URL + "solutions.json").then((res) =>
-        res.json()
-      );
-
-      const [qInfoData, solutionsData] = await Promise.all([
-        fetchQInfo,
-        fetchSolutions,
-      ]);
+      const qInfoData = await axios(BASE_URL + "q_info.json");
+      const solutionsData = await axios(BASE_URL + "solutions.json");
+      console.log({ qInfoData, solutionsData });
 
       const QFormatted = Q?.replaceAll("_", "-");
       const qInfo = qInfoData?.[QFormatted];
+
       setQInfo(qInfo);
 
+      console.log({ qInfo });
+
       if (qInfo?.["qno"]) {
+        console.log({ qInfo });
         const qno = qInfo["qno"];
         const tags = qInfo["tags"];
         const defaultTag = qInfo["default"];
@@ -147,6 +144,8 @@ const Problem = () => {
           );
         }
       }
+      handleDropdownCLickOutside();
+      handleDropdownCLickOutside1();
     } catch (err) {
       console.log(err);
     }
@@ -204,7 +203,7 @@ const Problem = () => {
     setItemSelected((itemSelected) => !itemSelected);
   }, 100);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     fetchData();
   }, []);
 
@@ -295,368 +294,382 @@ const Problem = () => {
           </NavIcon>
         </RightIconContainer>
       </Header>
-      <Content>
-        <LeftContainer selected={selected === 1} onClick={() => setSelected(1)}>
-          <TabHeaderParentContainer>
-            <LogoTopHeader>
-              <BarsIcon color="#fff9" size={20.5} />
-              <LogoImg
-                style={{ height: "19px" }}
-                alt="img"
-                src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
-              />
-              <NavIcon style={{ marginRight: 0 }}>
-                <StyledImage
-                  style={{ height: "19px", top: 0 }}
-                  alt="img"
-                  src={BellSvg}
-                />
-              </NavIcon>
-            </LogoTopHeader>
-            <TabHeader>
-              <TabHeaderMContent>
-                <TabItem onClick={() => setStep(0)}>
-                  <NavIcon
-                    style={{ marginRight: 0, opacity: step === 1 ? 0.45 : 1 }}
-                  >
+      {qInfo && (
+        <>
+          {" "}
+          <Content>
+            <LeftContainer
+              selected={selected === 1}
+              onClick={() => setSelected(1)}
+            >
+              <TabHeaderParentContainer>
+                <LogoTopHeader>
+                  <BarsIcon color="#fff9" size={20.5} />
+                  <LogoImg
+                    style={{ height: "19px" }}
+                    alt="img"
+                    src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
+                  />
+                  <NavIcon style={{ marginRight: 0 }}>
                     <StyledImage
-                      style={{ height: "14px", top: -1 }}
+                      style={{ height: "19px", top: 0 }}
                       alt="img"
-                      src={DescriptionSvg}
+                      src={BellSvg}
                     />
                   </NavIcon>
-                  <TabText inActive={step !== 0}>Description</TabText>
-                </TabItem>
-                <LeftLI style={{ marginRight: 8 }} />
-                <TabItem onClick={() => setStep(1)}>
-                  <NavIcon
-                    style={{ marginRight: 0, opacity: step === 0 ? 0.45 : 1 }}
-                  >
-                    <StyledImage
-                      style={{ height: "14px", top: -1 }}
-                      alt="img"
-                      src={SolutioningSvg}
-                    />
-                  </NavIcon>
-                  <TabText inActive={step !== 1}>Solutioning</TabText>
-                </TabItem>
-              </TabHeaderMContent>
-              <TabHeaderSContent>
-                <TabItem inActive={step !== 0} onClick={() => setStep(0)}>
-                  <TabText inActive={step !== 0}>Description</TabText>
-                </TabItem>
-                <TabItem inActive={step !== 1} onClick={() => setStep(1)}>
-                  <TabText inActive={step !== 1}>Solutioning</TabText>
-                </TabItem>
-                <TabItem inActive={step !== 2} onClick={() => setStep(2)}>
-                  <TabText inActive={step !== 2}>Code</TabText>
-                </TabItem>
-              </TabHeaderSContent>
-            </TabHeader>
-          </TabHeaderParentContainer>
-
-          <LeftContent>
-            <LeftContentTitle>
-              {QUESTIONS && qInfo && `${qInfo["qno"]}. ${qInfo["title"]}`}
-            </LeftContentTitle>
-            <LeftTag diff={qInfo?.["difficulty"]}>
-              {QUESTIONS && qInfo && `${qInfo["difficulty"]}`}
-            </LeftTag>
-            {step === 0 && (
-              <LeftContentDescription>
-                {qInfo && QUESTIONS[qInfo["qno"]]}
-              </LeftContentDescription>
-            )}
-            {step === 1 && qInfo && SOLUTIONING[qInfo["qno"]]}
-            {step === 2 && solution && (
-              <SEditor>
-                <TabOptionsContainer>
-                  <TabOptionsContent>
-                    <TabOptionsInnerContent
-                      ref={dropdownRef1}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        handleToggle1();
-                      }}
-                    >
-                      <TabOptionsText style={{ marginRight: "0.25rem" }}>
-                        {qInfo &&
-                          dropdownItemSelected !== -1 &&
-                          qInfo.tags[dropdownItemSelected]}
-                      </TabOptionsText>
-                      <NavIcon style={{ marginRight: "0rem" }}>
+                </LogoTopHeader>
+                <TabHeader>
+                  <TabHeaderMContent>
+                    <TabItem onClick={() => setStep(0)}>
+                      <NavIcon
+                        style={{
+                          marginRight: 0,
+                          opacity: step === 1 ? 0.45 : 1,
+                        }}
+                      >
                         <StyledImage
-                          style={{ height: "12px", top: -1 }}
+                          style={{ height: "14px", top: -1 }}
                           alt="img"
-                          src={ArrowDownSvg}
+                          src={DescriptionSvg}
                         />
                       </NavIcon>
-                    </TabOptionsInnerContent>
-                  </TabOptionsContent>
+                      <TabText inActive={step !== 0}>Description</TabText>
+                    </TabItem>
+                    <LeftLI style={{ marginRight: 8 }} />
+                    <TabItem onClick={() => setStep(1)}>
+                      <NavIcon
+                        style={{
+                          marginRight: 0,
+                          opacity: step === 0 ? 0.45 : 1,
+                        }}
+                      >
+                        <StyledImage
+                          style={{ height: "14px", top: -1 }}
+                          alt="img"
+                          src={SolutioningSvg}
+                        />
+                      </NavIcon>
+                      <TabText inActive={step !== 1}>Solutioning</TabText>
+                    </TabItem>
+                  </TabHeaderMContent>
+                  <TabHeaderSContent>
+                    <TabItem inActive={step !== 0} onClick={() => setStep(0)}>
+                      <TabText inActive={step !== 0}>Description</TabText>
+                    </TabItem>
+                    <TabItem inActive={step !== 1} onClick={() => setStep(1)}>
+                      <TabText inActive={step !== 1}>Solutioning</TabText>
+                    </TabItem>
+                    <TabItem inActive={step !== 2} onClick={() => setStep(2)}>
+                      <TabText inActive={step !== 2}>Code</TabText>
+                    </TabItem>
+                  </TabHeaderSContent>
+                </TabHeader>
+              </TabHeaderParentContainer>
 
-                  {itemSelected1 && qInfo && dropdownItemSelected > -1 && (
-                    <DropdownContainer ref={containerRef1}>
-                      <DropdownContainerContent>
-                        {qInfo &&
-                          qInfo.tags.map((item, k) => (
-                            <DropdownContainerItem
-                              onMouseEnter={() => setHovered(k)}
-                              onMouseLeave={() => setHovered(-1)}
+              <LeftContent>
+                <LeftContentTitle>
+                  {QUESTIONS && `${qInfo["qno"]}. ${qInfo["title"]}`}
+                </LeftContentTitle>
+                <LeftTag diff={qInfo?.["difficulty"]}>
+                  {QUESTIONS && `${qInfo["difficulty"]}`}
+                </LeftTag>
+                {step === 0 && (
+                  <LeftContentDescription>
+                    {QUESTIONS[qInfo["qno"]]}
+                  </LeftContentDescription>
+                )}
+                {step === 1 && SOLUTIONING[qInfo["qno"]]}
+                {step === 2 && solution && (
+                  <SEditor>
+                    <TabOptionsContainer>
+                      <TabOptionsContent>
+                        <TabOptionsInnerContent
+                          ref={dropdownRef1}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleToggle1();
+                          }}
+                        >
+                          <TabOptionsText style={{ marginRight: "0.25rem" }}>
+                            {dropdownItemSelected !== -1 &&
+                              qInfo.tags[dropdownItemSelected]}
+                          </TabOptionsText>
+                          <NavIcon style={{ marginRight: "0rem" }}>
+                            <StyledImage
+                              style={{ height: "12px", top: -1 }}
+                              alt="img"
+                              src={ArrowDownSvg}
+                            />
+                          </NavIcon>
+                        </TabOptionsInnerContent>
+                      </TabOptionsContent>
+
+                      {itemSelected1 && dropdownItemSelected > -1 && (
+                        <DropdownContainer ref={containerRef1}>
+                          <DropdownContainerContent>
+                            {qInfo.tags.map((item, k) => (
+                              <DropdownContainerItem
+                                onMouseEnter={() => setHovered(k)}
+                                onMouseLeave={() => setHovered(-1)}
+                                key={k}
+                                hovered={k === hovered}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  setDropdownItemSelected(k);
+                                  const path =
+                                    location?.pathname?.split(
+                                      "/problems/"
+                                    )?.[1];
+                                  navigate(
+                                    `/problems/${path}?tag=` +
+                                      item.toLowerCase().split(" ").join("_")
+                                  );
+                                  setItemSelected1(
+                                    (itemSelected1) => !itemSelected1
+                                  );
+                                }}
+                              >
+                                <DropdownContainerLeftItem>
+                                  <NavIcon
+                                    hidden={dropdownItemSelected !== k}
+                                    noMR
+                                    style={{ marginRight: "0.5rem" }}
+                                  >
+                                    <StyledImage
+                                      style={{ height: 14, top: 0 }}
+                                      alt="img"
+                                      src={TickSvg1}
+                                    />
+                                  </NavIcon>
+                                  <NavIcon
+                                    hidden={dropdownItemSelected === k}
+                                    noMR
+                                    style={{ marginRight: "0.5rem" }}
+                                  >
+                                    <StyledImage
+                                      style={{ height: 14, top: 0 }}
+                                      alt="img"
+                                      src={TickSvg2}
+                                    />
+                                  </NavIcon>
+                                  <DropdownContainerText>
+                                    {item}
+                                  </DropdownContainerText>
+                                </DropdownContainerLeftItem>
+
+                                {k === hovered && (
+                                  <NavIcon noMR style={{ marginRight: "0rem" }}>
+                                    <StyledImage
+                                      style={{ height: 14, top: -1 }}
+                                      alt="img"
+                                      src={InfoSvg}
+                                    />
+                                  </NavIcon>
+                                )}
+                              </DropdownContainerItem>
+                            ))}
+                          </DropdownContainerContent>
+                        </DropdownContainer>
+                      )}
+                      {copied ? (
+                        <TickOutlined
+                          onClick={() => {
+                            setCopied(false);
+                          }}
+                        />
+                      ) : (
+                        <MdContentCopy
+                          size={14}
+                          color="#fff9"
+                          style={{ cursor: "pointer", marginRight: "6px" }}
+                          onClick={async () => {
+                            await copyToClipboard(solution ?? "");
+                            setCopied((copied) => !copied);
+                            setTimeout(() => {
+                              setCopied((copied) => !copied);
+                            }, 1200);
+                          }}
+                        />
+                      )}
+                    </TabOptionsContainer>
+
+                    <Editor
+                      width="100%"
+                      height="54vh"
+                      theme="vs-dark"
+                      defaultLanguage="java"
+                      defaultValue={solution ?? ""}
+                      options={{ readOnly: true, domReadOnly: true }}
+                    />
+                  </SEditor>
+                )}
+              </LeftContent>
+            </LeftContainer>
+            <RightParentContainer>
+              {solution && (
+                <>
+                  {" "}
+                  <RightContainer
+                    selected={selected === 2}
+                    onClick={() => setSelected(2)}
+                  >
+                    <TabHeader>
+                      <TabItem>
+                        <NavIcon style={{ marginRight: 0 }}>
+                          <StyledImage
+                            style={{ height: "14px", top: 0 }}
+                            alt="img"
+                            src={CodeSvg}
+                          />
+                        </NavIcon>
+                        <TabText>Code</TabText>
+                      </TabItem>
+                    </TabHeader>
+                    <TabOptionsContainer>
+                      <TabOptionsContent>
+                        <TabOptionsInnerContent
+                          ref={dropdownRef}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleToggle();
+                          }}
+                        >
+                          <TabOptionsText style={{ marginRight: "0.25rem" }}>
+                            {dropdownItemSelected !== -1 &&
+                              qInfo.tags[dropdownItemSelected]}
+                          </TabOptionsText>
+                          <NavIcon style={{ marginRight: "0rem" }}>
+                            <StyledImage
+                              style={{ height: "12px", top: -1 }}
+                              alt="img"
+                              src={ArrowDownSvg}
+                            />
+                          </NavIcon>
+                        </TabOptionsInnerContent>
+                        <TabOptionsInnerContent>
+                          <NavIcon noMR style={{ marginRight: "0.25rem" }}>
+                            <StyledImage
+                              style={{ height: 12, top: -1 }}
+                              alt="img"
+                              src={Bell1Svg}
+                            />
+                          </NavIcon>
+                          <TabOptionsText>Auto</TabOptionsText>
+                        </TabOptionsInnerContent>
+                      </TabOptionsContent>
+                      <TabOptionsContent icons>
+                        {rightIcons.map((i, k) => (
+                          <NavIcon noMR={k === 4}>
+                            <StyledImage
                               key={k}
-                              hovered={k === hovered}
-                              onClick={(e) => {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                setDropdownItemSelected(k);
-                                const path =
-                                  location?.pathname?.split("/problems/")?.[1];
-                                navigate(
-                                  `/problems/${path}?tag=` +
-                                    item.toLowerCase().split(" ").join("_")
-                                );
-                                setItemSelected1(
-                                  (itemSelected1) => !itemSelected1
-                                );
-                              }}
-                            >
-                              <DropdownContainerLeftItem>
-                                <NavIcon
-                                  hidden={dropdownItemSelected !== k}
-                                  noMR
-                                  style={{ marginRight: "0.5rem" }}
-                                >
-                                  <StyledImage
-                                    style={{ height: 14, top: 0 }}
-                                    alt="img"
-                                    src={TickSvg1}
-                                  />
-                                </NavIcon>
-                                <NavIcon
-                                  hidden={dropdownItemSelected === k}
-                                  noMR
-                                  style={{ marginRight: "0.5rem" }}
-                                >
-                                  <StyledImage
-                                    style={{ height: 14, top: 0 }}
-                                    alt="img"
-                                    src={TickSvg2}
-                                  />
-                                </NavIcon>
-                                <DropdownContainerText>
-                                  {item}
-                                </DropdownContainerText>
-                              </DropdownContainerLeftItem>
+                              style={{ height: "14px" }}
+                              alt="img"
+                              src={i}
+                            />
+                          </NavIcon>
+                        ))}
+                      </TabOptionsContent>
 
-                              {k === hovered && (
-                                <NavIcon noMR style={{ marginRight: "0rem" }}>
-                                  <StyledImage
-                                    style={{ height: 14, top: -1 }}
-                                    alt="img"
-                                    src={InfoSvg}
-                                  />
-                                </NavIcon>
-                              )}
-                            </DropdownContainerItem>
-                          ))}
-                      </DropdownContainerContent>
-                    </DropdownContainer>
-                  )}
-                  {copied ? (
-                    <TickOutlined
-                      onClick={() => {
-                        setCopied(false);
-                      }}
-                    />
-                  ) : (
-                    <MdContentCopy
-                      size={14}
-                      color="#fff9"
-                      style={{ cursor: "pointer", marginRight: "6px" }}
-                      onClick={async () => {
-                        await copyToClipboard(solution ?? "");
-                        setCopied((copied) => !copied);
-                        setTimeout(() => {
-                          setCopied((copied) => !copied);
-                        }, 1200);
-                      }}
-                    />
-                  )}
-                </TabOptionsContainer>
+                      {itemSelected && dropdownItemSelected > -1 && (
+                        <DropdownContainer ref={containerRef}>
+                          <DropdownContainerContent>
+                            {qInfo.tags.map((item, k) => (
+                              <DropdownContainerItem
+                                onMouseEnter={() => setHovered(k)}
+                                onMouseLeave={() => setHovered(-1)}
+                                key={k}
+                                hovered={k === hovered}
+                                onClick={() => {
+                                  setDropdownItemSelected(k);
+                                  const path =
+                                    location?.pathname?.split(
+                                      "/problems/"
+                                    )?.[1];
+                                  navigate(
+                                    `/problems/${path}?tag=` +
+                                      item.toLowerCase().split(" ").join("_")
+                                  );
+                                  setItemSelected(
+                                    (itemSelected) => !itemSelected
+                                  );
+                                }}
+                              >
+                                <DropdownContainerLeftItem>
+                                  <NavIcon
+                                    hidden={dropdownItemSelected !== k}
+                                    noMR
+                                    style={{ marginRight: "0.5rem" }}
+                                  >
+                                    <StyledImage
+                                      style={{ height: 14, top: 0 }}
+                                      alt="img"
+                                      src={TickSvg1}
+                                    />
+                                  </NavIcon>
+                                  <NavIcon
+                                    hidden={dropdownItemSelected === k}
+                                    noMR
+                                    style={{ marginRight: "0.5rem" }}
+                                  >
+                                    <StyledImage
+                                      style={{ height: 14, top: 0 }}
+                                      alt="img"
+                                      src={TickSvg2}
+                                    />
+                                  </NavIcon>
+                                  <DropdownContainerText>
+                                    {item}
+                                  </DropdownContainerText>
+                                </DropdownContainerLeftItem>
 
-                <Editor
-                  width="100%"
-                  height="54vh"
-                  theme="vs-dark"
-                  defaultLanguage="java"
-                  defaultValue={solution ?? ""}
-                  options={{ readOnly: true, domReadOnly: true }}
-                />
-              </SEditor>
-            )}
-          </LeftContent>
-        </LeftContainer>
-        <RightParentContainer>
-          {qInfo && solution && (
-            <>
-              {" "}
-              <RightContainer
-                selected={selected === 2}
-                onClick={() => setSelected(2)}
-              >
-                <TabHeader>
-                  <TabItem>
+                                {k === hovered && (
+                                  <NavIcon noMR style={{ marginRight: "0rem" }}>
+                                    <StyledImage
+                                      style={{ height: 14, top: -1 }}
+                                      alt="img"
+                                      src={InfoSvg}
+                                    />
+                                  </NavIcon>
+                                )}
+                              </DropdownContainerItem>
+                            ))}
+                          </DropdownContainerContent>
+                        </DropdownContainer>
+                      )}
+                    </TabOptionsContainer>
+                    {solution && (
+                      <Editor
+                        width="100%"
+                        height="85vh"
+                        theme="vs-dark"
+                        defaultLanguage="java"
+                        userSelect={false}
+                        defaultValue={solution ?? ""}
+                      />
+                    )}
+                  </RightContainer>
+                  <TestCaseContainer
+                    selected={selected === 3}
+                    onClick={() => setSelected(3)}
+                  >
                     <NavIcon style={{ marginRight: 0 }}>
                       <StyledImage
                         style={{ height: "14px", top: 0 }}
                         alt="img"
-                        src={CodeSvg}
+                        src={TestCaseSvg}
                       />
                     </NavIcon>
-                    <TabText>Code</TabText>
-                  </TabItem>
-                </TabHeader>
-                <TabOptionsContainer>
-                  <TabOptionsContent>
-                    <TabOptionsInnerContent
-                      ref={dropdownRef}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        handleToggle();
-                      }}
-                    >
-                      <TabOptionsText style={{ marginRight: "0.25rem" }}>
-                        {qInfo &&
-                          dropdownItemSelected !== -1 &&
-                          qInfo.tags[dropdownItemSelected]}
-                      </TabOptionsText>
-                      <NavIcon style={{ marginRight: "0rem" }}>
-                        <StyledImage
-                          style={{ height: "12px", top: -1 }}
-                          alt="img"
-                          src={ArrowDownSvg}
-                        />
-                      </NavIcon>
-                    </TabOptionsInnerContent>
-                    <TabOptionsInnerContent>
-                      <NavIcon noMR style={{ marginRight: "0.25rem" }}>
-                        <StyledImage
-                          style={{ height: 12, top: -1 }}
-                          alt="img"
-                          src={Bell1Svg}
-                        />
-                      </NavIcon>
-                      <TabOptionsText>Auto</TabOptionsText>
-                    </TabOptionsInnerContent>
-                  </TabOptionsContent>
-                  <TabOptionsContent icons>
-                    {rightIcons.map((i, k) => (
-                      <NavIcon noMR={k === 4}>
-                        <StyledImage
-                          key={k}
-                          style={{ height: "14px" }}
-                          alt="img"
-                          src={i}
-                        />
-                      </NavIcon>
-                    ))}
-                  </TabOptionsContent>
-
-                  {itemSelected && qInfo && dropdownItemSelected > -1 && (
-                    <DropdownContainer ref={containerRef}>
-                      <DropdownContainerContent>
-                        {qInfo &&
-                          qInfo.tags.map((item, k) => (
-                            <DropdownContainerItem
-                              onMouseEnter={() => setHovered(k)}
-                              onMouseLeave={() => setHovered(-1)}
-                              key={k}
-                              hovered={k === hovered}
-                              onClick={() => {
-                                setDropdownItemSelected(k);
-                                const path =
-                                  location?.pathname?.split("/problems/")?.[1];
-                                navigate(
-                                  `/problems/${path}?tag=` +
-                                    item.toLowerCase().split(" ").join("_")
-                                );
-                                setItemSelected(
-                                  (itemSelected) => !itemSelected
-                                );
-                              }}
-                            >
-                              <DropdownContainerLeftItem>
-                                <NavIcon
-                                  hidden={dropdownItemSelected !== k}
-                                  noMR
-                                  style={{ marginRight: "0.5rem" }}
-                                >
-                                  <StyledImage
-                                    style={{ height: 14, top: 0 }}
-                                    alt="img"
-                                    src={TickSvg1}
-                                  />
-                                </NavIcon>
-                                <NavIcon
-                                  hidden={dropdownItemSelected === k}
-                                  noMR
-                                  style={{ marginRight: "0.5rem" }}
-                                >
-                                  <StyledImage
-                                    style={{ height: 14, top: 0 }}
-                                    alt="img"
-                                    src={TickSvg2}
-                                  />
-                                </NavIcon>
-                                <DropdownContainerText>
-                                  {item}
-                                </DropdownContainerText>
-                              </DropdownContainerLeftItem>
-
-                              {k === hovered && (
-                                <NavIcon noMR style={{ marginRight: "0rem" }}>
-                                  <StyledImage
-                                    style={{ height: 14, top: -1 }}
-                                    alt="img"
-                                    src={InfoSvg}
-                                  />
-                                </NavIcon>
-                              )}
-                            </DropdownContainerItem>
-                          ))}
-                      </DropdownContainerContent>
-                    </DropdownContainer>
-                  )}
-                </TabOptionsContainer>
-                {solution && (
-                  <Editor
-                    width="100%"
-                    height="85vh"
-                    theme="vs-dark"
-                    defaultLanguage="java"
-                    userSelect={false}
-                    defaultValue={solution ?? ""}
-                  />
-                )}
-              </RightContainer>
-              <TestCaseContainer
-                selected={selected === 3}
-                onClick={() => setSelected(3)}
-              >
-                <NavIcon style={{ marginRight: 0 }}>
-                  <StyledImage
-                    style={{ height: "14px", top: 0 }}
-                    alt="img"
-                    src={TestCaseSvg}
-                  />
-                </NavIcon>
-                <TabText>Testcase</TabText>
-              </TestCaseContainer>
-            </>
-          )}
-        </RightParentContainer>
-      </Content>
+                    <TabText>Testcase</TabText>
+                  </TestCaseContainer>
+                </>
+              )}
+            </RightParentContainer>
+          </Content>
+        </>
+      )}
     </Container>
   );
 };
