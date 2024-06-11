@@ -2085,6 +2085,51 @@ const SOLUTIONING = {
         </li>
       </ul>
     </>
+  ),
+  192:(
+    <ul>
+  <li>
+    <code>tr -s ' ' '\n' &lt; words.txt</code>
+    <ul>
+      <li>
+        The <code>tr</code> command translates or deletes characters. Here, <code>-s ' '</code> squeezes (replaces multiple spaces with a single space) and <code>'\n'</code> translates spaces to newlines, effectively turning the file into a list of words, one per line.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <code>sort</code>
+    <ul>
+      <li>
+        The <code>sort</code> command sorts the input. By default, it sorts in ascending order. Here, it sorts the list of words alphabetically.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <code>uniq -c</code>
+    <ul>
+      <li>
+        The <code>uniq</code> command removes duplicate lines from a sorted file. The <code>-c</code> option prefixes each line with the number of occurrences. This counts the frequency of each unique word.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <code>awk '&#123;print $2, $1&#125;'</code>
+    <ul>
+      <li>
+        The <code>awk</code> command processes the output. <code>'&#123;print $2, $1&#125;'</code> prints the second field (the word) followed by the first field (the count), formatting the output as required.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <code>sort -nr -k2</code>
+    <ul>
+      <li>
+        The <code>sort -nr -k2</code> command sorts the output numerically (<code>-n</code>) and in reverse order (<code>-r</code>), based on the second column (<code>-k2</code>), which is the count.
+      </li>
+    </ul>
+  </li>
+</ul>
+
   )
 };
 
