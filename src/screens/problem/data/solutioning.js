@@ -2196,6 +2196,106 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  193: (
+    <>
+      <h1>Valid Phone Numbers</h1>
+      <ul>
+        <li>
+          <code>#!/bin/bash</code>
+          <ul>
+            <li>
+              This is known as a shebang line. It specifies the path to the bash
+              shell that will be used to interpret the script. It ensures that
+              the script runs in the bash shell environment.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>
+            grep -E '^(\([0-9]{3}\) [0-9]{3}-[0-9]{4}$|^[0-9]{3}-[0-9]{3}-[0-9]
+            {4}$)' file.txt
+          </code>
+          <ul>
+            <li>
+              <code>grep</code> is a command-line utility for searching
+              plain-text data for lines that match a regular expression.
+            </li>
+            <li>
+              <code>-E</code> enables extended regular expressions, allowing for
+              more complex patterns.
+            </li>
+            <li>
+              <code>
+                '^(\([0-9]{3}\) [0-9]{3}-[0-9]{4}$|^[0-9]{3}-[0-9]{3}-[0-9]{4}
+                $)'
+              </code>
+              <ul>
+                <li>
+                  This is the regular expression used to match valid phone
+                  numbers.
+                </li>
+                <li>
+                  <code>^</code> asserts the position at the start of the line.
+                </li>
+                <li>
+                  <code>
+                    \([0-9]{3}\) [0-9]{3}-[0-9]{4}
+                  </code>{" "}
+                  matches the format (xxx) xxx-xxxx.
+                  <ul>
+                    <li>
+                      <code>\(</code> and <code>\)</code> match literal
+                      parentheses.
+                    </li>
+                    <li>
+                      <code>[0-9]{3}</code> matches exactly 3 digits.
+                    </li>
+                    <li>
+                      <code>[0-9]{3}</code> matches exactly 3 digits after a
+                      space.
+                    </li>
+                    <li>
+                      <code>[0-9]{4}</code> matches exactly 4 digits after a
+                      hyphen.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code>|</code> acts as an OR operator.
+                </li>
+                <li>
+                  <code>
+                    ^[0-9]{3}-[0-9]{3}-[0-9]{4}$
+                  </code>{" "}
+                  matches the format xxx-xxx-xxxx.
+                  <ul>
+                    <li>
+                      <code>[0-9]{3}</code> matches exactly 3 digits.
+                    </li>
+                    <li>
+                      <code>[0-9]{3}</code> matches exactly 3 digits after a
+                      hyphen.
+                    </li>
+                    <li>
+                      <code>[0-9]{4}</code> matches exactly 4 digits after a
+                      hyphen.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code>$</code> asserts the position at the end of the line.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>file.txt</code> is the input file containing the list of
+              phone numbers to be validated.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
