@@ -2296,6 +2296,87 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  194: (
+    <>
+      <h1>Explanation: Transpose File Shell Script</h1>
+      <ul>
+        <li>
+          <code>#!/bin/bash</code>:
+          <ul>
+            <li>
+              This line is known as a shebang line. It specifies the path to the
+              bash shell that will be used to interpret the script. It ensures
+              that the script runs in the bash shell environment.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>awk ' ... ' file.txt</code>:
+          <ul>
+            <li>
+              <code>awk</code> is a powerful text processing tool that allows
+              for pattern scanning and processing.
+            </li>
+            <li>
+              The script within the single quotes is executed by{" "}
+              <code>awk</code>.
+            </li>
+            <li>
+              <code>NR</code> represents the record number, i.e., the current
+              line number.
+            </li>
+            <li>
+              <code>NF</code> represents the number of fields in the current
+              record.
+            </li>
+            <li>
+              <code>res</code> is an array used to store the transposed result.
+            </li>
+          </ul>
+        </li>
+        <li>
+          The <code>awk</code> script performs the following steps:
+          <ul>
+            <li>
+              For each line in the file:
+              <ul>
+                <li>
+                  It loops through each field (space-separated values) using a{" "}
+                  <code>for</code> loop.
+                </li>
+              </ul>
+            </li>
+            <li>
+              If it's the first line (<code>NR == 1</code>):
+              <ul>
+                <li>
+                  It stores each field directly in the <code>res</code> array.
+                </li>
+              </ul>
+            </li>
+            <li>
+              If it's not the first line:
+              <ul>
+                <li>
+                  It appends each field to the corresponding element in the{" "}
+                  <code>res</code> array, separated by a space.
+                </li>
+              </ul>
+            </li>
+            <li>
+              In the <code>END</code> block:
+              <ul>
+                <li>
+                  It loops through the <code>res</code> array and prints each
+                  element, effectively transposing the file content.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
