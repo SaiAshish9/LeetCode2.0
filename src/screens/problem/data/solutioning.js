@@ -2086,51 +2086,116 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
-  192:(
-    <ul>
-  <li>
-    <code>tr -s ' ' '\n' &lt; words.txt</code>
+  192: (
     <ul>
       <li>
-        The <code>tr</code> command translates or deletes characters. Here, <code>-s ' '</code> squeezes (replaces multiple spaces with a single space) and <code>'\n'</code> translates spaces to newlines, effectively turning the file into a list of words, one per line.
+        Input: <code>the day is sunny the the the sunny is is</code>
       </li>
-    </ul>
-  </li>
-  <li>
-    <code>sort</code>
-    <ul>
       <li>
-        The <code>sort</code> command sorts the input. By default, it sorts in ascending order. Here, it sorts the list of words alphabetically.
+        <code>#!/bin/bash</code>
+        <ul>
+          <li>
+            This is known as a shebang line. It specifies the path to the bash
+            shell that will be used to interpret the script. It ensures that the
+            script runs in the bash shell environment.
+          </li>
+        </ul>
       </li>
-    </ul>
-  </li>
-  <li>
-    <code>uniq -c</code>
-    <ul>
       <li>
-        The <code>uniq</code> command removes duplicate lines from a sorted file. The <code>-c</code> option prefixes each line with the number of occurrences. This counts the frequency of each unique word.
+        <code>tr -s ' ' '\n' &lt; words.txt</code>
+        <ul>
+          <li>
+            The <code>tr</code> command translates or deletes characters. Here,{" "}
+            <code>-s ' '</code> squeezes (replaces multiple spaces with a single
+            space) and <code>'\n'</code> translates spaces to newlines,
+            effectively turning the file into a list of words, one per line.
+          </li>
+          <ul>
+            <li>the</li>
+            <li>day</li>
+            <li>is</li>
+            <li>sunny</li>
+            <li>the</li>
+            <li>the</li>
+            <li>the</li>
+            <li>sunny</li>
+            <li>is</li>
+            <li>is</li>
+          </ul>
+        </ul>
       </li>
-    </ul>
-  </li>
-  <li>
-    <code>awk '&#123;print $2, $1&#125;'</code>
-    <ul>
       <li>
-        The <code>awk</code> command processes the output. <code>'&#123;print $2, $1&#125;'</code> prints the second field (the word) followed by the first field (the count), formatting the output as required.
+        <code>sort</code>
+        <ul>
+          <li>
+            The <code>sort</code> command sorts the input. By default, it sorts
+            in ascending order. Here, it sorts the list of words alphabetically.
+          </li>
+          <ul>
+            <li>day</li>
+            <li>is</li>
+            <li>is</li>
+            <li>is</li>
+            <li>sunny</li>
+            <li>sunny</li>
+            <li>the</li>
+            <li>the</li>
+            <li>the</li>
+            <li>the</li>
+          </ul>
+        </ul>
       </li>
-    </ul>
-  </li>
-  <li>
-    <code>sort -nr -k2</code>
-    <ul>
       <li>
-        The <code>sort -nr -k2</code> command sorts the output numerically (<code>-n</code>) and in reverse order (<code>-r</code>), based on the second column (<code>-k2</code>), which is the count.
+        <code>uniq -c</code>
+        <ul>
+          <li>
+            The <code>uniq</code> command removes duplicate lines from a sorted
+            file. The <code>-c</code> option prefixes each line with the number
+            of occurrences. This counts the frequency of each unique word.
+          </li>
+          <ul>
+            <li> 1 day</li>
+            <li> 3 is</li>
+            <li> 2 sunny</li>
+            <li> 4 the</li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <code>awk '&#123;print $2, $1&#125;'</code>
+        <ul>
+          <li>
+            The <code>awk</code> command processes the output.{" "}
+            <code>'&#123;print $2, $1&#125;'</code> prints the second field (the
+            word) followed by the first field (the count), formatting the output
+            as required.
+          </li>
+          <ul>
+            <li>day 1</li>
+            <li>is 3</li>
+            <li>sunny 2</li>
+            <li>the 4</li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <code>sort -nr -k2</code>
+        <ul>
+          <li>
+            The <code>sort -nr -k2</code> command sorts the output numerically (
+            <code>-n</code>) and in reverse order (<code>-r</code>), based on
+            the second column (<code>-k2</code>), which is the count.
+          </li>
+          <ul>
+            <li>the 4</li>
+            <li>is 3</li>
+            <li>sunny 2</li>
+            <li>day 1</li>
+          </ul>
+        </ul>
       </li>
     </ul>
-  </li>
-</ul>
-
-  )
+  ),
 };
 
 function appendPxToValues(obj) {
