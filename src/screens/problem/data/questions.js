@@ -2270,7 +2270,11 @@ const QUESTIONS = {
       </p>
 
       <pre>
-        Line 1 Line 2 Line 3 Line 4 Line 5 Line 6 Line 7 Line 8 Line 9 Line 10
+        Line 1 <br /> Line 2 <br /> Line 3 <br /> Line 4 <br /> Line 5 <br />{" "}
+        Line 6 <br />
+        Line 7 <br />
+        Line 8 <br /> Line 9 <br />
+        Line 10
       </pre>
 
       <p>Your script should output the tenth line, which is:</p>

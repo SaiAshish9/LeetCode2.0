@@ -2377,6 +2377,48 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  195: (
+    <>
+      <h1>Explanation: Tenth Line Shell Script</h1>
+      <ul>
+        <li>
+          <code>#!/bin/bash</code>:
+          <ul>
+            <li>
+              This line is known as a shebang line. It specifies the path to the
+              bash shell that will be used to interpret the script. It ensures
+              that the script runs in the bash shell environment.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>sed '10q;d' file.txt</code>:
+          <ul>
+            <li>
+              <code>sed</code> is a stream editor for filtering and transforming
+              text.
+            </li>
+            <li>
+              <code>'10q;d'</code> is the script passed to <code>sed</code>.
+              <ul>
+                <li>
+                  <code>10q</code> quits after processing the 10th line.
+                </li>
+                <li>
+                  <code>d</code> deletes the pattern space, so only the 10th
+                  line is printed.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>file.txt</code> is the input file from which the 10th line
+              is extracted.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
