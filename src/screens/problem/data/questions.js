@@ -3191,6 +3191,175 @@ const QUESTIONS = {
       </p>
     </div>
   ),
+  973: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an array of <code>points</code> where{" "}
+        <code>
+          points[i] = [x<sub>i</sub>, y<sub>i</sub>]
+        </code>{" "}
+        represents a point on the <strong>X-Y</strong> plane and an integer{" "}
+        <code>k</code>, return the <code>k</code> closest points to the origin{" "}
+        <code>(0, 0)</code>.
+      </p>
+
+      <p>
+        The distance between two points on the <strong>X-Y</strong> plane is the
+        Euclidean distance (i.e.,{" "}
+        <code>
+          √(x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y<sub>1</sub> - y
+          <sub>2</sub>)<sup>2</sup>
+        </code>
+        ).
+      </p>
+
+      <p>
+        You may return the answer in <strong>any order</strong>. The answer is{" "}
+        <strong>guaranteed</strong> to be <strong>unique</strong> (except for
+        the order that it is in).
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/03/03/closestplane1.jpg"
+        style={{ width: 400, height: 400 }}
+      />
+      <pre>
+        <strong>Input:</strong> points = [[1,3],[-2,2]], k = 1 <br />
+        <strong>Output:</strong> [[-2,2]]
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        The distance between (1, 3) and the origin is sqrt(10).
+        <br />
+        The distance between (-2, 2) and the origin is sqrt(8).
+        <br />
+        Since sqrt(8) &lt; sqrt(10), (-2, 2) is closer to the origin.
+        <br />
+        We only want the closest k = 1 points from the origin, so the answer is
+        just [[-2,2]].
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> points = [[3,3],[5,-1],[-2,4]], k = 2<br />
+        <strong>Output:</strong> [[3,3],[-2,4]]
+        <br />
+        <strong>Explanation:</strong> The answer [[-2,4],[3,3]] would also be
+        accepted.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= k &lt;= points.length &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            -10<sup>4</sup> &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= 10
+            <sup>4</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
+  1738: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a 2D <code>matrix</code> of size <code>m x n</code>,
+        consisting of non-negative integers. You are also given an integer{" "}
+        <code>k</code>.
+      </p>
+
+      <p>
+        The <strong>value</strong> of coordinate <code>(a, b)</code> of the
+        matrix is the XOR of all <code>matrix[i][j]</code> where{" "}
+        <code>0 &lt;= i &lt;= a &lt; m</code> and{" "}
+        <code>0 &lt;= j &lt;= b &lt; n</code> <strong>(0-indexed)</strong>.
+      </p>
+
+      <p>
+        Find the{" "}
+        <code>
+          k<sup>th</sup>
+        </code>{" "}
+        largest value <strong>(1-indexed)</strong> of all the coordinates of{" "}
+        <code>matrix</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> matrix = [[5,2],[1,6]], k = 1 <br />
+        <strong>Output:</strong> 7 <br />
+        <strong>Explanation:</strong> The value of coordinate (0,1) is 5 XOR 2 =
+        7, which is the largest value.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> matrix = [[5,2],[1,6]], k = 2 <br />
+        <strong>Output:</strong> 5 <br />
+        <strong>Explanation:</strong> The value of coordinate (0,0) is 5 = 5,
+        which is the 2nd largest value.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> matrix = [[5,2],[1,6]], k = 3 <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> The value of coordinate (1,0) is 5 XOR 1 =
+        4, which is the 3rd largest value.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>m == matrix.length</code>
+        </li>
+        <li>
+          <code>n == matrix[i].length</code>
+        </li>
+        <li>
+          <code>1 &lt;= m, n &lt;= 1000</code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= matrix[i][j] &lt;= 10<sup>6</sup>
+          </code>
+        </li>
+        <li>
+          <code>1 &lt;= k &lt;= m * n</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
