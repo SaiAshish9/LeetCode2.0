@@ -349,6 +349,10 @@ export const LeftContentDescription = styled.div`
     white-space: pre-wrap;
   }
 
+  a {
+    color: rgb(10 132 255);
+  }
+
   pre {
     border-color: #ffffff24;
     border-left-width: 2px;
