@@ -150,7 +150,7 @@ const QSList = () => {
           filteredData.map((x, k) => {
             const obj = { ...x };
             obj["key"] = "" + k;
-            obj["acceptance"] = x["acceptance"] + "%";
+            obj["acceptance"] = x["acceptance"].toFixed(1) + "%";
             return obj;
           })
         );
