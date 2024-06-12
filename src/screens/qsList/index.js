@@ -143,7 +143,9 @@ const QSList = () => {
         path = toTitleCase(path);
         setPath(path);
         const values = Object.values(res);
-        const filteredData = values.filter((x) => x?.tags.includes(path));
+        const filteredData = values
+          .filter((x) => x?.tags.includes(path))
+          .sort((a, b) => a.qno - b.qno);
         setTableData(
           filteredData.map((x, k) => {
             const obj = { ...x };
@@ -179,7 +181,10 @@ const QSList = () => {
           property="og:title"
           content={`LeetCode2.0: ${path ? decodeURIComponent(path) : ""}`}
         />
-        <meta property="og:description" content="Useful for problems involving intersections" />
+        <meta
+          property="og:description"
+          content="Useful for problems involving intersections"
+        />
         <meta
           property="og:image"
           content="https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/LeetCode2.0.png"
