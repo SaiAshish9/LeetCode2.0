@@ -1,0 +1,286 @@
+[
+    {
+        "tag": "Array",
+        "count": "1633"
+    },
+    {
+        "tag": "String",
+        "count": "696"
+    },
+    {
+        "tag": "Hash Table",
+        "count": "589"
+    },
+    {
+        "tag": "Dynamic Programming",
+        "count": "496"
+    },
+    {
+        "tag": "Math",
+        "count": "496"
+    },
+    {
+        "tag": "Sorting",
+        "count": "399"
+    },
+    {
+        "tag": "Greedy",
+        "count": "362"
+    },
+    {
+        "tag": "Depth-First Search",
+        "count": "286"
+    },
+    {
+        "tag": "Database",
+        "count": "266"
+    },
+    {
+        "tag": "Binary Search",
+        "count": "262"
+    },
+    {
+        "tag": "Tree",
+        "count": "228"
+    },
+    {
+        "tag": "Breadth-First Search",
+        "count": "227"
+    },
+    {
+        "tag": "Matrix",
+        "count": "221"
+    },
+    {
+        "tag": "Bit Manipulation",
+        "count": "205"
+    },
+    {
+        "tag": "Two Pointers",
+        "count": "201"
+    },
+    {
+        "tag": "Binary Tree",
+        "count": "174"
+    },
+    {
+        "tag": "Heap (Priority Queue)",
+        "count": "168"
+    },
+    {
+        "tag": "Prefix Sum",
+        "count": "157"
+    },
+    {
+        "tag": "Stack",
+        "count": "152"
+    },
+    {
+        "tag": "Simulation",
+        "count": "147"
+    },
+    {
+        "tag": "Graph",
+        "count": "142"
+    },
+    {
+        "tag": "Counting",
+        "count": "125"
+    },
+    {
+        "tag": "Design",
+        "count": "123"
+    },
+    {
+        "tag": "Sliding Window",
+        "count": "118"
+    },
+    {
+        "tag": "Backtracking",
+        "count": "101"
+    },
+    {
+        "tag": "Enumeration",
+        "count": "82"
+    },
+    {
+        "tag": "Union Find",
+        "count": "82"
+    },
+    {
+        "tag": "Linked List",
+        "count": "75"
+    },
+    {
+        "tag": "Ordered Set",
+        "count": "60"
+    },
+    {
+        "tag": "Monotonic Stack",
+        "count": "58"
+    },
+    {
+        "tag": "Number Theory",
+        "count": "55"
+    },
+    {
+        "tag": "Trie",
+        "count": "53"
+    },
+    {
+        "tag": "Divide and Conquer",
+        "count": "46"
+    },
+    {
+        "tag": "Recursion",
+        "count": "45"
+    },
+    {
+        "tag": "Bitmask",
+        "count": "44"
+    },
+    {
+        "tag": "Queue",
+        "count": "44"
+    },
+    {
+        "tag": "Segment Tree",
+        "count": "42"
+    },
+    {
+        "tag": "Binary Search Tree",
+        "count": "40"
+    },
+    {
+        "tag": "Geometry",
+        "count": "37"
+    },
+    {
+        "tag": "Memoization",
+        "count": "37"
+    },
+    {
+        "tag": "Hash Function",
+        "count": "36"
+    },
+    {
+        "tag": "Binary Indexed Tree",
+        "count": "36"
+    },
+    {
+        "tag": "Topological Sort",
+        "count": "32"
+    },
+    {
+        "tag": "Combinatorics",
+        "count": "31"
+    },
+    {
+        "tag": "String Matching",
+        "count": "30"
+    },
+    {
+        "tag": "Shortest Path",
+        "count": "28"
+    },
+    {
+        "tag": "Rolling Hash",
+        "count": "28"
+    },
+    {
+        "tag": "Game Theory",
+        "count": "25"
+    },
+    {
+        "tag": "Interactive",
+        "count": "23"
+    },
+    {
+        "tag": "Data Stream",
+        "count": "20"
+    },
+    {
+        "tag": "Brainteaser",
+        "count": "16"
+    },
+    {
+        "tag": "Monotonic Queue",
+        "count": "15"
+    },
+    {
+        "tag": "Randomized",
+        "count": "12"
+    },
+    {
+        "tag": "Merge Sort",
+        "count": "12"
+    },
+    {
+        "tag": "Iterator",
+        "count": "9"
+    },
+    {
+        "tag": "Concurrency",
+        "count": "9"
+    },
+    {
+        "tag": "Doubly-Linked List",
+        "count": "8"
+    },
+    {
+        "tag": "Probability and Statistics",
+        "count": "7"
+    },
+    {
+        "tag": "Quickselect",
+        "count": "7"
+    },
+    {
+        "tag": "Bucket Sort",
+        "count": "6"
+    },
+    {
+        "tag": "Suffix Array",
+        "count": "6"
+    },
+    {
+        "tag": "Minimum Spanning Tree",
+        "count": "5"
+    },
+    {
+        "tag": "Counting Sort",
+        "count": "5"
+    },
+    {
+        "tag": "Shell",
+        "count": "4"
+    },
+    {
+        "tag": "Line Sweep",
+        "count": "4"
+    },
+    {
+        "tag": "Reservoir Sampling",
+        "count": "4"
+    },
+    {
+        "tag": "Strongly Connected Component",
+        "count": "3"
+    },
+    {
+        "tag": "Eulerian Circuit",
+        "count": "3"
+    },
+    {
+        "tag": "Radix Sort",
+        "count": "3"
+    },
+    {
+        "tag": "Rejection Sampling",
+        "count": "2"
+    },
+    {
+        "tag": "Biconnected Component",
+        "count": "1"
+    }
+]
