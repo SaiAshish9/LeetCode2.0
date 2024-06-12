@@ -324,7 +324,7 @@ export const LeftContentDescription = styled.div`
   width: 100%;
   text-align: start;
 
-  p {
+  div, p {
     color: #f5f5f5;
     font-size: 14px;
     margin-bottom: 1rem;
