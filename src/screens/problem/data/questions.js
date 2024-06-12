@@ -2306,7 +2306,11 @@ const QUESTIONS = {
 
       <p>
         According to the{" "}
-        <a href="https://en.wikipedia.org/wiki/H-index" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/H-index"
+          target="_blank"
+          rel="noreferrer"
+        >
           definition of h-index on Wikipedia
         </a>
         : The h-index is defined as the maximum value of <code>h</code> such
@@ -2356,10 +2360,352 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
-  // 561:(),
-  // 912:(),
-  // 1051:(),
-  // 1122:()
+  561: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array <code>nums</code> of <code>2n</code> integers,
+        group these integers into <code>n</code> pairs{" "}
+        <code>
+          (a<sub>1</sub>, b<sub>1</sub>), (a<sub>2</sub>, b<sub>2</sub>), ...,
+          (a<sub>n</sub>, b<sub>n</sub>)
+        </code>{" "}
+        such that the sum of{" "}
+        <code>
+          min(a<sub>i</sub>, b<sub>i</sub>)
+        </code>{" "}
+        for all <code>i</code> is <strong>maximized</strong>. Return
+        <em> the maximized sum</em>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,4,3,2] <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> All possible pairings (ignoring the
+        ordering of elements) are: <br />
+        1. (1, 4), (2, 3) -&gt; min(1, 4) + min(2, 3) = 1 + 2 = 3 <br />
+        2. (1, 3), (2, 4) -&gt; min(1, 3) + min(2, 4) = 1 + 2 = 3 <br />
+        3. (1, 2), (3, 4) -&gt; min(1, 2) + min(3, 4) = 1 + 3 = 4 <br />
+        So the maximum possible sum is 4.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [6,2,6,5,1,2] <br />
+        <strong>Output:</strong> 9 <br />
+        <strong>Explanation:</strong> The optimal pairing is (2, 1), (2, 5), (6,
+        6). min(2, 1) + min(2, 5) + min(6, 6) = 1 + 2 + 6 = 9.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= n &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>nums.length == 2 * n</code>
+        </li>
+        <li>
+          <code>
+            -10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
+  1051: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        A school is trying to take an annual photo of all the students. The
+        students are asked to stand in a single file line in{" "}
+        <strong>non-decreasing order</strong> by height. Let this ordering be
+        represented by the integer array <code>expected</code> where{" "}
+        <code>expected[i]</code> is the expected height of the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        student in line.
+      </p>
+
+      <p>
+        You are given an integer array <code>heights</code> representing the{" "}
+        <strong>current order</strong> that the students are standing in. Each{" "}
+        <code>heights[i]</code> is the height of the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        student in line (<strong>0-indexed</strong>).
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the <strong>number of indices</strong> where{" "}
+        </em>
+        <code>heights[i] != expected[i]</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> heights = [1,1,4,2,1,3] <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> <br />
+        heights: [1,1,<u>4</u>,2,<u>1</u>,<u>3</u>] <br />
+        expected: [1,1,<u>1</u>,2,<u>3</u>,<u>4</u>] <br />
+        Indices 2, 4, and 5 do not match.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> heights = [5,1,2,3,4] <br />
+        <strong>Output:</strong> 5 <br />
+        <strong>Explanation:</strong> <br />
+        heights: [<u>5</u>,<u>1</u>,<u>2</u>,<u>3</u>,<u>4</u>] <br />
+        expected: [<u>1</u>,<u>2</u>,<u>3</u>,<u>4</u>,<u>5</u>] <br />
+        All indices do not match.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> heights = [1,2,3,4,5] <br />
+        <strong>Output:</strong> 0 <br />
+        <strong>Explanation:</strong> <br />
+        heights: [1,2,3,4,5] <br />
+        expected: [1,2,3,4,5] <br />
+        All indices match.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= heights.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>1 &lt;= heights[i] &lt;= 100</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  1122: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two arrays <code>arr1</code> and <code>arr2</code>, the elements
+        of <code>arr2</code> are distinct, and all elements in <code>arr2</code>{" "}
+        are also in <code>arr1</code>.
+      </p>
+
+      <p>
+        Sort the elements of <code>arr1</code> such that the relative ordering
+        of items in <code>arr1</code> are the same as in <code>arr2</code>.
+        Elements that do not appear in <code>arr2</code> should be placed at the
+        end of <code>arr1</code> in <strong>ascending</strong> order.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 =
+        [2,1,4,3,9,6] <br />
+        <strong>Output:</strong> [2,2,2,1,4,3,3,9,6,7,19]
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr1 = [28,6,22,8,44,17], arr2 = [22,28,8,6]
+        <br />
+        <strong>Output:</strong> [22,28,8,6,17,44]
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= arr1.length, arr2.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>0 &lt;= arr1[i], arr2[i] &lt;= 1000</code>
+        </li>
+        <li>
+          All the elements of <code>arr2</code> are <strong>distinct</strong>.
+        </li>
+        <li>
+          Each&nbsp;<code>arr2[i]</code> is in <code>arr1</code>.
+        </li>
+      </ul>
+    </div>
+  ),
+  1584: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an array <code>points</code> representing integer
+        coordinates of some points on a 2D-plane, where{" "}
+        <code>
+          points[i] = [x<sub>i</sub>, y<sub>i</sub>]
+        </code>
+        .
+      </p>
+
+      <p>
+        The cost of connecting two points{" "}
+        <code>
+          [x<sub>i</sub>, y<sub>i</sub>]
+        </code>{" "}
+        and{" "}
+        <code>
+          [x<sub>j</sub>, y<sub>j</sub>]
+        </code>{" "}
+        is the <strong>manhattan distance</strong> between them:{" "}
+        <code>
+          |x<sub>i</sub> - x<sub>j</sub>| + |y<sub>i</sub> - y<sub>j</sub>|
+        </code>
+        , where <code>|val|</code> denotes the absolute value of{" "}
+        <code>val</code>.
+      </p>
+
+      <p>
+        Return <em>the minimum cost to make all points connected.</em> All
+        points are connected if there is <strong>exactly one</strong> simple
+        path between any two points.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/08/26/d.png"
+        style={{ width: 214, height: 268 }}
+      />
+      <pre>
+        <strong>Input:</strong> points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+        <br />
+        <strong>Output:</strong> 20
+        <br />
+        <strong>Explanation:</strong> <br />
+        <img
+          alt=""
+          src="https://assets.leetcode.com/uploads/2020/08/26/c.png"
+          style={{ width: 214, height: 268 }}
+        />
+        We can connect the points as shown above to get the minimum cost of 20.
+        Notice that there is a unique path between every pair of points.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> points = [[3,12],[-2,5],[-4,1]]
+        <br />
+        <strong>Output:</strong> 18
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= points.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>
+            -10<sup>6</sup> &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= 10
+            <sup>6</sup>
+          </code>
+        </li>
+        <li>
+          All pairs{" "}
+          <code>
+            (x<sub>i</sub>, y<sub>i</sub>)
+          </code>{" "}
+          are distinct.
+        </li>
+      </ul>
+    </div>
+  ),
+  1044: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code>, consider all{" "}
+        <em>duplicated substrings</em>: (contiguous) substrings of s that occur
+        2 or more times.&nbsp;The occurrences&nbsp;may overlap.
+      </p>
+      <p>
+        Return <strong>any</strong> duplicated&nbsp;substring that has the
+        longest possible length.&nbsp;If <code>s</code> does not have a
+        duplicated substring, the answer is <code>""</code>.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>{" "}
+      <pre>
+        <strong>Input:</strong> s = "banana" <br />
+        <strong>Output:</strong> "ana" <br />
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>{" "}
+      <pre>
+        <strong>Input:</strong> s = "abcd" <br />
+        <strong>Output:</strong> ""
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>
+            2 &lt;= s.length &lt;= 3 * 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>s</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
