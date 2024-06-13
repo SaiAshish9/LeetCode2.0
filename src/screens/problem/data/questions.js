@@ -5875,13 +5875,11 @@ const QUESTIONS = {
       <p>
         <strong class="example">Example 1:</strong>
       </p>
-      <br />
       <img
         alt=""
         src="https://assets.leetcode.com/uploads/2020/09/14/sort_list_1.jpg"
         style={{ width: 450, height: 194 }}
       />
-      <br />
       <pre>
         <strong>Input:</strong> head = [4,2,1,3] <br />
         <strong>Output:</strong> [1,2,3,4]
@@ -5894,7 +5892,6 @@ const QUESTIONS = {
         src="https://assets.leetcode.com/uploads/2020/09/14/sort_list_2.jpg"
         style={{ width: 550, height: 184 }}
       />{" "}
-      <br />
       <pre>
         <strong>Input:</strong> head = [-1,5,3,4,0]
         <br />
