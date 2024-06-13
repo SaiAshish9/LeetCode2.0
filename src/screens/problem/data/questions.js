@@ -3956,7 +3956,7 @@ const QUESTIONS = {
         <strong>
           <a
             href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             Least Recently Used (LRU) cache
           </a>
