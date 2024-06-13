@@ -5357,8 +5357,8 @@ const QUESTIONS = {
         <br /> <br />
         <strong>Output</strong>
         <br />
-        [null, 3, 7, true, 9, true, 15, true, 20, false] <br />
-        <strong>Explanation</strong> <br /> <br />
+        [null, 3, 7, true, 9, true, 15, true, 20, false] <br /> <br />
+        <strong>Explanation</strong> <br />
         BSTIterator bSTIterator = new BSTIterator([7, 3, 15, null, null, 9,
         20]);
         <br />
