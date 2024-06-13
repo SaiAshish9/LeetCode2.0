@@ -4694,11 +4694,11 @@ const QUESTIONS = {
       <p>Suppose we have a class:</p>
       <pre>
         public class Foo &#123; <br />
-            public void first() &#123; print("first"); &#125;
+        &nbsp; public void first() &#123; print("first"); &#125;
         <br />
-            public void second() &#123; print("second"); &#125;
+        &nbsp; public void second() &#123; print("second"); &#125;
         <br />
-            public void third() &#123; print("third"); &#125;
+        &nbsp; public void third() &#123; print("third"); &#125;
         <br />
         &#125;
       </pre>
