@@ -3005,6 +3005,132 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1724: (
+    <>
+      <h1>
+        Explanation of PersistentUnionFind and DistanceLimitedPathsExist in Java
+      </h1>
+      <h2>PersistentUnionFind Class</h2>
+      <ul>
+        <li>
+          <strong>Fields:</strong>
+          <ul>
+            <li>
+              <code>parent</code>: Array to store the parent of each node.
+            </li>
+            <li>
+              <code>rank</code>: Array to keep track of the rank of each node
+              for union by rank.
+            </li>
+            <li>
+              <code>version</code>: Array to store the version (or timestamp)
+              when each node was last updated.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Constructor (<code>PersistentUnionFind</code>)
+          </strong>
+          <ul>
+            <li>
+              Initializes <code>parent</code> and <code>version</code> arrays.
+            </li>
+            <li>
+              Sets <code>rank</code> array to zeros.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Find Operation (<code>find</code> method)
+          </strong>
+          <ul>
+            <li>
+              Implements path compression to flatten the structure of the tree,
+              speeding up future queries.
+            </li>
+            <li>
+              Checks if the current node is the root or if the version is
+              greater than or equal to <code>t</code>.
+            </li>
+            <li>
+              Recursively finds the root of <code>x</code> if necessary.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Union Operation (<code>union</code> method)
+          </strong>
+          <ul>
+            <li>
+              Finds the roots of <code>a</code> and <code>b</code> using{" "}
+              <code>find</code>.
+            </li>
+            <li>
+              Merges the trees if they have different roots based on rank to
+              keep the tree flat.
+            </li>
+            <li>
+              Updates <code>version</code> for the new root based on the
+              provided <code>t</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>DistanceLimitedPathsExist Class</h2>
+      <ul>
+        <li>
+          <strong>Fields:</strong>
+          <ul>
+            <li>
+              <code>puf</code>: Instance of <code>PersistentUnionFind</code> to
+              manage the persistent union-find structure.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Constructor (<code>DistanceLimitedPathsExist</code>)
+          </strong>
+          <ul>
+            <li>
+              Initializes <code>puf</code> with <code>n</code> nodes.
+            </li>
+            <li>
+              Sorts <code>edgeList</code> based on the third element (edge
+              weight) using a custom comparator.
+            </li>
+            <li>
+              Iterates through sorted <code>edgeList</code> and unions each edge
+              (<code>u</code>, <code>v</code>, <code>dis</code>) into{" "}
+              <code>puf</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Query Operation (<code>query</code> method)
+          </strong>
+          <ul>
+            <li>
+              Checks if the roots of nodes <code>p</code> and <code>q</code> are
+              the same under the edge length <code>limit</code> using{" "}
+              <code>puf.find</code>.
+            </li>
+            <li>
+              Returns <code>true</code> if they share the same root (i.e., there
+              exists a path between <code>p</code> and <code>q</code> with all
+              edges' weights less than or equal to <code>limit</code>),
+              otherwise <code>false</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
