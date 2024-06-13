@@ -5701,6 +5701,83 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  1286: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Design the <code>CombinationIterator</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            CombinationIterator(string characters, int combinationLength)
+          </code>{" "}
+          Initializes the object with a string <code>characters</code> of{" "}
+          <strong>sorted distinct</strong> lowercase English letters and a
+          number <code>combinationLength</code> as arguments.
+        </li>
+        <li>
+          <code>next()</code> Returns the next combination of length{" "}
+          <code>combinationLength</code> in{" "}
+          <strong>lexicographical order</strong>.
+        </li>
+        <li>
+          <code>hasNext()</code> Returns <code>true</code> if and only if there
+          exists a next combination.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        ["CombinationIterator", "next", "hasNext", "next", "hasNext", "next",
+        "hasNext"] <br />
+        [["abc", 2], [], [], [], [], [], []] <br />
+        <strong>Output</strong> <br />
+        [null, "ab", true, "ac", true, "bc", false]
+        <strong>Explanation</strong> <br />
+        CombinationIterator itr = new CombinationIterator("abc", 2); <br />
+        itr.next(); // return "ab" <br />
+        itr.hasNext(); // return True <br />
+        itr.next(); // return "ac" <br />
+        itr.hasNext(); // return True <br />
+        itr.next(); // return "bc" <br />
+        itr.hasNext(); // return False
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= combinationLength &lt;= characters.length &lt;= 15
+          </code>
+        </li>
+        <li>
+          All the characters of <code>characters</code> are{" "}
+          <strong>unique</strong>.
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            10<sup>4</sup>
+          </code>{" "}
+          calls will be made to <code>next</code> and <code>hasNext</code>.
+        </li>
+        <li>
+          It is guaranteed that all calls of the function <code>next</code> are
+          valid.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
