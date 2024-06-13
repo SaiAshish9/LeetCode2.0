@@ -5738,7 +5738,7 @@ const QUESTIONS = {
         "hasNext"] <br />
         [["abc", 2], [], [], [], [], [], []] <br />
         <strong>Output</strong> <br />
-        [null, "ab", true, "ac", true, "bc", false]
+        [null, "ab", true, "ac", true, "bc", false] <br />
         <strong>Explanation</strong> <br />
         CombinationIterator itr = new CombinationIterator("abc", 2); <br />
         itr.next(); // return "ab" <br />
