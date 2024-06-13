@@ -128,11 +128,19 @@ const Problem = () => {
 
         const solutionKey = search ?? defaultTag;
 
-        setSolution(
-          solutionsData?.[qno]?.["java"]?.[
-            solutionKey.toLowerCase().split(" ").join("-")
-          ]
-        );
+        if (
+          search &&
+          solutionKey.toLowerCase().split(" ").join("-") in
+            solutionsData?.[qno]?.["java"]
+        ) {
+          setSolution(
+            solutionsData?.[qno]?.["java"]?.[
+              solutionKey.toLowerCase().split(" ").join("-")
+            ]
+          );
+        } else {
+          setSolution(solutionsData?.[qno]?.["java"]?.[defaultTag.toLowerCase().split(" ").join("-")]);
+        }
 
         if (dropdownItemSelected === -1) {
           console.log(
