@@ -2722,6 +2722,114 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1122: (
+    <>
+      {" "}
+      <h1>
+        Solving LeetCode Problem 1122 ("Relative Sort Array") using Counting
+        Sort
+      </h1>
+      <ul>
+        <li>
+          <strong>Step 1: Understand the Problem</strong>
+          <ul>
+            <li>
+              Given two arrays <code>arr1</code> and <code>arr2</code>, sort the
+              elements of <code>arr1</code> such that the relative ordering of
+              items in <code>arr1</code> are the same as in <code>arr2</code>.
+              Elements that don't appear in <code>arr2</code> should be placed
+              at the end in ascending order.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 2: Use Counting Sort Approach</strong>
+          <ul>
+            <li>
+              <strong>Counting Elements:</strong>
+              <ul>
+                <li>
+                  Create an array to count the occurrences of each element in{" "}
+                  <code>arr1</code>.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Order According to arr2:</strong>
+              <ul>
+                <li>
+                  Use the counts to create a sorted array that follows the order
+                  defined by <code>arr2</code>.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Append Remaining Elements:</strong>
+              <ul>
+                <li>Append the remaining elements in sorted order.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>{" "}
+        <li>
+          <strong>Explanation of the Code:</strong>
+          <ul>
+            <li>
+              <strong>Counting Elements:</strong>
+              <ul>
+                <li>
+                  Create a <code>count</code> array of size{" "}
+                  <code>maxNum + 1</code> where <code>maxNum</code> is the
+                  maximum possible value in <code>arr1</code>.
+                </li>
+                <li>
+                  For each element in <code>arr1</code>, increment the
+                  corresponding index in the <code>count</code> array.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Order According to arr2:</strong>
+              <ul>
+                <li>
+                  Initialize an array <code>result</code> to store the sorted
+                  elements.
+                </li>
+                <li>
+                  Iterate through <code>arr2</code> and for each element, add it
+                  to the <code>result</code> array according to its count.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Append Remaining Elements:</strong>
+              <ul>
+                <li>
+                  Iterate through the <code>count</code> array and add the
+                  remaining elements to the <code>result</code> array in
+                  ascending order.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Why This Works:</strong>
+              <ul>
+                <li>
+                  The counting sort mechanism ensures that we efficiently count
+                  and sort the elements of <code>arr1</code>.
+                </li>
+                <li>
+                  By following the order of <code>arr2</code> and then appending
+                  the remaining elements, we achieve the desired relative
+                  sorting.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {

@@ -128,7 +128,7 @@ const Problem = () => {
         const solutionKey = search ?? defaultTag;
 
         if (
-          search &&
+          search && solutionsData?.[qno]?.["java"] &&
           solutionKey.toLowerCase().split(" ").join("-") in
             solutionsData?.[qno]?.["java"]
         ) {
