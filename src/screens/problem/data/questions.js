@@ -3949,52 +3949,207 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
-  146:(
-    <div class="elfjS" data-track-load="description_content"><p>Design a data structure that follows the constraints of a <strong><a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU" target="_blank">Least Recently Used (LRU) cache</a></strong>.</p>
+  146: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Design a data structure that follows the constraints of a{" "}
+        <strong>
+          <a
+            href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU"
+            target="_blank"
+          >
+            Least Recently Used (LRU) cache
+          </a>
+        </strong>
+        .
+      </p>
 
-<p>Implement the <code>LRUCache</code> class:</p>
+      <p>
+        Implement the <code>LRUCache</code> class:
+      </p>
 
-<ul>
-	<li><code>LRUCache(int capacity)</code> Initialize the LRU cache with <strong>positive</strong> size <code>capacity</code>.</li>
-	<li><code>int get(int key)</code> Return the value of the <code>key</code> if the key exists, otherwise return <code>-1</code>.</li>
-	<li><code>void put(int key, int value)</code> Update the value of the <code>key</code> if the <code>key</code> exists. Otherwise, add the <code>key-value</code> pair to the cache. If the number of keys exceeds the <code>capacity</code> from this operation, <strong>evict</strong> the least recently used key.</li>
-</ul>
+      <ul>
+        <li>
+          <code>LRUCache(int capacity)</code> Initialize the LRU cache with{" "}
+          <strong>positive</strong> size <code>capacity</code>.
+        </li>
+        <li>
+          <code>int get(int key)</code> Return the value of the <code>key</code>{" "}
+          if the key exists, otherwise return <code>-1</code>.
+        </li>
+        <li>
+          <code>void put(int key, int value)</code> Update the value of the{" "}
+          <code>key</code> if the <code>key</code> exists. Otherwise, add the{" "}
+          <code>key-value</code> pair to the cache. If the number of keys
+          exceeds the <code>capacity</code> from this operation,{" "}
+          <strong>evict</strong> the least recently used key.
+        </li>
+      </ul>
 
-<p>The functions <code>get</code> and <code>put</code> must each run in <code>O(1)</code> average time complexity.</p>
+      <p>
+        The functions <code>get</code> and <code>put</code> must each run in{" "}
+        <code>O(1)</code> average time complexity.
+      </p>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
 
-<pre><strong>Input</strong> <br/>
-["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"] <br/>
-[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]] <br/>
-<strong>Output</strong> <br/>
-[null, null, null, 1, null, -1, null, -1, 3, 4] <br/>
+      <pre>
+        <strong>Input</strong> <br />
+        ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get",
+        "get"] <br />
+        [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]] <br />
+        <strong>Output</strong> <br />
+        [null, null, null, 1, null, -1, null, -1, 3, 4] <br />
+        <strong>Explanation</strong> <br />
+        LRUCache lRUCache = new LRUCache(2); <br />
+        lRUCache.put(1, 1); // cache is &#123;1=1&#125; <br />
+        lRUCache.put(2, 2); // cache is &#123;1=1, 2=2&#125; <br />
+        lRUCache.get(1); // return 1 <br />
+        lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is &#123;1=1,
+        3=3&#125; <br />
+        lRUCache.get(2); // returns -1 (not found) <br />
+        lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is &#123;4=4,
+        3=3&#125; <br />
+        lRUCache.get(1); // return -1 (not found) <br />
+        lRUCache.get(3); // return 3 <br />
+        lRUCache.get(4); // return 4
+      </pre>
 
-<strong>Explanation</strong> <br/>
-LRUCache lRUCache = new LRUCache(2); <br/>
-lRUCache.put(1, 1); // cache is &#123;1=1&#125; <br/>
-lRUCache.put(2, 2); // cache is &#123;1=1, 2=2&#125; <br/>
-lRUCache.get(1);    // return 1 <br/>
-lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is &#123;1=1, 3=3&#125; <br/>
-lRUCache.get(2);    // returns -1 (not found) <br/>
-lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is &#123;4=4, 3=3&#125; <br/>
-lRUCache.get(1);    // return -1 (not found) <br/>
-lRUCache.get(3);    // return 3 <br/>
-lRUCache.get(4);    // return 4
-</pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+      <ul>
+        <li>
+          <code>1 &lt;= capacity &lt;= 3000</code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= key &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= value &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            2 * 10<sup>5</sup>
+          </code>{" "}
+          calls will be made to <code>get</code> and <code>put</code>.
+        </li>
+      </ul>
+    </div>
+  ),
+  432: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Design a data structure to store the strings' count with the ability to
+        return the strings with minimum and maximum counts.
+      </p>
 
-<ul>
-	<li><code>1 &lt;= capacity &lt;= 3000</code></li>
-	<li><code>0 &lt;= key &lt;= 10<sup>4</sup></code></li>
-	<li><code>0 &lt;= value &lt;= 10<sup>5</sup></code></li>
-	<li>At most <code>2 * 10<sup>5</sup></code> calls will be made to <code>get</code> and <code>put</code>.</li>
-</ul>
-</div>
-  )
+      <p>
+        Implement the <code>AllOne</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>AllOne()</code> Initializes the object of the data structure.
+        </li>
+        <li>
+          <code>inc(String key)</code> Increments the count of the string{" "}
+          <code>key</code> by <code>1</code>. If <code>key</code> does not exist
+          in the data structure, insert it with count <code>1</code>.
+        </li>
+        <li>
+          <code>dec(String key)</code> Decrements the count of the string{" "}
+          <code>key</code> by <code>1</code>. If the count of <code>key</code>{" "}
+          is <code>0</code> after the decrement, remove it from the data
+          structure. It is guaranteed that <code>key</code> exists in the data
+          structure before the decrement.
+        </li>
+        <li>
+          <code>getMaxKey()</code> Returns one of the keys with the maximal
+          count. If no element exists, return an empty string <code>""</code>.
+        </li>
+        <li>
+          <code>getMinKey()</code> Returns one of the keys with the minimum
+          count. If no element exists, return an empty string <code>""</code>.
+        </li>
+      </ul>
+
+      <p>
+        <strong>Note</strong> that each function must run in <code>O(1)</code>{" "}
+        average time complexity.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        ["AllOne", "inc", "inc", "getMaxKey", "getMinKey", "inc", "getMaxKey",
+        "getMinKey"]
+        <br />
+        [[], ["hello"], ["hello"], [], [], ["leet"], [], []]
+        <br />
+        <strong>Output</strong>
+        <br />
+        [null, null, null, "hello", "hello", null, "hello", "leet"]
+        <strong>Explanation</strong>
+        <br />
+        AllOne allOne = new AllOne();
+        <br />
+        allOne.inc("hello");
+        <br />
+        allOne.inc("hello");
+        <br />
+        allOne.getMaxKey(); // return "hello"
+        <br />
+        allOne.getMinKey(); // return "hello"
+        <br />
+        allOne.inc("leet");
+        <br />
+        allOne.getMaxKey(); // return "hello"
+        <br />
+        allOne.getMinKey(); // return "leet"
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= key.length &lt;= 10</code>
+        </li>
+        <li>
+          <code>key</code> consists of lowercase English letters.
+        </li>
+        <li>
+          It is guaranteed that for each call to <code>dec</code>,{" "}
+          <code>key</code> is existing in the data structure.
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            5 * 10<sup>4</sup>
+          </code>
+          &nbsp;calls will be made to <code>inc</code>, <code>dec</code>,{" "}
+          <code>getMaxKey</code>, and <code>getMinKey</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
