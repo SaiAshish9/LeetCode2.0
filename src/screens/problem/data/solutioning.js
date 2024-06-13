@@ -2419,6 +2419,194 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  274: (
+    <>
+      <h1>Solving LeetCode Problem 274 ("H-Index") using Counting Sort</h1>
+
+      <ul>
+        <li>
+          <strong>Step 1: Understand the Problem</strong>
+          <ul>
+            <li>
+              The H-Index is defined as the maximum value <code>h</code> such
+              that the given author has published <code>h</code> papers that
+              have each been cited at least <code>h</code> times.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 2: Use Counting Sort Approach</strong>
+          <ul>
+            <li>
+              <strong>Counting Citations:</strong>
+              <ul>
+                <li>
+                  Create an array to count the number of papers with each
+                  citation count.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Determine the H-Index:</strong>
+              <ul>
+                <li>
+                  Iterate over these counts in reverse order to find the highest
+                  possible <code>h</code> index.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Explanation of the Code:</strong>
+          <ul>
+            <li>
+              <strong>Counting Citations:</strong>
+              <ul>
+                <li>
+                  Create a <code>count</code> array of size <code>n + 1</code>{" "}
+                  where <code>n</code> is the length of the{" "}
+                  <code>citations</code> array.
+                </li>
+                <li>
+                  For each citation, if the citation count is greater than or
+                  equal to <code>n</code>, increment <code>count[n]</code>.
+                  Otherwise, increment <code>count[c]</code> where{" "}
+                  <code>c</code> is the citation count.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Calculating H-Index:</strong>
+              <ul>
+                <li>
+                  Iterate from <code>n</code> down to <code>0</code>,
+                  maintaining a running total of citations.
+                </li>
+                <li>
+                  The running total keeps track of the number of papers with at
+                  least <code>i</code> citations.
+                </li>
+                <li>
+                  The first time this running total meets or exceeds{" "}
+                  <code>i</code>, <code>i</code> is the H-Index.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Why This Works:</strong>
+              <ul>
+                <li>
+                  The counting sort mechanism ensures that we efficiently count
+                  the number of papers with each citation count.
+                </li>
+                <li>
+                  By iterating from the highest possible citation count down to
+                  zero, we efficiently determine the highest possible H-Index
+                  without sorting the citations array directly.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  561: (
+    <>
+      {" "}
+      <h1>
+        Solving LeetCode Problem 561 ("Array Partition I") using Counting Sort
+      </h1>
+      <ul>
+        <li>
+          <strong>Step 1: Understand the Problem</strong>
+          <ul>
+            <li>
+              Given an integer array <code>nums</code> of <code>2n</code>{" "}
+              integers, your task is to group these integers into <code>n</code>{" "}
+              pairs <code>(a1, b1), (a2, b2), ..., (an, bn)</code> such that the
+              sum of <code>min(ai, bi)</code> for all <code>i</code> is
+              maximized.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 2: Use Counting Sort Approach</strong>
+          <ul>
+            <li>
+              <strong>Counting Numbers:</strong>
+              <ul>
+                <li>
+                  Create an array to count the occurrences of each number.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Calculate the Sum:</strong>
+              <ul>
+                <li>
+                  Iterate through the counts to form the pairs and compute the
+                  sum.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>{" "}
+        <li>
+          <strong>Explanation of the Code:</strong>
+          <ul>
+            <li>
+              <strong>Counting Numbers:</strong>
+              <ul>
+                <li>
+                  Create a <code>count</code> array of size{" "}
+                  <code>2 * maxNum + 1</code> where <code>maxNum</code> is the
+                  maximum possible absolute value of the numbers in{" "}
+                  <code>nums</code>.
+                </li>
+                <li>
+                  For each number in <code>nums</code>, increment the
+                  corresponding index in the <code>count</code> array (adjusting
+                  for negative numbers by adding <code>maxNum</code>).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Calculate the Sum:</strong>
+              <ul>
+                <li>
+                  Initialize a variable <code>sum</code> to store the result and
+                  a boolean <code>add</code> to alternate between adding and
+                  skipping numbers.
+                </li>
+                <li>
+                  Iterate through the <code>count</code> array. For each
+                  non-zero count, add the number to <code>sum</code> if{" "}
+                  <code>add</code> is true, then toggle <code>add</code> and
+                  decrement the count.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Why This Works:</strong>
+              <ul>
+                <li>
+                  The counting sort mechanism ensures that we efficiently sort
+                  the numbers without directly sorting the array.
+                </li>
+                <li>
+                  By iterating through the sorted counts and alternately adding
+                  the numbers, we maximize the sum of the minimum values of the
+                  pairs.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
