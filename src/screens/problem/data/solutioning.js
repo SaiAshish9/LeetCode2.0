@@ -2607,6 +2607,121 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1051: (
+    <>
+      <h1>
+        Solving LeetCode Problem 1051 ("Height Checker") using Counting Sort
+      </h1>
+
+      <ul>
+        <li>
+          <strong>Step 1: Understand the Problem</strong>
+          <ul>
+            <li>
+              Given an array <code>heights</code> representing the heights of
+              students in a line, determine how many students are not standing
+              in non-decreasing order of height when compared to a sorted
+              version of the array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 2: Use Counting Sort Approach</strong>
+          <ul>
+            <li>
+              <strong>Counting Heights:</strong>
+              <ul>
+                <li>
+                  Create an array to count the occurrences of each height.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Reconstruct Sorted Array:</strong>
+              <ul>
+                <li>
+                  Use the count array to create a sorted version of the heights
+                  array.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Count Discrepancies:</strong>
+              <ul>
+                <li>
+                  Compare the original array with the sorted array to count the
+                  number of indices where the heights differ.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Explanation of the Code:</strong>
+          <ul>
+            <li>
+              <strong>Counting Heights:</strong>
+              <ul>
+                <li>
+                  Create a <code>count</code> array of size{" "}
+                  <code>maxNum + 1</code> where <code>maxNum</code> is the
+                  maximum possible height.
+                </li>
+                <li>
+                  For each height in <code>heights</code>, increment the
+                  corresponding index in the <code>count</code> array.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Reconstruct Sorted Array:</strong>
+              <ul>
+                <li>
+                  Initialize an array <code>sortedHeights</code> to store the
+                  sorted heights.
+                </li>
+                <li>
+                  Iterate through the <code>count</code> array. For each
+                  non-zero count, add the height to <code>sortedHeights</code>{" "}
+                  until the count is depleted.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Count Discrepancies:</strong>
+              <ul>
+                <li>
+                  Initialize a variable <code>discrepancies</code> to store the
+                  result.
+                </li>
+                <li>
+                  Iterate through the original <code>heights</code> array and
+                  compare each height with the corresponding height in{" "}
+                  <code>sortedHeights</code>.
+                </li>
+                <li>
+                  Increment <code>discrepancies</code> for each mismatch.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Why This Works:</strong>
+              <ul>
+                <li>
+                  The counting sort mechanism ensures that we efficiently sort
+                  the heights without directly sorting the array.
+                </li>
+                <li>
+                  By comparing the original array with the sorted array, we
+                  accurately count the number of heights that are out of place.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
