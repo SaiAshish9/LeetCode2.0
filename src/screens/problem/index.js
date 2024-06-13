@@ -632,16 +632,14 @@ const Problem = () => {
                         </DropdownContainer>
                       )}
                     </TabOptionsContainer>
-                    {solution && (
-                      <Editor
-                        width="100%"
-                        height="85vh"
-                        theme="vs-dark"
-                        defaultLanguage="java"
-                        userSelect={false}
-                        defaultValue={solution ?? ""}
-                      />
-                    )}
+                    <Editor
+                      width="100%"
+                      height="85vh"
+                      theme="vs-dark"
+                      defaultLanguage="java"
+                      userSelect={false}
+                      defaultValue={solution ?? ""}
+                    />
                   </>
                 }
               </RightContainer>
