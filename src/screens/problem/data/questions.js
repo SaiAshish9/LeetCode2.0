@@ -4834,6 +4834,204 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  1116: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You have a function <code>printNumber</code> that can be called with an
+        integer parameter and prints it to the console.
+      </p>
+
+      <ul>
+        <li>
+          For example, calling <code>printNumber(7)</code> prints <code>7</code>{" "}
+          to the console.
+        </li>
+      </ul>
+
+      <p>
+        You are given an instance of the class <code>ZeroEvenOdd</code> that has
+        three functions: <code>zero</code>, <code>even</code>, and{" "}
+        <code>odd</code>. The same instance of <code>ZeroEvenOdd</code> will be
+        passed to three different threads:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Thread A:</strong> calls <code>zero()</code> that should only
+          output <code>0</code>'s.
+        </li>
+        <li>
+          <strong>Thread B:</strong> calls <code>even()</code> that should only
+          output even numbers.
+        </li>
+        <li>
+          <strong>Thread C:</strong> calls <code>odd()</code> that should only
+          output odd numbers.
+        </li>
+      </ul>
+
+      <p>
+        Modify the given class to output the series{" "}
+        <code>"010203040506..."</code> where the length of the series must be{" "}
+        <code>2n</code>.
+      </p>
+
+      <p>
+        Implement the <code>ZeroEvenOdd</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>ZeroEvenOdd(int n)</code> Initializes the object with the number{" "}
+          <code>n</code> that represents the numbers that should be printed.
+        </li>
+        <li>
+          <code>void zero(printNumber)</code> Calls <code>printNumber</code> to
+          output one zero.
+        </li>
+        <li>
+          <code>void even(printNumber)</code> Calls <code>printNumber</code> to
+          output one even number.
+        </li>
+        <li>
+          <code>void odd(printNumber)</code> Calls <code>printNumber</code> to
+          output one odd number.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 2 <br />
+        <strong>Output:</strong> "0102" <br />
+        <strong>Explanation:</strong> There are three threads being fired
+        asynchronously. <br />
+        One of them calls zero(), the other calls even(), and the last one calls
+        odd(). <br />
+        "0102" is the correct output.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 5 <br />
+        <strong>Output:</strong> "0102030405"
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= n &lt;= 1000</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  1117: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        There are two kinds of threads: <code>oxygen</code> and{" "}
+        <code>hydrogen</code>. Your goal is to group these threads to form water
+        molecules.
+      </p>
+
+      <p>
+        There is a barrier where each thread has to wait until a complete
+        molecule can be formed. Hydrogen and oxygen threads will be given{" "}
+        <code>releaseHydrogen</code> and <code>releaseOxygen</code> methods
+        respectively, which will allow them to pass the barrier. These threads
+        should pass the barrier in groups of three, and they must immediately
+        bond with each other to form a water molecule. You must guarantee that
+        all the threads from one molecule bond before any other threads from the
+        next molecule do.
+      </p>
+
+      <p>In other words:</p>
+
+      <ul>
+        <li>
+          If an oxygen thread arrives at the barrier when no hydrogen threads
+          are present, it must wait for two hydrogen threads.
+        </li>
+        <li>
+          If a hydrogen thread arrives at the barrier when no other threads are
+          present, it must wait for an oxygen thread and another hydrogen
+          thread.
+        </li>
+      </ul>
+
+      <p>
+        We do not have to worry about matching the threads up explicitly; the
+        threads do not necessarily know which other threads they are paired up
+        with. The key is that threads pass the barriers in complete sets; thus,
+        if we examine the sequence of threads that bind and divide them into
+        groups of three, each group should contain one oxygen and two hydrogen
+        threads.
+      </p>
+
+      <p>
+        Write synchronization code for oxygen and hydrogen molecules that
+        enforces these constraints.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> water = "HOH" <br />
+        <strong>Output:</strong> "HHO" <br />
+        <strong>Explanation:</strong> "HOH" and "OHH" are also valid answers.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> water = "OOHHHH"
+        <br />
+        <strong>Output:</strong> "HHOHHO"
+        <br />
+        <strong>Explanation:</strong> "HOHHHO", "OHHHHO", "HHOHOH", "HOHHOH",
+        "OHHHOH", "HHOOHH", "HOHOHH" and "OHHOHH" are also valid answers.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>3 * n == water.length</code>
+        </li>
+        <li>
+          <code>1 &lt;= n &lt;= 20</code>
+        </li>
+        <li>
+          <code>water[i]</code> is either <code>'H'</code> or <code>'O'</code>.
+        </li>
+        <li>
+          There will be exactly <code>2 * n</code> <code>'H'</code> in{" "}
+          <code>water</code>.
+        </li>
+        <li>
+          There will be exactly <code>n</code> <code>'O'</code> in{" "}
+          <code>water</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
