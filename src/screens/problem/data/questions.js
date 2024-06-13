@@ -6457,6 +6457,90 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  1135: (
+    <>
+      <div class="markdown-body div-width" style={{ marginTop: 20 }}>
+        <p>
+          There are <code>N</code> cities numbered from 1 to <code>N</code>.
+        </p>
+
+        <p>
+          You are given <code>connections</code>, where each{" "}
+          <code>connections[i] = [city1, city2, cost]</code>&nbsp;represents the
+          cost to connect <code>city1</code> and <code>city2</code>
+          together.&nbsp; (A <em>connection</em> is bidirectional: connecting{" "}
+          <code>city1</code> and
+          <code>city2</code> is the same as connecting <code>city2</code> and{" "}
+          <code>city1</code>.)
+        </p>
+
+        <p>
+          Return the minimum cost so that for every pair of cities, there exists
+          a path&nbsp;of connections (possibly of length 1) that connects those
+          two cities together.&nbsp; The cost is the sum of the connection costs
+          used. If the task is impossible, return -1.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <strong>Example 1:</strong>
+        </p>
+
+        <p>
+          <img src="https://leetcode.ca/all/img/1135_1.png" alt="" />
+        </p>
+
+        <pre>
+          <strong>Input: </strong>N = 3, connections = [[1,2,5],[1,3,6],[2,3,1]]{" "}
+          <br />
+          <strong>Output: </strong>6 <br />
+          <strong>Explanation: </strong>
+          Choosing any 2 edges will connect all cities so we choose the minimum
+          2.
+        </pre>
+
+        <p>
+          <strong>Example 2:</strong>
+        </p>
+
+        <p>
+          <img src="https://leetcode.ca/all/img/1135_2.png" alt="" />
+        </p>
+
+        <pre>
+          <strong>Input: </strong>N = 4, connections = [[1,2,3],[3,4,4]] <br />
+          <strong>Output: </strong>-1 <br />
+          <strong>Explanation: </strong>
+          There is no way to connect all cities even if all edges are used.
+        </pre>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <strong>Note:</strong>
+        </p>
+
+        <ul>
+          <li>
+            <code>1 &lt;= N &lt;= 10000</code>
+          </li>
+          <li>
+            <code>1 &lt;= connections.length &lt;= 10000</code>
+          </li>
+          <li>
+            <code>1 &lt;= connections[i][0], connections[i][1] &lt;= N</code>
+          </li>
+          <li>
+            <code>0 &lt;= connections[i][2] &lt;= 10^5</code>
+          </li>
+          <li>
+            <code>connections[i][0] != connections[i][1]</code>
+          </li>
+        </ul>
+      </div>
+    </>
+  ),
 };
 
 export default QUESTIONS;
