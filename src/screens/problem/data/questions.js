@@ -5900,7 +5900,6 @@ const QUESTIONS = {
       <p>
         <strong class="example">Example 3:</strong>
       </p>
-      <br />
       <pre>
         <strong>Input:</strong> head = []
         <br />
