@@ -4150,6 +4150,544 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  460: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Design and implement a data structure for a{" "}
+        <a
+          href="https://en.wikipedia.org/wiki/Least_frequently_used"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Least Frequently Used (LFU)
+        </a>{" "}
+        cache.
+      </p>
+
+      <p>
+        Implement the <code>LFUCache</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>LFUCache(int capacity)</code> Initializes the object with the{" "}
+          <code>capacity</code> of the data structure.
+        </li>
+        <li>
+          <code>int get(int key)</code> Gets the value of the <code>key</code>{" "}
+          if the <code>key</code> exists in the cache. Otherwise, returns{" "}
+          <code>-1</code>.
+        </li>
+        <li>
+          <code>void put(int key, int value)</code> Update the value of the{" "}
+          <code>key</code> if present, or inserts the <code>key</code> if not
+          already present. When the cache reaches its <code>capacity</code>, it
+          should invalidate and remove the{" "}
+          <strong>least frequently used</strong> key before inserting a new
+          item. For this problem, when there is a <strong>tie</strong> (i.e.,
+          two or more keys with the same frequency), the{" "}
+          <strong>least recently used</strong> <code>key</code> would be
+          invalidated.
+        </li>
+      </ul>
+
+      <p>
+        To determine the least frequently used key, a{" "}
+        <strong>use counter</strong> is maintained for each key in the cache.
+        The key with the smallest <strong>use counter</strong> is the least
+        frequently used key.
+      </p>
+
+      <p>
+        When a key is first inserted into the cache, its{" "}
+        <strong>use counter</strong> is set to <code>1</code> (due to the{" "}
+        <code>put</code> operation). The <strong>use counter</strong> for a key
+        in the cache is incremented either a <code>get</code> or{" "}
+        <code>put</code> operation is called on it.
+      </p>
+
+      <p>
+        The functions&nbsp;<code data-stringify-type="code">get</code>
+        &nbsp;and&nbsp;<code data-stringify-type="code">put</code>&nbsp;must
+        each run in <code>O(1)</code> average time complexity.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        ["LFUCache", "put", "put", "get", "put", "get", "get", "put", "get",
+        "get", "get"]
+        <br />
+        [[2], [1, 1], [2, 2], [1], [3, 3], [2], [3], [4, 4], [1], [3], [4]]
+        <br />
+        <strong>Output</strong>
+        <br />
+        [null, null, null, 1, null, -1, 3, null, -1, 3, 4]
+        <br />
+        <strong>Explanation</strong> <br />
+        // cnt(x) = the use counter for key x<br />
+        // cache=[] will show the last used order for tiebreakers (leftmost
+        element is most recent)
+        <br />
+        LFUCache lfu = new LFUCache(2);
+        <br />
+        lfu.put(1, 1); // cache=[1,_], cnt(1)=1
+        <br />
+        lfu.put(2, 2); // cache=[2,1], cnt(2)=1, cnt(1)=1
+        <br />
+        lfu.get(1); // return 1<br />
+        // cache=[1,2], cnt(2)=1, cnt(1)=2
+        <br />
+        lfu.put(3, 3); // 2 is the LFU key because cnt(2)=1 is the smallest,
+        invalidate 2.
+        <br />
+        &nbsp; // cache=[3,1], cnt(3)=1, cnt(1)=2
+        <br />
+        lfu.get(2); // return -1 (not found)
+        <br />
+        lfu.get(3); // return 3<br />
+        // cache=[3,1], cnt(3)=2, cnt(1)=2
+        <br />
+        lfu.put(4, 4); // Both 1 and 3 have the same cnt, but 1 is LRU,
+        invalidate 1.
+        <br />
+        // cache=[4,3], cnt(4)=1, cnt(3)=2
+        <br />
+        lfu.get(1); // return -1 (not found)
+        <br />
+        lfu.get(3); // return 3<br />
+        // cache=[3,4], cnt(4)=1, cnt(3)=3
+        <br />
+        lfu.get(4); // return 4<br />
+        // cache=[4,3], cnt(4)=2, cnt(3)=3
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= capacity&nbsp;&lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= key &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= value &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            2 * 10<sup>5</sup>
+          </code>
+          &nbsp;calls will be made to <code>get</code> and <code>put</code>.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <span style={{ display: "none" }}>&nbsp;</span>
+    </div>
+  ),
+  430: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a doubly linked list, which contains nodes that have a
+        next pointer, a previous pointer, and an additional{" "}
+        <strong>child pointer</strong>. This child pointer may or may not point
+        to a separate doubly linked list, also containing these special nodes.
+        These child lists may have one or more children of their own, and so on,
+        to produce a <strong>multilevel data structure</strong> as shown in the
+        example below.
+      </p>
+      <p>
+        Given the <code>head</code> of the first level of the list,{" "}
+        <strong>flatten</strong> the list so that all the nodes appear in a
+        single-level, doubly linked list. Let <code>curr</code> be a node with a
+        child list. The nodes in the child list should appear{" "}
+        <strong>after</strong> <code>curr</code> and <strong>before</strong>{" "}
+        <code>curr.next</code> in the flattened list.
+      </p>
+      <p>
+        Return <em>the </em>
+        <code>head</code>
+        <em>
+          {" "}
+          of the flattened list. The nodes in the list must have{" "}
+          <strong>all</strong> of their child pointers set to{" "}
+        </em>
+        <code>null</code>.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>{" "}
+      <br />
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/11/09/flatten11.jpg"
+        style={{ width: "700px", height: "339px" }}
+      />
+      <br />
+      <pre>
+        <strong>Input:</strong> head =
+        [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
+        <br />
+        <strong>Output:</strong> [1,2,3,7,8,11,12,9,10,4,5,6]
+        <br />
+        <strong>Explanation:</strong> The multilevel linked list in the input is
+        shown.
+        <br />
+        After flattening the multilevel linked list it becomes:
+        <br />
+        <img
+          src="https://assets.leetcode.com/uploads/2021/11/09/flatten12.jpg"
+          style={{ width: 1000, height: 69 }}
+          alt="img"
+        />
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <br />
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/11/09/flatten2.1jpg"
+        style={{ width: 200, height: 200 }}
+      />
+      <br />
+      <pre>
+        <strong>Input:</strong> head = [1,2,null,3]
+        <br />
+        <strong>Output:</strong> [1,3,2]
+        <br />
+        <strong>Explanation:</strong> The multilevel linked list in the input is
+        shown.
+        <br />
+        After flattening the multilevel linked list it becomes:
+        <br />
+        <img
+          src="https://assets.leetcode.com/uploads/2021/11/24/list.jpg"
+          style={{ width: 300, height: 87 }}
+          alt="img"
+        />
+      </pre>
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <br />
+      <pre>
+        <strong>Input:</strong> head = []
+        <br />
+        <strong>Output:</strong> []
+        <br />
+        <strong>Explanation:</strong> There could be empty list in the input.
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          The number of Nodes will not exceed <code>1000</code>.
+        </li>
+        <li>
+          <code>
+            1 &lt;= Node.val &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+      <p>
+        <strong>
+          How the multilevel linked list is represented in test cases:
+        </strong>
+      </p>
+      <p>
+        We use the multilevel linked list from <strong>Example 1</strong> above:
+      </p>
+      <pre>
+        {" "}
+        1---2---3---4---5---6--NULL | 7---8---9---10--NULL | 11--12--NULL
+      </pre>
+      <p>The serialization of each level is as follows:</p>
+      <pre>[1,2,3,4,5,6,null] [7,8,9,10,null] [11,12,null]</pre>
+      <p>
+        To serialize all levels together, we will add nulls in each level to
+        signify no node connects to the upper node of the previous level. The
+        serialization becomes:
+      </p>
+      <pre>
+        [1, 2, 3, 4, 5, 6, null] | [null, null, 7, 8, 9, 10, null] | [ null, 11,
+        12, null]
+      </pre>
+      <p>
+        Merging the serialization of each level and removing trailing nulls we
+        obtain:
+      </p>
+      <pre>[1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]</pre>
+    </div>
+  ),
+  1472: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You have a <strong>browser</strong> of one tab where you start on the{" "}
+        <code>homepage</code> and you can visit another <code>url</code>, get
+        back in the history number of <code>steps</code> or move forward in the
+        history number of <code>steps</code>.
+      </p>
+      <p>
+        Implement the <code>BrowserHistory</code> class:
+      </p>
+      <ul>
+        <li>
+          <code>BrowserHistory(string homepage)</code> Initializes the object
+          with the <code>homepage</code>&nbsp;of the browser.
+        </li>
+        <li>
+          <code>void visit(string url)</code>&nbsp;Visits&nbsp;<code>url</code>{" "}
+          from the current page. It clears up all the forward history.
+        </li>
+        <li>
+          <code>string back(int steps)</code>&nbsp;Move <code>steps</code> back
+          in history. If you can only return <code>x</code> steps in the history
+          and <code>steps &gt; x</code>, you will&nbsp;return only{" "}
+          <code>x</code> steps. Return the current <code>url</code>&nbsp;after
+          moving back in history <strong>at most</strong> <code>steps</code>.
+        </li>
+        <li>
+          <code>string forward(int steps)</code>&nbsp;Move <code>steps</code>{" "}
+          forward in history. If you can only forward <code>x</code> steps in
+          the history and <code>steps &gt; x</code>, you will&nbsp;forward
+          only&nbsp;<code>x</code> steps. Return the current <code>url</code>
+          &nbsp;after forwarding in history <strong>at most</strong>{" "}
+          <code>steps</code>.
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong>
+        <br />
+        ["BrowserHistory","visit","visit","visit","back","back","forward","visit","forward","back","back"]
+        <br />
+        [["leetcode.com"],["google.com"],["facebook.com"],["youtube.com"],[1],[1],[1],["linkedin.com"],[2],[2],[7]]
+        <br />
+        <br />
+        <strong>Output:</strong>
+        <br />
+        [null,null,null,null,"facebook.com","google.com","facebook.com",null,"linkedin.com","google.com","leetcode.com"]
+        <br />
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        BrowserHistory browserHistory = new BrowserHistory("leetcode.com");
+        <br />
+        browserHistory.visit("google.com"); // You are in "leetcode.com". Visit
+        "google.com"
+        <br />
+        browserHistory.visit("facebook.com"); // You are in "google.com". Visit
+        "facebook.com"
+        <br />
+        browserHistory.visit("youtube.com"); // You are in "facebook.com". Visit
+        "youtube.com"
+        <br />
+        browserHistory.back(1); // You are in "youtube.com", move back to
+        "facebook.com" return "facebook.com"
+        <br />
+        browserHistory.back(1); // You are in "facebook.com", move back to
+        "google.com" return "google.com"
+        <br />
+        browserHistory.forward(1); // You are in "google.com", move forward to
+        "facebook.com" return "facebook.com"
+        <br />
+        browserHistory.visit("linkedin.com"); // You are in "facebook.com".
+        Visit "linkedin.com"
+        <br />
+        browserHistory.forward(2); // You are in "linkedin.com", you cannot move
+        forward any steps.
+        <br />
+        browserHistory.back(2); // You are in "linkedin.com", move back two
+        steps to "facebook.com" then to "google.com". return "google.com"
+        <br />
+        browserHistory.back(7); // You are in "google.com", you can move back
+        only one step to "leetcode.com". return "leetcode.com"
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>1 &lt;= homepage.length &lt;= 20</code>
+        </li>
+        <li>
+          <code>1 &lt;= url.length &lt;= 20</code>
+        </li>
+        <li>
+          <code>1 &lt;= steps &lt;= 100</code>
+        </li>
+        <li>
+          <code>homepage</code> and <code>url</code> consist of&nbsp; '.' or
+          lower case English letters.
+        </li>
+        <li>
+          At most <code>5000</code>&nbsp;calls will be made to{" "}
+          <code>visit</code>, <code>back</code>, and <code>forward</code>.
+        </li>
+      </ul>
+    </div>
+  ),
+  2296: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>Design a text editor with a cursor that can do the following:</p>
+
+      <ul>
+        <li>
+          <strong>Add</strong> text to where the cursor is.
+        </li>
+        <li>
+          <strong>Delete</strong> text from where the cursor is (simulating the
+          backspace key).
+        </li>
+        <li>
+          <strong>Move</strong> the cursor either left or right.
+        </li>
+      </ul>
+
+      <p>
+        When deleting text, only characters to the left of the cursor will be
+        deleted. The cursor will also remain within the actual text and cannot
+        be moved beyond it. More formally, we have that{" "}
+        <code>0 &lt;= cursor.position &lt;= currentText.length</code> always
+        holds.
+      </p>
+
+      <p>
+        Implement the <code>TextEditor</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>TextEditor()</code> Initializes the object with empty text.
+        </li>
+        <li>
+          <code>void addText(string text)</code> Appends <code>text</code> to
+          where the cursor is. The cursor ends to the right of <code>text</code>
+          .
+        </li>
+        <li>
+          <code>int deleteText(int k)</code> Deletes <code>k</code> characters
+          to the left of the cursor. Returns the number of characters actually
+          deleted.
+        </li>
+        <li>
+          <code>string cursorLeft(int k)</code> Moves the cursor to the left{" "}
+          <code>k</code> times. Returns the last <code>min(10, len)</code>{" "}
+          characters to the left of the cursor, where <code>len</code> is the
+          number of characters to the left of the cursor.
+        </li>
+        <li>
+          <code>string cursorRight(int k)</code> Moves the cursor to the right{" "}
+          <code>k</code> times. Returns the last <code>min(10, len)</code>{" "}
+          characters to the left of the cursor, where <code>len</code> is the
+          number of characters to the left of the cursor.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        ["TextEditor", "addText", "deleteText", "addText", "cursorRight",
+        "cursorLeft", "deleteText", "cursorLeft", "cursorRight"] <br />
+        [[], ["leetcode"], [4], ["practice"], [3], [8], [10], [2], [6]] <br />{" "}
+        <br />
+        <strong>Output</strong> <br />
+        [null, null, 4, null, "etpractice", "leet", 4, "", "practi"] <br />{" "}
+        <br />
+        <strong>Explanation</strong> <br />
+        TextEditor textEditor = new TextEditor(); // The current text is "|".
+        (The '|' character represents the cursor) <br />
+        textEditor.addText("leetcode"); // The current text is "leetcode|".{" "}
+        <br />
+        textEditor.deleteText(4); // return 4 <br />
+        // The current text is "leet|". <br />
+        // 4 characters were deleted. <br />
+        textEditor.addText("practice"); // The current text is "leetpractice|".{" "}
+        <br />
+        textEditor.cursorRight(3); // return "etpractice" <br />
+        // The current text is "leetpractice|". <br />
+        // The cursor cannot be moved beyond the actual text and thus did not
+        move. <br />
+        // "etpractice" is the last 10 characters to the left of the cursor.{" "}
+        <br />
+        textEditor.cursorLeft(8); // return "leet" <br />
+        // The current text is "leet|practice". <br />
+        // "leet" is the last min(10, 4) = 4 characters to the left of the
+        cursor. <br />
+        textEditor.deleteText(10); // return 4 <br />
+        // The current text is "|practice". <br />
+        // Only 4 characters were deleted. <br />
+        textEditor.cursorLeft(2); // return "" <br />
+        // The current text is "|practice". <br />
+        // The cursor cannot be moved beyond the actual text and thus did not
+        move. <br />
+        // "" is the last min(10, 0) = 0 characters to the left of the cursor.{" "}
+        <br />
+        textEditor.cursorRight(6); // return "practi" <br />
+        // The current text is "practi|ce". <br />
+        // "practi" is the last min(10, 6) = 6 characters to the left of the
+        cursor.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= text.length, k &lt;= 40</code>
+        </li>
+        <li>
+          <code>text</code> consists of lowercase English letters.
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            2 * 10<sup>4</sup>
+          </code>{" "}
+          calls <strong>in total</strong> will be made to <code>addText</code>,{" "}
+          <code>deleteText</code>, <code>cursorLeft</code> and{" "}
+          <code>cursorRight</code>.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Follow-up:</strong> Could you find a solution with time
+        complexity of <code>O(k)</code> per call?
+      </p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
