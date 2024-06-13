@@ -3969,7 +3969,7 @@ const QUESTIONS = {
 ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"] <br/>
 [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]] <br/>
 <strong>Output</strong> <br/>
-[null, null, null, 1, null, -1, null, -1, 3, 4]
+[null, null, null, 1, null, -1, null, -1, 3, 4] <br/>
 
 <strong>Explanation</strong> <br/>
 LRUCache lRUCache = new LRUCache(2); <br/>
