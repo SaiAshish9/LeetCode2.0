@@ -2830,6 +2830,99 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1135: (
+    <>
+      {" "}
+      <h1>Connecting Cities With Minimum Cost Using Kruskal's Algorithm</h1>
+      <ul>
+        <li>
+          <strong>Steps to Implement Kruskal's Algorithm:</strong>
+          <ul>
+            <li>
+              Define an <code>Edge</code> class to represent edges with source,
+              destination, and weight.
+            </li>
+            <li>
+              Use the Union-Find data structure to manage sets of vertices and
+              detect cycles.
+            </li>
+            <li>Sort all edges by their weights in non-decreasing order.</li>
+            <li>
+              Add edges to the MST one by one, ensuring no cycles are formed,
+              until we include <code>n-1</code> edges.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  1584: (
+    <>
+      <h1>Min Cost to Connect All Points Using Kruskal's Algorithm</h1>
+
+      <ul>
+        <li>
+          <strong>Edge Class:</strong>
+          <ul>
+            <li>
+              Represents each connection (edge) between points with its cost.
+            </li>
+            <li>
+              Contains three fields: <code>u</code> (source point),{" "}
+              <code>v</code> (destination point), and <code>cost</code> (cost to
+              connect).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Union-Find Data Structure:</strong>
+          <ul>
+            <li>Helps to manage the sets of points and detect cycles.</li>
+            <li>
+              Includes two arrays: <code>parent</code> (tracks the parent of
+              each node) and <code>rank</code> (tracks the depth of each tree
+              for union by rank optimization).
+            </li>
+            <li>
+              Contains methods:
+              <ul>
+                <li>
+                  <code>find(int x)</code>: Finds the root of the set containing{" "}
+                  <code>x</code> and applies path compression.
+                </li>
+                <li>
+                  <code>union(int x, int y)</code>: Unites the sets containing{" "}
+                  <code>x</code> and <code>y</code> using union by rank.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Kruskal's Algorithm:</strong>
+          <ul>
+            <li>
+              Create all possible edges with their costs using the Manhattan
+              distance formula: <code>|x1 - x2| + |y1 - y2|</code>.
+            </li>
+            <li>Sort all edges by cost in ascending order.</li>
+            <li>
+              Initialize the Union-Find structure to manage the connected
+              components.
+            </li>
+            <li>
+              Iterate through the sorted edges and add each edge to the MST if
+              it doesn't form a cycle (using the Union-Find structure).
+            </li>
+            <li>
+              Accumulate the total cost of the MST and stop when all points are
+              connected.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
