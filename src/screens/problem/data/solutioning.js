@@ -2858,65 +2858,147 @@ const SOLUTIONING = {
   ),
   1584: (
     <>
-      <h1>Min Cost to Connect All Points Using Kruskal's Algorithm</h1>
-
+      <h1>Min Cost to Connect All Points using Kruskal's Algorithm</h1>
       <ul>
         <li>
-          <strong>Edge Class:</strong>
+          <strong>Step 1: Define Edge Class</strong>
           <ul>
             <li>
-              Represents each connection (edge) between points with its cost.
-            </li>
-            <li>
-              Contains three fields: <code>u</code> (source point),{" "}
-              <code>v</code> (destination point), and <code>cost</code> (cost to
-              connect).
+              Create a class to represent each connection between points, which
+              includes the two endpoints and the cost of the connection.
             </li>
           </ul>
         </li>
         <li>
-          <strong>Union-Find Data Structure:</strong>
+          <strong>Step 2: Implement Union-Find Data Structure</strong>
           <ul>
-            <li>Helps to manage the sets of points and detect cycles.</li>
             <li>
-              Includes two arrays: <code>parent</code> (tracks the parent of
-              each node) and <code>rank</code> (tracks the depth of each tree
-              for union by rank optimization).
+              Create a Union-Find (also known as Disjoint Set Union, DSU) class
+              to manage the sets of points and detect cycles.
             </li>
             <li>
-              Contains methods:
-              <ul>
-                <li>
-                  <code>find(int x)</code>: Finds the root of the set containing{" "}
-                  <code>x</code> and applies path compression.
-                </li>
-                <li>
-                  <code>union(int x, int y)</code>: Unites the sets containing{" "}
-                  <code>x</code> and <code>y</code> using union by rank.
-                </li>
-              </ul>
+              Implement path compression in the find function to speed up future
+              queries.
+            </li>
+            <li>
+              Implement union by rank to keep the tree flat, ensuring efficient
+              union operations.
             </li>
           </ul>
         </li>
         <li>
-          <strong>Kruskal's Algorithm:</strong>
+          <strong>Step 3: Create and Sort All Possible Edges</strong>
           <ul>
             <li>
-              Create all possible edges with their costs using the Manhattan
-              distance formula: <code>|x1 - x2| + |y1 - y2|</code>.
-            </li>
-            <li>Sort all edges by cost in ascending order.</li>
-            <li>
-              Initialize the Union-Find structure to manage the connected
-              components.
+              Generate all possible edges between the points and calculate their
+              costs using the Manhattan distance formula.
             </li>
             <li>
-              Iterate through the sorted edges and add each edge to the MST if
-              it doesn't form a cycle (using the Union-Find structure).
+              Sort the edges by their cost in ascending order to ensure the
+              minimum cost edges are considered first.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 4: Apply Kruskal's Algorithm</strong>
+          <ul>
+            <li>
+              Initialize a Union-Find instance to manage the connected
+              components of points.
             </li>
             <li>
-              Accumulate the total cost of the MST and stop when all points are
-              connected.
+              Iterate through the sorted edges and add them to the Minimum
+              Spanning Tree (MST) if they connect two different components.
+            </li>
+            <li>Accumulate the total cost of the edges added to the MST.</li>
+            <li>
+              Stop the process once we've used n-1 edges, where n is the number
+              of points, as this is the property of an MST for a connected
+              graph.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  1168: (
+    <>
+      {" "}
+      <h1>
+        Optimize Water Distribution in a Village using Kruskal's Algorithm
+      </h1>
+      <ul>
+        <li>
+          <strong>Step 1: Define Edge Class</strong>
+          <ul>
+            <li>
+              Create a class to represent each connection between houses or
+              between a house and the well, which includes the two endpoints and
+              the cost of the connection.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 2: Implement Union-Find Data Structure</strong>
+          <ul>
+            <li>
+              Create a Union-Find (also known as Disjoint Set Union, DSU) class
+              to manage the sets of houses and detect cycles.
+            </li>
+            <li>
+              Implement path compression in the find function to speed up future
+              queries.
+            </li>
+            <li>
+              Implement union by rank to keep the tree flat, ensuring efficient
+              union operations.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 3: Create and Combine All Possible Connections</strong>
+          <ul>
+            <li>
+              Generate edges for connections between the virtual vertex
+              (representing the well) and each house with the cost of digging
+              the well.
+            </li>
+            <li>
+              Generate edges for the existing pipes between houses and calculate
+              their costs.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 4: Sort All Possible Connections</strong>
+          <ul>
+            <li>
+              Sort all edges by their cost in ascending order to ensure the
+              minimum cost edges are considered first.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Step 5: Apply Kruskal's Algorithm</strong>
+          <ul>
+            <li>
+              Initialize a Union-Find instance to manage the connected
+              components of houses and the well.
+            </li>
+            <li>
+              Iterate through the sorted edges and add them to the Minimum
+              Spanning Tree (MST) if they connect two different components.
+            </li>
+            <li>Accumulate the total cost of the edges added to the MST.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Final Step: Return the Total Minimum Cost</strong>
+          <ul>
+            <li>
+              Once all necessary edges have been added to connect all houses to
+              water, return the total accumulated cost as the minimum cost to
+              supply water to all houses.
             </li>
           </ul>
         </li>
