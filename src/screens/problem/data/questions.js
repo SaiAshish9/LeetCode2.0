@@ -4752,6 +4752,88 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  1115: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>Suppose you are given the following code:</p>
+
+      <pre>
+        class FooBar &#123; <br />
+        &nbsp; public void foo() &#123;
+        <br />
+        &nbsp;&nbsp;&nbsp;for (int i = 0; i &lt; n; i++) &#123;
+        <br />
+        &nbsp; &nbsp;&nbsp;&nbsp;print("foo");
+        <br />
+        &nbsp;&nbsp; &#125;
+        <br />
+        &nbsp;&nbsp;&#125;
+        <br />
+        &nbsp; public void bar() &#123; &nbsp; <br />
+        &nbsp;&nbsp;&nbsp;for (int i = 0; i &lt; n; i++) &#123;
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("bar");
+        <br />
+        &nbsp;&nbsp; &#125;
+        <br />
+        &nbsp; &#125;
+        <br />
+        &#125;
+      </pre>
+
+      <p>
+        The same instance of <code>FooBar</code> will be passed to two different
+        threads:
+      </p>
+
+      <ul>
+        <li>
+          thread <code>A</code> will call <code>foo()</code>, while
+        </li>
+        <li>
+          thread <code>B</code> will call <code>bar()</code>.
+        </li>
+      </ul>
+
+      <p>
+        Modify the given program to output <code>"foobar"</code> <code>n</code>{" "}
+        times.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 1 <br />
+        <strong>Output:</strong> "foobar" <br />
+        <strong>Explanation:</strong> There are two threads being fired
+        asynchronously. One of them calls foo(), while the other calls bar().
+        "foobar" is being output 1 time.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 2 <br />
+        <strong>Output:</strong> "foobarfoobar" <br />
+        <strong>Explanation:</strong> "foobar" is being output 2 times.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= n &lt;= 1000</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
