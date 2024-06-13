@@ -146,12 +146,6 @@ const Problem = () => {
         }
 
         if (dropdownItemSelected === -1) {
-          console.log(
-            search ? toTitleCase(search.split("-").join(" ")) : defaultTag,
-            tags,
-            solutionKey,
-            search
-          );
           setDropdownItemSelected(tags.indexOf(solutionKey));
         }
       }
