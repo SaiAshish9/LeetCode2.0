@@ -68,7 +68,6 @@ import LinesSvg from "../../assets/lines.svg";
 import Bell1Svg from "../../assets/lock1.svg";
 import ArrowDownSvg from "../../assets/arrowDown.svg";
 import TickSvg1 from "../../assets/tick1.svg";
-import TickSvg2 from "../../assets/tick2.svg";
 import InfoSvg from "../../assets/info.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { QUESTIONS, SOLUTIONING } from "./data";
@@ -139,7 +138,11 @@ const Problem = () => {
             ]
           );
         } else {
-          setSolution(solutionsData?.[qno]?.["java"]?.[defaultTag.toLowerCase().split(" ").join("-")]);
+          setSolution(
+            solutionsData?.[qno]?.["java"]?.[
+              defaultTag.toLowerCase().split(" ").join("-")
+            ]
+          );
         }
 
         if (dropdownItemSelected === -1) {
@@ -387,7 +390,7 @@ const Problem = () => {
                   </LeftContentDescription>
                 )}
                 {step === 1 && SOLUTIONING[qInfo["qno"]]}
-                {step === 2 && solution && (
+                {step === 2 && (
                   <SEditor>
                     <TabOptionsContainer>
                       <TabOptionsContent>
@@ -510,7 +513,7 @@ const Problem = () => {
                 selected={selected === 2}
                 onClick={() => setSelected(2)}
               >
-                {solution && (
+                {
                   <>
                     <TabHeader>
                       <TabItem>
@@ -640,7 +643,7 @@ const Problem = () => {
                       />
                     )}
                   </>
-                )}
+                }
               </RightContainer>
               <TestCaseContainer
                 selected={selected === 3}
