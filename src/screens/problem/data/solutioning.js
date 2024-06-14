@@ -3695,6 +3695,61 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2223: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>n</code> is the length of the string <code>s</code>.
+          </li>
+          <li>
+            <code>z</code> is an array where <code>z[i]</code> stores the length
+            of the longest common prefix between the substring starting at index{" "}
+            <code>i</code> and the entire string <code>s</code>.
+          </li>
+          <li>
+            <code>l</code> and <code>r</code> are pointers initialized to{" "}
+            <code>0</code>, representing the rightmost segment match.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Z-function Calculation:</strong>
+        <ul>
+          <li>
+            Iterate through each character in the string <code>s</code> from{" "}
+            <code>1</code> to <code>n-1</code>.
+          </li>
+          <li>
+            Update <code>z[i]</code> based on the longest common prefix using
+            the segment match pointers <code>l</code> and <code>r</code>.
+          </li>
+          <li>
+            Extend <code>z[i]</code> by comparing characters until a mismatch is
+            found or the end of the string is reached.
+          </li>
+          <li>
+            Update <code>l</code> and <code>r</code> when extending{" "}
+            <code>z[i]</code> exceeds <code>r</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate Sum of Scores:</strong>
+        <ul>
+          <li>
+            Sum all values in the <code>z</code> array to get the total score of
+            all prefixes.
+          </li>
+          <li>
+            Add <code>n</code> to account for the score of the entire string{" "}
+            <code>s</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
