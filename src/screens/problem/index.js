@@ -102,12 +102,6 @@ const Problem = () => {
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
 
-  function toTitleCase(str) {
-    return str.replace(/\b\w/g, function (char) {
-      return char.toUpperCase();
-    });
-  }
-
   const fetchData = async () => {
     try {
       const qInfoData = (await axios(BASE_URL + "q_info.json")).data;
@@ -128,7 +122,8 @@ const Problem = () => {
         const solutionKey = search ?? defaultTag;
 
         if (
-          search && solutionsData?.[qno]?.["java"] &&
+          search &&
+          solutionsData?.[qno]?.["java"] &&
           solutionKey.toLowerCase().split(" ").join("-") in
             solutionsData?.[qno]?.["java"]
         ) {
@@ -210,7 +205,7 @@ const Problem = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [location]);
 
   const navigate = useNavigate();
 
@@ -495,6 +490,7 @@ const Problem = () => {
                       theme="vs-dark"
                       defaultLanguage="java"
                       defaultValue={solution ?? ""}
+                      value={solution ?? ""}
                       options={{ readOnly: true, domReadOnly: true }}
                     />
                   </SEditor>
@@ -633,6 +629,7 @@ const Problem = () => {
                       defaultLanguage="java"
                       userSelect={false}
                       defaultValue={solution ?? ""}
+                      value={solution ?? ""}
                     />
                   </>
                 }
