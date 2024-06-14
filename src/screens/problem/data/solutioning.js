@@ -3450,6 +3450,9 @@ const SOLUTIONING = {
     <>
       <ul>
         <p>
+          It's a <code>dp</code> question
+        </p>
+        <p>
           It's a <code>trie</code> question
         </p>
         <li>
@@ -3596,6 +3599,99 @@ const SOLUTIONING = {
             If no common hash value is found, it returns <code>false</code>.
           </li>
         </ul>
+      </ul>
+    </>
+  ),
+  1977: (
+    <>
+      <ul>
+        <li>
+          <strong>Initial Check:</strong> Check if the first character of `num`
+          is '0'. If true, return 0 immediately as no valid decoding can start
+          with '0'.
+        </li>
+
+        <li>
+          <strong>Constants:</strong> Define constants:
+          <ul>
+            <li>
+              <code>kMod = 1_000_000_007</code>: Modulo value to prevent
+              overflow.
+            </li>
+            <li>
+              <code>n = num.length()</code>: Length of the input string `num`.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Arrays Initialization:</strong>
+          <ul>
+            <li>
+              <code>dp[i][k]</code>: 2D array to store the number of possible
+              lists of integers ending in <code>num[i]</code> with the length of
+              the last number being 1..k.
+            </li>
+            <li>
+              <code>lcs[i][j]</code>: 2D array to store the number of the same
+              digits in <code>num[i..n)</code> and <code>num[j..n)</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Step 1: Compute LCS Array</strong>
+          <ul>
+            <li>
+              Iteratively compute the{" "}
+              <strong>Longest Common Subsequence (LCS)</strong> between suffixes
+              of `num` to fill the <code>lcs</code> array.
+            </li>
+            <li>
+              This helps in efficiently comparing substrings of `num` to
+              determine similarities.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Step 2: Dynamic Programming to Count Combinations</strong>
+          <ul>
+            <li>
+              Iterate through each position <code>i</code> in `num` and each
+              possible length <code>k</code> of the last number.
+            </li>
+            <li>
+              Update <code>dp[i][k]</code> based on several conditions:
+              <ul>
+                <li>
+                  If the substring starts with '0', skip it as it's not a valid
+                  number.
+                </li>
+                <li>
+                  If considering the entire string, increment the count by 1.
+                </li>
+                <li>
+                  If the length <code>k</code> is insufficient, add counts from{" "}
+                  <code>dp[s - 1][s]</code>.
+                </li>
+                <li>
+                  Use <code>lcs</code> to determine if the substring can be
+                  decoded as a valid number (compare characters).
+                </li>
+                <li>
+                  Apply modulo <code>kMod</code> to ensure results fit within
+                  integer limits.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return:</strong> Return <code>dp[n - 1][n] % kMod</code>,
+          which contains the number of ways to decode the entire string `num`.
+        </li>
       </ul>
     </>
   ),
