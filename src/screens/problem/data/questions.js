@@ -7082,7 +7082,7 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
-  672: (
+  692: (
     <div class="elfjS" data-track-load="description_content">
       <p>
         Given an array of strings <code>words</code> and an integer{" "}

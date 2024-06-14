@@ -3966,6 +3966,49 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  692: (
+    <ul>
+      <li>
+        <strong>Count Frequencies:</strong>
+        <ul>
+          <li>Use a HashMap to count the frequency of each word.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Bucket Sort:</strong>
+        <ul>
+          <li>
+            Create an array of lists (buckets) where the index represents the
+            frequency.
+          </li>
+          <li>
+            Place each word into its corresponding bucket based on its
+            frequency.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Collect Results:</strong>
+        <ul>
+          <li>
+            Iterate through the buckets from the highest frequency to the
+            lowest.
+          </li>
+          <li>
+            Sort words lexicographically within the same frequency bucket.
+          </li>
+          <li>Collect words until we have `k` words.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>Ensure the result list only contains `k` elements.</li>
+          <li>Return the list of the top `k` frequent words.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
