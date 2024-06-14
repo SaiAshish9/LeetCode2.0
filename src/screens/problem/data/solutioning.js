@@ -3450,9 +3450,6 @@ const SOLUTIONING = {
     <>
       <ul>
         <p>
-          It's a <code>dp</code> question
-        </p>
-        <p>
           It's a <code>trie</code> question
         </p>
         <li>
@@ -3605,6 +3602,9 @@ const SOLUTIONING = {
   1977: (
     <>
       <ul>
+        <p>
+          It's a <code>dp</code> question
+        </p>
         <li>
           <strong>Initial Check:</strong> Check if the first character of `num`
           is '0'. If true, return 0 immediately as no valid decoding can start
