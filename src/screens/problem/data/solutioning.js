@@ -3837,9 +3837,7 @@ const SOLUTIONING = {
         <li>
           <strong>Edge Case Handling:</strong>
           <ul>
-            <li>
-              If ( k &lt; 0 ) or ( t &gt; 0 ), return false immediately.
-            </li>
+            <li>If ( k &lt; 0 ) or ( t &gt; 0 ), return false immediately.</li>
           </ul>
         </li>
         <li>
@@ -3869,8 +3867,7 @@ const SOLUTIONING = {
             </li>
             <li>Add the current element to the bucket.</li>
             <li>
-              Remove elements that are out of the range ( k ) from the
-              buckets.
+              Remove elements that are out of the range ( k ) from the buckets.
             </li>
           </ul>
         </li>
@@ -3882,6 +3879,47 @@ const SOLUTIONING = {
         </li>
       </ul>
     </>
+  ),
+  347: (
+    <ul>
+      <li>
+        <strong>Count Frequencies:</strong>
+        <ul>
+          <li>
+            Use a HashMap to count the frequency of each element in the array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Bucket Sort:</strong>
+        <ul>
+          <li>
+            Create an array of lists (buckets) where the index represents the
+            frequency.
+          </li>
+          <li>
+            Place each element into its corresponding bucket based on its
+            frequency.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Collect Top K Frequent Elements:</strong>
+        <ul>
+          <li>
+            Iterate through the buckets from the highest frequency to the
+            lowest.
+          </li>
+          <li>Collect the elements until we have gathered `k` elements.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>Convert the result list to an array and return it.</li>
+        </ul>
+      </li>
+    </ul>
   ),
 };
 
