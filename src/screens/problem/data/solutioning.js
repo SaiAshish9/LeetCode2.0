@@ -3131,6 +3131,53 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1044: (
+    <ul>
+      <li>It's a <code>rolling hash</code> question.</li>
+      <li>
+        <strong>`longestDupSubstring(String s)` Method:</strong>
+        <ul>
+          <li>
+            Calculates the longest duplicate substring using the suffix array
+            and LCP array.
+          </li>
+          <li>
+            Iterates through the LCP array to find the maximum length of common
+            prefixes (`maxLen`) and the starting index (`pos`) of the substring.
+          </li>
+          <li>
+            Returns the longest duplicate substring found using the starting
+            position `pos` and the maximum length `maxLen`.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>`buildSuffixArray(String S)` Method:</strong>
+        <ul>
+          <li>Constructs the suffix array for the input string `S`.</li>
+          <li>
+            Uses a suffix sorting technique with comparisons based on character
+            values.
+          </li>
+          <li>Returns the constructed suffix array.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>`buildLCPArray(int[] suffixArray, String s)` Method:</strong>
+        <ul>
+          <li>
+            Computes the LCP (Longest Common Prefix) array using the suffix
+            array and the input string `s`.
+          </li>
+          <li>
+            Compares adjacent suffixes in the suffix array to compute LCP values
+            based on character comparisons.
+          </li>
+          <li>Returns the computed LCP array.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
