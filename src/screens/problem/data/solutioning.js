@@ -3831,6 +3831,58 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  220: (
+    <>
+      <ul>
+        <li>
+          <strong>Edge Case Handling:</strong>
+          <ul>
+            <li>
+              If ( k &lt; 0 ) or ( t &gt; 0 ), return false immediately.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Bucket Size Calculation:</strong>
+          <ul>
+            <li>Set bucket size to ( t + 1 ) to manage ranges of values.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Initialize Bucket HashMap:</strong>
+          <ul>
+            <li>
+              Create a HashMap to store elements based on their bucket index.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Process Each Element:</strong>
+          <ul>
+            <li>
+              Iterate through the array and compute the bucket index for the
+              current element.
+            </li>
+            <li>
+              Check the current bucket and adjacent buckets for potential
+              duplicates within the range ( t ).
+            </li>
+            <li>Add the current element to the bucket.</li>
+            <li>
+              Remove elements that are out of the range ( k ) from the
+              buckets.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>If no such elements are found, return false.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
