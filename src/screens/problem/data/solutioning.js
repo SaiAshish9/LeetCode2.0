@@ -3133,7 +3133,9 @@ const SOLUTIONING = {
   ),
   1044: (
     <ul>
-      <li>It's a <code>rolling hash</code> question.</li>
+      <li>
+        It's a <code>rolling hash</code> question.
+      </li>
       <li>
         <strong>`longestDupSubstring(String s)` Method:</strong>
         <ul>
