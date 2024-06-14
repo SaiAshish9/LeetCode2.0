@@ -3921,6 +3921,51 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  451: (
+    <ul>
+      <li>
+        <strong>Count Frequencies:</strong>
+        <ul>
+          <li>
+            Use a HashMap to count the frequency of each character in the
+            string.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Bucket Sort:</strong>
+        <ul>
+          <li>
+            Create an array of lists (buckets) where the index represents the
+            frequency.
+          </li>
+          <li>
+            Place each character into its corresponding bucket based on its
+            frequency.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Construct Result:</strong>
+        <ul>
+          <li>
+            Iterate through the buckets from the highest frequency to the
+            lowest.
+          </li>
+          <li>
+            Append characters to the result string, repeating each character
+            according to its frequency.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>Convert the result StringBuilder to a string and return it.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
