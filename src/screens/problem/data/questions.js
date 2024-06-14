@@ -7002,6 +7002,86 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  451: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code>, sort it in{" "}
+        <strong>decreasing order</strong> based on the{" "}
+        <strong>frequency</strong> of the characters. The{" "}
+        <strong>frequency</strong> of a character is the number of times it
+        appears in the string.
+      </p>
+
+      <p>
+        Return <em>the sorted string</em>. If there are multiple answers, return{" "}
+        <em>any of them</em>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "tree" <br />
+        <strong>Output:</strong> "eert"
+        <br />
+        <strong>Explanation:</strong> 'e' appears twice while 'r' and 't' both
+        appear once.
+        <br />
+        So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a
+        valid answer.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "cccaaa"
+        <br />
+        <strong>Output:</strong> "aaaccc"
+        <br />
+        <strong>Explanation:</strong> Both 'c' and 'a' appear three times, so
+        both "cccaaa" and "aaaccc" are valid answers.
+        <br />
+        Note that "cacaca" is incorrect, as the same characters must be
+        together.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "Aabb"
+        <br />
+        <strong>Output:</strong> "bbAa"
+        <br />
+        <strong>Explanation:</strong> "bbaA" is also a valid answer, but "Aabb"
+        is incorrect.
+        <br />
+        Note that 'A' and 'a' are treated as two different characters.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= s.length &lt;= 5 * 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>s</code> consists of uppercase and lowercase English letters and
+          digits.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
