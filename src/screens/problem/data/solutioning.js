@@ -3180,6 +3180,102 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1062: (
+    <ul>
+      <li>It's a <code>dp</code> question</li>
+      <li>
+        <strong>Class Structure:</strong>
+        <ul>
+          <li>
+            <code>Solution</code> class contains methods to find the longest
+            repeating substring.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize variables and arrays needed for suffix array construction
+            and LCP computation.
+          </li>
+          <li>
+            <code>p</code>: Array to store powers of base for hashing.
+          </li>
+          <li>
+            <code>h</code>: Array to store hash values of prefixes.
+          </li>
+          <li>
+            <code>base</code>: Base value for hashing.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Suffix Array Construction:</strong>
+        <ul>
+          <li>
+            <code>buildSuffixArray(String s)</code>: Constructs the suffix array
+            of string <code>s</code>.
+          </li>
+          <li>
+            Uses sorting and doubling technique to build the suffix array
+            efficiently.
+          </li>
+          <li>
+            Utilizes a custom comparator to sort suffixes lexicographically.
+          </li>
+          <li>
+            Returns the suffix array which represents the starting indices of
+            suffixes in sorted order.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>LCP Array Construction:</strong>
+        <ul>
+          <li>
+            <code>buildLCPArray(int[] suffixArray, String s)</code>: Constructs
+            the LCP (Longest Common Prefix) array using the suffix array and
+            string <code>s</code>.
+          </li>
+          <li>
+            Computes the LCP values between consecutive suffixes in the sorted
+            order.
+          </li>
+          <li>
+            Helps in determining the length of common prefixes between suffixes.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Binary Search for Longest Repeating Substring:</strong>
+        <ul>
+          <li>
+            Uses binary search to find the maximum length of the repeating
+            substring.
+          </li>
+          <li>
+            Iterates through possible lengths, checking if there exists a
+            repeating substring of that length.
+          </li>
+          <li>
+            <code>check(String s, int len)</code>: Checks if there exists a
+            repeating substring of length <code>len</code> using hash sets for
+            efficient lookup.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Output:</strong>
+        <ul>
+          <li>
+            Returns the longest repeating substring found using the above
+            methods.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
