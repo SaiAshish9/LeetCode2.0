@@ -3716,6 +3716,38 @@ const SOLUTIONING = {
       </li>
       <li>
         <strong>Z-function Calculation:</strong>
+        <li>
+          The Z-function is computed using the algorithm described on{" "}
+          <a href="https://cp-algorithms.com/string/z-function.html#implementation">
+            CP-Algorithms
+          </a>
+          .
+        </li>
+        <li>
+          <code>l</code> and <code>r</code> are pointers that represent the
+          rightmost segment match. Initially, <code>l = r = 0</code>.
+        </li>
+        <li>
+          The algorithm iterates through each character in the string (
+          <code>i</code> from <code>1</code> to <code>n-1</code>):
+        </li>
+        <li>
+          If <code>i &gt; r</code>, it checks if <code>z[i - l]</code> is
+          smaller than the segment length <code>r - i</code>. This helps to
+          initialize <code>z[i]</code> efficiently.
+        </li>
+        <li>
+          Then, it iteratively extends <code>z[i]</code> by comparing characters
+          between <code>s.charAt(z[i])</code> and{" "}
+          <code>s.charAt(i + z[i])</code> until a mismatch is found or the end
+          of the string is reached.
+        </li>
+        <li>
+          If <code>i + z[i]</code> exceeds <code>r</code>, it updates{" "}
+          <code>l</code> and <code>r</code> to <code>i</code> and{" "}
+          <code>i + z[i]</code>, respectively, indicating a new rightmost
+          segment match.
+        </li>
         <ul>
           <li>
             Iterate through each character in the string <code>s</code> from{" "}
