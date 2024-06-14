@@ -3446,6 +3446,58 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1698: (
+    <>
+      <ul>
+        <p>
+          It's a <code>trie</code> question
+        </p>
+        <li>
+          Initialize variables and data structures:
+          <ul>
+            <li>
+              <code>n</code>: Length of the string <code>s</code>.
+            </li>
+            <li>
+              <code>suffixArray</code>: Array storing starting indices of
+              suffixes of <code>s</code>, sorted lexicographically.
+            </li>
+            <li>
+              <code>lcpArray</code>: Array storing the longest common prefix
+              lengths between adjacent suffixes in <code>suffixArray</code>.
+            </li>
+            <li>
+              <code>count</code>: Variable to count the number of distinct
+              substrings.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Build the suffix array for <code>s = "aabbaba"</code>.
+        </li>
+        <li>
+          Build the LCP array using the suffix array and string <code>s</code>.
+        </li>
+        <li>
+          Iterate through the suffix array and calculate the total number of
+          distinct substrings:
+          <ul>
+            <li>
+              For each suffix, add its length to <code>count</code>.
+            </li>
+            <li>
+              Subtract the LCP value between consecutive suffixes from{" "}
+              <code>count</code> to avoid counting duplicate substrings.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Final <code>count</code> will give the total number of distinct
+          substrings in <code>s</code>.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
