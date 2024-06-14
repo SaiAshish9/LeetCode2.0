@@ -6946,11 +6946,11 @@ const QUESTIONS = {
       </p>
 
       <pre>
-        <strong>Input:</strong>
+        <strong>Input: </strong>
         nums = [1,2,3,1], indexDiff = 3, valueDiff = 0 <br />
-        <strong>Output:</strong> true
+        <strong>Output: </strong>true
         <br />
-        <strong>Explanation:</strong>
+        <strong>Explanation: </strong>
         We can choose (i, j) = (0, 3).
         <br />
         We satisfy the three conditions:
@@ -6965,12 +6965,12 @@ const QUESTIONS = {
       </p>
 
       <pre>
-        <strong>Input:</strong>
+        <strong>Input: </strong>
         nums = [1,5,9,1,5,9], indexDiff = 2, valueDiff = 3<br />
-        <strong>Output:</strong>
+        <strong>Output: </strong>
         false
         <br />
-        <strong>Explanation:</strong>
+        <strong>Explanation: </strong>
         After trying all the possible pairs (i, j), we cannot satisfy the three
         conditions, so we return false.
       </pre>
