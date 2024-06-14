@@ -3718,7 +3718,11 @@ const SOLUTIONING = {
         <strong>Z-function Calculation:</strong>
         <li>
           The Z-function is computed using the algorithm described on{" "}
-          <a href="https://cp-algorithms.com/string/z-function.html#implementation">
+          <a
+            href="https://cp-algorithms.com/string/z-function.html#implementation"
+            target="_blank"
+            rel="noreferrer"
+          >
             CP-Algorithms
           </a>
           .
@@ -3779,6 +3783,51 @@ const SOLUTIONING = {
             <code>s</code>.
           </li>
         </ul>
+      </li>
+    </ul>
+  ),
+  "164_bucket_sort": (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Compute the minimum and maximum values in the array (
+            <code>minVal</code> and <code>maxVal</code>).
+          </li>
+          <li>
+            Calculate the size of each bucket based on the number of elements
+            and the range of values.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Bucket Assignment:</strong>
+        <ul>
+          <li>
+            Assign each element in the array to its respective bucket based on
+            its value.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Compute Maximum Gap:</strong>
+        <ul>
+          <li>For each bucket, calculate the minimum and maximum values.</li>
+          <li>
+            Compute the difference between the minimum of the current bucket and
+            the maximum of the previous non-empty bucket to find potential
+            maximum gaps.
+          </li>
+          <li>Track the maximum gap encountered during this computation.</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong> The maximum gap found is the desired
+        output.
       </li>
     </ul>
   ),
