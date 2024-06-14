@@ -6835,6 +6835,81 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  1698: (
+    <div class="markdown-body div-width">
+      <div class="content__u3I1 question-content__JfgR">
+        <div>
+          <p>
+            Given a string <code>s</code>, return{" "}
+            <em>
+              the number of <strong>distinct</strong>
+              substrings of
+            </em>
+            &nbsp;<code>s</code>.
+          </p>
+          <p>
+            A <strong>substring</strong> of a string is obtained by deleting any
+            number of characters (possibly zero) from the front of the string
+            and any number (possibly zero) from the back of the string.
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <strong>Example 1:</strong>
+          </p>
+          <pre>
+            <strong>Input:</strong> s = "aabbaba" <br />
+            <strong>Output:</strong> 21
+            <br />
+            <strong>Explanation:</strong> <br />
+            The set of distinct strings is
+            ["a","b","aa","bb","ab","ba","aab","abb","bba","aba","aabb",
+            <br />
+            "abba","bbab","baba","aabba","abbab","bbaba","aabbab","abbaba","aabbaba"]
+          </pre>
+          <p>
+            <strong>Example 2:</strong>
+          </p>
+          <pre>
+            <strong>Input:</strong> s = "abcdefg"
+            <br />
+            <strong>Output:</strong> 28
+          </pre>
+          <p>&nbsp;</p>
+          <p>
+            <strong>Constraints:</strong>
+          </p>
+          <ul>
+            <li>
+              <code>1 &lt;= s.length &lt;= 500</code>
+            </li>
+            <li>
+              <code>s</code> consists of lowercase English letters.
+            </li>
+          </ul>
+          <p>&nbsp;</p>
+          <strong>Follow up:</strong> Can you solve this problem in{" "}
+          <code>O(n)</code> time complexity?
+        </div>
+      </div>
+      <p>
+        <strong>Hints:</strong>
+      </p>
+
+      <p>Hint 1</p>
+      <p>Calculate the prefix hashing array for s.</p>
+      <p>Hint 2</p>
+      <p>
+        Use the prefix hashing array to calculate the hashing value of each
+        substring.
+      </p>
+      <p>Hint 3</p>
+      <p>Compare the hashing values to determine the unique substrings.</p>
+      <p>Hint 4</p>
+      <p>
+        There could be collisions if you use hashing, what about double hashing.
+      </p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;

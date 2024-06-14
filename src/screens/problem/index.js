@@ -378,7 +378,21 @@ const Problem = () => {
                     {QUESTIONS[qInfo["qno"]]}
                   </LeftContentDescription>
                 )}
-                {step === 1 && SOLUTIONING[qInfo["qno"]]}
+                {step === 1
+                  ? `${qInfo["qno"]}_${decodeURIComponent(
+                      location?.search?.split("?tag=")?.[1]
+                    )}`
+                      ?.toLowerCase()
+                      ?.replaceAll(" ", "_") in SOLUTIONING
+                    ? SOLUTIONING?.[
+                        `${qInfo["qno"]}_${decodeURIComponent(
+                          location?.search?.split("?tag=")?.[1]
+                        )
+                          ?.toLowerCase()
+                          ?.replaceAll(" ", "_")}`
+                      ]
+                    : SOLUTIONING[qInfo["qno"]]
+                  : null}
                 {step === 2 && (
                   <SEditor>
                     <TabOptionsContainer>

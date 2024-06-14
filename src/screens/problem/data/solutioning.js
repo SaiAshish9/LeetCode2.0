@@ -3182,7 +3182,9 @@ const SOLUTIONING = {
   ),
   1062: (
     <ul>
-      <p>It's a <code>dp</code> question</p>
+      <p>
+        It's a <code>dp</code> question
+      </p>
       <li>
         <strong>Class Structure:</strong>
         <ul>
@@ -3275,6 +3277,174 @@ const SOLUTIONING = {
         </ul>
       </li>
     </ul>
+  ),
+  "1062_dynamic_programming": (
+    <>
+      <ul>
+        <li>
+          <strong>Class Structure:</strong>
+          <ul>
+            <li>
+              <code>Solution</code> class contains a method to find the length
+              of the longest repeating substring.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Initialize variables and arrays needed for dynamic programming.
+            </li>
+            <li>
+              <code>n</code>: Length of the string <code>s</code>.
+            </li>
+            <li>
+              <code>ans</code>: Variable to store the maximum length of the
+              longest repeating substring found.
+            </li>
+            <li>
+              <code>dp</code>: 2D array where <code>dp[i][j]</code> represents
+              the length of the longest repeating substring ending at indices{" "}
+              <code>i</code> and <code>j</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Dynamic Programming Approach:</strong>
+          <ul>
+            <li>
+              Iterate over each pair of indices <code>(i, j)</code> in the
+              string where <code>i &lt; j</code>.
+            </li>
+            <li>
+              Check if characters at indices <code>i</code> and <code>j</code>{" "}
+              are the same.
+            </li>
+            <li>
+              If they are the same, update <code>dp[i][j]</code>:
+              <ul>
+                <li>
+                  If <code>i &gt; 0</code>, set{" "}
+                  <code>dp[i][j] = dp[i - 1][j - 1] + 1</code>.
+                </li>
+                <li>
+                  Otherwise, set <code>dp[i][j] = 1</code> (starting a new
+                  substring).
+                </li>
+              </ul>
+            </li>
+            <li>
+              Update <code>ans</code> to keep track of the maximum length found.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Output:</strong>
+          <ul>
+            <li>
+              Return <code>ans</code>, which represents the length of the
+              longest repeating substring in the string <code>s</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Dry Run with Example String "aabcaabdaab":</h3>
+
+      <h4>Initialization:</h4>
+      <ul>
+        <li>
+          <code>n = 11</code>
+        </li>
+        <li>
+          <code>ans = 0</code>
+        </li>
+        <li>
+          <code>dp</code> array (initialized to zeros):
+          <pre>
+            dp = [ <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] <br />]
+          </pre>
+        </li>
+      </ul>
+
+      <h4>Dynamic Programming Calculation:</h4>
+      <ul>
+        <li>
+          Iterate over each pair of indices <code>(i, j)</code> where{" "}
+          <code>i &lt; j</code>:
+        </li>
+        <li>
+          Compare characters at indices <code>i</code> and <code>j</code>:
+        </li>
+        <li>
+          Update <code>dp[i][j]</code> if characters are the same:
+        </li>
+        <li>
+          <code>dp[0][1] = 1</code> (since 'a' at index 0 equals 'a' at index 1)
+        </li>
+        <li>
+          <code>dp[0][2] = 0</code> (since 'a' at index 0 does not equal 'b' at
+          index 2)
+        </li>
+        <li>
+          <code>dp[0][3] = 0</code> (since 'a' at index 0 does not equal 'c' at
+          index 3)
+        </li>
+        <li>
+          <code>dp[1][2] = 0</code> (since 'a' at index 1 does not equal 'b' at
+          index 2)
+        </li>
+        <li>
+          <code>dp[1][3] = 0</code> (since 'a' at index 1 does not equal 'c' at
+          index 3)
+        </li>
+        <li>
+          <code>dp[1][4] = 1</code> (since 'a' at index 1 equals 'a' at index 4)
+        </li>
+        <li>
+          Continue updating <code>dp</code> and <code>ans</code> for all valid
+          pairs <code>(i, j)</code>.
+        </li>
+      </ul>
+
+      <h4>
+        Final <code>dp</code> Array for input s="<code>aabcaabdaab</code>":
+      </h4>
+      <pre>
+        dp = [ <br />
+        [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0], <br />
+        [0, 0, 0, 0, 1, 2, 0, 0, 1, 2, 0], <br />
+        [0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0], <br />
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+        [0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0], <br />
+        [0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0], <br />
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3], <br />
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], <br />
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], <br />
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] <br />]
+      </pre>
+
+      <h4>Final Output:</h4>
+      <ul>
+        <li>
+          Return <code>ans = 3</code>, which represents the length of the
+          longest repeating substring in the string <code>"aabcaabdaab"</code>.
+        </li>
+      </ul>
+    </>
   ),
 };
 

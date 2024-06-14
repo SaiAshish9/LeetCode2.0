@@ -324,7 +324,8 @@ export const LeftContentDescription = styled.div`
   width: 100%;
   text-align: start;
 
-  div, p {
+  div,
+  p {
     color: #f5f5f5;
     font-size: 14px;
     margin-bottom: 1rem;
@@ -365,13 +366,13 @@ export const LeftContentDescription = styled.div`
     overflow: visible;
     padding-left: 1rem;
     white-space: pre-line;
-    
   }
 
   h1,
   h2,
   strong,
-  h3 {
+  h3,
+  h4 {
     color: rgb(255 255 255);
     font-weight: 500;
   }
