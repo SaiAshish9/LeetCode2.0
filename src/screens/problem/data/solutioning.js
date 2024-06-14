@@ -4009,6 +4009,56 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  "912_bucket_sort": (
+    <ul>
+      <li>
+        <strong>Determine the Range:</strong>
+        <ul>
+          <li>Find the minimum and maximum values in the array.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Create Buckets:</strong>
+        <ul>
+          <li>
+            Create an array of lists (buckets) where each list will hold a range
+            of values.
+          </li>
+          <li>
+            The number of buckets is determined based on the range and the
+            number of elements.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Distribute the Elements:</strong>
+        <ul>
+          <li>
+            Iterate through the array and place each element into its
+            corresponding bucket based on its value.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sort Each Bucket:</strong>
+        <ul>
+          <li>
+            Sort each bucket individually using an appropriate sorting
+            algorithm.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Concatenate Buckets:</strong>
+        <ul>
+          <li>
+            Combine all the sorted buckets into the original array to get the
+            sorted array.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
