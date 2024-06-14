@@ -107,6 +107,29 @@ export const CircularAvatar = styled.img`
   }
 `;
 
+export const ProfileAvatar = styled.img`
+  border-radius: 50%;
+  background: #fff;
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  margin-right: 1rem;
+`;
+
+export const NavItem1 = styled.p`
+  color: #eff1f6bf;
+  font-size: 0.9rem;
+  ${({ isHome }) =>
+    !isHome
+      ? css`
+          color: rgba(0, 0, 0, 0.55);
+          &:hover {
+            color: rgb(0, 0, 0);
+          }
+        `
+      : css``};
+`;
+
 export const NavItem = styled.p`
   color: #eff1f6bf;
   align-self: flex-end;
@@ -159,6 +182,7 @@ export const NavItem = styled.p`
   @media only screen and (max-width: ${BREAKPOINTS.md}) {
     margin-bottom: 1rem;
     font-size: 0.9rem;
+    margin-left: 0.5rem;
   ${({ text, route }) =>
     ["HLD", "LLD"].includes(text)
       ? css`
@@ -276,11 +300,32 @@ export const CloseIcon = styled(IoMdClose)`
 
 export const StyledDrawer = styled(Drawer)`
   background: rgb(40 40 40) !important;
-  padding-top: 1.8rem;
+  padding: 1.8rem 0rem;
+  overflow-x: hidden;
   ${({ isHome }) =>
     !isHome
       ? css`
           background: #fff !important;
         `
       : css``};
+  .ant-drawer-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+`;
+
+export const StyledDrawerIconContent = styled.div`
+  width: 100%;
+`;
+
+export const StyledDrawerIconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 0.5rem;
 `;

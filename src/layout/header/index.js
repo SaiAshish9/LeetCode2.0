@@ -16,6 +16,10 @@ import {
   BarsIcon,
   StyledDrawer,
   CloseIcon,
+  StyledDrawerIconContent,
+  StyledDrawerIconContainer,
+  ProfileAvatar,
+  NavItem1,
 } from "./styles";
 
 import BellSvg from "../../assets/bell.svg";
@@ -139,20 +143,36 @@ const Navbar = () => {
         isHome={!pathname.includes("/tag")}
         width={window.innerWidth < 576 ? "63vw" : "40vw"}
       >
-        {options.map((i, _) => (
-          <NavItem
-            key={i.text}
-            route={i.route === pathname}
-            isHome={!pathname.includes("/tag")}
-            text={i.text}
-            onClick={(e) => {
-              handleClick(e, i.route);
-              setOpen((open) => !open);
-            }}
-          >
-            {i.text}
-          </NavItem>
-        ))}
+        <StyledDrawerIconContent>
+          {options.map((i, _) => (
+            <NavItem
+              key={i.text}
+              route={i.route === pathname}
+              isHome={!pathname.includes("/tag")}
+              text={i.text}
+              onClick={(e) => {
+                handleClick(e, i.route);
+                setOpen((open) => !open);
+              }}
+            >
+              {i.text}
+            </NavItem>
+          ))}
+        </StyledDrawerIconContent>
+        <StyledDrawerIconContainer
+          onClick={() => {
+            window.open(
+              "https://www.linkedin.com/in/%F0%9F%9A%80-sai-ashish-237784188/",
+              "_blank"
+            );
+          }}
+        >
+          <ProfileAvatar
+            alt="pic"
+            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
+          />
+          <NavItem1 isHome={!pathname.includes("/tag")}>Sai</NavItem1>
+        </StyledDrawerIconContainer>
       </StyledDrawer>
     </NavContainer>
   );
