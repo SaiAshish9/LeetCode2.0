@@ -3498,6 +3498,107 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1923: (
+    <>
+      <p>
+        It's a <code>Rolling Hash</code> question
+      </p>
+      <ul>
+        <li>
+          <strong>Binary Search for Longest Common Subpath:</strong>
+        </li>
+        <ul>
+          <li>
+            The method <code>longestCommonSubpath</code> performs a binary
+            search to find the length of the longest common subpath among all
+            paths.
+          </li>
+          <li>
+            It initializes two pointers, <code>l</code> and <code>r</code>,
+            where <code>l</code> starts at 0 (minimum possible length) and{" "}
+            <code>r</code> starts at the length of the first path.
+          </li>
+          <li>
+            It iteratively adjusts the midpoint <code>m</code> and checks if
+            there exists a common subpath of length <code>m</code> using{" "}
+            <code>checkCommonSubpath</code> method.
+          </li>
+          <li>
+            If such a subpath is found, it adjusts <code>l</code> to{" "}
+            <code>m</code>; otherwise, it adjusts <code>r</code> to{" "}
+            <code>m - 1</code> to continue the binary search.
+          </li>
+          <li>
+            Finally, it returns <code>l</code>, which represents the length of
+            the longest common subpath found.
+          </li>
+        </ul>
+        less Copy code
+        <li>
+          <strong>Rabin-Karp Algorithm for Substring Hashing:</strong>
+        </li>
+        <ul>
+          <li>
+            The method <code>rabinKarp</code> computes the set of hash values
+            for all substrings of length <code>m</code> in a given path using
+            the Rabin-Karp rolling hash technique.
+          </li>
+          <li>
+            It initializes a set <code>hashes</code> to store unique hash
+            values.
+          </li>
+          <li>
+            Using constants <code>kMod</code> and <code>kBase</code>, it
+            computes the hash value for each substring efficiently.
+          </li>
+          <li>
+            It iterates through the path, updating the hash value by adding the
+            next character and removing the contribution of the character that
+            falls out of the window (if applicable).
+          </li>
+          <li>
+            Once the hash value for a substring of length <code>m</code> is
+            computed, it is added to the <code>hashes</code> set.
+          </li>
+          <li>
+            After processing all substrings of length <code>m</code>, the method
+            returns the set of hash values (<code>hashes</code>).
+          </li>
+        </ul>
+        <li>
+          <strong>Checking Common Subpath:</strong>
+        </li>
+        <ul>
+          <li>
+            The method <code>checkCommonSubpath</code> takes the array of paths
+            and the length of the subpath <code>m</code>.
+          </li>
+          <li>
+            It initializes an array of hash sets <code>hashSets</code>, where
+            each set contains hash values of all substrings of length{" "}
+            <code>m</code> for each path.
+          </li>
+          <li>
+            It uses the <code>rabinKarp</code> method to compute these hash
+            sets.
+          </li>
+          <li>
+            It then checks if the first path's hash set contains hash values
+            that are present in all other path's hash sets using{" "}
+            <code>Arrays.stream().allMatch()</code>.
+          </li>
+          <li>
+            If it finds a common hash value among all sets, it returns{" "}
+            <code>true</code>, indicating the existence of a common subpath of
+            length <code>m</code>.
+          </li>
+          <li>
+            If no common hash value is found, it returns <code>false</code>.
+          </li>
+        </ul>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
