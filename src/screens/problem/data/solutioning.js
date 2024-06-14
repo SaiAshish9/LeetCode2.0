@@ -3133,9 +3133,9 @@ const SOLUTIONING = {
   ),
   1044: (
     <ul>
-      <li>
+      <p>
         It's a <code>rolling hash</code> question.
-      </li>
+      </p>
       <li>
         <strong>`longestDupSubstring(String s)` Method:</strong>
         <ul>
@@ -3182,7 +3182,7 @@ const SOLUTIONING = {
   ),
   1062: (
     <ul>
-      <li>It's a <code>dp</code> question</li>
+      <p>It's a <code>dp</code> question</p>
       <li>
         <strong>Class Structure:</strong>
         <ul>
