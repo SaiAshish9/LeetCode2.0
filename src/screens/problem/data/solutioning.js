@@ -5127,6 +5127,94 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  146: (
+    <ul>
+      <li>
+        <strong>Key Components:</strong>
+        <ul>
+          <li>
+            <strong>Doubly Linked List:</strong> Used to maintain the order of
+            recently used items, allowing efficient removal and insertion
+            operations.
+          </li>
+          <li>
+            <strong>HashMap:</strong> Used for fast lookup of items by their
+            keys.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Steps to Solve:</strong>
+        <ul>
+          <li>
+            <strong>Initialization:</strong>
+            <ul>
+              <li>
+                Initialize a doubly linked list to keep track of the order of
+                items based on their access.
+              </li>
+              <li>
+                Use a HashMap to store key-value pairs for quick lookup and
+                update.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Get Operation (`get(key)`):</strong>
+            <ul>
+              <li>
+                If the key exists in the HashMap:
+                <ul>
+                  <li>
+                    Retrieve the corresponding node from the doubly linked list.
+                  </li>
+                  <li>
+                    Move this node to the front of the list (indicating it's the
+                    most recently used).
+                  </li>
+                  <li>Return the value associated with the key.</li>
+                </ul>
+              </li>
+              <li>Otherwise, return -1 indicating the key is not present.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Put Operation (`put(key, value)`):</strong>
+            <ul>
+              <li>
+                If the key exists in the HashMap:
+                <ul>
+                  <li>Update the value associated with the key.</li>
+                  <li>
+                    Move the corresponding node to the front of the doubly
+                    linked list.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                If the key doesn't exist:
+                <ul>
+                  <li>Create a new node with the key-value pair.</li>
+                  <li>Add this node to the front of the doubly linked list.</li>
+                  <li>Add the key-value pair to the HashMap.</li>
+                  <li>
+                    If the cache exceeds its capacity:
+                    <ul>
+                      <li>
+                        Remove the least recently used node (from the end of the
+                        doubly linked list).
+                      </li>
+                      <li>Remove the corresponding entry from the HashMap.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
