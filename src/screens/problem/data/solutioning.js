@@ -4639,6 +4639,109 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  "2343_quickselect": (
+    <>
+      <ul>
+        <li>
+          <strong>Pair Class:</strong>
+          <ul>
+            <li>
+              Defines a <code>Pair</code> class representing a trimmed number
+              and its original index in the input array.
+            </li>
+            <li>
+              Implements <code>Comparable</code> to compare pairs based on
+              trimmed numbers and original indices.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>smallestTrimmedNumbers Method:</strong>
+          <ul>
+            <li>
+              Initializes <code>result</code> array to store results of each
+              query.
+            </li>
+            <li>
+              Uses <code>trimmedMap</code> to cache trimmed arrays for different
+              trim lengths.
+            </li>
+            <li>
+              Processes each query:
+              <ul>
+                <li>
+                  Retrieves or computes the trimmed array for the specified trim
+                  length.
+                </li>
+                <li>
+                  Creates <code>Pair</code> objects from the trimmed array
+                  elements.
+                </li>
+                <li>
+                  Finds the kth smallest Pair using <code>findKthSmallest</code>{" "}
+                  method.
+                </li>
+                <li>
+                  Stores the original index of the kth smallest Pair in{" "}
+                  <code>result</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>trimStrings Method:</strong>
+          <ul>
+            <li>
+              Trims each string in <code>nums</code> to the specified length{" "}
+              <code>trimLength</code>.
+            </li>
+            <li>Returns a new array of trimmed strings.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>findKthSmallest Method:</strong>
+          <ul>
+            <li>
+              Uses modified quickselect algorithm to find the kth smallest{" "}
+              <code>Pair</code> in <code>pairs</code>.
+            </li>
+            <li>
+              Partitions <code>pairs</code> based on comparisons using{" "}
+              <code>partition</code> method.
+            </li>
+            <li>
+              Returns the kth smallest <code>Pair</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>partition Method:</strong>
+          <ul>
+            <li>
+              Selects a pivot element, partitions <code>pairs</code> into
+              smaller and larger elements relative to the pivot.
+            </li>
+            <li>
+              Uses two pointers technique to efficiently partition the array.
+            </li>
+            <li>
+              Moves the pivot to its correct position and returns the index of
+              the pivot.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>swap Method:</strong>
+          <ul>
+            <li>
+              Swaps two elements in <code>pairs</code> array.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
