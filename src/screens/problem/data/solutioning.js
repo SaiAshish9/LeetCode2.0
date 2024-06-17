@@ -4993,6 +4993,65 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1467: (
+    <ul>
+      <li>
+        <strong>Key Insights:</strong>
+        <ul>
+          <li>
+            The solution uses recursion with memoization to explore all possible
+            distributions of balls into two boxes and calculate the probability
+            based on the conditions specified.
+          </li>
+          <li>
+            The solution leverages the factorial array `fact` for efficient
+            calculation of permutations.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Steps to Solve:</strong>
+        <ul>
+          <li>
+            <strong>Initialization:</strong>
+            <ul>
+              <li>
+                Initialize the factorial array `fact` up to the necessary size
+                for factorial calculations.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Main Function:</strong>
+            <ul>
+              <li>
+                <code>getProbability(int[] balls)</code>: Computes and returns
+                the probability using the <code>cases()</code> function for both
+                scenarios (equal distinct balls and equal total balls).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Recursive Function:</strong>
+            <ul>
+              <li>
+                <code>cases()</code>: Recursively explores all possible
+                distributions of balls between boxes A and B.
+              </li>
+              <li>
+                Tracks the number of balls and distinct colors in both boxes.
+              </li>
+              <li>
+                Calculates probabilities based on the conditions provided (equal
+                balls or equal distinct balls).
+              </li>
+              <li>Uses memoization to avoid redundant calculations.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
