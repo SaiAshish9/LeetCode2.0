@@ -4059,6 +4059,136 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  215: (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>findKthLargest Method:</strong>
+        <ul>
+          <li>
+            Defines a public method to find the k-th largest element in an
+            array.
+          </li>
+          <li>
+            Initializes two pointers, left and right, to the start and end of
+            the array, respectively.
+          </li>
+          <li>
+            Creates an instance of the Random class to generate random pivot
+            indices.
+          </li>
+          <li>
+            Enters an infinite loop that continues until the k-th largest
+            element is found.
+          </li>
+          <li>
+            Within the loop, selects a random pivot index within the current
+            subarray.
+          </li>
+          <li>
+            Calls a partition method to rearrange elements around the pivot and
+            returns the final pivot index.
+          </li>
+          <li>
+            Checks if the pivot index is equal to the target index for the k-th
+            largest element:
+            <ul>
+              <li>
+                If true, returns the element at the pivot index as the k-th
+                largest element.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the pivot index is greater than the target index:
+            <ul>
+              <li>Adjusts the right pointer to search in the left subarray.</li>
+            </ul>
+          </li>
+          <li>
+            If the pivot index is less than the target index:
+            <ul>
+              <li>Adjusts the left pointer to search in the right subarray.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Partition Method (Referenced):</strong>
+        <ul>
+          <li>
+            Partitions the array around the pivot, such that elements less than
+            the pivot are on one side and elements greater than the pivot are on
+            the other side.
+          </li>
+          <li>
+            Swaps the pivot element with other elements to place it in its
+            correct sorted position.
+          </li>
+          <li>Returns the final index of the pivot element.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Swap Method (Referenced):</strong>
+        <ul>
+          <li>Swaps two elements in the array.</li>
+          <li>Uses a temporary variable to facilitate the swap.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  "215_heap_(priority_queue)": (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>findKthLargest Method:</strong>
+        <ul>
+          <li>
+            Defines a public method to find the k-th largest element in an
+            array.
+          </li>
+          <li>
+            Initializes a priority queue named minHeap which serves as a
+            min-heap.
+          </li>
+          <li>
+            Iterates through each element in the input array nums:
+            <ul>
+              <li>Adds the current element to the min-heap.</li>
+              <li>
+                Checks if the size of the min-heap exceeds k:
+                <ul>
+                  <li>
+                    If true, removes the smallest element from the min-heap to
+                    maintain the size of k.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            After processing all elements, the min-heap contains the k largest
+            elements in the array.
+          </li>
+          <li>
+            The root of the min-heap (the smallest element in the heap) is the
+            k-th largest element in the array.
+          </li>
+          <li>Returns the root of the min-heap.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
