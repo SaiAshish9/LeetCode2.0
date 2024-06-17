@@ -6018,6 +6018,77 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1117: (
+    <ul>
+      <li>
+        <strong>Initialization</strong>
+        <ul>
+          <li>
+            Create a class `H2O` with:
+            <ul>
+              <li>
+                A `Semaphore` for hydrogen (`hydrogenSemaphore`) initialized
+                with 2 permits to allow up to 2 hydrogen atoms.
+              </li>
+              <li>
+                A `Semaphore` for oxygen (`oxygenSemaphore`) initialized with 1
+                permit to allow 1 oxygen atom.
+              </li>
+              <li>
+                An integer `hydrogenCount` to keep track of the number of
+                hydrogen atoms released.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>hydrogen Method</strong>
+        <ul>
+          <li>
+            The `hydrogen` method:
+            <ul>
+              <li>
+                Acquires a permit from `hydrogenSemaphore` to ensure no more
+                than 2 hydrogen atoms are released at a time.
+              </li>
+              <li>
+                Synchronizes the block of code to safely increment
+                `hydrogenCount` and run `releaseHydrogen.run()`.
+              </li>
+              <li>
+                Checks if `hydrogenCount` has reached 2, and if so, releases a
+                permit for `oxygenSemaphore` to allow the oxygen atom to be
+                released.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>oxygen Method</strong>
+        <ul>
+          <li>
+            The `oxygen` method:
+            <ul>
+              <li>
+                Acquires a permit from `oxygenSemaphore` to ensure only one
+                oxygen atom is released at a time.
+              </li>
+              <li>
+                Synchronizes the block of code to run `releaseOxygen.run()` and
+                reset `hydrogenCount` to 0 after forming a water molecule.
+              </li>
+              <li>
+                Releases 2 permits for `hydrogenSemaphore` to allow the next two
+                hydrogen atoms to be released for the next water molecule.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
