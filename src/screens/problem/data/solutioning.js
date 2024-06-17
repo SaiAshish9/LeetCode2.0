@@ -4187,6 +4187,29 @@ const SOLUTIONING = {
           <li>Returns the root of the min-heap.</li>
         </ul>
       </li>
+      <li>
+        <strong>Time Complexity:</strong>
+        <ul>
+          <li>
+            The time complexity of adding an element to a priority queue (heap)
+            is O(log k), where k is the size of the heap.
+          </li>
+          <li>
+            Since we add each element in nums to the heap exactly once, and
+            remove elements from the heap until its size is k, the overall time
+            complexity is O(n log k), where n is the number of elements in nums.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Space Complexity:</strong>
+        <ul>
+          <li>
+            The space complexity is O(k) due to the min-heap storing at most k
+            elements.
+          </li>
+        </ul>
+      </li>
     </ul>
   ),
 };
