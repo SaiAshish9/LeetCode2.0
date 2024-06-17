@@ -5683,6 +5683,82 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  426: (
+    <ul>
+      <li>
+        <strong>Instance Variables:</strong>
+        <ul>
+          <li>
+            <code>private Node prev;</code>: Keeps track of the previous node in
+            the inorder traversal.
+          </li>
+          <li>
+            <code>private Node head;</code>: Points to the head of the doubly
+            linked list.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Method: <code>treeToDoublyList(Node root)</code>
+        </strong>
+        <ul>
+          <li>
+            Converts a binary search tree (BST) rooted at <code>root</code> into
+            a sorted doubly linked list.
+          </li>
+          <li>
+            <code>dfs(root)</code> is called to perform inorder traversal and
+            link nodes appropriately.
+          </li>
+          <li>
+            Finally, it links the head and tail of the list after traversal.
+          </li>
+          <li>
+            <strong>Parameters:</strong>
+            <ul>
+              <li>
+                <code>root</code>: The root node of the BST.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Returns:</strong>
+            <ul>
+              <li>Returns the head of the sorted doubly linked list.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Method: <code>dfs(Node root)</code>
+        </strong>
+        <ul>
+          <li>Performs inorder traversal recursively.</li>
+          <li>Links the current node with the previous node (if exists).</li>
+          <li>
+            Updates <code>prev</code> to the current node and handles edge case
+            to set <code>head</code>.
+          </li>
+          <li>
+            <strong>Parameters:</strong>
+            <ul>
+              <li>
+                <code>root</code>: Current node being processed.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Returns:</strong>
+            <ul>
+              <li>Returns void as it operates on instance variables.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
