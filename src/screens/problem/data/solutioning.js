@@ -5759,6 +5759,97 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1114: (
+    <>
+      <ul>
+        <li>
+          <b>Object and Flags:</b>
+          <ul>
+            <li>
+              <code>lock</code>: This object is used for synchronization. It
+              ensures that only one thread can execute critical sections (
+              <code>first</code>, <code>second</code>, <code>third</code>) at a
+              time.
+            </li>
+            <li>
+              <code>firstExecuted</code> and <code>secondExecuted</code>: These
+              boolean flags track whether <code>first()</code> and{" "}
+              <code>second()</code> have been executed, respectively.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            Constructor (<code>Foo()</code>):
+          </b>
+          <ul>
+            <li>
+              Initializes <code>firstExecuted</code> and{" "}
+              <code>secondExecuted</code> to <code>false</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            <code>first(Runnable printFirst)</code>:
+          </b>
+          <ul>
+            <li>
+              Executes <code>printFirst.run()</code>, which outputs "first".
+            </li>
+            <li>
+              Sets <code>firstExecuted</code> to <code>true</code> to signal
+              that <code>first()</code> has completed.
+            </li>
+            <li>
+              Uses <code>lock.notifyAll()</code> to wake up any threads waiting
+              in <code>second()</code> or <code>third()</code> methods after{" "}
+              <code>first()</code> completes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            <code>second(Runnable printSecond)</code>:
+          </b>
+          <ul>
+            <li>
+              Waits (<code>lock.wait()</code>) until <code>firstExecuted</code>{" "}
+              is <code>true</code>, indicating that <code>first()</code> has
+              completed.
+            </li>
+            <li>
+              Executes <code>printSecond.run()</code>, which outputs "second".
+            </li>
+            <li>
+              Sets <code>secondExecuted</code> to <code>true</code> to signal
+              that <code>second()</code> has completed.
+            </li>
+            <li>
+              Uses <code>lock.notifyAll()</code> to wake up any threads waiting
+              in <code>third()</code> method after <code>second()</code>{" "}
+              completes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            <code>third(Runnable printThird)</code>:
+          </b>
+          <ul>
+            <li>
+              Waits (<code>lock.wait()</code>) until <code>secondExecuted</code>{" "}
+              is <code>true</code>, indicating that <code>second()</code> has
+              completed.
+            </li>
+            <li>
+              Executes <code>printThird.run()</code>, which outputs "third".
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
