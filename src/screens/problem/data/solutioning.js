@@ -4289,6 +4289,54 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  "347_quickselect": (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>topKFrequent Method:</strong>
+        <ul>
+          <li>
+            Public method to find the top k frequent elements in the input array
+            nums.
+          </li>
+          <li>Uses a HashMap to count frequencies of each element in nums.</li>
+          <li>
+            Converts unique elements and their frequencies into a list for
+            quickselect.
+          </li>
+          <li>
+            Applies quickselect algorithm to find the k-th most frequent
+            elements based on their frequencies.
+          </li>
+          <li>
+            Partitions the list based on frequency and retrieves the top k
+            elements.
+          </li>
+          <li>Returns an array containing the top k frequent elements.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>partition Method:</strong>
+        <ul>
+          <li>
+            Private method to partition the list based on frequency for
+            quickselect.
+          </li>
+          <li>
+            Uses the frequency of elements stored in the frequencyMap to
+            determine the order.
+          </li>
+          <li>Swaps elements in the list to rearrange based on frequency.</li>
+          <li>Returns the index of the pivot element after partitioning.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
