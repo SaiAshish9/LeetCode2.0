@@ -5301,6 +5301,64 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  432: (
+    <ul>
+      <li>
+        <strong>Data Structures:</strong>
+        <ul>
+          <li>
+            <strong>HashMap:</strong> Used to store the frequency of each key
+            and its corresponding node in the doubly linked list.
+          </li>
+          <li>
+            <strong>Doubly Linked List:</strong> Each node stores a frequency
+            and a set of keys that have that frequency. The list is ordered by
+            frequency.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Increment Key:</strong>
+        <ul>
+          <li>If the key doesn't exist, add it with frequency 1.</li>
+          <li>
+            If the key exists, remove it from its current frequency node and add
+            it to the next frequency node. If the next frequency node doesn't
+            exist, create it.
+          </li>
+          <li>Update the key's entry in the HashMap.</li>
+          <li>If a frequency node becomes empty, remove it from the list.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Decrement Key:</strong>
+        <ul>
+          <li>
+            If the key exists and its frequency is 1, remove it completely.
+          </li>
+          <li>
+            If the key exists and its frequency is greater than 1, remove it
+            from its current frequency node and add it to the previous frequency
+            node. If the previous frequency node doesn't exist, create it.
+          </li>
+          <li>Update the key's entry in the HashMap.</li>
+          <li>If a frequency node becomes empty, remove it from the list.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Get Max Key:</strong>
+        <ul>
+          <li>Return any key from the node with the highest frequency.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Get Min Key:</strong>
+        <ul>
+          <li>Return any key from the node with the lowest frequency.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
