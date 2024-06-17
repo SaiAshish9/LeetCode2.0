@@ -4799,6 +4799,68 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  837: (
+    <ul>
+      <li>
+        <strong>Problem Explanation:</strong>
+        <ul>
+          <li>
+            The game starts with a score of `0` and aims to reach score `N` by
+            drawing cards with numbers from `1` to `W`.
+          </li>
+          <li>
+            The goal is to calculate the probability of reaching exactly score
+            `N` with the minimum number of draws.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Approach Using Dynamic Programming and Probability:</strong>
+        <ul>
+          <li>
+            <strong>Initialization:</strong>
+            <ul>
+              <li>
+                Use a `dp` array where `dp[i]` represents the probability of
+                reaching score `i`.
+              </li>
+              <li>
+                Initialize `dp[0] = 1.0` because starting with score `0` has a
+                probability of `1.0`.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Transition Between States:</strong>
+            <ul>
+              <li>
+                For each score `i` from `1` to `N`, calculate the probability of
+                reaching `i` using probabilities from `i-1` to `i-W`.
+              </li>
+              <li>
+                Update `dp[i]` based on the sum of probabilities from `dp[i-1]`
+                to `dp[i-W]`, adjusted for card draw probability `1/W`.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Calculate Result:</strong>
+            <ul>
+              <li>
+                Compute the sum of probabilities `dp[i]` for scores `K` to `N`,
+                representing reaching exactly `N` with the minimum draws
+                starting from `K`.
+              </li>
+              <li>
+                Return this sum as the probability of achieving score `N` in the
+                game.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
