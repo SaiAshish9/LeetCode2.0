@@ -5359,6 +5359,66 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  460: (
+    <ul>
+      <li>
+        <strong>Data Structures:</strong>
+        <ul>
+          <li>
+            <strong>HashMap (keyToNode):</strong> Maps keys to their
+            corresponding nodes in the doubly linked list.
+          </li>
+          <li>
+            <strong>HashMap (freqToDLL):</strong> Maps frequencies to their
+            corresponding doubly linked lists, which contain all nodes with that
+            frequency.
+          </li>
+          <li>
+            <strong>Doubly Linked List:</strong> Each node stores a key, a
+            value, and its frequency. The list is ordered by frequency.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>Set the capacity of the LFU cache.</li>
+          <li>Initialize the keyToNode and freqToDLL HashMaps.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Get Operation:</strong>
+        <ul>
+          <li>If the key doesn't exist, return -1.</li>
+          <li>
+            If the key exists, retrieve its node, update its frequency, and
+            return its value.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Put Operation:</strong>
+        <ul>
+          <li>If the key already exists, update its value and frequency.</li>
+          <li>
+            If the key doesn't exist, check if the cache is at capacity. If so,
+            evict the least frequently used node.
+          </li>
+          <li>Add the new key and value to the cache with a frequency of 1.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Frequency Update:</strong>
+        <ul>
+          <li>
+            Remove the node from its current frequency list and add it to the
+            next frequency list.
+          </li>
+          <li>If a frequency list becomes empty, remove it.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
