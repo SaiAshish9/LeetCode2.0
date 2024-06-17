@@ -4521,6 +4521,124 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1985: (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+          <li>
+            Includes a Random object `rand` for generating random numbers.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>compare Method:</strong>
+        <ul>
+          <li>
+            Custom comparison method `compare` that compares two strings `a` and
+            `b` based on their lengths.
+          </li>
+          <li>
+            If lengths are different, returns the difference between lengths
+            (descending order).
+          </li>
+          <li>
+            If lengths are the same, compares lexicographically in descending
+            order.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>kthLargestNumber Method:</strong>
+        <ul>
+          <li>
+            Public method to find the Kth largest string number in the array
+            `nums`.
+          </li>
+          <li>Initializes the `rand` Random object.</li>
+          <li>
+            Calls `quickSort` method to perform quicksort on `nums` to find the
+            Kth largest number.
+          </li>
+          <li>Returns the Kth largest number found.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>quickSort Method:</strong>
+        <ul>
+          <li>
+            Recursive method to perform quicksort on the `nums` array to find
+            the Kth largest number.
+          </li>
+          <li>
+            Uses a random index `selected` as pivot and swaps it with the first
+            element `start`.
+          </li>
+          <li>
+            Partitions the array into two parts: elements smaller than
+            `nums[start]` and elements larger or equal to `nums[start]`.
+          </li>
+          <li>
+            If the length of the smaller part (`idx - start + 1`) equals `k`,
+            the Kth largest element is found.
+          </li>
+          <li>
+            Recursively calls `quickSort` on the appropriate partition based on
+            the comparison result.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>swap Method:</strong>
+        <ul>
+          <li>Utility method to swap elements in the `nums` array.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  "1985_heap_(priority_queue)": (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>kthLargestNumber Method:</strong>
+        <ul>
+          <li>
+            Public method to find the Kth largest string number in the array
+            `nums`.
+          </li>
+          <li>
+            Uses a min-heap (priority queue) to keep track of the smallest `k`
+            elements encountered so far.
+          </li>
+          <li>
+            The min-heap is initialized with a comparator that prioritizes
+            shorter strings (length comparison) and then lexicographical order
+            if lengths are the same.
+          </li>
+          <li>Iterates through each string `num` in the `nums` array:</li>
+          <ul>
+            <li>Adds `num` to the min-heap.</li>
+            <li>
+              If the size of the min-heap exceeds `k`, removes the smallest
+              element (maintaining the largest `k` elements only).
+            </li>
+          </ul>
+          <li>
+            After processing all elements, the root of the min-heap (the
+            smallest element in the heap) will be the Kth largest element in the
+            array.
+          </li>
+          <li>Returns the Kth largest element found.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
