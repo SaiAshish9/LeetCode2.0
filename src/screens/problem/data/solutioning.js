@@ -5215,6 +5215,92 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  430: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>Start with the head of the list.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Traverse and Flatten:</strong>
+        <ul>
+          <li>Traverse the list using a pointer.</li>
+          <li>If a node with a child is found, perform the following steps:</li>
+          <ul>
+            <li>
+              <strong>Save the Next Node:</strong>
+              <ul>
+                <li>Store the next node of the current node.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Flatten the Child List:</strong>
+              <ul>
+                <li>Recursively flatten the child list.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Insert the Flattened Child List:</strong>
+              <ul>
+                <li>
+                  Set the next pointer of the current node to the head of the
+                  flattened child list.
+                </li>
+                <li>
+                  Set the previous pointer of the head of the flattened child
+                  list to the current node.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Find the Tail of the Flattened Child List:</strong>
+              <ul>
+                <li>
+                  Traverse to the end of the flattened child list to find the
+                  tail.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Connect the Tail to the Next Node:</strong>
+              <ul>
+                <li>
+                  Set the next pointer of the tail to the stored next node.
+                </li>
+                <li>
+                  Set the previous pointer of the stored next node (if it is not
+                  null) to the tail.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Clear the Child Pointer:</strong>
+              <ul>
+                <li>Set the child pointer of the current node to null.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Continue Traversal:</strong>
+              <ul>
+                <li>Move the pointer to the next node in the list.</li>
+              </ul>
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>End of List:</strong>
+        <ul>
+          <li>
+            When the end of the list is reached, return the head of the
+            flattened list.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
