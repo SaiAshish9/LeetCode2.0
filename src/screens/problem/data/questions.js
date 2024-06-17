@@ -4419,19 +4419,29 @@ const QUESTIONS = {
         We use the multilevel linked list from <strong>Example 1</strong> above:
       </p>
       <pre>
-        {" "}
-        1---2---3---4---5---6--NULL | 7---8---9---10--NULL | 11--12--NULL
+        {` 1---2---3---4---5---6--NULL
+         |
+         7---8---9---10--NULL
+             |
+             11--12--NULL`}
       </pre>
       <p>The serialization of each level is as follows:</p>
-      <pre>[1,2,3,4,5,6,null] [7,8,9,10,null] [11,12,null]</pre>
+      <pre>
+        [1,2,3,4,5,6,null] <br />
+        [7,8,9,10,null] <br />
+        [11,12,null]
+      </pre>
       <p>
         To serialize all levels together, we will add nulls in each level to
         signify no node connects to the upper node of the previous level. The
         serialization becomes:
       </p>
       <pre>
-        [1, 2, 3, 4, 5, 6, null] | [null, null, 7, 8, 9, 10, null] | [ null, 11,
-        12, null]
+        {`[1,    2,    3, 4, 5, 6, null] 
+             |
+[null, null, 7,    8, 9, 10, null]
+                   |
+[            null, 11, 12, null]`}
       </pre>
       <p>
         Merging the serialization of each level and removing trailing nulls we
