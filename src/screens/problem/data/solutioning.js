@@ -5419,6 +5419,59 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1472: (
+    <ul>
+      <li>
+        <strong>Data Structures:</strong>
+        <ul>
+          <li>
+            <strong>Doubly Linked List:</strong> Each node represents a page in
+            the browser history, storing the URL, and pointers to the previous
+            and next nodes.
+          </li>
+          <li>
+            <strong>Current Pointer:</strong> Points to the current page in the
+            browser history.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>Initialize the doubly linked list with the homepage URL.</li>
+          <li>Set the current pointer to the homepage node.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Visit Operation:</strong>
+        <ul>
+          <li>Create a new node for the new URL.</li>
+          <li>Set the next pointer of the current node to the new node.</li>
+          <li>Set the previous pointer of the new node to the current node.</li>
+          <li>Move the current pointer to the new node.</li>
+          <li>Remove any nodes that were forward of the current node.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Back Operation:</strong>
+        <ul>
+          <li>
+            Move the current pointer back by the specified number of steps or
+            until the beginning of the history.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Forward Operation:</strong>
+        <ul>
+          <li>
+            Move the current pointer forward by the specified number of steps or
+            until the end of the history.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
