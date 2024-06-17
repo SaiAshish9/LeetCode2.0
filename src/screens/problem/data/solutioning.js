@@ -4212,6 +4212,83 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  324: (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>wiggleSort Method:</strong>
+        <ul>
+          <li>
+            Public method to rearrange the input array nums into a "wiggle"
+            pattern.
+          </li>
+          <li>Uses quickselect to find the median of the array.</li>
+          <li>
+            Partitions the array into three sections:
+            <ul>
+              <li>Elements less than the median.</li>
+              <li>Elements equal to the median.</li>
+              <li>Elements greater than the median.</li>
+            </ul>
+          </li>
+          <li>
+            Uses a helper function newIndex to calculate the new index after
+            rearrangement to achieve the "wiggle" pattern.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>quickselect Method:</strong>
+        <ul>
+          <li>
+            Private method to find the k-th smallest element using quickselect
+            algorithm.
+          </li>
+          <li>
+            Partitions the array around a pivot and recursively selects the
+            partition to search based on the value of k.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>partition Method:</strong>
+        <ul>
+          <li>Private method to partition the array for quickselect.</li>
+          <li>
+            Uses a pivot (usually the rightmost element) to partition elements
+            into smaller and larger sections.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>newIndex Method:</strong>
+        <ul>
+          <li>
+            Private method to calculate the new index after rearrangement for
+            achieving the "wiggle" pattern.
+          </li>
+          <li>
+            Uses a mathematical formula to ensure elements are rearranged
+            properly.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>swap Method:</strong>
+        <ul>
+          <li>Utility method to swap elements in the array.</li>
+          <li>
+            Helps in reordering elements during partitioning or rearrangement.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
