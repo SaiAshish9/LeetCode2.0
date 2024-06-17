@@ -5052,6 +5052,81 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1230: (
+    <ul>
+      <li>
+        <strong>Key Insights:</strong>
+        <ul>
+          <li>
+            The solution uses dynamic programming (DP) to compute the
+            probabilities.
+          </li>
+          <li>
+            It maintains a 2D array `f` where `f[i][j]` represents the
+            probability of getting exactly `j` heads from the first `i` coins.
+          </li>
+          <li>
+            The solution iteratively fills the DP table based on previous
+            computations.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Steps to Solve:</strong>
+        <ul>
+          <li>
+            <strong>Initialization:</strong>
+            <ul>
+              <li>
+                Initialize a 2D DP array `f` where `f[i][j]` is initially set to
+                `0` for all `i` and `j`.
+              </li>
+              <li>
+                Set `f[0][0] = 1` because there's one way (probability `1`) to
+                get `0` heads with `0` coins.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Main DP Calculation:</strong>
+            <ul>
+              <li>
+                Iterate through each coin (from `1` to `n`, where `n` is the
+                number of coins).
+              </li>
+              <li>
+                For each coin and for each possible number of heads (`j` from
+                `0` to `target` and bounded by `i`), update `f[i][j]`:
+                <ul>
+                  <li>
+                    Calculate the probability of not getting a head (`1 - prob[i
+                    - 1]`) multiplied by the probability from the previous state
+                    (`f[i - 1][j]`).
+                  </li>
+                  <li>
+                    If `j &gt; 0`, also calculate the probability of getting a
+                    head (`prob[i - 1]`) multiplied by the probability from the
+                    state where one less head was achieved (`f[i - 1][j - 1]`).
+                  </li>
+                  <li>Sum these probabilities to update `f[i][j]`.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Result:</strong>
+            <ul>
+              <li>
+                The desired probability is stored in `f[n][target]`, where `n`
+                is the total number of coins.
+              </li>
+              <li>Return `f[n][target]` as the final result.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
