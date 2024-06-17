@@ -4337,6 +4337,126 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  973: (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>kClosest Method:</strong>
+        <ul>
+          <li>
+            Public method to find the K closest points to the origin (0, 0) in
+            the input array of points.
+          </li>
+          <li>
+            Uses quickselect algorithm to find the K smallest distances from the
+            origin.
+          </li>
+          <li>
+            Partitions the array of points based on their distances from the
+            origin using a helper method partition.
+          </li>
+          <li>
+            Collects the K closest points after finding the partition point.
+          </li>
+          <li>Returns an array containing the K closest points.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>partition Method:</strong>
+        <ul>
+          <li>
+            Helper method to partition the array of points based on their
+            distances from the origin.
+          </li>
+          <li>
+            Selects a pivot point and rearranges the array such that points
+            closer to the origin are on the left side of the pivot.
+          </li>
+          <li>
+            Uses the distance method to calculate the squared distance from the
+            origin.
+          </li>
+          <li>Returns the index of the pivot after partitioning.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>distance Method:</strong>
+        <ul>
+          <li>
+            Helper method to calculate the squared distance of a point from the
+            origin (0, 0).
+          </li>
+          <li>
+            Uses the formula: distance = x^2 + y^2, where x and y are the
+            coordinates of the point.
+          </li>
+          <li>Returns the squared distance.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>swap Method:</strong>
+        <ul>
+          <li>Helper method to swap two elements in the array of points.</li>
+          <li>Facilitates the rearrangement of points during partitioning.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  "973_heap_(priority_queue)": (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>kClosest Method:</strong>
+        <ul>
+          <li>
+            Public method to find the K closest points to the origin (0, 0) in
+            the input array of points.
+          </li>
+          <li>
+            Uses a max heap (priority queue) to store points based on their
+            distances from the origin.
+          </li>
+          <li>
+            Iterates through each point in the input array and adds it to the
+            max heap.
+          </li>
+          <li>
+            Maintains the size of the max heap as k by removing the farthest
+            point when necessary.
+          </li>
+          <li>
+            Converts the max heap into the result array containing the K closest
+            points.
+          </li>
+          <li>Returns the result array.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>distance Method:</strong>
+        <ul>
+          <li>
+            Private method to calculate the squared distance of a point from the
+            origin (0, 0).
+          </li>
+          <li>
+            Uses the formula: distance = x^2 + y^2, where x and y are the
+            coordinates of the point.
+          </li>
+          <li>Returns the squared distance.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
