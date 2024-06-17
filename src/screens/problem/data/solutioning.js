@@ -4742,6 +4742,63 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  808: (
+    <ul>
+      <li>
+        <strong>Problem Explanation:</strong>
+        <ul>
+          <li>
+            Chef A and Chef B make soup, and each turn they can perform one of
+            four actions involving 100 ml or 75 ml of soup.
+          </li>
+          <li>
+            The soups start with `n` ml each, and we need to find the
+            probability that both will be empty at the same time.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Approach Using Dynamic Programming and Probability:</strong>
+        <ul>
+          <li>
+            <strong>Initialization:</strong>
+            <ul>
+              <li>
+                Use a 2D array `dp` where `dp[i][j]` represents the probability
+                that Chef A has `i` ml and Chef B has `j` ml of soup.
+              </li>
+              <li>
+                Initialize `dp[0][0] = 0.5` because both start with empty soups.
+              </li>
+              <li>
+                Initialize `dp[0][j] = 1.0` for `j > 0` since Chef A loses if
+                his soup is empty initially.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>State Transition:</strong>
+            <ul>
+              <li>
+                Update `dp` based on actions where probabilities depend on
+                previous states and outcomes of serving actions.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Result Calculation:</strong>
+            <ul>
+              <li>
+                Compute `dp[n][n]`, which gives the probability that both soups
+                will be empty simultaneously after `n` ml of consumption.
+              </li>
+              <li>Return `dp[n][n]` as the final result.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
