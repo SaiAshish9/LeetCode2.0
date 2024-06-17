@@ -5472,6 +5472,85 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2296: (
+    <ul>
+      <li>
+        <strong>Data Structures:</strong>
+        <ul>
+          <li>
+            <strong>Doubly Linked List:</strong> Each node represents a
+            character in the text editor, storing the character, and pointers to
+            the previous and next nodes.
+          </li>
+          <li>
+            <strong>Cursor Pointer:</strong> Points to the current position in
+            the text editor.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize the doubly linked list with a dummy head and tail node.
+          </li>
+          <li>Set the cursor pointer to the dummy tail node.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Add Text Operation:</strong>
+        <ul>
+          <li>
+            For each character in the input string, create a new node and insert
+            it at the cursor position.
+          </li>
+          <li>
+            Update the previous and next pointers of the surrounding nodes.
+          </li>
+          <li>Move the cursor pointer to the end of the inserted text.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Delete Text Operation:</strong>
+        <ul>
+          <li>
+            Delete the specified number of characters before the cursor
+            position.
+          </li>
+          <li>
+            Update the previous and next pointers of the surrounding nodes
+            accordingly.
+          </li>
+          <li>Move the cursor pointer to the new position after deletion.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Cursor Left Operation:</strong>
+        <ul>
+          <li>
+            Move the cursor pointer to the left by the specified number of steps
+            or until the beginning of the text.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Cursor Right Operation:</strong>
+        <ul>
+          <li>
+            Move the cursor pointer to the right by the specified number of
+            steps or until the end of the text.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Get Text Operation:</strong>
+        <ul>
+          <li>Retrieve up to 10 characters before the cursor position.</li>
+          <li>Return these characters as a string.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
