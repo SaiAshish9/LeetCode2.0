@@ -5850,6 +5850,69 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1115: (
+    <ul>
+      <li>
+        <strong>Class and Semaphores Initialization</strong>
+        <ul>
+          <li>
+            Define a class `FooBar` with a constructor that initializes the
+            number of iterations `n` and two `Semaphore` objects: `fooSemaphore`
+            and `barSemaphore`.
+          </li>
+          <li>
+            `fooSemaphore` is initialized with a permit count of 1, allowing the
+            `foo` method to run immediately.
+          </li>
+          <li>
+            `barSemaphore` is initialized with a permit count of 0, ensuring the
+            `bar` method must wait for a permit to be released by the `foo`
+            method.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>foo Method</strong>
+        <ul>
+          <li>The `foo` method runs a loop for `n` iterations.</li>
+          <li>
+            For each iteration:
+            <ul>
+              <li>
+                Acquire the `fooSemaphore`, which controls the turn for the
+                `foo` method to execute.
+              </li>
+              <li>Run the `printFoo` method which outputs "foo".</li>
+              <li>
+                Release the `barSemaphore` to signal that the `bar` method can
+                now execute.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>bar Method</strong>
+        <ul>
+          <li>The `bar` method runs a loop for `n` iterations.</li>
+          <li>
+            For each iteration:
+            <ul>
+              <li>
+                Acquire the `barSemaphore`, which controls the turn for the
+                `bar` method to execute.
+              </li>
+              <li>Run the `printBar` method which outputs "bar".</li>
+              <li>
+                Release the `fooSemaphore` to signal that the `foo` method can
+                now execute.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
