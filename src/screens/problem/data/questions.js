@@ -7259,11 +7259,11 @@ const QUESTIONS = {
         <b>Note:</b>
         <br />
       </p>
-      <ol>
+      <ul>
         <li>-1e7 &lt;= x &lt;= 1e7</li>
         <li>Number of operations won't exceed 10000.</li>
         <li>The last four operations won't be called when stack is empty.</li>
-      </ol>
+      </ul>
       <p></p>
     </div>
   ),

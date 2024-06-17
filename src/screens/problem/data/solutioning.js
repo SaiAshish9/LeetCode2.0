@@ -5551,6 +5551,138 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  716: (
+    <>
+      <ul>
+        <li>
+          <strong>`Node` Class:</strong>
+          <ul>
+            <li>Represents a node in a doubly linked list.</li>
+            <li>
+              Attributes:
+              <ul>
+                <li>
+                  <code>val</code>: Integer value stored in the node.
+                </li>
+                <li>
+                  <code>prev</code>: Reference to the previous node.
+                </li>
+                <li>
+                  <code>next</code>: Reference to the next node.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Constructors:
+              <ul>
+                <li>
+                  <code>Node()</code>: Default constructor.
+                </li>
+                <li>
+                  <code>Node(int val)</code>: Constructor initializing{" "}
+                  <code>val</code> attribute.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>`DoubleLinkedList` Class:</strong>
+          <ul>
+            <li>
+              Implements a doubly linked list with sentinel nodes (head and
+              tail).
+            </li>
+            <li>
+              Attributes:
+              <ul>
+                <li>
+                  <code>head</code>: Sentinel node at the beginning of the list.
+                </li>
+                <li>
+                  <code>tail</code>: Sentinel node at the end of the list.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Methods:
+              <ul>
+                <li>
+                  <code>DoubleLinkedList()</code>: Constructor initializing{" "}
+                  <code>head</code> and <code>tail</code>.
+                </li>
+                <li>
+                  <code>append(int val)</code>: Appends a new node with value{" "}
+                  <code>val</code> to the end of the list.
+                </li>
+                <li>
+                  <code>remove(Node node)</code>: Removes a given node from the
+                  list.
+                </li>
+                <li>
+                  <code>pop()</code>: Removes and returns the node from the end
+                  of the list.
+                </li>
+                <li>
+                  <code>peek()</code>: Returns the value of the node at the end
+                  of the list without removing it.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <strong>`MaxStack` Class:</strong>
+          <ul>
+            <li>
+              Implements a stack with additional functionalities to retrieve and
+              remove maximum elements efficiently.
+            </li>
+            <li>
+              Attributes:
+              <ul>
+                <li>
+                  <code>stk</code>: Instance of <code>DoubleLinkedList</code> to
+                  store stack elements.
+                </li>
+                <li>
+                  <code>tm</code>: TreeMap where keys are integers (stack
+                  values) and values are lists of nodes containing these values.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Methods:
+              <ul>
+                <li>
+                  <code>push(int x)</code>: Pushes integer <code>x</code> onto
+                  the stack.
+                </li>
+                <li>
+                  <code>pop()</code>: Removes and returns the top element from
+                  the stack.
+                </li>
+                <li>
+                  <code>top()</code>: Returns the top element of the stack
+                  without removing it.
+                </li>
+                <li>
+                  <code>peekMax()</code>: Returns the maximum element in the
+                  stack.
+                </li>
+                <li>
+                  <code>popMax()</code>: Removes and returns the maximum element
+                  in the stack.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
