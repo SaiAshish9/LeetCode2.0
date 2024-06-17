@@ -5913,6 +5913,111 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1116: (
+    <ul>
+      <li>
+        <strong>Initialization</strong>
+        <ul>
+          <li>
+            Create a class `ZeroEvenOdd` that takes an integer `n` as a
+            parameter to initialize the number of iterations.
+          </li>
+          <li>
+            Define three semaphores:
+            <ul>
+              <li>
+                `zeroSemaphore`: Controls the printing of zero, initialized with
+                a permit count of 1.
+              </li>
+              <li>
+                `evenSemaphore`: Controls the printing of even numbers,
+                initialized with a permit count of 0.
+              </li>
+              <li>
+                `oddSemaphore`: Controls the printing of odd numbers,
+                initialized with a permit count of 0.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>zero Method</strong>
+        <ul>
+          <li>The `zero` method runs a loop from 1 to `n` (inclusive).</li>
+          <li>
+            For each iteration:
+            <ul>
+              <li>
+                Acquire the `zeroSemaphore` to ensure only the zero thread can
+                print.
+              </li>
+              <li>Print the number 0.</li>
+              <li>
+                Check if the current number `i` is even or odd:
+                <ul>
+                  <li>
+                    If even, release the `evenSemaphore` to allow the even
+                    thread to print the number.
+                  </li>
+                  <li>
+                    If odd, release the `oddSemaphore` to allow the odd thread
+                    to print the number.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>even Method</strong>
+        <ul>
+          <li>
+            The `even` method runs a loop from 2 to `n` (inclusive) with a step
+            of 2.
+          </li>
+          <li>
+            For each iteration:
+            <ul>
+              <li>
+                Acquire the `evenSemaphore` to ensure only the even thread can
+                print.
+              </li>
+              <li>Print the current even number.</li>
+              <li>
+                Release the `zeroSemaphore` to allow the zero thread to print
+                the next zero.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>odd Method</strong>
+        <ul>
+          <li>
+            The `odd` method runs a loop from 1 to `n` (inclusive) with a step
+            of 2.
+          </li>
+          <li>
+            For each iteration:
+            <ul>
+              <li>
+                Acquire the `oddSemaphore` to ensure only the odd thread can
+                print.
+              </li>
+              <li>Print the current odd number.</li>
+              <li>
+                Release the `zeroSemaphore` to allow the zero thread to print
+                the next zero.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
