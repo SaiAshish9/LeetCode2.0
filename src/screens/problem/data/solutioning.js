@@ -4457,6 +4457,70 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1738: (
+    <ul>
+      <li>
+        <strong>Class Declaration:</strong>
+        <ul>
+          <li>Defines a public class named Solution.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>kthLargestValue Method:</strong>
+        <ul>
+          <li>
+            Public method to find the Kth largest XOR coordinate value in the
+            input matrix.
+          </li>
+          <li>
+            Computes XOR values for each coordinate in the matrix and stores
+            them in xorMatrix.
+          </li>
+          <li>
+            Uses quickselect algorithm to find the Kth largest XOR value from
+            the xorValues list.
+          </li>
+          <li>Returns the Kth largest XOR value.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>quickselect Method:</strong>
+        <ul>
+          <li>
+            Private method to find the Kth smallest element (0-indexed) in an
+            array using quickselect.
+          </li>
+          <li>
+            Partitions the array around a pivot element and recursively selects
+            the partition to search based on the value of k.
+          </li>
+          <li>Returns the Kth smallest element.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>partition Method:</strong>
+        <ul>
+          <li>Private method to partition the array for quickselect.</li>
+          <li>
+            Uses the last element as pivot and rearranges elements so that
+            elements smaller than pivot are on the left, and larger are on the
+            right.
+          </li>
+          <li>Returns the index of the pivot after partitioning.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>swap Method:</strong>
+        <ul>
+          <li>Private method to swap elements in an array.</li>
+          <li>
+            Used by partition method to facilitate element swapping during
+            partitioning.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
