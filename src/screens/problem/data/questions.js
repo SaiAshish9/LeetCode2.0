@@ -7323,7 +7323,8 @@ const QUESTIONS = {
       <p>
         <img
           src="https://assets.leetcode.com/uploads/2018/10/12/bstdllreturnbst.png"
-          style="width: 100%; max-width: 450px;"
+          style={{ width: "100%", maxWidth: 450 }}
+          alt="img"
         />
       </p>
     </div>
