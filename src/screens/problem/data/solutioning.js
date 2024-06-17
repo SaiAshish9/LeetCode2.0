@@ -4861,6 +4861,138 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1093: (
+    <ul>
+      <li>
+        <strong>Method Overview:</strong>
+        <ul>
+          <li>
+            The `sampleStats` method calculates several statistics from a given
+            array `count` representing frequencies of elements in a sample.
+          </li>
+          <li>
+            It returns an array of doubles containing:
+            <ul>
+              <li>The minimum value in the sample.</li>
+              <li>The maximum value in the sample.</li>
+              <li>The mean (average) value of the sample.</li>
+              <li>The median value of the sample.</li>
+              <li>The mode (most frequent value) of the sample.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Details of Calculations:</strong>
+        <ul>
+          <li>
+            <code>getMinimum(int[] count)</code>:
+          </li>
+          <ul>
+            <li>
+              Finds and returns the smallest index `i` where `count[i]` is
+              greater than 0, indicating the minimum value in the sample.
+            </li>
+          </ul>
+          <li>
+            <code>getMaximum(int[] count)</code>:
+          </li>
+          <ul>
+            <li>
+              Finds and returns the largest index `i` where `count[i]` is
+              greater than 0, indicating the maximum value in the sample.
+            </li>
+          </ul>
+          <li>
+            <code>getMean(int[] count, double n)</code>:
+          </li>
+          <ul>
+            <li>
+              Calculates the mean by iterating through `count`, summing up the
+              product of each element `i` and its frequency `count[i]`, and
+              dividing by `n`, which is the total number of elements in the
+              sample.
+            </li>
+          </ul>
+          <li>
+            <code>getLeftMedian(int[] count, double n)</code>:
+          </li>
+          <ul>
+            <li>
+              Finds the left median by accumulating frequencies until reaching
+              or surpassing `n / 2`. Returns the corresponding index `i` as the
+              left median.
+            </li>
+          </ul>
+          <li>
+            <code>getRightMedian(int[] count, double n)</code>:
+          </li>
+          <ul>
+            <li>
+              Finds the right median by accumulating frequencies from the end of
+              `count` until reaching or surpassing `n / 2`. Returns the
+              corresponding index `i` as the right median.
+            </li>
+          </ul>
+          <li>
+            <code>getMode(int[] count)</code>:
+          </li>
+          <ul>
+            <li>
+              Determines the mode by identifying the index `i` with the highest
+              frequency `count[i]`. Returns `i` as the mode.
+            </li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+  ),
+  1227: (
+    <ul>
+      <li>
+        <strong>Case for `n = 1`:</strong>
+        <ul>
+          <li>When `n` is 1, there is only one passenger and one seat.</li>
+          <li>
+            The first (and only) passenger will always sit in their assigned
+            seat (seat 1).
+          </li>
+          <li>
+            Therefore, the probability that the last passenger (the only
+            passenger) gets their assigned seat is `1.0` or 100%.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Case for `n &gt; 1`:</strong>
+        <ul>
+          <li>
+            When `n` is greater than 1, the first passenger has an equal chance
+            of choosing any of the `n` seats.
+          </li>
+          <li>There are two scenarios to consider:</li>
+          <ul>
+            <li>
+              If the first passenger chooses their own assigned seat (seat 1),
+              then the last passenger will definitely get their assigned seat
+              (seat n).
+            </li>
+            <li>
+              If the first passenger chooses any other seat (not their own),
+              then the last passenger will not get their assigned seat (seat n)
+              unless subsequent passengers make optimal choices (which isn't
+              guaranteed).
+            </li>
+          </ul>
+          <li>
+            On average, across all possible choices of the first passenger, the
+            probability that the last passenger gets their assigned seat is
+            `0.5` or 50%.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
