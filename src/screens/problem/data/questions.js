@@ -7221,7 +7221,7 @@ const QUESTIONS = {
       </p>
 
       <p></p>
-      <ol>
+      <ul>
         <li>push(x) -- Push element x onto stack.</li>
         <li>pop() -- Remove the element on top of the stack and return it.</li>
         <li>top() -- Get the element on the top.</li>
@@ -7231,7 +7231,7 @@ const QUESTIONS = {
           If you find more than one maximum elements, only remove the top-most
           one.
         </li>
-      </ol>
+      </ul>
       <p></p>
 
       <p>
