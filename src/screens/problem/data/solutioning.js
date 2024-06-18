@@ -6161,6 +6161,87 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1226: (
+    <ul>
+      <li>
+        <strong>Class and Constructor:</strong>
+        <ul>
+          <li>
+            The class <code>DiningPhilosophers</code> manages the dining
+            philosophers problem using two <code>ReentrantLock</code> objects:{" "}
+            <code>leftForkLock</code> and <code>rightForkLock</code>.
+          </li>
+          <li>
+            The constructor <code>DiningPhilosophers()</code> initializes the
+            locks.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>wantsToEat Method:</strong>
+        <ul>
+          <li>
+            This method allows a philosopher to attempt to pick up forks, eat,
+            and then put the forks down.
+          </li>
+          <li>
+            It takes the following parameters:
+            <ul>
+              <li>
+                <code>int philosopher</code>: the ID of the philosopher.
+              </li>
+              <li>
+                <code>Runnable pickLeftFork</code>: the action to pick up the
+                left fork.
+              </li>
+              <li>
+                <code>Runnable pickRightFork</code>: the action to pick up the
+                right fork.
+              </li>
+              <li>
+                <code>Runnable eat</code>: the action to eat.
+              </li>
+              <li>
+                <code>Runnable putLeftFork</code>: the action to put down the
+                left fork.
+              </li>
+              <li>
+                <code>Runnable putRightFork</code>: the action to put down the
+                right fork.
+              </li>
+            </ul>
+          </li>
+          <li>
+            The method operates in a loop to continuously attempt to pick up the
+            left and right forks until successful:
+            <ul>
+              <li>
+                First, it tries to acquire the left fork lock with a timeout of
+                100 milliseconds.
+              </li>
+              <li>
+                If successful, it attempts to acquire the right fork lock with
+                the same timeout.
+              </li>
+              <li>
+                If both locks are acquired:
+                <ul>
+                  <li>
+                    The philosopher picks up both forks, eats, and then puts
+                    down the right fork.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Regardless of whether the right fork lock was acquired, the left
+                fork is always put down before releasing the left fork lock.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
