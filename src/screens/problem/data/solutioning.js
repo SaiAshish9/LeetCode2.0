@@ -6594,44 +6594,198 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
-  173:(
-    <><ul>
-    <li><strong>Class:</strong> BSTIterator</li>
+  173: (
+    <>
+      <ul>
+        <li>
+          <strong>Class:</strong> BSTIterator
+        </li>
+        <li>
+          <strong>Fields:</strong>
+          <ul>
+            <li>
+              <code>private Stack&lt;TreeNode&gt; stack;</code> - A stack to
+              store nodes for iterative traversal.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Constructor:</strong> <code>BSTIterator(TreeNode root)</code>
+          <ul>
+            <li>Initializes the iterator with the root of the BST.</li>
+            <li>
+              Invokes <code>pushAll(root)</code> to push all left children of
+              the root onto the stack.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Method:</strong> <code>int next()</code>
+          <ul>
+            <li>Returns the next smallest number in the BST.</li>
+            <li>
+              Pops the top node from the stack, which is the current smallest
+              node.
+            </li>
+            <li>
+              Calls <code>pushAll(node.right)</code> to push all left children
+              of the right subtree onto the stack.
+            </li>
+            <li>
+              Time Complexity: O(1) average, as popping from a stack and pushing
+              left children are constant time operations.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Method:</strong> <code>boolean hasNext()</code>
+          <ul>
+            <li>Checks if there are more nodes to process in the BST.</li>
+            <li>
+              Returns <code>true</code> if the stack is not empty; otherwise,
+              returns <code>false</code>.
+            </li>
+            <li>
+              Time Complexity: O(1), as it simply checks the stack's emptiness.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Helper Method:</strong>{" "}
+          <code>void pushAll(TreeNode node)</code>
+          <ul>
+            <li>Pushes all left children of the given node onto the stack.</li>
+            <li>
+              Starts from <code>node</code> and traverses down its left children
+              until reaching <code>null</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  284: (
+    <>
+      <ul>
+        <li>
+          <strong>Class:</strong> PeekingIterator
+        </li>
+        <li>
+          <strong>Fields:</strong>
+          <ul>
+            <li>
+              <code>private Iterator&lt;Integer&gt; iterator;</code> - Holds the
+              original iterator.
+            </li>
+            <li>
+              <code>private Integer nextElement;</code> - Stores the next
+              element that has been peeked at.
+            </li>
+            <li>
+              <code>private boolean hasNext;</code> - Indicates if there is a
+              next element in the iterator.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Constructor:</strong>{" "}
+          <code>PeekingIterator(Iterator&lt;Integer&gt; iterator)</code>
+          <ul>
+            <li>
+              Initializes the iterator with the provided <code>iterator</code>.
+            </li>
+            <li>
+              Checks if there is a next element using{" "}
+              <code>iterator.hasNext()</code>.
+            </li>
+            <li>
+              If a next element exists, initializes <code>nextElement</code>{" "}
+              with the first element and sets <code>hasNext</code> to{" "}
+              <code>true</code>; otherwise, sets <code>hasNext</code> to{" "}
+              <code>false</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Method:</strong> <code>Integer peek()</code>
+          <ul>
+            <li>
+              Returns the current <code>nextElement</code> without advancing the
+              iterator.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Method:</strong> <code>Integer next()</code>
+          <ul>
+            <li>
+              Returns the current <code>nextElement</code>.
+            </li>
+            <li>
+              Advances the iterator by fetching the next element from{" "}
+              <code>iterator</code> if it exists.
+            </li>
+            <li>
+              Updates <code>nextElement</code> with the next element from{" "}
+              <code>iterator</code>.
+            </li>
+            <li>
+              Sets <code>hasNext</code> to <code>false</code> if there are no
+              more elements in <code>iterator</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Method:</strong> <code>boolean hasNext()</code>
+          <ul>
+            <li>
+              Returns <code>true</code> if there is a <code>nextElement</code>{" "}
+              available; otherwise, returns <code>false</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  341:(<ul>
+    <li><strong>Class:</strong> NestedIterator</li>
     <li><strong>Fields:</strong>
         <ul>
-            <li><code>private Stack&lt;TreeNode&gt; stack;</code> - A stack to store nodes for iterative traversal.</li>
+            <li><code>private Stack&lt;NestedInteger&gt; stack;</code> - A stack to manage nested integers during iteration.</li>
         </ul>
     </li>
-    <li><strong>Constructor:</strong> <code>BSTIterator(TreeNode root)</code>
+    <li><strong>Constructor:</strong> <code>NestedIterator(List&lt;NestedInteger&gt; nestedList)</code>
         <ul>
-            <li>Initializes the iterator with the root of the BST.</li>
-            <li>Invokes <code>pushAll(root)</code> to push all left children of the root onto the stack.</li>
+            <li>Initializes the iterator with a nested list of integers (<code>nestedList</code>).</li>
+            <li>Calls <code>addInteger(nestedList)</code> to push all elements of <code>nestedList</code> onto the stack in reverse order.</li>
         </ul>
     </li>
-    <li><strong>Method:</strong> <code>int next()</code>
+    <li><strong>Method:</strong> <code>Integer next()</code>
         <ul>
-            <li>Returns the next smallest number in the BST.</li>
-            <li>Pops the top node from the stack, which is the current smallest node.</li>
-            <li>Calls <code>pushAll(node.right)</code> to push all left children of the right subtree onto the stack.</li>
-            <li>Time Complexity: O(1) average, as popping from a stack and pushing left children are constant time operations.</li>
+            <li>Retrieves and returns the integer at the top of the stack.</li>
+            <li>Assumes the top element of the stack is an integer (<code>stack.pop().getInteger()</code>).</li>
         </ul>
     </li>
     <li><strong>Method:</strong> <code>boolean hasNext()</code>
         <ul>
-            <li>Checks if there are more nodes to process in the BST.</li>
-            <li>Returns <code>true</code> if the stack is not empty; otherwise, returns <code>false</code>.</li>
-            <li>Time Complexity: O(1), as it simply checks the stack's emptiness.</li>
+            <li>Checks if there is another integer to iterate over.</li>
+            <li>While the stack is not empty and the top element of the stack is not an integer:
+                <ul>
+                    <li>Pop the top element (<code>stack.pop()</code>).</li>
+                    <li>Call <code>addInteger(ni.getList())</code> to push all elements of <code>ni.getList()</code> onto the stack in reverse order.</li>
+                </ul>
+            </li>
+            <li>Returns <code>true</code> if the stack is not empty after processing; otherwise, returns <code>false</code>.</li>
         </ul>
     </li>
-    <li><strong>Helper Method:</strong> <code>void pushAll(TreeNode node)</code>
+    <li><strong>Helper Method:</strong> <code>void addInteger(List&lt;NestedInteger&gt; nestedList)</code>
         <ul>
-            <li>Pushes all left children of the given node onto the stack.</li>
-            <li>Starts from <code>node</code> and traverses down its left children until reaching <code>null</code>.</li>
+            <li>Pushes all elements of <code>nestedList</code> onto the stack in reverse order.</li>
+            <li>Iterates over <code>nestedList</code> from the last element to the first (<code>for (int i = nestedList.size() - 1; i >= 0; --i)</code>) and pushes each element onto the stack (<code>stack.push(nestedList.get(i))</code>).</li>
         </ul>
     </li>
 </ul>
-</>
-  )
+)
 };
 
 function appendPxToValues(obj) {
