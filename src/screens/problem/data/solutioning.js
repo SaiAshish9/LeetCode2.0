@@ -7367,24 +7367,39 @@ const SOLUTIONING = {
   ),
   148: (
     <>
-      <h2>Steps</h2>
       <ul>
         <li>
-          <strong>Divide</strong>
+          <strong>Base Case:</strong>
           <ul>
-            <li>Divide the list of linked lists into two halves.</li>
+            <li>
+              If the list is empty or has only one node, return the list as it's
+              already sorted.
+            </li>
           </ul>
         </li>
         <li>
-          <strong>Conquer</strong>
+          <strong>Splitting the List:</strong>
           <ul>
-            <li>Recursively merge each half.</li>
+            <li>
+              Use the slow and fast pointer technique to find the middle of the
+              list.
+            </li>
+            <li>Split the list into two halves at the middle.</li>
           </ul>
         </li>
         <li>
-          <strong>Combine</strong>
+          <strong>Recursive Sorting:</strong>
           <ul>
-            <li>Merge the two sorted halves into a single sorted list.</li>
+            <li>Recursively apply the sort function to both halves.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Merge the Sorted Halves:</strong>
+          <ul>
+            <li>
+              Use a helper function to merge the two sorted lists into one
+              sorted list.
+            </li>
           </ul>
         </li>
       </ul>
