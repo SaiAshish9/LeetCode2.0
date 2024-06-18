@@ -1,4 +1,5 @@
 import QUESTIONS from "./questions";
 import SOLUTIONING from "./solutioning";
+import PREMIUM from "./premium";
 
-export { QUESTIONS, SOLUTIONING };
+export { QUESTIONS, SOLUTIONING, PREMIUM };

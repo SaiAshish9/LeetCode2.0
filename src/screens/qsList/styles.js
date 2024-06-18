@@ -168,13 +168,20 @@ export const StyledTableContainer = styled(Table)`
   overflow-x: scroll;
 `;
 
-export const TitleContainer = styled.p`
+export const TitleContainer = styled.div`
   max-width: 200px;
-  overflow-x: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  cursor: pointer;
-  color: #1890ff;
+  p {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #1890ff;
+    width: 100%;
+    margin-right: 10px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const DifficultyTag = styled.p`

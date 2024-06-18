@@ -26,6 +26,8 @@ import {
 import { Helmet } from "react-helmet";
 
 import { useLocation } from "react-router-dom";
+import { FaLockOpen } from "react-icons/fa";
+import { PREMIUM } from "../problem/data";
 
 const QSList = () => {
   const columns = [
@@ -46,7 +48,7 @@ const QSList = () => {
       title: "Title",
       key: "title",
       dataIndex: "title",
-      render: (_, { title }) => {
+      render: (_, { qno, title }) => {
         return (
           <TitleContainer
             onClick={() => {
@@ -59,7 +61,8 @@ const QSList = () => {
               );
             }}
           >
-            {title}
+            <p>{title}</p>
+            {PREMIUM.includes(+qno) && <FaLockOpen />}
           </TitleContainer>
         );
       },
