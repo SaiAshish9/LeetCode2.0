@@ -6829,7 +6829,7 @@ const SOLUTIONING = {
   900: (
     <ul>
       <li>
-        <strong>Class:</strong> RLEIterator
+        <strong>Class:</strong> <code>RLEIterator</code>
       </li>
       <li>
         <strong>Fields:</strong>
