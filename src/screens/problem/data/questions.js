@@ -8002,6 +8002,157 @@ const QUESTIONS = {
       <p></p>
     </div>
   ),
+  1586: (
+    <div class="markdown-body div-width">
+      <div class="content__u3I1 question-content__JfgR">
+        <div>
+          <p>
+            Implement the <code>BSTIterator</code> class that represents an
+            iterator over&nbsp;the
+            <strong>
+              <a href="https://en.wikipedia.org/wiki/Tree_traversal#In-order_(LNR)">
+                in-order traversal
+              </a>
+            </strong>
+            &nbsp;of&nbsp;a binary search tree (BST):
+          </p>
+
+          <ul>
+            <li>
+              <code>BSTIterator(TreeNode root)</code> Initializes an object of
+              the <code>BSTIterator</code>
+              class. The <code>root</code> of the BST is given as part of the
+              constructor. The pointer should be initialized to a non-existent
+              number smaller than any element in the BST.
+            </li>
+            <li>
+              <code>boolean hasNext()</code> Returns <code>true</code> if there
+              exists a number in the traversal to the right of the pointer,
+              otherwise returns <code>false</code>.
+            </li>
+            <li>
+              <code>int next()</code> Moves the pointer to the right, then
+              returns the number at the pointer.
+            </li>
+            <li>
+              <code>boolean hasPrev()</code> Returns <code>true</code> if there
+              exists a number in the traversal to the left of the pointer,
+              otherwise returns <code>false</code>.
+            </li>
+            <li>
+              <code>int prev()</code> Moves the pointer to the left, then
+              returns the number at the pointer.
+            </li>
+          </ul>
+
+          <p>
+            Notice that by initializing the pointer to a non-existent smallest
+            number, the first call to <code>next()</code> will return the
+            smallest element in the BST.
+          </p>
+
+          <p>
+            You may assume that <code>next()</code> and <code>prev()</code>{" "}
+            calls will always be valid. That is, there will be at least a
+            next/previous number in the in-order traversal&nbsp;when{" "}
+            <code>next()</code>/<code>prev()</code> is called.
+          </p>
+
+          <p>
+            <strong>Follow up:</strong> Could you solve the problem without
+            precalculating the values of the tree?
+          </p>
+
+          <p>&nbsp;</p>
+          <p>
+            <strong>Example 1:</strong>
+          </p>
+
+          <p>
+            <strong>
+              <img
+                alt=""
+                src="https://assets.leetcode.com/uploads/2020/09/14/untitled-diagram-1.png"
+                style={{ width: 201, height: 201 }}
+              />
+            </strong>
+          </p>
+
+          <pre>
+            <strong>Input</strong> <br />
+            ["BSTIterator", "next", "next", "prev", "next", "hasNext",
+            <br /> "next", "next", "next", "hasNext", "hasPrev", "prev", "prev"]
+            <br />
+            [[[7, 3, 15, null, null, 9, 20]], [null], [null], [null]
+            <br /> [null], [null], [null], [null], [null], [null], [null],
+            [null], [null]]
+            <br />
+            <strong>Output</strong>
+            <br />
+            [null, 3, 7, 3, 7, true, 9, 15, 20, false, true, 15, 9]
+            <strong>Explanation</strong>
+            <br />
+            // The underlined element is where the pointer currently is.
+            <br />
+            BSTIterator bSTIterator = new BSTIterator([7, 3, 15, null, null, 9,
+            20]); // state is <u> </u> [3, 7, 9, 15, 20]
+            <br />
+            bSTIterator.next(); // state becomes [<u>3</u>, 7, 9, 15, 20],
+            return 3<br />
+            bSTIterator.next(); // state becomes [3, <u>7</u>, 9, 15, 20],
+            return 7<br />
+            bSTIterator.prev(); // state becomes [<u>3</u>, 7, 9, 15, 20],
+            return 3<br />
+            bSTIterator.next(); // state becomes [3, <u>7</u>, 9, 15, 20],
+            return 7<br />
+            bSTIterator.hasNext(); // return true
+            <br />
+            bSTIterator.next(); // state becomes [3, 7, <u>9</u>, 15, 20],
+            return 9<br />
+            bSTIterator.next(); // state becomes [3, 7, 9, <u>15</u>, 20],
+            return 15
+            <br />
+            bSTIterator.next(); // state becomes [3, 7, 9, 15, <u>20</u>],
+            return 20
+            <br />
+            bSTIterator.hasNext(); // return false
+            <br />
+            bSTIterator.hasPrev(); // return true
+            <br />
+            bSTIterator.prev(); // state becomes [3, 7, 9, <u>15</u>, 20],
+            return 15
+            <br />
+            bSTIterator.prev(); // state becomes [3, 7, <u>9</u>, 15, 20],
+            return 9
+          </pre>
+
+          <p>&nbsp;</p>
+          <p>
+            <strong>Constraints:</strong>
+          </p>
+
+          <ul>
+            <li>
+              The number of nodes in the tree is in the range{" "}
+              <code>
+                [1, 10<sup>5</sup>]
+              </code>
+              .
+            </li>
+            <li>
+              <code>
+                0 &lt;= Node.val &lt;= 10<sup>6</sup>
+              </code>
+            </li>
+            <li>
+              At most 10<sup>5</sup> calls will be made to <code>hasNext</code>,
+              <code>next</code>, <code>hasPrev</code>, and <code>prev</code>.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
