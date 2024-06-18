@@ -7934,6 +7934,9 @@ const SOLUTIONING = {
   1649: (
     <>
       <ul>
+        <p>
+          It's ideal to solve this using <code>Binary Indexed Tree</code>
+        </p>
         <li>
           <strong>Solution Class:</strong>
           <ul>
@@ -7992,13 +7995,6 @@ const SOLUTIONING = {
           </ul>
         </li>
       </ul>
-      <p>
-        This implementation efficiently handles the problem requirements using
-        merge sort combined with a Fenwick Tree, ensuring that the operations
-        are performed in O(nlogn) time complexity due to the merge sort and
-        O(logn) time complexity for each Fenwick Tree operation, resulting in an
-        overall efficient solution suitable for large input sizes.
-      </p>
     </>
   ),
 };
