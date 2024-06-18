@@ -7407,6 +7407,7 @@ const SOLUTIONING = {
   ),
   3109: (
     <ul>
+      <p>It's ideal to solve this using <code>Binary Indexed Tree</code></p>
       <li>
         <strong>FenwickTree Class:</strong>
         <ul>
