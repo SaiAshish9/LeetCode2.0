@@ -8068,6 +8068,53 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2426: (
+    <ul>
+      {" "}
+      <li>
+        <strong>Explanation:</strong>
+      </li>
+      <ul>
+        <li>
+          <strong>Initialization:</strong> Initialize an array <code>A</code>{" "}
+          where <code>A[i] = nums1[i] - nums2[i]</code>. This allows us to
+          transform the problem into finding pairs in <code>A</code> where the
+          difference between elements is less than or equal to <code>diff</code>
+          .
+        </li>
+
+        <li>
+          <strong>Merge Sort:</strong> Use merge sort to sort array{" "}
+          <code>A</code>. Merge sort is chosen for its stability and \( O(n \log
+          n) \) time complexity.
+        </li>
+
+        <li>
+          <strong>Two-Pointer Technique:</strong> During the merge phase of
+          merge sort, count the number of valid pairs using two pointers:
+          <ul>
+            <li>
+              For each element in the left half of the merged array, find the
+              rightmost element in the right half that satisfies{" "}
+              <code>A[j] - A[i] &gt;= diff</code>.
+            </li>
+            <li>
+              Increment the count of valid pairs by the number of elements
+              between the current left and right pointers.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Time Complexity:</strong> \( O(n \log n) \) due to merge sort.
+        </li>
+        <li>
+          <strong>Space Complexity:</strong> \( O(n) \) for the additional
+          arrays used.
+        </li>
+      </ul>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
