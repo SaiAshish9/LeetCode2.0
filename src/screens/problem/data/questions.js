@@ -7829,6 +7829,76 @@ const QUESTIONS = {
       </div>
     </div>
   ),
+  251: (
+    <div class="markdown-body div-width">
+      <p>
+        Design and implement an iterator to flatten a 2d vector. It should
+        support the following operations: <code>next</code> and{" "}
+        <code>hasNext</code>.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <b>Example:</b>
+      </p>{" "}
+      <br />
+      <pre>
+        Vector2D iterator = new Vector2D([[1,2],[3],[4]]);
+        <br />
+        iterator.next(); // return 1<br />
+        iterator.next(); // return 2<br />
+        iterator.next(); // return 3<br />
+        iterator.hasNext(); // return true
+        <br />
+        iterator.hasNext(); // return true
+        <br />
+        iterator.next(); // return 4<br />
+        iterator.hasNext(); // return false
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Notes:</strong>
+      </p>
+      <ul>
+        <li>
+          Please remember to <b>RESET</b> your class variables declared in
+          Vector2D, as static/class variables are{" "}
+          <b>persisted across multiple test cases</b>. Please see{" "}
+          <a href="https://leetcode.com/faq/" target="_blank" rel="noreferrer">
+            here
+          </a>{" "}
+          for more details.
+        </li>
+        <li>
+          You may assume that <code>next()</code> call will always be valid,
+          that is, there will be at least a next element in the 2d vector when{" "}
+          <code>next()</code> is called.
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+      <p>
+        <b>Follow up:</b>
+      </p>
+      <p>
+        As an added challenge, try to code it using only{" "}
+        <a
+          href="http://www.cplusplus.com/reference/iterator/iterator/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          iterators in C++
+        </a>{" "}
+        or{" "}
+        <a
+          href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          iterators in Java
+        </a>
+        .
+      </p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
