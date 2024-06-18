@@ -6347,6 +6347,162 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1242: (
+    <ul>
+      <li>
+        <strong>Class and Overview:</strong>
+        <ul>
+          <li>
+            The class <code>Web_Crawler_Multithreaded</code> contains three
+            different solutions for implementing a web crawler that operates in
+            a multithreaded environment.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution 1: Synchronized List</strong>
+        <ul>
+          <li>
+            <code>Set&gt;String&lt; set</code>: A thread-safe set to keep track
+            of visited URLs.
+          </li>
+          <li>
+            <code>List&gt;String&lt; result</code>: A synchronized list to store
+            the result URLs.
+          </li>
+          <li>
+            <code>String HOSTNAME</code>: Stores the hostname to ensure we only
+            crawl within the same domain.
+          </li>
+          <li>
+            <strong>Methods:</strong>
+            <ul>
+              <li>
+                <code>crawl(String startUrl, HtmlParser htmlParser)</code>:
+                Initializes the hostname and starts the crawling process using
+                DFS.
+              </li>
+              <li>
+                <code>judgeHostname(String url)</code>: Checks if the URL
+                belongs to the same hostname.
+              </li>
+              <li>
+                <code>initHostName(String url)</code>: Initializes the hostname
+                from the start URL.
+              </li>
+              <li>
+                <code>getUrlDfs(String startUrl, HtmlParser htmlParser)</code>:
+                Performs DFS to crawl URLs and starts new threads for each found
+                URL within the same hostname.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution 2: ConcurrentSkipListSet</strong>
+        <ul>
+          <li>
+            <code>Set&gt;String&lt; visited</code>: A thread-safe set to keep
+            track of visited URLs.
+          </li>
+          <li>
+            <strong>Methods:</strong>
+            <ul>
+              <li>
+                <code>crawl(String startUrl, HtmlParser htmlParser)</code>:
+                Initializes the hostname and starts the crawling process using a
+                parallel stream.
+              </li>
+              <li>
+                <code>
+                  crawlDfs(String startUrl, HtmlParser htmlParser, String
+                  hostname, Set&gt;String&lt; visited)
+                </code>
+                : Performs DFS to crawl URLs using parallel streams.
+              </li>
+              <li>
+                <code>getHostname(String url)</code>: Extracts the hostname from
+                a URL.
+              </li>
+              <li>
+                <code>isSameHostname(String url, String hostname)</code>: Checks
+                if the URL belongs to the same hostname.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution 3: Crawler Class</strong>
+        <ul>
+          <li>
+            <strong>Methods:</strong>
+            <ul>
+              <li>
+                <code>crawl(String startUrl, HtmlParser htmlParser)</code>:
+                Initializes the hostname and starts a new <code>Crawler</code>{" "}
+                thread.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Crawler Class:</strong>
+        <ul>
+          <li>
+            <code>String startUrl</code>: The starting URL for the crawling
+            process.
+          </li>
+          <li>
+            <code>String hostname</code>: The hostname to ensure we only crawl
+            within the same domain.
+          </li>
+          <li>
+            <code>HtmlParser htmlParser</code>: The HTML parser to extract URLs
+            from a webpage.
+          </li>
+          <li>
+            <code>volatile List&gt;String&lt; res</code>: A list to store the
+            result URLs (marked volatile for thread-safety).
+          </li>
+          <li>
+            <strong>Methods:</strong>
+            <ul>
+              <li>
+                <code>
+                  Crawler(String startUrl, String hostname, HtmlParser
+                  htmlParser)
+                </code>
+                : Constructor to initialize the crawler with the starting URL,
+                hostname, and HTML parser.
+              </li>
+              <li>
+                <code>run()</code>: The main logic for the crawling process,
+                creating new threads for each found URL within the same
+                hostname.
+              </li>
+              <li>
+                <code>static void joinThread(Thread thread)</code>: Helper
+                method to join threads and handle interruptions.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>HtmlParser Interface:</strong>
+        <ul>
+          <li>
+            Interface with a method{" "}
+            <code>List&gt;String&lt; getUrls(String str)</code> to get the list
+            of URLs from a given webpage.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
