@@ -7381,8 +7381,9 @@ const QUESTIONS = {
         <br />
         1<br />
         1<br />
-        ["BoundedBlockingQueue","enqueue","dequeue","dequeue","enqueue", <br />
-        "enqueue","enqueue","enqueue","dequeue"] <br />
+        ["BoundedBlockingQueue","enqueue","dequeue", <br />
+        "dequeue","enqueue", "enqueue", <br />
+        "enqueue","enqueue","dequeue"] <br />
         [[2],[1],[],[],[0],[2],[3],[4],[]]
         <br />
         <strong>Output:</strong>
@@ -7433,8 +7434,9 @@ const QUESTIONS = {
         <strong>Input:</strong> <br />
         3 <br />
         4<br />
-        ["BoundedBlockingQueue","enqueue","enqueue","enqueue", <br />
-        "dequeue","dequeue","dequeue","enqueue"]
+        ["BoundedBlockingQueue","enqueue", <br />
+        "enqueue","enqueue", "dequeue", <br />
+        "dequeue","dequeue","enqueue"]
         <br />
         [[3],[1],[0],[2],[],[],[],[3]]
         <br />
