@@ -7997,6 +7997,74 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2179: (
+    <ul>
+      <li>
+        <strong>FenwickTree class:</strong>
+        <ul>
+          <li>
+            Implements a Fenwick Tree (Binary Indexed Tree) to support efficient
+            range sum queries and point updates.
+          </li>
+          <li>
+            Provides methods for adding a value to an index and getting the sum
+            up to an index.
+          </li>
+          <li>
+            Uses bitwise operations to compute lowbit, which is essential for
+            Fenwick Tree operations.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution class:</strong>
+        <ul>
+          <li>
+            <code>goodTriplets(int[] nums1, int[] nums2)</code> method
+            calculates the number of good triplets satisfying the given
+            conditions.
+          </li>
+          <li>Initializes necessary data structures and mappings:</li>
+          <ul>
+            <li>
+              <code>numToIndex</code>: Maps values in <code>nums1</code> to
+              their indices for quick lookup.
+            </li>
+            <li>
+              <code>nums</code>: Converts values in <code>nums2</code> to their
+              corresponding indices in <code>nums1</code>.
+            </li>
+            <li>
+              Two Fenwick Trees (<code>tree1</code> and <code>tree2</code>) are
+              initialized.
+            </li>
+          </ul>
+          <li>
+            Calculates <code>leftSmaller</code> and <code>rightLarger</code>{" "}
+            arrays using the Fenwick Tree:
+          </li>
+          <ul>
+            <li>
+              <code>leftSmaller[i]</code>: Counts how many elements to the left
+              of <code>nums[i]</code> are smaller than <code>nums[i]</code>.
+            </li>
+            <li>
+              <code>rightLarger[i]</code>: Counts how many elements to the right
+              of <code>nums[i]</code> are larger than <code>nums[i]</code>.
+            </li>
+          </ul>
+          <li>
+            Iterates through each index in <code>nums</code> to calculate the
+            number of good triplets and accumulates the result in{" "}
+            <code>ans</code>.
+          </li>
+          <li>
+            Returns <code>ans</code> as the final count of good triplets.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
