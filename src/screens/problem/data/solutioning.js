@@ -6909,6 +6909,52 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1286: (
+    <ul>
+      <li>
+        <strong>Class:</strong> CombinationIterator
+      </li>
+      <li>
+        <strong>Constructor:</strong>{" "}
+        <code>
+          CombinationIterator(String characters, int combinationLength)
+        </code>
+        <ul>
+          <li>
+            Initializes the iterator with the provided <code>characters</code>{" "}
+            and <code>combinationLength</code>.
+          </li>
+          <li>
+            <code>characters</code>: A string of characters from which
+            combinations will be generated.
+          </li>
+          <li>
+            <code>combinationLength</code>: The length of combinations to
+            generate.
+          </li>
+          <li>
+            Precomputes all combinations of length{" "}
+            <code>combinationLength</code> from <code>characters</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>String next()</code>
+        <ul>
+          <li>Returns the next combination in lexicographical order.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>boolean hasNext()</code>
+        <ul>
+          <li>
+            Returns <code>true</code> if there are more combinations to iterate
+            over; otherwise, returns <code>false</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
