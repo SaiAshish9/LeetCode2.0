@@ -7558,6 +7558,116 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2031: (
+    <ul>
+      <li>
+        <strong>FenwickTree Class:</strong>
+        <ul>
+          <li>
+            <code>public FenwickTree(int n)</code>:
+            <ul>
+              <li>
+                Constructor initializes an array <code>sums</code> of size{" "}
+                <code>n + 1</code> to store Fenwick tree nodes.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>public void add(int i, int delta)</code>:
+            <ul>
+              <li>
+                Adds <code>delta</code> to the element at index <code>i</code>{" "}
+                and updates subsequent nodes in the Fenwick tree using the{" "}
+                <code>lowbit(i)</code> function.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>public int get(int i)</code>:
+            <ul>
+              <li>
+                Retrieves the sum of elements from index <code>1</code> to{" "}
+                <code>i</code> using the <code>lowbit(i)</code> function.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>private int[] sums</code>:
+            <ul>
+              <li>Array to store Fenwick tree nodes.</li>
+            </ul>
+          </li>
+          <li>
+            <code>private static int lowbit(int i)</code>:
+            <ul>
+              <li>
+                Computes the lowest non-zero bit in <code>i</code> using{" "}
+                <code>i & -i</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution Class:</strong>
+        <ul>
+          <li>
+            <code>public int subarraysWithMoreZerosThanOnes(int[] nums)</code>:
+            <ul>
+              <li>
+                Counts the number of subarrays where the number of ones is
+                greater than the number of zeros.
+              </li>
+              <li>
+                Initializes the modulus <code>kMod</code>, the length{" "}
+                <code>n</code> of the input array <code>nums</code>, and
+                variables <code>ans</code> and <code>prefix</code>.
+              </li>
+              <li>
+                Creates a Fenwick tree <code>tree</code> with size{" "}
+                <code>2 * n + 1</code> to handle positive and negative prefix
+                sums.
+              </li>
+              <li>
+                Remaps the prefix sum index <code>0</code> to the middle of the
+                tree and adds it to the tree.
+              </li>
+              <li>
+                Iterates through the array <code>nums</code>:
+                <ul>
+                  <li>
+                    Updates the <code>prefix</code> sum by adding <code>1</code>{" "}
+                    for each <code>1</code> and subtracting <code>1</code> for
+                    each <code>0</code>.
+                  </li>
+                  <li>
+                    Adds to <code>ans</code> the number of prefix sums seen so
+                    far that are less than the current prefix sum.
+                  </li>
+                  <li>
+                    Updates <code>ans</code> modulo <code>kMod</code>.
+                  </li>
+                  <li>Adds the current prefix sum to the Fenwick tree.</li>
+                </ul>
+              </li>
+              <li>
+                Returns the final answer <code>ans</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>private int remap(int i, int n)</code>:
+            <ul>
+              <li>
+                Remaps the index <code>i</code> to ensure all indices are
+                positive by adding <code>n + 1</code> to <code>i</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
