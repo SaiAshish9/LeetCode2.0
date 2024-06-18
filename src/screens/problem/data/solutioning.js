@@ -7405,6 +7405,88 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  3109: (
+    <ul>
+      <li>
+        <strong>FenwickTree Class:</strong>
+        <ul>
+          <li>
+            <code>public FenwickTree(int n)</code>: Constructor initializes an
+            array <code>sums</code> of size <code>n + 1</code> to store Fenwick
+            tree nodes.
+          </li>
+          <li>
+            <code>public void add(int i, int delta)</code>: Adds{" "}
+            <code>delta</code> to element at index <code>i</code> and updates
+            subsequent nodes in Fenwick tree using <code>lowbit(i)</code>{" "}
+            function.
+          </li>
+          <li>
+            <code>public int get(int i)</code>: Retrieves sum of elements from
+            index <code>1</code> to <code>i</code> using <code>lowbit(i)</code>{" "}
+            function.
+          </li>
+          <li>
+            <code>private int[] sums</code>: Array to store Fenwick tree nodes.
+          </li>
+          <li>
+            <code>private static int lowbit(int i)</code>: Computes lowest
+            non-zero bit in <code>i</code> using <code>i &amp; -i</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution Class:</strong>
+        <ul>
+          <li>
+            <code>public int getPermutationIndex(int[] perm)</code>: Computes
+            the lexicographical index of <code>perm</code> in permutations of{" "}
+            <code>[1, 2, ..., n]</code> using Fenwick tree and factorial
+            calculations.
+          </li>
+          <li>
+            <code>final int kMod = 1_000_000_007</code>: Modulus for large
+            number calculations.
+          </li>
+          <li>
+            <code>int[] fact = new int[n + 1]</code>: Array to store factorials
+            up to <code>n</code>.
+          </li>
+          <li>
+            <code>Arrays.fill(fact, 1)</code>: Initializes <code>fact</code>{" "}
+            with factorial values.
+          </li>
+          <li>
+            <code>
+              for (int i = 2; i &lt;= n; ++i) fact[i] = (int) ((fact[i - 1] *
+              (long) i) % kMod)
+            </code>
+            : Computes factorial values modulo <code>kMod</code>.
+          </li>
+          <li>
+            Iterates through <code>perm</code> to calculate the lexicographical
+            index using:
+            <ul>
+              <li>
+                <code>num - 1 - tree.get(num - 1)</code>: Counts unused numbers
+                less than <code>num</code>.
+              </li>
+              <li>
+                <code>fact[n - 1 - i]</code>: Computes suffix length factorial.
+              </li>
+              <li>
+                Updates <code>ans</code> using computed values and adds{" "}
+                <code>num</code> to Fenwick tree.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>return ans</code>: Returns the computed lexicographical index.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
