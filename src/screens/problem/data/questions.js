@@ -8011,7 +8011,8 @@ const QUESTIONS = {
             iterator over&nbsp;the
             <strong>
               <a href="https://en.wikipedia.org/wiki/Tree_traversal#In-order_(LNR)">
-                in-order traversal
+                {" "}
+                in-order traversal{" "}
               </a>
             </strong>
             &nbsp;of&nbsp;a binary search tree (BST):
