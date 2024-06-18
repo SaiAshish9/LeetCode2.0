@@ -7035,6 +7035,111 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  281: (
+    <ul>
+      <li>
+        <strong>Class:</strong> ZigzagIterator
+      </li>
+      <li>
+        <strong>Fields:</strong>
+        <ul>
+          <li>
+            <code>private int cur;</code> - Current index of the list being
+            accessed.
+          </li>
+          <li>
+            <code>private int size;</code> - Total number of lists (in this
+            case, always 2).
+          </li>
+          <li>
+            <code>private List&lt;Integer&gt; indexes;</code> - List to store
+            current indexes of each list.
+          </li>
+          <li>
+            <code>private List&lt;List&lt;Integer&gt;&gt; vectors;</code> - List
+            of lists (vectors) to iterate over.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Constructor:</strong>{" "}
+        <code>
+          ZigzagIterator(List&lt;Integer&gt; v1, List&lt;Integer&gt; v2)
+        </code>
+        <ul>
+          <li>
+            Initializes the iterator with two lists, <code>v1</code> and{" "}
+            <code>v2</code>.
+          </li>
+          <li>
+            Sets <code>cur = 0</code> (starting with the first list).
+          </li>
+          <li>
+            Sets <code>size = 2</code> (since there are two lists).
+          </li>
+          <li>
+            Initializes <code>indexes</code> with starting indexes for each list
+            (<code>[0, 0]</code>).
+          </li>
+          <li>
+            Stores <code>v1</code> and <code>v2</code> in the{" "}
+            <code>vectors</code> list.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>int next()</code>
+        <ul>
+          <li>Returns the next integer in the zigzag order.</li>
+          <li>
+            Fetches the current list (<code>vector</code>) and its current index
+            (<code>index</code>).
+          </li>
+          <li>
+            Returns the integer at <code>vector.get(index)</code>.
+          </li>
+          <li>
+            Advances the current index for the current list (
+            <code>indexes.set(cur, index + 1)</code>).
+          </li>
+          <li>
+            Updates <code>cur</code> to point to the next list in a round-robin
+            fashion (<code>cur = (cur + 1) % size</code>).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>boolean hasNext()</code>
+        <ul>
+          <li>
+            Checks if there are more integers to iterate over in the zigzag
+            order.
+          </li>
+          <li>
+            Starts iterating from the current position (<code>start = cur</code>
+            ).
+          </li>
+          <li>
+            While the current list's index has reached its size:
+            <ul>
+              <li>
+                Advances <code>cur</code> to the next list (
+                <code>cur = (cur + 1) % size</code>).
+              </li>
+              <li>
+                If <code>cur</code> returns to the starting position{" "}
+                <code>start</code>, it means all lists have been exhausted.
+              </li>
+              <li>
+                Returns <code>false</code> if no more elements are available;
+                otherwise, returns <code>true</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
