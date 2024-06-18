@@ -8090,6 +8090,7 @@ const QUESTIONS = {
             <strong>Output</strong>
             <br />
             [null, 3, 7, 3, 7, true, 9, 15, 20, false, true, 15, 9]
+            <br />
             <strong>Explanation</strong>
             <br />
             // The underlined element is where the pointer currently is.
