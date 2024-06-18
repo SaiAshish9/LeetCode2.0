@@ -7140,6 +7140,37 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  604:(<ul>
+    <li><strong>Class:</strong> StringIterator</li>
+    <li><strong>Fields:</strong>
+        <ul>
+            <li><code>private List&lt;Node&gt; d;</code> - List of nodes representing characters and their counts in the compressed string.</li>
+            <li><code>private int p;</code> - Current position in the list <code>d</code>.</li>
+        </ul>
+    </li>
+    <li><strong>Constructor:</strong> <code>StringIterator(String compressedString)</code>
+        <ul>
+            <li>Initializes the iterator with a compressed string <code>compressedString</code>.</li>
+            <li>Parses the compressed string to populate the list <code>d</code> with nodes <code>Node(c, x)</code>, where <code>c</code> is the character and <code>x</code> is its count.</li>
+            <li>Advances through the string using index <code>i</code> to extract characters and their counts.</li>
+        </ul>
+    </li>
+    <li><strong>Method:</strong> <code>char next()</code>
+        <ul>
+            <li>Returns the next character in the uncompressed form.</li>
+            <li>Fetches the character at index <code>p</code> in list <code>d</code>.</li>
+            <li>Decrements the count of the current node's character.</li>
+            <li>If the count becomes zero, advances <code>p</code> to the next node.</li>
+            <li>Returns the fetched character.</li>
+        </ul>
+    </li>
+    <li><strong>Method:</strong> <code>boolean hasNext()</code>
+        <ul>
+            <li>Checks if there are more characters to iterate over.</li>
+            <li>Returns <code>true</code> if <code>p</code> is less than the size of list <code>d</code> and the count <code>x</code> of the current node <code>d.get(p)</code> is greater than zero; otherwise, returns <code>false</code>.</li>
+        </ul>
+    </li>
+</ul>)
 };
 
 function appendPxToValues(obj) {
