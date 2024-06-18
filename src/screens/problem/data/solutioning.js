@@ -7730,9 +7730,11 @@ const SOLUTIONING = {
           </ul>
         </li>
       </ul>
-      This approach efficiently counts smaller numbers after each element using
-      merge sort with a time complexity of O(nlogn) and space complexity of
-      O(n), making it suitable for large input sizes up to 10^ 5
+      <p>
+        This approach efficiently counts smaller numbers after each element
+        using merge sort with a time complexity of O(nlogn) and space complexity
+        of O(n), making it suitable for large input sizes up to 10^5
+      </p>
     </>
   ),
 };
