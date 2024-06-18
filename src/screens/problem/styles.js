@@ -366,6 +366,7 @@ export const LeftContentDescription = styled.div`
     overflow: visible;
     padding-left: 1rem;
     white-space: pre-wrap;
+    width: 100%;
   }
 
   h1,
