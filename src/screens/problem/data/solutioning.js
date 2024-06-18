@@ -6747,45 +6747,85 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
-  341:(<ul>
-    <li><strong>Class:</strong> NestedIterator</li>
-    <li><strong>Fields:</strong>
+  341: (
+    <ul>
+      <li>
+        <strong>Class:</strong> NestedIterator
+      </li>
+      <li>
+        <strong>Fields:</strong>
         <ul>
-            <li><code>private Stack&lt;NestedInteger&gt; stack;</code> - A stack to manage nested integers during iteration.</li>
+          <li>
+            <code>private Stack&lt;NestedInteger&gt; stack;</code> - A stack to
+            manage nested integers during iteration.
+          </li>
         </ul>
-    </li>
-    <li><strong>Constructor:</strong> <code>NestedIterator(List&lt;NestedInteger&gt; nestedList)</code>
+      </li>
+      <li>
+        <strong>Constructor:</strong>{" "}
+        <code>NestedIterator(List&lt;NestedInteger&gt; nestedList)</code>
         <ul>
-            <li>Initializes the iterator with a nested list of integers (<code>nestedList</code>).</li>
-            <li>Calls <code>addInteger(nestedList)</code> to push all elements of <code>nestedList</code> onto the stack in reverse order.</li>
+          <li>
+            Initializes the iterator with a nested list of integers (
+            <code>nestedList</code>).
+          </li>
+          <li>
+            Calls <code>addInteger(nestedList)</code> to push all elements of{" "}
+            <code>nestedList</code> onto the stack in reverse order.
+          </li>
         </ul>
-    </li>
-    <li><strong>Method:</strong> <code>Integer next()</code>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>Integer next()</code>
         <ul>
-            <li>Retrieves and returns the integer at the top of the stack.</li>
-            <li>Assumes the top element of the stack is an integer (<code>stack.pop().getInteger()</code>).</li>
+          <li>Retrieves and returns the integer at the top of the stack.</li>
+          <li>
+            Assumes the top element of the stack is an integer (
+            <code>stack.pop().getInteger()</code>).
+          </li>
         </ul>
-    </li>
-    <li><strong>Method:</strong> <code>boolean hasNext()</code>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>boolean hasNext()</code>
         <ul>
-            <li>Checks if there is another integer to iterate over.</li>
-            <li>While the stack is not empty and the top element of the stack is not an integer:
-                <ul>
-                    <li>Pop the top element (<code>stack.pop()</code>).</li>
-                    <li>Call <code>addInteger(ni.getList())</code> to push all elements of <code>ni.getList()</code> onto the stack in reverse order.</li>
-                </ul>
-            </li>
-            <li>Returns <code>true</code> if the stack is not empty after processing; otherwise, returns <code>false</code>.</li>
+          <li>Checks if there is another integer to iterate over.</li>
+          <li>
+            While the stack is not empty and the top element of the stack is not
+            an integer:
+            <ul>
+              <li>
+                Pop the top element (<code>stack.pop()</code>).
+              </li>
+              <li>
+                Call <code>addInteger(ni.getList())</code> to push all elements
+                of <code>ni.getList()</code> onto the stack in reverse order.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Returns <code>true</code> if the stack is not empty after
+            processing; otherwise, returns <code>false</code>.
+          </li>
         </ul>
-    </li>
-    <li><strong>Helper Method:</strong> <code>void addInteger(List&lt;NestedInteger&gt; nestedList)</code>
+      </li>
+      <li>
+        <strong>Helper Method:</strong>{" "}
+        <code>void addInteger(List&lt;NestedInteger&gt; nestedList)</code>
         <ul>
-            <li>Pushes all elements of <code>nestedList</code> onto the stack in reverse order.</li>
-            <li>Iterates over <code>nestedList</code> from the last element to the first (<code>for (int i = nestedList.size() - 1; i >= 0; --i)</code>) and pushes each element onto the stack (<code>stack.push(nestedList.get(i))</code>).</li>
+          <li>
+            Pushes all elements of <code>nestedList</code> onto the stack in
+            reverse order.
+          </li>
+          <li>
+            Iterates over <code>nestedList</code> from the last element to the
+            first (<code>for (int i = nestedList.size() - 1; i >= 0; --i)</code>
+            ) and pushes each element onto the stack (
+            <code>stack.push(nestedList.get(i))</code>).
+          </li>
         </ul>
-    </li>
-</ul>
-)
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
