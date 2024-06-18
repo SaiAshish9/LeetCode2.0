@@ -7737,6 +7737,76 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  327: (
+    <>
+      <ul>
+        <li>
+          <strong>Solution Class:</strong>
+          <ul>
+            <li>
+              <code>
+                public int countRangeSum(int[] nums, int lower, int upper)
+              </code>
+              :
+              <ul>
+                <li>
+                  Initializes a `prefixSum` array to store cumulative sums of
+                  `nums`.
+                </li>
+                <li>
+                  Invokes the `mergeSortAndCount` method to recursively count
+                  valid subarrays within `[lower, upper]`.
+                </li>
+                <li>Converts and returns the count of valid subarrays.</li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private int mergeSortAndCount(long[] prefixSum, int left, int
+                right, int lower, int upper)
+              </code>
+              :
+              <ul>
+                <li>
+                  Divides the array into halves and recursively counts valid
+                  subarrays using `mergeAndCount`.
+                </li>
+                <li>
+                  Accumulates the counts from left and right halves and the
+                  merged counts.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private int mergeAndCount(long[] prefixSum, int left, int mid,
+                int right, int lower, int upper)
+              </code>
+              :
+              <ul>
+                <li>
+                  Counts the number of valid subarrays that fall within the
+                  range `[lower, upper]` during the merge step.
+                </li>
+                <li>
+                  Uses two pointers (`j` and `k`) to find the valid pairs
+                  `(left, right)`.
+                </li>
+                <li>
+                  Merges the sorted halves and updates `prefixSum` accordingly.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        This approach efficiently counts the number of range sums using merge
+        sort with a time complexity of O(nlogn) and a space complexity of O(n),
+        making it suitable for large input sizes.
+      </p>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
