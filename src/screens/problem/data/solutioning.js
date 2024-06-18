@@ -8106,10 +8106,10 @@ const SOLUTIONING = {
         </li>
 
         <li>
-          <strong>Time Complexity:</strong> \( O(n \log n) \) due to merge sort.
+          <strong>Time Complexity:</strong> ( O(n log n) ) due to merge sort.
         </li>
         <li>
-          <strong>Space Complexity:</strong> \( O(n) \) for the additional
+          <strong>Space Complexity:</strong> ( O(n) ) for the additional
           arrays used.
         </li>
       </ul>
