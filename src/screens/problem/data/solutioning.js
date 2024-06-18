@@ -6955,6 +6955,86 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  251: (
+    <ul>
+      <li>
+        <strong>Class:</strong> Vector2D
+      </li>
+      <li>
+        <strong>Fields:</strong>
+        <ul>
+          <li>
+            <code>private int i;</code> - Current row index in the 2D vector.
+          </li>
+          <li>
+            <code>private int j;</code> - Current column index in the 2D vector.
+          </li>
+          <li>
+            <code>private int[][] vec;</code> - The 2D vector that holds
+            integers.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Constructor:</strong> <code>Vector2D(int[][] vec)</code>
+        <ul>
+          <li>
+            Initializes the iterator with the given 2D vector <code>vec</code>.
+          </li>
+          <li>
+            <code>vec</code>: A 2D array where each subarray represents a row of
+            integers.
+          </li>
+          <li>
+            Sets <code>i = 0</code> and <code>j = 0</code> to start iterating
+            from the beginning of the 2D vector.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>int next()</code>
+        <ul>
+          <li>Returns the next integer in the 2D vector in row-major order.</li>
+          <li>
+            Advances <code>i</code> and <code>j</code> using the{" "}
+            <code>forward()</code> method to skip empty or finished
+            rows/columns.
+          </li>
+          <li>
+            Returns <code>vec[i][j++]</code> as the next integer.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>boolean hasNext()</code>
+        <ul>
+          <li>
+            Checks if there are more integers in the 2D vector to iterate over.
+          </li>
+          <li>
+            Advances <code>i</code> and <code>j</code> using the{" "}
+            <code>forward()</code> method to skip empty or finished
+            rows/columns.
+          </li>
+          <li>
+            Returns <code>true</code> if there are more integers (
+            <code>i &lt; vec.length</code>); otherwise, returns{" "}
+            <code>false</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Private Method:</strong> <code>void forward()</code>
+        <ul>
+          <li>Helper method to skip empty or finished rows/columns.</li>
+          <li>
+            Increments <code>i</code> and resets <code>j = 0</code> if{" "}
+            <code>j</code> is out of bounds for the current row.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {

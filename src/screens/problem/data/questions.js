@@ -7840,7 +7840,6 @@ const QUESTIONS = {
       <p>
         <b>Example:</b>
       </p>{" "}
-      <br />
       <pre>
         Vector2D iterator = new Vector2D([[1,2],[3],[4]]);
         <br />
