@@ -7280,6 +7280,91 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  23: (
+    <>
+      {" "}
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>Base Case</strong>
+          <ul>
+            <li>If the list of lists is empty or null, return null.</li>
+            <li>If there is only one list, return that list.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Recursive Divide</strong>
+          <ul>
+            <li>Split the list of linked lists into two halves.</li>
+            <li>
+              Recursively apply the <code>mergeKLists</code> function to each
+              half to merge them.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Merge</strong>
+          <ul>
+            <li>
+              Merge the two sorted linked lists using the{" "}
+              <code>mergeTwoLists</code> function, which is a standard merge
+              operation for two sorted linked lists.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Helper Function (<code>mergeTwoLists</code>)
+          </strong>
+          <ul>
+            <li>Create a dummy node to simplify the merge process.</li>
+            <li>
+              Use two pointers to traverse both lists, appending the smaller
+              node to the result list.
+            </li>
+            <li>
+              Attach any remaining nodes once one of the lists is exhausted.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Time Complexity</h2>
+      <ul>
+        <li>
+          <strong>Merge Two Lists</strong>: <code>O(n)</code>, where{" "}
+          <code>n</code> is the total number of nodes in both lists.
+        </li>
+        <li>
+          <strong>Merge K Lists</strong>:
+          <ul>
+            <li>
+              Dividing the list of <code>k</code> lists takes{" "}
+              <code>O(log k)</code> divisions.
+            </li>
+            <li>
+              Merging all nodes takes <code>O(n)</code>.
+            </li>
+            <li>
+              Hence, the overall time complexity is <code>O(n log k)</code>,
+              where <code>n</code> is the total number of nodes across all
+              lists.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Space Complexity</h2>
+      <ul>
+        <li>
+          <strong>Auxiliary Space</strong>: <code>O(log k)</code> due to the
+          recursion stack.
+        </li>
+        <li>
+          <strong>In-place Merging</strong>: Only uses a fixed amount of
+          additional space, making the space complexity efficient.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
