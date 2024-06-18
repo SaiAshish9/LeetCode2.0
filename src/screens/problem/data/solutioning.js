@@ -7331,11 +7331,11 @@ const SOLUTIONING = {
       <h2>Time Complexity</h2>
       <ul>
         <li>
-          <strong>Merge Two Lists</strong>: <code>O(n)</code>, where{" "}
+          <strong>Merge Two Lists:</strong> <code>O(n)</code>, where{" "}
           <code>n</code> is the total number of nodes in both lists.
         </li>
         <li>
-          <strong>Merge K Lists</strong>:
+          <strong>Merge K Lists:</strong>
           <ul>
             <li>
               Dividing the list of <code>k</code> lists takes{" "}
@@ -7355,11 +7355,11 @@ const SOLUTIONING = {
       <h2>Space Complexity</h2>
       <ul>
         <li>
-          <strong>Auxiliary Space</strong>: <code>O(log k)</code> due to the
+          <strong>Auxiliary Space:</strong> <code>O(log k)</code> due to the
           recursion stack.
         </li>
         <li>
-          <strong>In-place Merging</strong>: Only uses a fixed amount of
+          <strong>In-place Merging:</strong> Only uses a fixed amount of
           additional space, making the space complexity efficient.
         </li>
       </ul>
