@@ -7407,7 +7407,9 @@ const SOLUTIONING = {
   ),
   3109: (
     <ul>
-      <p>It's ideal to solve this using <code>Binary Indexed Tree</code></p>
+      <p>
+        It's ideal to solve this using <code>Binary Indexed Tree</code>
+      </p>
       <li>
         <strong>FenwickTree Class:</strong>
         <ul>
@@ -7483,6 +7485,74 @@ const SOLUTIONING = {
           </li>
           <li>
             <code>return ans</code>: Returns the computed lexicographical index.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  2519: (
+    <ul>
+      <p>
+        It's ideal to solve this using <code>Binary Indexed Tree</code>
+      </p>
+      <li>
+        <strong>FenwickTree Class:</strong>
+        <ul>
+          <li>
+            <code>public FenwickTree(int n)</code>: Constructor initializes an
+            array <code>sums</code> of size <code>n + 1</code> to store Fenwick
+            tree nodes.
+          </li>
+          <li>
+            <code>public void add(int i, int delta)</code>: Adds{" "}
+            <code>delta</code> to element at index <code>i</code> and updates
+            subsequent nodes in Fenwick tree using <code>lowbit(i)</code>{" "}
+            function.
+          </li>
+          <li>
+            <code>public int get(int i)</code>: Retrieves sum of elements from
+            index <code>1</code> to <code>i</code> using <code>lowbit(i)</code>{" "}
+            function.
+          </li>
+          <li>
+            <code>private int[] sums</code>: Array to store Fenwick tree nodes.
+          </li>
+          <li>
+            <code>private static int lowbit(int i)</code>: Computes lowest
+            non-zero bit in <code>i</code> using <code>i &amp; -i</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution Class:</strong>
+        <ul>
+          <li>
+            <code>public int kBigIndices(int[] nums, int k)</code>: Counts how
+            many indices <code>i</code> in array <code>nums</code> satisfy both{" "}
+            <code>left[i] &gt;= k</code> and <code>right[i] &gt;= k</code>.
+          </li>
+          <li>
+            Creates two Fenwick trees, <code>leftTree</code> and{" "}
+            <code>rightTree</code>, and arrays <code>left</code> and{" "}
+            <code>right</code> to store counts.
+          </li>
+          <li>
+            Populates <code>left</code> array using <code>leftTree</code> to
+            count elements less than <code>nums[i]</code> with index{" "}
+            <code>&lt; i</code>.
+          </li>
+          <li>
+            Populates <code>right</code> array using <code>rightTree</code> to
+            count elements less than <code>nums[i]</code> with index{" "}
+            <code>&gt; i</code>.
+          </li>
+          <li>
+            Iterates through <code>nums</code> to count valid indices based on
+            conditions and increments <code>ans</code> accordingly.
+          </li>
+          <li>
+            <code>return ans</code>: Returns the count of indices satisfying the
+            conditions.
           </li>
         </ul>
       </li>
