@@ -7747,8 +7747,9 @@ const QUESTIONS = {
           </p>
 
           <pre>
-            <strong>Input:</strong> cars = [1,3,5,2,4], directions =
-            [2,1,2,4,3], arrivalTimes = [10,20,30,40,50] <br />
+            <strong>Input:</strong>
+            <br /> cars = [1,3,5,2,4], directions = [2,1,2,4,3], arrivalTimes =
+            [10,20,30,40,50] <br />
             <strong>Output:</strong> [ <br />
             "Car 1 Has Passed Road A In Direction 2", // Traffic light on road A
             is green, car 1 can cross the intersection. <br />
@@ -7769,8 +7770,9 @@ const QUESTIONS = {
           </p>
 
           <pre>
-            <strong>Input:</strong> cars = [1,2,3,4,5], directions =
-            [2,4,3,3,1], arrivalTimes = [10,20,30,40,40] <br />
+            <strong>Input:</strong>
+            <br /> cars = [1,2,3,4,5], directions = [2,4,3,3,1], arrivalTimes =
+            [10,20,30,40,40] <br />
             <strong>Output:</strong> [ <br />
             "Car 1 Has Passed Road A In Direction 2", // Traffic light on road A
             is green, car 1 can cross the intersection. <br />
