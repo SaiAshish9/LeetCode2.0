@@ -7863,6 +7863,74 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  "912_merge_sort": (
+    <>
+      <ul>
+        <li>
+          <strong>Solution Class:</strong>
+          <ul>
+            <li>
+              <code>public int[] sortArray(int[] nums)</code>:
+              <ul>
+                <li>Entry point to the sorting algorithm.</li>
+                <li>Invokes `mergeSort` to sort the entire array `nums`.</li>
+                <li>Returns the sorted array.</li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private void mergeSort(int[] nums, int left, int right)
+              </code>
+              :
+              <ul>
+                <li>
+                  Recursive function to divide the array into halves and sort
+                  them.
+                </li>
+                <li>Base case: stops recursion when `left &gt;= right`.</li>
+                <li>
+                  Divides the array into two halves and recursively sorts them.
+                </li>
+                <li>Merges the two sorted halves using `merge`.</li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private void merge(int[] nums, int left, int mid, int right)
+              </code>
+              :
+              <ul>
+                <li>
+                  Merges two sorted subarrays (`nums[left...mid]` and
+                  `nums[mid+1...right]`) into a single sorted array
+                  `nums[left...right]`.
+                </li>
+                <li>
+                  Uses additional arrays `leftArr` and `rightArr` to store the
+                  subarrays temporarily.
+                </li>
+                <li>
+                  Compares elements from `leftArr` and `rightArr`, placing the
+                  smaller element into `nums`.
+                </li>
+                <li>
+                  Transfers any remaining elements from `leftArr` or `rightArr`
+                  into `nums`.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        {" "}
+        This implementation ensures that the array nums is sorted in
+        non-decreasing order using the merge sort algorithm, which has a time
+        complexity of O(nlogn) and a space complexity of O(n). It is efficient
+        and suitable for large input sizes.
+      </p>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
