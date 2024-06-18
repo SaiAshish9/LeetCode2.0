@@ -6503,6 +6503,97 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1279: (
+    <ul>
+      <li>
+        <strong>Class and Fields:</strong>
+        <ul>
+          <li>
+            The class <code>TrafficLight</code> simulates a traffic light system
+            that manages cars arriving at an intersection from different roads.
+          </li>
+          <li>
+            It has the following field:
+            <ul>
+              <li>
+                <code>int road</code>: Indicates the current road with the green
+                light. It is initialized to 1.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Constructor:</strong>
+        <ul>
+          <li>
+            The constructor <code>TrafficLight()</code> initializes the traffic
+            light system.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>carArrived Method:</strong>
+        <ul>
+          <li>
+            The method{" "}
+            <code>
+              carArrived(int carId, int roadId, int direction, Runnable
+              turnGreen, Runnable crossCar)
+            </code>{" "}
+            handles a car arriving at the intersection.
+            <ul>
+              <li>
+                Parameters:
+                <ul>
+                  <li>
+                    <code>int carId</code>: The ID of the car.
+                  </li>
+                  <li>
+                    <code>int roadId</code>: The ID of the road the car is
+                    coming from (1 or 2).
+                  </li>
+                  <li>
+                    <code>int direction</code>: The direction the car is going
+                    (not used in this implementation).
+                  </li>
+                  <li>
+                    <code>Runnable turnGreen</code>: A runnable that turns the
+                    light green for the car's road if it isn't already green.
+                  </li>
+                  <li>
+                    <code>Runnable crossCar</code>: A runnable that lets the car
+                    cross the intersection.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Behavior:
+                <ul>
+                  <li>
+                    The method is synchronized to ensure thread safety when
+                    multiple cars arrive concurrently.
+                  </li>
+                  <li>
+                    If the arriving car's road ID (<code>roadId</code>) is
+                    different from the current green light road (
+                    <code>road</code>), the light is switched to the arriving
+                    car's road by calling <code>turnGreen.run()</code>, and the{" "}
+                    <code>road</code> is updated to <code>roadId</code>.
+                  </li>
+                  <li>
+                    Regardless of whether the light was switched,{" "}
+                    <code>crossCar.run()</code> is called to allow the car to
+                    cross the intersection.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
