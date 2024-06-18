@@ -6826,6 +6826,89 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  900: (
+    <ul>
+      <li>
+        <strong>Class:</strong> RLEIterator
+      </li>
+      <li>
+        <strong>Fields:</strong>
+        <ul>
+          <li>
+            <code>private int[] encoding;</code> - Array to store the run-length
+            encoded sequence.
+          </li>
+          <li>
+            <code>private int index;</code> - Index to keep track of the current
+            position in the <code>encoding</code> array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Constructor:</strong> <code>RLEIterator(int[] encoding)</code>
+        <ul>
+          <li>
+            Initializes the iterator with the given run-length encoded sequence.
+          </li>
+          <li>
+            <code>encoding</code> is an array where consecutive elements
+            represent pairs of counts and values to be repeated.
+          </li>
+          <li>
+            Sets <code>index</code> to 0 to start iterating from the beginning
+            of <code>encoding</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method:</strong> <code>int next(int n)</code>
+        <ul>
+          <li>
+            Returns the next element in the decoded sequence based on the
+            integer <code>n</code>.
+          </li>
+          <li>
+            <code>n</code> specifies the number of elements to fetch from the
+            decoded sequence.
+          </li>
+          <li>
+            Iterates through the <code>encoding</code> array:
+            <ul>
+              <li>
+                If <code>n</code> is less than or equal to the current count (
+                <code>encoding[index]</code>):
+                <ul>
+                  <li>
+                    Subtracts <code>n</code> from <code>encoding[index]</code>.
+                  </li>
+                  <li>
+                    Returns the corresponding value (
+                    <code>encoding[index + 1]</code>) as the next element.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                If <code>n</code> is greater than the current count:
+                <ul>
+                  <li>
+                    Subtracts the current count from <code>n</code>.
+                  </li>
+                  <li>
+                    Advances <code>index</code> by 2 to skip to the next pair in{" "}
+                    <code>encoding</code>.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Returns <code>-1</code> if there are no more elements left in the
+            decoded sequence to fetch.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
