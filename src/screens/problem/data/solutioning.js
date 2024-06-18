@@ -7365,6 +7365,31 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  148: (
+    <>
+      <h2>Steps</h2>
+      <ul>
+        <li>
+          <strong>Divide</strong>
+          <ul>
+            <li>Divide the list of linked lists into two halves.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Conquer</strong>
+          <ul>
+            <li>Recursively merge each half.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Combine</strong>
+          <ul>
+            <li>Merge the two sorted halves into a single sorted list.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
