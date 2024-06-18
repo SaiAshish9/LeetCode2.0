@@ -7931,6 +7931,76 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  1649: (
+    <>
+      <ul>
+        <li>
+          <strong>Solution Class:</strong>
+          <ul>
+            <li>
+              <code>public int createSortedArray(int[] instructions)</code>:
+              <ul>
+                <li>Entry point to the solution.</li>
+                <li>
+                  Initializes a Fenwick Tree and processes each instruction in
+                  the array.
+                </li>
+                <li>
+                  Counts elements less than or equal to the current element
+                  using the Fenwick Tree.
+                </li>
+                <li>
+                  Updates the Fenwick Tree with the current element after
+                  counting.
+                </li>
+                <li>Computes the total cost modulo \(10^9 + 7\).</li>
+                <li>Returns the computed cost.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>FenwickTree Class:</strong>
+          <ul>
+            <li>
+              <code>public FenwickTree(int size)</code>:
+              <ul>
+                <li>
+                  Constructor to initialize the Fenwick Tree with a given size.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>public void update(int index, int delta)</code>:
+              <ul>
+                <li>
+                  Updates the Fenwick Tree at a specific index with a given
+                  delta value.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>public int query(int index)</code>:
+              <ul>
+                <li>
+                  Queries the Fenwick Tree for the prefix sum up to a specific
+                  index.
+                </li>
+                <li>Returns the sum.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        This implementation efficiently handles the problem requirements using
+        merge sort combined with a Fenwick Tree, ensuring that the operations
+        are performed in O(nlogn) time complexity due to the merge sort and
+        O(logn) time complexity for each Fenwick Tree operation, resulting in an
+        overall efficient solution suitable for large input sizes.
+      </p>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
