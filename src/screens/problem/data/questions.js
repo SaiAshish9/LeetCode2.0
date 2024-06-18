@@ -7950,6 +7950,58 @@ const QUESTIONS = {
       </pre>
     </div>
   ),
+  604: (
+    <div class="markdown-body div-width">
+      <p>
+        Design and implement a data structure for a compressed string iterator.
+        It should support the following operations: <code>next</code> and{" "}
+        <code>hasNext</code>.
+      </p>
+
+      <p>
+        The given compressed string will be in the form of each letter followed
+        by a positive integer representing the number of this letter existing in
+        the original uncompressed string.
+      </p>
+
+      <p>
+        <code>next()</code> - if the original string still has uncompressed
+        characters, return the next letter; Otherwise return a white space.
+        <br />
+        <code>hasNext()</code> - Judge whether there is any letter needs to be
+        uncompressed.
+      </p>
+
+      <p>
+        <b>Note:</b>
+        <br />
+        Please remember to <b>RESET</b> your class variables declared in
+        StringIterator, as static/class variables are{" "}
+        <b>persisted across multiple test cases</b>. Please see{" "}
+        <a href="https://leetcode.com/faq/#different-output">here</a> for more
+        details.
+      </p>
+
+      <p>
+        <b>Example:</b>
+      </p>
+      <pre>
+        StringIterator iterator = new StringIterator("L1e2t1C1o1d1e1");' <br />
+        iterator.next(); // return 'L' <br />
+        iterator.next(); // return 'e'' <br />
+        iterator.next(); // return 'e'' <br />
+        iterator.next(); // return 't'' <br />
+        iterator.next(); // return 'C'' <br />
+        iterator.next(); // return 'o'' <br />
+        iterator.next(); // return 'd'' <br />
+        iterator.hasNext(); // return true' <br />
+        iterator.next(); // return 'e'' <br />
+        iterator.hasNext(); // return false' <br />
+        iterator.next(); // return ' '
+      </pre>
+      <p></p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
