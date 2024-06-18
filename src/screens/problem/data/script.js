@@ -3,7 +3,7 @@ const tags = require("./tags.json");
 let index = 0;
 
 tags.forEach((x, i) => {
-  if (x.tag.toLowerCase().includes("doubly")) {
+  if (x.tag.toLowerCase().includes("concurre")) {
     index = i;
   }
 });

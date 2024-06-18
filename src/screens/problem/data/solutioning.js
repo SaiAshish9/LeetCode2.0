@@ -961,7 +961,7 @@ const SOLUTIONING = {
 
         <li>
           <strong>
-            getStartNode(Map&lt;Integer, Stack&lt;Integer&gt;&gt; graph,
+            getStartNode(Map&lt;Integer, Stack&lt;Integer&gt; graph,
             Map&lt;Integer, Integer&gt; outDegree, Map&lt;Integer, Integer&gt;
             inDegrees, int[][] pairs):
           </strong>
@@ -6594,6 +6594,44 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  173:(
+    <><ul>
+    <li><strong>Class:</strong> BSTIterator</li>
+    <li><strong>Fields:</strong>
+        <ul>
+            <li><code>private Stack&lt;TreeNode&gt; stack;</code> - A stack to store nodes for iterative traversal.</li>
+        </ul>
+    </li>
+    <li><strong>Constructor:</strong> <code>BSTIterator(TreeNode root)</code>
+        <ul>
+            <li>Initializes the iterator with the root of the BST.</li>
+            <li>Invokes <code>pushAll(root)</code> to push all left children of the root onto the stack.</li>
+        </ul>
+    </li>
+    <li><strong>Method:</strong> <code>int next()</code>
+        <ul>
+            <li>Returns the next smallest number in the BST.</li>
+            <li>Pops the top node from the stack, which is the current smallest node.</li>
+            <li>Calls <code>pushAll(node.right)</code> to push all left children of the right subtree onto the stack.</li>
+            <li>Time Complexity: O(1) average, as popping from a stack and pushing left children are constant time operations.</li>
+        </ul>
+    </li>
+    <li><strong>Method:</strong> <code>boolean hasNext()</code>
+        <ul>
+            <li>Checks if there are more nodes to process in the BST.</li>
+            <li>Returns <code>true</code> if the stack is not empty; otherwise, returns <code>false</code>.</li>
+            <li>Time Complexity: O(1), as it simply checks the stack's emptiness.</li>
+        </ul>
+    </li>
+    <li><strong>Helper Method:</strong> <code>void pushAll(TreeNode node)</code>
+        <ul>
+            <li>Pushes all left children of the given node onto the stack.</li>
+            <li>Starts from <code>node</code> and traverses down its left children until reaching <code>null</code>.</li>
+        </ul>
+    </li>
+</ul>
+</>
+  )
 };
 
 function appendPxToValues(obj) {
