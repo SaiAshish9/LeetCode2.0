@@ -8330,62 +8330,34 @@ const QUESTIONS = {
       <p dir="auto">
         <strong>Example 1:</strong>
       </p>
-      <div dir="auto">
-        <p dir="auto">
-          <strong>Input:</strong> <span>perm = [1,2]</span>
-        </p>
+      <pre>
+        <strong>Input:</strong> <span>perm = [1,2]</span>
         <br />
-
-        <p dir="auto">
-          <strong>Output:</strong> <span>0</span>
-        </p>
+        <strong>Output:</strong> <span>0</span>
         <br />
-
-        <p dir="auto">
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
         <br />
-
-        <p dir="auto">
-          There are only two permutations in the following order:
-        </p>
-        <p dir="auto">
-          <code>[1,2]</code>, <code>[2,1]</code>
-          <br />
-          <br />
-          And <code>[1,2]</code> is at index 0.
-        </p>
-      </div>
+        There are only two permutations in the following order:
+        <code>[1,2]</code>, <code>[2,1]</code>
+        <br />
+        And <code>[1,2]</code> is at index 0.
+      </pre>
       <p dir="auto">
         <strong>Example 2:</strong>
       </p>
-      <div dir="auto">
-        <p dir="auto">
-          <strong>Input:</strong> <span>perm = [3,1,2]</span>
-        </p>
+      <pre>
+        <strong>Input:</strong> <span>perm = [3,1,2]</span>
         <br />
-
-        <p dir="auto">
-          <strong>Output:</strong> <span>4</span>
-        </p>
+        <strong>Output:</strong> <span>4</span>
         <br />
-
-        <p dir="auto">
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
         <br />
-
-        <p dir="auto">
-          There are only six permutations in the following order:
-        </p>
-        <p dir="auto">
-          <code>[1,2,3]</code>, <code>[1,3,2]</code>, <code>[2,1,3]</code>,{" "}
-          <code>[2,3,1]</code>, <code>[3,1,2]</code>, <code>[3,2,1]</code>
-          <br />
-          <br />
-          And <code>[3,1,2]</code> is at index 4.
-        </p>
-      </div>
+        There are only six permutations in the following order:
+        <code>[1,2,3]</code>, <code>[1,3,2]</code>, <code>[2,1,3]</code>,{" "}
+        <code>[2,3,1]</code>, <code>[3,1,2]</code>, <code>[3,2,1]</code>
+        <br />
+        And <code>[3,1,2]</code> is at index 4.
+      </pre>
       <p dir="auto">&nbsp;</p>
       <p dir="auto">
         <strong>Constraints:</strong>
