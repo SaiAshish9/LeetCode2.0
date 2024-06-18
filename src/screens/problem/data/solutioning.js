@@ -6089,6 +6089,78 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1195: (
+    <ul>
+      <li>
+        <strong>Class and Constructor:</strong>
+        <ul>
+          <li>
+            The class <code>FizzBuzz</code> has a private integer <code>n</code>{" "}
+            which represents the limit up to which we will print.
+          </li>
+          <li>
+            It also has a private integer <code>current</code> which tracks the
+            current number being processed.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Synchronized Methods:</strong>
+        <ul>
+          <li>
+            Each method is <code>synchronized</code> to ensure that only one
+            thread can execute it at a time.
+          </li>
+          <li>
+            The <code>fizz</code> method will print "fizz" for numbers divisible
+            by 3 but not 5.
+          </li>
+          <li>
+            The <code>buzz</code> method will print "buzz" for numbers divisible
+            by 5 but not 3.
+          </li>
+          <li>
+            The <code>fizzbuzz</code> method will print "fizzbuzz" for numbers
+            divisible by both 3 and 5.
+          </li>
+          <li>
+            The <code>number</code> method will print the number itself if it is
+            not divisible by 3 or 5.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Control Flow:</strong>
+        <ul>
+          <li>
+            Each method uses a <code>while</code> loop to keep checking the
+            current number.
+          </li>
+          <li>
+            Inside the <code>while</code> loop, another <code>while</code> loop
+            ensures that the thread waits if the current number doesn't meet its
+            specific condition (using <code>wait()</code>).
+          </li>
+          <li>
+            If the current number meets the condition, the appropriate action
+            (running the print method) is performed, the current number is
+            incremented, and all threads are notified (using{" "}
+            <code>notifyAll()</code>).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Usage:</strong>
+        <ul>
+          <li>
+            You will typically run this with multiple threads, each invoking one
+            of the methods <code>fizz</code>, <code>buzz</code>,{" "}
+            <code>fizzbuzz</code>, or <code>number</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
