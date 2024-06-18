@@ -7668,6 +7668,73 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  315: (
+    <>
+      <ul>
+        <li>
+          <strong>Solution Class:</strong>
+          <ul>
+            <li>
+              <code>public List&lt;Integer&gt; countSmaller(int[] nums)</code>:
+              <ul>
+                <li>
+                  Initializes necessary arrays: <code>countSmaller</code> to
+                  store the counts, and <code>indices</code> to maintain indices
+                  for sorting.
+                </li>
+                <li>
+                  Invokes the <code>mergeSort</code> method to recursively sort
+                  and count smaller numbers.
+                </li>
+                <li>
+                  Converts <code>countSmaller</code> to a list and returns it as
+                  the result.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private void mergeSort(int[] nums, int[] indices, int[]
+                countSmaller, int start, int end)
+              </code>
+              :
+              <ul>
+                <li>
+                  Divides the array into halves and recursively sorts them using
+                  merge sort.
+                </li>
+                <li>
+                  During the merge step, it calls <code>merge</code> to count
+                  smaller elements from the right half for each element in the
+                  left half.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private void merge(int[] nums, int[] indices, int[]
+                countSmaller, int start, int mid, int end)
+              </code>
+              :
+              <ul>
+                <li>
+                  Merges two sorted halves while counting smaller elements from
+                  the right half for each element in the left half.
+                </li>
+                <li>
+                  Updates the <code>countSmaller</code> array based on the
+                  number of elements merged from the right half.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      This approach efficiently counts smaller numbers after each element using
+      merge sort with a time complexity of O(nlogn) and space complexity of
+      O(n), making it suitable for large input sizes up to 10^ 5
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
