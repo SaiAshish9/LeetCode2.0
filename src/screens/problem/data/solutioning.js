@@ -7807,6 +7807,62 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  493: (
+    <>
+      <ul>
+        <li>
+          <strong>Solution Class:</strong>
+          <ul>
+            <li>
+              <code>public int reversePairs(int[] nums)</code>:
+              <ul>
+                <li>
+                  Initializes the recursive merge sort and counting method.
+                </li>
+                <li>
+                  Converts and returns the count of reverse pairs in `nums`.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private int mergeSortAndCount(int[] nums, int left, int right)
+              </code>
+              :
+              <ul>
+                <li>
+                  Divides the array into halves and recursively counts reverse
+                  pairs using `mergeAndCount`.
+                </li>
+                <li>Accumulates the counts from left and right halves.</li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private int mergeAndCount(int[] nums, int left, int mid, int
+                right)
+              </code>
+              :
+              <ul>
+                <li>
+                  Counts the number of reverse pairs `(i, j)` where `nums[i] > 2
+                  * nums[j]` during the merge step.
+                </li>
+                <li>
+                  Merges the sorted halves and updates `nums` accordingly.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        This approach efficiently counts reverse pairs using merge sort with a
+        time complexity of O(nlogn) and a space complexity of O(n), making it
+        suitable for large input sizes.
+      </p>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
