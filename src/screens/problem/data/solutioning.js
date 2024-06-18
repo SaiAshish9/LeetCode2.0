@@ -6242,6 +6242,111 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1188: (
+    <>
+      <ul>
+        <li>
+          <strong>Class and Fields:</strong>
+          <ul>
+            <li>
+              The class <code>BoundedBlockingQueue</code> implements a
+              thread-safe bounded blocking queue using semaphores and a deque.
+            </li>
+            <li>
+              It has the following fields:
+              <ul>
+                <li>
+                  <code>Semaphore s1</code>: Limits the number of elements that
+                  can be enqueued (capacity control).
+                </li>
+                <li>
+                  <code>Semaphore s2</code>: Keeps track of the number of
+                  elements available to dequeue.
+                </li>
+                <li>
+                  <code>Deque&gt;Integer&lt; q</code>: The underlying deque data
+                  structure used to store elements.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Constructor:</strong>
+          <ul>
+            <li>
+              The constructor <code>BoundedBlockingQueue(int capacity)</code>{" "}
+              initializes the queue with the specified capacity.
+              <ul>
+                <li>
+                  <code>s1</code> is initialized with the given capacity,
+                  allowing that many elements to be enqueued.
+                </li>
+                <li>
+                  <code>s2</code> is initialized to 0, as initially there are no
+                  elements to dequeue.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>enqueue Method:</strong>
+          <ul>
+            <li>
+              The method <code>enqueue(int element)</code> adds an element to
+              the queue.
+              <ul>
+                <li>
+                  First, it acquires a permit from <code>s1</code> to ensure
+                  that the queue is not full.
+                </li>
+                <li>
+                  Then, it adds the element to the deque <code>q</code>.
+                </li>
+                <li>
+                  Finally, it releases a permit on <code>s2</code> to signal
+                  that an element is available to dequeue.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>dequeue Method:</strong>
+          <ul>
+            <li>
+              The method <code>dequeue()</code> removes and returns an element
+              from the queue.
+              <ul>
+                <li>
+                  First, it acquires a permit from <code>s2</code> to ensure
+                  that there is an element to dequeue.
+                </li>
+                <li>
+                  Then, it removes and stores the element from the deque{" "}
+                  <code>q</code>.
+                </li>
+                <li>
+                  Finally, it releases a permit on <code>s1</code> to signal
+                  that space is available for enqueuing new elements.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>size Method:</strong>
+          <ul>
+            <li>
+              The method <code>size()</code> returns the current number of
+              elements in the queue.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
