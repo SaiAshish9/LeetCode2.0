@@ -8311,6 +8311,97 @@ const QUESTIONS = {
       </ul>
     </article>
   ),
+  3109: (
+    <article class="markdown-body entry-content container-lg" itemprop="text">
+      <p dir="auto">
+        Given an array <code>perm</code> of length <code>n</code> which is a
+        permutation of <code>[1, 2, ..., n]</code>, return the index of{" "}
+        <code>perm</code> in the <span>lexicographically sorted</span> array of
+        all of the permutations of <code>[1, 2, ..., n]</code>.
+      </p>
+      <p dir="auto">
+        Since the answer may be very large, return it <strong>modulo</strong>{" "}
+        <code>
+          10<sup>9</sup>&nbsp;+ 7
+        </code>
+        .
+      </p>
+      <p dir="auto">&nbsp;</p>
+      <p dir="auto">
+        <strong>Example 1:</strong>
+      </p>
+      <div dir="auto">
+        <p dir="auto">
+          <strong>Input:</strong> <span>perm = [1,2]</span>
+        </p>
+        <br />
+
+        <p dir="auto">
+          <strong>Output:</strong> <span>0</span>
+        </p>
+        <br />
+
+        <p dir="auto">
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+
+        <p dir="auto">
+          There are only two permutations in the following order:
+        </p>
+        <p dir="auto">
+          <code>[1,2]</code>, <code>[2,1]</code>
+          <br />
+          <br />
+          And <code>[1,2]</code> is at index 0.
+        </p>
+      </div>
+      <p dir="auto">
+        <strong>Example 2:</strong>
+      </p>
+      <div dir="auto">
+        <p dir="auto">
+          <strong>Input:</strong> <span>perm = [3,1,2]</span>
+        </p>
+        <br />
+
+        <p dir="auto">
+          <strong>Output:</strong> <span>4</span>
+        </p>
+        <br />
+
+        <p dir="auto">
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+
+        <p dir="auto">
+          There are only six permutations in the following order:
+        </p>
+        <p dir="auto">
+          <code>[1,2,3]</code>, <code>[1,3,2]</code>, <code>[2,1,3]</code>,{" "}
+          <code>[2,3,1]</code>, <code>[3,1,2]</code>, <code>[3,2,1]</code>
+          <br />
+          <br />
+          And <code>[3,1,2]</code> is at index 4.
+        </p>
+      </div>
+      <p dir="auto">&nbsp;</p>
+      <p dir="auto">
+        <strong>Constraints:</strong>
+      </p>
+      <ul dir="auto">
+        <li>
+          <code>
+            1 &lt;= n == perm.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>perm</code> is a permutation of <code>[1, 2, ..., n]</code>.
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
