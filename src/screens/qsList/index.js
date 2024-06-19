@@ -27,7 +27,7 @@ import { Helmet } from "react-helmet";
 
 import { useLocation } from "react-router-dom";
 import { FaLockOpen } from "react-icons/fa";
-import { PREMIUM } from "../problem/data";
+import { PREMIUM, TAG_DESCRIPTION } from "../problem/data";
 
 const QSList = () => {
   const columns = [
@@ -244,9 +244,15 @@ const QSList = () => {
           </>
         ) : (
           <DescriptionContainer>
-            {description?.map((desc, k) => (
-              <ContentText key={k}>{desc}</ContentText>
-            ))}
+            {TAG_DESCRIPTION[decodeURIComponent(path)] ? (
+              <ContentText>
+                {TAG_DESCRIPTION[decodeURIComponent(path)]}
+              </ContentText>
+            ) : (
+              description?.map((desc, k) => (
+                <ContentText key={k}>{desc}</ContentText>
+              ))
+            )}
           </DescriptionContainer>
         )}
       </Content>
