@@ -8439,6 +8439,7 @@ const SOLUTIONING = {
           </ul>
         </li>
       </ul>
+      <br />
       <p>
         This code effectively uses gradient descent to iteratively minimize the
         total distance sum from a service center (x, y) to all given customer
