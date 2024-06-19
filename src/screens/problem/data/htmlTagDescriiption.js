@@ -347,7 +347,6 @@ class Prim {
         Set<Integer> inMST = new HashSet<>();
         List<Edge> mst = new ArrayList<>();
 
-        // Start with the start vertex
         minHeap.add(new Node(start, 0));
 
         while (!minHeap.isEmpty()) {
