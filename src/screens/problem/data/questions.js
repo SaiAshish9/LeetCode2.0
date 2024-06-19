@@ -8624,7 +8624,7 @@ const QUESTIONS = {
         ["Solution", "shuffle", "reset", "shuffle"] <br />
         [[[1, 2, 3]], [], [], []] <br />
         <strong>Output</strong> <br />
-        [null, [3, 1, 2], [1, 2, 3], [1, 3, 2]] <br/>
+        [null, [3, 1, 2], [1, 2, 3], [1, 3, 2]] <br />
         <strong>Explanation</strong> <br />
         Solution solution = new Solution([1, 2, 3]); <br />
         solution.shuffle(); // Shuffle the array [1,2,3] and return its result.{" "}
@@ -8662,6 +8662,103 @@ const QUESTIONS = {
           </code>{" "}
           calls <strong>in total</strong> will be made to <code>reset</code> and{" "}
           <code>shuffle</code>.
+        </li>
+      </ul>
+    </div>
+  ),
+  528: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> array of positive integers{" "}
+        <code>w</code> where <code>w[i]</code> describes the{" "}
+        <strong>weight</strong> of the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        index.
+      </p>
+      <p>
+        You need to implement the function <code>pickIndex()</code>, which{" "}
+        <strong>randomly</strong> picks an index in the range{" "}
+        <code>[0, w.length - 1]</code> (<strong>inclusive</strong>) and returns
+        it. The <strong>probability</strong> of picking an index <code>i</code>{" "}
+        is <code>w[i] / sum(w)</code>.
+      </p>
+      <ul>
+        <li>
+          For example, if <code>w = [1, 3]</code>, the probability of picking
+          index <code>0</code> is <code>1 / (1 + 3) = 0.25</code> (i.e.,{" "}
+          <code>25%</code>), and the probability of picking index <code>1</code>{" "}
+          is <code>3 / (1 + 3) = 0.75</code> (i.e., <code>75%</code>).
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input</strong> <br />
+        ["Solution","pickIndex"] <br />
+        [[[1]],[]] <br />
+        <strong>Output</strong> <br />
+        [null,0]
+        <strong>Explanation</strong>
+        Solution solution = new Solution([1]); solution.pickIndex(); // return
+        0. The only option is to return 0 since there is only one element in w.
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input</strong> <br />
+        ["Solution","pickIndex","pickIndex","pickIndex","pickIndex","pickIndex"]{" "}
+        <br />
+        [[[1,3]],[],[],[],[],[]] <br />
+        <strong>Output</strong> <br />
+        [null,1,1,1,1,0] <br />
+        <strong>Explanation</strong> <br />
+        Solution solution = new Solution([1, 3]); <br />
+        solution.pickIndex(); // return 1. It is returning the second element
+        (index = 1) that has a probability of 3/4. <br />
+        solution.pickIndex(); // return 1 <br />
+        solution.pickIndex(); // return 1 <br />
+        solution.pickIndex(); // return 1 <br />
+        solution.pickIndex(); // return 0. It is returning the first element
+        (index = 0) that has a probability of 1/4. <br />
+        <br />
+        Since this is a randomization problem, multiple answers are allowed.{" "}
+        <br />
+        All of the following outputs can be considered correct: <br />
+        [null,1,1,1,1,0] <br />
+        [null,1,1,1,1,1] <br />
+        [null,1,1,1,0,0] <br />
+        [null,1,1,1,0,1] <br />
+        [null,1,0,1,0,0] <br />
+        ...... <br />
+        and so on.
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>
+            1 &lt;= w.length &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= w[i] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>pickIndex</code> will be called at most{" "}
+          <code>
+            10<sup>4</sup>
+          </code>{" "}
+          times.
         </li>
       </ul>
     </div>
