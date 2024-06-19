@@ -8437,6 +8437,13 @@ const SOLUTIONING = {
           </li>
         </ul>
       </li>
+      <p>
+        This code effectively uses gradient descent to iteratively minimize the
+        total distance sum from a service center (x, y) to all given customer
+        positions. The parameters (decay, eps, alpha) and the iterative update
+        of (x, y) ensure that the algorithm converges towards an optimal or
+        near-optimal solution.
+      </p>
     </ul>
   ),
 };
