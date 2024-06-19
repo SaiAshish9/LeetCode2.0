@@ -8246,6 +8246,69 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  384: (
+    <>
+      <h1>Shuffle an Array</h1>
+
+      <p>
+        The task is to design a class to shuffle an array and also reset it to
+        its original configuration.
+      </p>
+
+      <h2>Problem Statement</h2>
+      <ul>
+        <li>
+          <code>Solution(int[] nums)</code>: Initializes the object with the
+          integer array <code>nums</code>.
+        </li>
+        <li>
+          <code>int[] reset()</code>: Resets the array to its original
+          configuration and returns it.
+        </li>
+        <li>
+          <code>int[] shuffle()</code>: Returns a random shuffling of the array.
+        </li>
+      </ul>
+
+      <h2>Approach</h2>
+      <p>
+        We use the Fisher-Yates shuffle algorithm to ensure each permutation of
+        the array is equally likely:
+      </p>
+      <ul>
+        <li>
+          Iterate over the array and for each element, swap it with a randomly
+          chosen element that comes after it (or the element itself).
+        </li>
+      </ul>
+
+      <h2>Java Implementation</h2>
+
+      <h2>Explanation of Operations</h2>
+      <ul>
+        <li>
+          <strong>Initialization</strong>: The constructor initializes the
+          object with the given integer array. It clones the array to{" "}
+          <code>original</code> to keep a copy of the original configuration,
+          and to <code>array</code> which will be shuffled. A{" "}
+          <code>Random</code> object is created to generate random indices for
+          shuffling.
+        </li>
+        <li>
+          <strong>Reset Operation</strong>: The <code>reset</code> method
+          returns the array to its original configuration by cloning the{" "}
+          <code>original</code> array to <code>array</code> and returning{" "}
+          <code>array</code>.
+        </li>
+        <li>
+          <strong>Shuffle Operation</strong>: The <code>shuffle</code> method
+          uses the Fisher-Yates algorithm to shuffle the array. It iterates over
+          each element of the array and swaps it with a randomly chosen element
+          that comes after it (or the element itself).
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
