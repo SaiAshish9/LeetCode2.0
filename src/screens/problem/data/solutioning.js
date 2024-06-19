@@ -8309,6 +8309,68 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  528: (
+    <>
+      <h1>Random Pick with Weight</h1>
+
+      <p>
+        The task is to design a class to randomly pick an index from an array of
+        weights, where the probability of picking an index is proportional to
+        its weight.
+      </p>
+
+      <h2>Problem Statement</h2>
+      <ul>
+        <li>
+          <code>Solution(int[] w)</code>: Initializes the object with the array{" "}
+          <code>w</code> of weights.
+        </li>
+        <li>
+          <code>int pickIndex()</code>: Returns a randomly selected index. The
+          probability of picking index <code>i</code> is{" "}
+          <code>w[i] / sum(w)</code>.
+        </li>
+      </ul>
+
+      <h2>Approach</h2>
+      <p>We use a prefix sum array and binary search:</p>
+      <ul>
+        <li>
+          Compute the prefix sum array from the input weights. This allows us to
+          map each weight to a range of values.
+        </li>
+        <li>
+          Use a random number generator to pick a number between 0 and the total
+          sum of weights.
+        </li>
+        <li>
+          Use binary search to find the index corresponding to the picked
+          number.
+        </li>
+      </ul>
+
+      <h2>Java Implementation</h2>
+
+      <h2>Explanation of Operations</h2>
+      <ul>
+        <li>
+          <strong>Initialization</strong>: The constructor initializes the
+          object with the given weights array. It computes the prefix sum array
+          where each entry at index <code>i</code> is the sum of the weights
+          from index 0 to <code>i</code>. The <code>totalSum</code> is the sum
+          of all weights.
+        </li>
+        <li>
+          <strong>PickIndex Operation</strong>: The <code>pickIndex</code>{" "}
+          method generates a random number between 1 and <code>totalSum</code>{" "}
+          (inclusive). It uses binary search to find the first index in the
+          prefix sum array that is greater than or equal to the generated random
+          number. This index corresponds to the selected weight's index in the
+          original array.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
