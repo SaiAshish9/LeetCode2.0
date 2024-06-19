@@ -1,3 +1,7 @@
+import InputImg from "../../../assets/IP.png";
+import KImg from "../../../assets/KruskalOP.png";
+import PImg from "../../../assets/primsOP.png";
+
 const TAG_DESCRIPTION = {
   "Minimum Spanning Tree": (
     <>
@@ -196,6 +200,15 @@ const TAG_DESCRIPTION = {
         }
     }
 }`}</pre>
+
+      <br />
+
+      <p>Input:</p>
+      <img style={{ width: "60%" }} src={InputImg} alt="img" />
+      <br />
+      <p>Kruskal Output:</p>
+      <img style={{ width: "60%" }} src={KImg} alt="img" />
+
       <br />
       <p>
         With efficient data structures like Union-Find, Kruskal's algorithm runs
@@ -300,6 +313,12 @@ public class Prims {
     }
 }
 `}</pre>
+      <br />
+      <p>Input:</p>
+      <img style={{ width: "60%" }} src={InputImg} alt="img" />
+      <br />
+      <p>Prims Output:</p>
+      <img style={{ width: "60%" }} src={PImg} alt="img" />
     </>
   ),
 };
