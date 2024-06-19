@@ -8701,7 +8701,7 @@ const QUESTIONS = {
         ["Solution","pickIndex"] <br />
         [[[1]],[]] <br />
         <strong>Output</strong> <br />
-        [null,0]
+        [null,0] <br />
         <strong>Explanation</strong>
         Solution solution = new Solution([1]); solution.pickIndex(); // return
         0. The only option is to return 0 since there is only one element in w.
@@ -8709,7 +8709,6 @@ const QUESTIONS = {
       <p>
         <strong class="example">Example 2:</strong>
       </p>{" "}
-      <br />
       <pre>
         <strong>Input</strong> <br />
         ["Solution","pickIndex","pickIndex","pickIndex","pickIndex","pickIndex"]{" "}
