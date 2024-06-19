@@ -233,7 +233,6 @@ const TAG_DESCRIPTION = {
 
       <br />
       <p>Prim's Algorithm Implementation:</p>
-      <br />
 
       <pre>{`
 public class Prims {
