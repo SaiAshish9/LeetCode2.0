@@ -314,6 +314,85 @@ public class Prims {
 }
 `}</pre>
       <br />
+      <p>Alternate Solution:</p>
+      <pre>{`import java.util.*;
+
+class Prim {
+    static class Edge {
+        int target;
+        int weight;
+
+        Edge(int target, int weight) {
+            this.target = target;
+            this.weight = weight;
+        }
+    }
+
+    static class Node implements Comparable<Node> {
+        int vertex;
+        int weight;
+
+        Node(int vertex, int weight) {
+            this.vertex = vertex;
+            this.weight = weight;
+        }
+
+        public int compareTo(Node other) {
+            return this.weight - other.weight;
+        }
+    }
+
+    public static List<Edge> primMST(Map<Integer, List<Edge>> graph, int start) {
+        PriorityQueue<Node> minHeap = new PriorityQueue<>();
+        Set<Integer> inMST = new HashSet<>();
+        List<Edge> mst = new ArrayList<>();
+
+        // Start with the start vertex
+        minHeap.add(new Node(start, 0));
+
+        while (!minHeap.isEmpty()) {
+            Node node = minHeap.poll();
+            int u = node.vertex;
+
+            if (inMST.contains(u)) {
+                continue;
+            }
+
+            inMST.add(u);
+            if (node.weight != 0) {
+                mst.add(new Edge(u, node.weight));
+            }
+
+            for (Edge edge : graph.getOrDefault(u, new ArrayList<>())) {
+                if (!inMST.contains(edge.target)) {
+                    minHeap.add(new Node(edge.target, edge.weight));
+                }
+            }
+        }
+
+        return mst;
+    }
+
+    public static void main(String[] args) {
+        // Create the graph as an adjacency list
+        Map<Integer, List<Edge>> graph = new HashMap<>();
+        graph.put(0, Arrays.asList(new Edge(1, 1), new Edge(2, 4), new Edge(3, 2)));
+        graph.put(1, Arrays.asList(new Edge(0, 1), new Edge(3, 3), new Edge(5, 2)));
+        graph.put(2, Arrays.asList(new Edge(0, 4), new Edge(3, 1), new Edge(4, 6)));
+        graph.put(3, Arrays.asList(new Edge(0, 2), new Edge(1, 3), new Edge(2, 1), new Edge(4, 3)));
+        graph.put(4, Arrays.asList(new Edge(2, 6), new Edge(3, 3), new Edge(5, 4)));
+        graph.put(5, Arrays.asList(new Edge(1, 2), new Edge(4, 4)));
+
+        List<Edge> mst = primMST(graph, 0);
+
+        System.out.println("Minimum Spanning Tree:");
+        for (Edge edge : mst) {
+            System.out.println("Vertex: " + edge.target + " - Weight: " + edge.weight);
+        }
+    }
+}
+`}</pre>
+      <br />
       <p>Input:</p>
       <img style={{ width: "60%" }} src={InputImg} alt="img" />
       <br />
