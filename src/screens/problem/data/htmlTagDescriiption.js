@@ -315,6 +315,7 @@ public class Prims {
 `}</pre>
       <br />
       <p>Alternate Solution:</p>
+      <br />
       <pre>{`import java.util.*;
 
 class Prim {
