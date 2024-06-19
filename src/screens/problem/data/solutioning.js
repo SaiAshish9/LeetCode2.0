@@ -8449,6 +8449,69 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  239: (
+    <>
+      <h1>Explanation Using Monotonic Queue for Sliding Window Maximum</h1>
+
+      <p>
+        This approach uses a double-ended queue (deque) to efficiently find the
+        maximum value in each sliding window of size <code>k</code> for an input
+        array <code>nums</code>.
+      </p>
+
+      <h2>Steps:</h2>
+
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>Use a deque to store indices of array elements.</li>
+            <li>
+              Initialize an array <code>result</code> to store maximum values
+              for each window.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sliding Window Process:</strong>
+          <ul>
+            <li>
+              Iterate through the array <code>nums</code>.
+            </li>
+            <li>
+              For each element <code>nums[i]</code>:
+            </li>
+            <ul>
+              <li>
+                Remove indices from the front of the deque that are out of the
+                current window (<code>i &gt;= k</code>).
+              </li>
+              <li>
+                Remove elements from the back of the deque as long as they are
+                smaller than or equal to <code>nums[i]</code>.
+              </li>
+              <li>
+                Add the current index <code>i</code> to the deque.
+              </li>
+              <li>
+                If <code>i &gt;= k - 1</code>, store the maximum value (front of
+                the deque) in <code>result[i - k + 1]</code>.
+              </li>
+            </ul>
+          </ul>
+        </li>
+        <li>
+          <strong>Output:</strong>
+          <ul>
+            <li>
+              After processing all elements, <code>result</code> contains the
+              maximum values for each sliding window of size <code>k</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
