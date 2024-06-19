@@ -8371,6 +8371,74 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1515: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>n</code>: Number of customer positions.
+          </li>
+          <li>
+            <code>x</code> and <code>y</code>: Initialized as the average of all
+            given positions.
+          </li>
+          <li>
+            <code>decay</code>: Rate at which the step size (<code>alpha</code>)
+            decreases in each iteration.
+          </li>
+          <li>
+            <code>eps</code>: Small threshold value to determine convergence.
+          </li>
+          <li>
+            <code>alpha</code>: Initial step size for gradient descent.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Gradient Descent Loop:</strong>
+        <ul>
+          <li>
+            <code>while (true)</code>: Iterates until convergence criteria are
+            met.
+          </li>
+          <li>
+            Calculate gradients <code>gradX</code> and <code>gradY</code> for
+            the total distance function.
+          </li>
+          <li>
+            Compute total distance <code>dist</code> from current position{" "}
+            <code>(x, y)</code> to all customer positions.
+          </li>
+          <li>
+            Update <code>x</code> and <code>y</code> using <code>gradX</code>{" "}
+            and <code>gradY</code> scaled by <code>alpha</code>.
+          </li>
+          <li>
+            Adjust <code>alpha</code> using <code>decay</code> to gradually
+            reduce the step size.
+          </li>
+          <li>
+            Exit loop when both <code>dx</code> and <code>dy</code> are smaller
+            than <code>eps</code>, indicating convergence.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Parameters and Adjustments:</strong>
+        <ul>
+          <li>
+            <code>decay</code> and <code>eps</code> manage convergence and
+            accuracy.
+          </li>
+          <li>
+            <code>alpha</code> controls the speed of convergence in gradient
+            descent.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
