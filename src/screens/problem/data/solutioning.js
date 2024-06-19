@@ -8181,6 +8181,71 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  381: (
+    <>
+      <h1>Insert Delete GetRandom O(1) - Duplicates allowed</h1>
+
+      <p>
+        The task is to design a data structure that supports the following
+        operations in average <code>O(1)</code> time, allowing duplicate
+        elements:
+      </p>
+
+      <ul>
+        <li>
+          <code>insert(val)</code>: Inserts an item <code>val</code> into the
+          collection.
+        </li>
+        <li>
+          <code>remove(val)</code>: Removes an item <code>val</code> from the
+          collection. If there are multiple items, remove any one of them.
+        </li>
+        <li>
+          <code>getRandom()</code>: Returns a random element from the current
+          collection of elements. Each element must have the same probability of
+          being returned.
+        </li>
+      </ul>
+
+      <h2>Approach</h2>
+      <p>
+        To achieve average <code>O(1)</code> time complexity for all operations,
+        we use a combination of a list and a hashmap:
+      </p>
+
+      <ul>
+        <li>
+          <strong>List</strong>: To store the elements. This allows{" "}
+          <code>O(1)</code> time access to elements for the{" "}
+          <code>getRandom()</code> operation.
+        </li>
+        <li>
+          <strong>HashMap</strong>: To store the elements along with their
+          indices in the list. Since duplicates are allowed, each value in the
+          hashmap points to a set of indices.
+        </li>
+      </ul>
+
+      <h2>Explanation of Operations</h2>
+      <ul>
+        <li>
+          <strong>Insert</strong>: Adds the element to the end of the list and
+          records its position in the hashmap.
+        </li>
+        <li>
+          <strong>Remove</strong>: Replaces the element to be removed with the
+          last element in the list, updates the position of the last element in
+          the hashmap, and then removes the last element from the list and the
+          element from the hashmap.
+        </li>
+        <li>
+          <strong>GetRandom</strong>: Uses the <code>Random</code> class to
+          select a random index from the list and returns the element at that
+          index.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
