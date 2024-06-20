@@ -5,7 +5,7 @@ const title = document
   .querySelector(".title__PM_F")
   .innerText.toLowerCase()
   .split(" ")
-  .join("_");
+  .join("-");
 for (let i = 0; i < id.length; i++) {
   res[id[i]] = {};
   res[id[i]]["java"] = {};
