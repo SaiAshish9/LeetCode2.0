@@ -8914,7 +8914,7 @@ const SOLUTIONING = {
       <h3>Detailed Explanation of the Code</h3>
       <ul>
         <li>
-          <strong>Initialization</strong>:
+          <strong>Initialization</strong>
           <ul>
             <li>
               The <code>dp</code> array stores the maximum score to reach each
@@ -8927,10 +8927,10 @@ const SOLUTIONING = {
           </ul>
         </li>
         <li>
-          <strong>Iterate Through the Array</strong>:
+          <strong>Iterate Through the Array</strong>
           <ul>
             <li>
-              For each index <code>i</code>:
+              For each index <code>i</code>
               <ul>
                 <li>
                   Remove elements from the front of the deque if they are out of
