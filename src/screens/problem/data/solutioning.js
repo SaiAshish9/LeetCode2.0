@@ -8515,8 +8515,6 @@ const SOLUTIONING = {
   862: (
     <>
       {" "}
-      <h1>Shortest Subarray with Sum at Least K using Monotonic Queue</h1>
-      <h2>Explanation of the Java Code</h2>
       <h3>Class Definition</h3>
       <ul>
         <li>
