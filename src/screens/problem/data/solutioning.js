@@ -8957,6 +8957,31 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2071: (
+    <>
+      <h3>Explanation</h3>
+
+      <ul>
+        <li>
+          <strong>Sorting:</strong> Both the <code>tasks</code> and{" "}
+          <code>workers</code> arrays are sorted to facilitate efficient
+          assignment based on task difficulty and worker capability.
+        </li>
+        <li>
+          <strong>Binary Search:</strong> The <code>maxTaskAssign</code> method
+          uses binary search to find the maximum number of tasks that can be
+          assigned (<code>mid</code>).
+        </li>
+        <li>
+          <strong>Feasibility Check:</strong> The <code>check</code> method
+          evaluates whether a given number of tasks (<code>x</code>) can be
+          assigned to workers by using a deque (<code>taskQueue</code>) to
+          manage tasks and checking worker capabilities against task
+          difficulties and available pills.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
