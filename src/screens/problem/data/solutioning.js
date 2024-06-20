@@ -8569,6 +8569,111 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  918: (
+    <>
+      <h2>Explanation of the Java Code</h2>
+
+      <h3>Problem Breakdown</h3>
+      <ul>
+        <li>
+          <strong>Circular Array Consideration</strong>:
+          <ul>
+            <li>
+              A circular array means that the subarray can wrap around the end
+              of the array and continue from the beginning.
+            </li>
+            <li>
+              To handle this, we can conceptually duplicate the array to form a
+              linear view of the circular nature.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Prefix Sum Array</strong>:
+          <ul>
+            <li>
+              We use a prefix sum array to quickly compute the sum of any
+              subarray.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Using a Monotonic Queue</strong>:
+          <ul>
+            <li>
+              A monotonic queue helps in maintaining a window of valid subarray
+              sums, ensuring that we efficiently find the maximum subarray sum.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Steps</h3>
+      <ul>
+        <li>
+          <strong>Extend the Array</strong>:
+          <ul>
+            <li>
+              Create a new array that is twice the length of the original array
+              to simulate the circular behavior.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Compute Prefix Sums</strong>:
+          <ul>
+            <li>Calculate the prefix sum for this extended array.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Monotonic Queue for Maximum Subarray Sum</strong>:
+          <ul>
+            <li>
+              Use a deque to keep track of the minimum prefix sum indices in a
+              way that helps to find the maximum subarray sum.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Implementation</h3>
+      <ul>
+        <li>
+          Extend the array to simulate circular behavior:
+          <ul>
+            <li>
+              Create an array <code>extendedNums</code> that contains two copies
+              of the original array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Compute the prefix sum array:
+          <ul>
+            <li>
+              Create a <code>prefixSum</code> array and calculate the prefix
+              sums for the extended array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Use a monotonic deque to find the maximum subarray sum:
+          <ul>
+            <li>
+              Initialize a deque to store indices of the prefix sum array.
+            </li>
+            <li>
+              Iterate through the prefix sum array and maintain the monotonic
+              property of the deque.
+            </li>
+            <li>
+              Update the maximum subarray sum using the values in the deque.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
