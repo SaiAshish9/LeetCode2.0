@@ -8732,7 +8732,7 @@ const SOLUTIONING = {
       <h3>Detailed Explanation of the Code</h3>
       <ul>
         <li>
-          <strong>Initialization</strong>:
+          <strong>Initialization:</strong>
           <ul>
             <li>
               <code>left</code> and <code>right</code> pointers are initialized
@@ -8746,7 +8746,7 @@ const SOLUTIONING = {
           </ul>
         </li>
         <li>
-          <strong>Expand the Window</strong>:
+          <strong>Expand the Window:</strong>
           <ul>
             <li>
               For each element at the <code>right</code> index:
@@ -8766,7 +8766,7 @@ const SOLUTIONING = {
           </ul>
         </li>
         <li>
-          <strong>Shrink the Window</strong>:
+          <strong>Shrink the Window:</strong>
           <ul>
             <li>
               If the difference between the maximum value (
@@ -8785,7 +8785,7 @@ const SOLUTIONING = {
           </ul>
         </li>
         <li>
-          <strong>Update the Result</strong>:
+          <strong>Update the Result:</strong>
           <ul>
             <li>
               Update <code>maxLength</code> with the maximum length of the valid
