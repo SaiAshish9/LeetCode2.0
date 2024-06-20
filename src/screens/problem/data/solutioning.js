@@ -8677,7 +8677,7 @@ const SOLUTIONING = {
       <h3>Detailed Explanation of the Code</h3>
       <ul>
         <li>
-          <strong>Initialization</strong>:
+          <strong>Initialization:</strong>
           <ul>
             <li>
               Initialize a <code>dp</code> array where each <code>dp[i]</code>{" "}
@@ -8692,7 +8692,7 @@ const SOLUTIONING = {
           </ul>
         </li>
         <li>
-          <strong>Updating DP Array</strong>:
+          <strong>Updating DP Array:</strong>
           <ul>
             <li>
               For each index <code>i</code>, update <code>dp[i]</code> to be the
@@ -8707,7 +8707,7 @@ const SOLUTIONING = {
           </ul>
         </li>
         <li>
-          <strong>Maintaining the Monotonic Deque</strong>:
+          <strong>Maintaining the Monotonic Deque:</strong>
           <ul>
             <li>
               Remove elements from the back of the deque if <code>dp[i]</code>{" "}
