@@ -8796,6 +8796,62 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1499: (
+    <>
+      {" "}
+      <h3>Detailed Explanation of the Code</h3>
+      <ul>
+        <li>
+          <strong>Initialization</strong>:
+          <ul>
+            <li>
+              <code>deque</code> is a double-ended queue that will store pairs
+              of the form <code>(x_i, y_i - x_i)</code>.
+            </li>
+            <li>
+              <code>maxValue</code> is initialized to the smallest possible
+              integer to keep track of the maximum value.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterate Through Points</strong>:
+          <ul>
+            <li>
+              For each point <code>(x, y)</code>:
+              <ul>
+                <li>
+                  Remove points from the deque that are out of the window of
+                  size <code>k</code>.
+                </li>
+                <li>
+                  If the deque is not empty, update <code>maxValue</code> using
+                  the formula <code>y + x + deque.peekFirst()[1]</code>.
+                </li>
+                <li>
+                  Maintain the deque to ensure it remains in a decreasing order
+                  by removing elements from the back that are less than the
+                  current <code>y - x</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Update Result</strong>:
+          <ul>
+            <li>
+              Add the current point <code>(x, y - x)</code> to the deque.
+            </li>
+            <li>
+              The deque is maintained to ensure that the front always contains
+              the largest value within the current window.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
