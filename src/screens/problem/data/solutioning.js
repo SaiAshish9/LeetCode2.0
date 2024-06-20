@@ -8726,6 +8726,76 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1438: (
+    <>
+      {" "}
+      <h3>Detailed Explanation of the Code</h3>
+      <ul>
+        <li>
+          <strong>Initialization</strong>:
+          <ul>
+            <li>
+              <code>left</code> and <code>right</code> pointers are initialized
+              to define the sliding window.
+            </li>
+            <li>
+              <code>maxDeque</code> and <code>minDeque</code> are initialized to
+              keep track of the maximum and minimum values within the current
+              window.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Expand the Window</strong>:
+          <ul>
+            <li>
+              For each element at the <code>right</code> index:
+              <ul>
+                <li>
+                  Update <code>maxDeque</code> by removing elements from the
+                  back that are less than the current element to maintain
+                  decreasing order.
+                </li>
+                <li>
+                  Update <code>minDeque</code> by removing elements from the
+                  back that are greater than the current element to maintain
+                  increasing order.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Shrink the Window</strong>:
+          <ul>
+            <li>
+              If the difference between the maximum value (
+              <code>maxDeque.peekFirst()</code>) and the minimum value (
+              <code>minDeque.peekFirst()</code>) exceeds the limit:
+              <ul>
+                <li>
+                  Increment the <code>left</code> pointer to shrink the window.
+                </li>
+                <li>
+                  Remove elements from the deques if they are out of the current
+                  window (i.e., their index is less than <code>left</code>).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Update the Result</strong>:
+          <ul>
+            <li>
+              Update <code>maxLength</code> with the maximum length of the valid
+              subarray found so far.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
