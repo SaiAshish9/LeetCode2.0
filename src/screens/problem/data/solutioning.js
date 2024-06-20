@@ -8571,8 +8571,6 @@ const SOLUTIONING = {
   ),
   918: (
     <>
-      <h2>Explanation of the Java Code</h2>
-
       <h3>Problem Breakdown</h3>
       <ul>
         <li>
