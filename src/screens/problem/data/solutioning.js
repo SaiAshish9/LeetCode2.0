@@ -8802,7 +8802,7 @@ const SOLUTIONING = {
       <h3>Detailed Explanation of the Code</h3>
       <ul>
         <li>
-          <strong>Initialization</strong>:
+          <strong>Initialization</strong>
           <ul>
             <li>
               <code>deque</code> is a double-ended queue that will store pairs
@@ -8815,10 +8815,10 @@ const SOLUTIONING = {
           </ul>
         </li>
         <li>
-          <strong>Iterate Through Points</strong>:
+          <strong>Iterate Through Points</strong>
           <ul>
             <li>
-              For each point <code>(x, y)</code>:
+              For each point <code>(x, y)</code>
               <ul>
                 <li>
                   Remove points from the deque that are out of the window of
@@ -8838,7 +8838,7 @@ const SOLUTIONING = {
           </ul>
         </li>
         <li>
-          <strong>Update Result</strong>:
+          <strong>Update Result</strong>
           <ul>
             <li>
               Add the current point <code>(x, y - x)</code> to the deque.
