@@ -8986,14 +8986,14 @@ const SOLUTIONING = {
     <>
       <h3>Solution Explanation</h3>
 
-      <h4>Segment Tree Approach</h4>
+      <p>It's ideal to solve this using Segment Tree Approach</p>
 
       <ul>
         <li>
-          <strong>SegmentTree Class</strong>:
+          <strong>SegmentTree Class</strong>
           <ul>
             <li>
-              <strong>Attributes</strong>:
+              <strong>Attributes</strong>
               <ul>
                 <li>
                   <code>left</code>, <code>right</code>: Pointers to left and
@@ -9013,7 +9013,6 @@ const SOLUTIONING = {
               <strong>
                 Constructor (<code>SegmentTree(int start, int end)</code>)
               </strong>
-              :
               <ul>
                 <li>
                   Initializes the Segment Tree node for the range{" "}
@@ -9030,7 +9029,6 @@ const SOLUTIONING = {
                 Setup Method (
                 <code>setup(SegmentTree node, int start, int end)</code>)
               </strong>
-              :
               <ul>
                 <li>
                   Recursively initializes the Segment Tree structure by setting
@@ -9047,7 +9045,6 @@ const SOLUTIONING = {
                 Update Method (
                 <code>update(SegmentTree node, int index, int val)</code>)
               </strong>
-              :
               <ul>
                 <li>
                   Updates the Segment Tree with a new value <code>val</code> at
@@ -9069,7 +9066,6 @@ const SOLUTIONING = {
                 <code>rangeMaxQuery(SegmentTree node, int start, int end)</code>
                 )
               </strong>
-              :
               <ul>
                 <li>
                   Queries the Segment Tree for the maximum value in the range{" "}
@@ -9092,7 +9088,6 @@ const SOLUTIONING = {
           <strong>
             Main Solution (<code>lengthOfLIS(int[] nums, int k)</code>)
           </strong>
-          :
           <ul>
             <li>
               Initializes a Segment Tree (<code>root</code>) covering the range{" "}
