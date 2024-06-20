@@ -8982,6 +8982,143 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2407: (
+    <>
+      <h3>Solution Explanation</h3>
+
+      <h4>Segment Tree Approach</h4>
+
+      <ul>
+        <li>
+          <strong>SegmentTree Class</strong>:
+          <ul>
+            <li>
+              <strong>Attributes</strong>:
+              <ul>
+                <li>
+                  <code>left</code>, <code>right</code>: Pointers to left and
+                  right child nodes of the Segment Tree.
+                </li>
+                <li>
+                  <code>start</code>, <code>end</code>: Represent the range{" "}
+                  <code>[start, end]</code> covered by the node.
+                </li>
+                <li>
+                  <code>val</code>: Stores the maximum value in the current
+                  segment <code>[start, end]</code>.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>
+                Constructor (<code>SegmentTree(int start, int end)</code>)
+              </strong>
+              :
+              <ul>
+                <li>
+                  Initializes the Segment Tree node for the range{" "}
+                  <code>[start, end]</code>.
+                </li>
+                <li>
+                  Recursively sets up child nodes until the base case (
+                  <code>start == end</code>) is reached.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>
+                Setup Method (
+                <code>setup(SegmentTree node, int start, int end)</code>)
+              </strong>
+              :
+              <ul>
+                <li>
+                  Recursively initializes the Segment Tree structure by setting
+                  up left and right children.
+                </li>
+                <li>
+                  Calculates <code>val</code> as the maximum of its children's{" "}
+                  <code>val</code> attributes.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>
+                Update Method (
+                <code>update(SegmentTree node, int index, int val)</code>)
+              </strong>
+              :
+              <ul>
+                <li>
+                  Updates the Segment Tree with a new value <code>val</code> at
+                  index <code>index</code>.
+                </li>
+                <li>
+                  Recursively propagates the update to the appropriate child
+                  nodes.
+                </li>
+                <li>
+                  Updates <code>val</code> to reflect the new maximum value in
+                  the segment.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>
+                Range Maximum Query Method (
+                <code>rangeMaxQuery(SegmentTree node, int start, int end)</code>
+                )
+              </strong>
+              :
+              <ul>
+                <li>
+                  Queries the Segment Tree for the maximum value in the range{" "}
+                  <code>[start, end]</code>.
+                </li>
+                <li>
+                  Returns <code>0</code> if the current node's range does not
+                  intersect with <code>[start, end]</code>.
+                </li>
+                <li>
+                  Recursively queries child nodes and returns the maximum of
+                  their results.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>
+            Main Solution (<code>lengthOfLIS(int[] nums, int k)</code>)
+          </strong>
+          :
+          <ul>
+            <li>
+              Initializes a Segment Tree (<code>root</code>) covering the range{" "}
+              <code>[1, 100000]</code>.
+            </li>
+            <li>
+              Iterates through each element in <code>nums</code>.
+            </li>
+            <li>
+              For each element <code>num</code>, queries the Segment Tree to
+              find the maximum LIS length ending just before <code>num</code>{" "}
+              (specifically in the range <code>[num - k, num - 1]</code>).
+            </li>
+            <li>
+              Updates the Segment Tree with the new LIS length ending at{" "}
+              <code>num</code>.
+            </li>
+            <li>
+              Tracks and returns the maximum LIS length found during the
+              iteration.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
