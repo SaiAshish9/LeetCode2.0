@@ -9673,7 +9673,7 @@ Window position                Max
           <strong>5</strong>
         </u>
         ,4],
-        <br /> workers = [
+        <br />workers = [
         <u>
           <strong>0</strong>
         </u>
@@ -9693,7 +9693,7 @@ Window position                Max
 
       <pre>
         <strong>Input:</strong>
-        <br /> tasks = [
+        <br />tasks = [
         <u>
           <strong>10</strong>
         </u>
@@ -9702,7 +9702,7 @@ Window position                Max
           <strong>15</strong>
         </u>
         ,30],
-        <br /> workers = [
+        <br />workers = [
         <u>
           <strong>0</strong>
         </u>
