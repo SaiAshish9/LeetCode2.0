@@ -8512,6 +8512,65 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  862: (
+    <>
+      {" "}
+      <h1>Shortest Subarray with Sum at Least K using Monotonic Queue</h1>
+      <h2>Explanation of the Java Code</h2>
+      <h3>Class Definition</h3>
+      <ul>
+        <li>
+          We define a class named <code>Solution</code> which contains the
+          method <code>shortestSubarray</code>.
+        </li>
+      </ul>
+      <h3>Prefix Sum Calculation</h3>
+      <ul>
+        <li>
+          A <code>long</code> array <code>prefixSum</code> is used to store the
+          prefix sums. This helps to handle large sums without overflow.
+        </li>
+        <li>
+          The prefix sums are computed in a loop where{" "}
+          <code>prefixSum[i+1] = prefixSum[i] + nums[i]</code>.
+        </li>
+      </ul>
+      <h3>Deque Operations</h3>
+      <ul>
+        <li>
+          We use a <code>Deque&lt;Integer&gt;</code> to maintain indices of the
+          prefix sum array.
+        </li>
+        <li>
+          For each index <code>i</code>, we check if the difference between the
+          current prefix sum and the prefix sum at the front of the deque is at
+          least <code>K</code>. If so, we update the minimum length and remove
+          the index from the front of the deque.
+        </li>
+        <li>
+          To maintain the monotonic property of the deque, we remove elements
+          from the back of the deque if the current prefix sum is less than or
+          equal to the prefix sum at the back of the deque.
+        </li>
+        <li>We then add the current index to the deque.</li>
+      </ul>
+      <h3>Edge Case Handling</h3>
+      <ul>
+        <li>
+          If no valid subarray is found, we return <code>-1</code>. Otherwise,
+          we return the length of the shortest subarray.
+        </li>
+      </ul>
+      <h3>Main Method for Testing</h3>
+      <ul>
+        <li>
+          The <code>main</code> method is included to provide a simple test case
+          where the solution is instantiated and tested with an example array
+          and target sum <code>K</code>.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
