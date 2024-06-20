@@ -8672,6 +8672,60 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1425: (
+    <>
+      <h3>Detailed Explanation of the Code</h3>
+      <ul>
+        <li>
+          <strong>Initialization</strong>:
+          <ul>
+            <li>
+              Initialize a <code>dp</code> array where each <code>dp[i]</code>{" "}
+              starts with <code>nums[i]</code> since a single element is a valid
+              subsequence.
+            </li>
+            <li>
+              A <code>deque</code> is used to store the indices of the{" "}
+              <code>dp</code> array in a way that maintains a decreasing order
+              of <code>dp</code> values.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Updating DP Array</strong>:
+          <ul>
+            <li>
+              For each index <code>i</code>, update <code>dp[i]</code> to be the
+              maximum of <code>nums[i]</code> and{" "}
+              <code>nums[i] + dp[deque.peekFirst()]</code> if the deque is not
+              empty.
+            </li>
+            <li>
+              Update <code>maxSum</code> to be the maximum value of{" "}
+              <code>dp[i]</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Maintaining the Monotonic Deque</strong>:
+          <ul>
+            <li>
+              Remove elements from the back of the deque if <code>dp[i]</code>{" "}
+              is greater than or equal to the <code>dp</code> value at the back
+              of the deque to maintain the decreasing order.
+            </li>
+            <li>
+              Add the current index <code>i</code> to the deque.
+            </li>
+            <li>
+              Remove the front element of the deque if it is out of the valid
+              window of size <code>k</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
