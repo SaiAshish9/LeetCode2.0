@@ -8852,6 +8852,62 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1687: (
+    <>
+      {" "}
+      <h3>Detailed Explanation of the Code</h3>
+      <ul>
+        <li>
+          <strong>Initialization</strong>:
+          <ul>
+            <li>
+              Arrays <code>ports</code>, <code>weights</code>,{" "}
+              <code>differences</code>, and <code>prefixWeights</code> are used
+              to store the respective properties of the boxes.
+            </li>
+            <li>
+              <code>dp</code> array stores the minimum number of trips required
+              up to each box.
+            </li>
+            <li>
+              <code>remain</code> array helps in maintaining the
+              cost-effectiveness of the trips.
+            </li>
+            <li>
+              A deque is used to maintain a sliding window of the minimum trips.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterate Through Boxes</strong>:
+          <ul>
+            <li>
+              For each box at index <code>i</code>:
+              <ul>
+                <li>
+                  Adjust the deque to maintain the trip constraints (number of
+                  boxes and total weight).
+                </li>
+                <li>
+                  Calculate <code>dp[i]</code> using the front of the deque and
+                  update it for the minimum number of trips required to deliver
+                  up to the current box.
+                </li>
+                <li>
+                  Update the <code>remain</code> array to keep track of the
+                  minimum trips in an efficient manner.
+                </li>
+                <li>
+                  Maintain the deque to ensure it provides the minimum number of
+                  trips.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
