@@ -8908,6 +8908,55 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1696: (
+    <>
+      {" "}
+      <h3>Detailed Explanation of the Code</h3>
+      <ul>
+        <li>
+          <strong>Initialization</strong>:
+          <ul>
+            <li>
+              The <code>dp</code> array stores the maximum score to reach each
+              index.
+            </li>
+            <li>
+              The deque is used to keep track of indices with maximum{" "}
+              <code>dp</code> values within the current sliding window.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterate Through the Array</strong>:
+          <ul>
+            <li>
+              For each index <code>i</code>:
+              <ul>
+                <li>
+                  Remove elements from the front of the deque if they are out of
+                  the allowed jump range (<code>i - k</code> to{" "}
+                  <code>i - 1</code>).
+                </li>
+                <li>
+                  Update <code>dp[i]</code> by adding <code>nums[i]</code> to
+                  the maximum <code>dp</code> value within the allowed range
+                  (front of the deque).
+                </li>
+                <li>
+                  Maintain the deque in decreasing order of <code>dp</code>{" "}
+                  values by removing elements from the back if they are less
+                  than the current <code>dp[i]</code>.
+                </li>
+                <li>
+                  Add the current index <code>i</code> to the deque.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
