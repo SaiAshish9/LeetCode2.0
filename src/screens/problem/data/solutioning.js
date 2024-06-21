@@ -10789,6 +10789,59 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  142: (
+    <>
+      <code> Floyd's Tortoise and Hare algorithm</code>
+      <p>
+        This algorithm uses Floyd's Tortoise and Hare algorithm to detect if
+        there's a cycle in a linked list.
+      </p>
+      <ul>
+        <li>
+          <b>Initialization:</b>
+          <ul>
+            <li>
+              Initialize two pointers, <code>slow</code> and <code>fast</code>,
+              both starting from <code>head</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Phase 1: Cycle Detection:</b>
+          <ul>
+            <li>
+              Move <code>slow</code> one step and <code>fast</code> two steps
+              forward in each iteration.
+            </li>
+            <li>
+              If <code>slow == fast</code>, a cycle is detected.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Phase 2: Find the Start of the Cycle:</b>
+          <ul>
+            <li>
+              Reset <code>slow</code> to <code>head</code> and move both
+              pointers one step at a time until they meet again.
+            </li>
+            <li>The node where they meet is the start of the cycle.</li>
+          </ul>
+        </li>
+        <li>
+          <b>Return:</b>
+          <ul>
+            <li>
+              If a cycle is found, return the node where the cycle starts.
+            </li>
+            <li>
+              If no cycle is found, return <code>null</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
