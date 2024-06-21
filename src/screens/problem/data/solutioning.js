@@ -10791,10 +10791,9 @@ const SOLUTIONING = {
   ),
   142: (
     <>
-      <code> Floyd's Tortoise and Hare algorithm</code>
       <p>
-        This algorithm uses Floyd's Tortoise and Hare algorithm to detect if
-        there's a cycle in a linked list.
+        This algorithm uses <code>Floyd's Tortoise and Hare algorithm</code> to
+        detect if there's a cycle in a linked list.
       </p>
       <ul>
         <li>
