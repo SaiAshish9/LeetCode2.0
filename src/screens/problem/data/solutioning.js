@@ -9197,8 +9197,8 @@ const SOLUTIONING = {
       {" "}
       <p>
         The number of subarrays in an array of length n is given by the formula:
-        Number of subarray = <code>n×(n+1)/2</code>.​ This formula counts all possible
-        subarrays in a segment of length n.
+        Number of subarray = <code>n×(n+1)/2</code>.​ This formula counts all
+        possible subarrays in a segment of length n.
       </p>
       <p>
         The problem is to count the number of continuous subarrays such that the
@@ -10275,6 +10275,84 @@ const SOLUTIONING = {
           Explanation: The next permutation of the array [1,1,5] is [1,5,1].
         </li>
       </ul>
+    </>
+  ),
+  42: (
+    <>
+      <h2>Trapping Rain Water Explanation</h2>
+      <ul>
+        <li>
+          <b>Initialization:</b>
+          <ul>
+            <li>
+              Use two pointers, <code>left</code> and <code>right</code>,
+              starting at the beginning and end of the array, respectively.
+            </li>
+            <li>
+              Initialize <code>left_max</code> and <code>right_max</code> to
+              track the maximum heights encountered so far from the left and
+              right.
+            </li>
+            <li>
+              Initialize <code>waterTrapped</code> to accumulate the total water
+              trapped.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Two-Pointer Technique:</b>
+          <ul>
+            <li>
+              While <code>left</code> is less than <code>right</code>:
+              <ul>
+                <li>
+                  Compare <code>height[left]</code> and{" "}
+                  <code>height[right]</code>.
+                </li>
+                <li>
+                  If <code>height[left]</code> is less than{" "}
+                  <code>height[right]</code>:
+                  <ul>
+                    <li>
+                      Check if <code>height[left]</code> is greater than or
+                      equal to <code>left_max</code>. If so, update{" "}
+                      <code>left_max</code>. Otherwise, add{" "}
+                      <code>left_max - height[left]</code> to{" "}
+                      <code>waterTrapped</code>.
+                    </li>
+                    <li>
+                      Move the <code>left</code> pointer to the right.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Otherwise:
+                  <ul>
+                    <li>
+                      Check if <code>height[right]</code> is greater than or
+                      equal to <code>right_max</code>. If so, update{" "}
+                      <code>right_max</code>. Otherwise, add{" "}
+                      <code>right_max - height[right]</code> to{" "}
+                      <code>waterTrapped</code>.
+                    </li>
+                    <li>
+                      Move the <code>right</code> pointer to the left.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Result:</b> The total amount of water trapped is stored in{" "}
+          <code>waterTrapped</code>.
+        </li>
+      </ul>
+      <p>
+        This approach ensures that we efficiently calculate the trapped water
+        using the two-pointer technique, resulting in an O(n) time complexity.
+      </p>
     </>
   ),
 };
