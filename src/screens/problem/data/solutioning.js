@@ -10477,6 +10477,56 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  80: (
+    <>
+      {" "}
+      <h2>Remove Duplicates from Sorted Array II Explanation</h2>
+      <ul>
+        <li>
+          <b>Initialize Pointers:</b>
+          <ul>
+            <li>
+              <code>index</code>: Position to place the next valid element,
+              starting at 2.
+            </li>
+            <li>
+              <code>i</code>: Pointer to traverse the array from the third
+              element.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Traverse the Array:</b>
+          <ul>
+            <li>
+              For each element <code>nums[i]</code>:
+              <ul>
+                <li>
+                  If <code>nums[i]</code> is not equal to{" "}
+                  <code>nums[index - 2]</code>, it means <code>nums[i]</code>{" "}
+                  can be placed at <code>nums[index]</code>.
+                </li>
+                <li>
+                  Assign <code>nums[i]</code> to <code>nums[index]</code> and
+                  increment <code>index</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Termination:</b>
+          <ul>
+            <li>
+              The loop terminates when all elements have been processed. The
+              length of the modified array is <code>index</code>, and the first{" "}
+              <code>index</code> elements are the valid elements.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
