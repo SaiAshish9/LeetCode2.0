@@ -10014,6 +10014,81 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  27: (
+    <>
+      <h2>Steps:</h2>
+
+      <ul>
+        <li>
+          <strong>Initialize Pointers:</strong>
+          <ul>
+            <li>
+              Create a <code>left</code> pointer initialized to 0. This pointer
+              keeps track of the position to place the next element that is not
+              equal to the specified value.
+            </li>
+            <li>
+              Iterate through the array with a <code>right</code> pointer
+              starting from index 0.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Iterate Through the Array:</strong>
+          <ul>
+            <li>
+              For each element in the array, check if the current element is not
+              equal to the specified value (<code>val</code>).
+            </li>
+            <li>
+              If the current element is not equal to <code>val</code>, place the
+              element at the position indicated by the <code>left</code> pointer
+              and increment the <code>left</code> pointer.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return the Length:</strong>
+          <ul>
+            <li>
+              After the loop, the <code>left</code> pointer will indicate the
+              length of the array without the specified value.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Execution:</h2>
+
+      <ul>
+        <li>
+          Input: <code>nums = [3,2,2,3], val = 3</code>
+        </li>
+        <li>
+          Output: <code>2</code>
+        </li>
+        <li>
+          Explanation: The first two elements of the array are modified to [2,
+          2], and the function returns 2.
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          Input: <code>nums = [0,1,2,2,3,0,4,2], val = 2</code>
+        </li>
+        <li>
+          Output: <code>5</code>
+        </li>
+        <li>
+          Explanation: The first five elements of the array are modified to [0,
+          1, 3, 0, 4], and the function returns 5.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
