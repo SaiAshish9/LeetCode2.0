@@ -9197,7 +9197,7 @@ const SOLUTIONING = {
       {" "}
       <p>
         The number of subarrays in an array of length n is given by the formula:
-        Number of subarray = n×(n+1)/2.​ This formula counts all possible
+        Number of subarray = <code>n×(n+1)/2</code>.​ This formula counts all possible
         subarrays in a segment of length n.
       </p>
       <p>
