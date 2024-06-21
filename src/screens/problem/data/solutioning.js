@@ -9725,6 +9725,134 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  18: (
+    <>
+      {" "}
+      <p>
+        This Java solution finds all unique quadruplets in an array that sum up
+        to a given target.
+      </p>
+      <h2>Explanation:</h2>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <code>
+                List&lt;List&lt;Integer&gt;&gt; result = new
+                ArrayList&lt;&gt;();
+              </code>
+              : Initialize an empty list to store the result.
+            </li>
+            <li>
+              <code>int n = nums.length;</code>: Get the length of the input
+              array.
+            </li>
+            <li>
+              Check if the array length is less than 4. If true, return the
+              empty result list immediately.
+            </li>
+            <li>
+              <code>Arrays.sort(nums);</code>: Sort the input array to
+              facilitate the two-pointer approach.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Outer Loop:</strong>
+          <ul>
+            <li>
+              Iterate through the array using index <code>i</code> from{" "}
+              <code>0</code> to <code>n - 4</code>.
+            </li>
+            <li>
+              Skip duplicate values by checking if the current value is the same
+              as the previous value.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Inner Loop:</strong>
+          <ul>
+            <li>
+              For each <code>i</code>, iterate through the array using index{" "}
+              <code>j</code> from <code>i + 1</code> to <code>n - 3</code>.
+            </li>
+            <li>
+              Skip duplicate values by checking if the current value is the same
+              as the previous value.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Two-Pointer Approach:</strong>
+          <ul>
+            <li>
+              Initialize two pointers, <code>left</code> (starting from{" "}
+              <code>j + 1</code>) and <code>right</code> (starting from{" "}
+              <code>n - 1</code>).
+            </li>
+            <li>
+              While <code>left</code> is less than <code>right</code>:
+              <ul>
+                <li>
+                  Calculate the sum of the current quadruplet:{" "}
+                  <code>
+                    long sum = (long) nums[i] + nums[j] + nums[left] +
+                    nums[right];
+                  </code>
+                </li>
+                <li>
+                  If the sum equals the target:
+                  <ul>
+                    <li>Add the quadruplet to the result list.</li>
+                    <li>
+                      Skip duplicate values by moving the <code>left</code> and{" "}
+                      <code>right</code> pointers to the next different values.
+                    </li>
+                    <li>Move both pointers inward.</li>
+                  </ul>
+                </li>
+                <li>
+                  If the sum is less than the target, move the <code>left</code>{" "}
+                  pointer to the right.
+                </li>
+                <li>
+                  If the sum is greater than the target, move the{" "}
+                  <code>right</code> pointer to the left.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              After processing all possible quadruplets, return the result list.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Execution:</h2>
+      <ul>
+        <li>
+          Input:{" "}
+          <code>
+            nums = [1000000000, 1000000000, 1000000000, 1000000000], target =
+            -294967296
+          </code>
+        </li>
+        <li>
+          Output: <code>[]</code> (no quadruplets sum up to the target).
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
