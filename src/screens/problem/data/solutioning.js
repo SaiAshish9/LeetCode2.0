@@ -10741,6 +10741,54 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  141: (
+    <>
+      {" "}
+      <h2>Linked List Cycle Explanation</h2>
+      <ul>
+        <li>
+          <b>Initialize Pointers:</b>
+          <ul>
+            <li>
+              <code>slow</code>: Starts at the head of the linked list.
+            </li>
+            <li>
+              <code>fast</code>: Starts at <code>head.next</code> (if exists),
+              moving two steps at a time.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Move Pointers:</b>
+          <ul>
+            <li>Iterate through the linked list.</li>
+            <li>
+              <code>slow</code> moves one step forward (
+              <code>slow = slow.next</code>).
+            </li>
+            <li>
+              <code>fast</code> moves two steps forward (
+              <code>fast = fast.next.next</code>).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Detect Cycle:</b>
+          <ul>
+            <li>
+              If <code>fast</code> or <code>fast.next</code> becomes{" "}
+              <code>null</code>, return <code>false</code> (no cycle).
+            </li>
+            <li>
+              If <code>slow</code> meets <code>fast</code> (i.e.,{" "}
+              <code>slow == fast</code>), return <code>true</code> (cycle
+              detected).
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
