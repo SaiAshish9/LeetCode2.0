@@ -10089,6 +10089,103 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  28: (
+    <>
+      <h2>Steps:</h2>
+
+      <ul>
+        <li>
+          <strong>Check for Empty Needle:</strong>
+          <ul>
+            <li>
+              If the <code>needle</code> is empty, return 0 because an empty
+              substring is found at the beginning of any string.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Initialize Variables:</strong>
+          <ul>
+            <li>
+              Determine the lengths of <code>haystack</code> and{" "}
+              <code>needle</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Iterate Through Haystack:</strong>
+          <ul>
+            <li>
+              Use a for loop to iterate through the <code>haystack</code> from
+              the beginning to the point where the remaining characters are at
+              least as many as the <code>needle</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Match Characters:</strong>
+          <ul>
+            <li>
+              For each position in the <code>haystack</code>, use a while loop
+              to compare characters of <code>needle</code> with the
+              corresponding characters in <code>haystack</code>.
+            </li>
+            <li>
+              Increment the <code>j</code> pointer as long as characters match.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Check for Complete Match:</strong>
+          <ul>
+            <li>
+              If the <code>j</code> pointer reaches the length of the{" "}
+              <code>needle</code>, it means the entire <code>needle</code> has
+              been found in the <code>haystack</code>, and return the current
+              index <code>i</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return -1 If Not Found:</strong>
+          <ul>
+            <li>
+              If the loop completes without finding the <code>needle</code>,
+              return -1 to indicate that the <code>needle</code> is not found in
+              the <code>haystack</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Execution:</h2>
+
+      <ul>
+        <li>
+          Input: <code>haystack = "hello", needle = "ll"</code>
+        </li>
+        <li>
+          Output: <code>2</code>
+        </li>
+        <li>Explanation: The substring "ll" is found at index 2 in "hello".</li>
+      </ul>
+
+      <ul>
+        <li>
+          Input: <code>haystack = "aaaaa", needle = "bba"</code>
+        </li>
+        <li>
+          Output: <code>-1</code>
+        </li>
+        <li>Explanation: The substring "bba" is not found in "aaaaa".</li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
