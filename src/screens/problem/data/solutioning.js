@@ -9680,7 +9680,7 @@ const SOLUTIONING = {
       </li>
       <li>
         <strong>Steps:</strong>
-        <ol>
+        <ul>
           <li>
             <strong>Sort the Array:</strong> First, sort the given array.
             Sorting helps in easily adjusting the pointers based on the
@@ -9710,7 +9710,7 @@ const SOLUTIONING = {
             whether the current sum is less than, greater than, or equal to the
             target.
           </li>
-        </ol>
+        </ul>
       </li>
       <li>
         <strong>Edge Cases:</strong>
