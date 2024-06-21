@@ -10688,6 +10688,59 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  125: (
+    <>
+      <h2>Valid Palindrome Explanation</h2>
+      <ul>
+        <li>
+          <b>Initialize Pointers:</b>
+          <ul>
+            <li>
+              <code>left</code>: Pointer starting from the beginning of the
+              string.
+            </li>
+            <li>
+              <code>right</code>: Pointer starting from the end of the string.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Move Pointers:</b>
+          <ul>
+            <li>
+              Increment <code>left</code> if the character at <code>left</code>{" "}
+              is not alphanumeric.
+            </li>
+            <li>
+              Decrement <code>right</code> if the character at{" "}
+              <code>right</code> is not alphanumeric.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Compare Characters:</b>
+          <ul>
+            <li>Convert characters to lowercase to ignore case sensitivity.</li>
+            <li>
+              If characters pointed by <code>left</code> and <code>right</code>{" "}
+              are alphanumeric and not equal, return <code>false</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Palindrome Check:</b>
+          <ul>
+            <li>
+              Continue until <code>left</code> surpasses <code>right</code>.
+            </li>
+            <li>
+              If all comparisons are successful, return <code>true</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
