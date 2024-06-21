@@ -10396,6 +10396,84 @@ Window position                Max
       </ul>
     </article>
   ),
+  5: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code>, return <em>the longest</em>{" "}
+        <span
+          data-keyword="palindromic-string"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rt:"
+              >
+                <div>
+                  <em>palindromic</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        <span
+          data-keyword="substring-nonempty"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rv:"
+              >
+                <div>
+                  <em>substring</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        in <code>s</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "babad" <br />
+        <strong>Output:</strong> "bab" <br />
+        <strong>Explanation:</strong> "aba" is also a valid answer.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "cbbd" <br />
+        <strong>Output:</strong> "bb"
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= s.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>s</code> consist of only digits and English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;

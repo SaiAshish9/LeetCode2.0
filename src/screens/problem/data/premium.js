@@ -5,4 +5,4 @@ const qs = new Set([
   2046, 2330, 2422, 2519, 2604, 2674, 2838, 2868, 2969, 3109,
 ]);
 
-export default qs;
+export default Array.from(qs);
