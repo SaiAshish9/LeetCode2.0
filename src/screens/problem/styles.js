@@ -57,12 +57,6 @@ export const Container = styled.div`
   .mtk8 {
     // color: #9cdcfe;
   }
-  .margin {
-    padding-top: 0.5rem;
-  }
-  .lines-content.monaco-editor-background {
-    padding-top: 0.5rem;
-  }
   .scroll-decoration,
   .textAreaCover {
     height: 0px;
