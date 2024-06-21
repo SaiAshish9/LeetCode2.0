@@ -10186,6 +10186,92 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  31: (
+    <>
+      {" "}
+      <h2>Steps:</h2>
+      <ul>
+        <li>
+          <strong>Find the first decreasing element from the end:</strong>
+          <ul>
+            <li>
+              Start from the end of the array and move backwards to find the
+              first element that is not in descending order.
+            </li>
+            <li>
+              This element is the first element that needs to be swapped to get
+              the next permutation.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>
+            Find the element just larger than the first decreasing element:
+          </strong>
+          <ul>
+            <li>
+              Starting from the end again, find the smallest element that is
+              larger than the first decreasing element found in the previous
+              step.
+            </li>
+            <li>Swap these two elements.</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>
+            Reverse the elements after the first decreasing element:
+          </strong>
+          <ul>
+            <li>
+              To get the next permutation, reverse the sequence of elements
+              after the position of the first decreasing element.
+            </li>
+            <li>
+              This step ensures that we get the smallest lexicographical order
+              for the remaining elements.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Execution:</h2>
+      <ul>
+        <li>
+          Input: <code>nums = [1,2,3]</code>
+        </li>
+        <li>
+          Output: <code>[1,3,2]</code>
+        </li>
+        <li>
+          Explanation: The next permutation of the array [1,2,3] is [1,3,2].
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Input: <code>nums = [3,2,1]</code>
+        </li>
+        <li>
+          Output: <code>[1,2,3]</code>
+        </li>
+        <li>
+          Explanation: The array is in descending order, so the next permutation
+          is the smallest permutation, which is [1,2,3].
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Input: <code>nums = [1,1,5]</code>
+        </li>
+        <li>
+          Output: <code>[1,5,1]</code>
+        </li>
+        <li>
+          Explanation: The next permutation of the array [1,1,5] is [1,5,1].
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
