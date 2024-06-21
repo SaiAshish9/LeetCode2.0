@@ -9123,10 +9123,10 @@ const SOLUTIONING = {
         solve this problem:
       </p>
       <p>
-        Following approach ensures that we efficiently count all subarrays containing
-        at least one <code>minK</code> and one <code>maxK</code> by maintaining
-        and updating the relevant indices dynamically during a single pass
-        through the array.
+        Following approach ensures that we efficiently count all subarrays
+        containing at least one <code>minK</code> and one <code>maxK</code> by
+        maintaining and updating the relevant indices dynamically during a
+        single pass through the array.
       </p>
 
       <ul>
@@ -9190,6 +9190,72 @@ const SOLUTIONING = {
           returned as the result.
         </li>
       </ul>
+    </>
+  ),
+  2762: (
+    <>
+      {" "}
+      <p>
+        The problem is to count the number of continuous subarrays such that the
+        absolute difference between any two elements in the subarray is within
+        2. Here is the approach used to solve this problem:
+      </p>
+      <ul>
+        <li>
+          Initialize a variable <code>count</code> to store the number of valid
+          subarrays.
+        </li>
+        <li>
+          Use two deques to maintain the indices of the maximum and minimum
+          values within the current window (subarray):
+          <ul>
+            <li>
+              <code>maxDeque</code>: To maintain the indices of elements in
+              non-increasing order.
+            </li>
+            <li>
+              <code>minDeque</code>: To maintain the indices of elements in
+              non-decreasing order.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Use a sliding window approach:
+          <ul>
+            <li>
+              Expand the window by moving the right boundary to the right.
+            </li>
+            <li>
+              Adjust the left boundary of the window to ensure that the absolute
+              difference between the maximum and minimum values in the window
+              does not exceed 2.
+            </li>
+          </ul>
+        </li>
+        <li>
+          For each position of the right boundary:
+          <ul>
+            <li>Update the deques to maintain the order properties.</li>
+            <li>
+              If the condition is violated, move the left boundary to the right
+              and remove outdated indices from the deques.
+            </li>
+            <li>
+              Count the number of valid subarrays ending at the current position
+              by calculating the distance between the right and left boundaries.
+            </li>
+          </ul>
+        </li>
+        <li>
+          The total count of valid subarrays is stored in <code>count</code> and
+          returned as the result.
+        </li>
+      </ul>
+      <p>
+        This approach ensures that we efficiently count all subarrays where the
+        absolute difference between the maximum and minimum elements is within 2
+        by using two monotonic queues and a sliding window technique.
+      </p>
     </>
   ),
 };
