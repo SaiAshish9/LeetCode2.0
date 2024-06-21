@@ -9333,6 +9333,107 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2945: (
+    <>
+      <p>
+        This Java solution finds the maximum length of a non-decreasing subarray
+        after performing operations to merge subarrays based on their cumulative
+        sums.
+      </p>
+
+      <h2>Explanation:</h2>
+
+      <ol>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <code>int n = A.length</code>: Calculate the length of the array{" "}
+              <code>A</code>.
+            </li>
+            <li>
+              <code>int[] pre = new int[n + 2], dp = new int[n + 1]</code>:
+              Initialize arrays <code>pre</code> to store indices and{" "}
+              <code>dp</code> to store results.
+            </li>
+            <li>
+              <code>long[] acc = new long[n + 1]</code>: Initialize{" "}
+              <code>acc</code> to store cumulative sums of <code>A</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Cumulative Sum Calculation:</strong>
+          <ul>
+            <li>
+              Calculate cumulative sums in <code>acc</code> such that{" "}
+              <code>acc[i]</code> represents the sum of elements from{" "}
+              <code>A[0]</code> to <code>A[i-1]</code>.
+            </li>
+            <li>
+              Example:
+              <pre>
+                <code>{`for (int i = 1; i <= n; i ++) {
+    acc[i] = acc[i - 1] + A[i - 1];
+}`}</code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Dynamic Programming Approach:</strong>
+          <ul>
+            <li>
+              Use <code>dp[j]</code> to store the maximum length of a
+              non-decreasing subarray ending at index <code>j</code>.
+            </li>
+            <li>
+              Use <code>pre[j]</code> to store the optimal starting index{" "}
+              <code>i</code> for the subarray ending at index <code>j</code>.
+            </li>
+            <li>
+              Iterate through <code>j</code> from <code>1</code> to{" "}
+              <code>n</code> and update <code>dp[j]</code> and{" "}
+              <code>pre[j]</code> accordingly.
+            </li>
+            <li>
+              Example:
+              <pre>
+                <code>{`for (int i = 0, j = 1; j <= n; j++) {
+    i = Math.max(i, pre[j]); 
+    dp[j] = dp[i] + 1;
+    int k = Arrays.binarySearch(acc, 2 * acc[j] - acc[i]);
+    if (k < 0) {
+        k = -k - 1;
+    }
+    pre[k] = j;
+}`}</code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              Return <code>dp[n]</code>, which holds the maximum length of a
+              non-decreasing subarray after processing all elements of{" "}
+              <code>A</code>.
+            </li>
+            <li>
+              Example:
+              <pre>
+                <code>return dp[n];</code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
