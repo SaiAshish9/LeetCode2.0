@@ -10439,7 +10439,6 @@ Window position                Max
         in <code>s</code>.
       </p>
 
-      <p>&nbsp;</p>
       <p>
         <strong class="example">Example 1:</strong>
       </p>
