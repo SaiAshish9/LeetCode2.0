@@ -9551,6 +9551,57 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  11: (
+    <ul>
+      <li>
+        <strong>Class `Solution`:</strong>
+        <ul>
+          <li>
+            <strong>Method `maxArea(int[] height)`:</strong>
+            <ul>
+              <li>
+                Initializes variables `max` (to store the maximum area found),
+                `left` (left pointer), and `right` (right pointer initialized to
+                the end of the `height` array).
+              </li>
+              <li>
+                Uses a `while` loop to iterate as long as `left` is less than
+                `right`.
+              </li>
+              <li>
+                Calculates the current area using the formula
+                `Math.min(height[left], height[right]) * (right - left)`.
+              </li>
+              <li>Updates `max` if the current area is larger.</li>
+              <li>
+                Moves the pointer (`left` or `right`) inward based on which side
+                has the smaller height.
+              </li>
+              <li>
+                Returns `max`, which represents the maximum area of water that
+                can be trapped.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Main Method (`main`):</strong>
+            <ul>
+              <li>Creates an instance of `Solution` (`solution`).</li>
+              <li>Defines an example array `heights` (`[1, 2, 1]`).</li>
+              <li>
+                Calls `maxArea` method with `heights` array and prints the
+                result.
+              </li>
+              <li>
+                Prints the maximum area of water that can be trapped, which is
+                `2` for the example `[1, 2, 1]`.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
