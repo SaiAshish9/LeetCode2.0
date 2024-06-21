@@ -9602,6 +9602,71 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  15: (
+    <ul>
+      <li>
+        <strong>Problem Description:</strong> Given an array of integers, find
+        all unique triplets in the array which gives the sum of zero.
+      </li>
+      <li>
+        <strong>Approach:</strong> We'll use the two-pointer technique to
+        efficiently find these triplets.
+      </li>
+      <li>
+        <strong>Steps:</strong>
+        <ol>
+          <li>
+            <strong>Sort the Array:</strong> First, sort the given array.
+            Sorting helps us in easily skipping duplicates and makes it easier
+            to apply the two-pointer technique.
+          </li>
+          <li>
+            <strong>Iterate through the Array:</strong> Use a loop to iterate
+            through each element of the array.
+          </li>
+          <li>
+            <strong>Fix the First Element:</strong> For each element at index
+            `i`, consider it as the potential first element of the triplet.
+          </li>
+          <li>
+            <strong>Apply Two Pointers:</strong> Use two pointers (`left` and
+            `right`) to find the remaining two elements that sum up to the
+            negative of the current element (`-nums[i]`).
+          </li>
+          <li>
+            <strong>Adjust Pointers:</strong> Adjust the pointers based on
+            whether the sum of the three elements is less than zero, greater
+            than zero, or equal to zero.
+          </li>
+          <li>
+            <strong>Store Valid Triplets:</strong> Whenever a triplet is found
+            (sums up to zero), store it in a list (ensuring uniqueness).
+          </li>
+          <li>
+            <strong>Skip Duplicates:</strong> Skip duplicate values of the first
+            element to avoid duplicate triplets.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            If the array length is less than 3, return an empty list since no
+            triplet can be formed.
+          </li>
+          <li>
+            Handle arrays with all positive or all negative numbers by checking
+            for duplicates and early exits.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Code Example:</strong> Here's a Java implementation of the above
+        approach:
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
