@@ -9196,6 +9196,11 @@ const SOLUTIONING = {
     <>
       {" "}
       <p>
+        The number of subarrays in an array of length n is given by the formula:
+        Number of subarray = n×(n+1)/2.​ This formula counts all possible
+        subarrays in a segment of length n.
+      </p>
+      <p>
         The problem is to count the number of continuous subarrays such that the
         absolute difference between any two elements in the subarray is within
         2. Here is the approach used to solve this problem:
