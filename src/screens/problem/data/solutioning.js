@@ -9667,6 +9667,64 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  16: (
+    <ul>
+      <li>
+        <strong>Problem Description:</strong> Given an array of integers, find
+        three integers in the array such that the sum is closest to a given
+        target. Return the sum of the three integers.
+      </li>
+      <li>
+        <strong>Approach:</strong> We'll modify the two-pointer technique to
+        find the sum closest to the target.
+      </li>
+      <li>
+        <strong>Steps:</strong>
+        <ol>
+          <li>
+            <strong>Sort the Array:</strong> First, sort the given array.
+            Sorting helps in easily adjusting the pointers based on the
+            difference from the target.
+          </li>
+          <li>
+            <strong>Initialize Variables:</strong> Use two pointers (`left` and
+            `right`) and a variable (`closestSum`) to track the closest sum
+            found so far.
+          </li>
+          <li>
+            <strong>Iterate through the Array:</strong> Use a loop to iterate
+            through each element of the array.
+          </li>
+          <li>
+            <strong>Adjust Pointers:</strong> Inside the loop, use the two
+            pointers to find the sum of the current element and the elements
+            pointed by `left` and `right`.
+          </li>
+          <li>
+            <strong>Update Closest Sum:</strong> Update `closestSum` if the
+            current sum is closer to the target than the previously recorded
+            closest sum.
+          </li>
+          <li>
+            <strong>Handle Differences:</strong> Adjust the pointers based on
+            whether the current sum is less than, greater than, or equal to the
+            target.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>Handle arrays with fewer than 3 elements gracefully.</li>
+          <li>Ensure no duplicate triplets are returned.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Code Example:</strong> Here's a Java implementation of the above
+        approach:
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
