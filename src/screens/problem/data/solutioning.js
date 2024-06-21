@@ -9494,7 +9494,7 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
-  9: (
+  5: (
     <ul>
       <li>
         <strong>Class `Solution`:</strong>
