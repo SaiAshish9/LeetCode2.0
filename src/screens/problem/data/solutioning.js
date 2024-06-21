@@ -10410,6 +10410,73 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  75: (
+    <>
+      {" "}
+      <h2>Sort Colors Explanation</h2>
+      <ul>
+        <li>
+          <b>Initialize Pointers:</b>
+          <ul>
+            <li>
+              <code>low</code>: Position of the last 0.
+            </li>
+            <li>
+              <code>mid</code>: Current element being examined.
+            </li>
+            <li>
+              <code>high</code>: Position of the first 2.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Traverse the Array:</b>
+          <ul>
+            <li>
+              If <code>nums[mid] == 0</code>:
+              <ul>
+                <li>
+                  Swap <code>nums[mid]</code> with <code>nums[low]</code>.
+                </li>
+                <li>
+                  Increment both <code>low</code> and <code>mid</code>.
+                </li>
+              </ul>
+            </li>
+            <li>
+              If <code>nums[mid] == 1</code>:
+              <ul>
+                <li>
+                  Just move <code>mid</code> to the next position.
+                </li>
+              </ul>
+            </li>
+            <li>
+              If <code>nums[mid] == 2</code>:
+              <ul>
+                <li>
+                  Swap <code>nums[mid]</code> with <code>nums[high]</code>.
+                </li>
+                <li>
+                  Decrement <code>high</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Termination:</b>
+          <ul>
+            <li>
+              The loop terminates when <code>mid &gt; high</code>, ensuring the
+              array is sorted with all 0s at the front, all 1s in the middle,
+              and all 2s at the end.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
