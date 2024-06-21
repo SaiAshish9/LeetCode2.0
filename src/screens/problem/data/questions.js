@@ -11507,7 +11507,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         style={{ width: 500, height: 142 }}
       />
       <pre>
-        <strong>Input:</strong> head = [1,2,3,3,4,4,5]
+        <strong>Input:</strong> head = [1,2,3,3,4,4,5] <br />
         <strong>Output:</strong> [1,2,5]
       </pre>
 
@@ -11520,7 +11520,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         style={{ width: 500, height: 205 }}
       />
       <pre>
-        <strong>Input:</strong> head = [1,1,1,2,3]
+        <strong>Input:</strong> head = [1,1,1,2,3] <br />
         <strong>Output:</strong> [2,3]
       </pre>
 
