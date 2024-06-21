@@ -10527,6 +10527,56 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  82: (
+    <>
+      {" "}
+      <h2>Remove Duplicates from Sorted List II Explanation</h2>
+      <ul>
+        <li>
+          <b>Initialize Pointers:</b>
+          <ul>
+            <li>
+              <code>dummy</code>: A dummy node pointing to the head of the list
+              to handle edge cases.
+            </li>
+            <li>
+              <code>prev</code>: Pointer initially set to <code>dummy</code>.
+            </li>
+            <li>
+              <code>current</code>: Pointer set to the head of the list.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Traverse the List:</b>
+          <ul>
+            <li>
+              For each node:
+              <ul>
+                <li>
+                  If it has duplicates, move the <code>current</code> pointer to
+                  skip all duplicates.
+                </li>
+                <li>
+                  If it is unique, link it to the <code>prev</code> node and
+                  move the <code>prev</code> pointer.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Terminate the List:</b>
+          <ul>
+            <li>
+              Ensure the last node of the new list points to null to terminate
+              the list correctly.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
