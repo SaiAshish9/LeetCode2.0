@@ -40,6 +40,11 @@ const QSList = () => {
       },
     },
     {
+      title: "",
+      key: "key",
+      dataIndex: "key",
+    },
+    {
       title: "#",
       key: "qno",
       dataIndex: "qno",
@@ -152,7 +157,7 @@ const QSList = () => {
         setTableData(
           filteredData.map((x, k) => {
             const obj = { ...x };
-            obj["key"] = "" + k;
+            obj["key"] = "" + (+k + 1);
             obj["acceptance"] = x["acceptance"].toFixed(1) + "%";
             return obj;
           })
