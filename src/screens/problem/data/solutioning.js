@@ -9258,6 +9258,81 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  2944: (
+    <>
+      <p>
+        The provided Java code snippet aims to calculate the minimum coins
+        required based on given prices using a deque (double-ended queue)
+        approach.
+      </p>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Initialize <code>n</code> as the length of the <code>prices</code>{" "}
+              array.
+            </li>
+            <li>
+              Initialize <code>ans</code> to <code>Integer.MAX_VALUE</code> as
+              the initial answer placeholder.
+            </li>
+            <li>
+              Create a deque (<code>ArrayDeque</code>) to store pairs of
+              integers (<code>Pair&lt;Integer, Integer&gt;</code>).
+            </li>
+            <li>
+              Initially, push a pair <code>(0, n)</code> to the front of the
+              deque. This pair represents the minimum cost (0) to reach the end
+              of the array (n).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterating Backwards:</strong>
+          <ul>
+            <li>
+              Iterate backwards through the <code>prices</code> array from index{" "}
+              <code>n-1</code> to <code>0</code>.
+            </li>
+            <li>
+              For each <code>i</code> (current index):
+              <ul>
+                <li>
+                  While the deque is not empty and the value of the first
+                  element's second component (<code>getValue()</code>) is
+                  greater than <code>(i + 1) * 2</code>, remove the first
+                  element from the deque.
+                </li>
+                <li>
+                  Calculate <code>ans</code> as{" "}
+                  <code>prices[i] + deque.peekFirst().getKey()</code>.
+                </li>
+                <li>
+                  While the deque is not empty and the value of the last
+                  element's first component (<code>getKey()</code>) is greater
+                  than or equal to <code>ans</code>, remove the last element
+                  from the deque.
+                </li>
+                <li>
+                  Add a new pair <code>(ans, i)</code> to the end of the deque.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return:</strong>
+          <ul>
+            <li>
+              Return <code>ans</code>, which now holds the minimum cost to reach
+              the beginning of the <code>prices</code> array from the end.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {

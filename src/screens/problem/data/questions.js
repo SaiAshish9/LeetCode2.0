@@ -10196,6 +10196,7 @@ Window position                Max
       </ul>
     </div>
   ),
+  
 };
 
 export default QUESTIONS;
