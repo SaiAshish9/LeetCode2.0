@@ -10737,6 +10737,74 @@ Window position                Max
       </ul>
     </div>
   ),
+  19: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given the <code>head</code> of a linked list, remove the{" "}
+        <code>
+          n<sup>th</sup>
+        </code>{" "}
+        node from the end of the list and return its head.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/10/03/remove_ex1.jpg"
+        style={{ width: 542, height: 222 }}
+      />
+      <pre>
+        <strong>Input:</strong> head = [1,2,3,4,5], n = 2 <br />
+        <strong>Output:</strong> [1,2,3,5]
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> head = [1], n = 1 <br />
+        <strong>Output:</strong> []
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> head = [1,2], n = 1 <br />
+        <strong>Output:</strong> [1]
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the list is <code>sz</code>.
+        </li>
+        <li>
+          <code>1 &lt;= sz &lt;= 30</code>
+        </li>
+        <li>
+          <code>0 &lt;= Node.val &lt;= 100</code>
+        </li>
+        <li>
+          <code>1 &lt;= n &lt;= sz</code>
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Follow up:</strong> Could you do this in one pass?
+      </p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
