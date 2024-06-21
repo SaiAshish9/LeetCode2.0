@@ -9494,6 +9494,63 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  9: (
+    <ul>
+      <li>
+        <strong>Class `Solution`:</strong>
+        <ul>
+          <li>
+            <strong>Method `longestPalindrome`:</strong>
+            <ul>
+              <li>Checks if the input string `s` is null or empty.</li>
+              <li>
+                Initializes variables `n` (length of `s`), `start` (starting
+                index of the longest palindrome found), and `maxLen` (length of
+                the longest palindrome found, initialized to 1 for single
+                characters).
+              </li>
+              <li>
+                Iterates through each character in `s` using a `for` loop.
+              </li>
+              <li>
+                For each character `s[i]`, calls `expandAroundCenter(s, i, i)`
+                to find palindromes centered at `s[i]` (odd-length palindromes).
+              </li>
+              <li>
+                Calls `expandAroundCenter(s, i, i + 1)` to find palindromes
+                centered between `s[i]` and `s[i+1]` (even-length palindromes).
+              </li>
+              <li>
+                Updates `maxLen` and `start` if a longer palindrome is found.
+              </li>
+              <li>
+                Returns the longest palindromic substring found in `s` using
+                `substring(start, start + maxLen)`.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Private Method `expandAroundCenter`:</strong>
+            <ul>
+              <li>
+                Takes parameters `s` (input string), `left` (left pointer), and
+                `right` (right pointer).
+              </li>
+              <li>
+                While `left` is greater than or equal to 0 and `right` is less
+                than the length of `s`, and characters at `left` and `right` are
+                equal, expands the window (`left--` and `right++`).
+              </li>
+              <li>
+                Returns the length of the palindrome found using `right - left -
+                1`.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
