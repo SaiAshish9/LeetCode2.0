@@ -9114,6 +9114,84 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2444: (
+    <>
+      <p>
+        The problem is to count the number of subarrays such that each subarray
+        contains at least one element equal to <code>minK</code> and one element
+        equal to <code>maxK</code>. Here is a step-by-step approach used to
+        solve this problem:
+      </p>
+      <p>
+        Following approach ensures that we efficiently count all subarrays containing
+        at least one <code>minK</code> and one <code>maxK</code> by maintaining
+        and updating the relevant indices dynamically during a single pass
+        through the array.
+      </p>
+
+      <ul>
+        <li>
+          Initialize a variable <code>ans</code> to store the number of valid
+          subarrays.
+        </li>
+        <li>
+          Use three pointers to keep track of indices:
+          <ul>
+            <li>
+              <code>j1</code>: to store the last index where <code>minK</code>{" "}
+              was found.
+            </li>
+            <li>
+              <code>j2</code>: to store the last index where <code>maxK</code>{" "}
+              was found.
+            </li>
+            <li>
+              <code>k</code>: to store the index of the last invalid element (an
+              element that is outside the range [<code>minK</code>,{" "}
+              <code>maxK</code>]).
+            </li>
+          </ul>
+        </li>
+        <li>
+          Iterate through the array:
+          <ul>
+            <li>
+              If the current element is out of the bounds defined by{" "}
+              <code>minK</code> and <code>maxK</code> (i.e., less than{" "}
+              <code>minK</code> or greater than <code>maxK</code>), update{" "}
+              <code>k</code> to the current index.
+            </li>
+            <li>
+              If the current element is equal to <code>minK</code>, update{" "}
+              <code>j1</code> to the current index.
+            </li>
+            <li>
+              If the current element is equal to <code>maxK</code>, update{" "}
+              <code>j2</code> to the current index.
+            </li>
+            <li>
+              Calculate the number of valid subarrays ending at the current
+              index:
+              <ul>
+                <li>
+                  This is done by finding the maximum of 0 and the difference
+                  between the minimum of <code>j1</code> and <code>j2</code> and{" "}
+                  <code>k</code>.
+                </li>
+                <li>
+                  Update <code>ans</code> with this value.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          The total count of valid subarrays is stored in <code>ans</code> and
+          returned as the result.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
