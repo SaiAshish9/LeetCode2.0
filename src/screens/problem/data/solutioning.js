@@ -10577,6 +10577,66 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  86: (
+    <>
+      <h2>Partition List Explanation</h2>
+      <ul>
+        <li>
+          <b>Initialize Pointers:</b>
+          <ul>
+            <li>
+              <code>dummy1</code>: Dummy node for less than <code>x</code>{" "}
+              partition.
+            </li>
+            <li>
+              <code>dummy2</code>: Dummy node for greater or equal to{" "}
+              <code>x</code> partition.
+            </li>
+            <li>
+              <code>lessPtr</code>: Pointer to the current node in less than{" "}
+              <code>x</code> partition.
+            </li>
+            <li>
+              <code>greaterOrEqualPtr</code>: Pointer to the current node in
+              greater or equal to <code>x</code> partition.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Traverse the Original List:</b>
+          <ul>
+            <li>Iterate through each node in the original list.</li>
+            <li>
+              Append each node to either <code>lessThanX</code> or{" "}
+              <code>greaterOrEqualX</code> partition based on its value.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Connect the Partitions:</b>
+          <ul>
+            <li>
+              Link the end of the <code>lessThanX</code> partition to the start
+              of the <code>greaterOrEqualX</code> partition.
+            </li>
+            <li>
+              Set the next of the tail of <code>greaterOrEqualX</code> partition
+              to <code>null</code> to terminate the list.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Return the Result:</b>
+          <ul>
+            <li>
+              Return the head of the partitioned list which starts from{" "}
+              <code>dummy1.next</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
