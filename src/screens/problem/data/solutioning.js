@@ -9853,6 +9853,89 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  19: (
+    <>
+      <h2>Steps:</h2>
+
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Create a dummy node and set its <code>next</code> to the head of
+              the list. This helps handle edge cases where the head might be
+              removed.
+            </li>
+            <li>
+              Initialize two pointers, <code>slow</code> and <code>fast</code>,
+              both pointing to the dummy node.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Advance the Fast Pointer:</strong>
+          <ul>
+            <li>
+              Move the <code>fast</code> pointer <code>n + 1</code> steps ahead.
+              This creates a gap of <code>n</code> nodes between the{" "}
+              <code>slow</code> and <code>fast</code> pointers.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Move Both Pointers:</strong>
+          <ul>
+            <li>
+              Move both <code>slow</code> and <code>fast</code> pointers one
+              step at a time until the <code>fast</code> pointer reaches the end
+              of the list.
+            </li>
+            <li>
+              At this point, the <code>slow</code> pointer will be just before
+              the node that needs to be removed.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Remove the Nth Node:</strong>
+          <ul>
+            <li>
+              Set the <code>next</code> pointer of the <code>slow</code> pointer
+              to skip the node to be removed.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return the New Head:</strong>
+          <ul>
+            <li>
+              Return <code>dummy.next</code> which points to the new head of the
+              list after removal.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Execution:</h2>
+
+      <ul>
+        <li>
+          Input: <code>head = [1,2,3,4,5], n = 2</code>
+        </li>
+        <li>
+          Output: <code>[1,2,3,5]</code>
+        </li>
+        <li>
+          Explanation: The 2nd node from the end is 4. Removing it gives the
+          list [1, 2, 3, 5].
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
