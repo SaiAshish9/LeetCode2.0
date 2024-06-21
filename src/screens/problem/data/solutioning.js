@@ -10355,6 +10355,61 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  61: (
+    <>
+      {" "}
+      <h2>Rotate List Explanation</h2>
+      <ul>
+        <li>
+          <b>Calculate the Length:</b>
+          <ul>
+            <li>
+              Traverse the list to determine its length and keep a reference to
+              the last node (tail).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Make the List Circular:</b>
+          <ul>
+            <li>Connect the tail to the head to form a circular list.</li>
+          </ul>
+        </li>
+        <li>
+          <b>Determine Effective Rotations:</b>
+          <ul>
+            <li>
+              Calculate <code>k % length</code> to handle cases where k is
+              greater than the length of the list.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Find the New Tail and Head:</b>
+          <ul>
+            <li>
+              Identify the new tail position using{" "}
+              <code>length - k % length - 1</code>.
+            </li>
+            <li>The new head is the node next to the new tail.</li>
+          </ul>
+        </li>
+        <li>
+          <b>Break the Circular Link:</b>
+          <ul>
+            <li>
+              Set the <code>next</code> of the new tail to <code>null</code> to
+              break the circular connection and finalize the new list.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        This approach ensures efficient rotation of the list using the
+        two-pointer technique and handles edge cases effectively.
+      </p>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
