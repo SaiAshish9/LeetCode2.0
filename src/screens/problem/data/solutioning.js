@@ -10637,6 +10637,57 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  88: (
+    <>
+      <h2>Merge Sorted Array Explanation</h2>
+      <ul>
+        <li>
+          <b>Initialize Pointers:</b>
+          <ul>
+            <li>
+              <code>p1</code>: Pointer to the last element in <code>nums1</code>{" "}
+              (excluding empty spaces).
+            </li>
+            <li>
+              <code>p2</code>: Pointer to the last element in <code>nums2</code>
+              .
+            </li>
+            <li>
+              <code>p</code>: Pointer for placing merged elements starting from
+              the end of <code>nums1</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Merge from End to Beginning:</b>
+          <ul>
+            <li>
+              Compare elements pointed by <code>p1</code> and <code>p2</code>.
+            </li>
+            <li>
+              Place the larger element at <code>nums1[p]</code> and move the
+              respective pointer (<code>p1</code> or <code>p2</code>) one step
+              left.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Handle Remaining Elements:</b>
+          <ul>
+            <li>
+              Continue merging until all elements from <code>nums2</code> have
+              been merged into <code>nums1</code>.
+            </li>
+            <li>
+              If there are any remaining elements in <code>nums2</code> after{" "}
+              <code>p2</code> has been processed, copy them to the beginning of{" "}
+              <code>nums1</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
