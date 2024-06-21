@@ -9434,6 +9434,66 @@ const SOLUTIONING = {
       </ol>
     </>
   ),
+  2969: (
+    <>
+      {" "}
+      <h2>Explanation:</h2>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <code>int n = prices.length</code>: Get the length of the prices
+              array.
+            </li>
+            <li>
+              <code>Deque&lt;Integer&gt; q = new ArrayDeque&lt;&gt;()</code>:
+              Initialize a deque to store indices of prices array.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Deque Operations:</strong>
+          <ul>
+            <li>
+              Iterate from <code>n</code> to <code>1</code>:
+              <ul>
+                <li>
+                  Remove elements from the front of deque <code>q</code> if
+                  their indices are greater than <code>i * 2 + 1</code>.
+                </li>
+                <li>
+                  If <code>i</code> is less than or equal to{" "}
+                  <code>(n - 1) / 2</code>, add the price at index{" "}
+                  <code>q.peek() - 1</code> to <code>prices[i - 1]</code>.
+                </li>
+                <li>
+                  Remove elements from the back of deque <code>q</code> if their
+                  corresponding prices are greater than or equal to{" "}
+                  <code>prices[i - 1]</code>.
+                </li>
+                <li>
+                  Add current index <code>i</code> to the deque <code>q</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              Return <code>prices[0]</code>, which holds the minimum number of
+              coins required after processing all elements of{" "}
+              <code>prices</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
