@@ -10196,7 +10196,99 @@ Window position                Max
       </ul>
     </div>
   ),
-  
+  2945: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> integer array{" "}
+        <code>nums</code>.
+      </p>
+
+      <p>
+        You can perform any number of operations, where each operation involves
+        selecting a <strong>subarray</strong> of the array and replacing it with
+        the <strong>sum</strong> of its elements. For example, if the given
+        array is <code>[1,3,5,6]</code> and you select subarray{" "}
+        <code>[3,5]</code> the array will convert to <code>[1,8,6]</code>.
+      </p>
+
+      <p>
+        Return <em>the </em>
+        <strong>
+          <em>maximum</em>
+        </strong>
+        <em> length of a </em>
+        <strong>
+          <em>non-decreasing</em>
+        </strong>
+        <em> array that can be made after applying operations.</em>
+      </p>
+
+      <p>
+        A <strong>subarray</strong> is a contiguous <strong>non-empty</strong>{" "}
+        sequence of elements within an array.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [5,2,2] <br />
+        <strong>Output:</strong> 1 <br />
+        <strong>Explanation:</strong> This array with length 3 is not
+        non-decreasing. <br />
+        We have two ways to make the array length two. <br />
+        First, choosing subarray [2,2] converts the array to [5,4]. <br />
+        Second, choosing subarray [5,2] converts the array to [7,2]. <br />
+        In these two ways the array is not non-decreasing. <br />
+        And if we choose subarray [5,2,2] and replace it with [9] it becomes
+        non-decreasing. <br />
+        So the answer is 1.
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3,4] <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> The array is non-decreasing. So the answer
+        is 4.
+      </pre>
+
+      <p>
+        <strong>Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [4,3,2,6] <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> Replacing [3,2] with [5] converts the
+        given array to [4,5,6] that is non-decreasing. Because the given array
+        is not non-decreasing, the maximum possible answer is 3.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= nums[i] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
