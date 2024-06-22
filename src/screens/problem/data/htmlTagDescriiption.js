@@ -412,6 +412,14 @@ class Prim {
         </span>
       </p>
       <br />
+      <p>
+        The sliding window technique is a very useful method for solving a
+        variety of problems in competitive programming and coding interviews. It
+        involves maintaining a window (usually a subarray or substring) that
+        slides over the input data to solve the problem more efficiently than
+        using a brute force approach.
+      </p>
+      <br />
       <div style={{ width: 810 }} class="wp-caption alignnone">
         <img
           alt="Sliding-Window-Technique-copy-(1)"
