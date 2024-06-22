@@ -400,6 +400,481 @@ class Prim {
       <img style={{ width: "60%" }} src={PImg} alt="img" />
     </>
   ),
+  "Sliding Window": (
+    <div class="text">
+      <p dir="ltr">
+        <span>
+          Sliding Window problems are problems in which a fixed or variable-size
+          window is moved through a data structure, typically an array or
+          string, to solve problems efficiently based on continuous subsets of
+          elements. This technique is used when we need to find subarrays or
+          substrings according to a given set of conditions.
+        </span>
+      </p>
+      <br />
+      <div style={{ width: 810 }} class="wp-caption alignnone">
+        <img
+          alt="Sliding-Window-Technique-copy-(1)"
+          height="470"
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20240312122853/Sliding-Window-Technique-copy-(1).webp"
+          width="1000"
+        />
+      </div>
+      <br />
+      <h2 id="what-is-sliding-window-technique">
+        <u>
+          <b>
+            <strong class="GFGEditorTheme__textUnderline">
+              What is Sliding Window Technique?
+            </strong>
+          </b>
+        </u>
+      </h2>{" "}
+      <br />
+      <blockquote>
+        <p dir="ltr">
+          <b>
+            <strong>Sliding Window Technique</strong>
+          </b>
+          <span>
+            {" "}
+            is a method used to efficiently solve problems that involve defining
+            a{" "}
+          </span>
+          <b>
+            <strong>window </strong>
+          </b>
+          <span>or </span>
+          <b>
+            <strong>range </strong>
+          </b>
+          <span>
+            in the input data (arrays or strings) and then moving that window
+            across the data to perform some operation within the window. This
+            technique is commonly used in algorithms like finding subarrays with
+            a specific sum, finding the longest substring with unique
+            characters, or solving problems that require a fixed-size window to
+            process elements efficiently.
+          </span>
+        </p>
+      </blockquote>
+      <br />
+      <p dir="ltr">
+        <span>
+          Let’s take an example to understand this properly, say we have an
+          array of size{" "}
+        </span>
+        <b>
+          <strong>N </strong>
+        </b>
+        <span>and also an integer </span>
+        <b>
+          <strong>K.</strong>
+        </b>
+        <span>
+          {" "}
+          Now, we have to calculate the maximum sum of a subarray having size
+          exactly{" "}
+        </span>
+        <b>
+          <strong>K.</strong>
+        </b>
+        <span> Now how should we approach this problem?</span>
+      </p>{" "}
+      <br />
+      <p dir="ltr">
+        <span>
+          One way to do this by taking each subarray of size K from the array
+          and find out the maximum sum of these subarrays. This can be done
+          using Nested loops which will result into O(N
+        </span>
+        <sup>
+          <span>2</span>
+        </sup>
+        <span>) Time Complexity.</span>
+      </p>
+      <br />
+      <p dir="ltr">
+        <b>
+          <strong>But can we optimize this approach?</strong>
+        </b>
+      </p>{" "}
+      <br />
+      <p dir="ltr">
+        <span>The answer is Yes, instead of taking each </span>
+        <b>
+          <strong>K</strong>
+        </b>
+        <span>
+          {" "}
+          sized subarray and calculating its sum, we can just take one K size
+          subarray from 0 to K-1 index and calculate its sum now shift our range
+          one by one along with the iterations and update the result, like in
+          next iteration increase the left and right pointer and update the
+          previous sum as shown in the below image:
+        </span>
+      </p>{" "}
+      <br />
+      <div
+        id="GFG_AD_Desktop_InContent_ATF_336x280"
+        style={{ textAlign: "center", maxHeight: 280 }}
+      ></div>
+      <div id="GFG_AD_gfg_mobile_336x280_1" style={{ margin: "5px 0" }}></div>
+      <div style={{ width: 810 }} class="wp-caption alignnone">
+        <img
+          alt="sliding-window-1"
+          height="400"
+          loading="lazy"
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20240306112433/sliding-window-1.webp"
+          width="800"
+        />
+      </div>{" "}
+      <br />
+      <p dir="ltr">
+        <span>
+          Now follow this method for each iteration till we reach the end of the
+          array:
+        </span>
+      </p>
+      <div style={{ width: 810 }} class="wp-caption alignnone">
+        <img
+          alt="sliding-window-technique-2"
+          height="460"
+          loading="lazy"
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20240306112450/sliding-window-technique-2.webp"
+          width="800"
+        />
+      </div>{" "}
+      <br />
+      <p dir="ltr">
+        <span>
+          So, we can see that instead of recalculating the sum of each K sized
+          subarray we are using previous window of size K and using its results
+          we update the sum and shift the window right by moving left and right
+          pointers, this operation is optimal because it take O(1) time to shift
+          the range instead of recalculating.
+        </span>
+      </p>{" "}
+      <br />
+      <p dir="ltr">
+        <span>
+          This approach of shifting the pointers and calculating the results
+          accordingly is known as{" "}
+        </span>
+        <b>
+          <strong>Sliding window Technique</strong>
+        </b>
+        <span>.</span>
+      </p>
+      <div>&nbsp;</div>
+      <h2 id="how-to-use-sliding-window-technique">
+        <a
+          href="https://www.geeksforgeeks.org/sliding-window-problems-identify-solve-and-interview-questions/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <u>
+            <b>
+              <strong class="GFGEditorTheme__textUnderline">
+                How to use Sliding Window Technique?
+              </strong>
+            </b>
+          </u>
+        </a>
+      </h2>{" "}
+      <br />
+      <p dir="ltr">
+        <span>There are basically two types of sliding window:</span>
+      </p>
+      <br />
+      <h3>
+        <a
+          href="https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <b>
+            <strong>1. Fixed Size Sliding Window:</strong>
+          </b>
+        </a>
+      </h3>
+      <p dir="ltr">
+        <span>
+          The general steps to solve these questions by following below steps:
+        </span>
+      </p>{" "}
+      <br />
+      <ul>
+        <li>
+          <span>Find the size of the window required, say K.</span>
+        </li>
+        <li>
+          <span>
+            Compute the result for 1st window, i.e. include the first K elements
+            of the data structure.
+          </span>
+        </li>
+        <li>
+          <span>
+            Then use a loop to slide the window by 1 and keep computing the
+            result window by window.
+          </span>
+        </li>
+      </ul>
+      <br />
+      <h3>
+        <a
+          href="https://www.geeksforgeeks.org/sliding-window-problems-identify-solve-and-interview-questions/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <b>
+            <strong>2. Variable Size Sliding Window:</strong>
+          </b>
+        </a>
+      </h3>
+      <p dir="ltr">
+        <span>
+          The general steps to solve these questions by following below steps:
+        </span>
+      </p>
+      <div
+        style={{ textAlign: "center", margin: "20px 0", maxHeight: 280 }}
+        id="GFG_AD_gfg_outstream_incontent"
+      ></div>
+      <ul>
+        <li>
+          <span>
+            In this type of sliding window problem, we increase our right
+            pointer one by one till our condition is true.
+          </span>
+        </li>
+        <li>
+          <span>
+            At any step if our condition does not match, we shrink the size of
+            our window by increasing left pointer.
+          </span>
+        </li>
+        <li value="3">
+          <span>
+            Again, when our condition satisfies, we start increasing the right
+            pointer and follow step 1.
+          </span>
+        </li>
+        <li>
+          <span>
+            We follow these steps until we reach to the end of the array.
+          </span>
+        </li>
+      </ul>
+      <br />
+      <h2 id="how-to-identify-sliding-window-problems">
+        <u>
+          <span class="GFGEditorTheme__textUnderline">
+            How to Identify Sliding Window Problems:
+          </span>
+        </u>
+      </h2>
+      <br />
+      <ul>
+        <li value="1">
+          <span>
+            These problems generally require Finding Maximum/Minimum&nbsp;
+          </span>
+          <b>
+            <strong>Subarray</strong>
+          </b>
+          <span>,&nbsp;</span>
+          <b>
+            <strong>Substrings</strong>
+          </b>
+          <span>&nbsp;which satisfy some specific condition.</span>
+        </li>
+        <li value="2">
+          <span>The size of the subarray or substring ‘</span>
+          <b>
+            <strong>K’</strong>
+          </b>
+          <span>&nbsp;will be given in some of the problems.</span>
+        </li>
+        <li value="3">
+          <span>These problems can easily be solved in O(N</span>
+          <sup>
+            <span>2</span>
+          </sup>
+          <span>
+            ) time complexity using nested loops, using sliding window we can
+            solve these in&nbsp;
+          </span>
+          <b>
+            <strong>O(n)</strong>
+          </b>
+          <span>&nbsp;Time Complexity.</span>
+        </li>
+        <li value="4">
+          <b>
+            <strong>Required Time Complexity:</strong>
+          </b>
+          <span>&nbsp;O(N) or O(Nlog(N))</span>
+        </li>
+        <li value="5">
+          <b>
+            <strong>Constraints:</strong>
+          </b>
+          <span>&nbsp;N &lt;= 10</span>
+          <sup>
+            <span>6&nbsp;</span>
+          </sup>
+          <span>, If N is the size of the Array/String.</span>
+        </li>
+      </ul>
+      <br />
+      <h2 id="use-cases-of-sliding-window-technique">
+        <u>
+          <b>
+            <strong class="GFGEditorTheme__textUnderline">
+              Use Cases of Sliding Window Technique:
+            </strong>
+          </b>
+        </u>
+      </h2>
+      <br />
+      <h3>
+        <span>1. To find the maximum sum of all subarrays of size K:</span>
+      </h3>
+      <br />
+      <p dir="ltr">
+        <span>Given an array of integers of size </span>
+        <b>
+          <strong>‘n’, </strong>
+        </b>
+        <span>Our aim is to calculate the maximum sum of </span>
+        <b>
+          <strong>‘k’</strong>
+        </b>
+        <span> consecutive elements in the array.</span>
+      </p>
+      <p dir="ltr">
+        <span>Below is the implementation of the above approach:&nbsp;</span>
+      </p>
+      <br />
+      <pre>
+        <code>
+          {`class GFG {
+    static int maxSum(int arr[], int n, int k)
+    {
+        int max_sum = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n - k + 1; i++) {
+            int current_sum = 0;
+            for (int j = 0; j < k; j++)
+                current_sum = current_sum + arr[i + j];
+
+            max_sum = Math.max(current_sum, max_sum);
+        }
+
+        return max_sum;
+    }
+
+    public static void main(String[] args)
+    {
+        int arr[] = { 1, 4, 2, 10, 2, 3, 1, 0, 20 };
+        int k = 4;
+        int n = arr.length;
+        System.out.println(maxSum(arr, n, k));
+    }
+}
+`}
+        </code>
+      </pre>
+      <br />
+      <p dir="ltr">
+        <b>
+          <strong>Time complexity:</strong>
+        </b>
+        <span> O(k*n) as it contains two nested loops.</span>
+        <br />
+        <b>
+          <strong>Auxiliary Space: </strong>
+        </b>
+        <span>O(1)</span>
+      </p>
+      <br />
+      <p dir="ltr">
+        <b>
+          <strong>Applying the sliding window technique:</strong>
+        </b>
+        <span>&nbsp;</span>
+      </p>
+      <br />
+      <ul>
+        <li value="1">
+          <span>
+            We compute the sum of the first k elements out of n terms using a
+            linear loop and store the sum in variable{" "}
+          </span>
+          <b>
+            <strong>window_sum</strong>
+          </b>
+          <span>.</span>
+        </li>
+        <li value="2">
+          <span>
+            Then we will traverse linearly over the array till it reaches the
+            end and simultaneously keep track of the maximum sum.
+          </span>
+        </li>
+        <li value="3">
+          <span>
+            To get the current sum of a block of k elements just subtract the
+            first element from the previous block and add the last element of
+            the current block.
+          </span>
+        </li>
+      </ul>
+      <br />
+      <p dir="ltr">
+        <span>
+          The below representation will make it clear how the window slides over
+          the array.
+        </span>
+      </p>
+      <br />
+      <pre>
+        <code>{`class GFG {
+
+    static int maxSum(int arr[], int n, int k)
+    {
+        if (n <= k) {
+            System.out.println("Invalid");
+            return -1;
+        }
+
+        int max_sum = 0;
+        for (int i = 0; i < k; i++)
+            max_sum += arr[i];
+
+        int window_sum = max_sum;
+        for (int i = k; i < n; i++) {
+            window_sum += arr[i] - arr[i - k];
+            max_sum = Math.max(max_sum, window_sum);
+        }
+
+        return max_sum;
+    }
+
+    public static void main(String[] args)
+    {
+        int arr[] = { 1, 4, 2, 10, 2, 3, 1, 0, 20 };
+        int k = 4;
+        int n = arr.length;
+        System.out.println(maxSum(arr, n, k));
+    }
+}
+`}</code>
+      </pre>
+    </div>
+  ),
 };
 
 export default TAG_DESCRIPTION;

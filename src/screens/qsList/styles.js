@@ -246,6 +246,16 @@ export const DescriptionContainer = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     padding-right: 4.25%;
   }
+  ul {
+    list-style-type: disc;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 16px;
+    unicode-bidi: isolate;
+  }
 `;
 
 export const CheckIcon = styled(FaCheck)`
