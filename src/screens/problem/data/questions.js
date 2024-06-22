@@ -11976,6 +11976,87 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
     </div>
   ),
+  3: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code>, find the length of the{" "}
+        <strong>longest</strong>{" "}
+        <span
+          data-keyword="substring-nonempty"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rj:"
+              >
+                <div>
+                  <strong>substring</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        without repeating characters.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "abcabcbb"
+        <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> The answer is "abc", with the length of 3.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "bbbbb"
+        <br />
+        <strong>Output:</strong> 1<br />
+        <strong>Explanation:</strong> The answer is "b", with the length of 1.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "pwwkew"
+        <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong> The answer is "wke", with the length of 3.
+        <br />
+        Notice that the answer must be a substring, "pwke" is a subsequence and
+        not a substring.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            0 &lt;= s.length &lt;= 5 * 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>s</code> consists of English letters, digits, symbols and
+          spaces.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
