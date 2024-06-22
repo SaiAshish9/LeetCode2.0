@@ -11040,6 +11040,82 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  159: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          The function <code>lengthOfLongestSubstringTwoDistinct</code>{" "}
+          calculates the length of the longest substring with at most two
+          distinct characters using the sliding window technique.
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <code>Map&lt;Character, Integer&gt; count</code> - A map to count
+              the frequency of characters in the current window.
+            </li>
+            <li>
+              <code>int n = s.length()</code> - The length of the input string.
+            </li>
+            <li>
+              <code>int ans = 0</code> - Variable to store the maximum length of
+              the substring found.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sliding Window:</strong>
+          <ul>
+            <li>
+              Iterate through the string using the <code>i</code> pointer as the
+              right boundary of the window.
+            </li>
+            <li>
+              Update the count of the current character in the{" "}
+              <code>count</code> map.
+            </li>
+            <li>
+              While the window contains more than two distinct characters,
+              increment the <code>j</code> pointer (left boundary) to reduce the
+              window size and update the count of the character at{" "}
+              <code>j</code> in the <code>count</code> map.
+            </li>
+            <li>
+              If a character's count becomes zero, remove it from the{" "}
+              <code>count</code> map.
+            </li>
+            <li>
+              Update <code>ans</code> if the current window length (i - j + 1)
+              is larger than the previous maximum.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Value:</strong> The function returns <code>ans</code>,
+          the length of the longest substring with at most two distinct
+          characters.
+        </li>
+        <li>
+          <strong>Main Method:</strong>
+          <ul>
+            <li>
+              Creates an instance of the <code>Solution</code> class.
+            </li>
+            <li>
+              Calls <code>lengthOfLongestSubstringTwoDistinct</code> with a
+              sample input string <code>"eceba"</code>.
+            </li>
+            <li>
+              Prints the result: "Length of Longest Substring with At Most Two
+              Distinct Characters: 3".
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
