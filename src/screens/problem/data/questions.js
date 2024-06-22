@@ -12091,18 +12091,16 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">
             s = "barfoothefoobarman", words = ["foo","bar"]
           </span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">[0,9]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>
@@ -12114,13 +12112,13 @@ for (int i = 0; i &lt; actualLength; i++) {
           concatenation of <code>["foo","bar"]</code> which is a permutation of{" "}
           <code>words</code>.
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">
@@ -12128,33 +12126,29 @@ for (int i = 0; i &lt; actualLength; i++) {
             ["word","good","best","word"]
           </span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">[]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>
         <p>There is no concatenated substring.</p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">
             s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
           </span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">[6,9,12]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>
@@ -12166,7 +12160,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           The substring starting at 12 is <code>"thefoobar"</code>. It is the
           concatenation of <code>["the","foo","bar"]</code>.
         </p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
