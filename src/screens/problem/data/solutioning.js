@@ -10875,6 +10875,79 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  30: (
+    <>
+      {" "}
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          The function <code>lengthOfLongestSubstring</code> calculates the
+          length of the longest substring without repeating characters using the
+          sliding window technique.
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <code>int[] charIndex = new int[128];</code> - An array to store
+              the last index of each character.
+            </li>
+            <li>
+              <code>int left = 0, right = 0;</code> - Two pointers representing
+              the current window.
+            </li>
+            <li>
+              <code>int maxLength = 0;</code> - Variable to store the maximum
+              length of the substring found.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sliding Window:</strong>
+          <ul>
+            <li>
+              Iterate through the string using the <code>right</code> pointer.
+            </li>
+            <li>
+              For each character at index <code>right</code>, update the{" "}
+              <code>left</code> pointer to ensure no repeating characters within
+              the current window.
+            </li>
+            <li>
+              Update <code>maxLength</code> if the current window length (right
+              - left + 1) is larger than the previous maximum.
+            </li>
+            <li>
+              Update the <code>charIndex</code> array to store the next index of
+              the character at <code>right</code> and increment the{" "}
+              <code>right</code> pointer.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Value:</strong> The function returns{" "}
+          <code>maxLength</code>, the length of the longest substring without
+          repeating characters.
+        </li>
+        <li>
+          <strong>Main Method:</strong>
+          <ul>
+            <li>
+              Creates an instance of the <code>Solution</code> class.
+            </li>
+            <li>
+              Calls <code>lengthOfLongestSubstring</code> with a sample input
+              string <code>"abcabcbb"</code>.
+            </li>
+            <li>
+              Prints the result: "Length of Longest Substring Without Repeating
+              Characters: 3".
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
