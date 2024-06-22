@@ -11116,6 +11116,72 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  187: (
+    <>
+      {" "}
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          The function <code>findRepeatedDnaSequences</code> finds all
+          10-letter-long sequences (substrings) that occur more than once in a
+          DNA string.
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <code>List&lt;String&gt; result</code> - A list to store the
+              resulting repeated sequences.
+            </li>
+            <li>
+              <code>Map&lt;String, Integer&gt; sequenceCount</code> - A map to
+              count the occurrences of each 10-letter sequence.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sliding Window:</strong>
+          <ul>
+            <li>
+              Iterate through the string using the <code>i</code> pointer, where
+              each position represents the start of a 10-letter sequence.
+            </li>
+            <li>
+              Extract the 10-letter sequence starting at index <code>i</code>.
+            </li>
+            <li>
+              Update the count of the current sequence in the{" "}
+              <code>sequenceCount</code> map.
+            </li>
+            <li>
+              If the count of the current sequence becomes 2, add it to the{" "}
+              <code>result</code> list.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Value:</strong> The function returns the{" "}
+          <code>result</code> list, containing all repeated 10-letter sequences.
+        </li>
+        <li>
+          <strong>Main Method:</strong>
+          <ul>
+            <li>
+              Creates an instance of the <code>Solution</code> class.
+            </li>
+            <li>
+              Calls <code>findRepeatedDnaSequences</code> with a sample input
+              string <code>"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"</code>.
+            </li>
+            <li>
+              Prints the result: "Repeated DNA sequences: [AAAAACCCCC,
+              CCCCCAAAAA]".
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
