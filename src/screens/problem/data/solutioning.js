@@ -10948,6 +10948,98 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  76: (
+    <>
+      {" "}
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          The function <code>minWindow</code> finds the minimum window substring
+          in <code>s</code> that contains all characters of <code>t</code>.
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <code>Map&lt;Character, Integer&gt; tCount</code> - A map to count
+              the frequency of characters in <code>t</code>.
+            </li>
+            <li>
+              <code>int required</code> - The number of unique characters in{" "}
+              <code>t</code> that need to be present in the window.
+            </li>
+            <li>
+              <code>int left = 0, right = 0</code> - Two pointers representing
+              the current window.
+            </li>
+            <li>
+              <code>int formed = 0</code> - The number of unique characters in
+              the current window that match the required count.
+            </li>
+            <li>
+              <code>Map&lt;Character, Integer&gt; windowCounts</code> - A map to
+              count the frequency of characters in the current window.
+            </li>
+            <li>
+              <code>int[] ans = {(-1, 0, 0)}</code> - An array to store the
+              length, left, and right indices of the minimum window.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sliding Window:</strong>
+          <ul>
+            <li>
+              Iterate through the string using the <code>right</code> pointer.
+            </li>
+            <li>
+              Update the count of the current character in the{" "}
+              <code>windowCounts</code> map.
+            </li>
+            <li>
+              If the current character's count matches its required count in{" "}
+              <code>tCount</code>, increment the <code>formed</code> counter.
+            </li>
+            <li>
+              While the window is valid (i.e., all required characters are
+              present in the correct count), try to shrink the window from the
+              left to find the minimum window.
+            </li>
+            <li>
+              Update the answer if the current window is smaller than the
+              previous smallest window.
+            </li>
+            <li>
+              Decrement the count of the current character in the{" "}
+              <code>windowCounts</code> map and adjust the <code>formed</code>{" "}
+              counter if necessary.
+            </li>
+            <li>
+              Increment the <code>left</code> pointer to continue shrinking the
+              window.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Value:</strong> The function returns the minimum window
+          substring or an empty string if no such window exists.
+        </li>
+        <li>
+          <strong>Main Method:</strong>
+          <ul>
+            <li>
+              Creates an instance of the <code>Solution</code> class.
+            </li>
+            <li>
+              Calls <code>minWindow</code> with a sample input string{" "}
+              <code>"ADOBECODEBANC"</code> and pattern <code>"ABC"</code>.
+            </li>
+            <li>Prints the result: "Minimum window substring: BANC".</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
