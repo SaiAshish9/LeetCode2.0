@@ -12092,26 +12092,20 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">
-            s = "barfoothefoobarman", words = ["foo","bar"]
-          </span>
-        </p>{" "}
-        <p>
-          <strong>Output:</strong> <span class="example-io">[0,9]</span>
-        </p>{" "}
-        <p>
-          <strong>Explanation:</strong>
-        </p>
-        <p>
-          The substring starting at 0 is <code>"barfoo"</code>. It is the
-          concatenation of <code>["bar","foo"]</code> which is a permutation of{" "}
-          <code>words</code>.<br />
-          The substring starting at 9 is <code>"foobar"</code>. It is the
-          concatenation of <code>["foo","bar"]</code> which is a permutation of{" "}
-          <code>words</code>.
-        </p>
+        <strong>Input:</strong>{" "}
+        <span class="example-io">
+          s = "barfoothefoobarman", words = ["foo","bar"]
+        </span>{" "}
+        <br />
+        <strong>Output:</strong> <span class="example-io">[0,9]</span>
+        <br />
+        <strong>Explanation: </strong>
+        The substring starting at 0 is <code>"barfoo"</code>. It is the
+        concatenation of <code>["bar","foo"]</code> which is a permutation of{" "}
+        <code>words</code>.<br />
+        The substring starting at 9 is <code>"foobar"</code>. It is the
+        concatenation of <code>["foo","bar"]</code> which is a permutation of{" "}
+        <code>words</code>.
       </pre>
 
       <p>
@@ -12119,19 +12113,14 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">
-            s = "wordgoodgoodgoodbestword", words =
-            ["word","good","best","word"]
-          </span>
-        </p>{" "}
-        <p>
-          <strong>Output:</strong> <span class="example-io">[]</span>
-        </p>{" "}
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Input:</strong>{" "}
+        <span class="example-io">
+          s = "wordgoodgoodgoodbestword", words = ["word","good","best","word"]
+        </span>
+        <br />
+        <strong>Output:</strong> <span class="example-io">[]</span>
+        <br />
+        <strong>Explanation: </strong>
         <p>There is no concatenated substring.</p>
       </pre>
 
@@ -12140,26 +12129,20 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">
-            s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
-          </span>
-        </p>{" "}
-        <p>
-          <strong>Output:</strong> <span class="example-io">[6,9,12]</span>
-        </p>{" "}
-        <p>
-          <strong>Explanation:</strong>
-        </p>
-        <p>
-          The substring starting at 6 is <code>"foobarthe"</code>. It is the
-          concatenation of <code>["foo","bar","the"]</code>.<br />
-          The substring starting at 9 is <code>"barthefoo"</code>. It is the
-          concatenation of <code>["bar","the","foo"]</code>.<br />
-          The substring starting at 12 is <code>"thefoobar"</code>. It is the
-          concatenation of <code>["the","foo","bar"]</code>.
-        </p>
+        <strong>Input:</strong>{" "}
+        <span class="example-io">
+          s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
+        </span>
+        <br />
+        <strong>Output:</strong> <span class="example-io">[6,9,12]</span>
+        <br />
+        <strong>Explanation: </strong>
+        The substring starting at 6 is <code>"foobarthe"</code>. It is the
+        concatenation of <code>["foo","bar","the"]</code>.<br />
+        The substring starting at 9 is <code>"barthefoo"</code>. It is the
+        concatenation of <code>["bar","the","foo"]</code>.<br />
+        The substring starting at 12 is <code>"thefoobar"</code>. It is the
+        concatenation of <code>["the","foo","bar"]</code>.
       </pre>
 
       <p>&nbsp;</p>
