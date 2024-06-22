@@ -12283,6 +12283,47 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
     </div>
   ),
+  159: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a string{" "}
+        <strong>
+          <em>s</em>
+        </strong>{" "}
+        , find the length of the longest substring&nbsp;
+        <strong>
+          <em>t&nbsp;&nbsp;</em>
+        </strong>
+        that contains <strong>at most </strong>2 distinct characters.
+      </p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> "eceba" <br />
+        <strong>Output: </strong>3 <br />
+        <strong>
+          Explanation: <em>t</em>
+        </strong>
+        <em> </em>is "ece" which its length is 3.
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> "ccaabbb" <br />
+        <strong>Output: </strong>5 <br />
+        <strong>
+          Explanation: <em>t</em>
+        </strong>
+        <em> </em>is "aabbb" which its length is 5.
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
