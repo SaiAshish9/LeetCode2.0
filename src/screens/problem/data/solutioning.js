@@ -10841,6 +10841,40 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  3: (
+    <>
+      {" "}
+      <h2>Explanation</h2>
+      <p>In this solution:</p>
+      <ul>
+        <li>
+          We use an integer array <code>charIndex</code> of size 128 to keep
+          track of the last index of each character.
+        </li>
+        <li>
+          Two pointers, <code>left</code> and <code>right</code>, represent the
+          current window. Both start at the beginning of the string.
+        </li>
+        <li>
+          We iterate through the string using the <code>right</code> pointer.
+        </li>
+        <li>
+          For each character at index <code>right</code>, we update the{" "}
+          <code>left</code> pointer to ensure no repeating characters within the
+          current window.
+        </li>
+        <li>
+          We calculate the length of the current window and update{" "}
+          <code>maxLength</code> if it's larger than the previous maximum.
+        </li>
+        <li>
+          Finally, we update the <code>charIndex</code> array to store the next
+          index of the character at <code>right</code> and increment the{" "}
+          <code>right</code> pointer.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
