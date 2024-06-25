@@ -12228,6 +12228,45 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  904: (
+    <ul>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>start</code> and <code>end</code>, to
+            represent the current window of fruits.
+          </li>
+          <li>
+            Maintain a hashmap <code>fruitCount</code> to keep track of the
+            count of each type of fruit in the current window.
+          </li>
+          <li>
+            Use a variable <code>maxFruits</code> to keep track of the maximum
+            number of fruits in any valid subarray.
+          </li>
+          <li>
+            Iterate through the array and expand the window by moving the{" "}
+            <code>end</code> pointer to the right.
+          </li>
+          <li>
+            Add the current fruit (<code>tree[end]</code>) to the{" "}
+            <code>fruitCount</code> hashmap and update its count.
+          </li>
+          <li>
+            If the size of <code>fruitCount</code> exceeds 2 (i.e., more than
+            two distinct types of fruits), shrink the window from the{" "}
+            <code>start</code> pointer until we have at most two distinct types
+            of fruits in the window.
+          </li>
+          <li>
+            Update <code>maxFruits</code> with the maximum number of fruits
+            collected in any valid subarray after adjusting the window.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
