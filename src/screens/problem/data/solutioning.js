@@ -12859,6 +12859,55 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1208: (
+    <>
+      {" "}
+      <h2>Explanation of Get Equal Substrings Within Budget</h2>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <p>
+            Initialize variables <code>left</code>, <code>right</code>,{" "}
+            <code>currentCost</code>, and <code>maxLength</code>.
+          </p>
+        </li>
+        <li>
+          <strong>Sliding Window Approach:</strong>
+          <ul>
+            <li>
+              Iterate through both strings using a sliding window defined by{" "}
+              <code>left</code> and <code>right</code> pointers.
+            </li>
+            <li>
+              Calculate the cost of converting each character in the current
+              window from <code>s</code> to <code>t</code>.
+            </li>
+            <li>
+              Adjust the window size based on whether <code>currentCost</code>{" "}
+              is within the allowed <code>maxCost</code>.
+            </li>
+            <li>
+              Update <code>maxLength</code> whenever a valid substring length is
+              found.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Edge Cases:</strong>
+          <ul>
+            <li>
+              Handle cases where either <code>s</code> or <code>t</code> is
+              empty.
+            </li>
+            <li>
+              Ensure the loop runs until the end of the string and accounts for
+              all possible substrings.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
