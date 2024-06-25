@@ -14148,6 +14148,97 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1839: (
+    <>
+      <p>Let's solve this using two pointers</p>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Initialize <code>ans</code> to 0 to store the length of the
+              longest valid substring found.
+            </li>
+            <li>
+              Initialize <code>count</code> to 1 to count the current sequence
+              of increasing vowels.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Iterate Through the String:</strong>
+          <ul>
+            <li>
+              Use two pointers, <code>l</code> (left) and <code>r</code>{" "}
+              (right), to define the current window of characters.
+            </li>
+            <li>
+              Start iterating from index 1 (<code>r = 1</code>) to the end of
+              the string (<code>r &lt; word.length()</code>).
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Check Current and Previous Characters:</strong>
+          <ul>
+            <li>
+              Retrieve the current character (<code>curr</code>) at index{" "}
+              <code>r</code> and the previous character (<code>prev</code>) at
+              index <code>r - 1</code>.
+            </li>
+            <li>
+              Compare <code>curr</code> with <code>prev</code> to determine if
+              the characters are in increasing order or not.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Update Count and Length:</strong>
+          <ul>
+            <li>
+              If <code>curr &gt;= prev</code>, increment the <code>count</code>{" "}
+              to track the length of the current sequence of increasing vowels.
+            </li>
+            <li>
+              If <code>curr &gt; prev</code>, it indicates a new vowel in
+              sequence, so increment <code>count</code> and check if{" "}
+              <code>count</code> reaches 5 (all vowels).
+            </li>
+            <li>
+              If <code>count == 5</code>, update <code>ans</code> to the maximum
+              of its current value or the length of the current valid substring
+              (<code>r - l + 1</code>).
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Reset Count and Left Pointer:</strong>
+          <ul>
+            <li>
+              If <code>curr &lt; prev</code>, reset <code>count</code> to 1 and
+              move the <code>l</code> pointer to <code>r</code> to start a new
+              potential substring.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              After iterating through the string, <code>ans</code> holds the
+              length of the longest substring where characters are in increasing
+              order of vowels.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
