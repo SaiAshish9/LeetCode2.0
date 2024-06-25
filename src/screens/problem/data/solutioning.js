@@ -14239,6 +14239,67 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1852: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Create a <code>Map</code> <code>cnt</code> to count occurrences of
+            elements in the current sliding window.
+          </li>
+          <li>
+            Iterate through the first window of size <code>k</code> to populate{" "}
+            <code>cnt</code> with initial counts.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Process Sliding Window:</strong>
+        <ul>
+          <li>
+            Initialize an array <code>ans</code> to store results, where each
+            index <code>i</code> represents the number of distinct elements in
+            the window starting at <code>i</code>.
+          </li>
+          <li>
+            Calculate <code>ans[0]</code> as the number of distinct elements in
+            the first window.
+          </li>
+          <li>
+            Iterate from index <code>k</code> to the end of the array to slide
+            the window:
+          </li>
+          <ul>
+            <li>
+              Update <code>cnt</code> by adding the current element (
+              <code>nums[i]</code>) and removing the element that slides out of
+              the window (<code>nums[i - k]</code>).
+            </li>
+            <li>
+              If the count of the element sliding out becomes 0, remove it from{" "}
+              <code>cnt</code>.
+            </li>
+            <li>
+              Store the count of distinct elements in{" "}
+              <code>ans[i - k + 1]</code>.
+            </li>
+          </ul>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After processing all windows, <code>ans</code> contains the number
+            of distinct elements in each sliding window of size <code>k</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
