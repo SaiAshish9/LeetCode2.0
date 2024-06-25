@@ -13893,6 +13893,74 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1703: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>n</code> is the length of the input array <code>nums</code>.
+          </li>
+          <li>
+            Create a <code>prefixOnes</code> array to store cumulative counts of
+            ones up to each index in <code>nums</code>.
+          </li>
+          <li>
+            Calculate <code>totalOnes</code> as the sum of all elements in{" "}
+            <code>prefixOnes</code>, which gives the total number of ones in{" "}
+            <code>nums</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>
+          Calculate <code>onesInWindow</code>:
+        </strong>
+        <ul>
+          <li>
+            Iterate through the array to compute the number of ones in every
+            window of size <code>k</code> using the <code>prefixOnes</code>{" "}
+            array.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Find Minimum Moves:</strong>
+        <ul>
+          <li>Iterate through potential starting positions of the window.</li>
+          <li>
+            For each position, calculate:
+            <ul>
+              <li>
+                <code>onesOutsideWindow</code>: Ones outside the current window,
+                derived from <code>prefixOnes</code>.
+              </li>
+              <li>
+                <code>moves</code>: Number of moves required to group{" "}
+                <code>k</code> consecutive ones starting at the current
+                position.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Update <code>minMoves</code> with the minimum value found.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Output:</strong>
+        <ul>
+          <li>
+            Print <code>minMoves</code>, which represents the minimum adjacent
+            swaps required to group <code>k</code> consecutive ones.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
