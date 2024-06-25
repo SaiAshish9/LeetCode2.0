@@ -11963,6 +11963,43 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  658: (
+    <ul>
+      <p>It's ideal to solve this using binary search approach</p>
+      <li>
+        <strong>Binary Search for Optimal Starting Index:</strong>
+        <ul>
+          <li>
+            Initialize <code>left</code> to <code>0</code> and{" "}
+            <code>right</code> to <code>arr.length - k</code>. These represent
+            the boundaries within which we search for the starting index of the
+            subarray containing the <code>k</code> closest elements.
+          </li>
+          <li>
+            Use binary search within this range to find the optimal starting
+            index <code>left</code>. The condition{" "}
+            <code>x - arr[mid] &lt;= arr[mid + k] - x</code> determines whether
+            to adjust <code>right</code> or <code>left</code> to move towards
+            finding the closest elements.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Collecting and Returning the Result:</strong>
+        <ul>
+          <li>
+            After determining <code>left</code>, use a <code>for</code> loop to
+            collect the <code>k</code> closest elements starting from index{" "}
+            <code>left</code> into a <code>List</code>.
+          </li>
+          <li>
+            Return the <code>List</code> containing the <code>k</code> closest
+            elements to <code>x</code> in <code>arr</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
