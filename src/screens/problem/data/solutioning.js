@@ -11913,6 +11913,56 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  643: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a variable <code>sum</code> to store the sum of the first{" "}
+            <code>k</code> elements in the array <code>nums</code>.
+          </li>
+          <li>
+            Iterate through the first <code>k</code> elements of{" "}
+            <code>nums</code> and compute the initial sum.
+          </li>
+          <li>
+            Initialize a variable <code>res</code> with <code>sum</code>, which
+            represents the maximum sum of any <code>k</code> consecutive
+            elements initially.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Iterate through the array <code>nums</code> starting from index{" "}
+            <code>k</code>.
+          </li>
+          <li>
+            Update <code>sum</code> by adding the current element{" "}
+            <code>nums[i]</code> and subtracting the element that is going out
+            of the sliding window <code>nums[i - k]</code>.
+          </li>
+          <li>
+            Update <code>res</code> to store the maximum of <code>res</code> and{" "}
+            <code>sum</code>, ensuring <code>res</code> always holds the maximum
+            sum of any <code>k</code> consecutive elements encountered so far.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Compute and Return Maximum Average:</strong>
+        <ul>
+          <li>
+            Return <code>res / k</code>, which gives the maximum average of any{" "}
+            <code>k</code> consecutive elements in the array <code>nums</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
