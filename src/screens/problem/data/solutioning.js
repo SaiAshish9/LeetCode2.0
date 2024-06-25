@@ -12591,6 +12591,53 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1031: (
+    <ul>
+      <li>
+        <strong>Calculate Prefix Sums:</strong>
+        <ul>
+          <li>
+            Use an auxiliary array <code>prefixSum</code> where{" "}
+            <code>prefixSum[i]</code> holds the sum of elements from the start
+            of the array to the <code>i-1</code>th element.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Find Maximum Sums for Subarrays:</strong>
+        <ul>
+          <li>
+            Iterate through the array using a single loop to calculate the
+            maximum sum of two non-overlapping subarrays.
+          </li>
+          <li>
+            Use variables <code>maxL</code> and <code>maxM</code> to keep track
+            of the maximum sums of subarrays of lengths <code>L</code> and{" "}
+            <code>M</code> respectively.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Update Result:</strong>
+        <ul>
+          <li>
+            At each step, calculate the maximum sum of two non-overlapping
+            subarrays by updating the <code>result</code> variable with the
+            maximum possible sum found so far.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After iterating through the entire array, return the maximum sum
+            found.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
