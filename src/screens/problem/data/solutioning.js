@@ -13718,6 +13718,64 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1652: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Declare an array <code>result</code> to store decrypted values.
+          </li>
+          <li>
+            Check if <code>k</code> is <code>0</code>; if true, return{" "}
+            <code>result</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Decryption Process:</strong>
+        <ul>
+          <li>
+            Loop through each index <code>i</code> of <code>code</code>.
+          </li>
+          <li>
+            If <code>k</code> is positive, sum the next <code>k</code> elements
+            using circular indexing.
+          </li>
+          <li>
+            If <code>k</code> is negative, sum the previous <code>-k</code>{" "}
+            elements using circular indexing.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Modulus Operation:</strong>
+        <ul>
+          <li>
+            Use modulus <code>% n</code> to handle circular indexing, ensuring
+            indices wrap around at the end of the array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result Compilation:</strong>
+        <ul>
+          <li>
+            Store computed sums in <code>result</code> array at index{" "}
+            <code>i</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return the <code>result</code> array containing decrypted values.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
