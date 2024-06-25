@@ -11856,6 +11856,63 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  632: (
+    <ul>
+      <li>
+        <strong>Initialize Min-Heap:</strong>
+        <ul>
+          <li>
+            Use a min-heap (priority queue) to keep track of the current
+            smallest element from each list. The min-heap helps efficiently find
+            and manage the smallest element and update the range.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Track Maximum Element:</strong>
+        <ul>
+          <li>
+            Maintain a variable <code>maxElement</code> to keep track of the
+            maximum element among the current elements from all lists in the
+            min-heap.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Initialize a sliding window with the smallest range covering the
+            first elements of all lists.
+          </li>
+          <li>
+            Adjust the window by moving the start of the window to the right and
+            updating <code>maxElement</code> accordingly.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Update Minimum Range:</strong>
+        <ul>
+          <li>
+            Continuously update the minimum range <code>[start, end]</code>{" "}
+            whenever a smaller valid range is found by comparing the current
+            range with the smallest range found so far.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate Until Completion:</strong>
+        <ul>
+          <li>
+            Continue popping elements from the heap and pushing the next element
+            from the same list until any list is exhausted (
+            <code>elementIdx == nums.get(listIdx).size()</code>).
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
