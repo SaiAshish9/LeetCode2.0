@@ -13852,6 +13852,47 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1695: (
+    <ul>
+      <li>
+        We are using a sliding window approach to find the maximum sum of a
+        subarray containing only unique elements.
+      </li>
+      <li>
+        <code>set</code>: This set is used to keep track of unique elements in
+        the current window.
+      </li>
+      <li>
+        <code>left</code> and <code>right</code>: These pointers denote the
+        current window of elements in the array.
+      </li>
+      <li>
+        <code>maxSum</code>: This variable keeps track of the maximum sum found
+        so far.
+      </li>
+      <li>
+        <code>currentSum</code>: This variable keeps track of the sum of
+        elements in the current window.
+      </li>
+      <li>
+        The sliding window expands by moving <code>right</code> pointer to the
+        right, adding elements to <code>set</code> and <code>currentSum</code>.
+      </li>
+      <li>
+        If a duplicate element is found (i.e., already in the <code>set</code>),
+        move the <code>left</code> pointer to the right until the duplicate is
+        removed from the <code>set</code> and subtract its value from{" "}
+        <code>currentSum</code>.
+      </li>
+      <li>
+        Update <code>maxSum</code> whenever <code>currentSum</code> exceeds it.
+      </li>
+      <li>
+        Continue this process until the <code>right</code> pointer reaches the
+        end of the array.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
