@@ -12062,6 +12062,87 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  713: (
+    <ul>
+      <li>
+        <strong>Initialize Pointers and Variables:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>left</code> and <code>right</code>, to
+            represent the current window of the subarray.
+          </li>
+          <li>
+            Initialize <code>product</code> to <code>1</code> (this will keep
+            track of the product of elements in the current window).
+          </li>
+          <li>
+            Initialize <code>count</code> to <code>0</code> (this will count the
+            number of valid subarrays).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Expand the <code>right</code> pointer to include more elements in
+            the window.
+          </li>
+          <li>
+            Update the <code>product</code> by multiplying it with{" "}
+            <code>nums[right]</code>.
+          </li>
+          <li>
+            If <code>product</code> is less than <code>k</code>, all subarrays
+            starting from <code>left</code> to <code>right</code> are valid:
+            <ul>
+              <li>
+                Add <code>right - left + 1</code> to <code>count</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If <code>product</code> is greater than or equal to <code>k</code>,
+            shrink the window from the <code>left</code>:
+            <ul>
+              <li>
+                Update <code>product</code> by dividing it by{" "}
+                <code>nums[left]</code>.
+              </li>
+              <li>
+                Move <code>left</code> pointer to the right (<code>left++</code>
+                ).
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            If <code>nums</code> is empty, return <code>0</code> because there
+            are no subarrays.
+          </li>
+          <li>
+            Handle the case where elements in <code>nums</code> are{" "}
+            <code>1</code>, as the product will always be less than{" "}
+            <code>k</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            After iterating through the array with the sliding window technique,{" "}
+            <code>count</code> will contain the number of subarrays where the
+            product is less than <code>k</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
