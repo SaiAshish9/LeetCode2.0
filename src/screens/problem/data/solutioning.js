@@ -12176,6 +12176,58 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  727: (
+    <ul>
+      <li>
+        <strong>
+          Dynamic Programming Table (<code>dp</code>):
+        </strong>
+        <ul>
+          <li>
+            Use a 2D array <code>dp</code> where <code>dp[i][j]</code> indicates
+            the position in <code>s1</code> where the subsequence{" "}
+            <code>s2.substring(0, i)</code> ends at or before index{" "}
+            <code>j</code> in <code>s1</code>.
+          </li>
+          <li>
+            Initialize <code>dp[0][j]</code> to <code>j + 1</code> because an
+            empty subsequence can end anywhere in <code>s1</code>.
+          </li>
+          <li>
+            Fill the table by iterating through <code>s1</code> and{" "}
+            <code>s2</code>:
+            <ul>
+              <li>
+                If characters match, update <code>dp[i][j]</code> to{" "}
+                <code>dp[i-1][j-1]</code>.
+              </li>
+              <li>
+                Otherwise, carry forward the previous position from{" "}
+                <code>dp[i][j-1]</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Finding the Minimum Window:</strong>
+        <ul>
+          <li>
+            Iterate through the last row of <code>dp</code> to find the smallest
+            window which contains all characters of <code>s2</code> in order.
+          </li>
+          <li>
+            Calculate the minimum length of the window and update{" "}
+            <code>bestLeft</code> accordingly.
+          </li>
+          <li>
+            Return the substring of <code>s1</code> starting from{" "}
+            <code>bestLeft</code> with length <code>minLength</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
