@@ -11417,6 +11417,56 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  395: (
+    <ul>
+      <li>
+        <strong>Iterate Over Unique Character Counts:</strong>
+        <ul>
+          <li>
+            Iterate over the number of unique characters in the substring, from
+            1 to the total number of unique characters in the string.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window for Each Unique Character Count:</strong>
+        <ul>
+          <li>
+            Use a sliding window to maintain the current window of characters.
+          </li>
+          <li>
+            Use a <code>HashMap</code> to keep track of character frequencies
+            within the window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Maintain the Window:</strong>
+        <ul>
+          <li>Expand the window by adding characters to the right.</li>
+          <li>
+            If the number of unique characters exceeds the target, shrink the
+            window from the left until the number of unique characters is equal
+            to the target.
+          </li>
+          <li>
+            Ensure that all characters in the window have a frequency of at
+            least <code>K</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Update the Maximum Length:</strong>
+        <ul>
+          <li>
+            For each configuration of the window where all characters have at
+            least <code>K</code> repetitions, update the maximum length of the
+            substring.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
