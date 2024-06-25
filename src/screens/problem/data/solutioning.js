@@ -12000,6 +12000,68 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  683: (
+    <ul>
+      <li>
+        <strong>Mapping Days to Positions:</strong>
+        <ul>
+          <li>
+            Create an array <code>day</code> where{" "}
+            <code>
+              day[position - 1] = day when bulb at position is turned on
+            </code>
+            . This helps in quickly accessing the day when a specific bulb is
+            turned on.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Initialize a sliding window represented by <code>l</code> (left
+            boundary) and <code>r</code> (right boundary such that{" "}
+            <code>r = l + k + 1</code> initially).
+          </li>
+          <li>
+            Iterate through the array from day <code>1</code> to{" "}
+            <code>n - 1</code> (where <code>n</code> is the length of{" "}
+            <code>bulbs</code>).
+          </li>
+          <li>
+            Check if the current day <code>i</code> equals <code>r</code> (end
+            of the current window):
+            <ul>
+              <li>
+                If yes, calculate the potential earliest day <code>ans</code>{" "}
+                where there are exactly <code>k</code> empty bulbs between{" "}
+                <code>day[l]</code> and <code>day[r]</code>.
+              </li>
+              <li>
+                Update <code>l</code> to <code>i</code> and move <code>r</code>{" "}
+                to <code>i + k + 1</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the day <code>day[i]</code> is less than the maximum of{" "}
+            <code>day[l]</code> and <code>day[r]</code>, update <code>l</code>{" "}
+            to <code>i</code> and move <code>r</code> to <code>i + k + 1</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code> if it is not <code>Integer.MAX_VALUE</code>,
+            otherwise return <code>-1</code> indicating no valid day was found
+            with <code>k</code> empty bulbs.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
