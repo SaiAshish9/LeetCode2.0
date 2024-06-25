@@ -14398,10 +14398,19 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <pre>
         <strong>Input:</strong> calories = [6,5,0,0], k = 2, lower = 1, upper =
-        5<strong>Output:</strong> 0<strong>Explanation</strong>: calories[0] +
-        calories[1] &gt; upper so 1 point is gained. lower &lt;= calories[1] +
-        calories[2] &lt;= upper so no change in points. calories[2] +
-        calories[3] &lt; lower so 1 point is lost.
+        5
+        <strong>
+          <br />
+          Output:
+        </strong>{" "}
+        0
+        <strong>
+          <br />
+          Explanation
+        </strong>
+        : calories[0] + calories[1] &gt; upper so 1 point is gained. lower &lt;=
+        calories[1] + calories[2] &lt;= upper so no change in points.
+        calories[2] + calories[3] &lt; lower so 1 point is lost.
       </pre>
 
       <p>&nbsp;</p>
