@@ -12908,6 +12908,45 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1234: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong> The variables `n`, `k`, and `ans` are
+        initialized. `n` is the length of the string `s`, `k` is the target
+        frequency for each character ('Q', 'W', 'E', 'R'), and `ans` is
+        initialized to `n`.
+      </li>
+      <li>
+        <strong>Character Counting:</strong> An array `count` of size 128 is
+        used to store the frequency of each character ('Q', 'W', 'E', 'R') in
+        the string `s`.
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            The outer loop iterates through each character in `s`. Inside this
+            loop, the count of the current character is decremented.
+          </li>
+          <li>
+            An inner while loop adjusts the window size until the substring is
+            balanced (`count['Q'] &lt;= k`, `count['W'] &lt;= k`, `count['E']
+            &lt;= k`, `count['R'] &lt;= k`). The minimum length found is updated
+            in `ans`.
+          </li>
+          <li>
+            After adjusting the window, `j` is incremented to slide the window
+            to the right, and the count of `s.charAt(j)` is incremented.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong> After completing the loops, `ans` holds the
+        minimum length of a substring that needs to be replaced to achieve a
+        balanced string.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
