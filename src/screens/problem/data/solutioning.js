@@ -12537,6 +12537,62 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1004: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Variables <code>left</code>, <code>right</code>,{" "}
+            <code>maxOnes</code>, and <code>zerosCount</code> are initialized.
+          </li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Iterate through the Array:</strong>
+        <ul>
+          <li>
+            For each element at index <code>right</code> in the array:
+          </li>
+          <ul>
+            <li>
+              If the current element is 0, increment <code>zerosCount</code>.
+            </li>
+            <li>
+              While <code>zerosCount</code> is greater than <code>k</code>, move
+              the <code>left</code> pointer to the right:
+            </li>
+            <ul>
+              <li>
+                If the element at the <code>left</code> pointer is 0, decrement{" "}
+                <code>zerosCount</code>.
+              </li>
+              <li>
+                Increment the <code>left</code> pointer.
+              </li>
+            </ul>
+            <li>
+              Update <code>maxOnes</code> with the maximum of{" "}
+              <code>maxOnes</code> and the length of the current window (which
+              is <code>right - left + 1</code>).
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After iterating through the entire array, return{" "}
+            <code>maxOnes</code>, which holds the maximum number of consecutive
+            ones that can be obtained.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
