@@ -13325,6 +13325,115 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1456: (
+    <ul>
+      <li>
+        <strong>maxVowels Method:</strong> This method calculates the maximum
+        number of vowels in any substring of length <code>k</code>.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>s</code>: The input string.
+              </li>
+              <li>
+                <code>k</code>: The length of the substring.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>maxVowels</code>: To store the maximum number of vowels
+                found in any substring.
+              </li>
+              <li>
+                <code>currentVowels</code>: To store the number of vowels in the
+                current sliding window.
+              </li>
+              <li>
+                <code>n</code>: The length of the input string.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initial Calculation:
+            <ul>
+              <li>
+                Calculate the number of vowels in the first <code>k</code>{" "}
+                characters and store it in <code>currentVowels</code>.
+              </li>
+              <li>
+                Initialize <code>maxVowels</code> with{" "}
+                <code>currentVowels</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sliding Window Logic:
+            <ul>
+              <li>
+                Use a for loop to slide the window from the start to the end of
+                the string.
+              </li>
+              <li>
+                For each iteration:
+                <ul>
+                  <li>
+                    Check if the new character entering the window is a vowel
+                    and update <code>currentVowels</code> accordingly.
+                  </li>
+                  <li>
+                    Check if the character leaving the window is a vowel and
+                    update <code>currentVowels</code> accordingly.
+                  </li>
+                  <li>
+                    Update <code>maxVowels</code> with the maximum value between
+                    the current <code>currentVowels</code> and the existing{" "}
+                    <code>maxVowels</code>.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return:
+            <ul>
+              <li>
+                Return the maximum number of vowels stored in{" "}
+                <code>maxVowels</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>isVowel Method:</strong> This helper method checks if a given
+        character is a vowel.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>c</code>: The character to check.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return:
+            <ul>
+              <li>
+                Returns <code>true</code> if the character is a vowel;
+                otherwise, returns <code>false</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
