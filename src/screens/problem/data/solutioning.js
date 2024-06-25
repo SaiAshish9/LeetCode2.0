@@ -12143,6 +12143,39 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  718: (
+    <ul>
+      <li>
+        <strong>Dynamic Programming with Sliding Window:</strong>
+        <ul>
+          <li>
+            Use a 2D array <code>dp</code> where <code>dp[i][j]</code>{" "}
+            represents the length of the longest common subarray ending at{" "}
+            <code>A[i-1]</code> and <code>B[j-1]</code>.
+          </li>
+          <li>
+            Initialize a variable <code>maxLen</code> to keep track of the
+            maximum length found.
+          </li>
+          <li>
+            Iterate through each pair of indices <code>i</code> and{" "}
+            <code>j</code>:
+            <ul>
+              <li>
+                If <code>A[i-1] == B[j-1]</code>, then{" "}
+                <code>dp[i][j] = dp[i-1][j-1] + 1</code> (extend the length of
+                the common subarray).
+              </li>
+              <li>
+                Update <code>maxLen</code> if <code>dp[i][j]</code> is greater
+                than <code>maxLen</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
