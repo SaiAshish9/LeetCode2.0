@@ -14360,6 +14360,56 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1876: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>count</code> to 0 to keep track of the number of
+            valid substrings found.
+          </li>
+          <li>
+            Get the length of the input string <code>s</code> and store it in{" "}
+            <code>n</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Iterate through the String:</strong>
+        <ul>
+          <li>
+            Use a <code>for</code> loop to iterate through <code>s</code> from
+            index <code>0</code> to <code>n - 3</code>.
+          </li>
+          <li>
+            At each index <code>i</code>, check if the substring{" "}
+            <code>s.substring(i, i + 3)</code> has all distinct characters:
+          </li>
+          <ul>
+            <li>
+              Compare characters at positions <code>i</code>, <code>i + 1</code>
+              , and <code>i + 2</code>.
+            </li>
+            <li>
+              Increment <code>count</code> if all three characters are distinct.
+            </li>
+          </ul>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After looping through all possible substrings of size three, return
+            the final value of <code>count</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
