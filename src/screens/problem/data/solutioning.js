@@ -11694,6 +11694,62 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  487: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize two pointers <code>l</code> and <code>r</code> both
+            starting at index 0.
+          </li>
+          <li>
+            Initialize <code>k</code> to 1, which represents the number of flips
+            (changing a <code>0</code> to <code>1</code>) allowed.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Use the pointers <code>l</code> (left) and <code>r</code> (right) to
+            create a sliding window.
+          </li>
+          <li>
+            Iterate through the array <code>nums</code> using the right pointer{" "}
+            <code>r</code>:
+            <ul>
+              <li>
+                If <code>nums[r]</code> is <code>0</code>, decrement{" "}
+                <code>k</code> (since we encounter a <code>0</code>).
+              </li>
+              <li>
+                If <code>k</code> becomes less than <code>0</code> (meaning
+                we've used more flips than allowed), move the left pointer{" "}
+                <code>l</code> to the right until <code>k</code> is back to{" "}
+                <code>0</code> (by flipping a <code>0</code> back to{" "}
+                <code>1</code>).
+              </li>
+              <li>
+                Update the maximum length of consecutive ones found using{" "}
+                <code>r - l</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return the maximum length of consecutive ones found, which is{" "}
+            <code>r - l</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
