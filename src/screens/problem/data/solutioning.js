@@ -11467,6 +11467,77 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  424: (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            Create an array <code>count</code> to store the frequency of each
+            character in the current window.
+          </li>
+          <li>
+            Initialize <code>maxCount</code> to store the count of the most
+            frequent character in the current window.
+          </li>
+          <li>
+            Initialize <code>left</code> to represent the left boundary of the
+            sliding window.
+          </li>
+          <li>
+            Initialize <code>maxLength</code> to store the length of the longest
+            valid substring found.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Expand the Window:</strong>
+        <ul>
+          <li>
+            Use a <code>for</code> loop to move the right boundary (
+            <code>right</code>) of the window from the start to the end of the
+            string.
+          </li>
+          <li>
+            Add the current character to the frequency array and update{" "}
+            <code>maxCount</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Shrink the Window if Needed:</strong>
+        <ul>
+          <li>
+            If the window size (<code>right - left + 1</code>) minus{" "}
+            <code>maxCount</code> is greater than <code>k</code>, shrink the
+            window from the left.
+          </li>
+          <li>
+            Decrease the count of the character at the left boundary and move
+            the left boundary to the right.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Update the Maximum Length:</strong>
+        <ul>
+          <li>
+            Update <code>maxLength</code> with the size of the current window if
+            it is greater than the previously stored <code>maxLength</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return the Result:</strong>
+        <ul>
+          <li>
+            Return <code>maxLength</code> as the length of the longest substring
+            after at most <code>k</code> replacements.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
