@@ -11819,6 +11819,43 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  594: (
+    <ul>
+      <li>
+        <strong>Initialize HashMap:</strong>
+        <ul>
+          <li>
+            Use a hashmap <code>frequencyMap</code> to count the frequency of
+            each number in the array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>Iterate through each number in the array.</li>
+          <li>
+            For each number, check if its neighboring numbers (current number +
+            1 and current number - 1) exist in <code>frequencyMap</code>.
+          </li>
+          <li>
+            If they exist, calculate the length of the harmonious subsequence
+            that includes the current number and update the maximum length found
+            so far.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            Handle cases where the array is empty or has only one element, where
+            no harmonious subsequence can exist.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
