@@ -13593,7 +13593,7 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre>
-        <strong>Input:</strong> nums = [1,0,1,0,1], goal = 2
+        <strong>Input:</strong> nums = [1,0,1,0,1], goal = 2<br />
         <strong>Output:</strong> 4<br />
         <strong>Explanation:</strong> The 4 subarrays are bolded and underlined
         below:
