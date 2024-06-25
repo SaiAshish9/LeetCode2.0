@@ -13181,6 +13181,77 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1358: (
+    <ul>
+      <li>
+        <strong>numberOfSubstrings Method:</strong> This method calculates the
+        number of substrings containing all three characters 'a', 'b', and 'c'.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>s</code>: The input string.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>count</code>: An array to store the count of 'a', 'b', and
+                'c'.
+              </li>
+              <li>
+                <code>left</code>: The left pointer of the sliding window.
+              </li>
+              <li>
+                <code>result</code>: To store the total number of valid
+                substrings.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sliding Window Logic:
+            <ul>
+              <li>
+                Iterate through the string using the <code>right</code> pointer.
+              </li>
+              <li>
+                Increment the count of the current character in the{" "}
+                <code>count</code> array.
+              </li>
+              <li>
+                Check if all three characters are present in the current window.
+                If true:
+                <ul>
+                  <li>
+                    Increment the <code>result</code> by the number of
+                    substrings ending at the current <code>right</code>{" "}
+                    position.
+                  </li>
+                  <li>
+                    Decrement the count of the character at the{" "}
+                    <code>left</code> pointer and move the <code>left</code>{" "}
+                    pointer to the right.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return:
+            <ul>
+              <li>
+                Return the total count of valid substrings stored in{" "}
+                <code>result</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
