@@ -13613,6 +13613,111 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1610: (
+    <ul>
+      <li>
+        <strong>visiblePoints Method:</strong> This method finds the maximum
+        number of points that can be visible within a given viewing angle.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>points</code>: A list of lists, where each inner list
+                contains the x and y coordinates of a point.
+              </li>
+              <li>
+                <code>angle</code>: The viewing angle in degrees.
+              </li>
+              <li>
+                <code>location</code>: A list containing the x and y coordinates
+                of the observer's location.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>sameLocationCount</code>: A counter for points that are at
+                the same location as the observer, initialized to 0.
+              </li>
+              <li>
+                <code>angles</code>: A list to store the angles of the points
+                relative to the observer's location.
+              </li>
+              <li>
+                <code>x0, y0</code>: The x and y coordinates of the observer's
+                location.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Convert Points to Angles:
+            <ul>
+              <li>
+                Iterate through each point in <code>points</code>:
+              </li>
+              <li>
+                If the point is at the same location as the observer, increment{" "}
+                <code>sameLocationCount</code>.
+              </li>
+              <li>
+                Otherwise, calculate the angle of the point relative to the
+                observer using <code>Math.atan2</code> and convert it to
+                degrees. Add this angle to <code>angles</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sort and Duplicate Angles:
+            <ul>
+              <li>
+                Sort the <code>angles</code> list in ascending order.
+              </li>
+              <li>
+                Duplicate the angles by adding each angle plus 360 degrees to
+                the list. This helps handle the circular nature of angles.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sliding Window Technique:
+            <ul>
+              <li>
+                Initialize <code>maxVisible</code> to 0 and <code>left</code>{" "}
+                pointer to 0.
+              </li>
+              <li>
+                Iterate through the <code>angles</code> list with a{" "}
+                <code>right</code> pointer:
+              </li>
+              <li>
+                While the difference between the current angle and the angle at
+                the <code>left</code> pointer is greater than <code>angle</code>
+                , increment the <code>left</code> pointer.
+              </li>
+              <li>
+                Update <code>maxVisible</code> to the maximum of its current
+                value and the number of angles in the current window (calculated
+                as <code>right - left + 1</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return:
+            <ul>
+              <li>
+                Return the sum of <code>maxVisible</code> and{" "}
+                <code>sameLocationCount</code> as the maximum number of visible
+                points.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
