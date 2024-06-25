@@ -13434,6 +13434,101 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1477: (
+    <ul>
+      <li>
+        <strong>minSumOfLengths Method:</strong> This method finds the minimum
+        sum of lengths of two non-overlapping sub-arrays each with the target
+        sum.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>arr</code>: The input array of integers.
+              </li>
+              <li>
+                <code>target</code>: The target sum for the sub-arrays.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>n</code>: The length of the input array.
+              </li>
+              <li>
+                <code>minLength</code>: An array to store the minimum length of
+                sub-arrays with the target sum up to each index.
+              </li>
+              <li>
+                <code>left</code>: The left pointer for the sliding window.
+              </li>
+              <li>
+                <code>currSum</code>: The current sum of the sliding window.
+              </li>
+              <li>
+                <code>minLen</code>: The minimum length of any sub-array found
+                with the target sum.
+              </li>
+              <li>
+                <code>result</code>: The result to store the minimum sum of
+                lengths of two non-overlapping sub-arrays with the target sum.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sliding Window Logic:
+            <ul>
+              <li>
+                Use a for loop with the <code>right</code> pointer to slide the
+                window from the start to the end of the array.
+              </li>
+              <li>
+                Add the current element to <code>currSum</code>.
+              </li>
+              <li>
+                While <code>currSum</code> is greater than the target, subtract
+                the element at the <code>left</code> pointer and increment{" "}
+                <code>left</code>.
+              </li>
+              <li>
+                If <code>currSum</code> equals the target:
+                <ul>
+                  <li>Calculate the current length of the sub-array.</li>
+                  <li>
+                    If the left pointer is greater than 0 and{" "}
+                    <code>minLength[left - 1]</code> is not{" "}
+                    <code>Integer.MAX_VALUE</code>, update the result with the
+                    minimum of the current result and the sum of the current
+                    length and <code>minLength[left - 1]</code>.
+                  </li>
+                  <li>
+                    Update <code>minLen</code> with the minimum of the current{" "}
+                    <code>minLen</code> and the current length.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Update <code>minLength[right]</code> with the current{" "}
+                <code>minLen</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return:
+            <ul>
+              <li>
+                Return <code>result</code> if it is not{" "}
+                <code>Integer.MAX_VALUE</code>, otherwise return -1.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
