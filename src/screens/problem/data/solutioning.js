@@ -13011,6 +13011,103 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1297: (
+    <ul>
+      <li>
+        <strong>maxFreq Method:</strong> This method calculates the maximum
+        frequency of any substring within the constraints.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>s</code>: The input string.
+              </li>
+              <li>
+                <code>maxLetters</code>: The maximum number of unique letters
+                allowed in the substring.
+              </li>
+              <li>
+                <code>minSize</code>: The minimum length of the substring.
+              </li>
+              <li>
+                <code>maxSize</code>: The maximum length of the substring (not
+                used in the code as we only need to consider{" "}
+                <code>minSize</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>n</code>: Length of the input string.
+              </li>
+              <li>
+                <code>maxCount</code>: Stores the maximum count of valid
+                substrings.
+              </li>
+              <li>
+                <code>substringCount</code>: A HashMap to count occurrences of
+                substrings.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sliding Window Logic:
+            <ul>
+              <li>
+                Iterate over the string with a window of size{" "}
+                <code>minSize</code>.
+              </li>
+              <li>
+                For each window, extract the substring and check if it is valid
+                using the <code>isValid</code> method.
+              </li>
+              <li>
+                If valid, update the count in <code>substringCount</code> and
+                update <code>maxCount</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>isValid Method:</strong> This helper method checks if a
+        substring has &lt;= <code>maxLetters</code> unique characters.
+        <ul>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>count</code>: An array to count occurrences of each
+                character in the substring.
+              </li>
+              <li>
+                <code>uniqueLetters</code>: The count of unique letters in the
+                substring.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Validation Logic:
+            <ul>
+              <li>Iterate over each character in the substring.</li>
+              <li>
+                If the character is seen for the first time, increment{" "}
+                <code>uniqueLetters</code>.
+              </li>
+              <li>Update the count for each character.</li>
+              <li>
+                Return true if <code>uniqueLetters</code> &lt;={" "}
+                <code>maxLetters</code>, otherwise false.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
