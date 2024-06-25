@@ -12486,7 +12486,6 @@ const SOLUTIONING = {
           </li>
         </ul>
       </li>
-      <br />
       <li>
         <strong>Iterate through the Array:</strong>
         <ul>
@@ -12527,7 +12526,6 @@ const SOLUTIONING = {
           </ul>
         </ul>
       </li>
-      <br />
       <li>
         <strong>Return Result:</strong>
         <ul>
