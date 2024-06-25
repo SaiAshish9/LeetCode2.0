@@ -12688,6 +12688,52 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1156: (
+    <ul>
+      <li>
+        <strong>Count Frequency:</strong>
+        <ul>
+          <li>
+            We start by counting the frequency of each character in the string
+            using an array `count`.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window:</strong>
+        <ul>
+          <li>We use a sliding window to traverse through the string.</li>
+          <li>
+            For each character block (continuous substring of the same
+            character), we check the length of this block.
+          </li>
+          <li>
+            We then look ahead to see if there's a potential extension of this
+            block with a single swap.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate Maximum Length:</strong>
+        <ul>
+          <li>
+            We calculate the total length of the block considering one swap,
+            ensuring it doesn't exceed the total available characters of that
+            type in the string.
+          </li>
+          <li>
+            We keep track of the maximum length found during this process.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>Finally, we return the maximum length found.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
