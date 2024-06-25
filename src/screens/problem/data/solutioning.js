@@ -12734,6 +12734,55 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1100: (
+    <ul>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            We will use a sliding window of size `K` to examine each substring
+            in the string `S`.
+          </li>
+          <li>
+            By sliding this window from the beginning to the end of the string,
+            we can efficiently check each substring of length `K`.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>HashSet for Character Tracking:</strong>
+        <ul>
+          <li>
+            Use a HashSet to keep track of characters within the current window.
+          </li>
+          <li>
+            This allows us to quickly check if a character is repeated within
+            the window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Count Valid Substrings:</strong>
+        <ul>
+          <li>
+            As we slide the window across the string:
+            <ul>
+              <li>Add characters to the HashSet.</li>
+              <li>
+                If a character repeats within the window (i.e., already exists
+                in the HashSet), slide the window to the right until the
+                repeated character is removed from the HashSet.
+              </li>
+              <li>
+                Count the substring as valid if its length equals `K` and all
+                characters are unique.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
