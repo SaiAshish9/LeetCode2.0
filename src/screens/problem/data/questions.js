@@ -12814,18 +12814,18 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre>
-        <strong>Input:</strong> nums = [1,3,-1,-3,5,3,6,7], k = 3
-        <strong>Output:</strong>{" "}
-        [1.00000,-1.00000,-1.00000,3.00000,5.00000,6.00000]
+        <strong>Input:</strong> nums = [1,3,-1,-3,5,3,6,7], k = 3 <br />
+        <strong>Output:</strong> <br />
+        [1.00000,-1.00000,-1.00000,3.00000,5.00000,6.00000] <br />
         <strong>Explanation:</strong>
         {`Window position                Median
     ---------------                -----
-    [<strong>1  3  -1</strong>] -3  5  3  6  7        1
-     1 [<strong>3  -1  -3</strong>] 5  3  6  7       -1
-     1  3 [<strong>-1  -3  5</strong>] 3  6  7       -1
-     1  3  -1 [<strong>-3  5  3</strong>] 6  7        3
-     1  3  -1  -3 [<strong>5  3  6</strong>] 7        5
-     1  3  -1  -3  5 [<strong>3  6  7</strong>]       6`}
+    [1  3  -1] -3  5  3  6  7        1
+     1 [3  -1  -3] 5  3  6  7       -1
+     1  3 [-1  -3  5] 3  6  7       -1
+     1  3  -1 [-3  5  3] 6  7        3
+     1  3  -1  -3 [5  3  6] 7        5
+     1  3  -1  -3  5 [3  6  7]       6`}
       </pre>
 
       <p>

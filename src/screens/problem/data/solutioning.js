@@ -11618,6 +11618,82 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  480: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize an empty list <code>resList</code> to store the result
+            medians.
+          </li>
+          <li>
+            Get the length of the input array <code>nums</code> and initialize
+            an empty <code>ArrayList</code> <code>temp</code> to store the
+            elements in the current sliding window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Setup Sliding Window:</strong>
+        <ul>
+          <li>
+            Populate the initial sliding window with the first <code>k-1</code>{" "}
+            elements of <code>nums</code> and sort them using{" "}
+            <code>Collections.sort()</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Iterate through the array <code>nums</code> using two pointers{" "}
+            <code>i</code> (start of window) and <code>j</code> (end of window).
+          </li>
+          <li>
+            For each position of the window:
+            <ul>
+              <li>
+                Insert <code>nums[j]</code> into <code>temp</code> in sorted
+                order using <code>Collections.binarySearch()</code> to find the
+                insertion point.
+              </li>
+              <li>
+                Calculate the median based on whether <code>k</code> is odd or
+                even:
+                <ul>
+                  <li>
+                    If <code>k</code> is odd, the median is simply{" "}
+                    <code>temp.get(k / 2)</code>.
+                  </li>
+                  <li>
+                    If <code>k</code> is even, the median is the average of{" "}
+                    <code>temp.get(k / 2)</code> and{" "}
+                    <code>temp.get(k / 2 - 1)</code>.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Remove <code>nums[i]</code> from <code>temp</code> using{" "}
+                <code>Collections.binarySearch()</code> to find its index.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Conversion and Output:</strong>
+        <ul>
+          <li>
+            Convert the <code>List&lt;Double&gt;</code> <code>resList</code> to
+            a <code>double[]</code> array <code>resArray</code> before returning
+            it.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
