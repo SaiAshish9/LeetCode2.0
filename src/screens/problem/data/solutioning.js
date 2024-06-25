@@ -11242,6 +11242,52 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  219: (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            Create a <code>HashSet&lt;Integer&gt;</code> to store the elements
+            within the current window of size <code>k</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate Through the Array:</strong>
+        <ul>
+          <li>
+            Use a <code>for</code> loop to iterate through the elements of the
+            array.
+          </li>
+          <li>For each element, check if it already exists in the HashSet.</li>
+          <li>
+            If it exists, return <code>true</code> as it means a duplicate
+            within distance <code>k</code> is found.
+          </li>
+          <li>If it does not exist, add the element to the HashSet.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Maintain the Sliding Window:</strong>
+        <ul>
+          <li>
+            If the size of the HashSet exceeds <code>k</code>, remove the oldest
+            element (i.e., the element at index <code>i - k</code>).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return the Result:</strong>
+        <ul>
+          <li>
+            If no duplicates are found within the distance <code>k</code>,
+            return <code>false</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
