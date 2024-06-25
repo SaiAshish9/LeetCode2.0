@@ -13108,6 +13108,79 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1343: (
+    <ul>
+      <li>
+        <strong>numOfSubarrays Method:</strong> This method calculates the
+        number of sub-arrays of size `k` with an average greater than or equal
+        to the given threshold.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>arr</code>: The input array of integers.
+              </li>
+              <li>
+                <code>k</code>: The size of the sub-array.
+              </li>
+              <li>
+                <code>threshold</code>: The threshold value.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>count</code>: To count the number of valid sub-arrays.
+              </li>
+              <li>
+                <code>windowSum</code>: To store the sum of the current window.
+              </li>
+              <li>
+                <code>n</code>: Length of the input array.
+              </li>
+              <li>
+                <code>targetSum</code>: The target sum which is{" "}
+                <code>k * threshold</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            First Window Calculation:
+            <ul>
+              <li>Calculate the sum of the first window of size `k`.</li>
+              <li>
+                If the sum is greater than or equal to <code>targetSum</code>,
+                increment <code>count</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sliding Window Logic:
+            <ul>
+              <li>Slide the window from left to right across the array.</li>
+              <li>
+                For each new element, add it to the <code>windowSum</code> and
+                subtract the element that is left out of the window.
+              </li>
+              <li>
+                Check if the updated <code>windowSum</code> meets the condition.
+                If yes, increment <code>count</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return:
+            <ul>
+              <li>Return the total count of valid sub-arrays.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
