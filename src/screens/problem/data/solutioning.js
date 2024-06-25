@@ -12947,6 +12947,70 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1248: (
+    <ul>
+      <li>
+        <strong>numberOfSubarrays Method:</strong> This method calculates the
+        number of "nice" subarrays with exactly `k` odd numbers.
+        <ul>
+          <li>
+            It calls the helper method `atMost` twice: once with `k` and once
+            with `k - 1`.
+          </li>
+          <li>
+            The difference between these two calls gives the count of subarrays
+            with exactly `k` odd numbers.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>atMost Method:</strong> This helper method calculates the number
+        of subarrays with at most `k` odd numbers.
+        <ul>
+          <li>
+            <strong>Initialization:</strong>
+            <ul>
+              <li>
+                <code>res</code>: Stores the count of valid subarrays.
+              </li>
+              <li>
+                <code>left</code>: The starting index of the sliding window.
+              </li>
+              <li>
+                <code>count</code>: The number of odd numbers in the current
+                window.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Sliding Window Logic:</strong>
+            <ul>
+              <li>
+                Iterate over <code>nums</code> with <code>right</code> as the
+                right boundary of the window.
+              </li>
+              <li>
+                If <code>nums[right]</code> is odd, decrement <code>k</code>.
+              </li>
+              <li>
+                If <code>k</code> becomes negative, move the <code>left</code>{" "}
+                pointer to the right until <code>k</code> is non-negative.
+              </li>
+              <li>
+                For each valid <code>right</code>, add the number of subarrays
+                ending at <code>right</code> to <code>res</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Returning the Result:</strong> The difference{" "}
+        <code>atMost(nums, k) - atMost(nums, k - 1)</code> provides the number
+        of subarrays with exactly `k` odd numbers.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
