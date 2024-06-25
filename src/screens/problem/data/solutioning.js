@@ -13252,6 +13252,79 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1423: (
+    <ul>
+      <li>
+        <strong>maxScore Method:</strong> This method calculates the maximum
+        points you can obtain from cards.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>cardPoints</code>: The array of points on the cards.
+              </li>
+              <li>
+                <code>k</code>: The number of cards you can select.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>n</code>: The total number of cards.
+              </li>
+              <li>
+                <code>totalPoints</code>: The sum of the first <code>k</code>{" "}
+                cards.
+              </li>
+              <li>
+                <code>maxPoints</code>: To store the maximum points obtained.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initial Calculation:
+            <ul>
+              <li>
+                Calculate the sum of the first <code>k</code> cards and store it
+                in <code>totalPoints</code>.
+              </li>
+              <li>
+                Initialize <code>maxPoints</code> with <code>totalPoints</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sliding Window Logic:
+            <ul>
+              <li>
+                Slide the window from the end of the array towards the start.
+              </li>
+              <li>
+                For each position, update <code>totalPoints</code> by removing
+                the last element of the current window and adding the
+                corresponding element from the end of the array.
+              </li>
+              <li>
+                Update <code>maxPoints</code> with the maximum of the current{" "}
+                <code>totalPoints</code> and <code>maxPoints</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return:
+            <ul>
+              <li>
+                Return the maximum points stored in <code>maxPoints</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
