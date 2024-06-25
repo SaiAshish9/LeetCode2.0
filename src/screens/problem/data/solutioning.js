@@ -12267,6 +12267,57 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  930: (
+    <ul>
+      <li>
+        <strong>Prefix Sum and HashMap:</strong>
+        <ul>
+          <li>
+            Compute a prefix sum array where each element at index{" "}
+            <code>i</code> represents the sum of elements from the start of the
+            array up to <code>i</code>.
+          </li>
+          <li>
+            Use a hashmap (<code>prefixSumCount</code>) to store the frequency
+            of each prefix sum encountered.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Initialize <code>prefixSumCount</code> with <code>{"{0:1}"}</code>{" "}
+            to handle cases where a subarray from the start of the array has the
+            sum equal to <code>goal</code>.
+          </li>
+          <li>
+            Initialize <code>prefixSum</code> to keep track of the current
+            prefix sum.
+          </li>
+          <li>
+            Iterate through the array <code>nums</code>, updating{" "}
+            <code>prefixSum</code> and calculating <code>currentSum</code> as{" "}
+            <code>prefixSum - goal</code>.
+          </li>
+          <li>
+            For each <code>currentSum</code>, add its count to the result if it
+            exists in <code>prefixSumCount</code>.
+          </li>
+          <li>
+            Update <code>prefixSumCount</code> with the frequency of{" "}
+            <code>prefixSum</code> encountered during iteration.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>Return the count of subarrays found.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
