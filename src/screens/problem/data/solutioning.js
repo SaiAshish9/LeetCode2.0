@@ -11750,6 +11750,75 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  567: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Create two arrays, <code>countS1</code> and <code>countWindow</code>
+            , each of size 26 (assuming lowercase English letters), to count the
+            frequency of characters.
+          </li>
+          <li>
+            Initialize <code>countS1</code> with the frequency of characters in{" "}
+            <code>s1</code>.
+          </li>
+          <li>
+            Initialize <code>countWindow</code> with the frequency of characters
+            in the initial window of size <code>s1.length()</code> in{" "}
+            <code>s2</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Slide a window of size equal to <code>s1.length()</code> across{" "}
+            <code>s2</code>.
+          </li>
+          <li>
+            Adjust <code>countWindow</code> as characters enter or leave the
+            window:
+          </li>
+          <ul>
+            <li>
+              Remove the count of the character that is sliding out of the
+              window.
+            </li>
+            <li>
+              Add the count of the character that is sliding into the window.
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>Comparison:</strong>
+        <ul>
+          <li>
+            After adjusting <code>countWindow</code> for each window position,
+            compare it with <code>countS1</code>.
+          </li>
+          <li>
+            If they match at any position, return <code>true</code> indicating
+            that a permutation of <code>s1</code> exists in <code>s2</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            Check if <code>s1.length()</code> is greater than{" "}
+            <code>s2.length()</code>. If so, immediately return{" "}
+            <code>false</code> because <code>s1</code> cannot fit into{" "}
+            <code>s2</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
