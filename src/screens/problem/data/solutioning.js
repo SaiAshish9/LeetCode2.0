@@ -14300,6 +14300,66 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1871: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>count</code> to 0 to keep track of reachable
+            indices within the current window.
+          </li>
+          <li>
+            Create a boolean array <code>dp</code> of size{" "}
+            <code>s.length()</code> to store reachability status of each index.
+          </li>
+          <li>
+            Set <code>dp[0] = true</code> since starting from the first index is
+            always reachable.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Iterate Through the String:</strong>
+        <ul>
+          <li>
+            Loop through the string from index <code>minJump</code> to{" "}
+            <code>s.length() - 1</code>:
+          </li>
+          <ul>
+            <li>
+              Update <code>count</code> by adding <code>1</code> if the index{" "}
+              <code>i - minJump</code> is reachable (
+              <code>dp[i - minJump]</code> is <code>true</code>).
+            </li>
+            <li>
+              Adjust <code>count</code> by subtracting <code>1</code> if the
+              index <code>i - maxJump - 1</code> is reachable, ensuring it only
+              includes indices within the window{" "}
+              <code>[i - maxJump, i - minJump]</code>.
+            </li>
+            <li>
+              Set <code>dp[i]</code> to <code>true</code> if{" "}
+              <code>count &gt; 0</code> (indicating there are reachable indices)
+              and the current character <code>s.charAt(i)</code> is{" "}
+              <code>'0'</code>.
+            </li>
+          </ul>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            Return <code>dp[s.length() - 1]</code>, which determines if the last
+            index of <code>s</code> is reachable.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
