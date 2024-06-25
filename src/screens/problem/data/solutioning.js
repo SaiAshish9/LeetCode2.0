@@ -13961,6 +13961,102 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1763: (
+    <>
+      {" "}
+      <p>
+        The following is a step-by-step explanation of the Java code to find the
+        longest "nice" substring:
+      </p>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              <code>n</code> is the length of the input string <code>s</code>.
+            </li>
+            <li>
+              <code>k</code> is initialized to <code>-1</code>, which stores the
+              start index of the longest nice substring found.
+            </li>
+            <li>
+              <code>max</code> is initialized to <code>0</code>, which stores
+              the length of the longest nice substring found.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>
+            Main Loop (<code>i</code> loop):
+          </strong>
+          <ul>
+            <li>
+              Iterates through each starting index <code>i</code> of the
+              substring.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>
+            Inner Loop (<code>j</code> loop):
+          </strong>
+          <ul>
+            <li>
+              Iterates through each ending index <code>j</code> of the substring
+              starting from <code>i</code>.
+            </li>
+            <li>
+              Creates a <code>HashSet</code> <code>set</code> to store
+              characters encountered in the current substring{" "}
+              <code>[i, j]</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Checking "Nice" Condition:</strong>
+          <ul>
+            <li>
+              For each character <code>a</code> in the set, calculates{" "}
+              <code>b</code> as its toggle case using{" "}
+              <code>(char) (a ^ 32)</code>.
+            </li>
+            <li>
+              Checks if both <code>a</code> and <code>b</code> are present in
+              the set. If not, sets <code>check</code> to <code>false</code> and
+              breaks out of the loop.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Updating Maximum Length:</strong>
+          <ul>
+            <li>
+              If the substring <code>[i, j]</code> is "nice" (<code>check</code>{" "}
+              is <code>true</code>) and its length (<code>j - i + 1</code>) is
+              greater than <code>max</code>, updates <code>max</code> and stores{" "}
+              <code>i</code> in <code>k</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Returning Result:</strong>
+          <ul>
+            <li>
+              After iterating through all possible substrings, returns the
+              substring starting at index <code>k</code> with length{" "}
+              <code>max</code>. If <code>k</code> is still <code>-1</code>,
+              returns an empty string indicating no nice substring was found.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
