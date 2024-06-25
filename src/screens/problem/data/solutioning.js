@@ -11182,6 +11182,66 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  209: (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            <code>minLength</code> to store the minimum length of the subarray
+            (initialize with a large number).
+          </li>
+          <li>
+            <code>left</code> to represent the left boundary of the sliding
+            window.
+          </li>
+          <li>
+            <code>sum</code> to store the current sum of the sliding window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Expand the Window:</strong>
+        <ul>
+          <li>
+            Use a <code>for</code> loop to move the right boundary (
+            <code>right</code>) of the window from the start to the end of the
+            array.
+          </li>
+          <li>
+            Add the current element to the <code>sum</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Shrink the Window:</strong>
+        <ul>
+          <li>
+            When the <code>sum</code> is greater than or equal to <code>s</code>
+            , move the left boundary (<code>left</code>) to the right to find
+            the minimum length subarray. Update the <code>minLength</code>{" "}
+            accordingly.
+          </li>
+          <li>
+            Subtract the element at the left boundary from the <code>sum</code>{" "}
+            and increment <code>left</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return the Result:</strong>
+        <ul>
+          <li>
+            If <code>minLength</code> remains unchanged, return <code>0</code>{" "}
+            indicating no valid subarray was found.
+          </li>
+          <li>
+            Otherwise, return <code>minLength</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
