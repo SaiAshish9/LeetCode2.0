@@ -12394,6 +12394,79 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  992: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Use two pointers, `left` and `right`, to represent the current
+            window of elements.
+          </li>
+          <li>
+            Use a hashmap (`frequency`) to keep track of the frequency of each
+            element in the current window.
+          </li>
+          <li>
+            Initialize variables:
+            <ul>
+              <li>
+                <code>count</code>: To count the number of valid subarrays.
+              </li>
+              <li>
+                <code>distinctCount</code>: To count the number of distinct
+                integers in the current window.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Expand the window by moving the <code>right</code> pointer to the
+            right and include the element at <code>A[right]</code> in the
+            window.
+          </li>
+          <li>
+            Update the <code>frequency</code> map and <code>distinctCount</code>
+            .
+          </li>
+          <li>
+            Shrink the window from the left by moving the <code>left</code>{" "}
+            pointer to the right until <code>distinctCount &gt; K</code>:
+            <ul>
+              <li>
+                Decrease the frequency of <code>A[left]</code> in{" "}
+                <code>frequency</code>.
+              </li>
+              <li>
+                If the frequency becomes zero, decrement{" "}
+                <code>distinctCount</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If <code>distinctCount == K</code>, increment <code>count</code> to
+            count the valid subarrays ending at <code>right</code>.
+          </li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After iterating through the entire array, <code>count</code> will
+            contain the total number of subarrays with exactly <code>K</code>{" "}
+            different integers.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
