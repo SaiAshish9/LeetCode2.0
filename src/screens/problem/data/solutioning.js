@@ -13529,6 +13529,90 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1493: (
+    <ul>
+      <li>
+        <strong>longestSubarray Method:</strong> This method finds the longest
+        subarray of 1s after deleting at most one element.
+        <ul>
+          <li>
+            Parameters:
+            <ul>
+              <li>
+                <code>nums</code>: The input array of integers containing 0s and
+                1s.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialization:
+            <ul>
+              <li>
+                <code>left</code>: The left pointer for the sliding window,
+                initialized to 0.
+              </li>
+              <li>
+                <code>zeroCount</code>: A counter to keep track of the number of
+                zeros in the current window, initialized to 0.
+              </li>
+              <li>
+                <code>maxLength</code>: The length of the longest subarray of 1s
+                found so far, initialized to 0.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sliding Window Logic:
+            <ul>
+              <li>
+                Use a for loop with the <code>right</code> pointer to slide the
+                window from the start to the end of the array.
+              </li>
+              <li>
+                Check if the current element is 0:
+                <ul>
+                  <li>
+                    If it is, increment <code>zeroCount</code>.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                While <code>zeroCount</code> is greater than 1:
+                <ul>
+                  <li>
+                    Check if the element at the <code>left</code> pointer is 0:
+                    <ul>
+                      <li>
+                        If it is, decrement <code>zeroCount</code>.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Increment the <code>left</code> pointer to shrink the window
+                    from the left.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Update <code>maxLength</code> with the maximum of the current{" "}
+                <code>maxLength</code> and the current window size (calculated
+                as <code>right - left</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return:
+            <ul>
+              <li>
+                Return <code>maxLength</code> as the length of the longest
+                subarray of 1s after deleting at most one element.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
