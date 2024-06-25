@@ -13776,6 +13776,62 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1658: (
+    <ul>
+      <li>
+        <strong>Compute Total Sum:</strong> Calculate the total sum of all
+        elements in the array.
+      </li>
+      <li>
+        <strong>Set Target:</strong> Define the target value as{" "}
+        <code>target = totalSum - X</code>.
+      </li>
+      <li>
+        <strong>Sliding Window Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>currentSum</code> to track the sum of the current
+            window and <code>start</code> to track the starting index of the
+            window.
+          </li>
+          <li>
+            Initialize <code>minOperations</code> to a large value, indicating
+            no valid subarray found yet.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Iterate through the array and adjust the window based on the current
+            sum:
+          </li>
+          <li>
+            If <code>currentSum</code> equals <code>target</code>, calculate the
+            size of the current window and update <code>minOperations</code> if
+            the size is smaller.
+          </li>
+          <li>
+            If <code>currentSum</code> exceeds <code>target</code>, shrink the
+            window from the left until <code>currentSum</code> is less than or
+            equal to <code>target</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>
+            After iterating through the array, <code>minOperations</code> will
+            contain the minimum number of operations required to reduce any
+            contiguous subarray sum to zero, or <code>-1</code> if no such
+            subarray exists.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
