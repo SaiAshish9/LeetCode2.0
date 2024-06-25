@@ -11538,6 +11538,86 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  438: (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            Create two arrays <code>pCount</code> and <code>sCount</code> to
+            store the frequency of each character in the strings <code>p</code>{" "}
+            and the current window in <code>s</code>.
+          </li>
+          <li>
+            Create a list <code>result</code> to store the starting indices of
+            the anagrams found.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Populate the Frequency Array for <code>p</code>:
+        </strong>
+        <ul>
+          <li>
+            Traverse the string <code>p</code> and populate the{" "}
+            <code>pCount</code> array with the frequency of each character.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialize the Sliding Window:</strong>
+        <ul>
+          <li>
+            Traverse the first window of size <code>p.length()</code> in{" "}
+            <code>s</code> and populate the <code>sCount</code> array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Sliding Window Over the String <code>s</code>:
+        </strong>
+        <ul>
+          <li>
+            Use a <code>for</code> loop to slide the window from the start to
+            the end of the string <code>s</code>.
+          </li>
+          <li>
+            If the frequency arrays <code>pCount</code> and <code>sCount</code>{" "}
+            are equal, add the starting index of the current window to the
+            result list.
+          </li>
+          <li>
+            Move the window one character to the right by updating the{" "}
+            <code>sCount</code> array:
+            <ul>
+              <li>
+                Decrease the count of the character that is sliding out of the
+                window.
+              </li>
+              <li>
+                Increase the count of the new character that is sliding into the
+                window.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Check the Final Window:</strong>
+        <ul>
+          <li>After the loop, check the last window.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return the Result:</strong>
+        <ul>
+          <li>Return the list of starting indices of the anagrams found.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {

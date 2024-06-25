@@ -12701,6 +12701,71 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  438: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two strings <code>s</code> and <code>p</code>, return{" "}
+        <em>an array of all the start indices of </em>
+        <code>p</code>
+        <em>'s anagrams in </em>
+        <code>s</code>. You may return the answer in <strong>any order</strong>.
+      </p>
+
+      <p>
+        An <strong>Anagram</strong> is a word or phrase formed by rearranging
+        the letters of a different word or phrase, typically using all the
+        original letters exactly once.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "cbaebabacd", p = "abc" <br />
+        <strong>Output:</strong> [0,6] <br />
+        <strong>Explanation:</strong> <br />
+        The substring with start index = 0 is "cba", which is an anagram of
+        "abc". <br />
+        The substring with start index = 6 is "bac", which is an anagram of
+        "abc".
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "abab", p = "ab" <br />
+        <strong>Output:</strong> [0,1,2] <br />
+        <strong>Explanation:</strong> <br />
+        The substring with start index = 0 is "ab", which is an anagram of "ab".{" "}
+        <br />
+        The substring with start index = 1 is "ba", which is an anagram of "ab".{" "}
+        <br />
+        The substring with start index = 2 is "ab", which is an anagram of "ab".
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= s.length, p.length &lt;= 3 * 10<sup>4</sup>
+          </code>
+        </li>{" "}
+        <br />
+        <li>
+          <code>s</code> and <code>p</code> consist of lowercase English
+          letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
