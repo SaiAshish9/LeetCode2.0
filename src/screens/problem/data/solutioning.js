@@ -12783,6 +12783,40 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1151: (
+    <ul>
+      <li>
+        <strong>Initialization and Calculation:</strong>
+        <ul>
+          <li>
+            Initialize `sum` to calculate the total number of 1's in the array.
+          </li>
+          <li>
+            Initialize `sumK` to calculate the number of 1's in the first window
+            of size `sum`.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Use a sliding window of size `sum` to calculate the maximum number
+            of 1's (`max`) that can be grouped together.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate Minimum Swaps:</strong>
+        <ul>
+          <li>
+            Subtract `max` from `sum` to get the minimum number of swaps
+            required to group all 1's together.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
