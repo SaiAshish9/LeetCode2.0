@@ -13779,43 +13779,62 @@ const SOLUTIONING = {
   1658: (
     <ul>
       <li>
-        <strong>Compute Total Sum:</strong> Calculate the total sum of all
-        elements in the array.
-      </li>
-      <li>
-        <strong>Set Target:</strong> Define the target value as{" "}
-        <code>target = totalSum - X</code>.
-      </li>
-      <li>
-        <strong>Sliding Window Initialization:</strong>
+        <strong>Initialization:</strong>
         <ul>
           <li>
-            Initialize <code>currentSum</code> to track the sum of the current
-            window and <code>start</code> to track the starting index of the
-            window.
+            <code>x = -x;</code>: Negates the value of <code>x</code> to
+            simplify the problem into finding a subarray with sum <code>0</code>
+            .
           </li>
           <li>
-            Initialize <code>minOperations</code> to a large value, indicating
-            no valid subarray found yet.
+            Calculate the total sum of <code>nums</code> after adjusting for{" "}
+            <code>x</code>.
+          </li>
+          <li>
+            Initialize a HashMap to track cumulative sums encountered so far.
           </li>
         </ul>
       </li>
       <li>
-        <strong>Sliding Window Technique:</strong>
+        <strong>HashMap Setup:</strong>
         <ul>
           <li>
-            Iterate through the array and adjust the window based on the current
-            sum:
+            Initialize a HashMap <code>vis</code> where keys are cumulative sums
+            and values are their corresponding indices.
           </li>
           <li>
-            If <code>currentSum</code> equals <code>target</code>, calculate the
-            size of the current window and update <code>minOperations</code> if
-            the size is smaller.
+            <code>vis.put(0, -1);</code>: Initialize the HashMap with{" "}
+            <code>0</code> mapped to <code>-1</code> to handle subarrays
+            starting from index <code>0</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Iterate through <code>nums</code>:
+        </strong>
+        <ul>
+          <li>
+            Compute the cumulative sum <code>s</code> as you iterate through
+            each element of <code>nums</code>.
           </li>
           <li>
-            If <code>currentSum</code> exceeds <code>target</code>, shrink the
-            window from the left until <code>currentSum</code> is less than or
-            equal to <code>target</code>.
+            Update the HashMap to record the index of each cumulative sum if it
+            hasn't been recorded before.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Check for Subarray Sum:</strong>
+        <ul>
+          <li>
+            Within the iteration, check if <code>vis</code> contains{" "}
+            <code>s - x</code>. If found, calculate the length of the subarray
+            that sums up to <code>x</code>.
+          </li>
+          <li>
+            Update <code>ans</code> with the minimum length of such subarray
+            found.
           </li>
         </ul>
       </li>
@@ -13823,10 +13842,11 @@ const SOLUTIONING = {
         <strong>Result:</strong>
         <ul>
           <li>
-            After iterating through the array, <code>minOperations</code> will
-            contain the minimum number of operations required to reduce any
-            contiguous subarray sum to zero, or <code>-1</code> if no such
-            subarray exists.
+            After iterating through all elements, <code>ans</code> will contain
+            the minimum length of a subarray with sum <code>x</code>.
+          </li>
+          <li>
+            If no such subarray is found, return <code>-1</code>.
           </li>
         </ul>
       </li>
