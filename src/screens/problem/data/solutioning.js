@@ -12817,6 +12817,48 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1176: (
+    <>
+      {" "}
+      <h2>Explanation of Diet Plan Performance Calculation</h2>
+      <ul>
+        <li>
+          <strong>Prefix Sum Array Initialization:</strong>
+          <p>
+            We initialize an array <code>s</code> where <code>s[i]</code> stores
+            the sum of calories from the start of the <code>calories</code>{" "}
+            array up to index <code>i-1</code>.
+          </p>
+        </li>
+        <li>
+          <strong>Calculate Prefix Sums:</strong>
+          <p>
+            Iterate through the <code>calories</code> array to populate the{" "}
+            <code>s</code> array:
+          </p>
+        </li>
+        <li>
+          <strong>Sliding Window and DPP Calculation:</strong>
+          <p>
+            Initialize <code>ans</code> to <code>0</code>, then iterate through
+            the array from index <code>0</code> to <code>n - k</code>:
+          </p>
+
+          <p>
+            For each window, compare the sum <code>t</code> with{" "}
+            <code>lower</code> and <code>upper</code> thresholds:
+          </p>
+        </li>
+        <li>
+          <strong>Return the Result:</strong>
+          <p>
+            Return the accumulated value of <code>ans</code>, which represents
+            the Diet Plan Performance based on the given criteria.
+          </p>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
