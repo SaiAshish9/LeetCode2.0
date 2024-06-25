@@ -11288,6 +11288,68 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  "220_sliding_window": (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            Create a <code>TreeSet&lt;Long&gt;</code> to store the elements
+            within the current window of size <code>k</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate Through the Array:</strong>
+        <ul>
+          <li>
+            Use a <code>for</code> loop to iterate through the elements of the
+            array.
+          </li>
+          <li>
+            For each element, use the <code>TreeSet</code> to find if there
+            exists any element within the range{" "}
+            <code>[nums[i] - t, nums[i] + t]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Check for Elements Within the Range:</strong>
+        <ul>
+          <li>
+            Use the <code>TreeSet</code>'s <code>floor</code> method to find the
+            greatest element less than or equal to <code>nums[i] + t</code>.
+          </li>
+          <li>
+            Check if this element is within the range{" "}
+            <code>[nums[i] - t, nums[i] + t]</code> and return <code>true</code>{" "}
+            if it is.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Maintain the Sliding Window:</strong>
+        <ul>
+          <li>
+            Add the current element to the <code>TreeSet</code>.
+          </li>
+          <li>
+            If the size of the <code>TreeSet</code> exceeds <code>k</code>,
+            remove the oldest element (i.e., the element at index{" "}
+            <code>i - k</code>).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return the Result:</strong>
+        <ul>
+          <li>
+            If no such elements are found, return <code>false</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
