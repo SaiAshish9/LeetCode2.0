@@ -11350,6 +11350,73 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  340: (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            Create a <code>HashMap&lt;Character, Integer&gt;</code> to store the
+            characters and their counts within the current window.
+          </li>
+          <li>
+            Initialize <code>left</code> to represent the left boundary of the
+            sliding window.
+          </li>
+          <li>
+            Initialize <code>maxLength</code> to store the length of the longest
+            substring found.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Expand the Window:</strong>
+        <ul>
+          <li>
+            Use a <code>for</code> loop to move the right boundary (
+            <code>right</code>) of the window from the start to the end of the
+            string.
+          </li>
+          <li>
+            Add the current character to the HashMap and update its count.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Shrink the Window if Needed:</strong>
+        <ul>
+          <li>
+            If the number of distinct characters in the HashMap exceeds{" "}
+            <code>k</code>, shrink the window from the left until the number of
+            distinct characters is at most <code>k</code>.
+          </li>
+          <li>
+            Decrease the count of the character at the left boundary in the
+            HashMap, and if its count becomes zero, remove it from the HashMap.
+          </li>
+          <li>Move the left boundary to the right.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Update the Maximum Length:</strong>
+        <ul>
+          <li>
+            Update <code>maxLength</code> with the size of the current window if
+            it is greater than the previously stored <code>maxLength</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return the Result:</strong>
+        <ul>
+          <li>
+            Return <code>maxLength</code> as the length of the longest substring
+            with at most <code>k</code> distinct characters.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {

@@ -12540,6 +12540,43 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  340: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a string, find the length of the longest substring T that contains
+        at most <i>k</i>
+        distinct characters.
+      </p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <div>
+        <pre>
+          <strong>Input: </strong>s ={" "}
+          <span id="example-input-1-1">"eceba"</span>, k ={" "}
+          <span id="example-input-1-2">2</span> <br />
+          <strong>Output: </strong>
+          <span id="example-output-1">3</span> <br />
+          <strong>Explanation: </strong>T is "ece" which its length is 3.
+        </pre>
+
+        <div>
+          <p>
+            <strong>Example 2:</strong>
+          </p>
+
+          <pre>
+            <strong>Input: </strong>s = <span id="example-input-2-1">"aa"</span>
+            , k = <span id="example-input-2-2">1</span> <br />
+            <strong>Output: </strong>2 <br />
+            <strong>Explanation: </strong>T is "aa" which its length is 2.
+          </pre>
+        </div>
+      </div>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
