@@ -12638,6 +12638,56 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1052: (
+    <ul>
+      <li>
+        <strong>Initial Satisfied Customers:</strong>
+        <ul>
+          <li>
+            We iterate through the `customers` array and add the number of
+            customers to `totalSatisfied` if the owner is not grumpy at that
+            minute (i.e., `grumpy[i] == 0`).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Sliding Window to Maximize Additional Satisfied Customers:
+        </strong>
+        <ul>
+          <li>
+            We use a sliding window of size `X` to calculate the maximum
+            additional customers we can satisfy by applying the non-grumpy
+            interval.
+          </li>
+          <li>
+            We iterate through the `customers` array, adding the number of
+            customers to `currentAdditionalSatisfied` if the owner is grumpy at
+            that minute.
+          </li>
+          <li>
+            When the window exceeds size `X`, we subtract the number of
+            customers from `currentAdditionalSatisfied` if the owner was grumpy
+            at the start of the window (`i - X`).
+          </li>
+          <li>
+            We update `maxAdditionalSatisfied` with the maximum value of
+            `currentAdditionalSatisfied` during the sliding window traversal.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>
+            Finally, we return the sum of `totalSatisfied` and
+            `maxAdditionalSatisfied` as the maximum number of satisfied
+            customers.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
