@@ -12318,6 +12318,82 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  978: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>ans</code>: Initialized to <code>1</code>, represents the
+            length of the longest turbulent subarray found so far.
+          </li>
+          <li>
+            <code>increasing</code>: Initialized to <code>1</code>, tracks the
+            length of the current increasing turbulent subarray.
+          </li>
+          <li>
+            <code>decreasing</code>: Initialized to <code>1</code>, tracks the
+            length of the current decreasing turbulent subarray.
+          </li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Iterating through the array:</strong>
+        <ul>
+          <li>
+            Start iterating from the second element (<code>i = 1</code>) of the
+            array <code>arr</code>.
+          </li>
+          <li>
+            Compare <code>arr[i]</code> with <code>arr[i - 1]</code> to
+            determine the type of turbulent subarray:
+            <ul>
+              <li>
+                If <code>arr[i] &gt; arr[i - 1]</code>, it indicates an
+                increasing sequence. Update <code>increasing</code> to{" "}
+                <code>decreasing + 1</code> and reset <code>decreasing</code> to{" "}
+                <code>1</code>.
+              </li>
+              <li>
+                If <code>arr[i] &lt; arr[i - 1]</code>, it indicates a
+                decreasing sequence. Update <code>decreasing</code> to{" "}
+                <code>increasing + 1</code> and reset <code>increasing</code> to{" "}
+                <code>1</code>.
+              </li>
+              <li>
+                If <code>arr[i] == arr[i - 1]</code>, reset both{" "}
+                <code>increasing</code> and <code>decreasing</code> to{" "}
+                <code>1</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Updating the Maximum Length:</strong>
+        <ul>
+          <li>
+            After updating <code>increasing</code> and <code>decreasing</code>,
+            update <code>ans</code> to the maximum of itself and the current
+            lengths of <code>increasing</code> and <code>decreasing</code>.
+          </li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Returning the Result:</strong>
+        <ul>
+          <li>
+            After iterating through the entire array, <code>ans</code> will
+            contain the length of the longest turbulent subarray found, which is
+            returned as the result.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
