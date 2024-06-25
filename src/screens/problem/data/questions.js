@@ -13442,11 +13442,11 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre>
-        <b>Input:</b>
+        <strong>Input:</strong>
         S = "abcdebdde", T = "bde" <br />
-        <b>Output:</b> "bcde"
+        <strong>Output:</strong> "bcde"
         <br />
-        <b>Explanation:</b>
+        <strong>Explanation:</strong>
         <br />
         "bcde" is the answer because it occurs before "bdde" which has the same
         length.
