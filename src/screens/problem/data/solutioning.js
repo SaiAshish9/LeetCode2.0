@@ -12467,6 +12467,78 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  995: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a variable <code>ans</code> to count the number of flips
+            required.
+          </li>
+          <li>
+            Initialize a variable <code>flippedTime</code> to keep track of the
+            number of flips currently affecting the window.
+          </li>
+          <li>
+            Initialize a variable <code>left</code> to keep track of the left
+            boundary of the sliding window.
+          </li>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Iterate through the Array:</strong>
+        <ul>
+          <li>
+            For each element at index <code>right</code> in the array:
+          </li>
+          <ul>
+            <li>
+              If the index <code>right</code> is greater than or equal to{" "}
+              <code>k</code> and the element at <code>nums[right - k]</code> is
+              marked as flipped (value is 2), decrement <code>flippedTime</code>
+              .
+            </li>
+            <li>
+              Check if the current element needs to be flipped by comparing{" "}
+              <code>flippedTime % 2</code> with <code>nums[right]</code>.
+            </li>
+            <li>
+              If they are equal, it means the current bit is not yet flipped
+              correctly, so perform a flip:
+            </li>
+            <ul>
+              <li>
+                Check if there are enough elements remaining to perform the
+                flip. If not, return <code>-1</code>.
+              </li>
+              <li>
+                Increment the flip counter <code>ans</code>.
+              </li>
+              <li>
+                Increment <code>flippedTime</code>.
+              </li>
+              <li>
+                Mark the current element as flipped by setting{" "}
+                <code>nums[right]</code> to 2.
+              </li>
+            </ul>
+          </ul>
+        </ul>
+      </li>
+      <br />
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After iterating through the entire array, return <code>ans</code>,
+            which holds the minimum number of flips required.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
