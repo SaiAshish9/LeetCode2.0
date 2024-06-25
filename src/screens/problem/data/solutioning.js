@@ -14057,6 +14057,97 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1838: (
+    <ul>
+      <li>
+        <strong>Sort the Array:</strong>
+        <ul>
+          <li>
+            Start by sorting the input array <code>nums</code>. Sorting helps in
+            efficiently managing and calculating frequencies within any window
+            of size <code>k</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            <code>left</code>: Pointer for the left boundary of the sliding
+            window.
+          </li>
+          <li>
+            <code>right</code>: Pointer for the right boundary of the sliding
+            window.
+          </li>
+          <li>
+            <code>sum</code>: Current sum of elements in the sliding window.
+          </li>
+          <li>
+            <code>maxFreq</code>: Maximum frequency of any element found after
+            operations.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>left</code> and <code>right</code>, to
+            represent the current window of size <code>k</code>.
+          </li>
+          <li>
+            Incrementally expand the window by moving <code>right</code> to the
+            right.
+          </li>
+          <li>
+            Calculate the sum of elements in the current window and adjust the
+            window size as necessary.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Adjust Window:</strong>
+        <ul>
+          <li>
+            Add <code>nums[right]</code> to the current window and update{" "}
+            <code>sum</code>.
+          </li>
+          <li>
+            Check if the cost to make all elements in the window equal to{" "}
+            <code>nums[right]</code> is within the allowed operations{" "}
+            <code>k</code>. If not, shrink the window from the left until it
+            fits.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Update Maximum Frequency:</strong>
+        <ul>
+          <li>
+            For each valid window (<code>right - left + 1</code>), calculate its
+            size and update <code>maxFreq</code> if it's larger than the
+            previously recorded maximum frequency.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After processing all possible windows, <code>maxFreq</code> holds
+            the maximum frequency of any element achievable with the allowed
+            operations <code>k</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
