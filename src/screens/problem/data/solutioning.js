@@ -15106,6 +15106,69 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2134: (
+    <ul>
+      <li>
+        <strong>Calculate Total Ones:</strong>
+        <ul>
+          <li>
+            Compute <code>totalOnes</code> as the sum of all 1's in the array.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Initialize Sliding Window:</strong>
+        <ul>
+          <li>
+            Set <code>windowSize</code> to <code>totalOnes</code> since that's
+            the size of the contiguous segment of 1's we want to achieve.
+          </li>
+          <li>
+            Initialize <code>currentZeros</code> to count zeros within the first
+            window of size <code>windowSize</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Track Minimum Zeros:</strong>
+        <ul>
+          <li>
+            Update <code>minZeros</code> to the number of zeros found in the
+            first window.
+          </li>
+          <li>Slide the window across the array:</li>
+          <li>
+            - Add zeros entering the window and subtract zeros leaving the
+            window.
+          </li>
+          <li>
+            - Update <code>minZeros</code> to track the minimum number of zeros
+            found in any window of size <code>windowSize</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Calculate Result:</strong>
+        <ul>
+          <li>
+            The minimum number of swaps needed is{" "}
+            <code>totalOnes - minZeros</code>, as it represents the minimum
+            flips required to turn all zeros in the best window into ones.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>Return the computed minimum number of swaps.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
