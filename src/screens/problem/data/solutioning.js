@@ -16391,7 +16391,7 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
-  2760: (
+  2747: (
     <ul>
       <li>
         <strong>Query Class:</strong>
@@ -16473,6 +16473,72 @@ const SOLUTIONING = {
                 at the corresponding timestamp.
               </li>
             </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  2760: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>ans</code> is initialized to 0 to store the maximum length of
+            alternating subarrays found.
+          </li>
+          <li>
+            <code>dp</code> is initialized to 0 to keep track of the current
+            length of the alternating subarray.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterating through the array:</strong>
+        <ul>
+          <li>
+            Loop through each element <code>nums[i]</code> in the array{" "}
+            <code>nums</code>.
+          </li>
+          <li>
+            If <code>nums[i]</code> is greater than <code>threshold</code>,
+            reset <code>dp</code> to 0 because it cannot continue an alternating
+            subarray.
+          </li>
+          <li>
+            Else if <code>i &gt; 0</code> and the previous <code>dp</code> value{" "}
+            <code>dp &gt; 0</code> and the current element and the previous element
+            alternate between odd and even (checked using <code>isOddEven</code>{" "}
+            method), increment <code>dp</code>.
+          </li>
+          <li>
+            Otherwise, set <code>dp</code> to 1 if <code>nums[i]</code> is even,
+            or 0 if it is odd.
+          </li>
+          <li>
+            Update <code>ans</code> to be the maximum of itself and{" "}
+            <code>dp</code>, ensuring it captures the longest alternating
+            subarray found so far.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Helper method <code>isOddEven</code>:
+        </strong>
+        <ul>
+          <li>
+            Determines if two integers <code>a</code> and <code>b</code> are of
+            opposite parity (one is odd and the other is even).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code>, which contains the length of the longest
+            alternating subarray found.
           </li>
         </ul>
       </li>
