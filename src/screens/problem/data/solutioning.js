@@ -15169,6 +15169,76 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2156: (
+    <ul>
+      <li>
+        <strong>Initialize Parameters:</strong>
+        <ul>
+          <li>
+            <code>n</code>: Length of the input string <code>s</code>.
+          </li>
+          <li>
+            <code>targetHash</code>: The hash value we want to find in the
+            string.
+          </li>
+          <li>
+            <code>base</code>: Base for the rolling hash calculation.
+          </li>
+          <li>
+            <code>modulus</code>: Prime modulus to prevent overflow in hash
+            calculations.
+          </li>
+          <li>
+            <code>baseL</code>: Precompute <code>base^L % modulus</code> for
+            efficient rolling hash updates.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Compute Initial Hash Value:</strong>
+        <ul>
+          <li>
+            Calculate the initial hash value for the first window of length{" "}
+            <code>L</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Sliding Window to Find Matching Substring:</strong>
+        <ul>
+          <li>
+            Slide the window across the string to compute hash values for
+            successive substrings.
+          </li>
+          <li>
+            Update the hash using the rolling hash technique for each new
+            window.
+          </li>
+          <li>
+            Compare the computed hash value with <code>targetHash</code>.
+          </li>
+          <li>
+            If they match, check if the substring itself matches to handle hash
+            collisions.
+          </li>
+          <li>Return the substring if found.</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            Handle cases where the input string is shorter than the target
+            substring length <code>L</code>.
+          </li>
+          <li>Return an empty string if no matching substring is found.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
