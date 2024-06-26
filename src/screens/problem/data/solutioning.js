@@ -14697,6 +14697,116 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2009: (
+    <ul>
+      <li>
+        <strong>Sort and Remove Duplicates:</strong>
+        <ul>
+          <li>
+            Create a <code>Set</code> to store unique elements from the array{" "}
+            <code>nums</code>.
+          </li>
+          <li>
+            Convert the <code>Set</code> back to an array{" "}
+            <code>uniqueNums</code> and sort it.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Sliding Window:</strong>
+        <ul>
+          <li>
+            Use a sliding window to find the longest subarray of consecutive
+            elements in the sorted <code>uniqueNums</code> array.
+          </li>
+          <li>
+            Initialize <code>maxLength</code> to keep track of the length of the
+            longest subarray found.
+          </li>
+          <li>
+            Use two pointers, <code>left</code> and <code>right</code>, to
+            define the window.
+          </li>
+          <li>
+            Move the <code>right</code> pointer to expand the window, and move
+            the <code>left</code> pointer to maintain the consecutive condition.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Calculate Minimum Operations:</strong>
+        <ul>
+          <li>
+            The minimum number of operations required is the difference between
+            the length of the original array <code>nums</code> and{" "}
+            <code>maxLength</code> (the length of the longest subarray of
+            consecutive elements).
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  2024: (
+    <ul>
+      <li>
+        <strong>Main Function: maxConsecutiveAnswers</strong>
+        <ul>
+          <li>
+            Calls the helper function <code>maxConsecutiveChar</code> twice,
+            once for 'T' and once for 'F'.
+          </li>
+          <li>
+            Returns the maximum value between the two calls, which represents
+            the longest contiguous subarray of 'T' or 'F' with at most{" "}
+            <code>k</code> flips.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Helper Function: maxConsecutiveChar</strong>
+        <ul>
+          <li>
+            Initializes <code>maxLen</code> to keep track of the maximum length
+            of the subarray.
+          </li>
+          <li>
+            Uses two pointers, <code>left</code> and <code>right</code>, to
+            define the sliding window.
+          </li>
+          <li>
+            Initializes <code>flipCount</code> to count the number of flips used
+            within the window.
+          </li>
+          <li>
+            Iterates through the string using the <code>right</code> pointer:
+            <ul>
+              <li>
+                If the character at <code>right</code> is not equal to{" "}
+                <code>ch</code>, increments <code>flipCount</code>.
+              </li>
+              <li>
+                While <code>flipCount</code> exceeds <code>k</code>, increments
+                the <code>left</code> pointer and adjusts <code>flipCount</code>{" "}
+                accordingly.
+              </li>
+              <li>
+                Updates <code>maxLen</code> with the maximum value between{" "}
+                <code>maxLen</code> and the current window size (
+                <code>right - left + 1</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            Returns <code>maxLen</code>, which represents the length of the
+            longest contiguous subarray with at most <code>k</code> flips.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
