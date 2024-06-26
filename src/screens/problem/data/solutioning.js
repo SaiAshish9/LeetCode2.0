@@ -14410,6 +14410,98 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1888: (
+    <ul>
+      <li>
+        <strong>Generate Alternating Patterns:</strong>
+        <ul>
+          <li>
+            Create two patterns:
+            <ul>
+              <li>
+                <code>pattern1</code> starting with <code>0</code> (e.g.,{" "}
+                <code>010101...</code>).
+              </li>
+              <li>
+                <code>pattern2</code> starting with <code>1</code> (e.g.,{" "}
+                <code>101010...</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            Ensure each pattern is at least twice the length of the input string{" "}
+            <code>s</code> to handle the circular nature of the problem.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Double the Input String:</strong>
+        <ul>
+          <li>
+            Concatenate the input string <code>s</code> with itself to create a
+            new string <code>s + s</code>. This helps in managing the circular
+            nature of the string using a sliding window approach.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Sliding Window:</strong>
+        <ul>
+          <li>
+            Use a sliding window of the same length as the original input string{" "}
+            <code>s</code> to compare segments of the doubled string with the
+            generated patterns.
+          </li>
+          <li>
+            Initialize <code>minFlips</code> to track the minimum number of
+            flips needed.
+          </li>
+          <li>
+            For each window position, count the number of flips needed to match
+            the current segment with <code>pattern1</code> and{" "}
+            <code>pattern2</code>:
+            <ul>
+              <li>
+                Initialize <code>flips1</code> and <code>flips2</code> to count
+                flips needed for each pattern.
+              </li>
+              <li>
+                Iterate through the current window segment and compare with the
+                corresponding characters in both patterns.
+              </li>
+              <li>
+                Update <code>flips1</code> and <code>flips2</code> based on
+                mismatches.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Determine Minimum Flips:</strong>
+        <ul>
+          <li>
+            Update <code>minFlips</code> to the minimum value between the flips
+            needed for both patterns in each window position.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After sliding through the entire string, return the final value of{" "}
+            <code>minFlips</code> which represents the minimum number of flips
+            required to make the binary string alternating.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
