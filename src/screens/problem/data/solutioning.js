@@ -15446,6 +15446,65 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2379: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>countB</code> to 0 to keep track of the current
+            number of 'B' blocks in the sliding window.
+          </li>
+          <li>
+            Initialize <code>maxCountB</code> to 0 to store the maximum count of
+            'B' blocks found in any valid window of size <code>k</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Iterate through the string <code>blocks</code> using a sliding
+            window of size <code>k</code>.
+          </li>
+          <li>
+            Update <code>countB</code> as you slide the window:
+            <ul>
+              <li>
+                Increment <code>countB</code> when adding a new 'B' block (
+                <code>blocks.charAt(i) == 'B'</code>).
+              </li>
+              <li>
+                Decrement <code>countB</code> when removing an old 'B' block (
+                <code>blocks.charAt(i - k) == 'B'</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            Update <code>maxCountB</code> to track the maximum{" "}
+            <code>countB</code> observed during the iteration.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Calculate Result:</strong>
+        <ul>
+          <li>
+            The minimum number of recolors required to achieve <code>k</code>{" "}
+            consecutive 'B' blocks is calculated as <code>k - maxCountB</code>.
+          </li>
+          <li>
+            This calculation is based on the fact that you need to change{" "}
+            <code>(k - maxCountB)</code> blocks to 'B' to ensure there are at
+            least <code>k</code> consecutive 'B' blocks.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
