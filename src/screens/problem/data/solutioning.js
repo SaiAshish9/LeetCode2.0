@@ -16181,6 +16181,67 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2653: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>ans</code>: An array initialized to store results, where each
+            element corresponds to the starting index of a subarray with the
+            desired properties.
+          </li>
+          <li>
+            <code>count</code>: An array of size 50 used to count occurrences of
+            negative numbers within the sliding window of size <code>k</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Iterate through the <code>nums</code> array using index{" "}
+            <code>i</code>.
+          </li>
+          <li>
+            Update the <code>count</code> array for the current element{" "}
+            <code>nums[i]</code> if it is negative.
+          </li>
+          <li>
+            Adjust the <code>count</code> array to remove the contribution of
+            the element that is moving out of the window (when{" "}
+            <code>i - k</code> is valid).
+          </li>
+          <li>
+            When the window size reaches <code>k</code>, calculate the x-th
+            smallest negative number using <code>getXthSmallestNum</code> and
+            store it in <code>ans[i - k + 1]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          <code>getXthSmallestNum</code> Method:
+        </strong>
+        <ul>
+          <li>
+            Calculates the x-th smallest negative number by iterating through
+            the <code>count</code> array.
+          </li>
+          <li>
+            <code>prefix</code> accumulates the counts until it reaches or
+            exceeds <code>x</code>.
+          </li>
+          <li>
+            Once <code>prefix &gt;= x</code>, return the corresponding negative
+            number (<code>i - 50</code>), where <code>i</code> is the index in
+            the <code>count</code> array.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
