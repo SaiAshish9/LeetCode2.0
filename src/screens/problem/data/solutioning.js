@@ -15750,6 +15750,92 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2516: (
+    <ul>
+      <li>
+        Initialize variables:
+        <ul>
+          <li>
+            <code>final int n = s.length();</code> - The length of the string.
+          </li>
+          <li>
+            <code>int ans = n;</code> - To store the minimum length of the
+            substring that can be removed to achieve the condition.
+          </li>
+          <li>
+            <code>int[] count = new int[3];</code> - An array to count the
+            frequency of 'a', 'b', and 'c' in the string.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Count the frequency of each character in the string:
+        <ul>
+          <li>
+            Iterate through the string and increment the count of each
+            character.
+          </li>
+          <li>
+            <code>for (final char c : s.toCharArray()) ++count[c - 'a'];</code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Check if it's possible to take <code>k</code> characters of each type:
+        <ul>
+          <li>
+            If any character's frequency is less than <code>k</code>, return -1
+            as it's not possible.
+          </li>
+          <li>
+            <code>
+              if (count[0] &lt; k || count[1] &lt; k || count[2] &lt; k) return
+              -1;
+            </code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Sliding window approach to find the minimum length of substring:
+        <ul>
+          <li>
+            Use two pointers <code>left</code> and <code>right</code> to define
+            the window.
+          </li>
+          <li>
+            Iterate through the string with the <code>right</code> pointer:
+          </li>
+          <ul>
+            <li>
+              Decrement the count of the character at the <code>right</code>{" "}
+              pointer.
+            </li>
+            <li>
+              While the count of the character at the <code>right</code> pointer
+              is less than <code>k</code>:
+              <ul>
+                <li>
+                  Increment the count of the character at the <code>left</code>{" "}
+                  pointer and move the <code>left</code> pointer to the right.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Update <code>ans</code> with the minimum of the current{" "}
+              <code>ans</code> and the length of the remaining substring.
+            </li>
+            <li>
+              <code>ans = Math.min(ans, n - (right - left + 1));</code>
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        Return <code>ans</code> which holds the minimum length of the substring
+        that can be removed to achieve the condition.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
