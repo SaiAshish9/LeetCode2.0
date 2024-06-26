@@ -16216,6 +16216,107 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  1918: (
+    <article role="main" class="blog-post">
+      <p>
+        Given an integer array{" "}
+        <code class="language-plaintext highlighter-rouge">nums</code> of length{" "}
+        <code class="language-plaintext highlighter-rouge">n</code> and an
+        integer <code class="language-plaintext highlighter-rouge">k</code>,
+        return{" "}
+        <em>
+          the <code class="language-plaintext highlighter-rouge">k-th</code>{" "}
+          <strong>smallest subarray sum</strong>
+        </em>
+        .
+      </p>
+      <p>
+        A <strong>subarray</strong> is defined as a <strong>non-empty</strong>{" "}
+        contiguous sequence of elements in an array. A{" "}
+        <strong>subarray sum</strong> is the sum of all elements in the
+        subarray.
+      </p>
+      <br />
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+      <p>
+        <strong>Input:</strong> nums = [2,1,3], k = 4
+      </p>{" "}
+      <p>
+        <strong>Output:</strong> 3
+      </p>
+      <p>
+        <strong>Explanation:</strong> The subarrays of [2,1,3] are:
+      </p>
+      <ul>
+        <li>[2] with sum 2</li>
+        <li>[1] with sum 1</li>
+        <li>[3] with sum 3</li>
+        <li>[2,1] with sum 3</li>
+        <li>[1,3] with sum 4</li>
+        <li>[2,1,3] with sum 6</li>
+      </ul>
+      <p>
+        Ordering the sums from smallest to largest gives 1, 2, 3, 3, 4, 6. The
+        4th smallest is 3.
+      </p>
+      <br />
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+      <p>
+        <strong>Input:</strong> nums = [3,3,5,5], k = 7
+      </p>
+      <p>
+        <strong>Output:</strong> 10
+      </p>
+      <p>
+        <strong>Explanation:</strong> The subarrays of [3,3,5,5] are:
+      </p>
+      <ul>
+        <li>[3] with sum 3</li>
+        <li>[3] with sum 3</li>
+        <li>[5] with sum 5</li>
+        <li>[5] with sum 5</li>
+        <li>[3,3] with sum 6</li>
+        <li>[3,5] with sum 8</li>
+        <li>[5,5] with sum 10</li>
+        <li>[3,3,5], with sum 11</li>
+        <li>[3,5,5] with sum 13</li>
+        <li>[3,3,5,5] with sum 16</li>
+      </ul>
+      <p>
+        Ordering the sums from smallest to largest gives 3, 3, 5, 5, 6, 8, 10,
+        11, 13, 16. The 7th smallest is 10.
+      </p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            n == nums.length
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= n &lt;= 2 * 10^4
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= nums[i] &lt;= 5 * 10^4
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= k &lt;= n * (n + 1) / 2
+          </code>
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
