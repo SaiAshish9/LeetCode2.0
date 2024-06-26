@@ -15033,6 +15033,79 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2107: (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            <code>count</code>: A map to keep track of the count of each candy
+            type in the current window.
+          </li>
+          <li>
+            <code>n</code>: The length of the <code>candies</code> array.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Initialize the Sliding Window:</strong>
+        <ul>
+          <li>
+            Iterate through the array from index <code>k</code> to{" "}
+            <code>n-1</code> to populate the initial window with candy counts.
+          </li>
+          <li>
+            Use <code>count.merge(candies[i], 1, Integer::sum)</code> to add or
+            update the count of each candy type.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Track Maximum Distinct Candies:</strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> to store the size of the initial window,
+            which represents the number of distinct candies.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Slide the Window:</strong>
+        <ul>
+          <li>
+            For each index from <code>k</code> to{" "}
+            <code>candies.length - 1</code>, update the window by removing the
+            candy type that slides out and adding the candy type that slides in.
+          </li>
+          <li>
+            If the count of a candy type becomes zero after removing, remove it
+            from the map using <code>count.remove(candies[i])</code>.
+          </li>
+          <li>
+            Update the count of the candy type that slides in using{" "}
+            <code>count.merge(candies[i - k], 1, Integer::sum)</code>.
+          </li>
+          <li>
+            Update <code>ans</code> with the maximum size of the window (number
+            of distinct candies) after each slide.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            Return the maximum number of distinct candies found during the
+            sliding window process.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
