@@ -15942,6 +15942,77 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2528: (
+    <ul>
+      <li>
+        Initialize Variables:
+        <ul>
+          <li>
+            <code>long left = Arrays.stream(stations).min().getAsInt();</code> -
+            Initialize the minimum possible initial power.
+          </li>
+          <li>
+            <code>
+              long right = Arrays.stream(stations).asLongStream().sum() + k + 1;
+            </code>{" "}
+            - Initialize the maximum possible initial power, considering the sum
+            of all station powers and additional power units.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Binary Search:
+        <ul>
+          <li>
+            Use binary search to find the maximum possible minimum power:
+            <ul>
+              <li>
+                <code>while (left &lt; right) {"{ ... }"}</code>
+              </li>
+              <li>
+                Calculate the middle value <code>mid</code> and use the{" "}
+                <code>check</code> method to determine if <code>mid</code> can
+                be achieved.
+              </li>
+              <li>
+                Update <code>left</code> or <code>right</code> based on the
+                result of <code>check</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <code>check</code> Method:
+        <ul>
+          <li>
+            Check if a given minimum power <code>minPower</code> can be
+            achieved:
+            <ul>
+              <li>
+                Initialize <code>power</code> as the sum of power within the
+                initial radius <code>r</code>.
+              </li>
+              <li>
+                Iterate through each city to update <code>power</code> and
+                adjust station power if needed.
+              </li>
+              <li>
+                If current power is less than <code>minPower</code>, calculate
+                the required additional power and update station power if
+                possible.
+              </li>
+              <li>
+                Return <code>true</code> if it's possible to achieve{" "}
+                <code>minPower</code> with the available additional power units,
+                otherwise return <code>false</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
