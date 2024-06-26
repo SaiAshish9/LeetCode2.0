@@ -14502,6 +14502,143 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1918: (
+    <>
+      {" "}
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Initialize <code>min</code> to <code>Integer.MAX_VALUE</code> to
+              find the smallest element in the array.
+            </li>
+            <li>
+              Initialize <code>sum</code> to <code>0</code> to find the total
+              sum of the array elements.
+            </li>
+            <li>
+              Loop through each element <code>num</code> in <code>nums</code> to
+              update <code>min</code> and <code>sum</code>:
+              <ul>
+                <li>
+                  Set <code>min</code> to the minimum value between{" "}
+                  <code>min</code> and <code>num</code>.
+                </li>
+                <li>
+                  Add <code>num</code> to <code>sum</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Binary Search for k-th Smallest Sum:</strong>
+          <ul>
+            <li>
+              Initialize <code>low</code> to <code>min</code> and{" "}
+              <code>high</code> to <code>sum</code>.
+            </li>
+            <li>
+              While <code>low</code> is less than <code>high</code>:
+              <ul>
+                <li>
+                  Calculate <code>mid</code> as the average of <code>low</code>{" "}
+                  and <code>high</code>.
+                </li>
+                <li>
+                  Call <code>countSubarrays(nums, mid)</code> to count the
+                  number of subarrays with sums less than or equal to{" "}
+                  <code>mid</code>.
+                </li>
+                <li>
+                  If the count is less than <code>k</code>, set <code>low</code>{" "}
+                  to <code>mid + 1</code>.
+                </li>
+                <li>
+                  Otherwise, set <code>high</code> to <code>mid</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              After the binary search completes, return <code>low</code>, which
+              will be the <code>k</code>-th smallest subarray sum.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Helper Function: countSubarrays</h3>
+      <ul>
+        <li>
+          <strong>Initialize Variables:</strong>
+          <ul>
+            <li>
+              Initialize <code>count</code> to <code>0</code> to count the
+              number of valid subarrays.
+            </li>
+            <li>
+              Initialize <code>sum</code> to <code>0</code> to keep the sum of
+              the current subarray.
+            </li>
+            <li>
+              Initialize <code>left</code> and <code>right</code> pointers to{" "}
+              <code>0</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Sliding Window:</strong>
+          <ul>
+            <li>
+              While <code>right</code> is less than the length of{" "}
+              <code>nums</code>:
+              <ul>
+                <li>
+                  Add <code>nums[right]</code> to <code>sum</code>.
+                </li>
+                <li>
+                  While <code>sum</code> is greater than <code>threshold</code>:
+                  <ul>
+                    <li>
+                      Subtract <code>nums[left]</code> from <code>sum</code>.
+                    </li>
+                    <li>
+                      Increment <code>left</code> pointer.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Add <code>right - left + 1</code> to <code>count</code>{" "}
+                  (number of subarrays ending at <code>right</code>).
+                </li>
+                <li>
+                  Increment <code>right</code> pointer.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              Return <code>count</code> which represents the number of subarrays
+              with sums less than or equal to <code>threshold</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
