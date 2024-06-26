@@ -16908,6 +16908,100 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  2107: (
+    <article role="main" class="blog-post">
+      <p>
+        You are given a <strong>0-indexed</strong> integer array{" "}
+        <code>candies</code>, where <code>candies[i]</code> represents the
+        flavor of the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        candy. Your mom wants you to share these candies with your little sister
+        by giving her <code>k</code> <strong>consecutive</strong> candies, but
+        you want to keep as many flavors of candies as possible.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the <strong>maximum</strong> number of <strong>unique</strong> flavors
+          of candy you can keep after sharing{" "}
+        </em>
+        <em> with your sister.</em>
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> candies = [1,<u>2,2,3</u>,4,3], k = 3 <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong> <br />
+        Give the candies in the range [1, 3] (inclusive) with flavors [2,2,3].
+        <br />
+        You can eat candies with flavors [1,4,3].
+        <br />
+        There are 3 unique flavors, so return 3.
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> candies = [2,2,2,<u>2,3</u>,3], k = 2<br />
+        <strong>Output:</strong> 2<br />
+        <strong>Explanation:</strong> <br />
+        Give the candies in the range [3, 4] (inclusive) with flavors [2,3].
+        <br />
+        You can eat candies with flavors [2,2,2,3].
+        <br />
+        There are 2 unique flavors, so return 2.
+        <br />
+        Note that you can also share the candies with flavors [2,2] and eat the
+        candies with flavors [2,2,3,3].
+      </pre>
+
+      <p>
+        <strong>Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> candies = [2,4,5], k = 0<br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong> <br />
+        You do not have to give any candies.
+        <br />
+        You can eat the candies with flavors [2,4,5].
+        <br />
+        There are 3 unique flavors, so return 3.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= candies.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= candies[i] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>0 &lt;= k &lt;= candies.length</code>
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
