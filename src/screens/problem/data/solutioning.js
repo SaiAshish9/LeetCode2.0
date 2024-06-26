@@ -14807,6 +14807,78 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2090: (
+    <ul>
+      <li>
+        <strong>Initialize Result Array:</strong>
+        <ul>
+          <li>
+            Create an array <code>result</code> of the same length as{" "}
+            <code>nums</code> and fill it with <code>-1</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Check Window Size:</strong>
+        <ul>
+          <li>
+            If the window size <code>2k + 1</code> is larger than the array
+            length <code>n</code>, return the result array with all{" "}
+            <code>-1</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Calculate Initial Window Sum:</strong>
+        <ul>
+          <li>
+            Calculate the sum of the first window of size <code>2k + 1</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Calculate Initial Average:</strong>
+        <ul>
+          <li>
+            Calculate the average for the first valid window and store it in{" "}
+            <code>result[k]</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Slide the Window:</strong>
+        <ul>
+          <li>
+            Slide the window across the array from index <code>k + 1</code> to{" "}
+            <code>n - k - 1</code>.
+          </li>
+          <li>
+            For each new position, update the window sum by subtracting the
+            element that is sliding out of the window and adding the new element
+            that is sliding into the window.
+          </li>
+          <li>
+            Calculate the average for the current window and store it in{" "}
+            <code>result[i]</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            Return the <code>result</code> array containing the k-radius
+            subarray averages.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
