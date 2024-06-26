@@ -17862,6 +17862,99 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  2461: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an integer array <code>nums</code> and an integer{" "}
+        <code>k</code>. Find the maximum subarray sum of all the subarrays of{" "}
+        <code>nums</code> that meet the following conditions:
+      </p>
+
+      <ul>
+        <li>
+          The length of the subarray is <code>k</code>, and
+        </li>
+        <li>
+          All the elements of the subarray are <strong>distinct</strong>.
+        </li>
+      </ul>
+
+      <p>
+        Return{" "}
+        <em>
+          the maximum subarray sum of all the subarrays that meet the conditions
+        </em>
+        <em>.</em> If no subarray meets the conditions, return <code>0</code>.
+      </p>
+
+      <p>
+        <em>
+          A <strong>subarray</strong> is a contiguous non-empty sequence of
+          elements within an array.
+        </em>
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,5,4,2,9,9,9], k = 3<br />
+        <strong>Output:</strong> 15
+        <br />
+        <strong>Explanation:</strong> The subarrays of nums with length 3 are:
+        <br />
+        - [1,5,4] which meets the requirements and has a sum of 10.
+        <br />
+        - [5,4,2] which meets the requirements and has a sum of 11.
+        <br />
+        - [4,2,9] which meets the requirements and has a sum of 15.
+        <br />
+        - [2,9,9] which does not meet the requirements because the element 9 is
+        repeated.
+        <br />
+        - [9,9,9] which does not meet the requirements because the element 9 is
+        repeated.
+        <br />
+        We return 15 because it is the maximum subarray sum of all the subarrays
+        that meet the conditions
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [4,4,4], k = 3 <br />
+        <strong>Output:</strong> 0<br />
+        <strong>Explanation:</strong> The subarrays of nums with length 3 are:
+        <br />
+        - [4,4,4] which does not meet the requirements because the element 4 is
+        repeated.
+        <br />
+        We return 0 because no subarrays meet the conditions.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= k &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= nums[i] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
