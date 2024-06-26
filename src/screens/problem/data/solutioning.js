@@ -16083,6 +16083,104 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2555: (
+    <ul>
+      <li>
+        <strong>Method Overview:</strong>
+        <ul>
+          <li>
+            <code>public int maximizeWin(int[] prizePositions, int k)</code>:
+            Computes the maximum number of prizes that can be collected under
+            the constraint that no two selected intervals overlap by more than{" "}
+            <code>k</code> units.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>ans = 0;</code>: Variable to store the maximum number of
+            prizes that can be collected.
+          </li>
+          <li>
+            <code>dp[]</code>: An array where <code>dp[i]</code> represents the
+            maximum number of prizes that can be collected up to the i-th
+            position without violating the overlap constraint.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>i</code> (end of the current interval) and{" "}
+            <code>j</code> (start of the current interval), to maintain a
+            sliding window over the <code>prizePositions</code> array.
+          </li>
+          <li>
+            <code>i</code> iterates over each position in{" "}
+            <code>prizePositions</code>.
+          </li>
+          <li>
+            <code>j</code> moves forward to ensure that the distance between{" "}
+            <code>prizePositions[i]</code> and <code>prizePositions[j]</code>{" "}
+            does not exceed <code>k</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculating Covered Prizes:</strong>
+        <ul>
+          <li>
+            For each <code>i</code>, calculate <code>covered = i - j + 1</code>,
+            representing the number of prizes covered by the current valid
+            interval <code>[prizePositions[j], prizePositions[i]]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Updating <code>dp</code> Array:
+        </strong>
+        <ul>
+          <li>
+            Update <code>dp[i + 1]</code> using{" "}
+            <code>dp[i + 1] = Math.max(dp[i], covered)</code>. This ensures that{" "}
+            <code>dp[i + 1]</code> holds the maximum number of prizes that can
+            be collected up to the i-th position without violating the overlap
+            constraint.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Updating <code>ans</code>:
+        </strong>
+        <ul>
+          <li>
+            Update <code>ans</code> using{" "}
+            <code>ans = Math.max(ans, dp[j] + covered)</code>. Here,{" "}
+            <code>dp[j]</code> represents the maximum number of prizes collected
+            up to <code>j</code> without violating the overlap constraint.
+            Adding <code>covered</code> gives the total number of prizes
+            collected by including the current interval{" "}
+            <code>[prizePositions[j], prizePositions[i]]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return the Result:</strong>
+        <ul>
+          <li>
+            After processing all intervals, <code>ans</code> holds the maximum
+            number of prizes that can be collected without violating the overlap
+            constraint by more than <code>k</code> units.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
