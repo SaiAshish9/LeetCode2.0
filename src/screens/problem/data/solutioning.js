@@ -16507,9 +16507,9 @@ const SOLUTIONING = {
           </li>
           <li>
             Else if <code>i &gt; 0</code> and the previous <code>dp</code> value{" "}
-            <code>dp &gt; 0</code> and the current element and the previous element
-            alternate between odd and even (checked using <code>isOddEven</code>{" "}
-            method), increment <code>dp</code>.
+            <code>dp &gt; 0</code> and the current element and the previous
+            element alternate between odd and even (checked using{" "}
+            <code>isOddEven</code> method), increment <code>dp</code>.
           </li>
           <li>
             Otherwise, set <code>dp</code> to 1 if <code>nums[i]</code> is even,
@@ -16539,6 +16539,58 @@ const SOLUTIONING = {
           <li>
             Return <code>ans</code>, which contains the length of the longest
             alternating subarray found.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  2779: (
+    <ul>
+      <li>
+        <strong>Sorting:</strong>
+        <ul>
+          <li>
+            <code>Arrays.sort(nums);</code> - Sorts the array <code>nums</code>{" "}
+            in non-decreasing order. Sorting helps in efficiently finding the
+            maximum beauty by ensuring that we can easily manage the sliding
+            window constraints.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Initialize two pointers, <code>left</code> and <code>right</code>,
+            both starting at <code>0</code>.
+          </li>
+          <li>
+            Iterate through the array using <code>right</code> pointer to expand
+            the window:
+          </li>
+          <ul>
+            <li>
+              <code>while (nums[right] - nums[left] &gt; 2 * k)</code>: Checks
+              if the difference between <code>nums[right]</code> and{" "}
+              <code>nums[left]</code> exceeds <code>2 * k</code>. If it does,
+              increment <code>left</code> to shrink the window from the left
+              side until the condition is satisfied.
+            </li>
+            <li>
+              <code>ans = Math.max(ans, right - left + 1);</code>: Updates{" "}
+              <code>ans</code> with the maximum length of the valid subarray
+              (window) found so far.
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code>, which represents the maximum beauty of the
+            array after applying the operation with the sliding window of size{" "}
+            <code>k</code>.
           </li>
         </ul>
       </li>
