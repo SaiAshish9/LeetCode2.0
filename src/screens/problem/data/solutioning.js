@@ -15662,6 +15662,94 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2411: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>kMaxBit</code>: Maximum number of bits to consider (typically
+            30 for a 32-bit integer).
+          </li>
+          <li>
+            <code>ans</code>: Array to store the lengths of smallest subarrays.
+          </li>
+          <li>
+            <code>closest</code>: Array to store closest indices of each bit set
+            to 1 in the current window.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>
+          Fill <code>ans</code> Array:
+        </strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> array with all elements set to 1, as the
+            minimum subarray length is 1.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>
+          Iterate Backwards through <code>nums</code>:
+        </strong>
+        <ul>
+          <li>
+            <strong>
+              Outer Loop (<code>for</code> loop):
+            </strong>
+            <ul>
+              <li>
+                Starts from the end of <code>nums</code> array and moves
+                backwards to index 0.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>
+              Inner Loop (<code>for</code> loop for <code>kMaxBit</code>):
+            </strong>
+            <ul>
+              <li>
+                Iterates through each bit position from 0 to{" "}
+                <code>kMaxBit - 1</code>.
+              </li>
+              <li>
+                Checks if the bit at current position (<code>j</code>) in{" "}
+                <code>nums[i]</code> is set to 1 using{" "}
+                <code>(nums[i] &gt;&gt; j & 1) == 1</code>.
+              </li>
+              <li>
+                Updates <code>closest[j]</code> to the current index{" "}
+                <code>i</code> if the condition is true.
+              </li>
+              <li>
+                Calculates the maximum length of subarray ending at index{" "}
+                <code>i</code> with maximum bitwise OR using{" "}
+                <code>ans[i] = Math.max(ans[i], closest[j] - i + 1)</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Returns the <code>ans</code> array containing lengths of the
+            smallest subarrays ending at each index, ensuring maximum bitwise
+            OR.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
