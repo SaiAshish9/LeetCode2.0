@@ -15367,6 +15367,85 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2302: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> to <code>0</code> to store the total
+            count of valid subarrays.
+          </li>
+          <li>
+            Initialize <code>sum</code> to <code>0</code> to keep track of the
+            current sum of elements in the sliding window.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>left</code> and <code>right</code>, to
+            represent the current subarray.
+          </li>
+          <li>
+            Expand the <code>right</code> pointer to include more elements in
+            the current subarray (<code>right</code> loop).
+          </li>
+          <li>
+            Add <code>nums[right]</code> to <code>sum</code> to expand the
+            window's sum.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Adjust Window:</strong>
+        <ul>
+          <li>
+            Use a while loop to adjust the <code>left</code> pointer whenever
+            the sum of the current window (<code>sum</code>) multiplied by the
+            number of elements in the window (<code>right - left + 1</code>) is
+            greater than or equal to <code>k</code>.
+          </li>
+          <li>
+            This condition ensures that if the product{" "}
+            <code>sum * (right - left + 1)</code> is greater than or equal to{" "}
+            <code>k</code>, the window sum needs adjustment by moving{" "}
+            <code>left</code> to the right.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Count Valid Subarrays:</strong>
+        <ul>
+          <li>
+            For each valid subarray ending at <code>right</code>, add{" "}
+            <code>right - left + 1</code> to <code>ans</code>.
+          </li>
+          <li>
+            This adds the count of subarrays ending at <code>right</code> that
+            satisfy the condition <code>sum &lt; k</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            After iterating through all elements in the array using the{" "}
+            <code>right</code> pointer, <code>ans</code> contains the total
+            count of valid subarrays whose sum is less than <code>k</code>.
+            Return <code>ans</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
