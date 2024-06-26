@@ -15239,6 +15239,68 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2260: (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            <code>ans</code>: Initialized to <code>Integer.MAX_VALUE</code> to
+            store the minimum number of consecutive cards to pick up.
+          </li>
+          <li>
+            <code>seen</code>: A <code>HashMap</code> to store the last seen
+            index of each card value.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Iterate through the Array:</strong>
+        <ul>
+          <li>
+            Loop through each card in the <code>cards</code> array using index{" "}
+            <code>i</code>.
+          </li>
+          <li>
+            Check if <code>cards[i]</code> has been seen before:
+            <ul>
+              <li>
+                If yes, calculate the length of the current sequence (
+                <code>i - seen.get(cards[i]) + 1</code>).
+              </li>
+              <li>
+                Update <code>ans</code> to store the minimum of its current
+                value and the calculated sequence length.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Update the <code>seen</code> map with the current card's index (
+            <code>seen.put(cards[i], i)</code>).
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After iterating through all cards, check if <code>ans</code> is
+            still <code>Integer.MAX_VALUE</code>.
+          </li>
+          <li>
+            If yes, return <code>-1</code> indicating no valid sequence was
+            found.
+          </li>
+          <li>
+            Otherwise, return <code>ans</code> as the minimum number of
+            consecutive cards to pick up.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
