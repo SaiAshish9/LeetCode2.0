@@ -16391,6 +16391,93 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2760: (
+    <ul>
+      <li>
+        <strong>Query Class:</strong>
+        <ul>
+          <li>
+            Defines a <code>Query</code> class to hold each query's timestamp (
+            <code>query</code>) and its original index (<code>index</code>) from
+            the <code>queries</code> array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>countServers Method:</strong>
+        <ul>
+          <li>
+            <strong>Sorting:</strong>
+            <ul>
+              <li>
+                Sorts <code>logs</code> by their timestamp using{" "}
+                <code>Arrays.sort</code>.
+              </li>
+              <li>
+                Encapsulates <code>queries</code> into <code>Query</code>{" "}
+                objects and sorts them by their timestamp using{" "}
+                <code>Collections.sort</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Processing Queries with Sliding Window Technique:</strong>
+            <ul>
+              <li>
+                <strong>Initialization:</strong>
+                <ul>
+                  <li>
+                    Initializes <code>ans</code> array to store results for each
+                    query.
+                  </li>
+                  <li>
+                    Uses <code>countMap</code> to track active servers based on
+                    their server id.
+                  </li>
+                  <li>
+                    <code>left</code> and <code>right</code> pointers for
+                    managing sliding window over <code>logs</code>.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Main Loop:</strong>
+                <ul>
+                  <li>
+                    Iterates through each query (<code>q</code> in{" "}
+                    <code>queryList</code>).
+                  </li>
+                  <li>
+                    Adds servers to <code>countMap</code> whose timestamp is
+                    less than or equal to <code>q.query</code>.
+                  </li>
+                  <li>
+                    Removes servers from <code>countMap</code> whose timestamp
+                    is less than <code>q.query - x</code>.
+                  </li>
+                  <li>
+                    Calculates active servers as{" "}
+                    <code>n - countMap.size()</code> and stores the result in{" "}
+                    <code>ans</code> at <code>q.index</code>.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Result:</strong>
+            <ul>
+              <li>
+                Returns the <code>ans</code> array containing results for each
+                query, where each result represents the number of active servers
+                at the corresponding timestamp.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
