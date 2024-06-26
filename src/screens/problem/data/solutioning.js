@@ -16242,6 +16242,71 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2730: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize variables <code>n</code> (length of string),{" "}
+            <code>ans</code> (to store the maximum length of semi-repetitive
+            substring found), <code>start</code> (pointer to the start of
+            current window), and <code>count</code> (hashmap to count
+            occurrences of characters in the current window).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Iterate through the string with the <code>end</code> pointer,
+            expanding the window to include characters.
+          </li>
+          <li>
+            Update the character count in the <code>count</code> hashmap for the
+            character at index <code>end</code>.
+          </li>
+          <li>
+            Check if the current window (defined by <code>start</code> to{" "}
+            <code>end</code>) is valid (semi-repetitive) using the{" "}
+            <code>isValid</code> method.
+          </li>
+          <li>
+            If the window is not valid, shrink the window from the{" "}
+            <code>start</code> pointer until it becomes valid again.
+          </li>
+          <li>
+            Update <code>ans</code> with the maximum length of valid
+            semi-repetitive substring found so far.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>isValid Method:</strong>
+        <ul>
+          <li>
+            Checks if the current window (represented by the <code>count</code>{" "}
+            hashmap) contains at most two distinct characters with at most one
+            character appearing exactly twice.
+          </li>
+          <li>
+            Returns <code>true</code> if the conditions are satisfied,
+            indicating a valid semi-repetitive substring.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code>, which holds the length of the longest
+            semi-repetitive substring found in the input string <code>s</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
