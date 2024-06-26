@@ -17002,6 +17002,94 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </article>
   ),
+  2134: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        A <strong>swap</strong> is defined as taking two{" "}
+        <strong>distinct</strong> positions in an array and swapping the values
+        in them.
+      </p>
+
+      <p>
+        A <strong>circular</strong> array is defined as an array where we
+        consider the <strong>first</strong> element and the{" "}
+        <strong>last</strong> element to be <strong>adjacent</strong>.
+      </p>
+
+      <p>
+        Given a <strong>binary</strong> <strong>circular</strong> array{" "}
+        <code>nums</code>, return{" "}
+        <em>the minimum number of swaps required to group all </em>
+        <code>1</code>
+        <em>
+          's present in the array together at <strong>any location</strong>
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [0,1,0,1,1,0,0] <br />
+        <strong>Output:</strong> 1 <br />
+        <strong>Explanation:</strong> Here are a few of the ways to group all
+        the 1's together: <br />
+        [0,<u>0</u>,<u>1</u>,1,1,0,0] using 1 swap. <br />
+        [0,1,<u>1</u>,1,<u>0</u>,0,0] using 1 swap. <br />
+        [1,1,0,0,0,0,1] using 2 swaps (using the circular property of the
+        array). <br />
+        There is no way to group all 1's together with 0 swaps. <br />
+        Thus, the minimum number of swaps required is 1.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [0,1,1,1,0,0,1,1,0] <br />
+        <strong>Output:</strong> 2 <br />
+        <strong>Explanation:</strong> Here are a few of the ways to group all
+        the 1's together: <br />
+        [1,1,1,0,0,0,0,1,1] using 2 swaps (using the circular property of the
+        array). <br />
+        [1,1,1,1,1,0,0,0,0] using 2 swaps. <br />
+        There is no way to group all 1's together with 0 or 1 swaps. <br />
+        Thus, the minimum number of swaps required is 2.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,1,0,0,1] <br />
+        <strong>Output:</strong> 0 <br />
+        <strong>Explanation:</strong> All the 1's are already grouped together
+        due to the circular property of the array. <br />
+        Thus, the minimum number of swaps required is 0.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>nums[i]</code> is either <code>0</code> or <code>1</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
