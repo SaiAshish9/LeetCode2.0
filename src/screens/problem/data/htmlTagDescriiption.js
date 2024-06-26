@@ -420,7 +420,7 @@ class Prim {
         using a brute force approach.
       </p>
       <br />
-      <div style={{ width: 810 }} class="wp-caption alignnone">
+      <div style={{ width: "80%" }} class="wp-caption alignnone">
         <img
           alt="Sliding-Window-Technique-copy-(1)"
           height="470"
@@ -528,7 +528,7 @@ class Prim {
         style={{ textAlign: "center", maxHeight: 280 }}
       ></div>
       <div id="GFG_AD_gfg_mobile_336x280_1" style={{ margin: "5px 0" }}></div>
-      <div style={{ width: 810 }} class="wp-caption alignnone">
+      <div style={{ width: "80%" }} class="wp-caption alignnone">
         <img
           alt="sliding-window-1"
           height="400"
@@ -544,7 +544,7 @@ class Prim {
           array:
         </span>
       </p>
-      <div style={{ width: 810 }} class="wp-caption alignnone">
+      <div style={{ width: "80%" }} class="wp-caption alignnone">
         <img
           alt="sliding-window-technique-2"
           height="460"
