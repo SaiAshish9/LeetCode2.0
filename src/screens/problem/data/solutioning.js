@@ -15301,6 +15301,72 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2269: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Convert the integer <code>num</code> to its string representation{" "}
+            <code>s</code> using <code>String.valueOf(num)</code>.
+          </li>
+          <li>
+            Initialize <code>ans</code> to <code>0</code> to store the count of
+            valid substrings.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Iterate through Substrings:</strong>
+        <ul>
+          <li>
+            Use a for loop to iterate through possible starting indices{" "}
+            <code>i</code> of substrings of length <code>k</code>.
+          </li>
+          <li>
+            Ensure the loop condition <code>i + k &lt;= s.length()</code> to
+            stay within the bounds of the string.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Extract and Validate Substrings:</strong>
+        <ul>
+          <li>
+            Inside the loop, extract the substring of length <code>k</code>{" "}
+            starting at index <code>i</code> using{" "}
+            <code>s.substring(i, i + k)</code>.
+          </li>
+          <li>
+            Convert this substring to an integer <code>x</code> using{" "}
+            <code>Integer.parseInt()</code>.
+          </li>
+          <li>
+            Check if <code>x != 0</code> and <code>num % x == 0</code> to
+            determine if <code>x</code> is a valid divisor of <code>num</code>.
+          </li>
+          <li>
+            If both conditions are true, increment <code>ans</code>.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return the Result:</strong>
+        <ul>
+          <li>
+            After the loop completes, <code>ans</code> will contain the count of
+            valid substrings that are divisors of <code>num</code>.
+          </li>
+          <li>
+            Return <code>ans</code> as the result of the function.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
