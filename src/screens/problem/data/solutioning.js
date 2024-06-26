@@ -15572,6 +15572,96 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2401: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>ans</code>: Initialized to 0 to store the maximum length of
+            "nice" subarray found.
+          </li>
+          <li>
+            <code>used</code>: Initialized to 0 to keep track of currently
+            "used" characters in the current window.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            <strong>
+              Outer Loop (<code>for</code> loop):
+            </strong>
+            <ul>
+              <li>
+                Initializes two pointers, <code>left</code> and{" "}
+                <code>right</code>, defining the current window [
+                <code>left</code>, <code>right</code>].
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>
+              Inner Loop (<code>while</code> loop):
+            </strong>
+            <ul>
+              <li>
+                Ensures that the current window [<code>left</code>,{" "}
+                <code>right</code>] is "nice", meaning all elements in this
+                window are either all uppercase or all lowercase (represented by
+                bits set in <code>used</code>).
+              </li>
+              <li>
+                Continues to increment <code>left</code> until the element at{" "}
+                <code>nums[right]</code> can be added to <code>used</code>{" "}
+                without violating the "nice" condition.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>
+              Updating <code>used</code>:
+            </strong>
+            <ul>
+              <li>
+                Once the inner loop finishes and the window [<code>left</code>,{" "}
+                <code>right</code>] is "nice", updates <code>used</code> by
+                adding <code>nums[right]</code> to it (
+                <code>used |= nums[right]</code>).
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Calculating Maximum Length:</strong>
+            <ul>
+              <li>
+                Updates <code>ans</code> to be the maximum of its current value
+                and the length of the current "nice" subarray (
+                <code>right - left + 1</code>).
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            After iterating through all possible windows of the array{" "}
+            <code>nums</code>, <code>ans</code> will contain the length of the
+            longest "nice" subarray found, which is then returned.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
