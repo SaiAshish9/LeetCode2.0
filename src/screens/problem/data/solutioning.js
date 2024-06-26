@@ -14639,6 +14639,64 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1984: (
+    <ul>
+      <li>
+        <strong>Sort the Array:</strong>
+        <ul>
+          <li>
+            Sort the array <code>nums</code> to facilitate the sliding window
+            approach.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Initialize Minimum Difference:</strong>
+        <ul>
+          <li>
+            Initialize <code>minDiff</code> to <code>Integer.MAX_VALUE</code> to
+            keep track of the minimum difference found.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Sliding Window:</strong>
+        <ul>
+          <li>
+            Use a sliding window of size <code>k</code> to find the minimum
+            difference:
+            <ul>
+              <li>
+                Iterate through the sorted array from index <code>0</code> to{" "}
+                <code>nums.length - k</code>.
+              </li>
+              <li>
+                Calculate the difference between the <code>i + k - 1</code>{" "}
+                element and the <code>i</code> element in the current window.
+              </li>
+              <li>
+                Update <code>minDiff</code> with the minimum value between{" "}
+                <code>minDiff</code> and the calculated difference.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            Return <code>minDiff</code> which represents the minimum difference
+            between the highest and lowest scores in any <code>k</code>-length
+            subarray.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
