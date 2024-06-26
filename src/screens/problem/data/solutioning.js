@@ -14879,6 +14879,160 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2106: (
+    <>
+      {" "}
+      <ul>
+        <li>
+          <strong>Initialize Variables:</strong>
+          <ul>
+            <li>
+              <code>maxRight</code>: Calculate the furthest position to the
+              right we need to consider, which is the maximum of{" "}
+              <code>startPos</code> and the furthest fruit position.
+            </li>
+            <li>
+              <code>amounts</code>: An array to store the number of fruits at
+              each position.
+            </li>
+            <li>
+              <code>prefix</code>: An array to store the prefix sums of the{" "}
+              <code>amounts</code> array.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Populate Amounts Array:</strong>
+          <ul>
+            <li>
+              Iterate through the <code>fruits</code> array and fill the{" "}
+              <code>amounts</code> array with the number of fruits at each
+              position.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Calculate Prefix Sum:</strong>
+          <ul>
+            <li>
+              Iterate through the <code>amounts</code> array to fill the{" "}
+              <code>prefix</code> array with cumulative sums of fruits up to
+              each position.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Calculate Maximum Fruits Going Right First:</strong>
+          <ul>
+            <li>
+              Determine the maximum steps to the right we can take, constrained
+              by <code>k</code> and <code>maxRight</code>.
+            </li>
+            <li>
+              For each possible number of right steps, calculate the
+              corresponding left steps we can take within the remaining steps{" "}
+              <code>k</code>.
+            </li>
+            <li>
+              Use the <code>getFruits</code> method to calculate the total
+              fruits collected for each possible combination of left and right
+              steps.
+            </li>
+            <li>
+              Update <code>ans</code> if the current calculation yields more
+              fruits than previously recorded.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Calculate Maximum Fruits Going Left First:</strong>
+          <ul>
+            <li>
+              Determine the maximum steps to the left we can take, constrained
+              by <code>k</code> and <code>startPos</code>.
+            </li>
+            <li>
+              For each possible number of left steps, calculate the
+              corresponding right steps we can take within the remaining steps{" "}
+              <code>k</code>.
+            </li>
+            <li>
+              Use the <code>getFruits</code> method to calculate the total
+              fruits collected for each possible combination of left and right
+              steps.
+            </li>
+            <li>
+              Update <code>ans</code> if the current calculation yields more
+              fruits than previously recorded.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              Return the maximum number of fruits collected within{" "}
+              <code>k</code> steps.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Helper Method: getFruits</h3>
+      <ul>
+        <li>
+          <strong>Inputs:</strong>
+          <ul>
+            <li>
+              <code>startPos</code>: The starting position.
+            </li>
+            <li>
+              <code>maxRight</code>: The furthest position to the right to
+              consider.
+            </li>
+            <li>
+              <code>leftSteps</code>: Number of steps to move left.
+            </li>
+            <li>
+              <code>rightSteps</code>: Number of steps to move right.
+            </li>
+            <li>
+              <code>prefix</code>: The prefix sum array.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Calculate Boundaries:</strong>
+          <ul>
+            <li>
+              <code>l</code>: The left boundary, ensuring it is not less than
+              zero.
+            </li>
+            <li>
+              <code>r</code>: The right boundary, ensuring it does not exceed{" "}
+              <code>maxRight</code>.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Calculate Fruits:</strong>
+          <ul>
+            <li>
+              Return the difference between <code>prefix[r + 1]</code> and{" "}
+              <code>prefix[l]</code> to get the total fruits collected in the
+              range from <code>l</code> to <code>r</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
