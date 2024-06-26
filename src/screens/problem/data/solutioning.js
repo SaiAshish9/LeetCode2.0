@@ -16307,6 +16307,90 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2743: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>n = s.length()</code>: Stores the length of the input string{" "}
+            <code>s</code>.
+          </li>
+          <li>
+            <code>ans</code>: Initialized to zero. It will store the total count
+            of special substrings found.
+          </li>
+          <li>
+            <code>count</code>: An array of size 26 (for each letter from 'a' to
+            'z') to keep track of the count of each character in the current
+            window [j, i].
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            <strong>
+              Outer Loop (<code>i</code> loop):
+            </strong>
+            <ul>
+              <li>
+                Iterates through each character of the string <code>s</code>.
+              </li>
+              <li>
+                <code>k = s.charAt(i) - 'a'</code>: Calculates the index of the
+                current character in the <code>count</code> array.
+              </li>
+              <li>
+                <code>++count[k]</code>: Increments the count of the current
+                character.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>
+              Inner Loop (<code>while</code> loop):
+            </strong>
+            <ul>
+              <li>
+                Ensures that the current substring from <code>j</code> to{" "}
+                <code>i</code> is a special substring:
+              </li>
+              <li>
+                If <code>count[k] &gt; 1</code>, it means the current substring
+                has duplicate characters.
+              </li>
+              <li>
+                In this case, increment <code>j</code> to shrink the window from
+                the left until the substring becomes special again (
+                <code>count[k] &lt;= 1</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Counting Special Substrings:</strong>
+            <ul>
+              <li>
+                For each position <code>i</code>, <code>ans += i - j + 1</code>{" "}
+                adds the number of special substrings ending at position{" "}
+                <code>i</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Returns <code>ans</code>, which represents the total count of
+            special substrings in the string <code>s</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
