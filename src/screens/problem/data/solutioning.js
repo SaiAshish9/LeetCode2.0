@@ -15836,6 +15836,112 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2524: (
+    <>
+      {" "}
+      <h2>
+        Code Explanation for <code>maxFrequencyScore</code> Method
+      </h2>
+      <ul>
+        <li>
+          Initialize constants and data structures:
+          <ul>
+            <li>
+              <code>final int mod = (int) 1e9 + 7;</code> - Modulo value for
+              calculations to avoid overflow.
+            </li>
+            <li>
+              <code>
+                Map&lt;Integer, Integer&gt; count = new HashMap&lt;&gt;();
+              </code>{" "}
+              - Frequency map to store counts of elements in the current window.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Initialize frequency map for the first window:
+          <ul>
+            <li>
+              Iterate through the first <code>k</code> elements and populate the
+              frequency map.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Calculate the initial frequency score for the first window:
+          <ul>
+            <li>
+              Use the <code>qmi</code> method to compute the frequency score for
+              each element and accumulate it.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Slide the window through the array:
+          <ul>
+            <li>
+              For each new element in the window (from <code>k</code> to the end
+              of the array), update the frequency map and current score.
+            </li>
+            <li>
+              If the element leaving the window is different from the new
+              element entering the window:
+              <ul>
+                <li>
+                  Update the current score by removing the effect of the leaving
+                  element and adding the effect of the new element.
+                </li>
+                <li>Update the frequency map accordingly.</li>
+                <li>
+                  Update the maximum score if the current score is greater.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Return the maximum frequency score:
+          <ul>
+            <li>
+              <code>return (int) ans;</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>
+        Code Explanation for <code>qmi</code> Method
+      </h2>
+      <ul>
+        <li>
+          The <code>qmi</code> method is used to compute <code>a^k % p</code>{" "}
+          using the method of exponentiation by squaring:
+          <ul>
+            <li>
+              Initialize <code>res</code> to 1.
+            </li>
+            <li>
+              While <code>k</code> is not zero:
+              <ul>
+                <li>
+                  If the current bit of <code>k</code> is set, multiply{" "}
+                  <code>res</code> by <code>a</code> modulo <code>p</code>.
+                </li>
+                <li>
+                  Right shift <code>k</code> by 1 bit.
+                </li>
+                <li>
+                  Square <code>a</code> modulo <code>p</code>.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Return the result <code>res</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
