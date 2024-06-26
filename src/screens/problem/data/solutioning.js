@@ -16013,6 +16013,76 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2537: (
+    <ul>
+      <li>
+        Method Overview:
+        <ul>
+          <li>
+            <code>public long countGood(int[] nums, int k)</code>: Computes the
+            number of "good" subarrays with at most <code>k</code> pairs.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Initialization:
+        <ul>
+          <li>
+            <code>long ans = 0;</code>: Variable to accumulate the count of
+            "good" subarrays.
+          </li>
+          <li>
+            <code>int pairs = 0;</code>: Keeps track of the number of pairs
+            encountered.
+          </li>
+          <li>
+            <code>{`Map<Integer, Integer> count = new HashMap<>();`}</code>:
+            HashMap to store the count of each element in the current window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Sliding Window Technique:
+        <ul>
+          <li>
+            Two pointers approach: <code>left</code> and <code>right</code>{" "}
+            pointers are used to represent the current window of elements in{" "}
+            <code>nums</code>.
+          </li>
+          <li>
+            <strong>
+              Adding to <code>pairs</code>:
+            </strong>{" "}
+            Increment <code>pairs</code> by the count of{" "}
+            <code>nums[right]</code> in <code>count</code>, and update its count
+            in <code>count</code>.
+          </li>
+          <li>
+            <strong>Adjusting window size:</strong> While{" "}
+            <code>pairs &gt;= k</code>, move <code>left</code> pointer to reduce
+            the number of pairs until it is less than <code>k</code>.
+          </li>
+          <li>
+            <strong>
+              Calculating <code>ans</code>:
+            </strong>{" "}
+            Add <code>left</code> to <code>ans</code> after adjusting the
+            window. This counts all subarrays ending at <code>right</code> that
+            satisfy the condition of having at most <code>k</code> pairs.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Return:
+        <ul>
+          <li>
+            Finally, return <code>ans</code>, which represents the total number
+            of "good" subarrays in <code>nums</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
