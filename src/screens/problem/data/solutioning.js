@@ -16874,6 +16874,73 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2875: (
+    <ul>
+      <li>
+        <strong>Calculate Total Sum and Initial Setup:</strong>
+        <ul>
+          <li>
+            Compute the total sum of elements in <code>nums</code>.
+          </li>
+          <li>
+            Determine the length <code>n</code> of <code>nums</code>.
+          </li>
+          <li>
+            Compute <code>remainingTarget</code> and <code>repeatLength</code>{" "}
+            based on <code>target</code> and <code>sum</code>.
+          </li>
+          <li>
+            If <code>remainingTarget</code> is <code>0</code>, return{" "}
+            <code>repeatLength</code> as the entire array can be repeated enough
+            times to meet the target sum.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Prefix Sum Technique with HashMap:</strong>
+        <ul>
+          <li>
+            Initialize <code>suffixPlusPrefixLength</code> to <code>n</code>.
+          </li>
+          <li>
+            Initialize <code>prefix</code> to <code>0</code> and{" "}
+            <code>prefixToIndex</code> to store prefix sums and their indices.
+          </li>
+          <li>
+            Iterate through <code>2 * n</code> (doubling the array size to
+            handle potential wrap-around).
+          </li>
+          <li>
+            Update <code>prefix</code> by adding elements of <code>nums</code>{" "}
+            using modulo to cycle through the array.
+          </li>
+          <li>
+            Check if <code>prefixToIndex</code> contains{" "}
+            <code>prefix - remainingTarget</code> and update{" "}
+            <code>suffixPlusPrefixLength</code> accordingly.
+          </li>
+          <li>
+            Update <code>prefixToIndex</code> with the current{" "}
+            <code>prefix</code> and its index.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            If <code>suffixPlusPrefixLength</code> remains <code>n</code>,
+            return <code>-1</code> indicating no subarray meets the target sum.
+          </li>
+          <li>
+            Otherwise, return <code>repeatLength + suffixPlusPrefixLength</code>
+            , combining the length of repeated arrays and the length of the
+            subarray found.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
