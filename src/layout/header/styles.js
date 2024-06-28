@@ -203,7 +203,7 @@ export const NavItemContainer = styled.div`
 
 export const OptionsContainer = styled.div`
   display: flex;
-  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     display: none;
   }
 `;
@@ -212,7 +212,7 @@ export const CircularContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media only screen and (max-width: ${BREAKPOINTS.x175}) {
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     display: none;
   }
 `;
@@ -274,7 +274,7 @@ export const BarsIcon = styled(HiBars3)`
   font-size: 24px;
   align-self: center;
   cursor: pointer;
-  @media only screen and (min-width: ${BREAKPOINTS.x175}) {
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
     display: none;
   }
   ${({ w }) =>
@@ -288,7 +288,7 @@ export const CloseIcon = styled(IoMdClose)`
   font-size: 24px;
   align-self: center;
   cursor: pointer;
-  @media only screen and (min-width: ${BREAKPOINTS.x175}) {
+  @media only screen and (min-width: ${BREAKPOINTS.lg}) {
     display: none;
   }
   ${({ w }) =>

@@ -54,7 +54,7 @@ const options = [
     route: "/cn_and_os",
   },
   {
-    text: "Quick Revision Sheet",
+    text: "Revision Sheet",
     route: "/quick",
   },
 ];
