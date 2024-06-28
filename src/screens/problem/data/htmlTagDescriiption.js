@@ -1126,6 +1126,14 @@ class BST {
 }
 `}</code>
       </pre>
+      <br />
+      <p>
+        The time complexity of inorder traversal is O(n), as each node is
+        visited once. <br />
+        The Auxiliary space is O(n), as we use a stack to store nodes for
+        recursion.
+      </p>
+      <br />
       <h3>2. Deletion</h3> <br />
       <p>Delete a value from the BST.</p> <br />
       <pre>
