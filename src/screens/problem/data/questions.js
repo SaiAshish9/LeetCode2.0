@@ -21473,6 +21473,73 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  3090: (
+    <div class="elfjS" data-track-load="description_content">
+      Given a string <code>s</code>, return the <strong>maximum</strong> length
+      of a{" "}
+      <span
+        data-keyword="substring"
+        class=" cursor-pointer relative text-dark-blue-s text-sm"
+      >
+        <div class="popover-wrapper inline-block" data-headlessui-state="">
+          <div>
+            <div
+              aria-expanded="false"
+              data-headlessui-state=""
+              id="headlessui-popover-button-:rt:"
+            >
+              <div>substring</div>
+            </div>
+          </div>
+        </div>
+      </span>
+      &nbsp;such that it contains <em>at most two occurrences</em> of each
+      character.
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre class="example-block">
+        <strong>Input:</strong> <span class="example-io">s = "bcbbbcba"</span>
+        <br />
+        <strong>Output:</strong> <span class="example-io">4</span> <br />
+        <strong>Explanation:</strong>
+        The following substring has a length of 4 and contains at most two
+        occurrences of each character:{" "}
+        <code>
+          "bcbb<u>bcba</u>"
+        </code>
+        .
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <pre class="example-block">
+        <strong>Input:</strong> <span class="example-io">s = "aaaa"</span>{" "}
+        <br />
+        <strong>Output:</strong> <span class="example-io">2</span> <br />
+        <strong>Explanation:</strong>
+        The following substring has a length of 2 and contains at most two
+        occurrences of each character:{" "}
+        <code>
+          "<u>aa</u>aa"
+        </code>
+        .
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>2 &lt;= s.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>s</code> consists only of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;

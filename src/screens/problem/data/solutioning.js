@@ -17899,6 +17899,48 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  3090: (
+    <>
+      {" "}
+      <h3>Steps:</h3>
+      <ul>
+        <li>
+          Initialize variables: <code>ans</code> to store the maximum length
+          found, and <code>count</code> array to keep track of character
+          frequencies.
+        </li>
+        <li>
+          Use two pointers, <code>left</code> and <code>right</code>, to
+          represent the current window of characters.
+        </li>
+        <li>
+          Expand the window by moving <code>right</code> to the right and update{" "}
+          <code>count</code> for the corresponding character.
+        </li>
+        <li>
+          If adding the current character exceeds the allowed frequency, move{" "}
+          <code>left</code> to the right until the window meets the condition
+          (at most two instances of each character).
+        </li>
+        <li>
+          Update <code>ans</code> to be the maximum of its current value or the
+          length of the current valid substring.
+        </li>
+        <li>Continue until the end of the string is reached.</li>
+      </ul>
+      <h3>Key Components:</h3>
+      <ul>
+        <li>
+          <code>Sliding Window Technique</code>: Efficiently maintains a window
+          of characters and adjusts it based on the problem's constraints.
+        </li>
+        <li>
+          <code>Count Array</code>: Tracks character frequencies in the current
+          window to ensure each character appears at most twice.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
