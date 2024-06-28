@@ -17833,6 +17833,44 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  3086: (
+    <>
+      {" "}
+      <h3>Steps:</h3>
+      <ul>
+        <li>Initialize necessary variables and lists.</li>
+        <li>Collect indices of 1s and compute prefix sums of these indices.</li>
+        <li>
+          Determine the range of 1s allowed around the median index based on the
+          constraints.
+        </li>
+        <li>
+          Iterate through possible configurations of 1s and calculate the cost
+          to achieve each configuration.
+        </li>
+        <li>
+          Update and maintain the minimum cost found across all configurations.
+        </li>
+        <li>Return the minimum cost.</li>
+      </ul>
+      <h3>Key Components:</h3>
+      <ul>
+        <li>
+          <code>oneIndices</code>: List to store indices where{" "}
+          <code>nums[i] == 1</code>.
+        </li>
+        <li>
+          <code>prefix</code>: List to store cumulative sums of indices where{" "}
+          <code>1</code>s are located.
+        </li>
+        <li>
+          <code>cost1</code> and <code>cost2</code>: Calculate the cost to make
+          adjustments to <code>nums</code> based on the selected configuration
+          of <code>1</code>s.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
