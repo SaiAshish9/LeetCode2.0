@@ -21540,6 +21540,237 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  3095: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an array <code>nums</code> of{" "}
+        <strong>non-negative</strong> integers and an integer <code>k</code>.
+      </p>
+
+      <p>
+        An array is called <strong>special</strong> if the bitwise{" "}
+        <code>OR</code> of all of its elements is <strong>at least</strong>{" "}
+        <code>k</code>.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the length of the <strong>shortest</strong> <strong>special</strong>{" "}
+          <strong>non-empty</strong>{" "}
+          <span
+            data-keyword="subarray-nonempty"
+            class=" cursor-pointer relative text-dark-blue-s text-sm"
+          >
+            <div class="popover-wrapper inline-block" data-headlessui-state="">
+              <div>
+                <div
+                  aria-expanded="false"
+                  data-headlessui-state=""
+                  id="headlessui-popover-button-:rj:"
+                >
+                  <div>subarray</div>
+                </div>
+              </div>
+            </div>
+          </span>{" "}
+          of
+        </em>{" "}
+        <code>nums</code>, <em>or return</em> <code>-1</code>{" "}
+        <em>if no special subarray exists</em>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [1,2,3], k = 2</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">1</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <p>
+          The subarray <code>[3]</code> has <code>OR</code> value of{" "}
+          <code>3</code>. Hence, we return <code>1</code>.
+        </p>
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [2,1,8], k = 10</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">3</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <p>
+          The subarray <code>[2,1,8]</code> has <code>OR</code> value of{" "}
+          <code>11</code>. Hence, we return <code>3</code>.
+        </p>
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [1,2], k = 0</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">1</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <p>
+          The subarray <code>[1]</code> has <code>OR</code> value of{" "}
+          <code>1</code>. Hence, we return <code>1</code>.
+        </p>
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= nums.length &lt;= 50</code>
+        </li>
+        <li>
+          <code>0 &lt;= nums[i] &lt;= 50</code>
+        </li>
+        <li>
+          <code>0 &lt;= k &lt; 64</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  3097: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an array <code>nums</code> of{" "}
+        <strong>non-negative</strong> integers and an integer <code>k</code>.
+      </p>
+
+      <p>
+        An array is called <strong>special</strong> if the bitwise{" "}
+        <code>OR</code> of all of its elements is <strong>at least</strong>{" "}
+        <code>k</code>.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the length of the <strong>shortest</strong> <strong>special</strong>{" "}
+          <strong>non-empty</strong>{" "}
+          <span
+            data-keyword="subarray-nonempty"
+            class=" cursor-pointer relative text-dark-blue-s text-sm"
+          >
+            <div class="popover-wrapper inline-block" data-headlessui-state="">
+              <div>
+                <div
+                  aria-expanded="false"
+                  data-headlessui-state=""
+                  id="headlessui-popover-button-:rj:"
+                >
+                  <div>subarray</div>
+                </div>
+              </div>
+            </div>
+          </span>{" "}
+          of
+        </em>{" "}
+        <code>nums</code>, <em>or return</em> <code>-1</code>{" "}
+        <em>if no special subarray exists</em>.
+      </p>
+
+      <strong class="example">Example 1:</strong>
+
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [1,2,3], k = 2</span> <br />
+        <strong>Output:</strong> <span class="example-io">1</span> <br />
+        <strong>Explanation:</strong>
+        The subarray <code>[3]</code> has <code>OR</code> value of{" "}
+        <code>3</code>. Hence, we return <code>1</code>.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [2,1,8], k = 10</span> <br />
+        <strong>Output:</strong> <span class="example-io">3</span> <br />
+        <strong>Explanation:</strong>
+        The subarray <code>[2,1,8]</code> has <code>OR</code> value of{" "}
+        <code>11</code>. Hence, we return <code>3</code>.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [1,2], k = 0</span> <br />
+        <strong>Output:</strong> <span class="example-io">1</span> <br />
+        <strong>Explanation:</strong>
+        <p>
+          The subarray <code>[1]</code> has <code>OR</code> value of{" "}
+          <code>1</code>. Hence, we return <code>1</code>.
+        </p>
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 2 * 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= nums[i] &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= k &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
