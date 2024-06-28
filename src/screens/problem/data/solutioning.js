@@ -17026,8 +17026,8 @@ const SOLUTIONING = {
             pattern array.
           </li>
           <li>
-            <code>int half = m &gt;&gt; 1;</code>: Calculate half the length of the
-            pattern (<code>m / 2</code>).
+            <code>int half = m &gt;&gt; 1;</code>: Calculate half the length of
+            the pattern (<code>m / 2</code>).
           </li>
           <li>
             <code>long mask1 = (1L &lt;&lt; half) - 1;</code>: Create a mask (
@@ -17110,6 +17110,88 @@ const SOLUTIONING = {
             If no match is found immediately, the loop continues indefinitely,
             continuously updating <code>x</code> and <code>y</code> with new
             bits from the stream.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  3037: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>int[] lps = getLPS(pattern);</code>: Computes the Longest
+            Prefix Suffix (LPS) array for the given pattern using the helper
+            method <code>getLPS</code>.
+          </li>
+          <li>
+            <code>int i = 0;</code>: Initializes <code>i</code> to track the
+            index in the stream.
+          </li>
+          <li>
+            <code>int j = 0;</code>: Initializes <code>j</code> to track the
+            index in the pattern.
+          </li>
+          <li>
+            <code>int bit = 0;</code>: Stores the current bit read from the
+            stream.
+          </li>
+          <li>
+            <code>boolean readNext = false;</code>: Flag to control when to read
+            the next bit from the stream.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Pattern Matching in Infinite Stream:</strong>
+        <ul>
+          <li>
+            The method enters an infinite loop where it continuously compares
+            bits from the stream with the corresponding bits in the pattern.
+          </li>
+          <li>
+            If bits match, it increments <code>i</code> and <code>j</code>. If{" "}
+            <code>j</code> reaches the end of the pattern, it returns the
+            starting index of the pattern in the stream.
+          </li>
+          <li>
+            If there is a mismatch after some matches, it updates <code>j</code>{" "}
+            using the LPS array to skip unnecessary comparisons.
+          </li>
+          <li>
+            If there is no match and <code>j</code> is <code>0</code>, it simply
+            increments <code>i</code> and prepares to read the next bit from the
+            stream.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Handling Input:</strong>
+        <ul>
+          <li>
+            Reads bits from the stream using <code>stream.next()</code> and
+            stores them in <code>bit</code>.
+          </li>
+          <li>
+            <code>readNext</code> is used to control when the next bit should be
+            read to ensure efficiency in accessing the stream.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Helper Method <code>getLPS</code>:
+        </strong>
+        <ul>
+          <li>
+            Computes the LPS array, where <code>lps[i]</code> indicates the
+            length of the longest prefix which is also a suffix for the
+            substring <code>pattern[0..i]</code>.
+          </li>
+          <li>
+            Iterates through the pattern and adjusts <code>j</code> to find the
+            longest prefix that matches the suffix using a while loop.
           </li>
         </ul>
       </li>
