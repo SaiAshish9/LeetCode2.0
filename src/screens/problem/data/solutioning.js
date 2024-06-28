@@ -16941,6 +16941,77 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2902: (
+    <ul>
+      <li>
+        <strong>Dynamic Programming Setup (dp Array):</strong>
+        <ul>
+          <li>
+            <code>dp[i]</code>: Represents the number of sub-multisets with sum{" "}
+            <code>i</code>.
+          </li>
+          <li>
+            Initialize <code>dp[0]</code> to <code>1</code> because there's one
+            way to have a sum of <code>0</code> (by choosing an empty
+            sub-multiset).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Counting Element Frequencies (count Map):</strong>
+        <ul>
+          <li>
+            Use a <code>HashMap</code> named <code>count</code> to store the
+            frequency of each element in <code>nums</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Handling Zeroes in <code>nums</code>:
+        </strong>
+        <ul>
+          <li>
+            Check if there are any zeros in <code>nums</code> (
+            <code>count.containsKey(0)</code>). If yes, remove them from{" "}
+            <code>count</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Iterating Over Elements in <code>count</code>:
+        </strong>
+        <ul>
+          <li>
+            For each element (<code>num</code>) and its frequency (
+            <code>freq</code>) in <code>count</code>, calculate how many times{" "}
+            <code>num</code> can be added to existing sub-multisets (
+            <code>stride</code> array).
+          </li>
+          <li>
+            Update the <code>dp</code> array based on the constraints{" "}
+            <code>[l, r]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculating the Final Result:</strong>
+        <ul>
+          <li>
+            Sum up the values in <code>dp</code> from <code>l</code> to{" "}
+            <code>r</code> to get the total count of valid sub-multisets.
+          </li>
+          <li>
+            Multiply this sum by <code>(zeros + 1)</code> (adding one to account
+            for the empty sub-multiset) and take modulo{" "}
+            <code>1,000,000,007</code> (<code>kMod</code>) to handle large
+            numbers.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
