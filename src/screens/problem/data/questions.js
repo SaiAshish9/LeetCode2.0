@@ -21617,22 +21617,15 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [1,2], k = 0</span>
-        </p>{" "}
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [1,2], k = 0</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">1</span>
-        </p>{" "}
+        <strong>Output:</strong> <span class="example-io">1</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>
-        <p>
-          The subarray <code>[1]</code> has <code>OR</code> value of{" "}
-          <code>1</code>. Hence, we return <code>1</code>.
-        </p>
+        <strong>Explanation:</strong>
+        <br />
+        The subarray <code>[1]</code> has <code>OR</code> value of{" "}
+        <code>1</code>. Hence, we return <code>1</code>.
       </pre>
 
       <p>&nbsp;</p>

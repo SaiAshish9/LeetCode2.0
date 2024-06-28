@@ -17941,6 +17941,159 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  3095: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>kMax</code> is set to <code>50</code>, assuming the maximum
+            possible value of <code>k</code>.
+          </li>
+          <li>
+            <code>n</code> is the length of the array <code>nums</code>.
+          </li>
+          <li>
+            <code>ans</code> is initialized to <code>n + 1</code>, which will
+            eventually hold the minimum length of the subarray satisfying the
+            condition.
+          </li>
+          <li>
+            <code>ors</code> is initialized to <code>0</code>, which stores the
+            current bitwise OR of the elements in the current window.
+          </li>
+          <li>
+            <code>count</code> is an array of size <code>kMax + 1</code> used to
+            count occurrences of each bit position in the current window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Iterate over the array using two pointers <code>l</code> (left) and{" "}
+            <code>r</code> (right). Expand <code>r</code> to include more
+            elements in the current window.
+          </li>
+          <li>
+            Update <code>ors</code> using <code>orNum</code> function which
+            modifies the <code>count</code> array based on the bitwise OR of{" "}
+            <code>nums[r]</code>.
+          </li>
+          <li>
+            If <code>ors</code> (the current OR value) is greater than or equal
+            to <code>k</code>, attempt to shrink the window from the left (
+            <code>l</code>) to find the minimum length subarray.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Functions:</strong>
+        <ul>
+          <li>
+            <code>orNum</code>: Updates <code>count</code> array and returns the
+            new bitwise OR value (<code>ors</code>) after including{" "}
+            <code>num</code> in the window.
+          </li>
+          <li>
+            <code>undoOrNum</code>: Updates <code>count</code> array and returns
+            the new bitwise OR value (<code>ors</code>) after removing{" "}
+            <code>num</code> from the window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            If <code>ans</code> remains <code>n + 1</code> after the loop, it
+            means no valid subarray was found, so return <code>-1</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  3097: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>kMax</code> is set to <code>50</code>, representing the
+            maximum possible value for <code>k</code>.
+          </li>
+          <li>
+            <code>n</code> is the length of the input array <code>nums</code>.
+          </li>
+          <li>
+            <code>ans</code> is initialized to <code>n + 1</code>, which will
+            store the minimum length of the subarray satisfying the condition.
+          </li>
+          <li>
+            <code>ors</code> is initialized to <code>0</code>, which keeps track
+            of the current bitwise OR of elements in the current window.
+          </li>
+          <li>
+            <code>count</code> is an array of size <code>kMax + 1</code> used to
+            count occurrences of each bit position in the current window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>left</code> and <code>right</code>, to
+            represent the current window in the array <code>nums</code>.
+          </li>
+          <li>
+            Expand the window by moving <code>right</code> to include more
+            elements until <code>ors</code> (the current OR value) is greater
+            than or equal to <code>k</code>.
+          </li>
+          <li>
+            Once <code>ors</code> meets or exceeds <code>k</code>, attempt to
+            shrink the window from the left (<code>left</code>) to find the
+            minimum length subarray that satisfies the condition.
+          </li>
+          <li>
+            Update <code>ans</code> with the minimum length found as the window
+            is adjusted.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Bitwise Operations:</strong>
+        <ul>
+          <li>
+            <code>orNum</code> method updates the <code>count</code> array and
+            returns the new bitwise OR value (<code>ors</code>) after including{" "}
+            <code>num</code> in the window.
+          </li>
+          <li>
+            <code>undoOrNum</code> method updates the <code>count</code> array
+            and returns the new bitwise OR value (<code>ors</code>) after
+            removing <code>num</code> from the window.
+          </li>
+          <li>
+            These methods handle bitwise operations efficiently within the
+            sliding window to maintain and update the OR value.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            If <code>ans</code> remains <code>n + 1</code> after the loop, it
+            indicates that no valid subarray meets the condition, so return{" "}
+            <code>-1</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
