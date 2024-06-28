@@ -17783,6 +17783,56 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  3013: (
+    <>
+      {" "}
+      <h3>Multiset Class</h3>
+      <ul>
+        <li>
+          <code>add(int num)</code>: Adds a number to the multiset.
+        </li>
+        <li>
+          <code>remove(int num)</code>: Removes a number from the multiset.
+        </li>
+        <li>
+          <code>min()</code>: Returns the smallest number in the multiset.
+        </li>
+        <li>
+          <code>max()</code>: Returns the largest number in the multiset.
+        </li>
+        <li>
+          <code>size()</code>: Returns the current size of the multiset.
+        </li>
+        <li>
+          <code>contains(int num)</code>: Checks if a number exists in the
+          multiset.
+        </li>
+      </ul>
+      <h3>Solution Class</h3>
+      <ul>
+        <li>
+          <code>minimumCost(int[] nums, int k, int dist)</code>: Computes the
+          minimum cost adjustment.
+        </li>
+        <li>
+          <code>
+            balance(long windowSum, Multiset selected, Multiset candidates, int
+            k)
+          </code>
+          : Balances the multiset <code>selected</code> to maintain the top{" "}
+          <code>k-1</code> smallest numbers.
+        </li>
+        <li>
+          Uses a sliding window technique to iterate through <code>nums</code>{" "}
+          and adjust <code>windowSum</code> accordingly.
+        </li>
+        <li>
+          Updates <code>minWindowSum</code> with the minimum{" "}
+          <code>windowSum</code> encountered.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
