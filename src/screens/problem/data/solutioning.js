@@ -17352,6 +17352,112 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2932: (
+    <ul>
+      <li>
+        <strong>TrieNode Class:</strong>
+        <ul>
+          <li>
+            Represents a node in the Trie with left (<code>0</code>) and right (
+            <code>1</code>) children.
+          </li>
+          <li>
+            Stores <code>min</code> and <code>max</code> values to optimize XOR
+            calculations.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>BitTrie Class:</strong>
+        <ul>
+          <li>
+            Manages Trie operations for inserting numbers and finding maximum
+            XOR.
+          </li>
+          <li>
+            <code>insert(int num)</code>: Inserts <code>num</code> into Trie and
+            updates node values.
+          </li>
+          <li>
+            <code>getMaxXor(int x)</code>: Finds maximum XOR with <code>x</code>{" "}
+            using Trie traversal.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution Class:</strong>
+        <ul>
+          <li>
+            <code>maximumStrongPairXor(int[] nums)</code>: Computes maximum XOR
+            using <code>BitTrie</code>.
+          </li>
+          <li>
+            Calculates <code>maxBit</code> based on the maximum number in{" "}
+            <code>nums</code>.
+          </li>
+          <li>
+            Initializes and inserts numbers into <code>BitTrie</code>.
+          </li>
+          <li>
+            Iterates through <code>nums</code> to find and update maximum XOR.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  2935: (
+    <ul>
+      <li>
+        <strong>TrieNode Class:</strong>
+        <ul>
+          <li>
+            Represents a node in the Trie with left (<code>0</code>) and right (
+            <code>1</code>) children.
+          </li>
+          <li>
+            Stores <code>min</code> and <code>max</code> values to optimize XOR
+            calculations.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>BitTrie Class:</strong>
+        <ul>
+          <li>
+            Manages Trie operations for inserting numbers and finding maximum
+            XOR.
+          </li>
+          <li>
+            <code>insert(int num)</code>: Inserts <code>num</code> into Trie and
+            updates node values.
+          </li>
+          <li>
+            <code>getMaxXor(int x)</code>: Finds maximum XOR with <code>x</code>{" "}
+            using Trie traversal.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution Class:</strong>
+        <ul>
+          <li>
+            <code>maximumStrongPairXor(int[] nums)</code>: Computes maximum XOR
+            using <code>BitTrie</code>.
+          </li>
+          <li>
+            Calculates <code>maxBit</code> based on the maximum number in{" "}
+            <code>nums</code>.
+          </li>
+          <li>
+            Initializes and inserts numbers into <code>BitTrie</code>.
+          </li>
+          <li>
+            Iterates through <code>nums</code> to find and update maximum XOR.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
