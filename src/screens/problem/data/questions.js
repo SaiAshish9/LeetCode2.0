@@ -19933,47 +19933,36 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">initial = "abcde", target = "cdef"</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">initial = "abcde", target = "cdef"</span>
         <br />
-        <p>
-          <strong>Output:</strong> 3
-        </p>{" "}
+        <strong>Output:</strong> 3
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
+        <br />
         <p>
           Remove <code>'a'</code> and <code>'b'</code> from the beginning of{" "}
           <code>initial</code>, then add <code>'f'</code> to the end.
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">initial = "axxy", target = "yabx"</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">initial = "axxy", target = "yabx"</span>
         <br />
-        <p>
-          <strong>Output:</strong> 6
-        </p>{" "}
+        <strong>Output:</strong> 6
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong> <br />
         <table border="1">
           <tbody>
             <tr>
-              <th>Operation</th>
-              <th>Resulting String</th>
+              <th style={{ textAlign: "start" }}>Operation</th>
+              <th style={{ textAlign: "start" }}>Resulting String</th>
             </tr>
             <tr>
               <td>
@@ -20019,27 +20008,21 @@ for (int i = 0; i &lt; actualLength; i++) {
             </tr>
           </tbody>
         </table>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">initial = "xyz", target = "xyz"</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">initial = "xyz", target = "xyz"</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">0</span>
-        </p>{" "}
+        <strong>Output:</strong> <span class="example-io">0</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong> <br />
         <p>No operations are needed as the strings are already equal.</p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
