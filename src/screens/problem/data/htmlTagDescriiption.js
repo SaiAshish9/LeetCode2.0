@@ -1186,6 +1186,91 @@ int minValue(TreeNode root) {
         finding the minimum value in the right child of the node.
       </p>
       <br />
+      <h3>Iteraive Approach:</h3>
+      <br />
+      <pre>
+        <code>{`class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    
+    public TreeNode(int val) {
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class Solution {
+    public TreeNode deleteNode(TreeNode root, int key) {
+        TreeNode parent = null;
+        TreeNode current = root;
+        
+        // Search for the node to delete
+        while (current != null && current.val != key) {
+            parent = current;
+            if (key < current.val)
+                current = current.left;
+            else
+                current = current.right;
+        }
+        
+        // If key is not found
+        if (current == null)
+            return root;
+        
+        // Case 1: Node to be deleted has no children (leaf node)
+        if (current.left == null && current.right == null) {
+            if (current != root) {
+                if (parent.left == current)
+                    parent.left = null;
+                else
+                    parent.right = null;
+            } else {
+                root = null;
+            }
+        }
+        // Case 2: Node to be deleted has one child
+        else if (current.left == null) {
+            if (current != root) {
+                if (parent.left == current)
+                    parent.left = current.right;
+                else
+                    parent.right = current.right;
+            } else {
+                root = current.right;
+            }
+        } else if (current.right == null) {
+            if (current != root) {
+                if (parent.left == current)
+                    parent.left = current.left;
+                else
+                    parent.right = current.left;
+            } else {
+                root = current.left;
+            }
+        }
+        // Case 3: Node to be deleted has two children
+        else {
+            TreeNode successor = findSuccessor(current);
+            int temp = successor.val;
+            deleteNode(root, successor.val); 
+            current.val = temp; 
+        }
+        
+        return root;
+    }
+    
+    private TreeNode findSuccessor(TreeNode node) {
+        TreeNode successor = node.right;
+        while (successor.left != null)
+            successor = successor.left;
+        return successor;
+    }
+}
+`}</code>
+      </pre>
+      <br />
       <h3>3. Search</h3> <br />
       <p>Search for a value in the BST.</p>
       <br />
