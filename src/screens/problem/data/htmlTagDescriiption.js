@@ -903,6 +903,83 @@ class Prim {
           Both the left and right subtrees must also be binary search trees.
         </li>
       </ul>
+      <p>
+        In a balanced Binary Search Tree (BST), operations such as insertion,
+        deletion, and search are O(log n) because of the tree's hierarchical
+        structure and balanced properties. Here’s why O(log n) complexity is
+        achieved:
+      </p>
+      <ul>
+        <li>
+          <strong>Hierarchical Structure:</strong>
+          <ul>
+            <li>
+              In a Binary Search Tree (BST), each node has at most two children:
+              a left child and a right child.
+            </li>
+            <li>
+              This hierarchical structure allows for efficient searching by
+              recursively comparing the target value with nodes and deciding the
+              next subtree to explore based on comparisons.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Balanced Property:</strong>
+          <ul>
+            <li>
+              To achieve O(log n) complexity, the BST must maintain a balanced
+              structure.
+            </li>
+            <li>
+              A balanced BST ensures that the height of the tree remains
+              logarithmic relative to the number of nodes (n), typically
+              ensuring that the height is proportional to log(n).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Depth of Tree:</strong>
+          <ul>
+            <li>
+              In a balanced BST, the depth (or height) of the tree is
+              approximately log base 2 of n.
+            </li>
+            <li>
+              At each level of the tree, the number of nodes can roughly double
+              or halve, depending on whether traversing down the left or right
+              subtree, contributing to the logarithmic height.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Operations Complexity:</strong>
+          <ul>
+            <li>
+              <strong>Search:</strong> Starting from the root, searching for a
+              node involves recursively descending either left or right,
+              reducing the search space by half at each step (O(log n) time
+              complexity).
+            </li>
+            <li>
+              <strong>Insertion and Deletion:</strong> After finding the correct
+              position (O(log n)), insertion and deletion operations are
+              typically O(1) at that position, assuming no rebalancing is needed
+              immediately.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Use Cases:</strong>
+          <ul>
+            <li>
+              BSTs are used in applications requiring fast search, insertion,
+              and deletion operations, such as databases, compilers, and
+              implementing data structures like sets and maps.
+            </li>
+          </ul>
+        </li>
+      </ul>
       <h2>Properties of a BST</h2>
       <ul>
         <li>
@@ -923,7 +1000,9 @@ class Prim {
       <h2>Operations on a BST</h2>
       <br />
       <h3>1. Insertion</h3>
+      <br />
       <p>Insert a new value into the BST.</p>
+      <br />
       <pre>
         <code>
           {`class TreeNode {
@@ -972,7 +1051,7 @@ class BST {
         <li>Worst case: O(n) (if the tree becomes skewed)</li>
       </ul>
       <h3>2. Deletion</h3> <br />
-      <p>Delete a value from the BST.</p>
+      <p>Delete a value from the BST.</p> <br />
       <pre>
         <code>
           {`void delete(int value) {
@@ -1017,6 +1096,12 @@ int minValue(TreeNode root) {
         <li>Average case: O(log n)</li>
         <li>Worst case: O(n)</li>
       </ul>
+      <p>
+        Note: Inorder successor is needed only when the right child is not
+        empty. In this particular case, the inorder successor can be obtained by
+        finding the minimum value in the right child of the node.
+      </p>
+      <br />
       <h3>3. Search</h3> <br />
       <p>Search for a value in the BST.</p>
       <pre>
