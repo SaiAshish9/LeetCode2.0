@@ -1050,6 +1050,82 @@ class BST {
         <li>Average case: O(log n)</li>
         <li>Worst case: O(n) (if the tree becomes skewed)</li>
       </ul>
+      <h3>Iterative Approach:</h3> <br />
+      <pre>
+        <code>{`import java.io.*;
+import java.util.*;
+
+class GFG {
+
+	public static void main(String[] args)
+	{
+		BST tree = new BST();
+		tree.insert(30);
+		tree.insert(50);
+		tree.insert(15);
+		tree.insert(20);
+		tree.insert(10);
+		tree.insert(40);
+		tree.insert(60);
+
+		tree.inorder();
+	}
+}
+
+class Node {
+	Node left;
+	int val;
+	Node right;
+	Node(int val) { this.val = val; }
+}
+
+class BST {
+	Node root;
+
+	public void insert(int key)
+	{
+		Node node = new Node(key);
+		if (root == null) {
+			root = node;
+			return;
+		}
+		Node prev = null;
+		Node temp = root;
+		while (temp != null) {
+			if (temp.val > key) {
+				prev = temp;
+				temp = temp.left;
+			}
+			else if (temp.val < key) {
+				prev = temp;
+				temp = temp.right;
+			}
+		}
+		if (prev.val > key)
+			prev.left = node;
+		else
+			prev.right = node;
+	}
+
+	public void inorder()
+	{
+		Node temp = root;
+		Stack<Node> stack = new Stack<>();
+		while (temp != null || !stack.isEmpty()) {
+			if (temp != null) {
+				stack.add(temp);
+				temp = temp.left;
+			}
+			else {
+				temp = stack.pop();
+				System.out.print(temp.val + " ");
+				temp = temp.right;
+			}
+		}
+	}
+}
+`}</code>
+      </pre>
       <h3>2. Deletion</h3> <br />
       <p>Delete a value from the BST.</p> <br />
       <pre>
@@ -1104,6 +1180,7 @@ int minValue(TreeNode root) {
       <br />
       <h3>3. Search</h3> <br />
       <p>Search for a value in the BST.</p>
+      <br />
       <pre>
         <code>
           {`boolean search(int value) {
@@ -1130,8 +1207,10 @@ boolean searchRec(TreeNode root, int value) {
       </ul>
       <h3>4. Traversal</h3> <br />
       <p>Common BST traversals include inorder, preorder, and postorder.</p>
+      <br />
       <h4>Inorder Traversal</h4>
       <p>Left, Root, Right (produces sorted order for BST).</p>
+      <br />
       <pre>
         <code>
           {`void inorder() {
@@ -1147,11 +1226,14 @@ void inorderRec(TreeNode root) {
 }`}
         </code>
       </pre>
+      <br />
       <p>
         <strong>Complexity</strong>: O(n)
       </p>
+      <br />
       <h4>Preorder Traversal</h4>
       <p>Root, Left, Right.</p>
+      <br />
       <pre>
         <code>
           {`void preorder() {
@@ -1174,6 +1256,7 @@ void preorderRec(TreeNode root) {
       <br />
       <h4>Postorder Traversal</h4>
       <p>Left, Right, Root.</p>
+      <br />
       <pre>
         <code>
           {`void postorder() {
