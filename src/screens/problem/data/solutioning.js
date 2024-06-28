@@ -18095,31 +18095,113 @@ const SOLUTIONING = {
     </ul>
   ),
   95: (
-    <ul>
-      <li>
-        The number of unique Binary Search Trees (BSTs) that can be formed with{" "}
-        <em>n</em> nodes is given by the Catalan number.
-      </li>
-      <li>The nth Catalan number is given by the formula:</li>
+    <>
       <ul>
         <li>
-          <code>{`C<sub>n</sub> = \(\frac{1}{n + 1} \binom{2n}{n}\)`}</code>
+          The number of unique Binary Search Trees (BSTs) that can be formed
+          with <em>n</em> nodes is given by the Catalan number.
+        </li>
+        <li>The nth Catalan number is given by the formula:</li>
+        <ul>
+          <li>
+            <code>{`C<sub>n</sub> = \(\frac{1}{n + 1} \binom{2n}{n}\)`}</code>
+          </li>
+        </ul>
+        <li>This can be simplified to:</li>
+        <ul>
+          <li>
+            <code>{`C<sub>n</sub> = \(\frac{(2n)!}{(n+1)! \cdot n!}\)`}</code>
+          </li>
+        </ul>
+        <li>
+          Where{" "}
+          <code>
+            \(C<sub>n</sub>\)
+          </code>{" "}
+          represents the nth Catalan number.
         </li>
       </ul>
-      <li>This can be simplified to:</li>
       <ul>
         <li>
-          <code>{`C<sub>n</sub> = \(\frac{(2n)!}{(n+1)! \cdot n!}\)`}</code>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              The <code>TreeNode</code> class represents a node in the binary
+              tree with:
+              <ul>
+                <li>
+                  A value <code>val</code>.
+                </li>
+                <li>
+                  A left child <code>left</code>.
+                </li>
+                <li>
+                  A right child <code>right</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Solution Class:</strong>
+          <ul>
+            <li>
+              The <code>generateTrees</code> method is the entry point which
+              takes an integer <code>n</code> and returns a list of all unique
+              BSTs.
+            </li>
+            <li>
+              If <code>n</code> is 0, it returns an empty list.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Recursive Helper Method:</strong>
+          <ul>
+            <li>
+              The <code>generateTrees(int start, int end)</code> method
+              recursively generates all possible BSTs for a given range of
+              values.
+            </li>
+            <li>
+              For each value <code>i</code> in the range from <code>start</code>{" "}
+              to <code>end</code>, it considers <code>i</code> as the root and
+              recursively generates:
+              <ul>
+                <li>
+                  All left subtrees (from <code>start</code> to <code>i-1</code>
+                  ).
+                </li>
+                <li>
+                  All right subtrees (from <code>i+1</code> to <code>end</code>
+                  ).
+                </li>
+              </ul>
+            </li>
+            <li>
+              It combines each left subtree with each right subtree and attaches
+              them to the root <code>i</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Combining Trees:</strong>
+          <ul>
+            <li>
+              For each possible root <code>i</code>, the method combines:
+              <ul>
+                <li>
+                  Every possible left subtree with every possible right subtree.
+                </li>
+                <li>
+                  Forms a new tree with <code>i</code> as the root.
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
       </ul>
-      <li>
-        Where{" "}
-        <code>
-          \(C<sub>n</sub>\)
-        </code>{" "}
-        represents the nth Catalan number.
-      </li>
-    </ul>
+    </>
   ),
 };
 
