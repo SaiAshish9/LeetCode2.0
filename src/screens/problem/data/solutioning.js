@@ -17491,6 +17491,118 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2958: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>ans</code>: Variable to store the maximum length of the
+            subarray found.
+          </li>
+          <li>
+            <code>count</code>: HashMap to store the frequency of each element
+            in the current window.
+          </li>
+          <li>
+            <code>left</code> and <code>right</code>: Pointers defining the
+            current window in the array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Iterate through <code>nums</code> using <code>right</code> as the
+            end of the window.
+          </li>
+          <li>
+            Update frequency of <code>nums[right]</code> in <code>count</code>{" "}
+            hashmap.
+          </li>
+          <li>
+            Shrink the window from the left until each element's frequency is at
+            most <code>k</code>.
+          </li>
+          <li>
+            Calculate current window size and update <code>ans</code> if
+            necessary.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            After iterating through <code>nums</code>, <code>ans</code> contains
+            the length of the longest subarray where each element appears at
+            most <code>k</code> times.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  2962: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>maxNum</code>: Finds the maximum element in the array{" "}
+            <code>nums</code>.
+          </li>
+          <li>
+            <code>ans</code>: Variable to accumulate the count of subarrays.
+          </li>
+          <li>
+            <code>count</code>: Counter to track the number of times{" "}
+            <code>maxNum</code> appears in the current window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>left</code> and <code>right</code>, to
+            define the current window of the array.
+          </li>
+          <li>
+            Increment <code>count</code> whenever <code>nums[right]</code>{" "}
+            equals <code>maxNum</code>.
+          </li>
+          <li>
+            Adjust the window by incrementing <code>left</code> to shrink the
+            window until <code>count</code> is no longer equal to <code>k</code>
+            .
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Calculating <code>ans</code>:
+        </strong>
+        <ul>
+          <li>
+            Add <code>left</code> to <code>ans</code> for each iteration of the
+            outer loop. This accumulates the starting indices of subarrays that
+            meet the condition.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            After iterating through <code>nums</code>, <code>ans</code> contains
+            the total count of subarrays where the maximum element appears
+            exactly <code>k</code> times.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
