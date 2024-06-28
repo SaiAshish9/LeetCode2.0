@@ -16654,6 +16654,93 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2799: (
+    <ul>
+      <li>
+        <strong>Identify Unique Elements:</strong>
+        <ul>
+          <li>
+            Create a <code>HashSet</code> to store all unique elements in the
+            array.
+          </li>
+          <li>
+            The size of this set gives the total count of unique elements,{" "}
+            <code>uniqueCount</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Use a <code>HashMap</code> to keep track of the counts of elements
+            within the current window.
+          </li>
+          <li>
+            Initialize the left pointer <code>left</code> to the start of the
+            array.
+          </li>
+          <li>
+            Iterate through the array with the right pointer <code>right</code>{" "}
+            extending the window one element at a time.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Check Window for Complete Subarray:</strong>
+        <ul>
+          <li>
+            For each position of <code>right</code>, add the current element to
+            the <code>HashMap</code> and update its count.
+          </li>
+          <li>
+            If the current window contains all unique elements (i.e., the size
+            of the <code>HashMap</code> matches <code>uniqueCount</code>), count
+            all subarrays ending at <code>right</code> and starting from each
+            position between <code>left</code> and <code>right</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Adjust Window:</strong>
+        <ul>
+          <li>
+            Move the left pointer <code>left</code> to shrink the window while
+            it still contains all unique elements.
+          </li>
+          <li>
+            Decrease the count of the element at <code>left</code> in the{" "}
+            <code>HashMap</code>. If its count becomes zero, remove it from the
+            map.
+          </li>
+          <li>
+            Continue moving the left pointer until the window no longer contains
+            all unique elements.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Count Valid Subarrays:</strong>
+        <ul>
+          <li>
+            For every position of <code>right</code> where the window contains
+            all unique elements, the number of valid subarrays is equal to the
+            length of the remaining array from <code>right</code> to the end.
+          </li>
+          <li>Update the result accordingly.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After the loop finishes, return the total count of complete
+            subarrays.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
