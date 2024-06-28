@@ -16596,6 +16596,64 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2781: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> to store the maximum length of a valid
+            substring found.
+          </li>
+          <li>
+            Create a <code>HashSet</code> named <code>forbiddenSet</code> to
+            store all forbidden substrings for quick lookup.
+          </li>
+          <li>
+            Initialize <code>right</code> to the last index of the string{" "}
+            <code>word</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window:</strong>
+        <ul>
+          <li>
+            Use a for loop to iterate backward from the end of the string to the
+            beginning with the variable <code>left</code>.
+          </li>
+          <li>
+            Within the for loop, use another loop to check substrings starting
+            from <code>left</code> to the minimum of <code>left + 10</code> or{" "}
+            <code>right + 1</code>.
+          </li>
+          <li>
+            If a forbidden substring is found, update the <code>right</code>{" "}
+            pointer to exclude this substring and break out of the inner loop.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Update Maximum Length:</strong>
+        <ul>
+          <li>
+            After adjusting the window, update <code>ans</code> to be the
+            maximum of its current value and the length of the current valid
+            substring (<code>right - left + 1</code>).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After the loop finishes, return <code>ans</code> as the length of
+            the longest valid substring.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
