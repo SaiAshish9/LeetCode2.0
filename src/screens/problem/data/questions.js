@@ -19928,7 +19928,6 @@ for (int i = 0; i &lt; actualLength; i++) {
         <em>transform</em> <code>initial</code> into <code>target</code>.
       </p>
 
-      <p>&nbsp;</p>
       <p>
         <strong class="example">Example 1:</strong>
       </p>
