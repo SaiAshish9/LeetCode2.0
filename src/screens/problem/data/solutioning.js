@@ -18201,6 +18201,72 @@ const SOLUTIONING = {
           </ul>
         </li>
       </ul>
+      <ul>
+        <li>
+          <strong>Recursive Nature:</strong>
+          <ul>
+            <li>
+              For each node chosen as the root, we need to generate all possible
+              left and right subtrees.
+            </li>
+            <li>
+              For a given node <code>i</code> as the root, we recursively
+              generate trees for the left side (<code>1</code> to{" "}
+              <code>i-1</code>) and the right side (<code>i+1</code> to{" "}
+              <code>n</code>).
+            </li>
+            <li>
+              This process involves a lot of repeated calculations for different
+              subproblems.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Catalan Number:</strong>
+          <ul>
+            <li>
+              The number of unique BSTs that can be generated with{" "}
+              <code>n</code> nodes is given by the <code>n</code>th Catalan
+              number, <code>C(n)</code>.
+            </li>
+            <li>
+              The <code>n</code>th Catalan number can be expressed as:
+              <ul>
+                <li>
+                  <code>{`C(n) = \(\frac{1}{n+1} \binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}\)`}</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              The Catalan number grows exponentially with <code>n</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Time Complexity:</strong>
+          <ul>
+            <li>
+              The number of unique BSTs (which is the <code>n</code>th Catalan
+              number) gives an indication of the number of trees generated.
+            </li>
+            <li>
+              Constructing each tree involves creating nodes and linking them
+              together, leading to an overall time complexity that is influenced
+              by the Catalan number.
+            </li>
+            <li>
+              The exact time complexity is <code>O(C(n) * n)</code>, where{" "}
+              <code>C(n)</code> is the <code>n</code>th Catalan number.
+            </li>
+            <li>
+              Since the Catalan number grows as{" "}
+              <code>{`\(\frac{4^n}{n^{3/2} \sqrt{\pi}}\)`}</code>, the time
+              complexity can be approximated as{" "}
+              <code>{`O(\(\frac{4^n}{n^{3/2}}\))`}</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
     </>
   ),
 };
