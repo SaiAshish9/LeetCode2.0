@@ -883,6 +883,274 @@ class Prim {
       </pre>
     </div>
   ),
+  "Binary Search Tree": (
+    <>
+      <p>
+        A <strong>binary search tree</strong> is a binary tree where each node
+        has at most two children, referred to as the left child and the right
+        child. For each node:
+      </p>
+      <ul>
+        <li>
+          The left subtree contains only nodes with keys less than the node's
+          key.
+        </li>
+        <li>
+          The right subtree contains only nodes with keys greater than the
+          node's key.
+        </li>
+        <li>
+          Both the left and right subtrees must also be binary search trees.
+        </li>
+      </ul>
+      <h2>Properties of a BST</h2>
+      <ul>
+        <li>
+          <strong>Ordering Property</strong>: For any node with value{" "}
+          <code>x</code>, all values in the left subtree are less than{" "}
+          <code>x</code>, and all values in the right subtree are greater than{" "}
+          <code>x</code>.
+        </li>
+        <li>
+          <strong>No Duplicate Values</strong>: In a typical BST, all values are
+          unique (though there are variations that handle duplicates).
+        </li>
+        <li>
+          <strong>Recursive Nature</strong>: The BST is recursively defined;
+          each subtree is itself a BST.
+        </li>
+      </ul>
+      <h2>Operations on a BST</h2>
+      <br />
+      <h3>1. Insertion</h3>
+      <p>Insert a new value into the BST.</p>
+      <pre>
+        <code>
+          {`class TreeNode {
+    int value;
+    TreeNode left, right;
+
+    public TreeNode(int item) {
+        value = item;
+        left = right = null;
+    }
+}
+
+class BST {
+    TreeNode root;
+
+    public BST() {
+        root = null;
+    }
+
+    void insert(int value) {
+        root = insertRec(root, value);
+    }
+
+    TreeNode insertRec(TreeNode root, int value) {
+        if (root == null) {
+            root = new TreeNode(value);
+            return root;
+        }
+
+        if (value < root.value)
+            root.left = insertRec(root.left, value);
+        else if (value > root.value)
+            root.right = insertRec(root.right, value);
+
+        return root;
+    }
+}`}
+        </code>
+      </pre>{" "}
+      <br />
+      <p>
+        <strong>Complexity</strong>:
+      </p>
+      <ul>
+        <li>Average case: O(log n)</li>
+        <li>Worst case: O(n) (if the tree becomes skewed)</li>
+      </ul>
+      <h3>2. Deletion</h3> <br />
+      <p>Delete a value from the BST.</p>
+      <pre>
+        <code>
+          {`void delete(int value) {
+    root = deleteRec(root, value);
+}
+
+TreeNode deleteRec(TreeNode root, int value) {
+    if (root == null) return root;
+
+    if (value < root.value)
+        root.left = deleteRec(root.left, value);
+    else if (value > root.value)
+        root.right = deleteRec(root.right, value);
+    else {
+        if (root.left == null)
+            return root.right;
+        else if (root.right == null)
+            return root.left;
+
+        root.value = minValue(root.right);
+        root.right = deleteRec(root.right, root.value);
+    }
+
+    return root;
+}
+
+int minValue(TreeNode root) {
+    int minv = root.value;
+    while (root.left != null) {
+        minv = root.left.value;
+        root = root.left;
+    }
+    return minv;
+}`}
+        </code>
+      </pre>{" "}
+      <br />
+      <p>
+        <strong>Complexity</strong>:
+      </p>
+      <ul>
+        <li>Average case: O(log n)</li>
+        <li>Worst case: O(n)</li>
+      </ul>
+      <h3>3. Search</h3> <br />
+      <p>Search for a value in the BST.</p>
+      <pre>
+        <code>
+          {`boolean search(int value) {
+    return searchRec(root, value);
+}
+
+boolean searchRec(TreeNode root, int value) {
+    if (root == null) return false;
+
+    if (root.value == value)
+        return true;
+
+    return value < root.value ? searchRec(root.left, value) : searchRec(root.right, value);
+}`}
+        </code>
+      </pre>{" "}
+      <br />
+      <p>
+        <strong>Complexity</strong>:
+      </p>
+      <ul>
+        <li>Average case: O(log n)</li>
+        <li>Worst case: O(n)</li>
+      </ul>
+      <h3>4. Traversal</h3> <br />
+      <p>Common BST traversals include inorder, preorder, and postorder.</p>
+      <h4>Inorder Traversal</h4>
+      <p>Left, Root, Right (produces sorted order for BST).</p>
+      <pre>
+        <code>
+          {`void inorder() {
+    inorderRec(root);
+}
+
+void inorderRec(TreeNode root) {
+    if (root != null) {
+        inorderRec(root.left);
+        System.out.print(root.value + " ");
+        inorderRec(root.right);
+    }
+}`}
+        </code>
+      </pre>
+      <p>
+        <strong>Complexity</strong>: O(n)
+      </p>
+      <h4>Preorder Traversal</h4>
+      <p>Root, Left, Right.</p>
+      <pre>
+        <code>
+          {`void preorder() {
+    preorderRec(root);
+}
+
+void preorderRec(TreeNode root) {
+    if (root != null) {
+        System.out.print(root.value + " ");
+        preorderRec(root.left);
+        preorderRec(root.right);
+    }
+}`}
+        </code>
+      </pre>{" "}
+      <br />
+      <p>
+        <strong>Complexity</strong>: O(n)
+      </p>{" "}
+      <br />
+      <h4>Postorder Traversal</h4>
+      <p>Left, Right, Root.</p>
+      <pre>
+        <code>
+          {`void postorder() {
+    postorderRec(root);
+}
+
+void postorderRec(TreeNode root) {
+    if (root != null) {
+        postorderRec(root.left);
+        postorderRec(root.right);
+        System.out.print(root.value + " ");
+    }
+}`}
+        </code>
+      </pre>{" "}
+      <br />
+      <p>
+        <strong>Complexity</strong>: O(n)
+      </p>{" "}
+      <br />
+      <h2>Use Cases of BST</h2>
+      <ul>
+        <li>
+          <strong>Search Applications</strong>: Quickly finding an element in a
+          sorted data structure.
+        </li>
+        <li>
+          <strong>Sorted Data</strong>: Maintaining a dynamically sorted set of
+          data.
+        </li>
+        <li>
+          <strong>Dynamic Order Statistics</strong>: Find the kth
+          smallest/largest element.
+        </li>
+        <li>
+          <strong>Database Indexing</strong>: Implementing indexing in
+          databases.
+        </li>
+        <li>
+          <strong>Associative Arrays</strong>: Implementing map/dictionary data
+          structures.
+        </li>
+      </ul>{" "}
+      <br />
+      <h2>Summary</h2> <br />
+      <p>
+        <strong>Insertion, Deletion, Search</strong>: O(log n) on average; O(n)
+        in the worst case.
+      </p>
+      <p>
+        <strong>Traversal</strong>: O(n).
+      </p>{" "}
+      <br />
+      <p>
+        BSTs are highly efficient for operations requiring sorted data, fast
+        search, insertion, and deletion, especially when balanced. For
+        self-balancing BSTs like AVL trees or Red-Black trees, the worst-case
+        complexity is improved to O(log n) for insertions, deletions, and
+        searches.
+      </p>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
