@@ -58,8 +58,8 @@ const options = [
     route: "/os",
   },
   {
-    text: "",
-    route: "",
+    text: "Quick Revision Sheet",
+    route: "/quick",
   },
 ];
 
