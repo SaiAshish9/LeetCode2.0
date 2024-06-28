@@ -16805,6 +16805,75 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2841: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> to store the maximum sum found.
+          </li>
+          <li>
+            Initialize <code>sum</code> to accumulate the sum of the current
+            window of elements.
+          </li>
+          <li>
+            Create a <code>HashMap</code> named <code>count</code> to store the
+            frequency of each element in the current window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterating through the List:</strong>
+        <ul>
+          <li>
+            Iterate through the list <code>nums</code> using index{" "}
+            <code>i</code>.
+          </li>
+          <li>
+            Add the current element <code>nums.get(i)</code> to <code>sum</code>{" "}
+            and update its frequency in <code>count</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Maintaining the Sliding Window:</strong>
+        <ul>
+          <li>
+            Check if the window size exceeds <code>k</code>. If so, remove the
+            oldest element (<code>nums.get(i - k)</code>) from <code>sum</code>{" "}
+            and update its frequency in <code>count</code>.
+          </li>
+          <li>
+            If the count of the element reaches zero after decrementing, remove
+            it from <code>count</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Checking Condition for Distinct Elements:</strong>
+        <ul>
+          <li>
+            Check if the current window (<code>count.size()</code>) has at least{" "}
+            <code>m</code> distinct elements.
+          </li>
+          <li>
+            If true, update <code>ans</code> to be the maximum of its current
+            value and <code>sum</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            After iterating through the entire list, <code>ans</code> will hold
+            the maximum sum of any valid subarray according to the constraints.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
