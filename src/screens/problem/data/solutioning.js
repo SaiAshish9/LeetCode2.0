@@ -17663,6 +17663,66 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2981: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>n</code>: Length of the string <code>s</code>.
+          </li>
+          <li>
+            <code>ans</code>: Variable to store the maximum length found.
+          </li>
+          <li>
+            <code>runningLen</code>: Counter for consecutive occurrences of the
+            current character.
+          </li>
+          <li>
+            <code>prevLetter</code>: Previous character encountered in the
+            string.
+          </li>
+          <li>
+            <code>counts</code>: 2D array to store counts of consecutive
+            character occurrences for each letter ('a' to 'z').
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate through the String:</strong>
+        <ul>
+          <li>
+            For each character in <code>s</code>, update <code>runningLen</code>{" "}
+            and populate <code>counts</code> accordingly.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Compute Maximum Length:</strong>
+        <ul>
+          <li>
+            After populating <code>counts</code>, iterate over each row
+            (representing each letter from 'a' to 'z') to find the maximum
+            frequency of consecutive occurrences that is at least three times.
+          </li>
+          <li>
+            Update <code>ans</code> with the maximum length found across all
+            rows.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code>, which represents the maximum length of a
+            substring that appears exactly three times consecutively in{" "}
+            <code>s</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
