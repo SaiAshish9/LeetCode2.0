@@ -16741,6 +16741,70 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2831: (
+    <ul>
+      <li>
+        <strong>Initialize Variables:</strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> to store the maximum length of the equal
+            subarray found.
+          </li>
+          <li>
+            Create a frequency map (<code>HashMap</code>) named{" "}
+            <code>count</code> to store the counts of elements within the
+            window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>left</code> and <code>right</code>, to
+            represent the sliding window. Initialize both to the start of the
+            list.
+          </li>
+          <li>
+            Iterate through the list with the <code>right</code> pointer
+            extending the window one element at a time.
+          </li>
+          <li>
+            Update the frequency map with the current element at{" "}
+            <code>right</code> using{" "}
+            <code>count.merge(nums.get(right), 1, Integer::sum)</code>.
+          </li>
+          <li>
+            Update <code>ans</code> to be the maximum of its current value and
+            the highest frequency of any element in the current window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Adjust Window:</strong>
+        <ul>
+          <li>
+            While the condition <code>right - left + 1 - k &gt; ans</code> is
+            true, contract the window by moving the <code>left</code> pointer.
+          </li>
+          <li>
+            Update the frequency map for the element at <code>left</code> by
+            decrementing its count using{" "}
+            <code>count.merge(nums.get(left++), -1, Integer::sum)</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            After the loop finishes, return <code>ans</code> as the length of
+            the longest equal subarray.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
