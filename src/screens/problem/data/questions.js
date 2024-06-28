@@ -19928,6 +19928,8 @@ for (int i = 0; i &lt; actualLength; i++) {
         <em>transform</em> <code>initial</code> into <code>target</code>.
       </p>
 
+      <br />
+
       <p>
         <strong class="example">Example 1:</strong>
       </p>
@@ -20020,7 +20022,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong>Output:</strong> <span class="example-io">0</span>
         <br />
         <strong>Explanation:</strong> <br />
-        <p>No operations are needed as the strings are already equal.</p>
+        No operations are needed as the strings are already equal.
       </pre>
 
       <p>&nbsp;</p>

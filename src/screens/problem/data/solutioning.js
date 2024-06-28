@@ -17197,6 +17197,83 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  3135: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>m</code> and <code>n</code> represent the lengths of strings{" "}
+            <code>initial</code> and <code>target</code>, respectively.
+          </li>
+          <li>
+            <code>dp</code> is a 2D array where <code>dp[i][j]</code> stores the
+            length of the longest common substring ending at{" "}
+            <code>initial.charAt(i-1)</code> and <code>target.charAt(j-1)</code>
+            .
+          </li>
+          <li>
+            <code>mx</code> keeps track of the maximum length of such common
+            substrings found during the iteration.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Dynamic Programming Approach:</strong>
+        <ul>
+          <li>
+            Nested loops iterate through each character of <code>initial</code>{" "}
+            and <code>target</code>.
+          </li>
+          <li>
+            If characters match at <code>initial.charAt(i - 1)</code> and{" "}
+            <code>target.charAt(j - 1)</code>:
+          </li>
+          <ul>
+            <li>
+              <code>dp[i][j]</code> is updated to{" "}
+              <code>dp[i - 1][j - 1] + 1</code>, extending the length of the
+              common substring found up to that point.
+            </li>
+            <li>
+              <code>mx</code> is updated to track the maximum length of common
+              substrings found.
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate Minimum Operations:</strong>
+        <ul>
+          <li>
+            The minimum number of operations to transform <code>initial</code>{" "}
+            into <code>target</code> is calculated using:
+          </li>
+          <p>
+            <code>m + n - 2 * mx</code>
+          </p>
+          <ul>
+            <li>
+              <code>m + n</code> represents the total length of both strings.
+            </li>
+            <li>
+              <code>2 * mx</code> accounts for the maximum length of common
+              substrings found twice, indicating the operations required.
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            The result of <code>m + n - 2 * mx</code> is returned, representing
+            the minimum number of operations needed.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
