@@ -17012,6 +17012,109 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  3023: (
+    <ul>
+      <li>
+        <strong>Initialization and Setup:</strong>
+        <ul>
+          <li>
+            <code>long a = 0, b = 0;</code>: Initialize <code>a</code> and{" "}
+            <code>b</code> to store the pattern split into two parts.
+          </li>
+          <li>
+            <code>int m = pattern.length;</code>: Determine the length of the
+            pattern array.
+          </li>
+          <li>
+            <code>int half = m &gt;&gt; 1;</code>: Calculate half the length of the
+            pattern (<code>m / 2</code>).
+          </li>
+          <li>
+            <code>long mask1 = (1L &lt;&lt; half) - 1;</code>: Create a mask (
+            <code>mask1</code>) to extract the first half of the pattern.
+          </li>
+          <li>
+            <code>long mask2 = (1L &lt;&lt; (m - half)) - 1;</code>: Create a
+            mask (<code>mask2</code>) to extract the second half of the pattern.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Constructing <code>a</code> and <code>b</code> from{" "}
+          <code>pattern</code>:
+        </strong>
+        <ul>
+          <li>
+            Iterate through the first half of <code>pattern</code>, shifting
+            bits left into <code>a</code>.
+          </li>
+          <li>
+            Iterate through the second half of <code>pattern</code>, shifting
+            bits left into <code>b</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Processing the Infinite Stream:</strong>
+        <ul>
+          <li>
+            Initialize <code>x</code> and <code>y</code> to store the current
+            state of bits from the infinite stream.
+          </li>
+          <li>
+            Enter an infinite loop to continuously read bits from the stream:
+          </li>
+          <li>
+            <code>y = y &lt;&lt; 1 | v;</code>: Shift <code>y</code> left by one
+            bit and add the latest bit <code>v</code>.
+          </li>
+          <li>
+            <code>v = (int) ((y &gt;&gt; (m - half)) & 1);</code>: Extract the
+            relevant bit from <code>y</code> based on the second half of the
+            pattern length.
+          </li>
+          <li>
+            <code>y &amp;= mask2;</code>: Apply <code>mask2</code> to{" "}
+            <code>y</code> to retain only relevant bits.
+          </li>
+          <li>
+            <code>x = x &lt;&lt; 1 | v;</code>: Shift <code>x</code> left by one
+            bit and add the latest bit <code>v</code>.
+          </li>
+          <li>
+            <code>x &amp;= mask1;</code>: Apply <code>mask1</code> to{" "}
+            <code>x</code> to retain only relevant bits.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Checking for Pattern Match:</strong>
+        <ul>
+          <li>
+            After processing enough bits (<code>i &gt;= m</code>), compare{" "}
+            <code>x</code> and <code>y</code> with precomputed values{" "}
+            <code>a</code> and <code>b</code> respectively.
+          </li>
+          <li>
+            If a match is found (<code>a == x</code> and <code>b == y</code>),
+            return the starting index of the pattern in the stream (
+            <code>i - m</code>).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Endless Search:</strong>
+        <ul>
+          <li>
+            If no match is found immediately, the loop continues indefinitely,
+            continuously updating <code>x</code> and <code>y</code> with new
+            bits from the stream.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
