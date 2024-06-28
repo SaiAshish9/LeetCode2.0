@@ -50,12 +50,8 @@ const options = [
     route: "/hld",
   },
   {
-    text: "CN",
-    route: "/cn",
-  },
-  {
-    text: "OS",
-    route: "/os",
+    text: "CN & OS",
+    route: "/cn_and_os",
   },
   {
     text: "Quick Revision Sheet",
