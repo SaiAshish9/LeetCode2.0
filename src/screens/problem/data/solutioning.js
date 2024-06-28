@@ -17871,6 +17871,34 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  3134: (
+    <>
+      {" "}
+      <h3>Steps:</h3>
+      <ul>
+        <li>Calculate the total number of subarrays possible in the array.</li>
+        <li>Compute the median position in terms of subarrays.</li>
+        <li>
+          Use binary search to find the smallest integer k such that the number
+          of subarrays with at most k distinct elements meets or exceeds the
+          median count.
+        </li>
+        <li>Return the median of the uniqueness array.</li>
+      </ul>
+      <h3>Key Components:</h3>
+      <ul>
+        <li>
+          <code>subarrayWithAtMostKDistinct</code>: Helper method to count
+          subarrays with at most k distinct elements using a sliding window
+          technique.
+        </li>
+        <li>
+          <code>Binary Search</code>: Used to efficiently find the median k by
+          narrowing down the search space based on the count of subarrays.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
