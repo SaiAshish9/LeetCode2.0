@@ -17603,6 +17603,66 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2968: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>ans</code>: Variable to store the maximum frequency score
+            found.
+          </li>
+          <li>
+            <code>cost</code>: Represents the cumulative cost of adjusting the
+            array to make all elements in the current window equal.
+          </li>
+          <li>
+            <code>Arrays.sort(nums)</code>: Sorts the array <code>nums</code> in
+            non-decreasing order.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            Use two pointers, <code>left</code> and <code>right</code>, to
+            define the current window in the sorted array <code>nums</code>.
+          </li>
+          <li>
+            Calculate the <code>cost</code> as the sum of differences between{" "}
+            <code>nums[right]</code> and the median value of the current window
+            (<code>nums[(left + right) / 2]</code>).
+          </li>
+          <li>
+            Adjust the window by incrementing <code>left</code> whenever{" "}
+            <code>cost</code> exceeds <code>k</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Calculating <code>ans</code>:
+        </strong>
+        <ul>
+          <li>
+            For each window, update <code>ans</code> with the maximum of its
+            current value and the size of the current window (
+            <code>right - left + 1</code>).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            After iterating through the array, <code>ans</code> contains the
+            maximum frequency score achievable under the given constraints.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
