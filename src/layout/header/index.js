@@ -57,6 +57,10 @@ const options = [
     text: "OS",
     route: "/os",
   },
+  {
+    text: "",
+    route: "",
+  },
 ];
 
 const Navbar = () => {
