@@ -1403,6 +1403,32 @@ void postorderRec(TreeNode root) {
         <strong>Traversal</strong>: O(n).
       </p>{" "}
       <br />
+      <h1>Unique Binary Search Trees Formula</h1>
+      <ul>
+        <li>
+          The number of unique Binary Search Trees (BSTs) that can be formed
+          with <em>n</em> nodes is given by the Catalan number.
+        </li>
+        <li>The nth Catalan number is given by the formula:</li>
+        <ul>
+          <li>
+            <code>{`C<sub>n</sub> = \(\frac{1}{n + 1} \binom{2n}{n}\)`}</code>
+          </li>
+        </ul>
+        <li>This can be simplified to:</li>
+        <ul>
+          <li>
+            <code>{`C<sub>n</sub> = \(\frac{(2n)!}{(n+1)! \cdot n!}\)`}</code>
+          </li>
+        </ul>
+        <li>
+          Where{" "}
+          <code>
+            \(C<sub>n</sub>\)
+          </code>{" "}
+          represents the nth Catalan number.
+        </li>
+      </ul>
       <p>
         BSTs are highly efficient for operations requiring sorted data, fast
         search, insertion, and deletion, especially when balanced. For
