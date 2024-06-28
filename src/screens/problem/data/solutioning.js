@@ -17458,7 +17458,39 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
-  2953:()
+  2953: (
+    <ul>
+      <li>
+        <strong>countCompleteSubstrings Method:</strong>
+        <ul>
+          <li>
+            Calculates the number of unique letters in <code>word</code>.
+          </li>
+          <li>
+            Iterates through possible window sizes and calls{" "}
+            <code>countCompleteStrings</code> to count valid substrings of each
+            size.
+          </li>
+          <li>Returns the total count of valid substrings.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>countCompleteStrings Method:</strong>
+        <ul>
+          <li>
+            Initializes variables to track counts and validity of substrings.
+          </li>
+          <li>
+            Iterates through each character in <code>word</code>, adjusting
+            counts and checking validity based on given conditions.
+          </li>
+          <li>
+            Accumulates the count of valid substrings meeting the criteria.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
