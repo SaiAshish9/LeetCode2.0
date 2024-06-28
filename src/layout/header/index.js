@@ -27,7 +27,6 @@ import FireSvg from "../../assets/fire.svg";
 import LogoDark from "../../assets/logo_dark.svg";
 
 import { useNavigate, useLocation } from "react-router-dom";
-import { IoMdClose } from "react-icons/io";
 
 const options = [
   {
