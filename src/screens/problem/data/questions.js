@@ -21586,22 +21586,14 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [1,2,3], k = 2</span>
-        </p>{" "}
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [1,2,3], k = 2</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">1</span>
-        </p>{" "}
+        <strong>Output:</strong> <span class="example-io">1</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>
-        <p>
-          The subarray <code>[3]</code> has <code>OR</code> value of{" "}
-          <code>3</code>. Hence, we return <code>1</code>.
-        </p>
+        <strong>Explanation:</strong> <br />
+        The subarray <code>[3]</code> has <code>OR</code> value of{" "}
+        <code>3</code>. Hence, we return <code>1</code>.
       </pre>
 
       <p>
@@ -21609,22 +21601,15 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [2,1,8], k = 10</span>
-        </p>{" "}
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [2,1,8], k = 10</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">3</span>
-        </p>{" "}
+        <strong>Output:</strong> <span class="example-io">3</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>
-        <p>
-          The subarray <code>[2,1,8]</code> has <code>OR</code> value of{" "}
-          <code>11</code>. Hence, we return <code>3</code>.
-        </p>
+        <strong>Explanation:</strong>
+        <br />
+        The subarray <code>[2,1,8]</code> has <code>OR</code> value of{" "}
+        <code>11</code>. Hence, we return <code>3</code>.
       </pre>
 
       <p>
