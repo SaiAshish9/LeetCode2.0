@@ -17274,6 +17274,84 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2904: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>bestLeft</code>: Starting index of the best substring found.
+          </li>
+          <li>
+            <code>minLength</code>: Length of the shortest substring found,
+            initialized to <code>s.length() + 1</code>.
+          </li>
+          <li>
+            <code>ones</code>: Counts the number of '1's in the current window.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Technique:</strong>
+        <ul>
+          <li>
+            Uses two pointers, <code>l</code> (left) and <code>r</code> (right),
+            to define the current window of characters in the string{" "}
+            <code>s</code>.
+          </li>
+          <li>
+            <code>r</code> expands the window by iterating through the string.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Main Loop:</strong>
+        <ul>
+          <li>
+            Iterates through the string with <code>r</code>.
+          </li>
+          <li>
+            Increments <code>ones</code> when <code>s.charAt(r)</code> is{" "}
+            <code>'1'</code>.
+          </li>
+          <li>
+            When <code>ones</code> reaches <code>k</code>:
+          </li>
+          <ul>
+            <li>
+              Enters an inner loop (<code>ones == k</code>) to find the shortest
+              "beautiful" substring.
+            </li>
+            <li>
+              Updates <code>bestLeft</code> and <code>minLength</code> based on
+              the conditions specified.
+            </li>
+            <li>
+              Moves <code>l</code> to shrink the window until <code>ones</code>{" "}
+              is no longer <code>k</code>.
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>Result Handling:</strong>
+        <ul>
+          <li>Returns the result:</li>
+          <ul>
+            <li>
+              If <code>bestLeft</code> remains <code>-1</code>, returns an empty
+              string <code>""</code> indicating no valid substring was found.
+            </li>
+            <li>
+              Otherwise, returns the substring from <code>bestLeft</code> with
+              length <code>minLength</code>, representing the shortest and
+              lexicographically smallest "beautiful" substring found.
+            </li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
