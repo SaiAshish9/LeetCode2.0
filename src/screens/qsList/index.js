@@ -134,7 +134,7 @@ const QSList = () => {
   const [selected, setSelected] = useState(0);
   const [description, setDescription] = useState(null);
 
-  const BASE_URl =
+  const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
 
   function toTitleCase(str) {
@@ -144,7 +144,7 @@ const QSList = () => {
   }
 
   async function fetchData() {
-    fetch(BASE_URl + "q_info.json")
+    fetch(BASE_URL + "q_info.json")
       .then((res) => res.json())
       .then((res) => {
         let path = pathname?.split("/tag/")?.[1];
@@ -168,7 +168,7 @@ const QSList = () => {
   }
 
   async function fetchDesc() {
-    fetch(BASE_URl + "tagDescription.json")
+    fetch(BASE_URL + "tagDescription.json")
       .then((res) => res.json())
       .then((res) => {
         setDescription(res[decodeURIComponent(pathname?.split("/tag/")?.[1])]);
@@ -176,9 +176,33 @@ const QSList = () => {
       .catch((err) => console.log(err));
   }
 
+  const [solvedQCount, setSolvedQCount] = useState(0);
+
+  async function fetchSolutionCount() {
+    fetch(BASE_URL + "solutions.json")
+      .then((res) => res.json())
+      .then((res) => {
+        const x = decodeURIComponent(
+          decodeURIComponent(pathname?.split("/tag/")?.[1])
+        )
+          .replaceAll("_", "-")
+          .replaceAll(" ", "_");
+        let count = 0;
+        for (let key of Object.keys(res)) {
+          console.log(x, res);
+          if (x in res[key]["java"] && res[key]["java"][x]?.length > 0) {
+            count++;
+          }
+        }
+        setSolvedQCount(count);
+      })
+      .catch((err) => console.log(err));
+  }
+
   useEffect(() => {
     fetchData();
     fetchDesc();
+    fetchSolutionCount();
   }, []);
 
   return (
@@ -230,7 +254,7 @@ const QSList = () => {
                 <>
                   You have solved{" "}
                   <ContentTextBold>
-                    {tableData.length} / {tableData.length}
+                    {solvedQCount} / {tableData.length}
                   </ContentTextBold>{" "}
                   problems.
                 </>
