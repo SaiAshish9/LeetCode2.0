@@ -109,9 +109,9 @@ const RevisionSheet = () => {
       <Content>
         {data && (
           <ContentText>
-            You have solved{" "}
+            Total Count:{" "}
             <ContentTextBold>
-              {count} / {count}
+              {count}
             </ContentTextBold>{" "}
             problems.
           </ContentText>
