@@ -18269,6 +18269,115 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  36: (
+    <>
+      {" "}
+      <h3>
+        Helper Method: <code>isSafe</code>
+      </h3>
+      <ul>
+        <li>
+          <strong>Purpose:</strong> Check if placing a specific number in a
+          given cell is valid.
+        </li>
+        <li>
+          <strong>Check the Row:</strong>
+          <ul>
+            <li>
+              Iterates over all columns in the given row to check if the number
+              already exists.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Check the Column:</strong>
+          <ul>
+            <li>
+              Iterates over all rows in the given column to check if the number
+              already exists.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Check the 3x3 Sub-Box:</strong>
+          <ul>
+            <li>Calculates the starting indices of the 3x3 sub-box.</li>
+            <li>Checks if the number already exists within that sub-box.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return:</strong>
+          <ul>
+            <li>
+              Returns <code>true</code> if the number can be safely placed;
+              otherwise, <code>false</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>
+        Main Method: <code>isValidSudoku</code>
+      </h3>
+      <ul>
+        <li>
+          <strong>Purpose:</strong> Validate the entire Sudoku board.
+        </li>
+        <li>
+          <strong>Iterate over Each Cell:</strong>
+          <ul>
+            <li>
+              Nested loops are used to iterate over each cell of the 9x9 Sudoku
+              board.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Skip Empty Cells:</strong>
+          <ul>
+            <li>
+              If the current cell contains <code>'.'</code>, it is skipped.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Temporarily Mark as Empty:</strong>
+          <ul>
+            <li>
+              Temporarily sets the current cell to <code>'.'</code> to avoid
+              false positives while checking the current cell itself.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Check if Safe:</strong>
+          <ul>
+            <li>
+              Uses the <code>isSafe</code> method to check if placing the
+              current number in the current cell is valid.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Restore Original Value:</strong>
+          <ul>
+            <li>Restores the original value of the current cell.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              If any cell is found to be invalid, the function returns{" "}
+              <code>false</code>.
+            </li>
+            <li>
+              If all cells are valid, it returns <code>true</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
