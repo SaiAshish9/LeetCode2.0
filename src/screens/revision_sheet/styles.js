@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BREAKPOINTS } from "../constants";
 
 export const Container = styled.div`
-  padding-top: 50px;
+  padding-top: calc(50px + 1rem);
   width: 100%;
   text-align: start;
   padding-bottom: 4rem;
@@ -39,4 +39,9 @@ export const ContentItem = styled.div`
 export const ParentContent = styled.div`
   font-size: 14px;
   margin-top: 0.4rem;
+`;
+
+export const Spacer = styled.div`
+  width: 100%;
+  height: 0.5rem;
 `;

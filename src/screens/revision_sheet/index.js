@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import {
   Container,
@@ -6,13 +7,12 @@ import {
   ContentItem,
   ContentText,
   ParentContent,
+  Spacer,
 } from "./styles";
 import { ContentTextBold, TitleContainer } from "../qsList/styles";
-import { PREMIUM } from "../problem/data";
-import { FaLockOpen } from "react-icons/fa";
 
 const RevisionSheet = () => {
-  const data = {
+  const tempData = {
     "Two Pointers": [5, 11, 15, 16, 18],
     "Sliding Window": [3, 159, 209, 219, 220, 239],
     "Hash Table": [],
@@ -86,8 +86,44 @@ const RevisionSheet = () => {
     String: [],
   };
 
-  let count = 0;
-  Object.values(data).forEach((x) => (count += x.length));
+  const [data, setData] = useState(null);
+  const [count, setCount] = useState(0);
+
+  const BASE_URL =
+    "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
+
+  async function fetchData() {
+    fetch(BASE_URL + "q_info.json")
+      .then((res) => res.json())
+      .then((res) => {
+        const temp = Object.assign({}, tempData);
+        let tempCount = 0;
+        Object.values(tempData).forEach((x) => (tempCount += x.length));
+        setCount(tempCount);
+        const tempValues = Object.values(res);
+        for (let key of Object.keys(tempData)) {
+          const values = tempValues.filter((x) =>
+            tempData[key].includes(+x.qno)
+          );
+          for (let value of values) {
+            if (
+              value &&
+              value.tags &&
+              value.tags.length > 0 &&
+              value.tags.includes(key)
+            ) {
+              temp[key].push(value);
+            }
+          }
+        }
+        setData(temp);
+      })
+      .catch((err) => console.log(err));
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <Container>
@@ -109,13 +145,10 @@ const RevisionSheet = () => {
       <Content>
         {data && (
           <ContentText>
-            Total Count:{" "}
-            <ContentTextBold>
-              {count}
-            </ContentTextBold>{" "}
-            problems.
+            Total Count: <ContentTextBold>{count}</ContentTextBold> problems.
           </ContentText>
         )}
+        <Spacer />
         {data &&
           Object.keys(data).map(
             (item, key) =>
@@ -124,18 +157,29 @@ const RevisionSheet = () => {
                   <ContentText>
                     {+key + 1}. {item} ({data[item].length})
                   </ContentText>
-                  {data[item].map((value, key) => (
-                    <ParentContent key={key}>
-                      <TitleContainer
-                        onClick={() => {
-                          window.open("/problems/" + value?.route, "_blank");
-                        }}
-                      >
-                        <p>{value}. </p>
-                        {/* {PREMIUM.includes(value) && <FaLockOpen />} */}
-                      </TitleContainer>
-                    </ParentContent>
-                  ))}
+                  {data[item].map(
+                    (value, key) =>
+                      value.title && (
+                        <ParentContent key={value.title}>
+                          <TitleContainer
+                            onClick={() => {
+                              window.open(
+                                "/problems/" +
+                                  value.title
+                                    .toLowerCase()
+                                    .split(" ")
+                                    .join("_"),
+                                "_blank"
+                              );
+                            }}
+                          >
+                            <p>
+                              {value.qno}. {value.title}{" "}
+                            </p>
+                          </TitleContainer>
+                        </ParentContent>
+                      )
+                  )}
                 </ContentItem>
               )
           )}
