@@ -179,8 +179,8 @@ const QSList = () => {
         continue;
       }
       let flag = 0;
-      if (Object.keys(res[key]["java"]).length > 0) {
-        if (qnos.includes(key)) {
+      if (qnos.includes(key)) {
+        if (Object.keys(res[key]["java"]).length > 0) {
           for (let k of Object.keys(res[key]["java"])) {
             if (res[key]["java"][k]?.length > 0) {
               flag = 1;
@@ -188,8 +188,11 @@ const QSList = () => {
             }
           }
         }
+        if (flag === 1) count++;
+        else {
+          console.log(key);
+        }
       }
-      if (flag === 1) count++;
     }
     setSolvedQCount(count);
   }
