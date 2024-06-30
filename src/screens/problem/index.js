@@ -109,7 +109,10 @@ const Problem = () => {
       const Q = decodeURIComponent(
         location?.pathname?.split("/problems/")?.[1]
       );
-      const search = decodeURIComponent(location?.search?.split("?tag=")?.[1]);
+      const search =
+        location.search !== ""
+          ? decodeURIComponent(location?.search?.split("?tag=")?.[1])
+          : null;
       const QFormatted = Q?.replaceAll("_", "_");
       const qInfo = qInfoData?.[QFormatted];
       setQInfo(qInfo);
@@ -139,9 +142,19 @@ const Problem = () => {
             ]
           );
         }
+        console.log(
+          tags,
+          defaultTag,
+          dropdownItemSelected,
+          tags.indexOf(solutionKey),
+          search,
+          location.search
+        );
 
         if (dropdownItemSelected === -1) {
           setDropdownItemSelected(tags.indexOf(solutionKey));
+        } else {
+          setDropdownItemSelected(tags.indexOf(defaultTag));
         }
       }
       handleDropdownCLickOutside();
