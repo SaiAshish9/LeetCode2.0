@@ -182,6 +182,7 @@ export const TitleContainer = styled.div`
   width: fit-content;
   align-items: center;
   justify-content: space-between;
+  max-width: 100%;
   ${({ maxW }) =>
     maxW &&
     css`

@@ -19,7 +19,8 @@ export const Content = styled.div`
   @media only screen and (max-width: ${BREAKPOINTS.x175}) {
     padding-left: 4.25vw;
   }
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 `;
 
 export const ContentText = styled.p`
