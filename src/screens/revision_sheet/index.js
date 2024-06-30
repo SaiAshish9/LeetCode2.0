@@ -105,6 +105,7 @@ const RevisionSheet = () => {
           const values = tempValues.filter((x) =>
             tempData[key].includes(+x.qno)
           );
+          temp[key] = [];
           for (let value of values) {
             if (
               value &&
