@@ -175,10 +175,11 @@ export const TitleContainer = styled.div`
     text-overflow: ellipsis;
     cursor: pointer;
     color: #1890ff;
-    width: 100%;
+    width: fit-content;
     margin-right: 10px;
   }
   display: flex;
+  width: fit-content;
   align-items: center;
   justify-content: space-between;
   ${({ maxW }) =>

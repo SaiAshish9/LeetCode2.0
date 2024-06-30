@@ -117,25 +117,28 @@ const RevisionSheet = () => {
           </ContentText>
         )}
         {data &&
-          Object.keys(data).map((item, key) => (
-            <ContentItem key={item}>
-              <ContentText>
-                {+key + 1}. {item} ({data[item].length})
-              </ContentText>
-              {data[item].map((value, key) => (
-                <ParentContent key={key}>
-                  <TitleContainer
-                    onClick={() => {
-                      window.open("/problems/" + value?.route, "_blank");
-                    }}
-                  >
-                    <p>{value}</p>
-                    {/* {PREMIUM.includes(value) && <FaLockOpen />} */}
-                  </TitleContainer>
-                </ParentContent>
-              ))}
-            </ContentItem>
-          ))}
+          Object.keys(data).map(
+            (item, key) =>
+              data[item].length > 0 && (
+                <ContentItem key={item}>
+                  <ContentText>
+                    {+key + 1}. {item} ({data[item].length})
+                  </ContentText>
+                  {data[item].map((value, key) => (
+                    <ParentContent key={key}>
+                      <TitleContainer
+                        onClick={() => {
+                          window.open("/problems/" + value?.route, "_blank");
+                        }}
+                      >
+                        <p>{value}</p>
+                        {/* {PREMIUM.includes(value) && <FaLockOpen />} */}
+                      </TitleContainer>
+                    </ParentContent>
+                  ))}
+                </ContentItem>
+              )
+          )}
       </Content>
     </Container>
   );
