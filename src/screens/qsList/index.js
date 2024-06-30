@@ -146,6 +146,14 @@ const QSList = () => {
 
   const [solvedQCount, setSolvedQCount] = useState(null);
 
+  function findDiffElements(arr1, arr2) {
+    let set1 = new Set(arr1);
+    let set2 = new Set(arr2);
+    let diff1 = arr1.filter((x) => !set2.has(x));
+    let diff2 = arr2.filter((x) => !set1.has(x));
+    return [diff1, diff2];
+  }
+
   async function fetchData() {
     let res = (await axios(BASE_URL + "q_info.json")).data;
     let path = pathname?.split("/tag/")?.[1];
@@ -173,13 +181,15 @@ const QSList = () => {
       .replaceAll(" ", "_");
     let count = 0;
     const qnos = tData?.map((x) => x.qno);
+    const temp = [];
     for (let key of Object.keys(res)) {
       if (x in res[key]["java"] && res[key]["java"][x]?.length > 0) {
         count++;
+        temp.push(key);
         continue;
       }
       let flag = 0;
-      if (qnos.includes(key)) {
+      if (qnos.map((x) => "" + x).includes(key)) {
         if (Object.keys(res[key]["java"]).length > 0) {
           for (let k of Object.keys(res[key]["java"])) {
             if (res[key]["java"][k]?.length > 0) {
@@ -188,8 +198,10 @@ const QSList = () => {
             }
           }
         }
-        if (flag === 1) count++;
-        else {
+        if (flag === 1) {
+          ++count;
+          temp.push(key);
+        } else {
           console.log(key);
         }
       }
