@@ -10,82 +10,9 @@ import {
   Spacer,
 } from "./styles";
 import { ContentTextBold, TitleContainer } from "../qsList/styles";
+import axios from "axios";
 
 const RevisionSheet = () => {
-  const tempData = {
-    "Two Pointers": [5, 11, 15, 16, 18],
-    "Sliding Window": [3, 159, 209, 219, 220, 239],
-    "Hash Table": [],
-    "Dynamic Programming": [],
-    Math: [],
-    Sorting: [],
-    Greedy: [],
-    "Depth-First Search": [],
-    Database: [],
-    "Binary Search": [],
-    Tree: [],
-    "Breadth-First Search": [],
-    Matrix: [],
-    "Bit Manipulation": [],
-    "Binary Tree": [],
-    "Heap (Priority Queue)": [],
-    "Prefix Sum": [],
-    Stack: [],
-    Simulation: [],
-    Graph: [],
-    Counting: [],
-    Design: [],
-    Backtracking: [],
-    Enumeration: [],
-    "Union Find": [],
-    "Linked List": [],
-    "Ordered Set": [],
-    "Monotonic Stack": [],
-    "Number Theory": [],
-    Trie: [],
-    "Divide and Conquer": [],
-    Recursion: [],
-    Bitmask: [],
-    Queue: [],
-    "Segment Tree": [],
-    "Binary Search Tree": [],
-    Geometry: [],
-    Memoization: [],
-    "Hash Function": [],
-    "Binary Indexed Tree": [],
-    "Topological Sort": [],
-    Combinatorics: [],
-    "String Matching": [],
-    "Shortest Path": [],
-    "Rolling Hash": [],
-    "Game Theory": [],
-    Interactive: [],
-    "Data Stream": [],
-    Brainteaser: [],
-    "Monotonic Queue": [],
-    Randomized: [],
-    "Merge Sort": [],
-    Iterator: [],
-    Concurrency: [],
-    "Doubly-Linked List": [],
-    "Probability and Statistics": [],
-    Quickselect: [],
-    "Bucket Sort": [],
-    "Suffix Array": [],
-    "Minimum Spanning Tree": [],
-    "Counting Sort": [],
-    Shell: [],
-    "Line Sweep": [],
-    "Reservoir Sampling": [],
-    "Strongly Connected Component": [],
-    "Eulerian Circuit": [],
-    "Radix Sort": [],
-    "Rejection Sampling": [],
-    "Biconnected Component": [],
-    Array: [],
-    String: [],
-  };
-
   const [data, setData] = useState(null);
   const [count, setCount] = useState(0);
 
@@ -93,9 +20,11 @@ const RevisionSheet = () => {
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
 
   async function fetchData() {
-    fetch(BASE_URL + "q_info.json")
-      .then((res) => res.json())
-      .then((res) => {
+    try {
+      const tempData = (await axios(BASE_URL + "revision.json")).data;
+      const res = (await axios(BASE_URL + "q_info.json")).data;
+
+      if (res && tempData) {
         const temp = Object.assign({}, tempData);
         let tempCount = 0;
         Object.values(tempData).forEach((x) => (tempCount += x.length));
@@ -121,8 +50,10 @@ const RevisionSheet = () => {
           temp[key] = temp[key].sort((a, b) => a.qno - b.qno);
         }
         setData(temp);
-      })
-      .catch((err) => console.log(err));
+      }
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   useEffect(() => {
