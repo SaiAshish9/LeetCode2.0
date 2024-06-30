@@ -131,7 +131,7 @@ const RevisionSheet = () => {
                           window.open("/problems/" + value?.route, "_blank");
                         }}
                       >
-                        <p>{value}</p>
+                        <p>{value}. </p>
                         {/* {PREMIUM.includes(value) && <FaLockOpen />} */}
                       </TitleContainer>
                     </ParentContent>
