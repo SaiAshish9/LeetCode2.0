@@ -31,6 +31,16 @@ export const ContentText = styled.p`
   white-space: pre-wrap;
   max-width: 100%;
   width: 100%;
+  display: inline;
+  p {
+    overflow-x: hidden;
+    display: inline;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #000;
+    width: fit-content;
+  }
 `;
 
 export const ContentItem = styled.div`

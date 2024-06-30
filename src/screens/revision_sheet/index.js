@@ -90,7 +90,18 @@ const RevisionSheet = () => {
               data[item].length > 0 && (
                 <ContentItem key={item}>
                   <ContentText>
-                    {+key + 1}. {item} ({data[item].length})
+                    {+key + 1}.{" "}
+                    <p
+                      onClick={() => {
+                        window.open(
+                          "/tag/" + item.toLowerCase().replace(" ", "_"),
+                          "_blank"
+                        );
+                      }}
+                    >
+                      {item}
+                    </p>{" "}
+                    ({data[item].length})
                   </ContentText>
                   <Spacer />
                   {data[item].map(
