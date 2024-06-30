@@ -71,8 +71,11 @@ const Navbar = () => {
 
   useEffect(() => {}, [pathname]);
 
+  const isDark =
+    !["tag", "revision_sheet"].filter((x) => pathname?.includes(x)).length > 0;
+
   return (
-    <NavContainer tags={pathname?.includes("tag")}>
+    <NavContainer tags={isDark}>
       <NavContent>
         <NavItemContainer>
           <StyledImage

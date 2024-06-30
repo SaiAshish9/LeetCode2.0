@@ -11,7 +11,8 @@ function App() {
     document.body.style.backgroundColor =
       pathname === "/"
         ? "rgb(26 26 26)"
-        : pathname?.includes("tags")
+        : pathname?.includes("tags") ||
+          pathname?.includes("revision_sheet")
         ? "#fff"
         : "#0f0f0f";
   }, [pathname]);
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="tag/*" element={<QSList />} />
         <Route path="problems/*" element={<Problem />} />
+        <Route path="revision_sheet/*" element={<></>} />
       </Routes>
     </Container>
   );
