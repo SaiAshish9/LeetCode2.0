@@ -72,7 +72,7 @@ const Navbar = () => {
   useEffect(() => {}, [pathname]);
 
   const isDark =
-    !["tag", "revision_sheet"].filter((x) => pathname?.includes(x)).length > 0;
+    ["tag", "revision_sheet"].filter((x) => pathname?.includes(x)).length === 0;
 
   return (
     <NavContainer tags={isDark}>
@@ -82,7 +82,7 @@ const Navbar = () => {
             alt="img"
             onClick={() => navigate("/")}
             src={
-              !pathname.includes("/tag")
+              !isDark
                 ? "https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
                 : LogoDark
             }
@@ -92,7 +92,7 @@ const Navbar = () => {
               <NavItem
                 key={i.text}
                 route={i.route === pathname}
-                isHome={!pathname.includes("/tag")}
+                isHome={!isDark}
                 text={i.text}
                 onClick={(e) => handleClick(e, i.route)}
               >
@@ -127,12 +127,12 @@ const Navbar = () => {
         </CircularContainer>
         {!open ? (
           <BarsIcon
-            w={!pathname.includes("/tag")}
+            w={!isDark}
             onClick={() => setOpen((open) => !open)}
           />
         ) : (
           <CloseIcon
-            w={!pathname.includes("/tag")}
+            w={!isDark}
             onClick={() => setOpen((open) => !open)}
           />
         )}
@@ -142,7 +142,7 @@ const Navbar = () => {
         onClose={() => setOpen((open) => !open)}
         placement="left"
         closeIcon={false}
-        isHome={!pathname.includes("/tag")}
+        isHome={!isDark}
         width={window.innerWidth < 576 ? "63vw" : "40vw"}
       >
         <StyledDrawerIconContent>
@@ -150,7 +150,7 @@ const Navbar = () => {
             <NavItem
               key={i.text}
               route={i.route === pathname}
-              isHome={!pathname.includes("/tag")}
+              isHome={!isDark}
               text={i.text}
               onClick={(e) => {
                 handleClick(e, i.route);
@@ -173,7 +173,7 @@ const Navbar = () => {
             alt="pic"
             src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
           />
-          <NavItem1 isHome={!pathname.includes("/tag")}>Sai</NavItem1>
+          <NavItem1 isHome={!isDark}>Sai</NavItem1>
         </StyledDrawerIconContainer>
       </StyledDrawer>
     </NavContainer>
