@@ -165,7 +165,7 @@ const QSList = () => {
     const filteredData = values
       .filter((x) => x?.tags.includes(path))
       .sort((a, b) => a.qno - b.qno);
-    const tData = filteredData.map((x, k) => {
+    const tData = filteredData?.map((x, k) => {
       const obj = { ...x };
       obj["key"] = "" + (+k + 1);
       obj["acceptance"] = x["acceptance"].toFixed(1) + "%";
@@ -177,21 +177,21 @@ const QSList = () => {
     const x = decodeURIComponent(
       decodeURIComponent(pathname?.split("/tag/")?.[1])
     )
-      .replaceAll("_", "-")
-      .replaceAll(" ", "_");
+      ?.replaceAll("_", "-")
+      ?.replaceAll(" ", "_");
     let count = 0;
     const qnos = tData?.map((x) => x.qno);
     const temp = [];
     for (let key of Object.keys(res)) {
-      if (x in res[key]["java"] && res[key]["java"][x]?.length > 0) {
+      if (x in res[key]?.["java"] && res[key]?.["java"]?.[x]?.length > 0) {
         count++;
         temp.push(key);
         continue;
       }
       let flag = 0;
-      if (qnos.map((x) => "" + x).includes(key)) {
+      if (qnos.map((x) => "" + x)?.includes(key)) {
         if (Object.keys(res[key]["java"]).length > 0) {
-          for (let k of Object.keys(res[key]["java"])) {
+          for (let k of Object.keys(res[key]?.["java"])) {
             if (res[key]["java"][k]?.length > 0) {
               flag = 1;
               break;
@@ -201,17 +201,25 @@ const QSList = () => {
         if (flag === 1) {
           ++count;
           temp.push(key);
-        } else {
-          console.log(key);
         }
       }
     }
     setSolvedQCount(count);
 
     const tagsResponse = (await axios(BASE_URL + "tags.json")).data;
-    setTotalQCount(
-      tagsResponse.filter((x) => x.tag === decodeURIComponent(path))[0]["count"]
-    );
+    if (decodeURIComponent(path) === "Probability And Statistics") {
+      setTotalQCount(
+        tagsResponse.filter((x) => x.tag === "Probability and Statistics")[0]?.[
+          "count"
+        ]
+      );
+    } else {
+      setTotalQCount(
+        tagsResponse.filter((x) => x.tag === decodeURIComponent(path))[0]?.[
+          "count"
+        ]
+      );
+    }
   }
 
   async function fetchDesc() {
