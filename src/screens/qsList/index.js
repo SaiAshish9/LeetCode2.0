@@ -28,6 +28,7 @@ import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import { FaLockOpen } from "react-icons/fa";
 import { PREMIUM, TAG_DESCRIPTION } from "../problem/data";
+import axios from "axios";
 
 const QSList = () => {
   const columns = [
@@ -143,28 +144,54 @@ const QSList = () => {
     });
   }
 
+  const [solvedQCount, setSolvedQCount] = useState(null);
+
   async function fetchData() {
-    fetch(BASE_URL + "q_info.json")
-      .then((res) => res.json())
-      .then((res) => {
-        let path = pathname?.split("/tag/")?.[1];
-        path = path ? decodeURIComponent(path)?.replaceAll("_", " ") : "";
-        path = toTitleCase(path);
-        setPath(path);
-        const values = Object.values(res);
-        const filteredData = values
-          .filter((x) => x?.tags.includes(path))
-          .sort((a, b) => a.qno - b.qno);
-        setTableData(
-          filteredData.map((x, k) => {
-            const obj = { ...x };
-            obj["key"] = "" + (+k + 1);
-            obj["acceptance"] = x["acceptance"].toFixed(1) + "%";
-            return obj;
-          })
-        );
-      })
-      .catch((err) => console.log(err));
+    let res = (await axios(BASE_URL + "q_info.json")).data;
+    let path = pathname?.split("/tag/")?.[1];
+    path = path ? decodeURIComponent(path)?.replaceAll("_", " ") : "";
+    path = toTitleCase(path);
+    setPath(path);
+    const values = Object.values(res);
+    const filteredData = values
+      .filter((x) => x?.tags.includes(path))
+      .sort((a, b) => a.qno - b.qno);
+    const tData = filteredData.map((x, k) => {
+      const obj = { ...x };
+      obj["key"] = "" + (+k + 1);
+      obj["acceptance"] = x["acceptance"].toFixed(1) + "%";
+      return obj;
+    });
+    setTableData(tData);
+
+    res = (await axios(BASE_URL + "solutions.json")).data;
+
+    const x = decodeURIComponent(
+      decodeURIComponent(pathname?.split("/tag/")?.[1])
+    )
+      .replaceAll("_", "-")
+      .replaceAll(" ", "_");
+    let count = 0;
+    const qnos = tData?.map((x) => x.qno);
+    for (let key of Object.keys(res)) {
+      if (x in res[key]["java"] && res[key]["java"][x]?.length > 0) {
+        count++;
+        continue;
+      }
+      let flag = 0;
+      if (Object.keys(res[key]["java"]).length > 0) {
+        if (qnos.includes(key)) {
+          for (let k of Object.keys(res[key]["java"])) {
+            if (res[key]["java"][k]?.length > 0) {
+              flag = 1;
+              break;
+            }
+          }
+        }
+      }
+      if (flag === 1) count++;
+    }
+    setSolvedQCount(count);
   }
 
   async function fetchDesc() {
@@ -176,33 +203,9 @@ const QSList = () => {
       .catch((err) => console.log(err));
   }
 
-  const [solvedQCount, setSolvedQCount] = useState(0);
-
-  async function fetchSolutionCount() {
-    fetch(BASE_URL + "solutions.json")
-      .then((res) => res.json())
-      .then((res) => {
-        const x = decodeURIComponent(
-          decodeURIComponent(pathname?.split("/tag/")?.[1])
-        )
-          .replaceAll("_", "-")
-          .replaceAll(" ", "_");
-        let count = 0;
-        for (let key of Object.keys(res)) {
-          console.log(x, res);
-          if (x in res[key]["java"] && res[key]["java"][x]?.length > 0) {
-            count++;
-          }
-        }
-        setSolvedQCount(count);
-      })
-      .catch((err) => console.log(err));
-  }
-
   useEffect(() => {
     fetchData();
     fetchDesc();
-    fetchSolutionCount();
   }, []);
 
   return (
@@ -250,7 +253,7 @@ const QSList = () => {
               to see which companies asked this question
             </ContentText>
             <ContentText>
-              {tableData && (
+              {tableData && solvedQCount !== null && (
                 <>
                   You have solved{" "}
                   <ContentTextBold>
@@ -264,7 +267,7 @@ const QSList = () => {
               <Check checked={true} onChange={null} />
               <ContentTextBold>Show problem tags</ContentTextBold>
             </ContentText>
-            {tableData && (
+            {tableData && solvedQCount !== null && (
               <StyledTableContainer
                 columns={columns}
                 dataSource={tableData}
