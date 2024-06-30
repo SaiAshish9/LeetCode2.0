@@ -145,6 +145,7 @@ const QSList = () => {
   }
 
   const [solvedQCount, setSolvedQCount] = useState(null);
+  const [totalQCount, setTotalQCount] = useState(null);
 
   function findDiffElements(arr1, arr2) {
     let set1 = new Set(arr1);
@@ -173,7 +174,6 @@ const QSList = () => {
     setTableData(tData);
 
     res = (await axios(BASE_URL + "solutions.json")).data;
-
     const x = decodeURIComponent(
       decodeURIComponent(pathname?.split("/tag/")?.[1])
     )
@@ -207,6 +207,11 @@ const QSList = () => {
       }
     }
     setSolvedQCount(count);
+
+    const tagsResponse = (await axios(BASE_URL + "tags.json")).data;
+    setTotalQCount(
+      tagsResponse.filter((x) => x.tag === decodeURIComponent(path))[0]["count"]
+    );
   }
 
   async function fetchDesc() {
@@ -268,11 +273,11 @@ const QSList = () => {
               to see which companies asked this question
             </ContentText>
             <ContentText>
-              {tableData && solvedQCount !== null && (
+              {tableData && solvedQCount !== null && totalQCount !== null && (
                 <>
                   You have solved{" "}
                   <ContentTextBold>
-                    {solvedQCount} / {tableData.length}
+                    {solvedQCount} / {totalQCount}
                   </ContentTextBold>{" "}
                   problems.
                 </>
@@ -282,7 +287,7 @@ const QSList = () => {
               <Check checked={true} onChange={null} />
               <ContentTextBold>Show problem tags</ContentTextBold>
             </ContentText>
-            {tableData && solvedQCount !== null && (
+            {tableData && solvedQCount !== null && totalQCount !== null && (
               <StyledTableContainer
                 columns={columns}
                 dataSource={tableData}
