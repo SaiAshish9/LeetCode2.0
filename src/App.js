@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "./layout";
-import { Home, Problem, QSList } from "./screens";
+import { Home, Problem, QSList, RevisionSheet } from "./screens";
 import { Container } from "./styles";
 import { useEffect } from "react";
 
@@ -11,8 +11,7 @@ function App() {
     document.body.style.backgroundColor =
       pathname === "/"
         ? "rgb(26 26 26)"
-        : pathname?.includes("tags") ||
-          pathname?.includes("revision_sheet")
+        : pathname?.includes("tags") || pathname?.includes("revision_sheet")
         ? "#fff"
         : "#0f0f0f";
   }, [pathname]);
@@ -24,7 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="tag/*" element={<QSList />} />
         <Route path="problems/*" element={<Problem />} />
-        <Route path="revision_sheet/*" element={<></>} />
+        <Route path="revision_sheet/*" element={<RevisionSheet />} />
       </Routes>
     </Container>
   );

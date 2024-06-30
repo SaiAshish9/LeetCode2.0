@@ -27,6 +27,7 @@ import FireSvg from "../../assets/fire.svg";
 import LogoDark from "../../assets/logo_dark.svg";
 
 import { useNavigate, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const options = [
   {
@@ -72,7 +73,7 @@ const Navbar = () => {
   useEffect(() => {}, [pathname]);
 
   const isDark =
-    ["tag", "revision_sheet"].filter((x) => pathname?.includes(x)).length === 0;
+    ["tag", "revision_sheet"].filter((x) => pathname?.includes(x)).length > 0;
 
   return (
     <NavContainer tags={isDark}>
@@ -126,15 +127,9 @@ const Navbar = () => {
           </NavIcon>
         </CircularContainer>
         {!open ? (
-          <BarsIcon
-            w={!isDark}
-            onClick={() => setOpen((open) => !open)}
-          />
+          <BarsIcon w={!isDark} onClick={() => setOpen((open) => !open)} />
         ) : (
-          <CloseIcon
-            w={!isDark}
-            onClick={() => setOpen((open) => !open)}
-          />
+          <CloseIcon w={!isDark} onClick={() => setOpen((open) => !open)} />
         )}
       </NavContent>
       <StyledDrawer

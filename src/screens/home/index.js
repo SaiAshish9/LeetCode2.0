@@ -18,11 +18,12 @@ import {
 } from "./components";
 
 import "react-circular-progressbar/dist/styles.css";
+import { Helmet } from "react-helmet";
 
 const HomeScreen = () => {
   return (
     <HomeComponent>
-      {/* <Helmet>
+      <Helmet>
         <meta property="og:title" content="LeetCode2.0" />
         <meta property="og:description" content="3K+ Optimal Solutions" />
         <meta
@@ -31,7 +32,7 @@ const HomeScreen = () => {
         />
         <meta property="og:url" content="https://leetcodev2.vercel.app/" />
         <meta property="og:type" content="website" />
-      </Helmet> */}
+      </Helmet>
       <Content>
         <TopLeftContainer>
           <Banner />

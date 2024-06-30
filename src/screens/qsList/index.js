@@ -56,6 +56,7 @@ const QSList = () => {
       render: (_, { qno, title }) => {
         return (
           <TitleContainer
+            maxW
             onClick={() => {
               window.open(
                 "/problems/" +

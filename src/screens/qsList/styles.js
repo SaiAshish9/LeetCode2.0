@@ -169,7 +169,6 @@ export const StyledTableContainer = styled(Table)`
 `;
 
 export const TitleContainer = styled.div`
-  max-width: 200px;
   p {
     overflow-x: hidden;
     white-space: nowrap;
@@ -182,6 +181,11 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${({ maxW }) =>
+    maxW &&
+    css`
+      max-width: 200px;
+    `};
 `;
 
 export const DifficultyTag = styled.p`
