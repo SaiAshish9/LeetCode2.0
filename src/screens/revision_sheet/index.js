@@ -85,51 +85,47 @@ const RevisionSheet = () => {
         )}
         <Spacer />
         {data &&
-          Object.keys(data).map(
-            (item, key) =>
-              data[item].length > 0 && (
-                <ContentItem key={item}>
-                  <ContentText>
-                    {+key + 1}.{" "}
-                    <p
-                      onClick={() => {
-                        window.open(
-                          "/tag/" + item.toLowerCase().replace(" ", "_"),
-                          "_blank"
-                        );
-                      }}
-                    >
-                      {item}
-                    </p>{" "}
-                    ({data[item].length})
-                  </ContentText>
-                  <Spacer />
-                  {data[item].map(
-                    (value, key) =>
-                      value.title && (
-                        <ParentContent key={value.title}>
-                          <TitleContainer
-                            onClick={() => {
-                              window.open(
-                                "/problems/" +
-                                  value.title
-                                    .toLowerCase()
-                                    .split(" ")
-                                    .join("_"),
-                                "_blank"
-                              );
-                            }}
-                          >
-                            <p>
-                              {value.qno}. {value.title}{" "}
-                            </p>
-                          </TitleContainer>
-                        </ParentContent>
-                      )
-                  )}
-                </ContentItem>
-              )
-          )}
+          Object.keys(data)
+            .filter((x) => data[x].length > 0)
+            .map((item, key) => (
+              <ContentItem key={item}>
+                <ContentText>
+                  {+key + 1}.{" "}
+                  <p
+                    onClick={() => {
+                      window.open(
+                        "/tag/" + item.toLowerCase().replace(" ", "_"),
+                        "_blank"
+                      );
+                    }}
+                  >
+                    {item}
+                  </p>{" "}
+                  ({data[item].length})
+                </ContentText>
+                <Spacer />
+                {data[item].map(
+                  (value, key) =>
+                    value.title && (
+                      <ParentContent key={value.title}>
+                        <TitleContainer
+                          onClick={() => {
+                            window.open(
+                              "/problems/" +
+                                value.title.toLowerCase().split(" ").join("_"),
+                              "_blank"
+                            );
+                          }}
+                        >
+                          <p>
+                            {value.qno}. {value.title}{" "}
+                          </p>
+                        </TitleContainer>
+                      </ParentContent>
+                    )
+                )}
+              </ContentItem>
+            ))}
       </Content>
     </Container>
   );
