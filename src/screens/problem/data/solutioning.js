@@ -18378,6 +18378,140 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  37: (
+    <>
+      <h3>
+        Helper Method: <code>isSafe</code>
+      </h3>
+      <ul>
+        <li>
+          <strong>Purpose:</strong> Check if placing a specific number in a
+          given cell is valid.
+        </li>
+        <li>
+          <strong>Check the Row:</strong>
+          <ul>
+            <li>
+              Iterates over all columns in the given row to check if the number
+              already exists.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Check the Column:</strong>
+          <ul>
+            <li>
+              Iterates over all rows in the given column to check if the number
+              already exists.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Check the 3x3 Sub-Box:</strong>
+          <ul>
+            <li>Calculates the starting indices of the 3x3 sub-box.</li>
+            <li>Checks if the number already exists within that sub-box.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return:</strong>
+          <ul>
+            <li>
+              Returns <code>true</code> if the number can be safely placed;
+              otherwise, <code>false</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>
+        Recursive Method: <code>solve</code>
+      </h3>
+      <ul>
+        <li>
+          <strong>Purpose:</strong> Solve the Sudoku puzzle using backtracking.
+        </li>
+        <li>
+          <strong>Check if All Cells are Explored:</strong>
+          <ul>
+            <li>If all cells are explored, the puzzle is solved.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Move to the Next Row:</strong>
+          <ul>
+            <li>
+              If the end of a row is reached, move to the next row and reset the
+              column to 0.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Check if Cell is Already Filled:</strong>
+          <ul>
+            <li>If the cell is already filled, move to the next cell.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Try Placing Numbers 1 to 9:</strong>
+          <ul>
+            <li>
+              Place numbers 1 to 9 in the cell and check if the number is safe
+              to place.
+            </li>
+            <li>If placing a number leads to a solution, return true.</li>
+            <li>
+              Reset the cell if the current number doesn't lead to a solution
+              and continue with the next number.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return:</strong>
+          <ul>
+            <li>
+              Returns <code>false</code> if no number can be placed in the cell.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>
+        Main Method: <code>solveSudoku</code>
+      </h3>
+      <ul>
+        <li>
+          <strong>Purpose:</strong> Solve the given Sudoku puzzle.
+        </li>
+        <li>
+          <strong>Convert char board to int grid:</strong>
+          <ul>
+            <li>
+              Converts the given char board to an int grid where empty cells are
+              represented by 0.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Solve the Sudoku puzzle:</strong>
+          <ul>
+            <li>
+              Calls the <code>solve</code> method to solve the Sudoku puzzle.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Convert int grid back to char board:</strong>
+          <ul>
+            <li>
+              Converts the int grid back to the char board where empty cells are
+              represented by '.'.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
