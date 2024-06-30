@@ -55,7 +55,7 @@ const options = [
   },
   {
     text: "Revision Sheet",
-    route: "/quick",
+    route: "/revision_sheet",
   },
 ];
 
