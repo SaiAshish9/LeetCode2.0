@@ -116,6 +116,9 @@ const RevisionSheet = () => {
             }
           }
         }
+        for (let key of Object.keys(temp)) {
+          temp[key] = temp[key].sort((a, b) => a.qno - b.qno);
+        }
         setData(temp);
       })
       .catch((err) => console.log(err));
@@ -157,6 +160,7 @@ const RevisionSheet = () => {
                   <ContentText>
                     {+key + 1}. {item} ({data[item].length})
                   </ContentText>
+                  <Spacer />
                   {data[item].map(
                     (value, key) =>
                       value.title && (
