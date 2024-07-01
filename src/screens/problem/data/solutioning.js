@@ -18512,6 +18512,73 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  48: (
+    <>
+      {" "}
+      <h2>Code Explanation</h2>
+      <ul>
+        <li>
+          <strong>rotate(int[][] matrix)</strong>
+          <ul>
+            <li>Checks if the matrix is null or empty and returns if true.</li>
+            <li>Gets the length of the matrix.</li>
+            <li>
+              Calls the <code>transpose(matrix, n)</code> method to transpose
+              the matrix.
+            </li>
+            <li>
+              Loops through each row and calls the{" "}
+              <code>reverseRow(matrix[i], n)</code> method to reverse the row.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>transpose(int[][] matrix, int n)</strong>
+          <ul>
+            <li>
+              Loops through the matrix to transpose it by swapping elements at
+              positions <code>(i, j)</code> with <code>(j, i)</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>reverseRow(int[] row, int n)</strong>
+          <ul>
+            <li>
+              Initializes two pointers, <code>left</code> and <code>right</code>
+              .
+            </li>
+            <li>
+              Reverses the row by swapping elements at the <code>left</code> and{" "}
+              <code>right</code> pointers until they meet in the middle.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>swap(int[][] matrix, int i, int j, int x, int y)</strong>
+          <ul>
+            <li>
+              Swaps the elements at positions <code>(i, j)</code> and{" "}
+              <code>(x, y)</code> in the matrix.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>main(String[] args)</strong>
+          <ul>
+            <li>
+              Creates an instance of the <code>RotateImage</code> class.
+            </li>
+            <li>Defines a sample matrix to rotate.</li>
+            <li>
+              Calls the <code>rotate(matrix)</code> method to rotate the matrix.
+            </li>
+            <li>Prints the rotated matrix to the console.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
