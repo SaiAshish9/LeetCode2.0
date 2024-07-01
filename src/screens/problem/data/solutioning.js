@@ -18668,6 +18668,75 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  59: (
+    <ul>
+      <li>
+        <strong>Class Declaration</strong>
+        <ul>
+          <li>
+            <code>public class SpiralMatrixII</code> declares the class.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Direction Arrays</strong>
+        <ul>
+          <li>
+            <code>private static final int[] dr = {(0, 1, 0, -1)};</code>{" "}
+            represents row movement (right, down, left, up).
+          </li>
+          <li>
+            <code>private static final int[] dc = {(1, 0, -1, 0)};</code>{" "}
+            represents column movement (right, down, left, up).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>generateMatrix(int n)</strong>
+        <ul>
+          <li>
+            Initializes an <code>n x n</code> matrix and a <code>visited</code>{" "}
+            matrix to track visited cells.
+          </li>
+          <li>
+            Initializes starting positions <code>row</code> and <code>col</code>{" "}
+            to 0 and starting direction <code>dir</code> to 0 (right).
+          </li>
+          <li>
+            Fills the matrix in a spiral order from 1 to <code>n * n</code>{" "}
+            using a loop.
+          </li>
+          <li>
+            In each iteration, assigns the current number to the matrix cell and
+            marks it as visited.
+          </li>
+          <li>
+            Calculates the next cell position based on the current direction.
+          </li>
+          <li>
+            If the next cell is invalid (out of bounds or already visited),
+            changes direction and calculates the next cell position again.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>main(String[] args)</strong>
+        <ul>
+          <li>
+            Creates an instance of the <code>SpiralMatrixII</code> class.
+          </li>
+          <li>
+            Defines a sample size <code>n</code> for the matrix.
+          </li>
+          <li>
+            Calls the <code>generateMatrix(n)</code> method and stores the
+            result.
+          </li>
+          <li>Prints the generated matrix in spiral order.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
