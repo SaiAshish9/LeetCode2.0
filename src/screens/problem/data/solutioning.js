@@ -18579,6 +18579,95 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  54: (
+    <ul>
+      <li>
+        <strong>Class Declaration</strong>
+        <ul>
+          <li>
+            <code>public class SpiralMatrixDFS</code> declares the class.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Direction Arrays</strong>
+        <ul>
+          <li>
+            <code>private static final int[] dr = {(0, 1, 0, -1)};</code>{" "}
+            represents row movement.
+          </li>
+          <li>
+            <code>private static final int[] dc = {(1, 0, -1, 0)};</code>{" "}
+            represents column movement.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>spiralOrder(int[][] matrix)</strong>
+        <ul>
+          <li>
+            Initializes an empty list <code>result</code> to store the spiral
+            order.
+          </li>
+          <li>
+            Checks if the matrix is null or empty, returning an empty result if
+            true.
+          </li>
+          <li>
+            Initializes the number of rows and columns, and a{" "}
+            <code>visited</code> matrix to track visited cells.
+          </li>
+          <li>
+            Calls the <code>dfs</code> method starting from the top-left corner
+            with initial direction 0 (right).
+          </li>
+          <li>
+            Returns the <code>result</code> list.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          dfs(int[][] matrix, boolean[][] visited, List&lt;Integer&gt; result,
+          int row, int col, int direction)
+        </strong>
+        <ul>
+          <li>
+            Base case: If the current cell is out of bounds or already visited,
+            return.
+          </li>
+          <li>
+            Marks the current cell as visited and adds its value to the{" "}
+            <code>result</code> list.
+          </li>
+          <li>
+            Calculates the next cell to visit based on the current direction.
+          </li>
+          <li>
+            If the next cell is invalid (out of bounds or already visited),
+            changes direction to the next one.
+          </li>
+          <li>
+            Recursively calls <code>dfs</code> with the next cell.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>main(String[] args)</strong>
+        <ul>
+          <li>
+            Creates an instance of the <code>SpiralMatrixDFS</code> class.
+          </li>
+          <li>Defines a sample matrix to be traversed.</li>
+          <li>
+            Calls the <code>spiralOrder(matrix)</code> method and stores the
+            result.
+          </li>
+          <li>Prints the result, which is the matrix in spiral order.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
