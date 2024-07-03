@@ -3457,7 +3457,7 @@ const QUESTIONS = {
         type of soup. There are four kinds of operations:
       </p>
 
-      <ol>
+      <ul>
         <li>
           Serve <code>100</code> ml of <strong>soup A</strong> and{" "}
           <code>0</code> ml of <strong>soup B</strong>,
@@ -3474,7 +3474,7 @@ const QUESTIONS = {
           Serve <code>25</code> ml of <strong>soup A</strong> and{" "}
           <code>75</code> ml of <strong>soup B</strong>.
         </li>
-      </ol>
+      </ul>
 
       <p>
         When we serve some soup, we give it to someone, and we no longer have
@@ -7676,7 +7676,7 @@ const QUESTIONS = {
             intersection. A traffic light&nbsp;can&nbsp;either be green or red.
           </p>
 
-          <ol>
+          <ul>
             <li>
               <strong>Green</strong> means&nbsp;cars can cross the
               intersection&nbsp;in both directions of the road.
@@ -7685,7 +7685,7 @@ const QUESTIONS = {
               <strong>Red</strong> means cars in both directions cannot cross
               the intersection and must wait until the light turns green.
             </li>
-          </ol>
+          </ul>
 
           <p>
             The traffic lights cannot be green on both roads at the same time.
@@ -13292,7 +13292,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <b>Note:</b>
       </p>
 
-      <ol>
+      <ul>
         <li>
           <code>1 &lt;= N &lt;= 20000</code>
         </li>
@@ -13306,7 +13306,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <li>
           <code>0 &lt;= K &lt;= 20000</code>
         </li>
-      </ol>
+      </ul>
     </div>
   ),
   713: (
@@ -16704,8 +16704,8 @@ for (int i = 0; i &lt; actualLength; i++) {
         style={{ width: 343, height: 119 }}
       />
       <pre>
-        <strong>Input:</strong> nums = [7,4,3,9,1,8,5,2,6], k = 3
-        <strong>Output:</strong> [-1,-1,-1,5,4,4,-1,-1,-1]
+        <strong>Input:</strong> nums = [7,4,3,9,1,8,5,2,6], k = 3 <br/>
+        <strong>Output:</strong> [-1,-1,-1,5,4,4,-1,-1,-1] <br/>
         <strong>Explanation:</strong>- avg[0], avg[1], and avg[2] are -1 because
         there are less than k elements <strong>before</strong> each index. - The
         sum of the subarray centered at index 3 with radius 3 is: 7 + 4 + 3 + 9
@@ -21806,7 +21806,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong>according to the following rules</strong>:
       </p>
 
-      <ol>
+      <ul>
         <li>
           Each row&nbsp;must contain the&nbsp;digits&nbsp;<code>1-9</code>{" "}
           without repetition.
@@ -21819,7 +21819,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           Each of the nine&nbsp;<code>3 x 3</code> sub-boxes of the grid must
           contain the digits&nbsp;<code>1-9</code>&nbsp;without repetition.
         </li>
-      </ol>
+      </ul>
 
       <p>
         <strong>Note:</strong>
@@ -21913,7 +21913,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong>all of the following rules</strong>:
       </p>
 
-      <ol>
+      <ul>
         <li>
           Each of the digits <code>1-9</code> must occur exactly once in each
           row.
@@ -21926,7 +21926,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           Each of the digits <code>1-9</code> must occur exactly once in each of
           the 9 <code>3x3</code> sub-boxes of the grid.
         </li>
-      </ol>
+      </ul>
 
       <p>
         The <code>'.'</code> character indicates empty cells.
