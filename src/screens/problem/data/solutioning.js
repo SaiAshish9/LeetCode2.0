@@ -18737,6 +18737,59 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  3191: (
+    <>
+      {" "}
+      <ul>
+        <li>
+          First, it gets the length of the array <u>nums</u> and stores it in
+          the variable <u>n</u>.
+        </li>
+        <li>
+          It initializes a variable <u>ans</u> to <u>0</u>, which will be used
+          to count the number of operations.
+        </li>
+        <li>
+          It then loops through the array from the start to the third last
+          element (i.e., up to index <u>n-3</u>), and for each element{" "}
+          <u>nums[i]</u>:
+        </li>
+        <ul>
+          <li>
+            If <u>nums[i]</u> is <u>0</u>, it performs two operations:
+            <ul>
+              <li>
+                It flips the value of <u>nums[i + 1]</u> (using the XOR
+                operation with <u>1</u>).
+              </li>
+              <li>
+                It also flips the value of <u>nums[i + 2]</u> (using the XOR
+                operation with <u>1</u>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            It increments the <u>ans</u> by <u>1</u> to count this operation.
+          </li>
+        </ul>
+        <li>
+          Finally, it checks the last two elements of the array:
+          <ul>
+            <li>
+              If either of the last two elements (i.e., <u>nums[n - 1]</u> or{" "}
+              <u>nums[n - 2]</u>) is <u>0</u>, it returns <u>-1</u> indicating
+              that it's not possible to perform the operations to satisfy the
+              conditions.
+            </li>
+            <li>
+              Otherwise, it returns the value of <u>ans</u> which represents the
+              minimum number of operations performed.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
