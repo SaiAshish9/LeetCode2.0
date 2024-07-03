@@ -22200,26 +22200,15 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [0,1,1,1,0,0]</span>
-        </p>
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [0,1,1,1,0,0]</span>
         <br />
-
-        <p>
-          <strong>Output:</strong> <span class="example-io">3</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">3</span>
+        <strong>Explanation:</strong>
         <br />
-
-        <p>
-          <strong>Explanation:</strong>
-          <br />
-          <br />
-          We can do the following operations:
-        </p>
+        We can do the following operations:
         <br />
-
         <ul>
           <li>
             Choose the elements at indices 0, 1 and 2. The resulting array is{" "}
@@ -22279,28 +22268,21 @@ for (int i = 0; i &lt; actualLength; i++) {
             .
           </li>
         </ul>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [0,1,1,1]</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong> <span class="example-io">nums = [0,1,1,1]</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">-1</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">-1</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-          <br />
-          It is impossible to make all elements equal to 1.
-        </p>
-      </div>
+        <strong>Explanation:</strong>
+        <br />
+        It is impossible to make all elements equal to 1.
+      </pre>
 
       <p>&nbsp;</p>
       <p>
