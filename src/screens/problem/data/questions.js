@@ -22204,7 +22204,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong>Input:</strong>{" "}
         <span class="example-io">nums = [0,1,1,1,0,0]</span>
         <br />
-        <strong>Output:</strong> <span class="example-io">3</span>
+        <strong>Output:</strong> <span class="example-io">3</span> <br />
         <strong>Explanation:</strong>
         <br />
         We can do the following operations:
