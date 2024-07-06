@@ -19340,6 +19340,88 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  532: (
+    <>
+      <h2>Explanation of findPairs Method</h2>
+      <ul>
+        <li>
+          <code>public int findPairs(int[] nums, int k)</code>: This method
+          calculates the number of k-difference pairs in the array{" "}
+          <code>nums</code>.
+        </li>
+        <li>
+          <strong>Edge Case Handling:</strong>
+          <ul>
+            <li>
+              Checks if <code>nums</code> is null, has fewer than 2 elements, or{" "}
+              <code>k</code> is negative. If true, returns 0 immediately.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Initializes a <code>{`Map<Integer, Integer>`}</code> named{" "}
+              <code>frequencyMap</code> to store the frequency of each element
+              in <code>nums</code>.
+            </li>
+            <li>
+              Initializes a <code>{`Set<Integer>`}</code> named{" "}
+              <code>countedPairs</code> to keep track of already counted pairs
+              to avoid duplicates.
+            </li>
+            <li>
+              Initializes <code>count</code> to 0, which will store the number
+              of k-difference pairs.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>First Pass: Frequency Counting</strong>
+          <ul>
+            <li>
+              Iterates through each element <code>num</code> in{" "}
+              <code>nums</code> and updates its frequency in{" "}
+              <code>frequencyMap</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Second Pass: Counting Pairs</strong>
+          <ul>
+            <li>
+              Iterates through each element <code>num</code> in{" "}
+              <code>nums</code>.
+            </li>
+            <li>
+              Checks if <code>num + k</code> exists in <code>frequencyMap</code>{" "}
+              and ensures <code>num</code> itself has not been counted already (
+              <code>!countedPairs.contains(num)</code>).
+            </li>
+            <li>
+              If <code>k</code> is 0, checks if the frequency of{" "}
+              <code>num</code> is greater than 1 to avoid counting pairs with
+              the same element.
+            </li>
+            <li>
+              If conditions are met, increments <code>count</code> and adds{" "}
+              <code>num</code> to <code>countedPairs</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return the Count:</strong>
+          <ul>
+            <li>
+              Returns <code>count</code>, which represents the number of valid
+              k-difference pairs in <code>nums</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
