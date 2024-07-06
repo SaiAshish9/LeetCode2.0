@@ -93,7 +93,7 @@ const RevisionSheet = () => {
             .map((item, key) => (
               <ContentItem key={item}>
                 <ContentText>
-                  {+key + 1}.{" "}
+                  {+key + 1}.&nbsp;
                   <p
                     onClick={() => {
                       window.open(
@@ -103,8 +103,8 @@ const RevisionSheet = () => {
                     }}
                   >
                     {item}
-                  </p>{" "}
-                  ({data[item].length})
+                  </p>
+                  &nbsp;({data[item].length})
                   <IconCont
                     onClick={(e) => {
                       e.preventDefault();
