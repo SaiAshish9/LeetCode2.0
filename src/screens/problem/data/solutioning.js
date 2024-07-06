@@ -20441,6 +20441,40 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1099: (
+    <>
+      <ul>
+        <li>
+          <strong>Sorting:</strong> Sort the array `nums` to facilitate
+          efficient searching for pairs that sum up to less than `k`.
+        </li>
+        <li>
+          <strong>Iterating through Array:</strong> Iterate through each element
+          `nums[i]` of the array.
+        </li>
+        <li>
+          <strong>Binary Search:</strong> Use binary search (`search` method) to
+          find the largest index `j` such that `nums[j]` is less than or equal
+          to `k - nums[i]`.
+        </li>
+        <li>
+          <strong>Finding Maximum Sum:</strong> Calculate `nums[i] + nums[j]`
+          for each valid index `j` found and update `ans` with the maximum of
+          the current `ans` and `nums[i] + nums[j]`.
+        </li>
+        <li>
+          <strong>Returning the Result:</strong> Return `ans`, which contains
+          the maximum sum of two elements from `nums` that is less than `k`.
+        </li>
+      </ul>
+      <p>
+        This approach ensures efficiency with a time complexity of O(nlogn) due
+        to the sorting step, followed by O(nlogn) for each pair search using
+        binary search within the loop. This is suitable for the given
+        constraints where nums can have up to 1000 elements.
+      </p>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
