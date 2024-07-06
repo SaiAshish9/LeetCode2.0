@@ -18823,6 +18823,8 @@ const SOLUTIONING = {
   ),
   189: (
     <>
+      <h2>Explanation of Solution</h2>
+
       <ul>
         <li>
           <code>rotate(int[] nums, int k)</code>: This method rotates the array{" "}
@@ -18873,6 +18875,8 @@ const SOLUTIONING = {
   ),
   202: (
     <>
+      <h2>Explanation of Happy Number Solution</h2>
+
       <ul>
         <li>
           <code>boolean isHappy(int n)</code>: This method checks if the number{" "}
