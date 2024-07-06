@@ -19106,6 +19106,75 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  350: (
+    <>
+      <h2>Explanation of Intersection of Two Arrays II Solution</h2>
+      <ul>
+        <li>
+          <code>public int[] intersect(int[] nums1, int[] nums2)</code>: This
+          method finds the intersection of two arrays <code>nums1</code> and{" "}
+          <code>nums2</code> considering the frequency of elements.
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Creates a <code>HashMap&lt;Integer, Integer&gt; map</code> to
+              count the frequency of elements in <code>nums1</code>.
+            </li>
+            <li>
+              Creates a <code>List&lt;Integer&gt; intersect</code> to store the
+              intersection elements.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Counting Frequency:</strong>
+          <ul>
+            <li>
+              Iterates through <code>nums1</code> and populates <code>map</code>{" "}
+              with each element's frequency using{" "}
+              <code>map.put(num, map.getOrDefault(num, 0) + 1);</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Finding Intersection:</strong>
+          <ul>
+            <li>
+              Iterates through <code>nums2</code>:
+            </li>
+            <li>
+              Checks if each element exists in <code>map</code> and its count is
+              greater than zero (<code>map.get(num) &gt; 0</code>).
+            </li>
+            <li>
+              If yes, adds the element to <code>intersect</code> list and
+              decrements its count in <code>map</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Convert to Array:</strong>
+          <ul>
+            <li>
+              Converts <code>intersect</code> list to an array{" "}
+              <code>result</code> to return as the final intersection result.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              Returns the <code>result</code> array containing the intersection
+              elements considering their frequency.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
