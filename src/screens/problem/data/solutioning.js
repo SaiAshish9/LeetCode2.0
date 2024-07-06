@@ -20558,6 +20558,80 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1885: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>count</code>: Initialized to accumulate the total count of
+            valid pairs <code>(i, j)</code>.
+          </li>
+          <li>
+            <code>n</code>: Represents the length of arrays <code>nums1</code>{" "}
+            and <code>nums2</code>.
+          </li>
+          <li>
+            <code>differences</code>: An array storing differences between
+            corresponding elements of <code>nums1</code> and <code>nums2</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate Differences:</strong>
+        <ul>
+          <li>
+            Populate the <code>differences</code> array where each element{" "}
+            <code>differences[i]</code> is computed as{" "}
+            <code>nums1[i] - nums2[i]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sorting:</strong>
+        <ul>
+          <li>
+            Sort the <code>differences</code> array. Sorting helps in
+            efficiently counting how many elements are greater than a given
+            value using binary search.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Counting Valid Pairs:</strong>
+        <ul>
+          <li>
+            Iterate through the <code>differences</code> array using a nested
+            loop.
+          </li>
+          <li>
+            For each element at index <code>i</code>, compute the target value{" "}
+            <code>target = -differences[i] + 1</code>.
+          </li>
+          <li>
+            Use binary search (<code>binarySearch</code> method) to find the
+            smallest index <code>index</code> such that{" "}
+            <code>differences[index] &gt;= target</code>.
+          </li>
+          <li>
+            Compute the count of valid pairs as <code>n - index</code> because
+            all elements from <code>index</code> to <code>n-1</code> satisfy the
+            condition <code>differences[index] &gt;= target</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return the accumulated <code>count</code>, which represents the
+            total number of pairs <code>(i, j)</code> where{" "}
+            <code>nums1[i] &gt; nums2[j]</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {

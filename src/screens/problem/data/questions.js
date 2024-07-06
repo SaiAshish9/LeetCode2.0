@@ -23977,6 +23977,77 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  1885: (
+    <article role="main" class="blog-post">
+      <p>
+        Given two integer arrays{" "}
+        <code class="language-plaintext highlighter-rouge">nums1</code> and{" "}
+        <code class="language-plaintext highlighter-rouge">nums2</code> of
+        length <code class="language-plaintext highlighter-rouge">n</code>,
+        count the pairs of indices{" "}
+        <code class="language-plaintext highlighter-rouge">(i, j)</code> such
+        that <code class="language-plaintext highlighter-rouge">i &lt; j</code>{" "}
+        and{" "}
+        <code class="language-plaintext highlighter-rouge">
+          nums1[i] + nums1[j] &gt; nums2[i] + nums2[j]
+        </code>
+        .
+      </p>
+      <p>
+        Return{" "}
+        <em>
+          the <strong>number of pairs</strong> satisfying the condition
+        </em>
+        .
+      </p>
+
+      <strong>Example 1:</strong>
+      <pre>
+        <strong>Input:</strong> nums1 = [2,1,2,1], nums2 = [1,2,1,2] <br />
+        <strong>Output:</strong> 1 <br />
+        <strong>Explanation:</strong> The pairs satisfying the condition are:
+        <ul>
+          <li>(0, 2) where 2 + 2 &gt; 1 + 1.</li>
+        </ul>
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> nums1 = [1,10,6,2], nums2 = [1,4,1,5] <br />
+        <strong>Output:</strong> 5 <br />
+        <strong>Explanation:</strong> The pairs satisfying the condition are:
+        <ul>
+          <li>(0, 1) where 1 + 10 &gt; 1 + 4.</li>
+          <li>(0, 2) where 1 + 6 &gt; 1 + 1.</li>
+          <li>(1, 2) where 10 + 6 &gt; 4 + 1.</li>
+          <li>(1, 3) where 10 + 2 &gt; 4 + 5.</li>
+          <li>(2, 3) where 6 + 2 &gt; 1 + 5.</li>
+        </ul>
+      </pre>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            n == nums1.length == nums2.length
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= n &lt;= 10^5
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= nums1[i], nums2[i] &lt;= 10^5
+          </code>
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
