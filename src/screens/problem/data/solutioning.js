@@ -19697,6 +19697,101 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  633: (
+    <>
+      <h2>Explanation of Sum of Square Numbers</h2>
+      <ul>
+        <li>
+          <code>public boolean judgeSquareSum(int c)</code>: This method
+          determines if a given number <code>c</code> can be expressed as the
+          sum of two squares.
+        </li>
+        <li>
+          <strong>Initialize Pointers:</strong>
+          <ul>
+            <li>
+              Initializes two pointers, <code>left</code> at 0 and{" "}
+              <code>right</code> at the integer square root of <code>c</code>:
+              <ul>
+                <li>
+                  <code>long left = 0;</code>
+                </li>
+                <li>
+                  <code>long right = (long) Math.sqrt(c);</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Use Two-Pointer Technique:</strong>
+          <ul>
+            <li>
+              Checks all pairs of integers <code>left</code> and{" "}
+              <code>right</code> to see if their squares sum to <code>c</code>:
+              <ul>
+                <li>
+                  <code>{`while (left <= right)`}</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Calculates the sum of squares:
+              <ul>
+                <li>
+                  <code>long sum = left * left + right * right;</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Compares the sum to <code>c</code>:
+              <ul>
+                <li>
+                  If the sum is equal to <code>c</code>, returns true:
+                  <ul>
+                    <li>
+                      <code>{`if (sum == c) { return true; }`}</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  If the sum is less than <code>c</code>, increments the{" "}
+                  <code>left</code> pointer:
+                  <ul>
+                    <li>
+                      <code>{`else if (sum < c) { left++; }`}</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  If the sum is greater than <code>c</code>, decrements the{" "}
+                  <code>right</code> pointer:
+                  <ul>
+                    <li>
+                      <code>{`else { right--; }`}</code>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return False if No Pair Found:</strong>
+          <ul>
+            <li>
+              If no valid pairs are found, returns false:
+              <ul>
+                <li>
+                  <code>return false;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
