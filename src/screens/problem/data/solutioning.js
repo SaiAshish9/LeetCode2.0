@@ -18924,6 +18924,42 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  283: (
+    <>
+      <h2>Explanation of Move Zeroes Solution</h2>
+      <ul>
+        <li>
+          <code>public void moveZeroes(int[] nums)</code>: This method
+          rearranges an array <code>nums</code> such that all zeros are moved to
+          the end while maintaining the order of non-zero elements.
+        </li>
+        <li>
+          <code>int slow = 0;</code>: Initializes a pointer <code>slow</code> to
+          track where the next non-zero element should be placed.
+        </li>
+        <li>
+          Iterates through the array with <code>fast</code> pointer.
+        </li>
+        <li>
+          <code>if (nums[fast] != 0)</code>: Checks if the current element is
+          non-zero.
+        </li>
+        <li>
+          If non-zero, swaps <code>nums[slow]</code> with{" "}
+          <code>nums[fast]</code> to place non-zero elements at the beginning of
+          the array.
+        </li>
+        <li>
+          <code>slow++;</code>: Moves <code>slow</code> pointer forward to the
+          next position.
+        </li>
+        <li>
+          After iterating through the array, all non-zero elements are at the
+          beginning in their original order, and zeros are naturally at the end.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
