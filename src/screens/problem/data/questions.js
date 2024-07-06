@@ -23418,6 +23418,63 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  647: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code>, return{" "}
+        <em>
+          the number of <strong>palindromic substrings</strong> in it
+        </em>
+        .
+      </p>
+
+      <p>
+        A string is a <strong>palindrome</strong> when it reads the same
+        backward as forward.
+      </p>
+
+      <p>
+        A <strong>substring</strong> is a contiguous sequence of characters
+        within the string.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "abc" <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> Three palindromic strings: "a", "b", "c".
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "aaa"
+        <br />
+        <strong>Output:</strong> 6<strong>Explanation:</strong> Six palindromic
+        strings: "a", "a", "a", "aa", "aa", "aaa".
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= s.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>s</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
