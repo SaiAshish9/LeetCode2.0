@@ -20475,6 +20475,89 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  1712: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong> Initialize variables and constants.
+        <ul>
+          <li>
+            <code>kMod = 1_000_000_007;</code>: Modulo value to handle large
+            numbers.
+          </li>
+          <li>
+            <code>n = nums.length;</code>: Length of the input array.
+          </li>
+          <li>
+            <code>ans = 0;</code>: Initialize the answer accumulator.
+          </li>
+          <li>
+            <code>prefix = nums.clone();</code>: Clone the input array to
+            maintain prefix sums.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate Prefix Sums:</strong> Build the prefix sum array.
+        <ul>
+          <li>Iterate through the array and compute cumulative sums.</li>
+          <li>
+            <code>prefix[i] += prefix[i - 1];</code>: Update each element with
+            cumulative sum up to that index.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Main Loop:</strong> Iterate through possible start points of the
+        first subarray.
+        <ul>
+          <li>
+            <code>for (int i = 0; i &lt; n - 2; ++i)</code>: Loop through the
+            array up to the third last element.
+          </li>
+          <li>
+            <strong>Binary Search for Mid and Right Bounds:</strong>
+            <ul>
+              <li>
+                <code>j = firstGreaterEqual(prefix, i);</code>: Find the
+                smallest index where the sum from <code>i</code> to{" "}
+                <code>j</code> is at least half of the total sum.
+              </li>
+              <li>
+                <code>mid = prefix[j] - prefix[i];</code>: Calculate the sum of
+                the second subarray.
+              </li>
+              <li>
+                <code>right = prefix[prefix.length - 1] - prefix[j];</code>:
+                Calculate the sum of the third subarray.
+              </li>
+              <li>
+                <code>if (mid &gt; right) continue;</code>: Skip if the
+                condition of a valid split is not met.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Binary Search for K Bound:</strong>
+            <ul>
+              <li>
+                <code>k = firstGreater(prefix, i);</code>: Find the smallest
+                index where the sum from <code>i</code> to <code>k</code> is
+                greater than the sum from <code>k</code> to the end.
+              </li>
+              <li>
+                <code>ans = (ans + k - j) % kMod;</code>: Update the answer with
+                the number of valid splits found.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong> Return the final answer modulo{" "}
+        <code>kMod</code>.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
