@@ -24078,23 +24078,13 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [1,2,3,4]</span>
-        </p>
+      <pre class="example-block">
+        <strong>Input:</strong> <span class="example-io">nums = [1,2,3,4]</span>
         <br />
-
-        <p>
-          <strong>Output:</strong> <span class="example-io">0</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">0</span>
         <br />
-
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
         <br />
-
         <p>
           <img
             alt=""
@@ -24102,25 +24092,19 @@ for (int i = 0; i &lt; actualLength; i++) {
             style={{ width: 210, height: 70 }}
           />
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [1,1,2,2,3,3]</span>
-        </p>
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [1,1,2,2,3,3]</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">0</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">0</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>{" "}
+        <strong>Explanation:</strong>
         <br />
         <p>
           <img
@@ -24129,50 +24113,35 @@ for (int i = 0; i &lt; actualLength; i++) {
             style={{ width: 210, height: 70 }}
           />
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [1000000000,1000000000]</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [1000000000,1000000000]</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">2</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">2</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
         <br />
         <p>Since both numbers are equal, they cannot be removed.</p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 4:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [2,3,4,4,4]</span>
-        </p>
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [2,3,4,4,4]</span>
         <br />
-
-        <p>
-          <strong>Output:</strong> <span class="example-io">1</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">1</span>
         <br />
-
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
         <br />
-
         <p>
           <img
             alt=""
@@ -24180,7 +24149,7 @@ for (int i = 0; i &lt; actualLength; i++) {
             style={{ width: 210, height: 70 }}
           />
         </p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
