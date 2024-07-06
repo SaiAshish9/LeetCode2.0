@@ -19933,6 +19933,151 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  719: (
+    <>
+      <h2>Explanation of K-th Smallest Pair Distance</h2>
+      <ul>
+        <li>
+          <code>public int smallestDistancePair(int[] nums, int k)</code>: This
+          method finds the k-th smallest distance between any two pairs in the
+          array <code>nums</code>.
+        </li>
+        <li>
+          <strong>Sort the Array:</strong>
+          <ul>
+            <li>
+              Sorts the input array to make it easier to find pairs with
+              specific distances:
+              <ul>
+                <li>
+                  <code>Arrays.sort(nums);</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Initialize Binary Search Bounds:</strong>
+          <ul>
+            <li>
+              Initializes the left bound to 0 and the right bound to the maximum
+              possible distance (difference between the largest and smallest
+              elements):
+              <ul>
+                <li>
+                  <code>int left = 0;</code>
+                </li>
+                <li>
+                  <code>int right = nums[n - 1] - nums[0];</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Binary Search:</strong>
+          <ul>
+            <li>
+              Uses binary search to find the k-th smallest distance:
+              <ul>
+                <li>
+                  <code>while (left &lt; right)</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Calculates the middle value <code>mid</code> and counts the number
+              of pairs with a distance less than or equal to <code>mid</code>:
+              <ul>
+                <li>
+                  <code>int mid = (left + right) / 2;</code>
+                </li>
+                <li>
+                  <code>if (countPairs(nums, mid) &lt; k)</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              If the count is less than k, adjusts the left bound; otherwise,
+              adjusts the right bound:
+              <ul>
+                <li>
+                  <code>left = mid + 1;</code>
+                </li>
+                <li>
+                  <code>right = mid;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return the Result:</strong>
+          <ul>
+            <li>
+              Returns the left bound as the k-th smallest distance:
+              <ul>
+                <li>
+                  <code>return left;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>private int countPairs(int[] nums, int mid)</code>: This helper
+          method counts the number of pairs in the array with a distance less
+          than or equal to <code>mid</code>.
+        </li>
+        <li>
+          <strong>Initialize Count:</strong>
+          <ul>
+            <li>
+              Initializes the count of pairs to 0:
+              <ul>
+                <li>
+                  <code>int count = 0;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Count Pairs:</strong>
+          <ul>
+            <li>
+              Uses a nested loop to count pairs with a distance less than or
+              equal to <code>mid</code>:
+              <ul>
+                <li>
+                  <code>for (int i = 0; i &lt; n; i++)</code>
+                </li>
+                <li>
+                  <code>{`while (j < n && nums[j] - nums[i] <= mid)`}</code>
+                </li>
+                <li>
+                  <code>count += j - i - 1;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return the Count:</strong>
+          <ul>
+            <li>
+              Returns the count of pairs:
+              <ul>
+                <li>
+                  <code>return count;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
