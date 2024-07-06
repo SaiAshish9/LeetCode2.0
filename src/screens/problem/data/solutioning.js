@@ -19175,6 +19175,88 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  360: (
+    <>
+      <h2>Explanation of Sort Transformed Array Solution</h2>
+      <ul>
+        <li>
+          <code>
+            public int[] sortTransformedArray(int[] nums, int a, int b, int c)
+          </code>
+          : This method sorts the transformed array based on the quadratic
+          function \( ax^2 + bx + c \).
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Initializes variables: <code>n</code> as the length of{" "}
+              <code>nums</code>, <code>left</code> and <code>right</code> as
+              pointers to the beginning and end of <code>nums</code>, and{" "}
+              <code>k</code> as an index for placing values in <code>res</code>{" "}
+              array.
+            </li>
+            <li>
+              Creates <code>res</code> array to store the sorted transformed
+              values.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sorting Process:</strong>
+          <ul>
+            <li>
+              Uses a while loop to iterate while <code>left</code> is less than
+              or equal to <code>right</code>:
+            </li>
+            <li>
+              Calculates transformed values <code>v1</code> and <code>v2</code>{" "}
+              for elements at <code>left</code> and <code>right</code> indices
+              using the quadratic function.
+            </li>
+            <li>
+              Determines the direction of sorting based on the sign of{" "}
+              <code>a</code>:
+            </li>
+            <ul>
+              <li>
+                If <code>a &lt; 0</code>: Places smaller value between{" "}
+                <code>v1</code> and <code>v2</code> into <code>res[k]</code> and
+                increments <code>left</code> or decrements <code>right</code>.
+              </li>
+              <li>
+                If <code>a &ge; 0</code>: Places larger value between{" "}
+                <code>v1</code> and <code>v2</code> into <code>res[k]</code> and
+                increments <code>left</code> or decrements <code>right</code>.
+              </li>
+            </ul>
+            <li>
+              Adjusts <code>k</code> based on the direction of sorting.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Transformation Function:</strong>
+          <ul>
+            <li>
+              <code>private int fn(int a, int b, int c, int x)</code>: Computes
+              the value of the quadratic function \( ax^2 + bx + c \) for a
+              given <code>x</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              Returns the <code>res</code> array containing the sorted
+              transformed values.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
