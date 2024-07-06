@@ -18871,6 +18871,51 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  202: (
+    <>
+      <ul>
+        <li>
+          <code>boolean isHappy(int n)</code>: This method checks if the number{" "}
+          <code>n</code> is a happy number.
+        </li>
+        <li>
+          <code>HashSet&lt;Integer&gt; seen</code>: A HashSet to keep track of
+          numbers already encountered to detect cycles.
+        </li>
+        <li>
+          <code>while (n != 1 &amp;&amp; !seen.contains(n))</code>: Loop
+          continues until <code>n</code> becomes 1 (indicating a happy number)
+          or we detect a cycle.
+        </li>
+        <li>
+          <code>seen.add(n)</code>: Adds <code>n</code> to <code>seen</code> set
+          to track its occurrence.
+        </li>
+        <li>
+          <code>n = getNextNumber(n)</code>: Updates <code>n</code> to its next
+          number based on the sum of squares of its digits.
+        </li>
+        <li>
+          <code>int getNextNumber(int n)</code>: Helper method to compute the
+          sum of squares of digits of <code>n</code>.
+        </li>
+        <li>
+          Uses a systematic process of digit extraction, squaring, and summing
+          to determine if a number is happy.
+        </li>
+      </ul>
+
+      <h3>Example:</h3>
+      <p>For number 19:</p>
+      <ul>
+        <li>1. \( 1^2 + 9^2 = 1 + 81 = 82 \)</li>
+        <li>2. \( 8^2 + 2^2 = 64 + 4 = 68 \)</li>
+        <li>3. \( 6^2 + 8^2 = 36 + 64 = 100 \)</li>
+        <li>4. \( 1^2 + 0^2 + 0^2 = 1 \)</li>
+        <li>Hence, 19 is a happy number.</li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
