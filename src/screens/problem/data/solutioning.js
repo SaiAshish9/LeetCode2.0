@@ -19422,6 +19422,83 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  556: (
+    <>
+      <h2>Explanation of Next Greater Element III</h2>
+      <ul>
+        <li>
+          <code>public int nextGreaterElement(int n)</code>: This method finds
+          the next greater element with the same set of digits for the given
+          number <code>n</code>.
+        </li>
+        <li>
+          <strong>Convert Number to Array of Digits:</strong>
+          <ul>
+            <li>
+              Converts the integer <code>n</code> to a character array{" "}
+              <code>digits</code> for easier manipulation.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Identify the Point of Dip:</strong>
+          <ul>
+            <li>
+              Traverses the array from right to left to find the first digit
+              that is smaller than the digit immediately to its right. This is
+              stored in <code>left</code>.
+            </li>
+            <li>
+              If no such digit is found (<code>left == -1</code>), returns -1 as
+              no greater number can be formed.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Find the Smallest Greater Digit:</strong>
+          <ul>
+            <li>
+              Finds the smallest digit on the right side of the dip point that
+              is greater than <code>digits[left]</code>. This is stored in{" "}
+              <code>right</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Swap and Sort:</strong>
+          <ul>
+            <li>
+              Swaps the digits at positions <code>left</code> and{" "}
+              <code>right</code>.
+            </li>
+            <li>
+              Reverses the digits to the right of the dip point to get the
+              smallest possible number that is greater than the original number.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Check for Validity:</strong>
+          <ul>
+            <li>
+              Converts the modified character array back to a long integer.
+            </li>
+            <li>
+              Checks if the result is within the valid 32-bit integer range.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return the Result:</strong>
+          <ul>
+            <li>
+              Returns the new number if it is valid, otherwise returns -1.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
