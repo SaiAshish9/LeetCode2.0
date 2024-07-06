@@ -20398,6 +20398,49 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1089: (
+    <ul>
+      <li>
+        <strong>Count Zeros:</strong> First, iterate through the array to count
+        the number of zeros (`0`s). This helps in determining how many zeros
+        need to be duplicated and shifted.
+      </li>
+      <li>
+        <strong>Modify Array (from end to beginning):</strong>
+        <ul>
+          <li>
+            Start iterating from the end of the array towards the beginning (`i
+            = n - 1` to `i &gt;= 0`).
+          </li>
+          <li>
+            If the current element (`arr[i]`) is zero:
+            <ul>
+              <li>
+                Shift elements to the right to make space for the duplicate
+                zero. This is done by moving elements to positions `i +
+                zeroCount` and placing the duplicate zero (`0`) there.
+              </li>
+              <li>
+                Decrement `zeroCount` to keep track of remaining zeros to be
+                duplicated.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the current element is not zero, simply move it to its new
+            position to accommodate any previously shifted zeros.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Efficiency:</strong> This approach runs in \( O(n) \) time
+        complexity, where \( n \) is the length of the array `arr`. It modifies
+        the array in place without using extra space beyond a few variables
+        (`zeroCount` and `lastIndex`), making it efficient and suitable for
+        large inputs as specified in the problem constraints.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
