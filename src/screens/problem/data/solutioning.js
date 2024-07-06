@@ -19603,6 +19603,100 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  611: (
+    <>
+      <h2>Explanation of Valid Triangle Number</h2>
+      <ul>
+        <li>
+          <code>public int triangleNumber(int[] nums)</code>: This method
+          returns the number of valid triangles that can be formed with the
+          given array of integers.
+        </li>
+        <li>
+          <strong>Sort the Array:</strong>
+          <ul>
+            <li>
+              Sorts the array to make it easier to find valid triangles using
+              the two-pointer technique:
+              <ul>
+                <li>
+                  <code>Arrays.sort(nums);</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterate Over the Array:</strong>
+          <ul>
+            <li>
+              Starts from the end of the array and iterates backwards to use the
+              current element as the largest side of the triangle:
+              <ul>
+                <li>
+                  <code>for (int i = nums.length - 1; i &gt;= 2; i--)</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Use Two-Pointer Technique:</strong>
+          <ul>
+            <li>
+              Initializes two pointers, <code>left</code> at the beginning and{" "}
+              <code>right</code> just before the current element:
+              <ul>
+                <li>
+                  <code>int left = 0, right = i - 1;</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Moves the pointers to find valid triangles:
+              <ul>
+                <li>
+                  If the sum of the elements at <code>left</code> and{" "}
+                  <code>right</code> is greater than the current element, it
+                  means all elements between <code>left</code> and{" "}
+                  <code>right</code> can form a triangle with the current
+                  element. Add the count of these elements to the total count
+                  and move the <code>right</code> pointer to the left:
+                  <ul>
+                    <li>
+                      <code>{`if (nums[left] + nums[right] > nums[i]) { count += right - left; right--; }`}</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  If the sum is not greater, move the <code>left</code> pointer
+                  to the right:
+                  <ul>
+                    <li>
+                      <code>{`else { left++; }`}</code>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return the Count:</strong>
+          <ul>
+            <li>
+              Returns the total count of valid triangles:
+              <ul>
+                <li>
+                  <code>return count;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
