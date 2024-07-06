@@ -19499,6 +19499,110 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  581: (
+    <>
+      <h2>Explanation of Shortest Unsorted Continuous Subarray</h2>
+      <ul>
+        <li>
+          <code>public int findUnsortedSubarray(int[] nums)</code>: This method
+          finds the shortest unsorted continuous subarray that, when sorted,
+          makes the whole array sorted.
+        </li>
+        <li>
+          <strong>Identify the Unsorted Subarray:</strong>
+          <ul>
+            <li>
+              Initializes two pointers <code>left</code> at the start of the
+              array and <code>right</code> at the end.
+            </li>
+            <li>
+              Moves <code>left</code> pointer to the right until it finds the
+              first element that is out of order. This is done by the loop:
+              <ul>
+                <li>
+                  <code>{`while (left < n - 1 && nums[left] <= nums[left + 1]) { left++; }`}</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Moves <code>right</code> pointer to the left until it finds the
+              first element that is out of order. This is done by the loop:
+              <ul>
+                <li>
+                  <code>{`while (right > 0 && nums[right] >= nums[right - 1]) { right--; }`}</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Check if the Array is Already Sorted:</strong>
+          <ul>
+            <li>
+              If <code>left</code> reaches the end of the array, it means the
+              array is already sorted, and the function returns 0:
+              <ul>
+                <li>
+                  <code>{`if (left == n - 1) { return 0; }`}</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Find Minimum and Maximum in the Unsorted Subarray:</strong>
+          <ul>
+            <li>
+              Finds the minimum and maximum values in the subarray defined by{" "}
+              <code>left</code> and <code>right</code> pointers:
+              <ul>
+                <li>
+                  <code>{`for (int i = left; i <= right; i++) { subarrayMin = Math.min(subarrayMin, nums[i]); subarrayMax = Math.max(subarrayMax, nums[i]); }`}</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Expand the Bounds:</strong>
+          <ul>
+            <li>
+              Extends the <code>left</code> boundary to include any elements
+              greater than <code>subarrayMin</code>:
+              <ul>
+                <li>
+                  <code>{`while (left > 0 && nums[left - 1] > subarrayMin) { left--; }`}</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Extends the <code>right</code> boundary to include any elements
+              smaller than <code>subarrayMax</code>:
+              <ul>
+                <li>
+                  <code>{`while (right < n - 1 && nums[right + 1] < subarrayMax) { right++; }`}</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Calculate the Length of the Unsorted Subarray:</strong>
+          <ul>
+            <li>
+              Returns the length of the subarray from <code>left</code> to{" "}
+              <code>right</code>:
+              <ul>
+                <li>
+                  <code>return right - left + 1;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
