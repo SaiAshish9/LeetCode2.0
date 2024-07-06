@@ -18790,6 +18790,37 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  167: (
+    <ul>
+      <li>
+        Initialize two pointers, <code>left</code> and <code>right</code>, at
+        the beginning and end of the array respectively.
+      </li>
+      <li>
+        Iterate through the array using a while loop, adjusting the pointers
+        based on the sum of elements at these pointers:
+      </li>
+      <ul>
+        <li>
+          If the sum equals the <code>target</code>, return an array containing
+          the indices <code>left + 1</code> and <code>right + 1</code> (1-based
+          index).
+        </li>
+        <li>
+          If the sum is less than the <code>target</code>, move the{" "}
+          <code>left</code> pointer to the right to increase the sum.
+        </li>
+        <li>
+          If the sum is greater than the <code>target</code>, move the{" "}
+          <code>right</code> pointer to the left to decrease the sum.
+        </li>
+      </ul>
+      <li>
+        If no valid pair is found that sums up to <code>target</code>, return an
+        empty array.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {

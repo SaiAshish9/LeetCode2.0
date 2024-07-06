@@ -16704,8 +16704,8 @@ for (int i = 0; i &lt; actualLength; i++) {
         style={{ width: 343, height: 119 }}
       />
       <pre>
-        <strong>Input:</strong> nums = [7,4,3,9,1,8,5,2,6], k = 3 <br/>
-        <strong>Output:</strong> [-1,-1,-1,5,4,4,-1,-1,-1] <br/>
+        <strong>Input:</strong> nums = [7,4,3,9,1,8,5,2,6], k = 3 <br />
+        <strong>Output:</strong> [-1,-1,-1,5,4,4,-1,-1,-1] <br />
         <strong>Explanation:</strong>- avg[0], avg[1], and avg[2] are -1 because
         there are less than k elements <strong>before</strong> each index. - The
         sum of the subarray centered at index 3 with radius 3 is: 7 + 4 + 3 + 9
@@ -22297,6 +22297,124 @@ for (int i = 0; i &lt; actualLength; i++) {
         </li>
         <li>
           <code>0 &lt;= nums[i] &lt;= 1</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  167: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a <strong>1-indexed</strong> array of integers{" "}
+        <code>numbers</code> that is already{" "}
+        <strong>
+          <em>sorted in non-decreasing order</em>
+        </strong>
+        , find two numbers such that they add up to a specific{" "}
+        <code>target</code> number. Let these two numbers be{" "}
+        <code>
+          numbers[index<sub>1</sub>]
+        </code>{" "}
+        and{" "}
+        <code>
+          numbers[index<sub>2</sub>]
+        </code>{" "}
+        where{" "}
+        <code>
+          1 &lt;= index<sub>1</sub> &lt; index<sub>2</sub> &lt;= numbers.length
+        </code>
+        .
+      </p>
+
+      <p>
+        Return<em> the indices of the two numbers, </em>
+        <code>
+          index<sub>1</sub>
+        </code>
+        <em> and </em>
+        <code>
+          index<sub>2</sub>
+        </code>
+        <em>
+          , <strong>added by one</strong> as an integer array{" "}
+        </em>
+        <code>
+          [index<sub>1</sub>, index<sub>2</sub>]
+        </code>
+        <em> of length 2.</em>
+      </p>
+
+      <p>
+        The tests are generated such that there is{" "}
+        <strong>exactly one solution</strong>. You <strong>may not</strong> use
+        the same element twice.
+      </p>
+
+      <p>Your solution must use only constant extra space.</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> numbers = [<u>2</u>,<u>7</u>,11,15], target = 9{" "}
+        <br />
+        <strong>Output:</strong> [1,2]
+        <br />
+        <strong>Explanation:</strong> The sum of 2 and 7 is 9. Therefore, index
+        <sub>1</sub> = 1, index<sub>2</sub> = 2. We return [1, 2].
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> numbers = [<u>2</u>,3,<u>4</u>], target = 6
+        <br />
+        <strong>Output:</strong> [1,3]
+        <br />
+        <strong>Explanation:</strong> The sum of 2 and 4 is 6. Therefore index
+        <sub>1</sub> = 1, index<sub>2</sub> = 3. We return [1, 3].
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> numbers = [<u>-1</u>,<u>0</u>], target = -1
+        <br />
+        <strong>Output:</strong> [1,2]
+        <br />
+        <strong>Explanation:</strong> The sum of -1 and 0 is -1. Therefore index
+        <sub>1</sub> = 1, index<sub>2</sub> = 2. We return [1, 2].
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            2 &lt;= numbers.length &lt;= 3 * 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>-1000 &lt;= numbers[i] &lt;= 1000</code>
+        </li>
+        <li>
+          <code>numbers</code> is sorted in{" "}
+          <strong>non-decreasing order</strong>.
+        </li>
+        <li>
+          <code>-1000 &lt;= target &lt;= 1000</code>
+        </li>
+        <li>
+          The tests are generated such that there is{" "}
+          <strong>exactly one solution</strong>.
         </li>
       </ul>
     </div>
