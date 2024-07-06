@@ -20701,6 +20701,78 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  3194: (
+    <ul>
+      <li>
+        <strong>Sorting:</strong>
+        <ul>
+          <li>
+            The input array <code>nums</code> is sorted in non-decreasing order
+            using <code>Arrays.sort(nums)</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            An empty list <code>averages</code> is initialized to store the
+            computed averages.
+          </li>
+          <li>
+            Pointers <code>left</code> and <code>right</code> are initialized to
+            the start and end of the sorted array respectively.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iteration:</strong>
+        <ul>
+          <li>
+            A loop iterates until <code>left</code> is less than{" "}
+            <code>right</code>.
+          </li>
+          <li>
+            Inside the loop:
+            <ul>
+              <li>
+                The smallest element <code>min</code> at index <code>left</code>{" "}
+                and largest element <code>max</code> at index <code>right</code>{" "}
+                are extracted.
+              </li>
+              <li>
+                The average of <code>min</code> and <code>max</code> is computed
+                as <code>(min + max) / 2.0</code> to ensure accurate division.
+              </li>
+              <li>
+                The computed average is added to the <code>averages</code> list.
+              </li>
+              <li>
+                <code>left</code> is incremented and <code>right</code> is
+                decremented to move inward through the array.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            After the loop completes, the <code>averages</code> list is
+            converted to a stream of doubles using{" "}
+            <code>averages.stream().mapToDouble(Double::doubleValue)</code>.
+          </li>
+          <li>
+            The minimum value in the stream is obtained using{" "}
+            <code>.min().orElse(0.0)</code>, which handles the case where the
+            list might be empty with a default value of <code>0.0</code>.
+          </li>
+          <li>The minimum average is returned as the result.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
