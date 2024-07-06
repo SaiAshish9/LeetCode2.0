@@ -24478,6 +24478,314 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  2905: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> integer array{" "}
+        <code>nums</code> having length <code>n</code>, an integer{" "}
+        <code>indexDifference</code>, and an integer{" "}
+        <code>valueDifference</code>.
+      </p>
+
+      <p>
+        Your task is to find <strong>two</strong> indices <code>i</code> and{" "}
+        <code>j</code>, both in the range <code>[0, n - 1]</code>, that satisfy
+        the following conditions:
+      </p>
+
+      <ul>
+        <li>
+          <code>abs(i - j) &gt;= indexDifference</code>, and
+        </li>
+        <li>
+          <code>abs(nums[i] - nums[j]) &gt;= valueDifference</code>
+        </li>
+      </ul>
+
+      <p>
+        Return <em>an integer array</em> <code>answer</code>, <em>where</em>{" "}
+        <code>answer = [i, j]</code> <em>if there are two such indices</em>,{" "}
+        <em>and</em> <code>answer = [-1, -1]</code> <em>otherwise</em>. If there
+        are multiple choices for the two indices, return <em>any of them</em>.
+      </p>
+
+      <p>
+        <strong>Note:</strong> <code>i</code> and <code>j</code> may be{" "}
+        <strong>equal</strong>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [5,1,4,1], indexDifference = 2,
+        valueDifference = 4<br />
+        <strong>Output:</strong> [0,3]
+        <br />
+        <strong>Explanation:</strong> In this example, i = 0 and j = 3 can be
+        selected.
+        <br />
+        abs(0 - 3) &gt;= 2 and abs(nums[0] - nums[3]) &gt;= 4.
+        <br />
+        Hence, a valid answer is [0,3].
+        <br />
+        [3,0] is also a valid answer.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [2,1], indexDifference = 0,
+        valueDifference = 0<br />
+        <strong>Output:</strong> [0,0]
+        <br />
+        <strong>Explanation:</strong> In this example, i = 0 and j = 0 can be
+        selected.
+        <br />
+        abs(0 - 0) &gt;= 0 and abs(nums[0] - nums[0]) &gt;= 0.
+        <br />
+        Hence, a valid answer is [0,0].
+        <br />
+        Other valid answers are [0,1], [1,0], and [1,1].
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3], indexDifference = 2,
+        valueDifference = 4<br />
+        <strong>Output:</strong> [-1,-1]
+        <br />
+        <strong>Explanation:</strong> In this example, it can be shown that it
+        is impossible to find two indices that satisfy both conditions.
+        <br />
+        Hence, [-1,-1] is returned.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= n == nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= nums[i] &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= indexDifference &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= valueDifference &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
+  2970: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> array of{" "}
+        <strong>positive</strong> integers <code>nums</code>.
+      </p>
+
+      <p>
+        A subarray of <code>nums</code> is called <strong>incremovable</strong>{" "}
+        if <code>nums</code> becomes <strong>strictly increasing</strong> on
+        removing the subarray. For example, the subarray <code>[3, 4]</code> is
+        an incremovable subarray of <code>[5, 3, 4, 6, 7]</code> because
+        removing this subarray changes the array <code>[5, 3, 4, 6, 7]</code> to{" "}
+        <code>[5, 6, 7]</code> which is strictly increasing.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the total number of <strong>incremovable</strong> subarrays of
+        </em>{" "}
+        <code>nums</code>.
+      </p>
+
+      <p>
+        <strong>Note</strong> that an empty array is considered strictly
+        increasing.
+      </p>
+
+      <p>
+        A <strong>subarray</strong> is a contiguous non-empty sequence of
+        elements within an array.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3,4]
+        <br />
+        <strong>Output:</strong> 10
+        <br />
+        <strong>Explanation:</strong> The 10 incremovable subarrays are: [1],
+        [2], [3], [4], [1,2], [2,3], [3,4], [1,2,3], [2,3,4], and [1,2,3,4],
+        because on removing any one of these subarrays nums becomes strictly
+        increasing. Note that you cannot select an empty subarray.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [6,5,7,8]
+        <br />
+        <strong>Output:</strong> 7<br />
+        <strong>Explanation:</strong> The 7 incremovable subarrays are: [5],
+        [6], [5,7], [6,5], [5,7,8], [6,5,7] and [6,5,7,8].
+        <br />
+        It can be shown that there are only 7 incremovable subarrays in nums.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [8,7,6,6]
+        <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong> The 3 incremovable subarrays are: [8,7,6],
+        [7,6,6], and [8,7,6,6]. Note that [8,7] is not an incremovable subarray
+        because after removing [8,7] nums becomes [6,6], which is sorted in
+        ascending order but not strictly increasing.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= nums.length &lt;= 50</code>
+        </li>
+        <li>
+          <code>1 &lt;= nums[i] &lt;= 50</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  2972: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> array of{" "}
+        <strong>positive</strong> integers <code>nums</code>.
+      </p>
+
+      <p>
+        A subarray of <code>nums</code> is called <strong>incremovable</strong>{" "}
+        if <code>nums</code> becomes <strong>strictly increasing</strong> on
+        removing the subarray. For example, the subarray <code>[3, 4]</code> is
+        an incremovable subarray of <code>[5, 3, 4, 6, 7]</code> because
+        removing this subarray changes the array <code>[5, 3, 4, 6, 7]</code> to{" "}
+        <code>[5, 6, 7]</code> which is strictly increasing.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the total number of <strong>incremovable</strong> subarrays of
+        </em>{" "}
+        <code>nums</code>.
+      </p>
+
+      <p>
+        <strong>Note</strong> that an empty array is considered strictly
+        increasing.
+      </p>
+
+      <p>
+        A <strong>subarray</strong> is a contiguous non-empty sequence of
+        elements within an array.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3,4]
+        <br />
+        <strong>Output:</strong> 10
+        <br />
+        <strong>Explanation:</strong> The 10 incremovable subarrays are: [1],
+        [2], [3], [4], [1,2], [2,3], [3,4], [1,2,3], [2,3,4], and [1,2,3,4],
+        because on removing any one of these subarrays nums becomes strictly
+        increasing. Note that you cannot select an empty subarray.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [6,5,7,8] <br />
+        <strong>Output:</strong> 7<br />
+        <strong>Explanation:</strong> The 7 incremovable subarrays are: [5],
+        [6], [5,7], [6,5], [5,7,8], [6,5,7] and [6,5,7,8].
+        <br />
+        It can be shown that there are only 7 incremovable subarrays in nums.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [8,7,6,6]
+        <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong> The 3 incremovable subarrays are: [8,7,6],
+        [7,6,6], and [8,7,6,6]. Note that [8,7] is not an incremovable subarray
+        because after removing [8,7] nums becomes [6,6], which is sorted in
+        ascending order but not strictly increasing.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= nums[i] &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
