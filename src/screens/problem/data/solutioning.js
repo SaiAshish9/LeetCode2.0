@@ -18793,7 +18793,7 @@ const SOLUTIONING = {
   167: (
     <>
       {" "}
-      <h2>Explanation of Solution</h2>
+      <h2>Explanation of Solution:</h2>
       <ul>
         <li>
           Initialize two pointers, <code>left</code> and <code>right</code>, at
@@ -18827,7 +18827,7 @@ const SOLUTIONING = {
   ),
   189: (
     <>
-      <h2>Explanation of Solution</h2>
+      <h2>Explanation of Solution:</h2>
 
       <ul>
         <li>
@@ -18879,7 +18879,7 @@ const SOLUTIONING = {
   ),
   202: (
     <>
-      <h2>Explanation of Happy Number Solution</h2>
+      <h2>Explanation of Happy Number Solution:</h2>
 
       <ul>
         <li>
