@@ -6818,7 +6818,7 @@ const SOLUTIONING = {
           </li>
           <li>
             Iterates over <code>nestedList</code> from the last element to the
-            first (<code>for (int i = nestedList.size() - 1; i >= 0; --i)</code>
+            first (<code>for (int i = nestedList.size() - 1; i &gt;= 0; --i)</code>
             ) and pushes each element onto the stack (
             <code>stack.push(nestedList.get(i))</code>).
           </li>
@@ -19529,7 +19529,7 @@ const SOLUTIONING = {
               first element that is out of order. This is done by the loop:
               <ul>
                 <li>
-                  <code>{`while (right > 0 && nums[right] >= nums[right - 1]) { right--; }`}</code>
+                  <code>{`while (right > 0 && nums[right] &gt;= nums[right - 1]) { right--; }`}</code>
                 </li>
               </ul>
             </li>
@@ -19895,7 +19895,7 @@ const SOLUTIONING = {
               characters at <code>left</code> and <code>right</code> are equal:
               <ul>
                 <li>
-                  <code>{`while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right))`}</code>
+                  <code>{`while (left &gt;= 0 && right < s.length() && s.charAt(left) == s.charAt(right))`}</code>
                 </li>
               </ul>
             </li>
@@ -20359,7 +20359,7 @@ const SOLUTIONING = {
         <strong>Iteration and Squaring:</strong>
         <ul>
           <li>
-            <code>{`for (int i = n - 1; i >= 0; i--) { ... }`}</code>: Iterate
+            <code>{`for (int i = n - 1; i &gt;= 0; i--) { ... }`}</code>: Iterate
             backwards through the <code>{`result`}</code> array starting from
             the last index (<code>{`n - 1`}</code> to <code>{`0`}</code>).
           </li>
@@ -20835,6 +20835,61 @@ const SOLUTIONING = {
           <li>
             If <code>indexDifference</code> is large relative to{" "}
             <code>nums.length</code>, handle cases where no valid pairs exist.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  2905: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>minIndex</code> and <code>maxIndex</code> are initialized to{" "}
+            <code>0</code>. These indices track the positions of the smallest
+            and largest elements within the current window defined by{" "}
+            <code>indexDifference</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sliding Window Approach:</strong>
+        <ul>
+          <li>
+            The algorithm iterates through the array starting from{" "}
+            <code>indexDifference</code>. For each index <code>i</code>:
+            <ul>
+              <li>
+                Updates <code>minIndex</code> and <code>maxIndex</code> to
+                ensure they point to the smallest and largest elements within
+                the current window.
+              </li>
+              <li>
+                Checks if either{" "}
+                <code>nums[i] - nums[minIndex] &gt;= valueDifference</code> or{" "}
+                <code>nums[maxIndex] - nums[i] &gt;= valueDifference</code>. These
+                conditions verify if there exists a pair{" "}
+                <code>(i, minIndex)</code> or <code>(i, maxIndex)</code> that
+                satisfies both specified conditions (
+                <code>abs(i - j) &gt;= indexDifference</code> and{" "}
+                <code>abs(nums[i] - nums[j]) &gt;= valueDifference</code>).
+              </li>
+              <li>
+                If either condition is met, it returns the indices{" "}
+                <code>[i, minIndex]</code> or <code>[i, maxIndex]</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Case Handling:</strong>
+        <ul>
+          <li>
+            If no valid indices are found that satisfy the conditions after
+            iterating through the array, the function returns{" "}
+            <code>[-1, -1]</code>.
           </li>
         </ul>
       </li>
