@@ -19050,6 +19050,62 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  349: (
+    <>
+      <h2>Explanation of Intersection of Two Arrays Solution</h2>
+      <ul>
+        <li>
+          <code>public int[] intersection(int[] nums1, int[] nums2)</code>: This
+          method finds the intersection of two arrays <code>nums1</code> and{" "}
+          <code>nums2</code>.
+        </li>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Creates a <code>HashSet&lt;Integer&gt; set</code> to store
+              elements of <code>nums1</code> for efficient lookup.
+            </li>
+            <li>
+              Creates another <code>HashSet&lt;Integer&gt; intersect</code> to
+              store the intersection elements.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Finding Intersection:</strong>
+          <ul>
+            <li>
+              Adds each element of <code>nums1</code> to <code>set</code>.
+            </li>
+            <li>
+              Iterates through <code>nums2</code> and checks if each element
+              exists in <code>set</code>. If yes, adds it to{" "}
+              <code>intersect</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Convert to Array:</strong>
+          <ul>
+            <li>
+              Converts <code>intersect</code> set to an array{" "}
+              <code>result</code> to return as the final intersection result.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return Result:</strong>
+          <ul>
+            <li>
+              Returns the <code>result</code> array containing the intersection
+              elements.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
