@@ -18960,6 +18960,59 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  287: (
+    <>
+      {" "}
+      <h2>Explanation of Find the Duplicate Number Solution</h2>
+      <ul>
+        <li>
+          <code>public int findDuplicate(int[] nums)</code>: This method finds
+          the duplicate number in an array <code>nums</code>.
+        </li>
+        <li>
+          <code>int slow = nums[0];</code>: Initializes the <code>slow</code>{" "}
+          pointer to start at the first element of the array.
+        </li>
+        <li>
+          <code>int fast = nums[nums[0]];</code>: Initializes the{" "}
+          <code>fast</code> pointer to start at the element pointed to by the
+          value at index <code>nums[0]</code>.
+        </li>
+        <li>
+          <strong>Phase 1: Cycle Detection</strong>
+          <ul>
+            <li>
+              Uses Floyd's Tortoise and Hare algorithm to detect the
+              intersection point within the cycle:
+            </li>
+            <li>
+              <code>while (slow != fast)</code>: Moves <code>slow</code> one
+              step at a time and <code>fast</code> two steps at a time until
+              they meet.
+            </li>
+            <li>
+              Identifies the intersection point where <code>slow</code> and{" "}
+              <code>fast</code> meet.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Phase 2: Find the Duplicate Number</strong>
+          <ul>
+            <li>
+              Resets <code>fast</code> to start from the beginning of the array.
+            </li>
+            <li>
+              <code>while (slow != fast)</code>: Moves both <code>slow</code>{" "}
+              and <code>fast</code> one step at a time until they meet at the
+              entrance of the cycle.
+            </li>
+            <li>The meeting point is the duplicate number.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
