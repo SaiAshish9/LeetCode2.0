@@ -23633,6 +23633,91 @@ for (int i = 0; i &lt; actualLength; i++) {
       complexity?
     </div>
   ),
+  923: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array <code>arr</code>, and an integer{" "}
+        <code>target</code>, return the number of tuples <code>i, j, k</code>{" "}
+        such that <code>i &lt; j &lt; k</code> and{" "}
+        <code>arr[i] + arr[j] + arr[k] == target</code>.
+      </p>
+
+      <p>
+        As the answer can be very large, return it <strong>modulo</strong>{" "}
+        <code>
+          10<sup>9</sup> + 7
+        </code>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = [1,1,2,2,3,3,4,4,5,5], target = 8<br />
+        <strong>Output:</strong> 20
+        <br />
+        <strong>Explanation: </strong>
+        <br />
+        Enumerating by the values (arr[i], arr[j], arr[k]):
+        <br />
+        (1, 2, 5) occurs 8 times;
+        <br />
+        (1, 3, 4) occurs 8 times;
+        <br />
+        (2, 2, 4) occurs 2 times;
+        <br />
+        (2, 3, 3) occurs 2 times.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = [1,1,2,2,2,2], target = 5 <br />
+        <strong>Output:</strong> 12
+        <br />
+        <strong>Explanation: </strong>
+        <br />
+        arr[i] = 1, arr[j] = arr[k] = 2 occurs 12 times:
+        <br />
+        We choose one 1 from [1,1] in 2 ways,
+        <br />
+        and two 2s from [2,2,2,2] in 6 ways.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = [2,1,3], target = 6<br />
+        <strong>Output:</strong> 1<br />
+        <strong>Explanation:</strong> (1, 2, 3) occured one time in the array so
+        we return 1.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>3 &lt;= arr.length &lt;= 3000</code>
+        </li>
+        <li>
+          <code>0 &lt;= arr[i] &lt;= 100</code>
+        </li>
+        <li>
+          <code>0 &lt;= target &lt;= 300</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
