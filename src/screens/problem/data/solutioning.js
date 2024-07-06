@@ -20773,6 +20773,73 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2903: (
+    <ul>
+      <li>
+        <strong>Problem Understanding:</strong>
+        <ul>
+          <li>
+            We need to find two indices <code>i</code> and <code>j</code> in the
+            array <code>nums</code> that satisfy specific conditions.
+          </li>
+          <li>
+            The conditions are:
+            <ul>
+              <li>
+                Absolute difference of indices <code>|i - j|</code> must be
+                greater than or equal to <code>indexDifference</code>.
+              </li>
+              <li>
+                Absolute difference of values <code>|nums[i] - nums[j]|</code>{" "}
+                must be greater than or equal to <code>valueDifference</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Implementation Strategy:</strong>
+        <ul>
+          <li>
+            Iterate through each index <code>i</code> in <code>nums</code>.
+          </li>
+          <li>
+            For each <code>i</code>, iterate through subsequent indices{" "}
+            <code>j</code>.
+          </li>
+          <li>
+            Check if the conditions <code>|i - j| &ge; indexDifference</code>{" "}
+            and <code>|nums[i] - nums[j]| &ge; valueDifference</code> are
+            satisfied.
+          </li>
+          <li>
+            If found, return the pair <code>[i, j]</code>.
+          </li>
+          <li>
+            If no such pair is found after checking all possible pairs, return{" "}
+            <code>[-1, -1]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            If <code>indexDifference = 0</code>, ensure <code>i</code> and{" "}
+            <code>j</code> can be equal.
+          </li>
+          <li>
+            If <code>valueDifference = 0</code>, handle cases where{" "}
+            <code>nums[i]</code> and <code>nums[j]</code> are equal.
+          </li>
+          <li>
+            If <code>indexDifference</code> is large relative to{" "}
+            <code>nums.length</code>, handle cases where no valid pairs exist.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
