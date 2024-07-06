@@ -20222,6 +20222,117 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  923: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>MOD = 1_000_000_007;</code>: A constant modulus value to
+            prevent overflow and keep results within a manageable range.
+          </li>
+          <li>
+            <code>Arrays.sort(arr);</code>: Sorting the array <code>arr</code>{" "}
+            in ascending order. Sorting is crucial for using the two-pointer
+            technique efficiently.
+          </li>
+          <li>
+            <code>int n = arr.length;</code>: Getting the length of the array{" "}
+            <code>arr</code>.
+          </li>
+          <li>
+            <code>long result = 0;</code>: Initializing a long variable{" "}
+            <code>result</code> to accumulate the number of valid triplets,
+            considering it might be large.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Outer Loop (<code>left</code> Pointer):
+        </strong>
+        <ul>
+          <li>
+            <code>{`for (int left = 0; left &lt; n; left++) { ... }`}</code>:
+            Looping through each index <code>left</code> from <code>0</code> to{" "}
+            <code>n-1</code>.
+          </li>
+          <li>
+            <code>int T = target - arr[left];</code>: Calculating <code>T</code>{" "}
+            as the target sum minus the current element <code>arr[left]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Inner Loop (<code>right</code> and <code>k</code> Pointers):
+        </strong>
+        <ul>
+          <li>
+            <code>int right = left + 1, k = n - 1;</code>: Initializing{" "}
+            <code>right</code> as <code>left + 1</code> and <code>k</code> as{" "}
+            <code>n - 1</code>.
+          </li>
+          <li>
+            <code>{`while (right < k) { ... }`}</code>: Using a while loop to
+            find pairs (<code>right</code>, <code>k</code>) such that{" "}
+            <code>right &lt; k</code>.
+          </li>
+          <li>
+            <strong>Conditions inside the while loop:</strong>
+            <ul>
+              <li>
+                <code>{`if (arr[right] + arr[k] < T) { right++; }`}</code>:
+                Increment <code>right</code> if the sum of elements at{" "}
+                <code>right</code> and <code>k</code> is less than{" "}
+                <code>T</code>.
+              </li>
+              <li>
+                <code>{`else if (arr[right] + arr[k] &gt; T) { k--; }`}</code>:
+                Decrement <code>k</code> if the sum of elements at{" "}
+                <code>right</code> and <code>k</code> is greater than{" "}
+                <code>T</code>.
+              </li>
+              <li>
+                <code>{`else if (arr[right] != arr[k]) { ... }`}</code>: If the
+                sum equals <code>T</code> and elements at <code>right</code> and{" "}
+                <code>k</code> are not equal, count occurrences considering
+                duplicates.
+              </li>
+              <li>
+                <code>{`else { ... }`}</code>: If elements at <code>right</code>{" "}
+                and <code>k</code> are equal, calculate combinations.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Counting Valid Triplets:</strong>
+        <ul>
+          <li>
+            <code>result += leftCount * rightCount;</code>: Adding the count of
+            valid combinations to <code>result</code> and taking modulo{" "}
+            <code>MOD</code> to manage large numbers.
+          </li>
+          <li>
+            <code>right++;</code> and <code>k--;</code>: Adjusting pointers
+            after counting.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            <code>return (int) result;</code>: Returning the accumulated count
+            of valid triplets as an integer, which is casted from{" "}
+            <code>result</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
