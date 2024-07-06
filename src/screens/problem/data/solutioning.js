@@ -6818,8 +6818,9 @@ const SOLUTIONING = {
           </li>
           <li>
             Iterates over <code>nestedList</code> from the last element to the
-            first (<code>for (int i = nestedList.size() - 1; i &gt;= 0; --i)</code>
-            ) and pushes each element onto the stack (
+            first (
+            <code>for (int i = nestedList.size() - 1; i &gt;= 0; --i)</code>)
+            and pushes each element onto the stack (
             <code>stack.push(nestedList.get(i))</code>).
           </li>
         </ul>
@@ -20359,9 +20360,9 @@ const SOLUTIONING = {
         <strong>Iteration and Squaring:</strong>
         <ul>
           <li>
-            <code>{`for (int i = n - 1; i &gt;= 0; i--) { ... }`}</code>: Iterate
-            backwards through the <code>{`result`}</code> array starting from
-            the last index (<code>{`n - 1`}</code> to <code>{`0`}</code>).
+            <code>{`for (int i = n - 1; i &gt;= 0; i--) { ... }`}</code>:
+            Iterate backwards through the <code>{`result`}</code> array starting
+            from the last index (<code>{`n - 1`}</code> to <code>{`0`}</code>).
           </li>
           <li>
             <strong>Comparison and Assignment:</strong>
@@ -20868,8 +20869,8 @@ const SOLUTIONING = {
               <li>
                 Checks if either{" "}
                 <code>nums[i] - nums[minIndex] &gt;= valueDifference</code> or{" "}
-                <code>nums[maxIndex] - nums[i] &gt;= valueDifference</code>. These
-                conditions verify if there exists a pair{" "}
+                <code>nums[maxIndex] - nums[i] &gt;= valueDifference</code>.
+                These conditions verify if there exists a pair{" "}
                 <code>(i, minIndex)</code> or <code>(i, maxIndex)</code> that
                 satisfies both specified conditions (
                 <code>abs(i - j) &gt;= indexDifference</code> and{" "}
@@ -20894,6 +20895,121 @@ const SOLUTIONING = {
         </ul>
       </li>
     </ul>
+  ),
+  2970: (
+    <ul>
+      <li>
+        <strong>Problem Understanding:</strong> We need to identify all
+        subarrays in the given array <code>nums</code> where removing the
+        subarray results in the remaining array being strictly increasing.
+      </li>
+      <li>
+        <strong>Approach:</strong> Here's how we can solve this problem:
+      </li>
+      <ul>
+        <li>
+          <strong>Iterate Over Subarrays:</strong> Use two nested loops to
+          generate all possible subarrays of <code>nums</code>.
+        </li>
+        <li>
+          <strong>Check Each Subarray:</strong> For each subarray, remove its
+          elements from <code>nums</code> and check if the remaining array is
+          strictly increasing.
+        </li>
+        <ul>
+          <li>
+            <strong>Strictly Increasing Check:</strong> Iterate through the
+            remaining array and ensure each element is greater than the previous
+            one.
+          </li>
+        </ul>
+        <li>
+          <strong>Count Valid Subarrays:</strong> Maintain a counter to count
+          all subarrays that satisfy the conditions.
+        </li>
+      </ul>
+      <li>
+        <strong>Implementation in Java:</strong> Here is the Java code that
+        implements the above approach:
+      </li>
+    </ul>
+  ),
+  2972: (
+    <>
+      <ul>
+        <li>
+          <strong>
+            Method <code>incremovableSubarrayCount</code>:
+          </strong>
+          <ul>
+            <li>
+              <strong>getStartIndexOfSuffix:</strong> This method finds the
+              starting index <code>startIndex</code> of the suffix in the array{" "}
+              <code>nums</code> where the array is not strictly increasing. It
+              iterates from the end of the array towards the beginning and
+              returns the index where the non-strictly increasing sequence
+              starts.
+            </li>
+            <li>
+              <strong>Main Calculation:</strong>
+              <ul>
+                <li>
+                  If <code>startIndex</code> is <code>0</code>, it means the
+                  entire array is strictly increasing. In this case, the total
+                  number of subarrays is calculated using the formula{" "}
+                  <code>(n * (n + 1)) / 2</code>, where <code>n</code> is the
+                  length of <code>nums</code>.
+                </li>
+                <li>
+                  Otherwise, initialize <code>ans</code> to{" "}
+                  <code>n - startIndex + 1</code>, which represents all
+                  subarrays ending at or after the <code>startIndex</code>.
+                </li>
+                <li>
+                  Iterate over the array:
+                  <ul>
+                    <li>
+                      For each element before <code>startIndex</code>, count
+                      subarrays ending at that element which are not strictly
+                      increasing.
+                    </li>
+                    <li>
+                      Use <code>firstGreater</code> to find the first index
+                      where <code>nums[i]</code> is greater than or equal to{" "}
+                      <code>nums[j]</code>, iterating <code>j</code> from{" "}
+                      <code>startIndex</code> towards the end of the array.
+                    </li>
+                    <li>
+                      Update <code>ans</code> by adding the count of subarrays
+                      found.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>firstGreater</code>:
+          </strong>
+          <ul>
+            <li>
+              This method uses <code>Arrays.binarySearch</code> to find the
+              first index where the element is greater than <code>target</code>.
+              If the element is not found, it returns the insertion point (the
+              index where the element should be inserted to maintain sorted
+              order).
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        This approach efficiently counts the number of "incremovable" subarrays
+        by leveraging indexing and binary search to handle the constraints
+        provided in the problem.
+      </p>
+    </>
   ),
 };
 
