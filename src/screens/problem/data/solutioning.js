@@ -19013,6 +19013,43 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  344: (
+    <>
+      <h2>Explanation of Reverse String Solution</h2>
+      <ul>
+        <li>
+          <code>public void reverseString(char[] s)</code>: This method reverses
+          the array of characters <code>s</code> in-place.
+        </li>
+        <li>
+          <code>int left = 0;</code>: Initializes the <code>left</code> pointer
+          to start at the beginning of the array.
+        </li>
+        <li>
+          <code>int right = s.length - 1;</code>: Initializes the{" "}
+          <code>right</code> pointer to start at the end of the array.
+        </li>
+        <li>
+          <strong>Reversing Process:</strong>
+          <ul>
+            <li>Uses a two-pointer approach:</li>
+            <li>
+              <code>while (left &lt; right)</code>: Swaps characters at{" "}
+              <code>left</code> and <code>right</code> pointers until they meet
+              in the middle.
+            </li>
+            <li>
+              Swaps characters using a temporary variable <code>temp</code>.
+            </li>
+            <li>
+              Moves <code>left</code> pointer forward and <code>right</code>{" "}
+              pointer backward after each swap.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
