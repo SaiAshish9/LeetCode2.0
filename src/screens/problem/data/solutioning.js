@@ -20333,6 +20333,71 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  977: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>{`int n = nums.length;`}</code>: Store the length of the input
+            array <code>{`nums`}</code>.
+          </li>
+          <li>
+            <code>{`int[] result = new int[n];`}</code>: Initialize an array{" "}
+            <code>{`result`}</code> of the same length as <code>{`nums`}</code>{" "}
+            to store the squared values.
+          </li>
+          <li>
+            <code>{`int left = 0, right = n - 1;`}</code>: Initialize two
+            pointers, <code>{`left`}</code> at the beginning (index{" "}
+            <code>{`0`}</code>) and <code>{`right`}</code> at the end (index{" "}
+            <code>{`n - 1`}</code>) of <code>{`nums`}</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iteration and Squaring:</strong>
+        <ul>
+          <li>
+            <code>{`for (int i = n - 1; i >= 0; i--) { ... }`}</code>: Iterate
+            backwards through the <code>{`result`}</code> array starting from
+            the last index (<code>{`n - 1`}</code> to <code>{`0`}</code>).
+          </li>
+          <li>
+            <strong>Comparison and Assignment:</strong>
+            <ul>
+              <li>
+                <code>{`if (Math.abs(nums[left]) > Math.abs(nums[right])) { ... }`}</code>
+                : Compare the absolute values of <code>{`nums[left]`}</code> and{" "}
+                <code>{`nums[right]`}</code>.
+              </li>
+              <li>
+                <code>{`result[i] = nums[left] * nums[left]; left++;`}</code>:
+                If <code>{`|nums[left]| > |nums[right]|`}</code>, square{" "}
+                <code>{`nums[left]`}</code> and increment <code>{`left`}</code>{" "}
+                pointer to the right.
+              </li>
+              <li>
+                <code>{`result[i] = nums[right] * nums[right]; right--;`}</code>
+                : Otherwise, square <code>{`nums[right]`}</code> and decrement{" "}
+                <code>{`right`}</code> pointer to the left.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            <code>{`return result;`}</code>: After filling the{" "}
+            <code>{`result`}</code> array with squared values in non-decreasing
+            order, return <code>{`result`}</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
