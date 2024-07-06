@@ -24201,7 +24201,6 @@ for (int i = 0; i &lt; actualLength; i++) {
         Return the <strong>minimum</strong> element in <code>averages</code>.
       </p>
 
-      <p>&nbsp;</p>
       <p>
         <strong class="example">Example 1:</strong>
       </p>
