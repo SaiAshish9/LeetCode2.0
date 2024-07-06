@@ -18821,6 +18821,56 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  189: (
+    <>
+      <ul>
+        <li>
+          <code>rotate(int[] nums, int k)</code>: This method rotates the array{" "}
+          <code>nums</code> to the right by <code>k</code> steps.
+        </li>
+        <li>
+          <code>k = k % nums.length;</code>: Ensures <code>k</code> is within
+          the range of array length to handle large <code>k</code> values.
+        </li>
+        <li>
+          <code>reverse(nums, 0, nums.length - 1);</code>: Reverses the entire
+          array.
+        </li>
+        <li>
+          <code>reverse(nums, 0, k - 1);</code>: Reverses the first{" "}
+          <code>k</code> elements of the array.
+        </li>
+        <li>
+          <code>reverse(nums, k, nums.length - 1);</code>: Reverses the
+          remaining elements after the first <code>k</code> elements.
+        </li>
+      </ul>
+
+      <h3>
+        Explanation of <code>reverse</code> Helper Method:
+      </h3>
+      <ul>
+        <li>
+          <code>private void reverse(int[] nums, int start, int end)</code>:
+          This method reverses the elements in the array <code>nums</code>{" "}
+          between indices <code>start</code> and <code>end</code>, inclusive.
+        </li>
+        <li>
+          It uses a two-pointer approach to swap elements: <code>start</code>{" "}
+          from the beginning and <code>end</code> from the end, moving towards
+          the middle.
+        </li>
+      </ul>
+
+      <p>
+        This approach effectively rotates the array in-place with O(n) time
+        complexity, where n is the number of elements in the array, using the
+        reversal technique. It operates directly on the input array without
+        using additional space proportional to the array size, making it both
+        time and space efficient.
+      </p>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
