@@ -20078,6 +20078,150 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  786: (
+    <>
+      <h2>Explanation of K-th Smallest Prime Fraction</h2>
+      <ul>
+        <li>
+          <code>public int[] kthSmallestPrimeFraction(int[] arr, int k)</code>:
+          This method returns the k-th smallest prime fraction from the sorted
+          array <code>arr</code>.
+        </li>
+        <li>
+          <strong>Initialize Variables:</strong>
+          <ul>
+            <li>
+              Initializes the length of the array <code>n</code> and a min-heap{" "}
+              <code>minHeap</code> to store fractions:
+              <ul>
+                <li>
+                  <code>int n = arr.length;</code>
+                </li>
+                <li>
+                  <code>
+                    PriorityQueue&lt;Fraction&gt; minHeap = new
+                    PriorityQueue&lt;&gt;((a, b) -&gt; Double.compare(a.value,
+                    b.value));
+                  </code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Initialize the Heap:</strong>
+          <ul>
+            <li>
+              Adds the first fraction in each column of the matrix to the heap:
+              <ul>
+                <li>
+                  <code>{`for (int i = 0; i < n - 1; i++)`}</code>
+                </li>
+                <li>
+                  <code>{`minHeap.offer(new Fraction(i, n - 1, (double) arr[i] / arr[n - 1]));`}</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Extract the K-th Smallest Fraction:</strong>
+          <ul>
+            <li>
+              Extracts the smallest fraction from the heap k times to find the
+              k-th smallest:
+              <ul>
+                <li>
+                  <code>Fraction fraction = null;</code>
+                </li>
+                <li>
+                  <code>for (int i = 0; i &lt; k; i++)</code>
+                </li>
+                <li>
+                  <code>fraction = minHeap.poll();</code>
+                </li>
+                <li>
+                  Checks if there are more fractions to add from the same row
+                  and adds them to the heap:
+                  <ul>
+                    <li>
+                      <code>int numeratorIndex = fraction.numeratorIndex;</code>
+                    </li>
+                    <li>
+                      <code>
+                        int denominatorIndex = fraction.denominatorIndex;
+                      </code>
+                    </li>
+                    <li>
+                      <code>if (denominatorIndex - 1 &gt; numeratorIndex)</code>
+                    </li>
+                    <li>
+                      <code>
+                        minHeap.offer(new Fraction(numeratorIndex,
+                        denominatorIndex - 1, (double) arr[numeratorIndex] /
+                        arr[denominatorIndex - 1]));
+                      </code>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return the Result:</strong>
+          <ul>
+            <li>
+              Returns the numerator and denominator of the k-th smallest
+              fraction:
+              <ul>
+                <li>
+                  <code>
+                    return new int[]
+                    {`{
+                      (arr[fraction.numeratorIndex],
+                      arr[fraction.denominatorIndex])
+                    }`}
+                    ;
+                  </code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>private static class Fraction</code>: This inner class
+          represents a fraction with its numerator index, denominator index, and
+          value.
+        </li>
+        <li>
+          <strong>Constructor:</strong>
+          <ul>
+            <li>
+              Initializes the fraction with the given indices and value:
+              <ul>
+                <li>
+                  <code>
+                    Fraction(int numeratorIndex, int denominatorIndex, double
+                    value)
+                  </code>
+                </li>
+                <li>
+                  <code>this.numeratorIndex = numeratorIndex;</code>
+                </li>
+                <li>
+                  <code>this.denominatorIndex = denominatorIndex;</code>
+                </li>
+                <li>
+                  <code>this.value = value;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
