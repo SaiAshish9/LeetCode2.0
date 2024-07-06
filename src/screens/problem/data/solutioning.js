@@ -20632,6 +20632,75 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2856: (
+    <ul>
+      <li>
+        <strong>Counting Frequencies:</strong>
+        <ul>
+          <li>
+            A <code>HashMap</code> named <code>count</code> is initialized to
+            store the frequency of each element in the input list{" "}
+            <code>nums</code>.
+          </li>
+          <li>
+            Using a loop, each element <code>x</code> in <code>nums</code> is
+            processed to update its count in the <code>count</code> map using{" "}
+            <code>merge</code> method.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initializing Priority Queue:</strong>
+        <ul>
+          <li>
+            A <code>PriorityQueue</code> named <code>pq</code> is created with a
+            reverse order comparator to prioritize the largest counts at the
+            front.
+          </li>
+          <li>
+            Each unique count from the <code>count</code> map is added to the{" "}
+            <code>pq</code> using the <code>offer</code> method.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Processing Pairs:</strong>
+        <ul>
+          <li>
+            A <code>while</code> loop continues as long as there are at least
+            two elements in the <code>pq</code>.
+          </li>
+          <li>
+            Within the loop, the two largest counts are retrieved from the{" "}
+            <code>pq</code> using <code>poll</code>.
+          </li>
+          <li>
+            Each count is decremented by one, representing the removal of a pair
+            (i, j).
+          </li>
+          <li>
+            If the decremented count is still greater than zero, it is added
+            back to the <code>pq</code> using <code>offer</code>.
+          </li>
+          <li>
+            The <code>ans</code> variable is decremented by 2 for each pair
+            removed, reflecting the reduction in the total number of elements in{" "}
+            <code>nums</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Returning the Result:</strong>
+        <ul>
+          <li>
+            After the loop completes, <code>ans</code> contains the minimum
+            possible length of <code>nums</code> after all removal operations.
+          </li>
+          <li>This value is returned as the final result of the function.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
