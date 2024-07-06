@@ -19792,6 +19792,147 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  647: (
+    <>
+      <h2>Explanation of Palindromic Substrings</h2>
+      <ul>
+        <li>
+          <code>public int countSubstrings(String s)</code>: This method returns
+          the number of palindromic substrings in the given string{" "}
+          <code>s</code>.
+        </li>
+        <li>
+          <strong>Initialize Variables:</strong>
+          <ul>
+            <li>
+              Initializes the length of the string <code>n</code> and the count
+              of palindromic substrings <code>count</code>:
+              <ul>
+                <li>
+                  <code>int n = s.length();</code>
+                </li>
+                <li>
+                  <code>int count = 0;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterate Over Each Character:</strong>
+          <ul>
+            <li>
+              Uses a for-loop to iterate over each character in the string as a
+              potential center for palindromic substrings:
+              <ul>
+                <li>
+                  <code>{`for (int i = 0; i < n; i++)`}</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Counts palindromic substrings with the current character as the
+              center for odd-length palindromes:
+              <ul>
+                <li>
+                  <code>count += countPalindromesAroundCenter(s, i, i);</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Counts palindromic substrings with the current and next character
+              as the center for even-length palindromes:
+              <ul>
+                <li>
+                  <code>
+                    count += countPalindromesAroundCenter(s, i, i + 1);
+                  </code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return the Count:</strong>
+          <ul>
+            <li>
+              Returns the total count of palindromic substrings:
+              <ul>
+                <li>
+                  <code>return count;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>
+            private int countPalindromesAroundCenter(String s, int left, int
+            right)
+          </code>
+          : This helper method counts the number of palindromic substrings
+          centered around the given indices <code>left</code> and{" "}
+          <code>right</code>.
+        </li>
+        <li>
+          <strong>Initialize Variables:</strong>
+          <ul>
+            <li>
+              Initializes the count of palindromic substrings to 0:
+              <ul>
+                <li>
+                  <code>int count = 0;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Expand Around Center:</strong>
+          <ul>
+            <li>
+              Uses a while-loop to expand around the center as long as the
+              characters at <code>left</code> and <code>right</code> are equal:
+              <ul>
+                <li>
+                  <code>{`while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right))`}</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Increments the count for each palindromic substring found and
+              moves the pointers outward:
+              <ul>
+                <li>
+                  <code>count++;</code>
+                </li>
+                <li>
+                  <code>left--;</code>
+                </li>
+                <li>
+                  <code>right++;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return the Count:</strong>
+          <ul>
+            <li>
+              Returns the count of palindromic substrings found for the given
+              center:
+              <ul>
+                <li>
+                  <code>return count;</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
