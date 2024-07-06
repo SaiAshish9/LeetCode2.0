@@ -6,15 +6,18 @@ import {
   Content,
   ContentItem,
   ContentText,
+  IconCont,
   ParentContent,
   Spacer,
 } from "./styles";
 import { ContentTextBold, TitleContainer } from "../qsList/styles";
 import axios from "axios";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const RevisionSheet = () => {
   const [data, setData] = useState(null);
   const [count, setCount] = useState(0);
+  const [up, setUp] = useState([]);
 
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -102,28 +105,46 @@ const RevisionSheet = () => {
                     {item}
                   </p>{" "}
                   ({data[item].length})
+                  <IconCont
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      if (!up.includes(key)) {
+                        setUp([...up, key]);
+                      } else {
+                        let temp = up.slice();
+                        temp = temp.filter((x) => x !== key);
+                        setUp(temp);
+                      }
+                    }}
+                  >
+                    {up.includes(key) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                  </IconCont>
                 </ContentText>
-                <Spacer />
-                {data[item].map(
-                  (value, key) =>
-                    value.title && (
-                      <ParentContent key={value.title}>
-                        <TitleContainer
-                          onClick={() => {
-                            window.open(
-                              "/problems/" +
-                                value.title.toLowerCase().split(" ").join("_"),
-                              "_blank"
-                            );
-                          }}
-                        >
-                          <p>
-                            {value.qno}. {value.title}{" "}
-                          </p>
-                        </TitleContainer>
-                      </ParentContent>
-                    )
-                )}
+                {up.includes(key) &&
+                  data[item].map(
+                    (value, key) =>
+                      value.title && (
+                        <ParentContent key={value.title}>
+                          <TitleContainer
+                            onClick={() => {
+                              window.open(
+                                "/problems/" +
+                                  value.title
+                                    .toLowerCase()
+                                    .split(" ")
+                                    .join("_"),
+                                "_blank"
+                              );
+                            }}
+                          >
+                            <p>
+                              {value.qno}. {value.title}{" "}
+                            </p>
+                          </TitleContainer>
+                        </ParentContent>
+                      )
+                  )}
               </ContentItem>
             ))}
       </Content>

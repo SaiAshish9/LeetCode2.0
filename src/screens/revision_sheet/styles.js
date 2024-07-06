@@ -31,7 +31,8 @@ export const ContentText = styled.p`
   white-space: pre-wrap;
   max-width: 100%;
   width: 100%;
-  display: inline;
+  display: flex;
+  align-items: center;
   p {
     overflow-x: hidden;
     display: inline;
@@ -41,6 +42,12 @@ export const ContentText = styled.p`
     color: #000;
     width: fit-content;
   }
+`;
+
+export const IconCont = styled.p`
+  margin-left: 0.5rem;
+  position: relative;
+  bottom: 1px;
 `;
 
 export const ContentItem = styled.div`
