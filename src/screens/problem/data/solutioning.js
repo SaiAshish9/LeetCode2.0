@@ -21503,41 +21503,65 @@ const SOLUTIONING = {
       <h2>Explanation</h2>
       <ul>
         <li>
-          <strong>Class Declaration:</strong>
+          <strong>Class and Method Definition:</strong>
           <ul>
             <li>
-              The class <code>Solution</code> contains methods to find the
-              Lowest Common Ancestor (LCA) of two nodes in a BST.
+              <code>class Solution</code>: Defines a class named{" "}
+              <code>Solution</code>.
+            </li>
+            <li>
+              <code>public boolean verifyPreorder(int[] preorder)</code>: Method
+              to verify if the given <code>preorder</code> array is a valid
+              preorder traversal of a BST.
             </li>
           </ul>
         </li>
         <li>
-          <strong>
-            Method <code>lowestCommonAncestor</code>:
-          </strong>
+          <strong>Initialization:</strong>
           <ul>
             <li>
+              <code>{`Deque<Integer> stack = new ArrayDeque<>();`}</code>:
+              Initializes a stack to track nodes during traversal.
+            </li>
+            <li>
+              <code>int last = Integer.MIN_VALUE;</code>: Initializes{" "}
+              <code>last</code> to the smallest possible integer value to
+              compare against during traversal.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Traversal and Validation:</strong>
+          <ul>
+            <li>
+              <code>for (int x : preorder)</code>: Iterates through each element{" "}
+              <code>x</code> in the <code>preorder</code> array.
+            </li>
+            <li>
+              <code>{`if (x < last) return false;`}</code>: Checks if{" "}
+              <code>x</code> is less than <code>last</code>. If true, returns{" "}
+              <code>false</code> since it violates the BST {`property.`}
+            </li>
+            <li>
               <code>
-                public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p,
-                TreeNode q)
+                {`̦while (!stack.isEmpty() && stack.peek() < x) `}last =
+                stack.poll();
               </code>
-              : This method takes the root of the BST and two nodes{" "}
-              <code>p</code> and <code>q</code>, and returns their LCA.
-            </li>
-            <li>Checks if the root is null and returns null if true.</li>
-            <li>
-              If both <code>p</code> and <code>q</code> are smaller than the
-              root's value, it means LCA lies in the left subtree, so it
-              recursively calls the method on the left subtree.
+              : Pops elements from the stack that are less than <code>x</code>,
+              updating <code>last</code> accordingly.
             </li>
             <li>
-              If both <code>p</code> and <code>q</code> are greater than the
-              root's value, it means LCA lies in the right subtree, so it
-              recursively calls the method on the right subtree.
+              <code>stack.push(x);</code>: Pushes <code>x</code> onto the stack,
+              representing the current node in traversal.
             </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Completion:</strong>
+          <ul>
             <li>
-              If neither of the above conditions is true, it means the current
-              root is the LCA, so it returns the root.
+              Returns <code>true</code> if the entire <code>preorder</code>{" "}
+              array satisfies the BST preorder traversal property.
             </li>
           </ul>
         </li>
