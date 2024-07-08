@@ -27154,7 +27154,7 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <p>The rules of the game are as follows:</p>
 
-      <ol>
+      <ul>
         <li>
           <strong>Start</strong> at the{" "}
           <code>
@@ -27177,7 +27177,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           repeat.
         </li>
         <li>Else, the last friend in the circle wins the game.</li>
-      </ol>
+      </ul>
 
       <p>
         Given the number of friends, <code>n</code>, and an integer{" "}
@@ -27194,17 +27194,18 @@ for (int i = 0; i &lt; actualLength; i++) {
         style={{ width: 500, height: 345 }}
       />
       <pre>
-        <strong>Input:</strong> n = 5, k = 2<strong>Output:</strong> 3
-        <strong>Explanation:</strong> Here are the steps of the game: <br />1
-        {")"} Start at friend 1. <br />2{")"} Count 2 friends clockwise, which
-        are friends 1 and 2. <br />3{")"} Friend 2 leaves the circle. Next start
-        is friend 3. <br />4{")"} Count 2 friends clockwise, which are friends 3
-        and 4. <br />5{")"} Friend 4 leaves the circle. Next start is friend 5.{" "}
-        <br />6{")"} Count 2 friends clockwise, which are friends 5 and 1.{" "}
-        <br />7{")"} Friend 1 leaves the circle. Next start is friend 3. <br />8
-        {")"} Count 2 friends clockwise, which are friends 3 and 5. <br />9{")"}{" "}
-        Friend 5 leaves the circle. Only friend 3 is left, so they are the
-        winner.
+        <strong>Input:</strong> n = 5, k = 2 <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong>
+        <br /> Here are the steps of the game: <br />1{")"} Start at friend 1.{" "}
+        <br />2{")"} Count 2 friends clockwise, which are friends 1 and 2.{" "}
+        <br />3{")"} Friend 2 leaves the circle. Next start is friend 3. <br />4
+        {")"} Count 2 friends clockwise, which are friends 3 and 4. <br />5{")"}{" "}
+        Friend 4 leaves the circle. Next start is friend 5. <br />6{")"} Count 2
+        friends clockwise, which are friends 5 and 1. <br />7{")"} Friend 1
+        leaves the circle. Next start is friend 3. <br />8{")"} Count 2 friends
+        clockwise, which are friends 3 and 5. <br />9{")"} Friend 5 leaves the
+        circle. Only friend 3 is left, so they are the winner.
       </pre>
 
       <p>
