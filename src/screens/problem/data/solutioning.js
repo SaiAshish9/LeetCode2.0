@@ -22972,6 +22972,140 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  232: (
+    <>
+      <h2>Class Definition</h2>
+      <ul>
+        <li>
+          <code>MyStack</code> class:
+          <ul>
+            <li>
+              Contains two queues: <code>queue1</code> and <code>queue2</code>.
+            </li>
+            <li>
+              Uses the <code>LinkedList</code> class for queue implementation.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Constructor</h2>
+      <ul>
+        <li>
+          <code>public MyStack()</code>:
+          <ul>
+            <li>
+              Initializes <code>queue1</code> and <code>queue2</code> as empty
+              linked lists.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Push Operation</h2>
+      <ul>
+        <li>
+          <code>public void push(int x)</code>:
+          <ul>
+            <li>
+              Adds the element <code>x</code> to <code>queue2</code>.
+            </li>
+            <li>
+              Moves all elements from <code>queue1</code> to <code>queue2</code>
+              .
+            </li>
+            <li>
+              Swaps <code>queue1</code> and <code>queue2</code> to maintain the
+              order.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Pop Operation</h2>
+      <ul>
+        <li>
+          <code>public int pop()</code>:
+          <ul>
+            <li>
+              Removes and returns the element at the front of{" "}
+              <code>queue1</code>.
+            </li>
+            <li>
+              Throws a <code>RuntimeException</code> if the stack is empty.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Top Operation</h2>
+      <ul>
+        <li>
+          <code>public int top()</code>:
+          <ul>
+            <li>
+              Returns the element at the front of <code>queue1</code> without
+              removing it.
+            </li>
+            <li>
+              Throws a <code>RuntimeException</code> if the stack is empty.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Empty Operation</h2>
+      <ul>
+        <li>
+          <code>public boolean empty()</code>:
+          <ul>
+            <li>
+              Checks if <code>queue1</code> is empty, indicating whether the
+              stack is empty.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Usage Example</h2>
+      <ul>
+        <li>
+          <code>MyStack obj = new MyStack();</code>
+          <ul>
+            <li>
+              Creates a new instance of <code>MyStack</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>obj.push(x);</code>
+          <ul>
+            <li>
+              Adds an element <code>x</code> to the stack.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>int param_2 = obj.pop();</code>
+          <ul>
+            <li>Removes and returns the top element from the stack.</li>
+          </ul>
+        </li>
+        <li>
+          <code>int param_3 = obj.top();</code>
+          <ul>
+            <li>Returns the top element of the stack without removing it.</li>
+          </ul>
+        </li>
+        <li>
+          <code>boolean param_4 = obj.empty();</code>
+          <ul>
+            <li>Checks if the stack is empty.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
