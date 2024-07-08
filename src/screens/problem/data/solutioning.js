@@ -23234,6 +23234,119 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  387: (
+    <>
+      {" "}
+      <h1>First Unique Character in a String</h1>
+      <p>
+        This implementation finds the first non-repeating character in a string
+        and returns its index. If it doesn't exist, it returns -1.
+      </p>
+      <h2>Class Definition</h2>
+      <ul>
+        <li>
+          <code>public class Solution</code>:
+          <ul>
+            <li>
+              Contains the method <code>firstUniqChar(String s)</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>firstUniqChar Method</h2>
+      <ul>
+        <li>
+          <code>public int firstUniqChar(String s)</code>:
+          <ul>
+            <li>
+              Finds the first unique character in the string <code>s</code> and
+              returns its index.
+            </li>
+            <li>Returns -1 if there is no unique character.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Steps</h3>
+      <ul>
+        <li>
+          <b>Step 1: Build Hash Map</b>
+          <ul>
+            <li>
+              Create a <code>HashMap&lt;Character, Integer&gt;</code> named{" "}
+              <code>count</code> to store the frequency of each character.
+            </li>
+            <li>
+              Iterate through the string <code>s</code> and populate the{" "}
+              <code>count</code> map with the frequency of each character.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Step 2: Find the Index</b>
+          <ul>
+            <li>
+              Iterate through the string <code>s</code> again and check the
+              frequency of each character in the <code>count</code> map.
+            </li>
+            <li>
+              Return the index of the first character with a frequency of 1.
+            </li>
+            <li>If no unique character is found, return -1.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Usage</h2>
+      <ul>
+        <li>
+          <code>Solution solution = new Solution();</code>
+          <ul>
+            <li>
+              Creates a new instance of the <code>Solution</code> class.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>int index = solution.firstUniqChar("leetcode");</code>
+          <ul>
+            <li>
+              Finds the first unique character in the string{" "}
+              <code>"leetcode"</code> and returns its index.
+            </li>
+            <li>
+              Expected result: <code>0</code>, since 'l' is the first unique
+              character.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>int index = solution.firstUniqChar("loveleetcode");</code>
+          <ul>
+            <li>
+              Finds the first unique character in the string{" "}
+              <code>"loveleetcode"</code> and returns its index.
+            </li>
+            <li>
+              Expected result: <code>2</code>, since 'v' is the first unique
+              character.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>int index = solution.firstUniqChar("aabb");</code>
+          <ul>
+            <li>
+              Finds the first unique character in the string <code>"aabb"</code>{" "}
+              and returns its index.
+            </li>
+            <li>
+              Expected result: <code>-1</code>, since there are no unique
+              characters.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
