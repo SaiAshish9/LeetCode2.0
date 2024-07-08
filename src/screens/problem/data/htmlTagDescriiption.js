@@ -1441,7 +1441,12 @@ void postorderRec(TreeNode root) {
   Brainteaser: (
     <>
       {" "}
-      <h1>Explanation of Brainteaser Tag on LeetCode</h1>
+      <p>
+        The "Brainteaser" problems often involve puzzles, riddles, or scenarios
+        where straightforward algorithmic approaches might not immediately
+        apply.
+      </p>
+      <br />
       <h2>Characteristics of Brainteaser Problems</h2>
       <ul>
         <li>
@@ -1497,13 +1502,14 @@ void postorderRec(TreeNode root) {
           maintaining clarity.
         </li>
       </ul>
-      <h2>Example Brainteaser Problem</h2>
+      <h2>Example Brainteaser Problem:</h2> <br />
       <p>
         A classic example might involve determining the minimum number of moves
         required to solve a puzzle or finding the optimal strategy for a game
         with specific rules and conditions.
       </p>
-      <h2>Conclusion</h2>
+      <br />
+      <h2>Conclusion:</h2> <br />
       <p>
         Brainteaser problems on LeetCode challenge you to develop creative
         problem-solving skills by exploring unconventional approaches and
