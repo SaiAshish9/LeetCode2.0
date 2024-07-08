@@ -21879,6 +21879,89 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  449: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Codec</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public String serialize(TreeNode root)</code>: Method to
+              serialize the BST into a string.
+            </li>
+            <li>
+              <code>
+                private void serializeHelper(TreeNode node, StringBuilder sb)
+              </code>
+              : Recursive helper method for serialization.
+              <ul>
+                <li>
+                  Appends each node's value to <code>sb</code>, separated by
+                  commas.
+                </li>
+                <li>Uses "null" to represent null nodes.</li>
+              </ul>
+            </li>
+            <li>
+              <code>public TreeNode deserialize(String data)</code>: Method to
+              deserialize the string data back into a BST.
+            </li>
+            <li>
+              <code>
+                private TreeNode deserializeHelper(Queue&lt;String&gt; queue)
+              </code>
+              : Recursive helper method for deserialization.
+              <ul>
+                <li>
+                  Dequeues the next string from <code>queue</code>.
+                </li>
+                <li>
+                  If the string is "null", returns null (indicating a null
+                  node).
+                </li>
+                <li>
+                  Creates a new <code>TreeNode</code> with the parsed integer
+                  value.
+                </li>
+                <li>
+                  Recursively sets the left and right children of the node.
+                </li>
+                <li>Returns the reconstructed node.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
