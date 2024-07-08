@@ -22045,6 +22045,160 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  501: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>private int maxCount;</code>,{" "}
+              <code>private int currentCount;</code>,{" "}
+              <code>private int currentVal;</code>,{" "}
+              <code>private List&lt;Integer&gt; modes;</code>: Instance
+              variables to track the current mode and its counts.
+            </li>
+            <li>
+              <code>public int[] findMode(TreeNode root)</code>: Main method to
+              find the mode values in the BST.
+              <ul>
+                <li>
+                  Returns an array of integers representing the mode values.
+                </li>
+                <li>
+                  Initializes variables and calls <code>traverse(root)</code> to
+                  traverse the tree.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>private void traverse(TreeNode node)</code>: Recursive
+              method to perform an inorder traversal of the BST.
+              <ul>
+                <li>
+                  Traverses left subtree, handles current node value, and
+                  traverses right subtree.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>private void handleValue(int val)</code>: Helper method to
+              handle occurrences of node values during traversal.
+              <ul>
+                <li>
+                  Updates <code>currentCount</code> and checks if the current
+                  node value is a new mode candidate.
+                </li>
+                <li>
+                  Updates <code>maxCount</code> and adds to <code>modes</code>{" "}
+                  list if necessary.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  530: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>private int minDiff;</code>,{" "}
+              <code>private Integer prev;</code>: Instance variables to track
+              the minimum difference and the previous node value during
+              traversal.
+            </li>
+            <li>
+              <code>public int getMinimumDifference(TreeNode root)</code>:
+              Method to find the minimum absolute difference between any two
+              nodes in the BST.
+              <ul>
+                <li>Returns the minimum absolute difference.</li>
+                <li>
+                  Initializes <code>minDiff</code> to{" "}
+                  <code>Integer.MAX_VALUE</code> and calls{" "}
+                  <code>inorder(root)</code> to perform an inorder traversal.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>private void inorder(TreeNode node)</code>: Recursive method
+              to perform an inorder traversal of the BST.
+              <ul>
+                <li>
+                  Traverses left subtree, calculates the difference between
+                  current node and <code>prev</code> if <code>prev</code> is not
+                  null, updates <code>minDiff</code> accordingly, and updates{" "}
+                  <code>prev</code> to current node value.
+                </li>
+                <li>Traverses right subtree.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
