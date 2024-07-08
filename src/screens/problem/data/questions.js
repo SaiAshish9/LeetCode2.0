@@ -26639,6 +26639,139 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  1902: (
+    <article role="main" class="blog-post">
+      <p>
+        You are given a <strong>0-indexed</strong> integer array{" "}
+        <code class="language-plaintext highlighter-rouge">order</code> of
+        length <code class="language-plaintext highlighter-rouge">n</code>, a{" "}
+        <strong>permutation</strong> of integers from{" "}
+        <code class="language-plaintext highlighter-rouge">1</code> to{" "}
+        <code class="language-plaintext highlighter-rouge">n</code> representing
+        the <strong>order</strong> of insertion into a{" "}
+        <strong>binary search tree</strong>.
+      </p>
+
+      <p>A binary search tree is defined as follows:</p>
+
+      <ul>
+        <li>
+          The left subtree of a node contains only nodes with keys{" "}
+          <strong>less than</strong> the node’s key.
+        </li>
+        <li>
+          The right subtree of a node contains only nodes with keys{" "}
+          <strong>greater than</strong> the node’s key.
+        </li>
+        <li>
+          Both the left and right subtrees must also be binary search trees.
+        </li>
+      </ul>
+
+      <p>The binary search tree is constructed as follows:</p>
+
+      <ul>
+        <li>
+          <code class="language-plaintext highlighter-rouge">order[0]</code>{" "}
+          will be the <strong>root</strong> of the binary search tree.
+        </li>
+        <li>
+          All subsequent elements are inserted as the <strong>child</strong> of{" "}
+          <strong>any</strong> existing node such that the binary search tree
+          properties hold.
+        </li>
+      </ul>
+
+      <p>
+        Return{" "}
+        <em>
+          the <strong>depth</strong> of the binary search tree
+        </em>
+        .
+      </p>
+
+      <p>
+        A binary tree’s <strong>depth8* is the number of **nodes</strong> along
+        the <strong>longest path</strong> from the root node down to the
+        farthest leaf node.
+      </p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <img
+        src="https://assets.leetcode.com/uploads/2021/06/15/1.png"
+        alt="Ima text"
+      />
+
+      <pre>
+        <strong>Input:</strong> order = [2,1,4,3] <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong> The binary search tree has a depth of 3
+        with path 2-&gt;3-&gt;4.
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <img
+        src="https://assets.leetcode.com/uploads/2021/06/15/2.png"
+        alt=" text"
+      />
+
+      <pre>
+        <strong>Input:</strong> order = [2,1,3,4]
+        <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong> The binary search tree has a depth of 3
+        with path 2-&gt;3-&gt;4.
+      </pre>
+
+      <p>
+        <strong>Example 3:</strong>
+      </p>
+
+      <p>
+        <img
+          src="https://assets.leetcode.com/uploads/2021/06/15/3.png"
+          alt="Imge text"
+        />
+      </p>
+
+      <pre>
+        <strong>Input:</strong> order = [1,2,3,4]
+        <br />
+        <strong>Output:</strong> 4<br />
+        <strong>Explanation:</strong> The binary search tree has a depth of 4
+        with path 1-&gt;2-&gt;3-&gt;4.
+      </pre>
+
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            n == order.length
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= n &lt;= 10^5
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">order</code> is a
+          permutation of integers between{" "}
+          <code class="language-plaintext highlighter-rouge">1</code> and{" "}
+          <code class="language-plaintext highlighter-rouge">n</code>.
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
