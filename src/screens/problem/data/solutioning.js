@@ -23456,6 +23456,72 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1823: (
+    <>
+      {" "}
+      <h1>Explanation of findTheWinner Method</h1>
+      <h2>Method Overview</h2>
+      <ul>
+        <li>
+          <code>public int findTheWinner(int n, int k)</code>:
+          <ul>
+            <li>
+              Returns the winner's number in a circular elimination game with{" "}
+              <code>n</code> players and elimination step <code>k</code>.
+            </li>
+            <li>
+              <code>n</code>: Total number of players.
+            </li>
+            <li>
+              <code>k</code>: Step size for eliminating players.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Implementation Details</h2>
+      <ul>
+        <li>
+          <strong>Initialization</strong>:
+          <ul>
+            <li>
+              Creates an <code>ArrayList</code> <code>players</code> to
+              represent the players with numbers from 1 to <code>n</code>.
+            </li>
+            <li>
+              <code>for</code> loop iterates from 1 to <code>n</code> and adds
+              each player's number to <code>players</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Elimination Process</strong>:
+          <ul>
+            <li>
+              <code>while</code> loop continues as long as there is more than
+              one player in <code>players</code>.
+            </li>
+            <li>
+              <code>index</code> variable is updated using modulo operation to
+              handle circular indexing.
+            </li>
+            <li>
+              Removes the player at index <code>index</code> from{" "}
+              <code>players</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Return</strong>:
+          <ul>
+            <li>
+              After all eliminations, returns the number of the last remaining
+              player in <code>players</code>, which is the winner.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
