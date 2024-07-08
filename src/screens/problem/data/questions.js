@@ -25502,12 +25502,13 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre>
-        <strong>Input: </strong>[10,5,15,1,8,null,7] <br />
+        <strong>Input: </strong>[10,5,15,1,8,null,7] <br /> <br />
         <img
           alt=""
           src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0333.Largest%20BST%20Subtree/images/tmp.jpg"
           style={{ width: 571, height: 302 }}
-        />
+        />{" "}
+        <br />
         <strong>Output:</strong> 3 <br />
         <strong>Explanation: </strong>The Largest BST Subtree in this case is
         the highlighted one. The return value is the subtree's size, which is 3.
