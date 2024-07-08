@@ -21011,6 +21011,85 @@ const SOLUTIONING = {
       </p>
     </>
   ),
+  96: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>Class Declaration:</strong>
+          <ul>
+            <li>
+              The class <code>Solution</code> contains the method{" "}
+              <code>numTrees</code> which computes the number of unique BSTs.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>numTrees</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public int numTrees(int n)</code>: This method takes an
+              integer <code>n</code> as input and returns the number of unique
+              BSTs that can be formed with <code>n</code> distinct nodes.
+            </li>
+            <li>
+              <code>int[] dp = new int[n + 1];</code>: Initializes a dynamic
+              programming array <code>dp</code> to store the number of unique
+              BSTs for each number of nodes from 0 to <code>n</code>.
+            </li>
+            <li>
+              <code>dp[0] = 1;</code>: Base case - there is one unique BST (an
+              empty tree) with 0 nodes.
+            </li>
+            <li>
+              <code>dp[1] = 1;</code>: Base case - there is one unique BST with
+              1 node.
+            </li>
+            <li>
+              Loop through each number of nodes from 2 to <code>n</code>:
+              <ul>
+                <li>
+                  <code>for (int nodes = 2; nodes &lt;= n; nodes++)</code>:
+                  Outer loop iterating through the number of nodes.
+                </li>
+                <li>
+                  For each number of nodes, consider each node as the root:
+                  <ul>
+                    <li>
+                      <code>for (int root = 1; root &lt;= nodes; root++)</code>:
+                      Inner loop iterating through each possible root node.
+                    </li>
+                    <li>
+                      Calculate the number of unique BSTs by considering the
+                      product of the number of BSTs that can be formed with the
+                      left subtree and the right subtree:
+                      <ul>
+                        <li>
+                          <code>
+                            dp[nodes] += dp[root - 1] * dp[nodes - root];
+                          </code>
+                          : Adds the product of the number of BSTs with{" "}
+                          <code>root-1</code> nodes on the left and{" "}
+                          <code>nodes-root</code> nodes on the right to{" "}
+                          <code>dp[nodes]</code>.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>return dp[n];</code>: Returns the number of unique BSTs that
+              can be formed with <code>n</code> nodes.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
