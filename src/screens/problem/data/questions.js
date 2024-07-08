@@ -25303,13 +25303,9 @@ for (int i = 0; i &lt; actualLength; i++) {
       <p>Consider the following&nbsp;binary search tree:&nbsp;</p>
 
       <pre>
-        <code>
-          {`5
-    / \
-   2   6
-  / \
- 1   3`}
-        </code>
+{`      5
+  2       6
+1   3`}
       </pre>
 
       <p>
