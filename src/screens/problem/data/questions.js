@@ -25596,23 +25596,22 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <p>Basically, the deletion can be divided into two stages:</p>
 
-      <ol>
+      <ul>
         <li>Search for a node to remove.</li>
         <li>If the node is found, delete the node.</li>
-      </ol>
+      </ul>
 
-      <p>&nbsp;</p>
       <p>
         <strong class="example">Example 1:</strong>
       </p>
       <img
         alt=""
         src="https://assets.leetcode.com/uploads/2020/09/04/del_node_1.jpg"
-        style={{ width: 800, height: 214 }}
+        style={{ width: "80%" }}
       />
       <pre>
         <strong>Input:</strong> root = [5,3,6,2,4,null,7], key = 3 <br />
-        <strong>Output:</strong> [5,4,6,2,null,null,7]
+        <strong>Output:</strong> [5,4,6,2,null,null,7] <br />
         <strong>Explanation:</strong> Given key to delete is 3. So we find the
         node with value 3 and delete it.
         <br />
