@@ -25345,7 +25345,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           closest to the target.
         </li>
       </ul>
-
+      <br />
       <p>
         <strong>Example:</strong>
       </p>
@@ -25357,6 +25357,7 @@ for (int i = 0; i &lt; actualLength; i++) {
   2   5
  / \
 1   3`}
+        <br />
         <strong>Output:</strong> 4
       </pre>
     </div>
