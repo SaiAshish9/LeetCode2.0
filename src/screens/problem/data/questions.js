@@ -24969,6 +24969,93 @@ for (int i = 0; i &lt; actualLength; i++) {
       space solution?
     </div>
   ),
+  108: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array <code>nums</code> where the elements are sorted
+        in <strong>ascending order</strong>, convert <em>it to a </em>
+        <span
+          data-keyword="height-balanced"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:r7i:"
+              >
+                <div>
+                  <strong>
+                    <em>height-balanced</em>
+                  </strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        <em>binary search tree</em>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/02/18/btree1.jpg"
+        style={{ width: 302, height: 222 }}
+      />
+      <pre>
+        <strong>Input:</strong> nums = [-10,-3,0,5,9] <br />
+        <strong>Output:</strong> [0,-3,9,-10,null,5] <br />
+        <strong>Explanation:</strong> [0,-10,5,null,-3,null,9] is also accepted:{" "}
+        <br />
+        <img
+          alt=""
+          src="https://assets.leetcode.com/uploads/2021/02/18/btree2.jpg"
+          style={{ width: 302, height: 222 }}
+        />
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/02/18/btree.jpg"
+        style={{ width: 342, height: 142 }}
+      />
+      <pre>
+        <strong>Input:</strong> nums = [1,3] <br />
+        <strong>Output:</strong> [3,1] <br />
+        <strong>Explanation:</strong> [1,null,3] and [3,1] are both
+        height-balanced BSTs.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            -10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>nums</code> is sorted in a <strong>strictly increasing</strong>{" "}
+          order.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
