@@ -27070,7 +27070,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <br />
         <strong>Output</strong>
         <br />
-        [null,null,null,null,null,null,20,40,0,null,32]
+        [null,null,null,null,null,null,20,40,0,null,32] <br />
         <strong>Explanation</strong>
         <br />
         ProductOfNumbers productOfNumbers = new ProductOfNumbers();
