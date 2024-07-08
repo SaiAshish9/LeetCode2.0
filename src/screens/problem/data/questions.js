@@ -24845,23 +24845,7 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
       <ul>
         <li>
-          The left{" "}
-          <span
-            data-keyword="subtree"
-            class=" cursor-pointer relative text-dark-blue-s text-sm"
-          >
-            <div class="popover-wrapper inline-block" data-headlessui-state="">
-              <div>
-                <div
-                  aria-expanded="false"
-                  data-headlessui-state=""
-                  id="headlessui-popover-button-:r5o:"
-                >
-                  <div>subtree</div>
-                </div>
-              </div>
-            </div>
-          </span>{" "}
+          The left <span>subtree</span>{" "}
           of a node contains only nodes with keys <strong>less than</strong> the
           node's key.
         </li>
