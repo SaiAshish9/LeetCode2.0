@@ -21620,6 +21620,98 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  272: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>{`public List<Integer> closestKValues(TreeNode root, double target, int k)`}</code>
+              : Public method to initiate the search for k closest values.
+            </li>
+            <li>
+              <code>{`ans = new LinkedList<>();`}</code>: Initializes{" "}
+              <code>ans</code> as an empty list to store closest values.
+            </li>
+            <li>
+              <code>this.target = target;</code> and <code>this.k = k;</code>:
+              Sets target and k values from parameters.
+            </li>
+            <li>
+              <code>dfs(root);</code>: Initiates depth-first search to populate{" "}
+              <code>ans</code> with closest values.
+            </li>
+            <li>
+              <strong>dfs Method:</strong> Performs depth-first traversal of the
+              BST.
+              <ul>
+                <li>
+                  <code>if (root == null) return;</code>: Base case, stops
+                  recursion if current node is null.
+                </li>
+                <li>
+                  <code>dfs(root.left);</code>: Recursively explores left
+                  subtree.
+                </li>
+                <li>
+                  <code>{`if (ans.size() < k) { ans.add(root.val); }`}</code>:
+                  Adds root value to <code>ans</code> if <code>ans</code> size
+                  is less than k.
+                </li>
+                <li>
+                  <code>{`else { if (Math.abs(root.val - target) >= Math.abs(ans.get(0) - target)) return;`}</code>
+                  : Checks if root value is further from target than first
+                  element in <code>ans</code>.
+                </li>
+                <li>
+                  <code>ans.remove(0); ans.add(root.val);</code>: If root value
+                  is closer to target, updates first element of <code>ans</code>{" "}
+                  to root value.
+                </li>
+                <li>
+                  <code>dfs(root.right);</code>: Recursively explores right
+                  subtree.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Returns <code>ans</code>, which contains the k closest values to{" "}
+              <code>target</code> found during traversal.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
