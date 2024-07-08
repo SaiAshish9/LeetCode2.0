@@ -25301,12 +25301,16 @@ for (int i = 0; i &lt; actualLength; i++) {
       <p>You may assume each number in the sequence is unique.</p>
 
       <p>Consider the following&nbsp;binary search tree:&nbsp;</p>
+      <br />
+      <br />
 
       <pre>
         {`      5
   2       6
 1   3`}
       </pre>
+      <br />
+      <br />
 
       <p>
         <strong>Example 1:</strong>
@@ -25351,11 +25355,12 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre>
-        <strong>Input:</strong> root = [4,2,5,1,3], target = 3.714286 <br />
-{`       4
+        <strong>Input:</strong> root = [4,2,5,1,3], target = 3.714286 <br />{" "}
+        <br />
+        {`       4
   2        5
 1   3`}
-        <br />
+        <br /> <br />
         <strong>Output:</strong> 4
       </pre>
     </div>
