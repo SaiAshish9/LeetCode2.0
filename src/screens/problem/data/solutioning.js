@@ -22894,6 +22894,84 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1902: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>
+            Method: <code>maxDepthBST</code>
+          </strong>
+          <ul>
+            <li>
+              This method takes an array of integers, <code>order</code>,
+              representing the preorder traversal of a BST, and returns the
+              maximum depth of the tree.
+            </li>
+            <li>
+              <code>{`TreeMap<Integer, Integer> map = new TreeMap<>();`}</code>:
+              A TreeMap to store the depth of nodes in the BST.
+            </li>
+            <li>
+              <code>map.put(0, 0);</code>: Adds a sentinel node with value 0 and
+              depth 0.
+            </li>
+            <li>
+              <code>map.put(Integer.MAX_VALUE, 0);</code>: Adds a sentinel node
+              with the maximum integer value and depth 0.
+            </li>
+            <li>
+              <code>map.put(order[0], 1);</code>: Adds the root node (first
+              element of the order array) with depth 1.
+            </li>
+            <li>
+              <code>int ans = 1;</code>: Initializes the answer to 1, since the
+              depth of the root node is 1.
+            </li>
+            <li>
+              <code>for (int i = 1; i &lt; order.length; ++i)</code>: Iterates
+              through the rest of the nodes in the preorder traversal.
+              <ul>
+                <li>
+                  <code>int v = order[i];</code>: Retrieves the current node
+                  value.
+                </li>
+                <li>
+                  <code>{`Map.Entry<Integer, Integer> lower = map.lowerEntry(v);`}</code>
+                  : Finds the largest node value in the map that is less than
+                  the current node value.
+                </li>
+                <li>
+                  <code>{`Map.Entry<Integer, Integer> higher = map.higherEntry(v);`}</code>
+                  : Finds the smallest node value in the map that is greater
+                  than the current node value.
+                </li>
+                <li>
+                  <code>
+                    int depth = 1 + Math.max(lower.getValue(),
+                    higher.getValue());
+                  </code>
+                  : Calculates the depth of the current node as one more than
+                  the maximum depth of its lower and higher neighbors.
+                </li>
+                <li>
+                  <code>ans = Math.max(ans, depth);</code>: Updates the answer
+                  with the maximum depth found so far.
+                </li>
+                <li>
+                  <code>map.put(v, depth);</code>: Adds the current node value
+                  and its depth to the map.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>return ans;</code>: Returns the maximum depth of the BST.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
