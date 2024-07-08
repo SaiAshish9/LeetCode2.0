@@ -21498,6 +21498,52 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  255: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>Class Declaration:</strong>
+          <ul>
+            <li>
+              The class <code>Solution</code> contains methods to find the
+              Lowest Common Ancestor (LCA) of two nodes in a BST.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>lowestCommonAncestor</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>
+                public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p,
+                TreeNode q)
+              </code>
+              : This method takes the root of the BST and two nodes{" "}
+              <code>p</code> and <code>q</code>, and returns their LCA.
+            </li>
+            <li>Checks if the root is null and returns null if true.</li>
+            <li>
+              If both <code>p</code> and <code>q</code> are smaller than the
+              root's value, it means LCA lies in the left subtree, so it
+              recursively calls the method on the left subtree.
+            </li>
+            <li>
+              If both <code>p</code> and <code>q</code> are greater than the
+              root's value, it means LCA lies in the right subtree, so it
+              recursively calls the method on the right subtree.
+            </li>
+            <li>
+              If neither of the above conditions is true, it means the current
+              root is the LCA, so it returns the root.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {

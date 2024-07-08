@@ -25291,6 +25291,46 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  255: (
+    <div class="markdown-body div-width">
+      <p>
+        Given an array of numbers, verify whether it is the correct preorder
+        traversal sequence of a binary search tree.
+      </p>
+
+      <p>You may assume each number in the sequence is unique.</p>
+
+      <p>Consider the following&nbsp;binary search tree:&nbsp;</p>
+
+      <pre>
+        <code>
+          {`5
+    / \
+   2   6
+  / \
+ 1   3`}
+        </code>
+      </pre>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> [5,2,6,1,3] <br />
+        <strong>Output:</strong> false
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> [5,2,1,3,6] <br />
+        <strong>Output:</strong> true
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
