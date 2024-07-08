@@ -26982,11 +26982,9 @@ for (int i = 0; i &lt; actualLength; i++) {
         </em>
         . If it does not exist, return <code>-1</code>.
       </p>
-      <p>&nbsp;</p>
       <p>
         <strong class="example">Example 1:</strong>
       </p>{" "}
-      <br />
       <pre>
         <strong>Input:</strong> s = "leetcode"
         <br />
@@ -26995,7 +26993,6 @@ for (int i = 0; i &lt; actualLength; i++) {
       <p>
         <strong class="example">Example 2:</strong>
       </p>
-      <br />
       <pre>
         <strong>Input:</strong> s = "loveleetcode"
         <br />
@@ -27004,7 +27001,6 @@ for (int i = 0; i &lt; actualLength; i++) {
       <p>
         <strong class="example">Example 3:</strong>
       </p>
-      <br />
       <pre>
         <strong>Input:</strong> s = "aabb"
         <br />
