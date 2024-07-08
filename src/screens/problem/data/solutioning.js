@@ -21178,6 +21178,13 @@ const SOLUTIONING = {
   ),
   99: (
     <>
+      <p>
+        To solve the problem of recovering a binary search tree (BST) where two
+        nodes have been swapped by mistake, we can use Morris In-order Traversal
+        to achieve O(1) space complexity. Morris Traversal allows us to traverse
+        the tree in-order without using a stack or recursion, making it a
+        constant space solution.
+      </p>
       <h2>Explanation</h2>
       <ul>
         <li>
