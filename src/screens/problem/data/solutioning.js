@@ -23669,6 +23669,69 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  292: (
+    <>
+      <p>
+        The following HTML provides a breakdown of the solution to the Nim Game
+        problem:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Key Insight:</strong>
+          <ul>
+            <li>
+              In Nim Game, winning or losing depends on the number of stones{" "}
+              <code>n</code>.
+            </li>
+            <li>
+              If <code>n % 4 == 0</code>, the first player (you) will lose if
+              both play optimally.
+            </li>
+            <li>
+              If <code>n % 4 != 0</code>, the first player (you) can win with
+              optimal play.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Implementation:</strong>
+          <ul>
+            <li>
+              <code>public boolean canWinNim(int n)</code>: Method signature
+              that checks if the first player can win with <code>n</code>{" "}
+              stones.
+            </li>
+            <li>
+              <code>return n % 4 != 0;</code>: Returns <code>true</code> if{" "}
+              <code>n</code> is not a multiple of 4, indicating a winning
+              position.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Explanation of Return Statement:</strong>
+          <ul>
+            <li>
+              The return statement uses <code>n % 4 != 0</code> to determine if
+              the current number of stones <code>n</code> allows the first
+              player to win.
+            </li>
+            <li>
+              If <code>n % 4 == 0</code>, the statement returns{" "}
+              <code>false</code>, indicating the first player will lose with
+              optimal play.
+            </li>
+            <li>
+              If <code>n % 4 != 0</code>, the statement returns{" "}
+              <code>true</code>, indicating the first player can win with
+              optimal play.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
