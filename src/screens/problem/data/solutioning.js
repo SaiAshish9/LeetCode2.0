@@ -21786,6 +21786,99 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  333: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>private int ans;</code>: Variable to store the size of the
+              largest BST subtree found.
+            </li>
+            <li>
+              <code>public int largestBSTSubtree(TreeNode root)</code>: Public
+              method to initiate the search for the largest BST subtree.
+            </li>
+            <li>
+              <code>ans = 0;</code>: Initializes <code>ans</code> to 0 before
+              starting the search.
+            </li>
+            <li>
+              <strong>dfs Method:</strong> Recursively checks each subtree to
+              determine if it is a BST and calculates its size.
+              <ul>
+                <li>
+                  <code>
+                    if (root == null) return new int[]{" "}
+                    {`{Integer.MAX_VALUE, Integer.MIN_VALUE, 0};`}
+                  </code>
+                  : Returns an array representing min value, max value, and size
+                  of the BST subtree if the current node is null (base case).
+                </li>
+                <li>
+                  <code>int[] left = dfs(root.left);</code> and{" "}
+                  <code>int[] right = dfs(root.right);</code>: Recursively
+                  calculates properties (min value, max value, size) of left and
+                  right subtrees.
+                </li>
+                <li>
+                  <code>{`if (left[1] < root.val && root.val < right[0])`}</code>
+                  : Checks if the current node satisfies the BST condition
+                  between its left and right subtrees.
+                </li>
+                <li>
+                  <code>ans = Math.max(ans, left[2] + right[2] + 1);</code>:
+                  Updates <code>ans</code> with the size of the current subtree
+                  if it forms a valid BST.
+                </li>
+                <li>
+                  <code>
+                    return new int[]{" "}
+                    {`{Math.min(root.val, left[0]), Math.max(root.val, right[1]), left[2] + right[2] + 1};`}
+                  </code>
+                  : Returns updated min value, max value, and size of the BST
+                  subtree rooted at the current node.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Returns <code>ans</code>, which contains the size of the largest
+              BST subtree found in the binary tree.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
