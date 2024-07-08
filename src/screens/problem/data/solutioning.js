@@ -22644,6 +22644,92 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1373: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>private int maxSum = 0;</code>: Instance variable to keep
+              track of the maximum sum of BST found so far.
+            </li>
+            <li>
+              <code>public int maxSumBST(TreeNode root)</code>: Method to find
+              the maximum sum of any BST in the given binary tree.
+              <ul>
+                <li>
+                  Initializes the process by calling <code>dfs(root)</code>.
+                </li>
+                <li>Returns the maximum sum found.</li>
+              </ul>
+            </li>
+            <li>
+              <code>private int[] dfs(TreeNode node)</code>: Recursive method to
+              perform a post-order traversal and gather information about each
+              subtree.
+              <ul>
+                <li>
+                  Returns an array of four integers:{" "}
+                  <code>{`{(isBST, min, max, sum)}`}</code>.
+                </li>
+                <li>
+                  <code>isBST</code>: Indicates if the subtree is a BST (1 if
+                  true, 0 if false).
+                </li>
+                <li>
+                  <code>min</code>: The minimum value in the subtree.
+                </li>
+                <li>
+                  <code>max</code>: The maximum value in the subtree.
+                </li>
+                <li>
+                  <code>sum</code>: The sum of all values in the subtree.
+                </li>
+                <li>
+                  If the current node is null, returns{" "}
+                  <code>{`{(1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0)}`}</code>.
+                </li>
+                <li>Recursively processes the left and right subtrees.</li>
+                <li>
+                  Checks if the current subtree is a BST and updates{" "}
+                  <code>maxSum</code> if necessary.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
