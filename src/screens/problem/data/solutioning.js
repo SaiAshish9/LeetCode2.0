@@ -22564,6 +22564,86 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1008: (
+    <>
+      {" "}
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>private int index = 0;</code>: Instance variable to keep
+              track of the current index in the preorder traversal.
+            </li>
+            <li>
+              <code>public TreeNode bstFromPreorder(int[] preorder)</code>:
+              Method to construct a BST from a given preorder traversal array.
+              <ul>
+                <li>
+                  Initializes the construction process by calling{" "}
+                  <code>
+                    bstFromPreorder(preorder, Integer.MIN_VALUE,
+                    Integer.MAX_VALUE)
+                  </code>
+                  .
+                </li>
+                <li>Returns the root of the constructed BST.</li>
+              </ul>
+            </li>
+            <li>
+              <code>
+                private TreeNode bstFromPreorder(int[] preorder, int lower, int
+                upper)
+              </code>
+              : Recursive method to construct the BST.
+              <ul>
+                <li>
+                  Checks if the current index is out of bounds or if the current
+                  value violates the BST property (not within <code>lower</code>{" "}
+                  and <code>upper</code> bounds).
+                </li>
+                <li>Creates a new node with the current value.</li>
+                <li>
+                  Recursively constructs left and right subtrees by adjusting
+                  the <code>lower</code> and <code>upper</code> bounds
+                  accordingly.
+                </li>
+                <li>Returns the root of the subtree.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
