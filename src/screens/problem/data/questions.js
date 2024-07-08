@@ -26831,7 +26831,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         ["MyStack", "push", "push", "top", "pop", "empty"] <br />
         [[], [1], [2], [], [], []] <br />
         <strong>Output</strong> <br />
-        [null, null, null, 2, 2, false]
+        [null, null, null, 2, 2, false] <br />
         <strong>Explanation</strong> <br />
         MyStack myStack = new MyStack(); <br />
         myStack.push(1); <br />
