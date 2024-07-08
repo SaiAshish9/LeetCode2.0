@@ -25507,7 +25507,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           alt=""
           src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0333.Largest%20BST%20Subtree/images/tmp.jpg"
           style={{ width: 571, height: 302 }}
-        ></img>
+        />
         <strong>Output:</strong> 3 <br />
         <strong>Explanation: </strong>The Largest BST Subtree in this case is
         the highlighted one. The return value is the subtree's size, which is 3.
