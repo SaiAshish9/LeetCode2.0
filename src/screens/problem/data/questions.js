@@ -25484,6 +25484,42 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  333: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a binary tree, find the largest subtree which is a Binary Search
+        Tree (BST), where largest means subtree with largest number of nodes in
+        it.
+      </p>
+
+      <p>
+        <b>Note:</b>
+        <br />A subtree must include all of its descendants.
+      </p>
+
+      <p>
+        <strong>Example:</strong>
+      </p>
+
+      <pre>
+        <strong>Input: </strong>[10,5,15,1,8,null,7] <br />
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0333.Largest%20BST%20Subtree/images/tmp.jpg"
+          style={{ width: 571, height: 302 }}
+        ></img>
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation: </strong>The Largest BST Subtree in this case is
+        the highlighted one. The return value is the subtree's size, which is 3.
+      </pre>
+
+      <p>
+        <b>Follow up:</b>
+        <br />
+        Can you figure out ways to solve it with O(n) time complexity?
+      </p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;

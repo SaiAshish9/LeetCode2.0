@@ -21712,6 +21712,80 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  285: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Constructor <code>TreeNode(int x)</code> initializes a node with a
+              given value <code>x</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>
+                public TreeNode inorderSuccessor(TreeNode root, TreeNode p)
+              </code>
+              : Method to find the inorder successor of node <code>p</code> in
+              the BST.
+            </li>
+            <li>
+              <code>TreeNode ans = null;</code>: Initializes <code>ans</code> to
+              store the successor node.
+            </li>
+            <li>
+              <strong>While Loop:</strong> Continues while <code>root</code> is
+              not <code>null</code>.
+              <ul>
+                <li>
+                  <code>if (root.val &gt; p.val)</code>: Checks if current node
+                  value <code>root.val</code> is greater than <code>p.val</code>
+                  .
+                  <ul>
+                    <li>
+                      <code>ans = root;</code>: Updates <code>ans</code> to
+                      current node <code>root</code>.
+                    </li>
+                    <li>
+                      <code>root = root.left;</code>: Moves to the left child of{" "}
+                      <code>root</code> to find a closer successor.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code>else</code>: If current node value is less than or equal
+                  to <code>p.val</code>,
+                  <ul>
+                    <li>
+                      <code>root = root.right;</code>: Moves to the right child
+                      of <code>root</code> to potentially find a larger
+                      successor.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Returns <code>ans</code>, which contains the inorder successor of
+              node <code>p</code> found during traversal.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
