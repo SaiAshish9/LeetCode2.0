@@ -23620,6 +23620,55 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2745: (
+    <>
+      {" "}
+      <h1>Code Explanation: longestString Method</h1>
+      <p>
+        The following HTML provides a breakdown of the{" "}
+        <code>longestString</code> method in the <code>Solution</code> class:
+      </p>
+      <ul>
+        <li>
+          <strong>Finding Minimum Count:</strong>
+          <ul>
+            <li>
+              <code>min = Math.min(x, y);</code> determines the minimum count
+              between <code>x</code> and <code>y</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Condition Check:</strong>
+          <ul>
+            <li>
+              <code>if (x == y)</code>: Checks if <code>x</code> is equal to{" "}
+              <code>y</code>.
+            </li>
+            <li>
+              If true, return <code>(min * 2 + z) * 2;</code>
+            </li>
+            <li>
+              If false, return <code>(min * 2 + 1 + z) * 2;</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Explanation of Return Values:</strong>
+          <ul>
+            <li>
+              <code>(min * 2 + z) * 2;</code>: Calculates maximum length when{" "}
+              <code>x</code> and <code>y</code> are equal.
+            </li>
+            <li>
+              <code>(min * 2 + 1 + z) * 2;</code>: Calculates maximum length
+              when <code>x</code> and <code>y</code> are not equal.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
