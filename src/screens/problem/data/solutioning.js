@@ -21176,6 +21176,113 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  99: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>Class Declaration:</strong>
+          <ul>
+            <li>
+              The class <code>Solution</code> contains methods to recover a BST
+              where two nodes have been swapped by mistake.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Fields:</strong>
+          <ul>
+            <li>
+              <code>TreeNode first = null;</code>: Stores the first incorrect
+              node.
+            </li>
+            <li>
+              <code>TreeNode second = null;</code>: Stores the second incorrect
+              node.
+            </li>
+            <li>
+              <code>TreeNode prev = null;</code>: Used to keep track of the
+              previous node during in-order traversal.
+            </li>
+            <li>
+              <code>TreeNode temp = null;</code>: Temporary node used in Morris
+              Traversal.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>recoverTree</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public void recoverTree(TreeNode root)</code>: This method
+              takes the root of the tree and recovers the BST by identifying and
+              swapping the two incorrect nodes using Morris Traversal.
+            </li>
+            <li>
+              Initializes <code>first</code>, <code>second</code>, and{" "}
+              <code>prev</code> nodes.
+            </li>
+            <li>
+              Uses a while loop to traverse the tree in in-order using Morris
+              Traversal.
+            </li>
+            <li>
+              Within the while loop, checks if the left child is not null:
+              <ul>
+                <li>
+                  Finds the rightmost node in the left subtree or links it to
+                  the current root.
+                </li>
+                <li>
+                  If the rightmost node is already linked, it means we've
+                  finished the left subtree, so we unlink it and move to the
+                  right subtree.
+                </li>
+                <li>
+                  During this process, checks if the current node is less than
+                  the previous node to identify the swapped nodes.
+                </li>
+              </ul>
+            </li>
+            <li>
+              If the left child is null, it simply moves to the right child and
+              continues checking for swapped nodes.
+            </li>
+            <li>After identifying the swapped nodes, swaps their values.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>printInOrder</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public static void printInOrder(TreeNode root)</code>: This
+              method prints the tree nodes in in-order traversal to verify the
+              tree structure after recovery.
+            </li>
+            <li>
+              If the node is not null, recursively prints the left subtree, the
+              current node's value, and the right subtree.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Main Method:</strong>
+          <ul>
+            <li>
+              The <code>main</code> method demonstrates an example usage of the{" "}
+              <code>recoverTree</code> method by creating a tree with swapped
+              nodes, recovering it, and printing it in in-order traversal to
+              verify the correction.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
