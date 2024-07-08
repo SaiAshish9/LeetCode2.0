@@ -21568,6 +21568,58 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  270: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              Contains a method{" "}
+              <code>public int closestValue(TreeNode root, double target)</code>{" "}
+              to find the closest value in the BST to the target value.
+            </li>
+            <li>
+              <code>int ans = root.val;</code>: Initializes <code>ans</code>{" "}
+              with the value of the root node.
+            </li>
+            <li>
+              <code>double minDiff = Double.MAX_VALUE;</code>: Initializes{" "}
+              <code>minDiff</code> to the maximum possible value.
+            </li>
+            <li>
+              <strong>While Loop:</strong> Continues while <code>root</code> is
+              not <code>null</code>.
+              <ul>
+                <li>
+                  <code>double currentDiff = Math.abs(root.val - target);</code>
+                  : Calculates the absolute difference between{" "}
+                  <code>root.val</code> and <code>target</code>.
+                </li>
+                <li>
+                  <code>if (currentDiff &lt; minDiff)</code>: Updates{" "}
+                  <code>ans</code> and <code>minDiff</code> if the current
+                  difference is smaller.
+                </li>
+                <li>
+                  <strong>Conditionals:</strong> Adjusts <code>root</code> to
+                  traverse left or right based on whether <code>root.val</code>{" "}
+                  is greater than or less than <code>target</code>.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Returns <code>ans</code>, which contains the value closest to{" "}
+              <code>target</code> found during traversal.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
