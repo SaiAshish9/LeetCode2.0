@@ -21962,6 +21962,89 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  450: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public TreeNode deleteNode(TreeNode root, int key)</code>:
+              Method to delete a node with value <code>key</code> from the BST.
+            </li>
+            <li>
+              <code>if (root == null) return null;</code>: Base case where the
+              tree is empty or the node is not found.
+            </li>
+            <li>
+              <code>if (key &lt; root.val)</code> and{" "}
+              <code>else if (key &gt; root.val)</code>: Recursively searches for
+              the node to delete in the left or right subtree based on the
+              comparison with <code>key</code>.
+            </li>
+            <li>
+              <code>{`// Case 1: Node to be deleted has no children or only one child`}</code>
+              :
+              <ul>
+                <li>
+                  If <code>root.left</code> or <code>root.right</code> is null,
+                  returns the non-null child (if any).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>{`// Case 2: Node to be deleted has two children`}</code>:
+              <ul>
+                <li>
+                  Finds the minimum node in the right subtree (or maximum in the
+                  left subtree).
+                </li>
+                <li>
+                  Assigns the value of the minimum node to <code>root.val</code>
+                  .
+                </li>
+                <li>
+                  Recursively deletes the minimum node from the right subtree.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>private int findMin(TreeNode node)</code>: Helper method to
+              find the minimum value in a subtree rooted at <code>node</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
