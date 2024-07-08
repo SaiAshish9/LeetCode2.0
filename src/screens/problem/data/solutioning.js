@@ -21260,6 +21260,67 @@ const SOLUTIONING = {
             <li>After identifying the swapped nodes, swaps their values.</li>
           </ul>
         </li>
+      </ul>
+    </>
+  ),
+  108: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>Class Declaration:</strong>
+          <ul>
+            <li>
+              The class <code>Solution</code> contains methods to convert a
+              sorted array into a balanced BST.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>sortedArrayToBST</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public TreeNode sortedArrayToBST(int[] nums)</code>: This
+              method takes a sorted array and returns the root of the balanced
+              BST.
+            </li>
+            <li>
+              Checks if the input array is null or empty and returns null if
+              true.
+            </li>
+            <li>
+              Calls the helper method <code>constructBST</code> with the input
+              array and the initial indices (0 to array length - 1).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>constructBST</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>
+                private TreeNode constructBST(int[] nums, int left, int right)
+              </code>
+              : This helper method constructs the BST recursively.
+            </li>
+            <li>
+              Base Case: If <code>left</code> is greater than <code>right</code>
+              , returns null.
+            </li>
+            <li>
+              Finds the middle index of the current subarray and creates a new{" "}
+              <code>TreeNode</code> with the middle element as the root.
+            </li>
+            <li>
+              Recursively constructs the left and right subtrees using the left
+              and right halves of the current subarray, respectively.
+            </li>
+          </ul>
+        </li>
         <li>
           <strong>
             Method <code>printInOrder</code>:
@@ -21268,22 +21329,11 @@ const SOLUTIONING = {
             <li>
               <code>public static void printInOrder(TreeNode root)</code>: This
               method prints the tree nodes in in-order traversal to verify the
-              tree structure after recovery.
+              tree structure after construction.
             </li>
             <li>
               If the node is not null, recursively prints the left subtree, the
               current node's value, and the right subtree.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Main Method:</strong>
-          <ul>
-            <li>
-              The <code>main</code> method demonstrates an example usage of the{" "}
-              <code>recoverTree</code> method by creating a tree with swapped
-              nodes, recovering it, and printing it in in-order traversal to
-              verify the correction.
             </li>
           </ul>
         </li>
