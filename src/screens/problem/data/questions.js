@@ -25620,6 +25620,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         Please notice that another valid answer is [5,2,6,null,4,null,7] and
         it's also accepted.
         <br />
+        <br />
         <img
           alt=""
           src="https://assets.leetcode.com/uploads/2020/09/04/del_node_supp.jpg"
