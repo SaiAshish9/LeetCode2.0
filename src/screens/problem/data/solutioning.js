@@ -21403,6 +21403,55 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  230: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>Class Declaration:</strong>
+          <ul>
+            <li>
+              The class <code>Solution</code> contains methods to find the Kth
+              smallest element in a BST.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Instance Variables:</strong>
+          <ul>
+            <li>
+              <code>private int count = 0;</code>: Keeps track of the number of
+              nodes visited during the in-order traversal.
+            </li>
+            <li>
+              <code>private int result = 0;</code>: Stores the value of the Kth
+              smallest element.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>kthSmallest</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public int kthSmallest(TreeNode root, int k)</code>: This
+              method initiates the in-order traversal of the BST and returns the
+              Kth smallest element.
+            </li>
+            <li>
+              Calls the helper method <code>inOrderTraversal</code> with the
+              root node and the target K value.
+            </li>
+            <li>
+              Returns the <code>result</code> which holds the Kth smallest
+              element.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
