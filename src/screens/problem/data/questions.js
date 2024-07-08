@@ -27022,6 +27022,111 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  1352: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Design an algorithm that accepts a stream of integers and retrieves the
+        product of the last <code>k</code> integers of the stream.
+      </p>
+
+      <p>
+        Implement the <code>ProductOfNumbers</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>ProductOfNumbers()</code> Initializes the object with an empty
+          stream.
+        </li>
+        <li>
+          <code>void add(int num)</code> Appends the integer <code>num</code> to
+          the stream.
+        </li>
+        <li>
+          <code>int getProduct(int k)</code> Returns the product of the last{" "}
+          <code>k</code> numbers in the current list. You can assume that always
+          the current list has at least <code>k</code> numbers.
+        </li>
+      </ul>
+
+      <p>
+        The test cases are generated so that, at any time, the product of any
+        contiguous sequence of numbers will fit into a single 32-bit integer
+        without overflowing.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        ["ProductOfNumbers","add","add","add","add","add",
+        <br />
+        "getProduct","getProduct","getProduct","add","getProduct"]
+        <br />
+        [[],[3],[0],[2],[5],[4],[2],[3],[4],[8],[2]]
+        <br />
+        <strong>Output</strong>
+        <br />
+        [null,null,null,null,null,null,20,40,0,null,32]
+        <strong>Explanation</strong>
+        <br />
+        ProductOfNumbers productOfNumbers = new ProductOfNumbers();
+        <br />
+        productOfNumbers.add(3); // [3]
+        <br />
+        productOfNumbers.add(0); // [3,0]
+        <br />
+        productOfNumbers.add(2); // [3,0,2]
+        <br />
+        productOfNumbers.add(5); // [3,0,2,5]
+        <br />
+        productOfNumbers.add(4); // [3,0,2,5,4]
+        <br />
+        productOfNumbers.getProduct(2); // return 20. The product of the last 2
+        numbers is 5 * 4 = 20
+        <br />
+        productOfNumbers.getProduct(3); // return 40. The product of the last 3
+        numbers is 2 * 5 * 4 = 40
+        <br />
+        productOfNumbers.getProduct(4); // return 0. The product of the last 4
+        numbers is 0 * 2 * 5 * 4 = 0<br />
+        productOfNumbers.add(8); // [3,0,2,5,4,8]
+        <br />
+        productOfNumbers.getProduct(2); // return 32. The product of the last 2
+        numbers is 4 * 8 = 32
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>0 &lt;= num &lt;= 100</code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= k &lt;= 4 * 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            4 * 10<sup>4</sup>
+          </code>{" "}
+          calls will be made to <code>add</code> and <code>getProduct</code>.
+        </li>
+        <li>
+          The product of the stream at any point in time will fit in a{" "}
+          <strong>32-bit</strong> integer.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
