@@ -22487,6 +22487,83 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  897: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>private TreeNode result;</code>: Instance variable to track
+              the current node in the result tree.
+            </li>
+            <li>
+              <code>public TreeNode increasingBST(TreeNode root)</code>: Method
+              to transform the original BST into the modified tree where nodes
+              are in increasing order.
+              <ul>
+                <li>
+                  Initializes a dummy node <code>dummy</code> and sets{" "}
+                  <code>result</code> to <code>dummy</code>.
+                </li>
+                <li>
+                  Calls <code>inorder(root)</code> to perform an inorder
+                  traversal of the original BST.
+                </li>
+                <li>
+                  Returns the right child of <code>dummy</code>, which is the
+                  root of the transformed tree.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>private void inorder(TreeNode node)</code>: Recursive method
+              to perform an inorder traversal of the BST.
+              <ul>
+                <li>Traverses left subtree.</li>
+                <li>
+                  Creates a new node with the current node's value and links it
+                  to <code>result</code> in the result tree.
+                </li>
+                <li>
+                  Moves <code>result</code> pointer to the newly created node.
+                </li>
+                <li>Traverses right subtree.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
