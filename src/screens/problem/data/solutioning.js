@@ -21340,6 +21340,69 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  109: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>Class Declaration:</strong>
+          <ul>
+            <li>
+              The class <code>Solution</code> contains methods to convert a
+              sorted singly linked list into a balanced BST.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>sortedListToBST</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public TreeNode sortedListToBST(ListNode head)</code>: This
+              method takes the head of the sorted linked list and returns the
+              root of the balanced BST.
+            </li>
+            <li>Checks if the input list is null and returns null if true.</li>
+            <li>
+              Calls the helper method <code>sortedListToBSTHelper</code> with
+              the input list and null as the initial tail.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>sortedListToBSTHelper</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>
+                private TreeNode sortedListToBSTHelper(ListNode head, ListNode
+                tail)
+              </code>
+              : This helper method constructs the BST recursively.
+            </li>
+            <li>
+              Base Case: If <code>head</code> is equal to <code>tail</code>,
+              returns null.
+            </li>
+            <li>
+              Uses two pointers (<code>slow</code> and <code>fast</code>) to
+              find the middle element of the current sublist.
+            </li>
+            <li>
+              Creates a new <code>TreeNode</code> with the middle element as the
+              root.
+            </li>
+            <li>
+              Recursively constructs the left and right subtrees using the left
+              and right halves of the current sublist, respectively.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
