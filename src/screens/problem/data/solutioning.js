@@ -22315,6 +22315,56 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  703: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>
+            Class <code>KthLargest</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>{`private PriorityQueue<Integer> minHeap;`}</code>,{" "}
+              <code>private int k;</code>: Instance variables to maintain a min
+              heap of size <code>k</code> and track <code>k</code>.
+            </li>
+            <li>
+              <code>public KthLargest(int k, int[] nums)</code>: Constructor
+              initializes the class with <code>k</code> and processes an initial
+              array of integers <code>nums</code>.
+              <ul>
+                <li>
+                  Populates the <code>minHeap</code> with the first{" "}
+                  <code>k</code> elements of <code>nums</code>.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>public int add(int val)</code>: Method to add a new element{" "}
+              <code>val</code> to the stream and return the Kth largest element
+              seen so far.
+              <ul>
+                <li>
+                  If the size of <code>minHeap</code> is less than{" "}
+                  <code>k</code>, adds <code>val</code> to <code>minHeap</code>.
+                </li>
+                <li>
+                  Otherwise, if <code>val</code> is larger than the smallest
+                  element in <code>minHeap</code> (peek), replaces the smallest
+                  element with <code>val</code>.
+                </li>
+                <li>
+                  Returns the smallest element (Kth largest) in{" "}
+                  <code>minHeap</code> (peek).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
