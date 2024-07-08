@@ -22812,6 +22812,88 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  2476: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>{`private List<Integer> nums = new ArrayList<>();`}</code>:
+              A list to store the in-order traversal of the BST.
+            </li>
+            <li>
+              <code>{`public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries)`}</code>
+              : Main method to find the closest nodes for each query.
+              <ul>
+                <li>
+                  Calls <code>inorder</code> to perform an in-order traversal
+                  and store nodes in <code>nums</code>.
+                </li>
+                <li>
+                  Initializes a list <code>ans</code> to store the results.
+                </li>
+                <li>
+                  For each query:
+                  <ul>
+                    <li>
+                      Uses <code>Collections.binarySearch</code> to find
+                      positions in the sorted list.
+                    </li>
+                    <li>Calculates the closest smaller and larger values.</li>
+                    <li>
+                      Adds the results to <code>ans</code>.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>private void inorder(TreeNode root)</code>: Helper method to
+              perform an in-order traversal and store nodes in <code>nums</code>
+              .
+              <ul>
+                <li>If the current node is null, returns immediately.</li>
+                <li>Recursively traverses the left subtree.</li>
+                <li>
+                  Adds the current node value to <code>nums</code>.
+                </li>
+                <li>Recursively traverses the right subtree.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
