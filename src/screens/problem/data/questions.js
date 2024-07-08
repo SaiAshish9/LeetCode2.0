@@ -25696,7 +25696,8 @@ for (int i = 0; i &lt; actualLength; i++) {
           all the{" "}
           <a
             href="https://en.wikipedia.org/wiki/Mode_(statistics)"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             mode(s)
           </a>{" "}
@@ -25766,6 +25767,77 @@ for (int i = 0; i &lt; actualLength; i++) {
       space? (Assume that the implicit stack space incurred due to recursion
       does not count).
     </div>
+  ),
+  530: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>private int minDiff;</code>,{" "}
+              <code>private Integer prev;</code>: Instance variables to track
+              the minimum difference and the previous node value during
+              traversal.
+            </li>
+            <li>
+              <code>public int getMinimumDifference(TreeNode root)</code>:
+              Method to find the minimum absolute difference between any two
+              nodes in the BST.
+              <ul>
+                <li>Returns the minimum absolute difference.</li>
+                <li>
+                  Initializes <code>minDiff</code> to{" "}
+                  <code>Integer.MAX_VALUE</code> and calls{" "}
+                  <code>inorder(root)</code> to perform an inorder traversal.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>private void inorder(TreeNode node)</code>: Recursive method
+              to perform an inorder traversal of the BST.
+              <ul>
+                <li>
+                  Traverses left subtree, calculates the difference between
+                  current node and <code>prev</code> if <code>prev</code> is not
+                  null, updates <code>minDiff</code> accordingly, and updates{" "}
+                  <code>prev</code> to current node value.
+                </li>
+                <li>Traverses right subtree.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
   ),
 };
 
