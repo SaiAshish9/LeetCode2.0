@@ -21090,6 +21090,92 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  98: (
+    <>
+      {" "}
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>Class Declaration:</strong>
+          <ul>
+            <li>
+              The class <code>Solution</code> contains the method{" "}
+              <code>isValidBST</code> which validates the BST.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Method <code>isValidBST</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public boolean isValidBST(TreeNode root)</code>: This method
+              takes the root of the tree and returns a boolean indicating if the
+              tree is a valid BST.
+            </li>
+            <li>
+              It calls a helper method <code>isValidBST</code> with additional
+              parameters to check the validity recursively.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Helper Method <code>isValidBST</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>
+                private boolean isValidBST(TreeNode node, long min, long max)
+              </code>
+              : This method takes a tree node and the minimum and maximum values
+              that the node's value must lie between to be a valid BST.
+            </li>
+            <li>
+              Base case: If the node is null, it returns true (an empty tree is
+              a valid BST).
+            </li>
+            <li>
+              It checks if the node's value is within the valid range:
+              <ul>
+                <li>
+                  <code>if (node.val &lt;= min || node.val &gt;= max)</code>: If
+                  the node's value is less than or equal to <code>min</code> or
+                  greater than or equal to <code>max</code>, it returns false.
+                </li>
+              </ul>
+            </li>
+            <li>
+              It recursively checks the left and right subtrees:
+              <ul>
+                <li>
+                  <code>
+                    return isValidBST(node.left, min, node.val) &&
+                    isValidBST(node.right, node.val, max);
+                  </code>
+                  : The left subtree must have all values less than the current
+                  node's value, and the right subtree must have all values
+                  greater than the current node's value.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Main Method:</strong>
+          <ul>
+            <li>
+              The <code>main</code> method demonstrates an example usage of the{" "}
+              <code>isValidBST</code> method by creating a simple tree and
+              checking its validity.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
