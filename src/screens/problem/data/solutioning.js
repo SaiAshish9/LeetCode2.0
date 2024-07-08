@@ -23106,6 +23106,134 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  232: (
+    <>
+      {" "}
+      <h1>MyQueue Code Explanation</h1>
+      <p>
+        This implementation of <code>MyQueue</code> uses two stacks to simulate
+        the behavior of a queue, ensuring FIFO (First In, First Out) order.
+      </p>
+      <h2>Class Definition</h2>
+      <ul>
+        <li>
+          <code>MyQueue</code> class:
+          <ul>
+            <li>
+              Contains two stacks: <code>stack1</code> and <code>stack2</code>.
+            </li>
+            <li>
+              Uses the <code>Stack</code> class for stack implementation.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Constructor</h2>
+      <ul>
+        <li>
+          <code>public MyQueue()</code>:
+          <ul>
+            <li>
+              Initializes <code>stack1</code> and <code>stack2</code> as empty
+              stacks.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Push Operation</h2>
+      <ul>
+        <li>
+          <code>public void push(int x)</code>:
+          <ul>
+            <li>
+              Adds the element <code>x</code> to <code>stack1</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Pop Operation</h2>
+      <ul>
+        <li>
+          <code>public int pop()</code>:
+          <ul>
+            <li>
+              If <code>stack2</code> is empty, moves all elements from{" "}
+              <code>stack1</code> to <code>stack2</code>.
+            </li>
+            <li>
+              Removes and returns the top element from <code>stack2</code>,
+              which represents the front of the queue.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Peek Operation</h2>
+      <ul>
+        <li>
+          <code>public int peek()</code>:
+          <ul>
+            <li>
+              If <code>stack2</code> is empty, moves all elements from{" "}
+              <code>stack1</code> to <code>stack2</code>.
+            </li>
+            <li>
+              Returns the top element from <code>stack2</code> without removing
+              it, representing the front of the queue.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Empty Operation</h2>
+      <ul>
+        <li>
+          <code>public boolean empty()</code>:
+          <ul>
+            <li>
+              Checks if both <code>stack1</code> and <code>stack2</code> are
+              empty, indicating whether the queue is empty.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Usage Example</h2>
+      <ul>
+        <li>
+          <code>MyQueue obj = new MyQueue();</code>
+          <ul>
+            <li>
+              Creates a new instance of <code>MyQueue</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>obj.push(x);</code>
+          <ul>
+            <li>
+              Adds an element <code>x</code> to the queue.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>int param_2 = obj.pop();</code>
+          <ul>
+            <li>Removes and returns the front element from the queue.</li>
+          </ul>
+        </li>
+        <li>
+          <code>int param_3 = obj.peek();</code>
+          <ul>
+            <li>Returns the front element of the queue without removing it.</li>
+          </ul>
+        </li>
+        <li>
+          <code>boolean param_4 = obj.empty();</code>
+          <ul>
+            <li>Checks if the queue is empty.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
