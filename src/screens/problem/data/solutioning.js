@@ -23347,6 +23347,115 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1352: (
+    <>
+      <h2>Class Definition</h2>
+      <ul>
+        <li>
+          <code>ProductOfNumbers</code> class:
+          <ul>
+            <li>
+              Private member:
+              <ul>
+                <li>
+                  <code>List&lt;Integer&gt; prefix</code>: Stores cumulative
+                  products of numbers added so far.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>
+        Constructor (<code>ProductOfNumbers()</code>)
+      </h2>
+      <ul>
+        <li>
+          Initializes the <code>prefix</code> list with <code>[1]</code>:
+          <ul>
+            <li>
+              Uses <code>ArrayList</code> and <code>Arrays.asList()</code> to
+              initialize the list with a single element <code>1</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>
+        Adding a Number (<code>add(int num)</code> method)
+      </h2>
+      <ul>
+        <li>
+          Method signature: <code>public void add(int num)</code>
+          <ul>
+            <li>
+              Checks if <code>num</code> is <code>0</code>:
+              <ul>
+                <li>
+                  If true, resets <code>prefix</code> to <code>[1]</code>:
+                  <ul>
+                    <li>
+                      Creates a new <code>ArrayList</code> with a single element{" "}
+                      <code>1</code>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Otherwise, calculates the new product and updates{" "}
+                  <code>prefix</code>:
+                  <ul>
+                    <li>
+                      Multiplies <code>num</code> with the last element of{" "}
+                      <code>prefix</code> and adds it to <code>prefix</code>.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>
+        Getting Product of Last K Numbers (<code>getProduct(int k)</code>{" "}
+        method)
+      </h2>
+      <ul>
+        <li>
+          Method signature: <code>public int getProduct(int k)</code>
+          <ul>
+            <li>
+              Checks if <code>k</code> is greater than or equal to the size of{" "}
+              <code>prefix</code>:
+              <ul>
+                <li>
+                  If true, returns <code>0</code>:
+                  <ul>
+                    <li>
+                      Indicates that there are not enough numbers to compute the
+                      product.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Otherwise, computes and returns the product of the last{" "}
+                  <code>k</code> numbers:
+                  <ul>
+                    <li>
+                      Divides the last element of <code>prefix</code> by the
+                      element <code>k</code> positions before the end of{" "}
+                      <code>prefix</code>.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
