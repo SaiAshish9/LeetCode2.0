@@ -22199,6 +22199,65 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  700: (
+    <>
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public TreeNode searchBST(TreeNode root, int val)</code>:
+              Method to search for a value <code>val</code> in the BST{" "}
+              <code>root</code>.
+              <ul>
+                <li>
+                  Returns the node containing the value <code>val</code> if
+                  found, or <code>null</code> if not found.
+                </li>
+                <li>
+                  Base case handles scenarios where <code>root</code> is{" "}
+                  <code>null</code> or the value is found at the current node.
+                </li>
+                <li>
+                  Recursively searches in the left subtree if <code>val</code>{" "}
+                  is less than <code>root.val</code>, otherwise searches in the
+                  right subtree.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
