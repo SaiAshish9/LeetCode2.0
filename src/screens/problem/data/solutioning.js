@@ -23522,6 +23522,104 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  1429: (
+    <>
+      <h2>Class Overview</h2>
+      <ul>
+        <li>
+          <code>FirstUnique</code> class:
+          <ul>
+            <li>
+              Manages a collection of integers and efficiently finds and
+              maintains the first unique integer.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Fields</h2>
+      <ul>
+        <li>
+          <code>private Map&lt;Integer, Integer&gt; cnt</code>:
+          <ul>
+            <li>Stores the count of each integer added using a HashMap.</li>
+          </ul>
+        </li>
+        <li>
+          <code>private Set&lt;Integer&gt; unique</code>:
+          <ul>
+            <li>
+              Stores unique integers using a LinkedHashSet, maintaining
+              insertion order.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>
+        Constructor (<code>FirstUnique(int[] nums)</code>)
+      </h2>
+      <ul>
+        <li>
+          Initializes the <code>cnt</code> map and <code>unique</code> set based
+          on the input array <code>nums</code>:
+          <ul>
+            <li>
+              Iterates through <code>nums</code> to populate <code>cnt</code>{" "}
+              with counts of each number.
+            </li>
+            <li>
+              Populates <code>unique</code> with numbers that have a count of 1
+              in <code>cnt</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>
+        <code>showFirstUnique()</code> Method
+      </h2>
+      <ul>
+        <li>
+          <code>public int showFirstUnique()</code>:
+          <ul>
+            <li>
+              Returns the first unique element from <code>unique</code> set, or{" "}
+              <code>-1</code> if empty.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>
+        <code>add(int value)</code> Method
+      </h2>
+      <ul>
+        <li>
+          <code>public void add(int value)</code>:
+          <ul>
+            <li>
+              Updates <code>cnt</code> with the count of <code>value</code>.
+            </li>
+            <li>
+              Updates <code>unique</code> set based on the count of{" "}
+              <code>value</code>:
+              <ul>
+                <li>
+                  If count becomes 1, adds <code>value</code> to{" "}
+                  <code>unique</code>.
+                </li>
+                <li>
+                  If count becomes greater than 1, removes <code>value</code>{" "}
+                  from <code>unique</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
