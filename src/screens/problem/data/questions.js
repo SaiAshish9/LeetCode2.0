@@ -25357,9 +25357,11 @@ for (int i = 0; i &lt; actualLength; i++) {
       <pre>
         <strong>Input:</strong> root = [4,2,5,1,3], target = 3.714286 <br />{" "}
         <br />
-        {`       4
-  2        5
-1   3`}
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0270.Closest%20Binary%20Search%20Tree%20Value/images/closest1-1-tree.jpg"
+          style={{ width: 292, height: 302 }}
+        />{" "}
         <br /> <br />
         <strong>Output:</strong> 4
       </pre>
