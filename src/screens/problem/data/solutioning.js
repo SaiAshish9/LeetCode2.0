@@ -22716,13 +22716,95 @@ const SOLUTIONING = {
                 </li>
                 <li>
                   If the current node is null, returns{" "}
-                  <code>{`{(1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0)}`}</code>.
+                  <code>{`{(1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0)}`}</code>
+                  .
                 </li>
                 <li>Recursively processes the left and right subtrees.</li>
                 <li>
                   Checks if the current subtree is a BST and updates{" "}
                   <code>maxSum</code> if necessary.
                 </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  1382: (
+    <>
+      {" "}
+      <h2>Explanation</h2>
+      <ul>
+        <li>
+          <strong>TreeNode Definition:</strong>
+          <ul>
+            <li>
+              Defines a class <code>TreeNode</code> representing a node in a
+              binary tree.
+            </li>
+            <li>
+              Three constructors are provided:
+              <ul>
+                <li>
+                  <code>TreeNode()</code>: Initializes an empty node.
+                </li>
+                <li>
+                  <code>TreeNode(int val)</code>: Initializes a node with a
+                  given value.
+                </li>
+                <li>
+                  <code>TreeNode(int val, TreeNode left, TreeNode right)</code>:
+                  Initializes a node with a value, left child, and right child.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Class <code>Solution</code>:
+          </strong>
+          <ul>
+            <li>
+              <code>public TreeNode balanceBST(TreeNode root)</code>: Method to
+              balance the given BST.
+              <ul>
+                <li>
+                  Initializes a list to store nodes from the in-order traversal.
+                </li>
+                <li>
+                  Performs in-order traversal and stores nodes in the list.
+                </li>
+                <li>Returns the root of the newly constructed balanced BST.</li>
+              </ul>
+            </li>
+            <li>
+              <code>{`private void inorderTraversal(TreeNode root, List<TreeNode> nodes)`}</code>
+              : Helper method to perform in-order traversal and store nodes.
+              <ul>
+                <li>If the current node is null, returns immediately.</li>
+                <li>Recursively traverses the left subtree.</li>
+                <li>Adds the current node to the list.</li>
+                <li>Recursively traverses the right subtree.</li>
+              </ul>
+            </li>
+            <li>
+              <code>{`private TreeNode buildBalancedBST(List<TreeNode> nodes, int start, int end)`}</code>
+              : Helper method to build a balanced BST from the sorted list of
+              nodes.
+              <ul>
+                <li>
+                  If the start index is greater than the end index, returns
+                  null.
+                </li>
+                <li>Calculates the middle index of the current segment.</li>
+                <li>Creates a new node using the value at the middle index.</li>
+                <li>
+                  Recursively builds the left and right subtrees using the
+                  appropriate segments of the list.
+                </li>
+                <li>Returns the constructed node.</li>
               </ul>
             </li>
           </ul>
