@@ -25352,11 +25352,9 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <pre>
         <strong>Input:</strong> root = [4,2,5,1,3], target = 3.714286 <br />
-        {`    4
-   / \
-  2   5
- / \
-1   3`}
+{`    4
+    2   5
+  1   3`}
         <br />
         <strong>Output:</strong> 4
       </pre>
