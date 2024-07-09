@@ -27747,64 +27747,137 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
-  1908:(<article role="main" class="blog-post">
-<p>Alice and Bob take turns playing a game with <strong>Alice starting first</strong>.</p>
+  1908: (
+    <article role="main" class="blog-post">
+      <p>
+        Alice and Bob take turns playing a game with{" "}
+        <strong>Alice starting first</strong>.
+      </p>
+      <p>
+        In this game, there are n piles of stones. On each player’s turn, the
+        player should remove any <strong>positive</strong> number of stones from
+        a non-empty pile <strong>of his or her choice</strong>. The first player
+        who cannot make a move loses, and the other player wins.
+      </p>
+      <p>
+        Given an integer array{" "}
+        <code class="language-plaintext highlighter-rouge">piles</code>, where{" "}
+        <code class="language-plaintext highlighter-rouge">piles[i]</code> is
+        the number of stones in the{" "}
+        <code class="language-plaintext highlighter-rouge">i-th</code> pile,
+        return{" "}
+        <em>
+          <code class="language-plaintext highlighter-rouge">true</code> if
+          Alice wins, or{" "}
+          <code class="language-plaintext highlighter-rouge">false</code> if Bob
+          wins
+        </em>
+        .
+      </p>
+      <p>
+        Both Alice and Bob play <strong>optimally</strong>.
+      </p>
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> piles = [1]
+        <br />
+        <strong>Output:</strong> true
+        <br />
+        <em>Explanation:8</em> There is only one possible scenario:
+        <ul>
+          <li>
+            On the first turn, Alice removes one stone from the first pile.
+            piles = [0].
+          </li>
+          <li>
+            On the second turn, there are no stones left for Bob to remove.
+            Alice wins.
+          </li>
+        </ul>
+      </pre>
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> piles = [1,1]
+        <br />
+        <strong>Output:</strong> false
+        <br />
+        <strong>Explanation:</strong> It can be proven that Bob will always win.
+        One possible scenario is:
+        <ul>
+          <li>
+            On the first turn, Alice removes one stone from the first pile.
+            piles = [0,1].
+          </li>
+          <li>
+            On the second turn, Bob removes one stone from the second pile.
+            piles = [0,0].
+          </li>
+          <li>
+            On the third turn, there are no stones left for Alice to remove. Bob
+            wins.
+          </li>
+        </ul>
+      </pre>
+      <p>
+        <strong>Example 3:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> piles = [1,2,3]
+        <br />
+        <strong>Output:</strong> false
+        <br />
+        <strong>Explanation:</strong> It can be proven that Bob will always win.
+        One possible scenario is:
+        <ul>
+          <li>
+            On the first turn, Alice removes three stones from the third pile.
+            piles = [1,2,0].
+          </li>
+          <li>
+            On the second turn, Bob removes one stone from the second pile.
+            piles = [1,1,0].
+          </li>
+          <li>
+            On the third turn, Alice removes one stone from the first pile.
+            piles = [0,1,0].
+          </li>
+          <li>
+            On the fourth turn, Bob removes one stone from the second pile.
+            piles = [0,0,0].
+          </li>
+          <li>
+            On the fifth turn, there are no stones left for Alice to remove. Bob
+            wins.
+          </li>
+        </ul>
+      </pre>
 
-<p>In this game, there are n piles of stones. On each player’s turn, the player should remove any <strong>positive</strong> number of stones from a non-empty pile <strong>of his or her choice</strong>. The first player who cannot make a move loses, and the other player wins.</p>
-
-<p>Given an integer array <code class="language-plaintext highlighter-rouge">piles</code>, where <code class="language-plaintext highlighter-rouge">piles[i]</code> is the number of stones in the <code class="language-plaintext highlighter-rouge">i-th</code> pile, return <em><code class="language-plaintext highlighter-rouge">true</code> if Alice wins, or <code class="language-plaintext highlighter-rouge">false</code> if Bob wins</em>.</p>
-
-<p>Both Alice and Bob play <strong>optimally</strong>.</p>
-
-<p><strong>Example 1:</strong></p>
-
-<p><strong>Input:</strong> piles = [1]</p> <br/>
-
-<p><strong>Output:</strong> true</p> <br/>
-
-<p><em>Explanation:8</em> There is only one possible scenario:</p>
-<ul>
-<li>On the first turn, Alice removes one stone from the first pile. piles = [0].</li>
-<li>On the second turn, there are no stones left for Bob to remove. Alice wins.</li>
-</ul>
-
-<p><strong>Example 2:</strong></p>
-
-<p><strong>Input:</strong> piles = [1,1]</p> <br/>
-
-<p><strong>Output:</strong> false</p> <br/>
-
-<p><strong>Explanation:</strong> It can be proven that Bob will always win. One possible scenario is:</p>
-<ul>
-<li>On the first turn, Alice removes one stone from the first pile. piles = [0,1].</li>
-<li>On the second turn, Bob removes one stone from the second pile. piles = [0,0].</li>
-<li>On the third turn, there are no stones left for Alice to remove. Bob wins.</li>
-</ul>
-
-<p><strong>Example 3:</strong></p>
-
-<p><strong>Input:</strong> piles = [1,2,3]</p> <br/>
-
-<p><strong>Output:</strong> false</p> <br/>
-
-<p><strong>Explanation:</strong> It can be proven that Bob will always win. One possible scenario is:</p>
-<ul>
-<li>On the first turn, Alice removes three stones from the third pile. piles = [1,2,0].</li>
-<li>On the second turn, Bob removes one stone from the second pile. piles = [1,1,0].</li>
-<li>On the third turn, Alice removes one stone from the first pile. piles = [0,1,0].</li>
-<li>On the fourth turn, Bob removes one stone from the second pile. piles = [0,0,0].</li>
-<li>On the fifth turn, there are no stones left for Alice to remove. Bob wins.</li>
-</ul>
-
-<p><strong>Constraints:</strong></p>
-
-<ul>
-<li><code class="language-plaintext highlighter-rouge">n == piles.length</code></li>
-<li><code class="language-plaintext highlighter-rouge">1 &lt;= n &lt;= 7</code></li>
-<li><code class="language-plaintext highlighter-rouge">1 &lt;= piles[i] &lt;= 7</code></li>
-</ul>
-
-  </article>)
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            n == piles.length
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= n &lt;= 7
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= piles[i] &lt;= 7
+          </code>
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
