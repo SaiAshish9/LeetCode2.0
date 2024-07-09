@@ -177,6 +177,7 @@ export const TitleContainer = styled.div`
     color: #1890ff;
     width: fit-content;
     margin-right: 10px;
+    max-width: 87%;
   }
   display: flex;
   width: fit-content;

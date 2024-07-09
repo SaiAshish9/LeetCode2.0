@@ -118,7 +118,11 @@ const RevisionSheet = () => {
                       }
                     }}
                   >
-                    {up.includes(key) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                    {up.includes(key) ? (
+                      <IoIosArrowUp />
+                    ) : (
+                      <IoIosArrowDown />
+                    )}
                   </IconCont>
                 </ContentText>
                 {up.includes(key) &&

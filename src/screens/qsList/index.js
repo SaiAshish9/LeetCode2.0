@@ -69,7 +69,7 @@ const QSList = () => {
             }}
           >
             <p>{title}</p>
-            {PREMIUM.includes(+qno) && <FaLockOpen />}
+            {PREMIUM.includes(+qno) && <FaLockOpen size={11} />}
           </TitleContainer>
         );
       },
