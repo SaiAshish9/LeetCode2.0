@@ -30,7 +30,7 @@ const RevisionSheet = () => {
       if (res && tempData) {
         const temp = Object.assign({}, tempData);
         let tempSet = new Set();
-        Object.values(tempData).forEach((x) => tempSet.add(x));
+        Object.values(tempData).forEach((x) => x.forEach(tempSet.add, tempSet));
         setCount(tempSet.size);
         const tempValues = Object.values(res);
         for (let key of Object.keys(tempData)) {
