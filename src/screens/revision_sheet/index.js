@@ -83,9 +83,15 @@ const RevisionSheet = () => {
       <Content>
         {data && (
           <ContentText>
-            Total Count: <ContentTextBold>{count}</ContentTextBold> problems.
+            Existing Total Count: <ContentTextBold>{count}</ContentTextBold>{" "}
+            problems.
           </ContentText>
-        )}
+        )}{" "}
+        <ContentText>
+          * Note: Click on the tag name for the description and time and space
+          complexities. And the arrow keys to collapse and expand selected
+          questions.
+        </ContentText>
         <Spacer />
         {data &&
           Object.keys(data)
