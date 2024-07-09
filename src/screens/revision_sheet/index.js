@@ -118,11 +118,7 @@ const RevisionSheet = () => {
                       }
                     }}
                   >
-                    {up.includes(key) ? (
-                      <IoIosArrowUp />
-                    ) : (
-                      <IoIosArrowDown />
-                    )}
+                    {up.includes(key) ? <IoIosArrowUp /> : <IoIosArrowDown />}
                   </IconCont>
                 </ContentText>
                 {up.includes(key) &&
@@ -131,6 +127,7 @@ const RevisionSheet = () => {
                       value.title && (
                         <ParentContent key={value.title}>
                           <TitleContainer
+                            notMaxW1
                             onClick={() => {
                               window.open(
                                 "/problems/" +
