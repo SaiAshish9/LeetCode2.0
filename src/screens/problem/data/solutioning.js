@@ -24284,6 +24284,53 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  2233: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize `kMod` for modulo operation and `ans` for storing
+            product.
+          </li>
+          <li>Create `minHeap` to store elements from `nums`.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Populating the Heap:</strong>
+        <ul>
+          <li>Add all elements of `nums` to `minHeap`.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Modifying Elements:</strong>
+        <ul>
+          <li>
+            Extract the smallest `k` elements from `minHeap`, increment each by
+            1, and put them back.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculating Product:</strong>
+        <ul>
+          <li>
+            Multiply all elements in `minHeap` together, taking modulo `kMod` at
+            each step.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Convert and return `ans` as the maximum product after adding 1 to
+            the smallest `k` elements.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
