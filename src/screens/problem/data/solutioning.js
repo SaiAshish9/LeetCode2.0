@@ -24420,6 +24420,84 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  499: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize the dimensions of the maze (<code>m</code> and{" "}
+            <code>n</code>).
+          </li>
+          <li>
+            Initialize the starting position of the ball (<code>r, c</code>) and
+            the position of the hole (<code>rh, ch</code>).
+          </li>
+          <li>
+            Set up a queue <code>q</code> to manage the BFS exploration starting
+            from the ball's initial position.
+          </li>
+          <li>
+            Initialize a 2D array <code>dist</code> to keep track of minimum
+            distances from the starting position to each cell in the maze.
+          </li>
+          <li>
+            Initialize a 2D array <code>path</code> to store the shortest path
+            string to reach each cell in the maze.
+          </li>
+          <li>
+            Define directions as movements up (<code>'u'</code>), down (
+            <code>'d'</code>), left (<code>'l'</code>), and right (
+            <code>'r'</code>) along with their corresponding changes in
+            coordinates.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Breadth-First Search (BFS) Loop:</strong>
+        <ul>
+          <li>
+            While the queue <code>q</code> is not empty:
+          </li>
+          <ul>
+            <li>
+              Dequeue the current position <code>p</code> from <code>q</code>.
+            </li>
+            <li>
+              Iterate over all possible movement directions (<code>dirs</code>).
+            </li>
+            <li>
+              For each direction, attempt to move the ball until it hits a wall
+              (<code>maze[x+a][y+b] == 0</code>) or reaches the hole (
+              <code>x == rh && y == ch</code>).
+            </li>
+            <li>
+              Calculate the number of steps taken to reach the new position (
+              <code>step</code>).
+            </li>
+            <li>
+              If this new position offers a shorter path (based on{" "}
+              <code>dist[x][y]</code>) or has an equally short path but
+              lexicographically smaller path string (<code>path[i][j] + d</code>
+              ), update <code>dist[x][y]</code>, <code>path[x][y]</code>, and
+              enqueue the new position <code>(x, y)</code> into <code>q</code>.
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>
+            Return the shortest path string stored in <code>path[rh][ch]</code>.
+            If <code>path[rh][ch]</code> is still <code>null</code>, return{" "}
+            <code>"impossible"</code> indicating that no path exists from the
+            starting position to the hole.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
