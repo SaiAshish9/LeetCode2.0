@@ -16,11 +16,12 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   padding-left: 21vw;
+  max-width: 75%;
+  overflow: hidden;
   @media only screen and (max-width: ${BREAKPOINTS.x175}) {
     padding-left: 4.25vw;
+    max-width: 90%;
   }
-  max-width: 100%;
-  overflow: hidden;
 `;
 
 export const ContentText = styled.p`
@@ -36,7 +37,7 @@ export const ContentText = styled.p`
   ${({ sm }) =>
     sm &&
     css`
-      font-size: 12px;
+      font-size: 12.5px;
     `}
   p {
     overflow-x: hidden;
