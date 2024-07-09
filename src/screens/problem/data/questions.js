@@ -28814,7 +28814,6 @@ for (int i = 0; i &lt; actualLength; i++) {
         among all possible results.
       </p>
 
-      <p>&nbsp;</p>
       <p>
         <strong class="example">Example 1:</strong>
       </p>
