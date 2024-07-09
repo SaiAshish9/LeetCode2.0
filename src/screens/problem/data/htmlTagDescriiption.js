@@ -1412,19 +1412,19 @@ void postorderRec(TreeNode root) {
         <li>The nth Catalan number is given by the formula:</li>
         <ul>
           <li>
-            <code>{`C<sub>n</sub> = \(\frac{1}{n + 1} \binom{2n}{n}\)`}</code>
+            <code>{`C<sub>n</sub> = (\frac{1}{n + 1} \binom{2n}{n})`}</code>
           </li>
         </ul>
         <li>This can be simplified to:</li>
         <ul>
           <li>
-            <code>{`C<sub>n</sub> = \(\frac{(2n)!}{(n+1)! \cdot n!}\)`}</code>
+            <code>{`C<sub>n</sub> = (\frac{(2n)!}{(n+1)! \cdot n!})`}</code>
           </li>
         </ul>
         <li>
           Where{" "}
           <code>
-            \(C<sub>n</sub>\)
+            (C<sub>n</sub>)
           </code>{" "}
           represents the nth Catalan number.
         </li>
@@ -1804,6 +1804,69 @@ void postorderRec(TreeNode root) {
         The <code>nextSmallerElement</code> method is efficient with linear time
         complexity and uses linear additional space.
       </p>
+      <ul>
+        <li>
+          <strong>Push Operation:</strong>
+          <ul>
+            <li>
+              <strong>Time Complexity:</strong> ( O(1) )
+            </li>
+            <li>
+              <strong>Explanation:</strong> Adding an element to the top of the
+              stack is constant-time.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Pop Operation:</strong>
+          <ul>
+            <li>
+              <strong>Time Complexity:</strong> ( O(1) )
+            </li>
+            <li>
+              <strong>Explanation:</strong> Removing the top element from the
+              stack is constant-time.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Peek Operation:</strong>
+          <ul>
+            <li>
+              <strong>Time Complexity:</strong> ( O(1) )
+            </li>
+            <li>
+              <strong>Explanation:</strong> Viewing the top element without
+              removing it is constant-time.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Search Operation (contains):</strong>
+          <ul>
+            <li>
+              <strong>Time Complexity:</strong> ( O(n) )
+            </li>
+            <li>
+              <strong>Explanation:</strong> Checking if an element exists in the
+              stack requires iterating through the stack, resulting in linear
+              time complexity.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Size Operation:</strong>
+          <ul>
+            <li>
+              <strong>Time Complexity:</strong> ( O(1) )
+            </li>
+            <li>
+              <strong>Explanation:</strong> Getting the number of elements in
+              the stack is constant-time.
+            </li>
+          </ul>
+        </li>
+      </ul>
     </>
   ),
 };
