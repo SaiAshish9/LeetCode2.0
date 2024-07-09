@@ -24745,6 +24745,67 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  402: (
+    <>
+      <h3>Explanation:</h3>
+      <ul>
+        <li>
+          <b>
+            Main Function (<code>removeKdigits</code>):
+          </b>
+          <ul>
+            <li>
+              Check if <code>k</code> is equal to the length of <code>num</code>
+              . If so, return "0" because removing all digits results in 0.
+            </li>
+            <li>Initialize a stack to store the digits.</li>
+            <li>
+              Iterate through each character (digit) in the input string{" "}
+              <code>num</code>.
+            </li>
+            <li>
+              While the stack is not empty, <code>k</code> is greater than 0,
+              and the top of the stack is greater than the current digit:
+              <ul>
+                <li>Pop the top of the stack.</li>
+                <li>
+                  Decrease <code>k</code> by 1.
+                </li>
+              </ul>
+            </li>
+            <li>Push the current digit onto the stack.</li>
+            <li>
+              After processing all digits, if <code>k</code> is still greater
+              than 0, pop elements from the stack until <code>k</code> becomes
+              0.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Building the Result:</b>
+          <ul>
+            <li>
+              Initialize a <code>StringBuilder</code> to construct the result
+              string.
+            </li>
+            <li>
+              Pop all elements from the stack and append them to the{" "}
+              <code>StringBuilder</code>.
+            </li>
+            <li>
+              Reverse the <code>StringBuilder</code> to get the correct order of
+              digits.
+            </li>
+            <li>
+              Remove any leading zeros by deleting characters from the start of
+              the <code>StringBuilder</code>.
+            </li>
+            <li>Return the final string representation of the result.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
