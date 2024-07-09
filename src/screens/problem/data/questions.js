@@ -27785,7 +27785,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <br />
         <strong>Output:</strong> true
         <br />
-        <em>Explanation:8</em> There is only one possible scenario:
+        <strong>Explanation:</strong> There is only one possible scenario:
         <ul>
           <li>
             On the first turn, Alice removes one stone from the first pile.
