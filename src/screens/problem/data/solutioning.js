@@ -23732,6 +23732,52 @@ const SOLUTIONING = {
       </ul>
     </>
   ),
+  319: (
+    <ul>
+      <li>
+        <strong>Problem Understanding:</strong>
+        <ul>
+          <li>
+            We have <code>n</code> bulbs initially off.
+          </li>
+          <li>
+            In each round <code>i</code>, we toggle every <code>i</code>th bulb.
+          </li>
+          <li>
+            Our goal is to find how many bulbs remain on after <code>n</code>{" "}
+            rounds.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Key Insight:</strong>
+        <ul>
+          <li>A bulb ends up on if it is toggled an odd number of times.</li>
+          <li>
+            A bulb is toggled an odd number of times if it is a perfect square.
+          </li>
+          <li>
+            The number of perfect squares ≤ <code>n</code> determines the number
+            of bulbs that remain on.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Implementation:</strong>
+        <ul>
+          <li>
+            <code>public int bulbSwitch(int n)</code>: Method signature that
+            calculates the number of bulbs remaining on.
+          </li>
+          <li>
+            <code>return (int) Math.sqrt(n);</code>: Returns the integer part of
+            the square root of <code>n</code>, representing the count of perfect
+            squares ≤ <code>n</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
