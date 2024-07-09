@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BREAKPOINTS } from "../constants";
 
 export const Container = styled.div`
@@ -33,6 +33,11 @@ export const ContentText = styled.p`
   width: 100%;
   display: flex;
   align-items: center;
+  ${({ sm }) =>
+    sm &&
+    css`
+      font-size: 12px;
+    `}
   p {
     overflow-x: hidden;
     display: inline;
