@@ -1519,6 +1519,185 @@ void postorderRec(TreeNode root) {
       </p>
     </>
   ),
+  "Monotonic Stack": (
+    <>
+      {" "}
+      <p>
+        A monotonic stack is a stack data structure where the elements are
+        ordered in a strictly increasing or decreasing manner. This ordering
+        property helps efficiently solve problems related to finding the next or
+        previous greater/smaller elements in an array, among other applications.
+      </p>
+      <h2>Types of Monotonic Stacks</h2>
+      <ul>
+        <li>
+          <strong>Monotonically Increasing Stack:</strong> The elements in the
+          stack are in increasing order, with the smallest element at the
+          bottom.
+        </li>
+        <li>
+          <strong>Monotonically Decreasing Stack:</strong> The elements in the
+          stack are in decreasing order, with the largest element at the bottom.
+        </li>
+      </ul>
+      <h2>Common Problems and Examples</h2>
+      <ul>
+        <li>
+          <strong>Next Greater Element (LeetCode 496):</strong>
+          <p>
+            Given a circular array, find the next greater element for each
+            element in the array.
+          </p>
+          <ul>
+            <li>
+              Use a monotonically decreasing stack to keep track of elements for
+              which you haven't found the next greater element yet.
+            </li>
+            <li>
+              Iterate through the array, and for each element, pop elements from
+              the stack until you find a smaller element or the stack is empty.
+              The next greater element for the popped elements is the current
+              element.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Largest Rectangle in Histogram (LeetCode 84):</strong>
+          <p>
+            Given an array representing the heights of bars in a histogram, find
+            the area of the largest rectangle that can be formed within the
+            bounds of the histogram.
+          </p>
+          <ul>
+            <li>
+              Use a monotonically increasing stack to maintain the indices of
+              the bars.
+            </li>
+            <li>
+              Iterate through the array, and for each bar, calculate the
+              possible rectangle area for the bars in the stack when a smaller
+              bar is encountered.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>132 Pattern (LeetCode 456):</strong>
+          <p>
+            Given an array of integers, find if there is a 132 pattern in the
+            array.
+          </p>
+          <ul>
+            <li>
+              Use a monotonically decreasing stack to keep track of potential
+              "3" elements.
+            </li>
+            <li>
+              Iterate through the array backward to efficiently find the "2"
+              element that satisfies the pattern with the elements in the stack.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example: Next Greater Element</h2>
+      <p>
+        Here's a detailed explanation of using a monotonically decreasing stack
+        to solve the "Next Greater Element" problem.
+      </p>
+      <h3>Problem Statement</h3>
+      <p>
+        Given an array <code>nums</code>, for each element in the array, find
+        the next greater element. The next greater element for an element{" "}
+        <code>x</code> is the first greater element on the right side of{" "}
+        <code>x</code> in the array. If no such element exists, return -1.
+      </p>
+      <h3>Solution</h3>
+      <ul>
+        <li>
+          <strong>Initialize a Stack:</strong> Use a stack to keep track of
+          elements for which you haven't found the next greater element.
+        </li>
+        <li>
+          <strong>Iterate through the Array:</strong>
+          <ul>
+            <li>For each element in the array, do the following:</li>
+            <ul>
+              <li>
+                While the stack is not empty and the current element is greater
+                than the element at the top of the stack, pop the stack. The
+                next greater element for the popped element is the current
+                element.
+              </li>
+              <li>Push the current element onto the stack.</li>
+            </ul>
+          </ul>
+        </li>
+        <li>
+          <strong>Handle Remaining Elements in the Stack:</strong> After
+          processing all elements in the array, the elements left in the stack
+          do not have a next greater element, so their result is -1.
+        </li>
+      </ul>
+      <h3>Implementation</h3>
+      <pre>
+        <code>
+          {`public int[] nextGreaterElement(int[] nums) {
+int[] result = new int[nums.length];
+Stack<Integer> stack = new Stack<>();
+
+for (int i = nums.length - 1; i >= 0; i--) {
+    while (!stack.isEmpty() && stack.peek() <= nums[i]) {
+        stack.pop();
+    }
+    result[i] = stack.isEmpty() ? -1 : stack.peek();
+    stack.push(nums[i]);
+}
+
+return result;
+}`}
+        </code>
+      </pre>
+      <h3>Explanation</h3>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Create an array <code>result</code> to store the next greater
+              elements.
+            </li>
+            <li>
+              Create a stack to keep track of elements for which you are looking
+              for the next greater element.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Processing the Array:</strong>
+          <ul>
+            <li>Iterate through the array from right to left.</li>
+            <li>
+              For each element, pop elements from the stack that are less than
+              or equal to the current element. This ensures the stack maintains
+              a decreasing order.
+            </li>
+            <li>
+              If the stack is empty, there is no greater element, so store -1 in
+              the result. Otherwise, store the element at the top of the stack.
+            </li>
+            <li>Push the current element onto the stack.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Summary</h2>
+      <p>
+        Monotonic stacks are a powerful technique for efficiently solving
+        problems involving next/previous greater/smaller elements. They help
+        maintain a specific order that allows for quick comparisons and updates,
+        making them ideal for a variety of problems in competitive programming
+        and coding interviews.
+      </p>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
