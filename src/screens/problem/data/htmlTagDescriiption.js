@@ -1660,6 +1660,24 @@ void postorderRec(TreeNode root) {
         </code>
       </pre>{" "}
       <br />
+      <pre>
+        <code>{`public int[] nextSmallerElement(int[] nums) {
+    int[] result = new int[nums.length];
+    Stack<Integer> stack = new Stack<>();
+
+    for (int i = nums.length - 1; i >= 0; i--) {
+        while (!stack.isEmpty() && stack.peek() >= nums[i]) {
+            stack.pop();
+        }
+        result[i] = stack.isEmpty() ? -1 : stack.peek();
+        stack.push(nums[i]);
+    }
+
+    return result;
+}
+`}</code>
+      </pre>{" "}
+      <br />
       <h3>Explanation</h3>
       <ul>
         <li>
@@ -1699,6 +1717,92 @@ void postorderRec(TreeNode root) {
         maintain a specific order that allows for quick comparisons and updates,
         making them ideal for a variety of problems in competitive programming
         and coding interviews.
+      </p>
+      <h2>Time and Space Complexity Analysis</h2>
+      <h3>Time Complexity</h3>
+      <ul>
+        <li>
+          <strong>Iteration Over Array Elements:</strong>
+          <ul>
+            <li>
+              The array is iterated over once from right to left, which takes{" "}
+              <code>O(n)</code> time, where <code>n</code> is the number of
+              elements in the array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Stack Operations:</strong>
+          <ul>
+            <li>
+              Each element is pushed onto the stack exactly once and popped from
+              the stack at most once. Hence, the total number of stack
+              operations (push and pop) is <code>O(n)</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Given that each operation within the loop (push and pop) is{" "}
+          <code>O(1)</code>, the overall time complexity is:
+          <ul>
+            <li>
+              <code>O(n) + O(n) = O(n)</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Space Complexity</h3>
+      <ul>
+        <li>
+          <strong>Stack:</strong>
+          <ul>
+            <li>
+              The space used by the stack is proportional to the number of
+              elements in the array. In the worst case, all elements could be in
+              the stack at the same time, which takes <code>O(n)</code> space.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Result Array:</strong>
+          <ul>
+            <li>
+              The result array <code>result</code> has the same number of
+              elements as the input array, requiring <code>O(n)</code> space.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Other Variables:</strong>
+          <ul>
+            <li>
+              The additional space used by other variables (like the integer
+              variables and the loop counter) is <code>O(1)</code>, which is
+              constant space and does not depend on the size of the input array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Combining these, the overall space complexity is:
+          <ul>
+            <li>
+              <code>O(n)</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Summary</h3>
+      <ul>
+        <li>
+          <strong>Time Complexity:</strong> <code>O(n)</code>
+        </li>
+        <li>
+          <strong>Space Complexity:</strong> <code>O(n)</code>
+        </li>
+      </ul>
+      <p>
+        The <code>nextSmallerElement</code> method is efficient with linear time
+        complexity and uses linear additional space.
       </p>
     </>
   ),
