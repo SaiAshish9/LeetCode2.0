@@ -23905,6 +23905,69 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  1908: (
+    <ul>
+      <li>
+        <strong>Class Definition:</strong>
+        <ul>
+          <li>
+            <code>{`class Solution {`}</code>: Defines the Solution class.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method Definition:</strong>
+        <ul>
+          <li>
+            <code>{`public boolean nimGame(int[] piles) {`}</code>: Defines the
+            nimGame method that takes an array of integers (piles) as input and
+            returns a boolean.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>int xor = 0;</code>: Initialize <code>xor</code> to 0. This
+            variable will hold the XOR result of all pile sizes.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate through the Piles:</strong>
+        <ul>
+          <li>
+            <code>for (int pile : piles)</code>: Start a loop to iterate through
+            each pile in the <code>piles</code> array.
+          </li>
+          <li>
+            <code>xor ^= pile;</code>: XOR the current pile size with the
+            current <code>xor</code> value.
+          </li>
+          <li>
+            <code>{`}`}</code>: Close the loop.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Statement:</strong>
+        <ul>
+          <li>
+            <code>return xor != 0;</code>: Return true if <code>xor</code> is
+            not 0; otherwise, return false. If the XOR of all pile sizes is 0,
+            the first player will lose; otherwise, the first player will win.
+          </li>
+          <li>
+            <code>{`}`}</code>: Close the nimGame method.
+          </li>
+          <li>
+            <code>{`}`}</code>: Close the Solution class.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
