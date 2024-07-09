@@ -24112,6 +24112,47 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  378: (
+    <ul>
+      <li>
+        <strong>Problem Understanding:</strong>
+        <ul>
+          <li>
+            Given a n x n matrix where each row and column is sorted in
+            ascending order, find the Kth smallest element.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution Approach:</strong>
+        <ul>
+          <li>
+            <strong>Using Min-Heap:</strong> Utilize a priority queue (min-heap)
+            to keep track of potential smallest elements in the matrix.
+          </li>
+          <li>
+            <strong>Add Elements:</strong> Start by adding elements from the
+            first row into the min-heap.
+          </li>
+          <li>
+            <strong>Extract Smallest K Times:</strong> Extract the smallest
+            element (root of heap) and add the next element from the same column
+            if exists, repeat K times.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Java Implementation:</strong>
+        <ul>
+          <li>See the provided Java code for detailed implementation.</li>
+          <li>
+            Includes using a min-heap to efficiently find the Kth smallest
+            element in a sorted matrix.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
