@@ -1528,6 +1528,7 @@ void postorderRec(TreeNode root) {
         property helps efficiently solve problems related to finding the next or
         previous greater/smaller elements in an array, among other applications.
       </p>
+      <br />
       <h2>Types of Monotonic Stacks</h2>
       <ul>
         <li>
@@ -1598,12 +1599,13 @@ void postorderRec(TreeNode root) {
           </ul>
         </li>
       </ul>
-      <h2>Example: Next Greater Element</h2>
+      <h2>Example: Next Greater Element</h2> <br />
       <p>
         Here's a detailed explanation of using a monotonically decreasing stack
         to solve the "Next Greater Element" problem.
-      </p>
-      <h3>Problem Statement</h3>
+      </p>{" "}
+      <br />
+      <h3>Problem Statement</h3> <br />
       <p>
         Given an array <code>nums</code>, for each element in the array, find
         the next greater element. The next greater element for an element{" "}
@@ -1637,25 +1639,27 @@ void postorderRec(TreeNode root) {
           do not have a next greater element, so their result is -1.
         </li>
       </ul>
-      <h3>Implementation</h3>
+      <h3>Implementation</h3> <br />
       <pre>
         <code>
           {`public int[] nextGreaterElement(int[] nums) {
-int[] result = new int[nums.length];
-Stack<Integer> stack = new Stack<>();
+    int[] result = new int[nums.length];
+    Stack<Integer> stack = new Stack<>();
 
-for (int i = nums.length - 1; i >= 0; i--) {
-    while (!stack.isEmpty() && stack.peek() <= nums[i]) {
-        stack.pop();
+    for (int i = nums.length - 1; i >= 0; i--) {
+        while (!stack.isEmpty() && stack.peek() <= nums[i]) {
+            stack.pop();
+        }
+        result[i] = stack.isEmpty() ? -1 : stack.peek();
+        stack.push(nums[i]);
     }
-    result[i] = stack.isEmpty() ? -1 : stack.peek();
-    stack.push(nums[i]);
-}
 
-return result;
-}`}
+    return result;
+}
+`}
         </code>
-      </pre>
+      </pre>{" "}
+      <br />
       <h3>Explanation</h3>
       <ul>
         <li>
@@ -1688,7 +1692,7 @@ return result;
           </ul>
         </li>
       </ul>
-      <h2>Summary</h2>
+      <h2>Summary</h2> <br />
       <p>
         Monotonic stacks are a powerful technique for efficiently solving
         problems involving next/previous greater/smaller elements. They help
