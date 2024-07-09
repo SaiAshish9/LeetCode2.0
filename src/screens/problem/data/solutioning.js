@@ -9349,7 +9349,7 @@ const SOLUTIONING = {
 
       <h2>Explanation:</h2>
 
-      <ol>
+      <ul>
         <li>
           <strong>Initialization:</strong>
           <ul>
@@ -9437,7 +9437,7 @@ const SOLUTIONING = {
             </li>
           </ul>
         </li>
-      </ol>
+      </ul>
     </>
   ),
   2969: (
@@ -9620,7 +9620,7 @@ const SOLUTIONING = {
       </li>
       <li>
         <strong>Steps:</strong>
-        <ol>
+        <ul>
           <li>
             <strong>Sort the Array:</strong> First, sort the given array.
             Sorting helps us in easily skipping duplicates and makes it easier
@@ -9652,7 +9652,7 @@ const SOLUTIONING = {
             <strong>Skip Duplicates:</strong> Skip duplicate values of the first
             element to avoid duplicate triplets.
           </li>
-        </ol>
+        </ul>
       </li>
       <li>
         <strong>Edge Cases:</strong>
@@ -24584,6 +24584,87 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
             <code>inf</code>, return <code>-1</code> indicating that the
             destination is unreachable from the start point.
           </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  316: (
+    <ul>
+      <li>
+        <b>Count Array:</b>
+        <ul>
+          <li>
+            Create an array <code>count</code> of size 26 to store the frequency
+            of each character in the string <code>s</code>.
+          </li>
+          <li>
+            Iterate through the string <code>s</code> and increment the count
+            for each character.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Visited Array:</b>
+        <ul>
+          <li>
+            Create a boolean array <code>visited</code> of size 26 to keep track
+            of characters that are already in the stack.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Monotonic Stack:</b>
+        <ul>
+          <li>
+            Create a stack to store the result characters in lexicographical
+            order without duplicates.
+          </li>
+          <li>
+            Iterate through the string <code>s</code> again:
+            <ul>
+              <li>
+                Decrement the count for the current character <code>c</code>.
+              </li>
+              <li>
+                If <code>c</code> is already in the stack (
+                <code>visited[c - 'a']</code> is <code>true</code>), skip to the
+                next character.
+              </li>
+              <li>
+                While the stack is not empty and the top character of the stack
+                is greater than <code>c</code>, and the top character appears
+                later in the string (its count is greater than 0):
+                <ul>
+                  <li>
+                    Pop the top character from the stack and mark it as not
+                    visited.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Push the current character <code>c</code> onto the stack and
+                mark it as visited.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Building the Result:</b>
+        <ul>
+          <li>
+            Create a <code>StringBuilder</code> to build the result string.
+          </li>
+          <li>
+            Pop characters from the stack and insert them at the beginning of
+            the <code>StringBuilder</code> to get the final result string.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Return the Result:</b>
+        <ul>
+          <li>Return the final result string.</li>
         </ul>
       </li>
     </ul>
