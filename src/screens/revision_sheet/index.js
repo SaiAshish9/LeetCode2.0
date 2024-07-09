@@ -82,16 +82,20 @@ const RevisionSheet = () => {
       </Helmet>
       <Content>
         {data && (
-          <ContentText>
-            Existing Total Count: <ContentTextBold>{count}{" "}</ContentTextBold>
-            problems.
-          </ContentText>
+          <>
+            {" "}
+            <ContentText>
+              Existing Total Count: <ContentTextBold>{count} </ContentTextBold>
+              problems.
+            </ContentText>
+            <ContentText sm>
+              *Note: Click on the tag name highlighted in a different color to
+              view descriptions and time and space complexities of various
+              operations. Use the arrow keys to collapse or expand selected
+              questions.
+            </ContentText>
+          </>
         )}{" "}
-        <ContentText sm>
-          *Note: Click on the tag name highlighted in a different color to view
-          descriptions and time and space complexities of various operations.{" "}
-          Use the arrow keys to collapse or expand selected questions.
-        </ContentText>
         <Spacer />
         {data &&
           Object.keys(data)
