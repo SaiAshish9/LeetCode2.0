@@ -88,9 +88,9 @@ const RevisionSheet = () => {
           </ContentText>
         )}{" "}
         <ContentText>
-          * Note: Click on the tag name for the description and time and space
-          complexities. And the arrow keys to collapse and expand selected
-          questions.
+          *Note: Click on the tag name to view descriptions and time and space
+          complexities of various operations. Use the arrow keys to collapse or
+          expand selected questions.
         </ContentText>
         <Spacer />
         {data &&
