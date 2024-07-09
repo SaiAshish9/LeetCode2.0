@@ -24946,6 +24946,76 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  503: (
+    <>
+      <ul>
+        <li>
+          <b>Define the Function:</b>
+          <ul>
+            <li>
+              Create an array <code>result</code> of the same length as{" "}
+              <code>nums</code> to store the next greater element for each
+              element in <code>nums</code>.
+            </li>
+            <li>
+              Initialize an empty stack to help find the next greater elements.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Iterate through the Array Twice:</b>
+          <ul>
+            <li>
+              Use a loop that iterates from <code>2 * n - 1</code> to{" "}
+              <code>0</code> to simulate a circular array by using the modulo
+              operator.
+            </li>
+            <li>
+              In each iteration, check if the current element is greater than
+              the elements in the stack.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Update the Result Array:</b>
+          <ul>
+            <li>
+              If the top element of the stack is less than or equal to the
+              current element, pop it from the stack.
+            </li>
+            <li>
+              The next greater element for the current element is the top
+              element of the stack if the stack is not empty; otherwise, it is
+              -1.
+            </li>
+            <li>
+              Store the result in the <code>result</code> array at the index{" "}
+              <code>i % n</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Push the Current Element onto the Stack:</b>
+          <ul>
+            <li>
+              Push the current element onto the stack to be used for future
+              comparisons.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Return the Result Array:</b>
+          <ul>
+            <li>
+              After completing the loop, return the <code>result</code> array
+              which contains the next greater elements for each element in the
+              input array.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
