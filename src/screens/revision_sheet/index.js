@@ -134,7 +134,9 @@ const RevisionSheet = () => {
                                   value.title
                                     .toLowerCase()
                                     .split(" ")
-                                    .join("_"),
+                                    .join("_") +
+                                  "?tag=" +
+                                  item,
                                 "_blank"
                               );
                             }}
