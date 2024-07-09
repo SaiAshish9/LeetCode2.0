@@ -24331,6 +24331,95 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  2333: (
+    <ul>
+      <li>
+        <strong>Input Preparation:</strong>
+        <ul>
+          <li>
+            <code>getDiff(nums1, nums2)</code>: Calculates absolute differences
+            between corresponding elements of <code>nums1</code> and{" "}
+            <code>nums2</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Calculate <code>k = k1 + k2</code>.
+          </li>
+          <li>
+            Edge case check: If sum of all differences is ≤ <code>k</code>,
+            return <code>0</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Heap and Count Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>count</code> map to store frequency of each unique
+            difference.
+          </li>
+          <li>
+            Initialize <code>maxHeap</code> to store pairs{" "}
+            <code>(difference, frequency)</code> in descending order of
+            difference.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Heap Population:</strong>
+        <ul>
+          <li>
+            Iterate through <code>diff</code> array to populate{" "}
+            <code>count</code> map.
+          </li>
+          <li>
+            Insert each unique difference with frequency into{" "}
+            <code>maxHeap</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Modification Process:</strong>
+        <ul>
+          <li>
+            While <code>k &gt; 0</code>:
+          </li>
+          <ul>
+            <li>
+              Remove largest difference pair from <code>maxHeap</code>.
+            </li>
+            <li>
+              Determine how much of this difference can be reduced (
+              <code>numDecreased</code>).
+            </li>
+            <li>Adjust heap and frequencies accordingly.</li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate Minimum Sum:</strong>
+        <ul>
+          <li>
+            Iterate through <code>maxHeap</code> to calculate minimum possible
+            sum of squared differences (<code>ans</code>).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code>, which represents the minimized sum of
+            squared differences after allowed modifications.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
