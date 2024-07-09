@@ -29,9 +29,9 @@ const RevisionSheet = () => {
 
       if (res && tempData) {
         const temp = Object.assign({}, tempData);
-        let tempCount = 0;
-        Object.values(tempData).forEach((x) => (tempCount += x.length));
-        setCount(tempCount);
+        let tempSet = new Set();
+        Object.values(tempData).forEach((x) => tempSet.add(x));
+        setCount(tempSet.size);
         const tempValues = Object.values(res);
         for (let key of Object.keys(tempData)) {
           const values = tempValues.filter((x) =>
