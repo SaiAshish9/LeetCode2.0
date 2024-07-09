@@ -142,20 +142,10 @@ const Problem = () => {
             ]
           );
         }
-        console.log(
-          tags,
-          defaultTag,
-          dropdownItemSelected,
-          tags.indexOf(solutionKey),
-          search,
-          location.search
-        );
 
         if (dropdownItemSelected === -1) {
           setDropdownItemSelected(tags.indexOf(solutionKey));
-        } else {
-          setDropdownItemSelected(tags.indexOf(defaultTag));
-        }
+        } 
       }
       handleDropdownCLickOutside();
       handleDropdownCLickOutside1();
@@ -555,7 +545,8 @@ const Problem = () => {
                           }}
                         >
                           <TabOptionsText style={{ marginRight: "0.25rem" }}>
-                            {dropdownItemSelected !== -1 &&
+                            {qInfo.tags &&
+                              dropdownItemSelected !== -1 &&
                               qInfo.tags[dropdownItemSelected]}
                           </TabOptionsText>
                           <NavIcon style={{ marginRight: "0rem" }}>
@@ -599,7 +590,9 @@ const Problem = () => {
                                 onMouseLeave={() => setHovered(-1)}
                                 key={k}
                                 hovered={k === hovered}
-                                onClick={() => {
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
                                   setDropdownItemSelected(k);
                                   const path =
                                     location?.pathname?.split(
