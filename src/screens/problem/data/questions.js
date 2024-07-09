@@ -27299,8 +27299,9 @@ for (int i = 0; i &lt; actualLength; i++) {
 
           <pre>
             <b>Input: </b>
-            ["FirstUnique","showFirstUnique","add","add","add","add","add","showFirstUnique"]{" "}
+            ["FirstUnique","showFirstUnique","add","add","add",
             <br />
+            "add","add","showFirstUnique"] <br />
             [[[7,7,7,7,7,7]],[],[7],[3],[3],[7],[17],[]] <br />
             <b>Output: </b> <br />
             [null,-1,null,null,null,null,null,17] <br />
