@@ -24843,7 +24843,7 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
             <li>Iterate through the array from the end to the beginning.</li>
             <li>
               For each element <code>nums[j]</code>:
-              <ol>
+              <ul>
                 <li>
                   Check if <code>nums[j]</code> is greater than{" "}
                   <code>min[j]</code> (potential '3' element).
@@ -24862,7 +24862,7 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
                   Push <code>nums[j]</code> onto the stack (potential '3'
                   element for future iterations).
                 </li>
-              </ol>
+              </ul>
             </li>
           </ul>
         </li>
@@ -24874,65 +24874,77 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
     </>
   ),
   496: (
-    <ul>
-      <li>
-        <b>Initialization:</b>
-        <ul>
-          <li>
-            Create a <code>Map&lt;Integer, Integer&gt;</code> to store the next
-            greater element for each element in <code>nums2</code>.
-          </li>
-          <li>
-            Create a <code>Stack&lt;Integer&gt;</code> to keep track of elements
-            for which we are finding the next greater element.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <b>
-          Process <code>nums2</code>:
-        </b>
-        <ul>
-          <li>
-            Iterate through each element <code>num</code> in <code>nums2</code>.
-          </li>
-          <li>
-            While the stack is not empty and the top element of the stack is
-            less than <code>num</code>:
-            <ol>
-              <li>Pop the top element from the stack.</li>
-              <li>
-                Map the popped element to <code>num</code> in the map as its
-                next greater element.
-              </li>
-            </ol>
-          </li>
-          <li>
-            Push <code>num</code> onto the stack.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <b>
-          Update <code>nums1</code>:
-        </b>
-        <ul>
-          <li>
-            Iterate through each element in <code>nums1</code>.
-          </li>
-          <li>
-            Replace each element in <code>nums1</code> with its next greater
-            element found in the map. If no next greater element is found,
-            replace it with <code>-1</code>.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <b>
-          Return the updated <code>nums1</code> array.
-        </b>
-      </li>
-    </ul>
+    <>
+      <h3>Explanation:</h3>
+      <ul>
+        <li>
+          <b>Define the Function:</b>
+          <ul>
+            <li>
+              Create a <code>Map&lt;Integer, Integer&gt;</code> to store the
+              next greater element for each element in <code>nums2</code>.
+            </li>
+            <li>
+              Define a method <code>nextGreaterElement</code> to compute the
+              next greater element for each element in <code>nums2</code> using
+              a monotonic stack.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            Compute Next Greater Elements for <code>nums2</code>:
+          </b>
+          <ul>
+            <li>
+              Iterate through <code>nums2</code> from the last element to the
+              first element.
+            </li>
+            <li>
+              Use a stack to keep track of elements for which we are finding the
+              next greater element.
+            </li>
+            <li>
+              If the top element of the stack is less than or equal to the
+              current element, pop it from the stack.
+            </li>
+            <li>
+              The next greater element for the current element is the top
+              element of the stack if the stack is not empty; otherwise, it is
+              -1.
+            </li>
+            <li>Push the current element onto the stack.</li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            Map Elements of <code>nums2</code> to Their Next Greater Elements:
+          </b>
+          <ul>
+            <li>
+              Iterate through <code>nums2</code> and store each element and its
+              next greater element in the map.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            Update <code>nums1</code> with Their Next Greater Elements:
+          </b>
+          <ul>
+            <li>
+              Iterate through <code>nums1</code> and replace each element with
+              its next greater element found in the map.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            Return the updated <code>nums1</code> array.
+          </b>
+        </li>
+      </ul>
+    </>
   ),
 };
 
