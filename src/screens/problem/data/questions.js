@@ -28081,7 +28081,8 @@ for (int i = 0; i &lt; actualLength; i++) {
         [1,1,1,1,0], <br />
         [1,0,0,0,0], <br />
         [1,1,0,0,0], <br />
-        [1,1,1,1,1]], k = 3<strong>Output:</strong> [2,0,3] <br />
+        [1,1,1,1,1]], k = 3 <br />
+        <strong>Output:</strong> [2,0,3] <br />
         <strong>Explanation:</strong> <br />
         The number of soldiers in each row is: <br />
         - Row 0: 2 <br />
@@ -28101,7 +28102,8 @@ for (int i = 0; i &lt; actualLength; i++) {
         [[1,0,0,0], <br />
         [1,1,1,1], <br />
         [1,0,0,0], <br />
-        [1,0,0,0]], k = 2<strong>Output:</strong> [0,2] <br />
+        [1,0,0,0]], k = 2 <br />
+        <strong>Output:</strong> [0,2] <br />
         <strong>Explanation:</strong> <br />
         The number of soldiers in each row is: <br />
         - Row 0: 1 <br />
