@@ -23968,6 +23968,125 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  "347_heap_(priority_queue)": (
+    <ul>
+      <li>
+        <strong>Class Definition:</strong>
+        <ul>
+          <li>
+            <code>{`class Solution {`}</code>: Defines the Solution class.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method Definition:</strong>
+        <ul>
+          <li>
+            <code>{`public int[] topKFrequent(int[] nums, int k) {`}</code>:
+            Defines the topKFrequent method that takes an array of integers and
+            an integer k, and returns an array of integers.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Frequency Map:</strong>
+        <ul>
+          <li>
+            <code>{`Map<Integer, Integer> frequencyMap = new HashMap<>();`}</code>
+            : Creates a HashMap to store the frequency of each element in the
+            array.
+          </li>
+          <li>
+            <code>{`for (int num : nums) {`}</code>: Starts a loop to iterate
+            through the array <code>nums</code>.
+          </li>
+          <li>
+            <code>
+              frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+            </code>
+            : Updates the frequency count for each element in the map.
+          </li>
+          <li>
+            <code>{`}`}</code>: Closes the loop.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Priority Queue:</strong>
+        <ul>
+          <li>
+            <code>{`PriorityQueue<Map.Entry<Integer, Integer>> heap = new PriorityQueue<>(`}</code>
+            : Creates a priority queue (min-heap) to keep track of the top k
+            frequent elements.
+          </li>
+          <li>
+            <code>{`(a, b) -> a.getValue() - b.getValue()`}</code>: Defines a
+            comparator to sort the entries by their frequency in ascending
+            order.
+          </li>
+          <li>
+            <code>{`)`};</code>: Closes the priority queue declaration.
+          </li>
+          <li>
+            <code>{`for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {`}</code>
+            : Starts a loop to iterate over the entries in the frequency map.
+          </li>
+          <li>
+            <code>heap.offer(entry);</code>: Adds each entry to the heap.
+          </li>
+          <li>
+            <code>{`if (heap.size() > k) {`}</code>: Checks if the size of the
+            heap exceeds k.
+          </li>
+          <li>
+            <code>heap.poll();</code>: Removes the root of the heap if its size
+            exceeds k, ensuring that only the top k frequent elements are kept.
+          </li>
+          <li>
+            <code>{`}`}</code>: Closes the if statement.
+          </li>
+          <li>
+            <code>{`}`}</code>: Closes the for loop.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Extracting Results:</strong>
+        <ul>
+          <li>
+            <code>int[] result = new int[k];</code>: Creates an array to store
+            the result.
+          </li>
+          <li>
+            <code>{`for (int i = k - 1; i >= 0; i--) {`}</code>: Starts a loop
+            to extract the elements from the heap into the result array.
+          </li>
+          <li>
+            <code>result[i] = heap.poll().getKey();</code>: Retrieves and
+            removes the root of the heap and stores the key (element) in the
+            result array.
+          </li>
+          <li>
+            <code>{`}`}</code>: Closes the for loop.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Statement:</strong>
+        <ul>
+          <li>
+            <code>return result;</code>: Returns the result array.
+          </li>
+          <li>
+            <code>{`}`}</code>: Closes the topKFrequent method.
+          </li>
+          <li>
+            <code>{`}`}</code>: Closes the Solution class.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
