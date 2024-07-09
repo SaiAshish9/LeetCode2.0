@@ -28221,6 +28221,80 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  2231: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a positive integer <code>num</code>. You may swap any two
+        digits of <code>num</code> that have the same <strong>parity</strong>{" "}
+        (i.e. both odd digits or both even digits).
+      </p>
+
+      <p>
+        Return
+        <em>
+          {" "}
+          the <strong>largest</strong> possible value of{" "}
+        </em>
+        <code>num</code>
+        <em>
+          {" "}
+          after <strong>any</strong> number of swaps.
+        </em>
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> num = 1234 <br />
+        <strong>Output:</strong> 3412 <br />
+        <strong>Explanation:</strong> Swap the digit 3 with the digit 1, this
+        results in the number 3214.
+        <br />
+        Swap the digit 2 with the digit 4, this results in the number 3412.
+        <br />
+        Note that there may be other sequences of swaps but it can be shown that
+        3412 is the largest possible number.
+        <br />
+        Also note that we may not swap the digit 4 with the digit 1 since they
+        are of different parities.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> num = 65875
+        <br />
+        <strong>Output:</strong> 87655
+        <br />
+        <strong>Explanation:</strong> Swap the digit 8 with the digit 6, this
+        results in the number 85675.
+        <br />
+        Swap the first digit 5 with the digit 7, this results in the number
+        87655.
+        <br />
+        Note that there may be other sequences of swaps but it can be shown that
+        87655 is the largest possible number.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= num &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
