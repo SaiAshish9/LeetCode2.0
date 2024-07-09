@@ -24239,6 +24239,51 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  2231: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>Convert the integer `num` to a string `s`.</li>
+          <li>
+            Initialize `ans` to 0 and create `maxHeap` to store odd and even
+            digits in descending order.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Populating Heaps:</strong>
+        <ul>
+          <li>
+            Iterate through each digit of `s` and add it to the appropriate heap
+            (`maxHeap[0]` for even, `maxHeap[1]` for odd).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Building the Largest Integer:</strong>
+        <ul>
+          <li>
+            Iterate through each digit of `s` again and construct `ans` by
+            appending digits from `maxHeap`.
+          </li>
+          <li>
+            Multiply `ans` by 10 and add the next largest digit from the heap to
+            form the largest possible integer.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Once all digits are processed, return `ans` as the largest possible
+            integer formed by rearranging the digits of `num`.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
