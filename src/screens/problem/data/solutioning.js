@@ -24195,6 +24195,50 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1439: (
+    <ul>
+      <li>
+        <strong>Class `T`:</strong>
+        <ul>
+          <li>
+            Represents a tuple `(i, j, sum)` where `i` and `j` are indices and
+            `sum` is their sum.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method `kthSmallest`:</strong>
+        <ul>
+          <li>
+            Iteratively computes k smallest pair sums between rows using
+            `kSmallestPairSums`.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Method `kSmallestPairSums`:</strong>
+        <ul>
+          <li>
+            Uses a min-heap to track and extract the smallest k sums
+            efficiently.
+          </li>
+          <li>
+            Populates `ans` with k smallest sums using a heap-based approach.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Java Implementation:</strong>
+        <ul>
+          <li>See the provided Java code for detailed implementation.</li>
+          <li>
+            Utilizes min-heap (`PriorityQueue`) for efficient tracking of
+            smallest sums.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
