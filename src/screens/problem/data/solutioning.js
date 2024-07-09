@@ -24153,6 +24153,48 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  "692_heap_(priority_queue)": (
+    <ul>
+      <li>
+        <strong>Problem Understanding:</strong>
+        <ul>
+          <li>
+            Given a non-empty list of words, find the K most frequent elements.
+          </li>
+          <li>
+            If there are ties in frequency, return the words in lexicographical
+            order.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution Approach:</strong>
+        <ul>
+          <li>
+            <strong>HashMap:</strong> Count frequencies of each word.
+          </li>
+          <li>
+            <strong>Min-Heap (Priority Queue):</strong> Use a min-heap to
+            maintain the K most frequent words.
+          </li>
+          <li>
+            <strong>Lexicographical Order:</strong> Handle ties in frequency
+            using the comparator.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Java Implementation:</strong>
+        <ul>
+          <li>See the provided Java code for detailed implementation.</li>
+          <li>
+            Uses HashMap for counting, Priority Queue for maintaining top K
+            elements, and handles ties with lexicographical order.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
