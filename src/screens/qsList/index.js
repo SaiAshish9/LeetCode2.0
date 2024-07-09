@@ -25,7 +25,7 @@ import {
 } from "./styles";
 import { Helmet } from "react-helmet";
 
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FaLockOpen } from "react-icons/fa";
 import { PREMIUM, TAG_DESCRIPTION } from "../problem/data";
 import axios from "axios";
@@ -131,7 +131,7 @@ const QSList = () => {
 
   const [tableData, setTableData] = useState(null);
   const [path, setPath] = useState(null);
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const [selected, setSelected] = useState(0);
   const [description, setDescription] = useState(null);
 
@@ -236,6 +236,36 @@ const QSList = () => {
     fetchDesc();
   }, []);
 
+  const [hashParam, setHashParam] = useState("");
+
+  useEffect(() => {
+    const extractHashParam = () => {
+      const hash = window.location.hash;
+      if (hash && hash.length > 1) {
+        setHashParam(hash.substring(1));
+      } else {
+        setHashParam("");
+      }
+    };
+
+    extractHashParam();
+
+    window.addEventListener("hashchange", extractHashParam);
+    return () => {
+      window.removeEventListener("hashchange", extractHashParam);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (hashParam === "problems" || hashParam === "") {
+      setSelected(0);
+    } else if (hashParam === "description") {
+      setSelected(1);
+    }
+  }, [hashParam]);
+
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Helmet>
@@ -265,10 +295,22 @@ const QSList = () => {
           <BookmarkSpan>{path ? decodeURIComponent(path) : ""}</BookmarkSpan>
         </BookmarkText>
         <TabContainer>
-          <Tab onClick={() => setSelected(0)} inactive={selected === 1}>
+          <Tab
+            onClick={() => {
+              setSelected(0);
+              navigate("#problems");
+            }}
+            inactive={selected === 1}
+          >
             <TabText>Problems</TabText>
           </Tab>
-          <Tab onClick={() => setSelected(1)} inactive={selected === 0}>
+          <Tab
+            onClick={() => {
+              setSelected(1);
+              navigate("#description");
+            }}
+            inactive={selected === 0}
+          >
             <TabText>Description</TabText>
           </Tab>
         </TabContainer>
