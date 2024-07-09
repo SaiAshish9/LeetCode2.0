@@ -24669,6 +24669,82 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  321: (
+    <ul>
+      <li>
+        <b>
+          Main Function (<code>maxNumber</code>):
+        </b>
+        <ul>
+          <li>
+            Calculate the lengths of <code>nums1</code> and <code>nums2</code>.
+          </li>
+          <li>
+            Initialize an array <code>maxNum</code> to store the maximum number
+            of length <code>k</code>.
+          </li>
+          <li>
+            Iterate over possible lengths for the subsequences from{" "}
+            <code>nums1</code> and <code>nums2</code> to form a sequence of
+            length <code>k</code>.
+          </li>
+          <li>
+            Call <code>maxSubsequence</code> for <code>nums1</code> and{" "}
+            <code>nums2</code> to get the maximum subsequences of given lengths.
+          </li>
+          <li>
+            Merge the two subsequences using the <code>merge</code> function.
+          </li>
+          <li>
+            Update the maximum subsequence if the new candidate is greater.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>
+          Max Subsequence Function (<code>maxSubsequence</code>):
+        </b>
+        <ul>
+          <li>
+            Use a stack to store the maximum subsequence of a given length.
+          </li>
+          <li>
+            Iterate over the array and maintain the stack by keeping only the
+            greatest elements while ensuring the length constraint.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>
+          Merge Function (<code>merge</code>):
+        </b>
+        <ul>
+          <li>
+            Merge two subsequences by comparing their elements
+            lexicographically.
+          </li>
+          <li>
+            Use a helper function <code>greater</code> to determine which
+            element to take from which subsequence.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>
+          Greater Function (<code>greater</code>):
+        </b>
+        <ul>
+          <li>
+            Compare elements of two subsequences starting from given indices.
+          </li>
+          <li>
+            Return true if the element in the first subsequence is greater,
+            otherwise return false.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
