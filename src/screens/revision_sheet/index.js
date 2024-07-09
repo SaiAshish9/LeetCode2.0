@@ -97,7 +97,9 @@ const RevisionSheet = () => {
                   <p
                     onClick={() => {
                       window.open(
-                        "/tag/" + item.toLowerCase().replace(" ", "_"),
+                        "/tag/" +
+                          item.toLowerCase().replace(" ", "_") +
+                          "#description",
                         "_blank"
                       );
                     }}
