@@ -23825,6 +23825,86 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2568: (
+    <ul>
+      <li>
+        <strong>Method Definition:</strong>
+        <ul>
+          <li>
+            <code>{`public int minImpossibleOR(int[] nums) {`}</code>: Defines
+            the minImpossibleOR method that takes an array of integers as input
+            and returns an integer.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>int res = 1;</code>: Initialize <code>res</code> to 1, the
+            smallest positive integer.
+          </li>
+          <li>
+            <code>{`Set<Integer> seen = new HashSet<>();`}</code>: Create a set{" "}
+            <code>seen</code> to store the unique integers from{" "}
+            <code>nums</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Populate the Set:</strong>
+        <ul>
+          <li>
+            <code>{`for (int num : nums) {`}</code>: Start a loop to iterate
+            through the array <code>nums</code>.
+          </li>
+          <li>
+            <code>seen.add(num);</code>: Add each number to the set{" "}
+            <code>seen</code>.
+          </li>
+          <li>
+            <code>{`}`}</code>: Close the loop.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Find the Smallest Missing Integer:</strong>
+        <ul>
+          <li>
+            <code>{`while (seen.contains(res)) {`}</code>: Start a while loop to
+            check if <code>res</code> is in the set <code>seen</code>.
+          </li>
+          <li>
+            <code>{`res <<= 1;`}</code>: If <code>res</code> is in the set,
+            shift <code>res</code> to the left by 1 (equivalent to multiplying
+            by 2, moving to the next power of 2).
+          </li>
+          <li>
+            <code>{`}`}</code>: Close the while loop.
+          </li>
+          <li>
+            Continue until <code>res</code> is not in the set. This value of{" "}
+            <code>res</code> is the answer.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Statement:</strong>
+        <ul>
+          <li>
+            <code>return res;</code>: Return the value of <code>res</code> as
+            the result.
+          </li>
+          <li>
+            <code>{`}`}</code>: Close the minImpossibleOR method.
+          </li>
+          <li>
+            <code>{`}`}</code>: Close the Solution class.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
