@@ -23778,6 +23778,53 @@ const SOLUTIONING = {
       </li>
     </ul>
   ),
+  2419: (
+    <ul>
+      <li>
+        <strong>Finding the Maximum Element:</strong>
+        <ul>
+          <li>
+            Initialize <code>max</code> to 0.
+          </li>
+          <li>
+            Iterate through the array <code>nums</code>.
+          </li>
+          <li>
+            For each element <code>num</code>, update <code>max</code> to be the
+            maximum of <code>max</code> and <code>num</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Identifying Longest Subarray with Maximum Element:</strong>
+        <ul>
+          <li>
+            Initialize <code>maxLength</code> and <code>currentLength</code> to
+            0.
+          </li>
+          <li>
+            Iterate through the array <code>nums</code> again.
+          </li>
+          <li>
+            If the current element equals <code>max</code>:
+            <ul>
+              <li>
+                Increment <code>currentLength</code>.
+              </li>
+              <li>
+                Update <code>maxLength</code> to be the maximum of{" "}
+                <code>maxLength</code> and <code>currentLength</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the current element does not equal <code>max</code>, reset{" "}
+            <code>currentLength</code> to 0.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
