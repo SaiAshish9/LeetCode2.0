@@ -83,7 +83,7 @@ const RevisionSheet = () => {
       <Content>
         {data && (
           <ContentText>
-            Existing Total Count: <ContentTextBold>{count}</ContentTextBold>{" "}
+            Existing Total Count: <ContentTextBold>{count}{" "}</ContentTextBold>
             problems.
           </ContentText>
         )}{" "}
