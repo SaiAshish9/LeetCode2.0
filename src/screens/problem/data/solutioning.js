@@ -24806,6 +24806,73 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  456: (
+    <>
+      <ul>
+        <li>
+          <b>
+            Main Function (<code>find132pattern</code>):
+          </b>
+          <ul>
+            <li>
+              Check if the length of <code>nums</code> is less than 3. If so,
+              return <code>false</code> because a 132 pattern requires at least
+              3 elements.
+            </li>
+            <li>
+              Initialize a stack to keep track of potential '3' elements in the
+              132 pattern.
+            </li>
+            <li>
+              Create an array <code>min</code> to store the minimum value up to
+              each index.
+            </li>
+            <li>
+              Initialize <code>min[0]</code> to <code>nums[0]</code>.
+            </li>
+            <li>
+              Fill the <code>min</code> array such that <code>min[i]</code>{" "}
+              contains the minimum value from <code>nums[0]</code> to{" "}
+              <code>nums[i]</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Traverse the Array:</b>
+          <ul>
+            <li>Iterate through the array from the end to the beginning.</li>
+            <li>
+              For each element <code>nums[j]</code>:
+              <ol>
+                <li>
+                  Check if <code>nums[j]</code> is greater than{" "}
+                  <code>min[j]</code> (potential '3' element).
+                </li>
+                <li>
+                  While the stack is not empty and the top element of the stack
+                  is less than or equal to <code>min[j]</code>, pop elements
+                  from the stack.
+                </li>
+                <li>
+                  Check if the stack is not empty and the top element of the
+                  stack is less than <code>nums[j]</code>. If true, a 132
+                  pattern is found, return <code>true</code>.
+                </li>
+                <li>
+                  Push <code>nums[j]</code> onto the stack (potential '3'
+                  element for future iterations).
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </li>
+        <li>
+          If no 132 pattern is found after traversing the array, return{" "}
+          <code>false</code>.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
