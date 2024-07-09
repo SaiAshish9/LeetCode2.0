@@ -24498,6 +24498,96 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  505: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize variables and constants:
+            <ul>
+              <li>
+                <code>m</code> and <code>n</code> for the dimensions of the
+                maze.
+              </li>
+              <li>
+                <code>inf</code> set to a large value (1 &lt;&lt; 30) to
+                represent an infinite distance initially.
+              </li>
+              <li>
+                <code>dist</code> as a 2D array to store the minimum distance
+                from the start point to each cell in the maze.
+              </li>
+              <li>
+                <code>start</code> and <code>destination</code> arrays to store
+                the coordinates of the start and destination points
+                respectively.
+              </li>
+              <li>
+                <code>si, sj</code> for start point coordinates and{" "}
+                <code>di, dj</code> for destination point coordinates.
+              </li>
+              <li>
+                <code>q</code> as a <code>Deque</code> to facilitate BFS
+                traversal with the starting point enqueued.
+              </li>
+              <li>
+                <code>dirs</code> array representing directional movements (up,
+                down, left, right).
+              </li>
+            </ul>
+          </li>
+          <li>
+            Initialize the distance from the start point to itself as{" "}
+            <code>0</code> in the <code>dist</code> array and enqueue the start
+            point into <code>q</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Breadth-First Search (BFS) Loop:</strong>
+        <ul>
+          <li>
+            While <code>q</code> is not empty:
+          </li>
+          <ul>
+            <li>
+              Dequeue the current position <code>p</code> from <code>q</code>.
+            </li>
+            <li>
+              Retrieve the coordinates <code>i, j</code> from <code>p</code> and
+              the current distance <code>k</code> from <code>dist[i][j]</code>.
+            </li>
+            <li>
+              Iterate through all four possible movement directions (
+              <code>dirs</code>).
+            </li>
+            <li>
+              Attempt to move in the current direction (<code>a, b</code>) until
+              hitting a wall (<code>maze[x + a][y + b] == 0</code>).
+            </li>
+            <li>
+              If the new calculated distance <code>k</code> to reach{" "}
+              <code>(x, y)</code> is less than the current recorded{" "}
+              <code>dist[x][y]</code>, update <code>dist[x][y]</code> and
+              enqueue <code>(x, y)</code> into <code>q</code>.
+            </li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>
+            Return <code>dist[di][dj]</code> which holds the minimum distance
+            from the start point to the destination point. If it remains set to{" "}
+            <code>inf</code>, return <code>-1</code> indicating that the
+            destination is unreachable from the start point.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
