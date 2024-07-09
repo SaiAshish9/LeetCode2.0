@@ -24873,6 +24873,67 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  496: (
+    <ul>
+      <li>
+        <b>Initialization:</b>
+        <ul>
+          <li>
+            Create a <code>Map&lt;Integer, Integer&gt;</code> to store the next
+            greater element for each element in <code>nums2</code>.
+          </li>
+          <li>
+            Create a <code>Stack&lt;Integer&gt;</code> to keep track of elements
+            for which we are finding the next greater element.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>
+          Process <code>nums2</code>:
+        </b>
+        <ul>
+          <li>
+            Iterate through each element <code>num</code> in <code>nums2</code>.
+          </li>
+          <li>
+            While the stack is not empty and the top element of the stack is
+            less than <code>num</code>:
+            <ol>
+              <li>Pop the top element from the stack.</li>
+              <li>
+                Map the popped element to <code>num</code> in the map as its
+                next greater element.
+              </li>
+            </ol>
+          </li>
+          <li>
+            Push <code>num</code> onto the stack.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>
+          Update <code>nums1</code>:
+        </b>
+        <ul>
+          <li>
+            Iterate through each element in <code>nums1</code>.
+          </li>
+          <li>
+            Replace each element in <code>nums1</code> with its next greater
+            element found in the map. If no next greater element is found,
+            replace it with <code>-1</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>
+          Return the updated <code>nums1</code> array.
+        </b>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
