@@ -1710,15 +1710,7 @@ void postorderRec(TreeNode root) {
           </ul>
         </li>
       </ul>
-      <h2>Summary</h2> <br />
-      <p>
-        Monotonic stacks are a powerful technique for efficiently solving
-        problems involving next/previous greater/smaller elements. They help
-        maintain a specific order that allows for quick comparisons and updates,
-        making them ideal for a variety of problems in competitive programming
-        and coding interviews.
-      </p>
-      <h2>Time and Space Complexity Analysis</h2>
+      <h2>Time and Space Complexity Analysis</h2> <br />
       <h3>Time Complexity</h3>
       <ul>
         <li>
@@ -1804,6 +1796,8 @@ void postorderRec(TreeNode root) {
         The <code>nextSmallerElement</code> method is efficient with linear time
         complexity and uses linear additional space.
       </p>
+      <br />
+      <p>Here are the time complexities for various stack operations:</p>
       <ul>
         <li>
           <strong>Push Operation:</strong>
@@ -1867,6 +1861,15 @@ void postorderRec(TreeNode root) {
           </ul>
         </li>
       </ul>
+      <h2>Summary</h2> <br />
+      <p>
+        Monotonic stacks are a powerful technique for efficiently solving
+        problems involving next/previous greater/smaller elements. They help
+        maintain a specific order that allows for quick comparisons and updates,
+        making them ideal for a variety of problems in competitive programming
+        and coding interviews.
+      </p>{" "}
+      <br />
     </>
   ),
 };
