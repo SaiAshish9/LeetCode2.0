@@ -104,8 +104,20 @@ const Problem = () => {
 
   const fetchData = async () => {
     try {
-      const qInfoData = (await axios(BASE_URL + "q_info.json")).data;
-      const solutionsData = (await axios(BASE_URL + "solutions.json")).data;
+      const qInfoData = (
+        await axios.get(BASE_URL + "q_info.json", {
+          headers: {
+            "Cache-Control": "no-cache",
+          },
+        })
+      ).data;
+      const solutionsData = (
+        await axios.get(BASE_URL + "solutions.json", {
+          headers: {
+            "Cache-Control": "no-cache",
+          },
+        })
+      ).data;
       const Q = decodeURIComponent(
         location?.pathname?.split("/problems/")?.[1]
       );
@@ -145,7 +157,7 @@ const Problem = () => {
 
         if (dropdownItemSelected === -1) {
           setDropdownItemSelected(tags.indexOf(solutionKey));
-        } 
+        }
       }
       handleDropdownCLickOutside();
       handleDropdownCLickOutside1();
