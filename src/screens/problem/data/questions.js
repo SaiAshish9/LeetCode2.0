@@ -26691,7 +26691,7 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <p>
-        A binary tree’s <strong>depth8* is the number of **nodes</strong> along
+        A binary tree’s <strong>depth is the number of nodes</strong> along
         the <strong>longest path</strong> from the root node down to the
         farthest leaf node.
       </p>
