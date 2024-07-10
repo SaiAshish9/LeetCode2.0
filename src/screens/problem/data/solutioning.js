@@ -25016,6 +25016,65 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  768: (
+    <ul>
+      <li>
+        <b>Define the Function:</b>
+        <ul>
+          <li>
+            Create a stack to help determine the maximum number of chunks.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Iterate through the Array:</b>
+        <ul>
+          <li>
+            Use a loop to iterate through the elements of the array{" "}
+            <code>arr</code>.
+          </li>
+          <li>
+            Initialize a variable <code>max</code> with the current element{" "}
+            <code>arr[i]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Maintain a Monotonic Stack:</b>
+        <ul>
+          <li>
+            While the stack is not empty and the top element of the stack is
+            greater than the current element <code>arr[i]</code>, keep popping
+            elements from the stack and update <code>max</code> with the maximum
+            value.
+          </li>
+          <li>
+            This ensures that the stack is maintained in a way that elements are
+            in non-decreasing order, and each chunk can be sorted independently.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Push the Maximum Value onto the Stack:</b>
+        <ul>
+          <li>
+            Push the <code>max</code> value onto the stack.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Return the Result:</b>
+        <ul>
+          <li>
+            The size of the stack represents the maximum number of chunks that
+            the array can be divided into such that each chunk can be sorted
+            independently to form a sorted array.
+          </li>
+          <li>Return the size of the stack as the result.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
