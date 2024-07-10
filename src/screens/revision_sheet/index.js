@@ -24,20 +24,8 @@ const RevisionSheet = () => {
 
   async function fetchData() {
     try {
-      const tempData = (
-        await axios.get(BASE_URL + "revision.json", {
-          headers: {
-            "Cache-Control": "no-cache",
-          },
-        })
-      ).data;
-      const res = (
-        await axios.get(BASE_URL + "q_info.json", {
-          headers: {
-            "Cache-Control": "no-cache",
-          },
-        })
-      ).data;
+      const tempData = (await axios.get(BASE_URL + "revision.json", {})).data;
+      const res = (await axios.get(BASE_URL + "q_info.json", {})).data;
 
       if (res && tempData) {
         const temp = Object.assign({}, tempData);

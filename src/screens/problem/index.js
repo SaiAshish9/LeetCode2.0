@@ -106,18 +106,13 @@ const Problem = () => {
     try {
       const qInfoData = (
         await axios.get(BASE_URL + "q_info.json", {
-          headers: {
-            "Cache-Control": "no-cache",
-          },
+          // headers: {
+          //   "Cache-Control": "no-cache",
+          // },
         })
       ).data;
-      const solutionsData = (
-        await axios.get(BASE_URL + "solutions.json", {
-          headers: {
-            "Cache-Control": "no-cache",
-          },
-        })
-      ).data;
+      const solutionsData = (await axios.get(BASE_URL + "solutions.json", {}))
+        .data;
       const Q = decodeURIComponent(
         location?.pathname?.split("/problems/")?.[1]
       );
