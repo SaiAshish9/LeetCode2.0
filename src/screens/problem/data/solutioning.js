@@ -25719,6 +25719,77 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  2454: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>ans</code> array is initialized with <code>-1</code>,
+            indicating that initially, there's no second greater element found.
+          </li>
+          <li>
+            Two <code>Deque</code> (double-ended queue) structures are used:
+            <ul>
+              <li>
+                <code>prevStack</code>: Stores indices where the first greater
+                element has been found.
+              </li>
+              <li>
+                <code>currStack</code>: Maintains indices in a decreasing order
+                of elements, helping identify potential first greater elements.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iteration through Array:</strong>
+        <ul>
+          <li>
+            Iterate through each element <code>nums[i]</code> in the array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Handling <code>prevStack</code>:
+        </strong>
+        <ul>
+          <li>
+            If <code>nums[i]</code> is greater than elements represented by
+            indices in <code>prevStack</code>, update <code>ans</code> at those
+            indices and remove them from <code>prevStack</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Using <code>currStack</code>:
+        </strong>
+        <ul>
+          <li>
+            Use <code>currStack</code> to identify indices where elements are
+            smaller than <code>nums[i]</code>, potentially updating{" "}
+            <code>prevStack</code> for future iterations.
+          </li>
+          <li>
+            Push <code>i</code> onto <code>currStack</code> after processing it.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>
+            After iterating through all elements, <code>ans</code> contains the
+            second greater element (if found) for each element in{" "}
+            <code>nums</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
