@@ -25660,6 +25660,65 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  2454: (
+    <ul>
+      <li>
+        <strong>
+          Main Method <code>subArrayRanges(nums)</code>:
+        </strong>
+        <ul>
+          <li>
+            Computes the difference between the sum of subarray ranges that are
+            strictly increasing (<code>&lt;</code>) and strictly decreasing (
+            <code>&gt;</code>).
+          </li>
+          <li>
+            Calls <code>subarraySum(nums, '&lt;')</code> and{" "}
+            <code>subarraySum(nums, '&gt;')</code> to get these sums.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Helper Method <code>subarraySum(A, op)</code>:
+        </strong>
+        <ul>
+          <li>
+            Calculates the sum of subarray ranges based on the operation (
+            <code>&lt;</code> or <code>&gt;</code>).
+          </li>
+          <li>
+            Uses two arrays (<code>prev</code> and <code>next</code>) to store
+            boundaries of strictly increasing or decreasing sequences.
+          </li>
+          <li>
+            Uses a stack to efficiently track indices where the condition (
+            <code>&lt;</code> or <code>&gt;</code>) is satisfied.
+          </li>
+          <li>
+            Computes contributions of each element to subarray ranges and
+            accumulates them.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Helper Method <code>func(op, a, b)</code>:
+        </strong>
+        <ul>
+          <li>
+            Evaluates the condition (<code>&lt;</code> or <code>&gt;</code>)
+            between two integers <code>a</code> and <code>b</code>.
+          </li>
+          <li>
+            Returns <code>true</code> if the condition is satisfied, based on
+            the operation (<code>&lt;</code> for strictly increasing,{" "}
+            <code>&gt;</code> for strictly decreasing).
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
