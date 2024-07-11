@@ -30424,24 +30424,16 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">nums = [1,4,3,3,2]</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">nums = [1,4,3,3,2]</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">6</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">6</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
         <br />
-        <p>
-          There are 6 subarrays which have the first and the last elements equal
-          to the largest element of the subarray:
-        </p>
+        There are 6 subarrays which have the first and the last elements equal
+        to the largest element of the subarray:
         <br />
         <ul>
           <li>
@@ -30523,34 +30515,24 @@ for (int i = 0; i &lt; actualLength; i++) {
           </li>
         </ul>
         <p>Hence, we return 6.</p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong> <span class="example-io">nums = [3,3,3]</span>
-        </p>
+      <pre class="example-block">
+        <strong>Input:</strong> <span class="example-io">nums = [3,3,3]</span>
         <br />
-
-        <p>
-          <strong>Output:</strong> <span class="example-io">6</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">6</span>
         <br />
-
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
         <br />
-
         <p>
           There are 6 subarrays which have the first and the last elements equal
           to the largest element of the subarray:
         </p>
         <br />
-
         <ul>
           <li>
             subarray{" "}
@@ -30630,30 +30612,20 @@ for (int i = 0; i &lt; actualLength; i++) {
             element is also 3.
           </li>
         </ul>
-
         <p>Hence, we return 6.</p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong> <span class="example-io">nums = [1]</span>
-        </p>
+      <pre class="example-block">
+        <strong>Input:</strong> <span class="example-io">nums = [1]</span>
         <br />
-
-        <p>
-          <strong>Output:</strong> <span class="example-io">1</span>
-        </p>
+        <strong>Output:</strong> <span class="example-io">1</span>
         <br />
-
-        <p>
-          <strong>Explanation:</strong>
-        </p>
+        <strong>Explanation:</strong>
         <br />
-
         <p>
           There is a single subarray of <code>nums</code> which is{" "}
           <code>
@@ -30668,7 +30640,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         </p>
         <br />
         <p>Hence, we return 1.</p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
