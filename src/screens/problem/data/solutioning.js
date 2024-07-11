@@ -25619,6 +25619,47 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1944: (
+    <ul>
+      <li>
+        <strong>Monotonic Stack Approach:</strong>
+        <ul>
+          <li>Use a stack to keep track of indices of people in the queue.</li>
+          <li>The stack helps in determining visible people efficiently.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterating through the Queue:</strong>
+        <ul>
+          <li>
+            Traverse the <code>heights</code> array from left to right.
+          </li>
+          <li>
+            For each person, maintain the stack such that it only contains
+            indices of people who are taller than the current person.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Counting Visible People:</strong>
+        <ul>
+          <li>
+            For each person, count how many people in front of them (from the
+            stack) are visible (i.e., taller than all previous people in the
+            stack).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            Handle cases where the array is empty or contains only one person.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
