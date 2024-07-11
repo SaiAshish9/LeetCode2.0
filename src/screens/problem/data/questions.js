@@ -29406,13 +29406,14 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre>
-        <strong>Input</strong>
+        <strong>Input</strong> <br />
         ["StockSpanner", "next", "next", "next", "next", "next", "next", "next"]{" "}
+        <br />
         <br />
         [[], [100], [80], [60], [70], [60], [75], [85]] <br />
         <strong>Output</strong> <br />
-        [null, 1, 1, 1, 2, 1, 4, 6]
-        <strong>Explanation</strong>
+        [null, 1, 1, 1, 2, 1, 4, 6] <br />
+        <strong>Explanation</strong> <br />
         StockSpanner stockSpanner = new StockSpanner(); <br />
         stockSpanner.next(100); // return 1 <br />
         stockSpanner.next(80); // return 1 <br />
