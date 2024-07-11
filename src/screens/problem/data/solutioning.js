@@ -25236,6 +25236,40 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1019: (
+    <ul>
+      <li>
+        <strong>ListNode Definition:</strong>
+        <ul>
+          <li>
+            Defines the structure of a singly-linked list node with different
+            constructors to initialize nodes.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>nextLargerNodes Method:</strong>
+        <ul>
+          <li>
+            Converts the linked list into an ArrayList of integers (
+            <code>nums</code>).
+          </li>
+          <li>
+            Uses a stack to track indices of elements and find the next larger
+            element for each node in <code>nums</code>.
+          </li>
+          <li>
+            Iterates through <code>nums</code> from right to left, updating the{" "}
+            <code>ans</code> array accordingly.
+          </li>
+          <li>
+            Returns the <code>ans</code> array containing the next larger
+            elements for each node in the linked list.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
