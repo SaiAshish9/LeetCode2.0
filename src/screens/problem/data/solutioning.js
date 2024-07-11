@@ -25790,6 +25790,75 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  3113: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a <code>Deque</code> named <code>stack</code> to maintain
+            pairs of integers. Each pair consists of the current number and the
+            count of subarrays ending at that number.
+          </li>
+          <li>
+            Initialize <code>ans</code> to <code>0</code>, which will store the
+            total number of valid subarrays.
+          </li>
+          <li>
+            Initialize <code>top</code> to <code>-1</code> (unused).
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Iteration through <code>nums</code>:
+        </strong>
+        <ul>
+          <li>
+            For each number <code>num</code> in <code>nums</code>:
+          </li>
+          <li>
+            <strong>Stack Management:</strong>
+            <ul>
+              <li>
+                While the <code>stack</code> is not empty and the top element's
+                number (first element in pair) is less than <code>num</code>,
+                pop elements from the <code>stack</code>. This ensures that the{" "}
+                <code>stack</code> maintains only numbers that are greater than
+                or equal to <code>num</code>.
+              </li>
+              <li>
+                If the <code>stack</code> is empty or the top element's number
+                is not equal to <code>num</code>, push a new pair{" "}
+                <code>[num, 0]</code> onto the <code>stack</code>. The second
+                element of the pair represents the count of subarrays ending at{" "}
+                <code>num</code>, initialized to <code>0</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Update Count:</strong>
+            <ul>
+              <li>
+                Increment the count of subarrays ending at <code>num</code> by
+                one and add this count to <code>ans</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>
+            After iterating through all elements in <code>nums</code>,{" "}
+            <code>ans</code> contains the total number of subarrays where each
+            subarray has an odd number of elements.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
