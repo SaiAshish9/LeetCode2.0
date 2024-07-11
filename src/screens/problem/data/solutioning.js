@@ -25126,6 +25126,54 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  901: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a stack to keep track of the prices and their spans.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate the Span:</strong>
+        <ul>
+          <li>
+            The method <code>next(int price)</code> computes the span for the
+            given <code>price</code>.
+          </li>
+          <li>
+            Start with an initial <code>span</code> of 1 (the current day
+            itself).
+          </li>
+          <li>
+            Use a <code>while</code> loop to pop elements from the stack as long
+            as the current <code>price</code> is greater than or equal to the
+            price at the top of the stack.
+          </li>
+          <li>
+            For each popped element, add its span to the current{" "}
+            <code>span</code>.
+          </li>
+          <li>
+            After computing the span, push the current <code>price</code> and
+            its span as a pair onto the stack.
+          </li>
+          <li>Finally, return the computed span.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Example Usage:</strong>
+        <ul>
+          <li>
+            Use the <code>StockSpanner</code> object to get the span for each
+            price in the series.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
