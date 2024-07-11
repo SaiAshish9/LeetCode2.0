@@ -29596,7 +29596,7 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <p>
         Return an array of integers&nbsp;<code>answer</code>, where{" "}
-        <code>answer[i] = next_larger(node_{i + 1})</code>.
+        <code>{`answer[i] = next_larger(node_{i + 1})`}</code>.
       </p>
 
       <p>
