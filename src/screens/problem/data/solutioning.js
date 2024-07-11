@@ -25270,6 +25270,58 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1130: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> to 0 to accumulate the total minimum
+            cost.
+          </li>
+          <li>
+            Initialize a stack (<code>Deque&lt;Integer&gt; stack</code>) with{" "}
+            <code>Integer.MAX_VALUE</code> to maintain leaf values.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Processing Each Leaf Value:</strong>
+        <ul>
+          <li>
+            Iterate through each leaf value <code>a</code> in the array{" "}
+            <code>arr</code>.
+          </li>
+          <li>
+            While the top of the stack is less than or equal to <code>a</code>,
+            pop elements from the stack and calculate the cost of merging using{" "}
+            <code>Math.min(stack.peek(), a) * mid</code>.
+          </li>
+          <li>
+            Push <code>a</code> onto the stack after processing.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Final Merging:</strong>
+        <ul>
+          <li>
+            After processing all leaf values, pop remaining elements from the
+            stack and calculate their merging costs.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code>, which represents the total minimum cost to
+            construct the binary tree from leaf values.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
