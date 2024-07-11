@@ -26024,6 +26024,64 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  20: (
+    <ul>
+      <li>
+        <strong>Stack Initialization:</strong>
+        <ul>
+          <li>
+            A <code>Deque&lt;Character&gt;</code> stack is initialized to keep
+            track of the opening parentheses.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterating through the string:</strong>
+        <ul>
+          <li>
+            For each character in the string <code>s</code>:
+            <ul>
+              <li>
+                If the character is an opening parenthesis <code>(</code>,{" "}
+                <code>{`{`}</code>, or <code>{`[`}</code>, push it onto the
+                stack.
+              </li>
+              <li>
+                If the character is a closing parenthesis <code>)</code>,{" "}
+                <code>{`}`}</code>, or <code>{`]`}</code>:
+                <ul>
+                  <li>
+                    Check if the stack is empty. If it is, return{" "}
+                    <code>false</code> since there's no matching opening
+                    parenthesis.
+                  </li>
+                  <li>
+                    Pop the top character from the stack and check if it matches
+                    the current closing parenthesis using the{" "}
+                    <code>isMatchingPair</code> method.
+                  </li>
+                  <li>
+                    If it doesn't match, return <code>false</code>.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Final Check:</strong>
+        <ul>
+          <li>
+            After iterating through the string, return{" "}
+            <code>stack.isEmpty()</code>. If the stack is empty, all opening
+            parentheses had matching closing parentheses, and the string is
+            valid.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
