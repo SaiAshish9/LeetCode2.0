@@ -25447,6 +25447,80 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1793: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> to store the maximum score found.
+          </li>
+          <li>
+            Use a stack <code>stack</code> to maintain indices of elements in
+            increasing order of their values.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterating through the Array:</strong>
+        <ul>
+          <li>
+            Iterate through <code>nums</code> and consider{" "}
+            <code>i = nums.length</code> as a boundary condition.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Maintaining a Monotonic Stack:</strong>
+        <ul>
+          <li>
+            Use the stack to ensure that we can efficiently calculate the score
+            of potential "good" subarrays.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculating Scores:</strong>
+        <ul>
+          <li>
+            For each element <code>nums[i]</code>:
+          </li>
+          <li>
+            While the stack is not empty and{" "}
+            <code>nums[stack.peek()] &gt; nums[i]</code>:
+          </li>
+          <li>Pop elements from the stack to calculate potential scores.</li>
+          <li>
+            Compute <code>h</code> as <code>nums[stack.pop()]</code> and{" "}
+            <code>w</code> as <code>i - stack.peek() - 1</code>. If the stack is
+            empty, <code>w</code> is <code>i</code>.
+          </li>
+          <li>
+            Check if the computed subarray (from <code>stack.peek() + 1</code>{" "}
+            to <code>i-1</code>) is centered around <code>k</code>. Update{" "}
+            <code>ans</code> with the maximum score found.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Push Current Index:</strong>
+        <ul>
+          <li>
+            Push the current index <code>i</code> onto the stack.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code>, which contains the maximum score of any
+            "good" subarray found.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
