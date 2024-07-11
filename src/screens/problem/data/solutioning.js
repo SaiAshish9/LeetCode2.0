@@ -25952,6 +25952,78 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  2390: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            A stack <code>Deque&lt;Integer&gt; stack</code> is initialized to
+            keep track of the indices of characters in the string <code>s</code>
+            .
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Processing:</strong>
+        <ul>
+          <li>
+            Iterate through each character in the string <code>s</code> using a{" "}
+            <code>for</code> loop.
+          </li>
+          <li>
+            If the character is a star (<code>*</code>):
+            <ul>
+              <li>Check if the stack is not empty.</li>
+              <li>
+                If the stack is not empty, pop the top of the stack, which
+                removes the closest left non-star character and the current star
+                itself.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the character is not a star:
+            <ul>
+              <li>Push its index onto the stack.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Building the Result:</strong>
+        <ul>
+          <li>
+            Initialize a <code>StringBuilder</code> to construct the result
+            string.
+          </li>
+          <li>
+            While the stack is not empty:
+            <ul>
+              <li>
+                Pop indices from the stack and append the corresponding
+                characters from the string <code>s</code> to the{" "}
+                <code>StringBuilder</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Reverse the <code>StringBuilder</code> to maintain the correct order
+            of characters in the final result string.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return the final result string by converting the{" "}
+            <code>StringBuilder</code> to a string.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
