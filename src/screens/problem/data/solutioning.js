@@ -25859,6 +25859,99 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  2865: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize variables and data structures:
+            <ul>
+              <li>
+                <code>n</code>: Length of the <code>heights</code> array.
+              </li>
+              <li>
+                <code>maxSum</code>: Array to store maximum sums of heights.
+              </li>
+              <li>
+                <code>stack</code>: A <code>Deque</code> initialized with{" "}
+                <code>-1</code> to manage indices of heights.
+              </li>
+              <li>
+                <code>sum</code>: Variable to store the cumulative sum of
+                heights during processing.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Left-to-Right Processing:</strong>
+        <ul>
+          <li>
+            Iterate through each element in the <code>heights</code> array from
+            left to right:
+          </li>
+          <li>
+            Call the <code>process</code> method to update the{" "}
+            <code>stack</code> and <code>sum</code>.
+          </li>
+          <li>
+            Store the current <code>sum</code> in <code>maxSum[i]</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Right-to-Left Processing:</strong>
+        <ul>
+          <li>
+            Reset the <code>stack</code> and <code>sum</code> for processing
+            from right to left:
+          </li>
+          <li>
+            Iterate through each element in the <code>heights</code> array from
+            right to left:
+          </li>
+          <li>
+            Call the <code>process</code> method again to update the{" "}
+            <code>stack</code> and <code>sum</code>.
+          </li>
+          <li>
+            Update <code>maxSum[i]</code> to include the sum from both
+            left-to-right and right-to-left processing.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>
+            Find and return the maximum value in the <code>maxSum</code> array
+            using <code>Arrays.stream(maxSum).max().getAsLong()</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          <code>process</code> Method:
+        </strong>
+        <ul>
+          <li>
+            Updates the <code>stack</code> by removing indices where the heights
+            are greater than the current height.
+          </li>
+          <li>
+            Adjusts the <code>sum</code> by calculating the contribution of each
+            valid tower height segment to the total sum.
+          </li>
+          <li>
+            Pushes the current index onto the <code>stack</code> and returns the
+            updated <code>sum</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
