@@ -30661,6 +30661,92 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  2865: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an array <code>heights</code> of <code>n</code> integers
+        representing the number of bricks in <code>n</code> consecutive towers.
+        Your task is to remove some bricks to form a{" "}
+        <strong>mountain-shaped</strong> tower arrangement. In this arrangement,
+        the tower heights are non-decreasing, reaching a maximum peak value with
+        one or multiple consecutive towers and then non-increasing.
+      </p>
+
+      <p>
+        Return the <strong>maximum possible sum</strong> of heights of a
+        mountain-shaped tower arrangement.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">heights = [5,3,4,1,1]</span>
+        <br />
+        <strong>Output:</strong> <span class="example-io">13</span>
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        We remove some bricks to make <code>heights =&nbsp;[5,3,3,1,1]</code>,
+        the peak is at index 0.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">heights = [6,5,3,9,2,7]</span>
+        <br />
+        <strong>Output:</strong> <span class="example-io">22</span>
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        <p>
+          We remove some bricks to make{" "}
+          <code>heights =&nbsp;[3,3,3,9,2,2]</code>, the peak is at index 3.
+        </p>
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">heights = [3,2,5,5,2,3]</span>
+        <br />
+        <strong>Output:</strong> <span class="example-io">18</span>
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        We remove some bricks to make <code>heights = [2,2,5,5,2,2]</code>, the
+        peak is at index 2 or 3.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= n == heights &lt;= 10<sup>3</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= heights[i] &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
