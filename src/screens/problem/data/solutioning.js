@@ -25174,6 +25174,68 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  907: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Define <code>MOD</code> to handle large numbers.
+          </li>
+          <li>
+            Initialize the length of the array <code>n</code>, a stack, and two
+            arrays <code>prevLess</code> and <code>nextLess</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Fill <code>prevLess</code> array:
+        </strong>
+        <ul>
+          <li>
+            Iterate through the array and use the stack to find the index of the
+            previous less element for each element.
+          </li>
+          <li>If there is no such element, use -1.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Fill <code>nextLess</code> array:
+        </strong>
+        <ul>
+          <li>
+            Iterate through the array from the end and use the stack to find the
+            index of the next less element for each element.
+          </li>
+          <li>
+            If there is no such element, use <code>n</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate the result:</strong>
+        <ul>
+          <li>
+            For each element, calculate the number of subarrays where the
+            element is the minimum by using <code>leftCount</code> and{" "}
+            <code>rightCount</code>.
+          </li>
+          <li>
+            <code>leftCount</code> is the distance to the previous less element.
+          </li>
+          <li>
+            <code>rightCount</code> is the distance to the next less element.
+          </li>
+          <li>
+            Add the contribution of each element to the result, taking modulo{" "}
+            <code>MOD</code> to prevent overflow.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
