@@ -25392,6 +25392,61 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1574: (
+    <ul>
+      <li>
+        <strong>Identifying Unsorted Subarrays:</strong>
+        <ul>
+          <li>
+            Traverse the array from both ends to find:
+            <ul>
+              <li>
+                <code>left</code>: Longest non-decreasing prefix from the
+                beginning.
+              </li>
+              <li>
+                <code>right</code>: Longest non-decreasing suffix from the end.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculating Minimum Removal Length:</strong>
+        <ul>
+          <li>
+            Determine potential lengths of subarrays to remove:
+            <ul>
+              <li>
+                <code>n - left - 1</code>: Remove from the end of the prefix.
+              </li>
+              <li>
+                <code>right</code>: Remove from the beginning of the suffix.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Handling Overlap:</strong>
+        <ul>
+          <li>
+            Check for any overlap between the prefix and suffix to find the
+            minimum subarray length requiring removal.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Edge Cases:</strong>
+        <ul>
+          <li>
+            If the entire array is already sorted (<code>left == n - 1</code>),
+            return <code>0</code> since no removal is needed.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
