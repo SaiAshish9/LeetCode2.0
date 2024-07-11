@@ -25075,6 +25075,57 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  769: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            <code>maxChunks</code>: This variable keeps track of the number of
+            chunks that can be made.
+          </li>
+          <li>
+            <code>maxElement</code>: This variable keeps track of the maximum
+            element encountered so far while iterating through the array.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate through the array:</strong>
+        <ul>
+          <li>
+            For each element <code>arr[i]</code>, update <code>maxElement</code>{" "}
+            to be the maximum of <code>maxElement</code> and <code>arr[i]</code>
+            .
+          </li>
+          <li>
+            If <code>maxElement</code> is equal to the current index{" "}
+            <code>i</code>, it indicates that all elements from the start of the
+            array to the current index <code>i</code> can form a chunk that,
+            when sorted individually, will be in the correct position.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Count the chunks:</strong>
+        <ul>
+          <li>
+            Increment <code>maxChunks</code> whenever <code>maxElement</code> is
+            equal to the current index <code>i</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Output the result:</strong>
+        <ul>
+          <li>
+            The total count of <code>maxChunks</code> at the end of the
+            iteration is the desired result.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
