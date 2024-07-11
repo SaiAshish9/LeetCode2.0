@@ -25322,6 +25322,76 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1504: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize variables including <code>m</code>, <code>n</code>,{" "}
+            <code>ans</code>, and <code>hist</code> array to track vertical
+            heights of consecutive <code>1</code>s.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Matrix Iteration:</strong>
+        <ul>
+          <li>
+            Iterate through each row of the matrix <code>mat</code>.
+          </li>
+          <li>
+            Update the <code>hist</code> array to maintain the current histogram
+            of heights for consecutive <code>1</code>s in the current row.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Counting Submatrices Function (<code>count</code>):
+        </strong>
+        <ul>
+          <li>
+            Process each column of the <code>hist</code> array to calculate the
+            number of submatrices ending at each column where all elements are{" "}
+            <code>1</code>.
+          </li>
+          <li>
+            Use a stack to track indices in increasing order of histogram
+            heights.
+          </li>
+          <li>
+            Calculate contributions from previous columns stored in the stack to
+            determine the number of submatrices ending at each column index{" "}
+            <code>i</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Stack-based Calculation:</strong>
+        <ul>
+          <li>
+            Use a stack to maintain indices in increasing order of histogram
+            heights.
+          </li>
+          <li>
+            Calculate the number of submatrices ending at each column index{" "}
+            <code>i</code> using contributions from previous columns stored in
+            the stack.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Summing Up Results:</strong>
+        <ul>
+          <li>
+            Sum up the total number of submatrices calculated for each column to
+            get the final result.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
