@@ -25521,6 +25521,104 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1856: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize <code>ans</code> to <code>0</code> to store the maximum
+            score found.
+          </li>
+          <li>
+            Use a <code>Deque{`<Integer>`} stack</code> to maintain indices of
+            elements in <code>nums</code> in a monotonic increasing order.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>
+          Iterate through <code>nums</code>:
+        </strong>
+        <ul>
+          <li>
+            Iterate through <code>nums</code>, including an extra iteration (
+            <code>i = nums.length</code>), to handle boundary conditions
+            effectively.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Monotonic Stack Usage:</strong>
+        <ul>
+          <li>
+            The stack helps in identifying potential "good" subarrays
+            efficiently:
+          </li>
+          <li>
+            Elements are pushed onto the stack while maintaining a
+            non-decreasing order.
+          </li>
+          <li>
+            When encountering an element <code>nums[i]</code> that breaks the
+            order (i.e., <code>nums[stack.peek()] &gt; nums[i]</code>),
+            calculate the score for potential subarrays ending at <code>i</code>
+            .
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calculate Scores:</strong>
+        <ul>
+          <li>
+            For each element <code>nums[i]</code>:
+          </li>
+          <li>
+            While the stack is not empty and{" "}
+            <code>nums[stack.peek()] &gt; nums[i]</code>:
+          </li>
+          <li>Pop elements from the stack:</li>
+          <li>
+            Calculate the height <code>h</code> as the popped element (
+            <code>nums[stack.pop()]</code>).
+          </li>
+          <li>
+            Calculate the width <code>w</code> as{" "}
+            <code>i - stack.peek() - 1</code>. If the stack is empty, set{" "}
+            <code>w</code> to <code>i</code> since it means <code>i</code> is
+            the smallest element so far.
+          </li>
+          <li>
+            Check if the computed subarray (from <code>stack.peek() + 1</code>{" "}
+            to <code>i-1</code>) is centered around <code>k</code> (i.e.,{" "}
+            <code>stack.peek() + 1 &lt;= k</code> and <code>i - 1 &gt;= k</code>
+            ).
+          </li>
+          <li>
+            Update <code>ans</code> with the maximum score found using{" "}
+            <code>Math.max(ans, h * w)</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Push Current Index:</strong>
+        <ul>
+          <li>
+            Push the current index <code>i</code> onto the stack.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return Result:</strong>
+        <ul>
+          <li>
+            Return <code>ans</code>, which contains the maximum score of any
+            "good" subarray found.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
