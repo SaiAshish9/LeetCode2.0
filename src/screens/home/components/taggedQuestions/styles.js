@@ -6,6 +6,16 @@ export const CardTitleContainer = styled.div`
   justify-content: space-between;
 `;
 
+export const InputContainer = styled.div`
+  background-color: #ffffff1a;
+  outline: 2px solid #0000;
+  outline-offset: 2px;
+  padding-right: 0.75rem;
+  padding-left: 2.25rem;
+  padding-bottom: 0.375rem;
+  padding-top: 0.375rem;
+`;
+
 export const CardTitle = styled.p`
   font-size: 0.825rem;
   line-height: 1.25rem;
