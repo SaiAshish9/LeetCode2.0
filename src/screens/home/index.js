@@ -48,6 +48,7 @@ const HomeScreen = () => {
         <TopRightContainer>
           <SessionCard />
           <Calendar />
+          <Calendar />
         </TopRightContainer>
       </Content>
       <Fab />

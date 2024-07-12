@@ -6,6 +6,7 @@ import DropdownCont from "./dropdownCont";
 import Table from "./table";
 import Calendar from "./calendar";
 import Fab from "./fab";
+import TaggedQuestions from "./taggesQuestions";
 
 export {
   Banner,
@@ -16,4 +17,5 @@ export {
   Table,
   Calendar,
   Fab,
+  TaggedQuestions,
 };
