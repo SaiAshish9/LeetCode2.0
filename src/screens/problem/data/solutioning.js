@@ -26723,6 +26723,64 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  895: (
+    <ul>
+      <li>
+        <strong>push(int val):</strong>
+        <ul>
+          <li>
+            Adds the integer <code>val</code> to the stack.
+          </li>
+          <li>
+            Updates its frequency count in the <code>count</code> map using{" "}
+            <code>count.merge(val, 1, Integer::sum)</code>.
+          </li>
+          <li>
+            Adds <code>val</code> to the corresponding frequency stack in{" "}
+            <code>countToStack</code>.
+          </li>
+          <li>
+            Updates <code>maxFreq</code> to keep track of the maximum frequency
+            encountered.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>pop():</strong>
+        <ul>
+          <li>Removes and returns the most frequently pushed integer.</li>
+          <li>
+            Retrieves the integer from the stack associated with the maximum
+            frequency (<code>maxFreq</code>) from <code>countToStack</code>.
+          </li>
+          <li>
+            Decreases its frequency count in the <code>count</code> map using{" "}
+            <code>count.merge(val, -1, Integer::sum)</code>.
+          </li>
+          <li>
+            If the stack associated with <code>maxFreq</code> becomes empty,
+            decrements <code>maxFreq</code>.
+          </li>
+          <li>Returns the popped integer.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Private Fields:</strong>
+        <ul>
+          <li>
+            <code>maxFreq</code>: Tracks the highest frequency encountered.
+          </li>
+          <li>
+            <code>count</code>: Maps each integer to its frequency count.
+          </li>
+          <li>
+            <code>countToStack</code>: Maps each frequency to a stack containing
+            integers with that frequency.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
