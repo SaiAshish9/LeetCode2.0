@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ArrowContainers,
   ArrowLeftBackgroundContainer,
@@ -24,6 +24,8 @@ import ArrowRightSvg from "../../../../assets/arrowRight.svg";
 // ]
 
 const TaggedQuestions = () => {
+  const [value, setValue] = useState("");
+
   return (
     <Card>
       <CardTitleContainer>
@@ -39,7 +41,15 @@ const TaggedQuestions = () => {
       </CardTitleContainer>
       <InputContainer>
         <img src={SearchSVG} alt="" />
-        <input placeholder="Search for a company..." />
+        <input
+          value={value}
+          setValue={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setValue(e.target.value);
+          }}
+          placeholder="Search for a company..."
+        />
       </InputContainer>
       <TagsContainer>
         {COMPANIES.slice(0, 20).map((item, _) => (
