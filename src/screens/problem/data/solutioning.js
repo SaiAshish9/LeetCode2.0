@@ -26956,7 +26956,7 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
-  1249: (
+  1209: (
     <ul>
       <li>
         <strong>Initialization:</strong>
@@ -27011,6 +27011,65 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
           <li>
             Reverse the string (since characters are added in reverse order
             during popping from the stack) and convert it to a string.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
+  1249: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Use a <code>Stack</code> to track indices of unmatched parentheses.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate through the String:</strong>
+        <ul>
+          <li>
+            For each character in the string:
+            <ul>
+              <li>
+                If the character is '(':
+                <ul>
+                  <li>Push its index onto the stack.</li>
+                </ul>
+              </li>
+              <li>
+                If the character is ')':
+                <ul>
+                  <li>
+                    If the stack is not empty and the top of the stack is '{"("}
+                    ': Pop the stack (matching pair).
+                  </li>
+                  <li>
+                    If the stack is empty or the top of the stack is not '(':
+                    Mark the ')' for removal by setting it to a special marker.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Final Marking:</strong>
+        <ul>
+          <li>
+            Mark remaining '{"("}' indices in stack for removal with the special
+            marker.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Construct the Result:</strong>
+        <ul>
+          <li>
+            Construct the resultant string excluding characters marked with the
+            special marker.
           </li>
         </ul>
       </li>
