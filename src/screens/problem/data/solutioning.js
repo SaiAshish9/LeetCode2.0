@@ -26553,6 +26553,54 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  590: (
+    <ul>
+      <li>
+        <code>postorder(Node root)</code> Method:
+        <ul>
+          <li>
+            This method performs a postorder traversal of the N-ary tree using
+            an iterative approach with a stack.
+          </li>
+          <li>
+            It initializes an empty list <code>result</code> to store traversal
+            results.
+          </li>
+          <li>
+            If the <code>root</code> is <code>null</code>, it returns an empty{" "}
+            <code>result</code>.
+          </li>
+          <li>
+            It uses a <code>Stack</code> to manage nodes to be processed:
+            <ul>
+              <li>
+                Push the <code>root</code> node onto the stack.
+              </li>
+              <li>
+                While the stack is not empty:
+                <ul>
+                  <li>
+                    Pop a node from the stack (<code>node</code>).
+                  </li>
+                  <li>
+                    Add <code>node.val</code> to the beginning of{" "}
+                    <code>result</code> (reverse order of preorder).
+                  </li>
+                  <li>
+                    Push each child of <code>node</code> onto the stack.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Return <code>result</code> containing all node values in postorder
+            traversal order.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
