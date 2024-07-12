@@ -26660,6 +26660,69 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  735: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a <code>Stack{`<Integer>`} stack</code> to simulate
+            asteroids moving from left to right.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate Through Asteroids:</strong>
+        <ul>
+          <li>
+            Loop through each asteroid in the <code>asteroids</code> array.
+          </li>
+          <li>
+            If the asteroid is moving to the right (positive value), push it
+            onto the stack.
+          </li>
+          <li>
+            If the asteroid is moving to the left (negative value):
+            <ul>
+              <li>
+                Check collisions with asteroids already on the stack:
+                <ul>
+                  <li>
+                    If the top of the stack is also moving to the left (
+                    <code>stack.peek() &lt; 0</code>), push the current asteroid
+                    onto the stack.
+                  </li>
+                  <li>
+                    If the top of the stack is moving to the right and can
+                    destroy the current asteroid, pop the stack.
+                  </li>
+                  <li>
+                    If the top of the stack equals the absolute value of the
+                    current asteroid, pop the stack (both asteroids destroy each
+                    other).
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Construct Result:</strong>
+        <ul>
+          <li>
+            Convert the remaining asteroids on the stack into an array{" "}
+            <code>ans</code>.
+          </li>
+          <li>
+            Since the order in the array <code>ans</code> should be in the
+            reverse order of the stack, iterate through the stack from top to
+            bottom to fill <code>ans</code> accordingly.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
