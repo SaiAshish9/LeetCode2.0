@@ -26601,6 +26601,65 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  726: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a <code>StringBuffer sb</code> to process the formula and
+            handle atom counts.
+          </li>
+          <li>
+            Iterate through each character of the <code>formula</code>.
+          </li>
+          <li>
+            Separate atoms and their counts using spaces in <code>sb</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Stack Operations:</strong>
+        <ul>
+          <li>
+            Use a <code>Stack{`<String>`}</code> to manage atom strings and
+            counts:
+          </li>
+          <li>
+            Handle parentheses:
+            <ul>
+              <li>Push and pop from the stack to manage nested groups.</li>
+            </ul>
+          </li>
+          <li>
+            Handle multipliers (digits):
+            <ul>
+              <li>Calculate counts for atoms based on multipliers.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>TreeMap for Sorting:</strong>
+        <ul>
+          <li>
+            Use a <code>TreeMap{`<String, Integer>`}</code> to sort atoms
+            alphabetically:
+          </li>
+          <li>Aggregate counts of each atom.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Output Construction:</strong>
+        <ul>
+          <li>
+            Build the final output string with sorted atoms and their counts.
+          </li>
+          <li>Append counts only when greater than 1.</li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
