@@ -65,7 +65,7 @@ const columns = [
                 ?.split(".")?.[1]
                 ?.trim()
                 ?.toLowerCase()
-                .replaceAll(" ", "-"),
+                .replaceAll(" ", "_"),
             "_blank"
           );
         }}
