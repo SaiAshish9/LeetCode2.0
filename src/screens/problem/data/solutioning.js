@@ -26367,6 +26367,68 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  388: (
+    <ul>
+      <li>
+        Initialize a HashMap to store the length of paths at each level:
+        <ul>
+          <li>
+            <code>pathLengths</code> stores the cumulative length of the path at
+            each directory level.
+          </li>
+          <li>
+            Initialize <code>pathLengths.put(0, 0)</code> for the root
+            directory.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Initialize a variable <code>maxLength</code> to keep track of the
+        maximum path length found.
+      </li>
+      <li>
+        Split the input string by newline character <code>'\n'</code> to get
+        each part of the file system.
+      </li>
+      <li>
+        Iterate through each part:
+        <ul>
+          <li>
+            Determine the level of the part by counting the number of tab
+            characters <code>'\t'</code>.
+          </li>
+          <li>
+            Calculate the length of the current part without the tab characters.
+          </li>
+          <li>
+            If the part is a file (contains a dot <code>'.'</code>):
+            <ul>
+              <li>
+                Update <code>maxLength</code> if the length of the current path
+                is greater than the current <code>maxLength</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the part is a directory:
+            <ul>
+              <li>
+                Update the length of the path at the next level in the{" "}
+                <code>pathLengths</code> map.
+              </li>
+              <li>
+                Add 1 to account for the slash <code>'/'</code> separating
+                directories.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Return the maximum length found (<code>maxLength</code>).
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
