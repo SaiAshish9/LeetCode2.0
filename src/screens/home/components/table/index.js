@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import {
   DifficultyTag,
@@ -64,8 +65,7 @@ const columns = [
                 ?.split(".")?.[1]
                 ?.trim()
                 ?.toLowerCase()
-                .replaceAll(" ", "-") +
-              "/",
+                .replaceAll(" ", "-"),
             "_blank"
           );
         }}
