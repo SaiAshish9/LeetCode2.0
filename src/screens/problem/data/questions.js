@@ -31915,6 +31915,107 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  895: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Design a stack-like data structure to push elements to the stack and pop
+        the most frequent element from the stack.
+      </p>
+
+      <p>
+        Implement the <code>FreqStack</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>FreqStack()</code> constructs an empty frequency stack.
+        </li>
+        <li>
+          <code>void push(int val)</code> pushes an integer <code>val</code>{" "}
+          onto the top of the stack.
+        </li>
+        <li>
+          <code>int pop()</code> removes and returns the most frequent element
+          in the stack.
+          <ul>
+            <li>
+              If there is a tie for the most frequent element, the element
+              closest to the stack's top is removed and returned.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        ["FreqStack", "push", "push", "push", "push", "push", "push", "pop",
+        "pop", "pop", "pop"]
+        <br />
+        [[], [5], [7], [5], [7], [4], [5], [], [], [], []]
+        <br />
+        <strong>Output</strong>
+        <br />
+        [null, null, null, null, null, null, null, 5, 7, 5, 4]
+        <br />
+        <strong>Explanation</strong>
+        <br />
+        FreqStack freqStack = new FreqStack();
+        <br />
+        freqStack.push(5); // The stack is [5]
+        <br />
+        freqStack.push(7); // The stack is [5,7]
+        <br />
+        freqStack.push(5); // The stack is [5,7,5]
+        <br />
+        freqStack.push(7); // The stack is [5,7,5,7]
+        <br />
+        freqStack.push(4); // The stack is [5,7,5,7,4]
+        <br />
+        freqStack.push(5); // The stack is [5,7,5,7,4,5]
+        <br />
+        freqStack.pop(); // return 5, as 5 is the most frequent. The stack
+        becomes [5,7,5,7,4].
+        <br />
+        freqStack.pop(); // return 7, as 5 and 7 is the most frequent, but 7 is
+        closest to the top. The stack becomes [5,7,5,4].
+        <br />
+        freqStack.pop(); // return 5, as 5 is the most frequent. The stack
+        becomes [5,7,4].
+        <br />
+        freqStack.pop(); // return 4, as 4, 5 and 7 is the most frequent, but 4
+        is closest to the top. The stack becomes [5,7].
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            0 &lt;= val &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            2 * 10<sup>4</sup>
+          </code>{" "}
+          calls will be made to <code>push</code> and <code>pop</code>.
+        </li>
+        <li>
+          It is guaranteed that there will be at least one element in the stack
+          before calling <code>pop</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
