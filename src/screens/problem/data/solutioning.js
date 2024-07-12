@@ -26781,6 +26781,91 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1190: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a <code>StringBuilder sb</code> to construct the
+            resultant string.
+          </li>
+          <li>
+            Use a <code>Stack{`<Integer> stack`}</code> to keep track of indices
+            where opening parentheses '(' are encountered.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Traversal:</strong>
+        <ul>
+          <li>
+            Iterate through each character <code>c</code> in the string{" "}
+            <code>s</code>.
+          </li>
+          <li>
+            If <code>c</code> is '(':
+            <ul>
+              <li>
+                Push the current length of <code>sb</code> onto the stack (
+                <code>stack.push(sb.length())</code>). This marks the start of a
+                substring to potentially reverse later.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If <code>c</code> is ')':
+            <ul>
+              <li>
+                Pop the top index from the stack, which represents the start of
+                the substring to reverse (<code>int start = stack.pop()</code>).
+              </li>
+              <li>
+                Calculate the end index as the current length of <code>sb</code>{" "}
+                minus one (<code>int end = sb.length() - 1</code>).
+              </li>
+              <li>
+                Reverse the substring between <code>start</code> and{" "}
+                <code>end</code> using the <code>reverse</code> method.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If <code>c</code> is neither '(' nor ')', append it directly to{" "}
+            <code>sb</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Reverse Method:</strong>
+        <ul>
+          <li>
+            The <code>reverse</code> method takes a{" "}
+            <code>StringBuilder sb</code>, start index <code>start</code>, and
+            end index <code>end</code>.
+          </li>
+          <li>
+            It reverses the characters in <code>sb</code> between{" "}
+            <code>start</code> and <code>end</code> using a two-pointer
+            technique.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Result:</strong>
+        <ul>
+          <li>
+            After processing all characters in <code>s</code>, <code>sb</code>{" "}
+            contains the reversed substrings within parentheses.
+          </li>
+          <li>
+            Convert <code>sb</code> to a string using <code>sb.toString()</code>{" "}
+            and return it as the result of <code>reverseParentheses</code>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
