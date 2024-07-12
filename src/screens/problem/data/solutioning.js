@@ -26956,6 +26956,66 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  1249: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Use a <code>Stack</code> to store pairs of characters and their
+            consecutive counts.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterate through the String:</strong>
+        <ul>
+          <li>
+            For each character in the string:
+            <ul>
+              <li>
+                If the stack is not empty and the current character matches the
+                character at the top of the stack:
+                <ul>
+                  <li>Increment the count of consecutive occurrences.</li>
+                  <li>
+                    If the count reaches <em>k</em>, pop the pair from the stack
+                    (to remove adjacent duplicates).
+                  </li>
+                  <li>
+                    Otherwise, push a new pair with the incremented count onto
+                    the stack.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                If the current character is different or the stack is empty:
+                <ul>
+                  <li>
+                    Push a new pair with the current character and a count of 1
+                    onto the stack.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Construct the Result:</strong>
+        <ul>
+          <li>
+            After processing all characters, construct the resultant string by
+            appending characters from the stack.
+          </li>
+          <li>
+            Reverse the string (since characters are added in reverse order
+            during popping from the stack) and convert it to a string.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
