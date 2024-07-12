@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const CardTitle = styled.p`
+  font-size: 0.825rem;
+  line-height: 1.25rem;
+  color: #eff1f6bf;
+  font-weight: 500;
+`;
+
 export const Card = styled.div`
   background: rgb(40 40 40);
   width: 100%;

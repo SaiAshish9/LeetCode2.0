@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, TagConst, TagSpan, TagsContainer } from "./styles";
+import { Card, CardTitle, TagConst, TagSpan, TagsContainer } from "./styles";
 import { COMPANIES } from "../../../problem/data";
 
 // [
@@ -11,6 +11,7 @@ import { COMPANIES } from "../../../problem/data";
 const TaggedQuestions = () => {
   return (
     <Card>
+      <CardTitle>Trending Companies</CardTitle>
       <TagsContainer>
         {COMPANIES.slice(0, 20).map((item, _) => (
           <TagConst key={item.text}>
