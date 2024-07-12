@@ -26244,6 +26244,67 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  155: (
+    <ul>
+      <li>
+        Initialize two stacks:
+        <ul>
+          <li>
+            <code>stack</code> for standard stack operations.
+          </li>
+          <li>
+            <code>minStack</code> to keep track of the minimum elements.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>push(int val)</strong>:
+        <ul>
+          <li>
+            Push <code>val</code> onto the <code>stack</code>.
+          </li>
+          <li>
+            If <code>minStack</code> is empty or <code>val</code> is less than
+            or equal to the top of <code>minStack</code>, push <code>val</code>{" "}
+            onto <code>minStack</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>pop()</strong>:
+        <ul>
+          <li>
+            If the top element of <code>stack</code> is equal to the top element
+            of <code>minStack</code>, pop from both stacks.
+          </li>
+          <li>
+            Pop the top element from <code>stack</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>top()</strong>:
+        <ul>
+          <li>
+            Return the top element of <code>stack</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>getMin()</strong>:
+        <ul>
+          <li>
+            Return the top element of <code>minStack</code> (the minimum
+            element).
+          </li>
+        </ul>
+      </li>
+      <li>
+        This approach ensures that each operation (push, pop, top, getMin) is
+        performed in constant time, O(1).
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
