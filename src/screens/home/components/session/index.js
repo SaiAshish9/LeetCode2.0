@@ -38,7 +38,7 @@ import {
   AllText,
   TotalScoreText,
   SessionScoreText,
-  Divider
+  Divider,
 } from "./styles";
 import SettingsImg from "../../../../assets/settings.svg";
 import StudyPlanImg from "../../../../assets/lc_sts.svg";

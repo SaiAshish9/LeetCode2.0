@@ -15,6 +15,7 @@ import {
   Tags,
   Calendar,
   Fab,
+  TaggedQuestions,
 } from "./components";
 
 import "react-circular-progressbar/dist/styles.css";
@@ -48,7 +49,7 @@ const HomeScreen = () => {
         <TopRightContainer>
           <SessionCard />
           <Calendar />
-          <Calendar />
+          <TaggedQuestions />
         </TopRightContainer>
       </Content>
       <Fab />
