@@ -26082,6 +26082,62 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  32: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a `Deque{`<Integer>`}` stack to keep track of indices of
+            parentheses.
+          </li>
+          <li>
+            Push `-1` onto the stack to handle edge cases where the valid
+            substring starts from index `0`.
+          </li>
+          <li>
+            Initialize `maxLength` to `0` to store the maximum length of valid
+            parentheses found.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterating through the string:</strong>
+        <ul>
+          <li>
+            For each character in the string `s`:
+            <ul>
+              <li>If the character is `'('`, push its index onto the stack.</li>
+              <li>
+                If the character is `')'`:
+                <ul>
+                  <li>Pop the top of the stack.</li>
+                  <li>
+                    If the stack is empty, push the current index onto the stack
+                    to use as the base for the next valid substring.
+                  </li>
+                  <li>
+                    If the stack is not empty, calculate the length of the
+                    current valid substring using `i - stack.peek()` and update
+                    `maxLength` if this length is greater.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return the result:</strong>
+        <ul>
+          <li>
+            After iterating through the string, return `maxLength` which
+            contains the length of the longest valid parentheses substring.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
