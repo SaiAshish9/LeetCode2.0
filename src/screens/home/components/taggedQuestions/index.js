@@ -50,14 +50,14 @@ const TaggedQuestions = () => {
             const temp = e.target.value;
             setValue(temp);
             setData(
-              COMPANIES.filter((x) => x.toLowerCase().startsWith(temp) || x.toLowerCase().includes(temp))
+              COMPANIES.filter((x) => x.text.toLowerCase().includes(temp))
             );
           }}
           placeholder="Search for a company..."
         />
       </InputContainer>
       <TagsContainer>
-        {data.map((item, _) => (
+        {data.slice(0, 20).map((item, _) => (
           <TagConst key={item.text}>
             {item.text} <TagSpan>{item.count}</TagSpan>
           </TagConst>
