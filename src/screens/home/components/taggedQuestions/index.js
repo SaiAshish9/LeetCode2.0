@@ -1,5 +1,8 @@
 import React from "react";
 import {
+  ArrowContainers,
+  ArrowLeftBackgroundContainer,
+  ArrowRightBackgroundContainer,
   Card,
   CardTitle,
   CardTitleContainer,
@@ -9,6 +12,10 @@ import {
   TagsContainer,
 } from "./styles";
 import { COMPANIES } from "../../../problem/data";
+
+import SearchSVG from "../../../../assets/search.svg";
+import ArrowLeftSvg from "../../../../assets/arrowLeft.svg";
+import ArrowRightSvg from "../../../../assets/arrowRight.svg";
 
 // [
 //   ...Array(10)
@@ -21,8 +28,17 @@ const TaggedQuestions = () => {
     <Card>
       <CardTitleContainer>
         <CardTitle>Trending Companies</CardTitle>
+        <ArrowContainers>
+          <ArrowLeftBackgroundContainer>
+            <img alt="" src={ArrowLeftSvg} />
+          </ArrowLeftBackgroundContainer>
+          <ArrowRightBackgroundContainer>
+            <img alt="" src={ArrowRightSvg} />
+          </ArrowRightBackgroundContainer>
+        </ArrowContainers>
       </CardTitleContainer>
       <InputContainer>
+        <img src={SearchSVG} alt="" />
         <input placeholder="Search for a company..." />
       </InputContainer>
       <TagsContainer>

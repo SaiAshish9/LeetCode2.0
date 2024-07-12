@@ -11,14 +11,25 @@ export const InputContainer = styled.div`
   outline: 2px solid #0000;
   outline-offset: 2px;
   padding-right: 0.75rem;
-  padding-left: 2.25rem;
-  padding-bottom: 0.375rem;
-  padding-top: 0.375rem;
+  padding-bottom: 0.35rem;
+  padding-top: 0.35rem;
   width: 100%;
   border-radius: 0.375rem;
   margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   input {
     background-color: transparent;
+    font-size: 13.2px;
+    border: none;
+    outline: none;
+    color: #eff1f6bf;
+    margin-left: 0.54rem;
+    width: 100%;
+  }
+  img {
+    margin-left: 0.75rem;
   }
 `;
 
@@ -80,4 +91,22 @@ export const TagSpan = styled.span`
   padding-right: 0.375rem;
   border-radius: 9999px;
   margin-left: 0.25rem;
+`;
+
+export const ArrowLeftBackgroundContainer = styled.div`
+  background-color: #ffffff12;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const ArrowRightBackgroundContainer = styled.div`
+  background-color: #ffffff12;
+  border-radius: 5px;
+  margin-left: 0.375rem;
+  cursor: pointer;
+`;
+
+export const ArrowContainers = styled.div`
+  display: flex;
+  align-items: center;
 `;
