@@ -26138,6 +26138,64 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  71: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Initialize a `Deque{`<String>`} stack to store the valid components
+            of the path.
+          </li>
+          <li>
+            Split the input `path` by the delimiter `/` to get individual
+            components.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Iterating through components:</strong>
+        <ul>
+          <li>
+            For each `component` in the split path:
+            <ul>
+              <li>
+                If the `component` is empty or `.`, continue to the next
+                component.
+              </li>
+              <li>
+                If the `component` is `..`, pop the stack (go one directory up)
+                if the stack is not empty.
+              </li>
+              <li>
+                Otherwise, push the `component` onto the stack (this is a valid
+                directory name).
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Building the simplified path:</strong>
+        <ul>
+          <li>Initialize a `StringBuilder` to build the result path.</li>
+          <li>
+            While the stack is not empty, prepend each component from the stack
+            to the `StringBuilder` with a `/`.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Returning the result:</strong>
+        <ul>
+          <li>
+            If the `simplifiedPath` has any content, return it as the string.
+            Otherwise, return `/` (for an empty or root-only path).
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
