@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const CardTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const CardTitle = styled.p`
   font-size: 0.825rem;
   line-height: 1.25rem;
