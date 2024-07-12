@@ -3,6 +3,7 @@ import {
   Card,
   CardTitle,
   CardTitleContainer,
+  InputContainer,
   TagConst,
   TagSpan,
   TagsContainer,
@@ -21,6 +22,9 @@ const TaggedQuestions = () => {
       <CardTitleContainer>
         <CardTitle>Trending Companies</CardTitle>
       </CardTitleContainer>
+      <InputContainer>
+        <input placeholder="Search for a company..." />
+      </InputContainer>
       <TagsContainer>
         {COMPANIES.slice(0, 20).map((item, _) => (
           <TagConst key={item.text}>

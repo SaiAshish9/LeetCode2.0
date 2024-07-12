@@ -14,6 +14,12 @@ export const InputContainer = styled.div`
   padding-left: 2.25rem;
   padding-bottom: 0.375rem;
   padding-top: 0.375rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  margin-top: 0.5rem;
+  input {
+    background-color: transparent;
+  }
 `;
 
 export const CardTitle = styled.p`
