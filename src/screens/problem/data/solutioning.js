@@ -26196,6 +26196,54 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  84: (
+    <ul>
+      <li>
+        Initialize an empty stack to keep track of the indices of the histogram
+        bars.
+      </li>
+      <li>
+        Iterate through the bars in the histogram:
+        <ul>
+          <li>
+            If the stack is empty or the current bar is taller than or equal to
+            the bar at the top of the stack, push its index onto the stack.
+          </li>
+          <li>
+            If the current bar is shorter than the bar at the top of the stack:
+            <ul>
+              <li>
+                Pop the top of the stack to get the height of the rectangle.
+              </li>
+              <li>
+                Calculate the width of the rectangle, which is determined by the
+                difference between the current index and the index of the new
+                top of the stack (after popping), minus one.
+              </li>
+              <li>
+                Calculate the area of the rectangle and update the maximum area
+                if the new area is larger.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        After iterating through all bars, there may still be bars in the stack:
+        <ul>
+          <li>
+            Process the remaining bars in the stack similarly to calculate the
+            area of the rectangles they form.
+          </li>
+        </ul>
+      </li>
+      <li>
+        The algorithm ensures that each bar is pushed and popped from the stack
+        exactly once, resulting in an O(n) time complexity, where n is the
+        number of bars in the histogram.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
