@@ -26478,6 +26478,81 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       <li>Return the head of the resulting linked list.</li>
     </ul>
   ),
+  589: (
+    <ul>
+      <li>
+        <strong>Node Class Definition:</strong>
+        <ul>
+          <li>
+            The <code>Node</code> class represents a node in an N-ary tree with:
+            <ul>
+              <li>
+                <code>val</code>: the integer value of the node.
+              </li>
+              <li>
+                <code>children</code>: a list of child nodes.
+              </li>
+            </ul>
+          </li>
+          <li>
+            It includes constructors for creating nodes with and without
+            children.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Solution Class:</strong>
+        <ul>
+          <li>
+            <code>preorder(Node root)</code> Method:
+            <ul>
+              <li>
+                This method performs a preorder traversal of the N-ary tree
+                iteratively using a stack.
+              </li>
+              <li>
+                It initializes an empty list <code>result</code> to store
+                traversal results.
+              </li>
+              <li>
+                If the <code>root</code> is <code>null</code>, it returns an
+                empty <code>result</code>.
+              </li>
+              <li>
+                It uses a <code>Stack</code> to manage nodes to be processed:
+                <ul>
+                  <li>
+                    Push the <code>root</code> node onto the stack.
+                  </li>
+                  <li>
+                    While the stack is not empty:
+                    <ul>
+                      <li>
+                        Pop a node from the stack (<code>node</code>).
+                      </li>
+                      <li>
+                        Add the <code>node.val</code> to the <code>result</code>
+                        .
+                      </li>
+                      <li>
+                        Push each child of <code>node</code> onto the stack in
+                        reverse order to ensure preorder traversal (from last
+                        child to first child).
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Once the stack is empty, return the <code>result</code>{" "}
+                containing all node values in preorder.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
