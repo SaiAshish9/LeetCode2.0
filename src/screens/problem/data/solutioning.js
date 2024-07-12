@@ -26429,6 +26429,55 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  445: (
+    <ul>
+      <li>
+        Use two stacks to store the digits of the two numbers:
+        <ul>
+          <li>
+            Initialize two stacks, <code>s1</code> and <code>s2</code>.
+          </li>
+          <li>
+            Traverse the first linked list, pushing each value onto{" "}
+            <code>s1</code>.
+          </li>
+          <li>
+            Traverse the second linked list, pushing each value onto{" "}
+            <code>s2</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Initialize a variable <code>carry</code> to 0, which will store the
+        carry-over value during addition.
+      </li>
+      <li>
+        Initialize a variable <code>head</code> to null, which will represent
+        the head of the result linked list.
+      </li>
+      <li>
+        While either stack is not empty or there is a carry-over value:
+        <ul>
+          <li>
+            Calculate the sum of the top values of <code>s1</code> and{" "}
+            <code>s2</code> (if not empty) and the carry value.
+          </li>
+          <li>
+            Update the carry value to <code>sum / 10</code>.
+          </li>
+          <li>
+            Create a new node with the value <code>sum % 10</code>.
+          </li>
+          <li>
+            Set the <code>next</code> pointer of the new node to the current
+            head.
+          </li>
+          <li>Update the head to point to the new node.</li>
+        </ul>
+      </li>
+      <li>Return the head of the resulting linked list.</li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
