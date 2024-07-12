@@ -25,6 +25,7 @@ import ArrowRightSvg from "../../../../assets/arrowRight.svg";
 
 const TaggedQuestions = () => {
   const [value, setValue] = useState("");
+  const [data, setData] = useState(COMPANIES.slice(0, 20));
 
   return (
     <Card>
@@ -43,16 +44,20 @@ const TaggedQuestions = () => {
         <img src={SearchSVG} alt="" />
         <input
           value={value}
-          setValue={(e) => {
+          onChange={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            setValue(e.target.value);
+            const temp = e.target.value;
+            setValue(temp);
+            setData(
+              COMPANIES.filter((x) => x.toLowerCase().startsWith(temp) || x.toLowerCase().includes(temp))
+            );
           }}
           placeholder="Search for a company..."
         />
       </InputContainer>
       <TagsContainer>
-        {COMPANIES.slice(0, 20).map((item, _) => (
+        {data.map((item, _) => (
           <TagConst key={item.text}>
             {item.text} <TagSpan>{item.count}</TagSpan>
           </TagConst>
