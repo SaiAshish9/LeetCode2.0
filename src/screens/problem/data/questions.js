@@ -31037,115 +31037,79 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">path = "/home/"</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong> <span class="example-io">path = "/home/"</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">"/home"</span>
-        </p>{" "}
+        <strong>Output:</strong> <span class="example-io">"/home"</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>{" "}
+        <strong>Explanation:</strong>
         <br />
         <p>The trailing slash should be removed.</p>
-      </div>
-
-      <div class="example-block">&nbsp;</div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">path = "/home//foo/"</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">path = "/home//foo/"</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">"/home/foo"</span>
-        </p>{" "}
+        <strong>Output:</strong> <span class="example-io">"/home/foo"</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>{" "}
+        <strong>Explanation:</strong>
         <br />
         <p>Multiple consecutive slashes are replaced by a single one.</p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">
-            path = "/home/user/Documents/../Pictures"
-          </span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">
+          path = "/home/user/Documents/../Pictures"
+        </span>
         <br />
-        <p>
-          <strong>Output:</strong>{" "}
-          <span class="example-io">"/home/user/Pictures"</span>
-        </p>{" "}
+        <strong>Output:</strong>{" "}
+        <span class="example-io">"/home/user/Pictures"</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>{" "}
+        <strong>Explanation:</strong>
+        <br />A double period <code>".."</code> refers to the directory up a
+        level.
+      </pre>
+
+      <p>
+        <strong class="example">Example 4:</strong>
+      </p>
+      <pre class="example-block">
+        <strong>Input:</strong> <span class="example-io">path = "/../"</span>
         <br />
-        <p>
-          A double period <code>".."</code> refers to the directory up a level.
-        </p>
-        <p>
-          <strong class="example">Example 4:</strong>
-        </p>
-        <div class="example-block">
-          <p>
-            <strong>Input:</strong>{" "}
-            <span class="example-io">path = "/../"</span>
-          </p>{" "}
-          <br />
-          <p>
-            <strong>Output:</strong> <span class="example-io">"/"</span>
-          </p>{" "}
-          <br />
-          <p>
-            <strong>Explanation:</strong>
-          </p>{" "}
-          <br />
-          <p>Going one level up from the root directory is not possible.</p>
-        </div>
-      </div>
+        <strong>Output:</strong> <span class="example-io">"/"</span>
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        <p>Going one level up from the root directory is not possible.</p>
+      </pre>
 
       <p>
         <strong class="example">Example 5:</strong>
       </p>
 
-      <div class="example-block">
-        <p>
-          <strong>Input:</strong>{" "}
-          <span class="example-io">path = "/.../a/../b/c/../d/./"</span>
-        </p>{" "}
+      <pre class="example-block">
+        <strong>Input:</strong>{" "}
+        <span class="example-io">path = "/.../a/../b/c/../d/./"</span>
         <br />
-        <p>
-          <strong>Output:</strong> <span class="example-io">"/.../b/d"</span>
-        </p>{" "}
+        <strong>Output:</strong> <span class="example-io">"/.../b/d"</span>
         <br />
-        <p>
-          <strong>Explanation:</strong>
-        </p>{" "}
+        <strong>Explanation:</strong>
         <br />
         <p>
           <code>"..."</code> is a valid name for a directory in this problem.
         </p>
-      </div>
+      </pre>
 
-      <p>&nbsp;</p>
       <p>
         <strong>Constraints:</strong>
       </p>
