@@ -26866,6 +26866,96 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  2751: (
+    <ul>
+      <li>
+        <strong>Initialization:</strong>
+        <ul>
+          <li>
+            Create an empty list <code>ans</code> to store surviving robots'
+            healths.
+          </li>
+          <li>
+            Create an array of <code>Robot</code> objects <code>robots</code>{" "}
+            based on given positions, healths, and directions.
+          </li>
+          <li>
+            Initialize an empty <code>List</code> <code>stack</code> to track
+            robots currently alive and in potential collision.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Sorting:</strong>
+        <ul>
+          <li>
+            Sort the <code>robots</code> array based on their positions using{" "}
+            <code>Arrays.sort</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Processing Robots:</strong>
+        <ul>
+          <li>
+            Iterate through each <code>Robot</code> in the sorted{" "}
+            <code>robots</code> array.
+          </li>
+          <li>
+            If the robot's direction is 'R', push it onto the <code>stack</code>
+            .
+          </li>
+          <li>
+            If the robot's direction is 'L':
+            <ul>
+              <li>
+                Check for collisions with robots in the <code>stack</code>{" "}
+                moving 'R'.
+              </li>
+              <li>
+                Reduce health based on collision outcomes:
+                <ul>
+                  <li>
+                    If both robots have equal health, they destroy each other.
+                  </li>
+                  <li>If the 'R' robot has less health, reduce its health.</li>
+                  <li>
+                    If the 'L' robot has less health, reduce its health and
+                    update the 'R' robot's health.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Add the current robot to the <code>stack</code> if it survives
+                the collision.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Collecting Results:</strong>
+        <ul>
+          <li>
+            Sort the <code>stack</code> based on the robots' original indices.
+          </li>
+          <li>
+            Collect the healths of surviving robots from the <code>stack</code>{" "}
+            into the <code>ans</code> list.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Return:</strong>
+        <ul>
+          <li>
+            Return the <code>ans</code> list containing the healths of surviving
+            robots after all collisions.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
