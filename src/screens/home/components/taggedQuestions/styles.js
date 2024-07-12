@@ -35,6 +35,7 @@ export const TagConst = styled.div`
   width: fit-content;
   font-weight: 500;
   line-height: 1.5rem;
+  cursor: pointer;
 `;
 
 export const TagSpan = styled.span`
