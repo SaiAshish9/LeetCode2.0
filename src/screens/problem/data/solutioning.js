@@ -26305,6 +26305,68 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  224: (
+    <ul>
+      <li>Initialize a stack to keep track of results and signs.</li>
+      <li>
+        Initialize variables:
+        <ul>
+          <li>
+            <code>result</code> to store the current result.
+          </li>
+          <li>
+            <code>number</code> to build multi-digit numbers.
+          </li>
+          <li>
+            <code>sign</code> to keep track of the current sign (1 for positive,
+            -1 for negative).
+          </li>
+        </ul>
+      </li>
+      <li>
+        Iterate through each character in the string:
+        <ul>
+          <li>
+            If the character is a digit, build the number by multiplying the
+            current <code>number</code> by 10 and adding the digit.
+          </li>
+          <li>
+            If the character is <code>'+'</code>, add the current{" "}
+            <code>number</code> to the <code>result</code> using the current{" "}
+            <code>sign</code>, then reset <code>number</code> to 0 and set{" "}
+            <code>sign</code> to 1.
+          </li>
+          <li>
+            If the character is <code>'-'</code>, add the current{" "}
+            <code>number</code> to the <code>result</code> using the current{" "}
+            <code>sign</code>, then reset <code>number</code> to 0 and set{" "}
+            <code>sign</code> to -1.
+          </li>
+          <li>
+            If the character is <code>'('</code>, push the current{" "}
+            <code>result</code> and <code>sign</code> onto the stack, then reset{" "}
+            <code>result</code> to 0 and <code>sign</code> to 1.
+          </li>
+          <li>
+            If the character is <code>')'</code>, add the current{" "}
+            <code>number</code> to the <code>result</code> using the current{" "}
+            <code>sign</code>, then reset <code>number</code> to 0. Multiply the{" "}
+            <code>result</code> by the sign popped from the stack and add the
+            result popped from the stack.
+          </li>
+        </ul>
+      </li>
+      <li>
+        After iterating through the string, add any remaining{" "}
+        <code>number</code> to the <code>result</code> using the current{" "}
+        <code>sign</code>.
+      </li>
+      <li>
+        This approach ensures that the expression is evaluated correctly,
+        handling parentheses and maintaining the correct order of operations.
+      </li>
+    </ul>
+  ),
 };
 
 function appendPxToValues(obj) {
