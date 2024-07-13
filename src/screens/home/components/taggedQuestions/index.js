@@ -123,7 +123,6 @@ const TaggedQuestions = () => {
 
   function handleChange(e) {
     const temp = e.target.value ?? "";
-    console.log(e.target.value);
     if (temp !== "") {
       const tempData = COMPANIES.slice().filter((x) =>
         x.text.toLowerCase().includes(temp.toLowerCase())
@@ -131,9 +130,9 @@ const TaggedQuestions = () => {
       setData(tempData.slice());
     } else {
       setData(COMPANIES.slice());
-      carouselRef.current?.goTo(0, true);
       setSliderHeight(0);
     }
+    carouselRef.current?.goTo(0, true);
     updateSliderHeight();
     setValue(temp);
   }
