@@ -40,14 +40,17 @@ const TaggedQuestions = () => {
   const containerRef = useRef(null);
 
   const executeScroll = () => containerRef.current.scrollIntoView();
+  const [forceUpdateFlag, setForceUpdateFlag] = useState(false);
 
   function handleResize() {
-    if (data.length === 0 && (value === "" || value === null)) {
-      setData(COMPANIES);
-    }
+    console.log('jiji')
     setTimeout(() => {
+      if (data.length === 0 && (value === "" || value === null)) {
+        setData(COMPANIES);
+      }
       updateSliderHeight();
     }, 10);
+    setForceUpdateFlag(prevFlag => !prevFlag);
   }
 
   useEffect(() => {
@@ -60,6 +63,7 @@ const TaggedQuestions = () => {
     window.addEventListener("resize", handleResize);
 
     return () => {
+      updateSliderHeight();
       window.removeEventListener("resize", handleResize);
     };
   }, []);
