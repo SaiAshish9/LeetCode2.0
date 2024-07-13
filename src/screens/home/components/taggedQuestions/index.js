@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useRef, useEffect } from "react";
 import {
   ArrowContainers,
@@ -52,7 +53,7 @@ const TaggedQuestions = () => {
         const currSlide =
           carouselRef.current.innerSlider?.list.querySelectorAll(
             ".slick-slide.slick-current"
-          )[0];
+          )[value === null || value.length === 0 ? 0 : index];
         const newHeight = currSlide?.offsetHeight;
         setSliderHeight(newHeight);
       } else {
@@ -160,7 +161,7 @@ const TaggedQuestions = () => {
             setCurrentSlide(next);
             updateSliderHeight(next);
           }}
-          afterChang={(current) => {
+          afterChange={(current) => {
             setCurrentSlide(current);
             updateSliderHeight(current);
           }}
