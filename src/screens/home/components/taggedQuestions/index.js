@@ -19,6 +19,8 @@ import ArrowLeftSvg from "../../../../assets/arrowLeft.svg";
 import ArrowLeftDisabledSvg from "../../../../assets/arrow_left_disabled.svg";
 import ArrowRightSvg from "../../../../assets/arrowRight.svg";
 import ArrowRightDisabledSvg from "../../../../assets/arrowRightDisabled.svg";
+import { nanoid } from "nanoid";
+import debounce from "lodash/debounce";
 
 // [
 //   ...Array(10)
@@ -26,52 +28,32 @@ import ArrowRightDisabledSvg from "../../../../assets/arrowRightDisabled.svg";
 //     .map((x) => x + 1),
 // ]
 
-import Slider from "react-slick";
+import { Carousel } from "antd";
 
 const TaggedQuestions = () => {
   const [value, setValue] = useState("");
   const [data, setData] = useState(COMPANIES);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderHeight, setSliderHeight] = useState(0);
-
-  let sliderRef = useRef(null);
+  const carouselRef = useRef(null);
 
   useEffect(() => {
     updateSliderHeight(0);
   }, []);
 
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    swipeToSlide: true,
-    slidesToScroll: 1,
-    beforeChange: (_, next) => {
-      setCurrentSlide(next);
-      updateSliderHeight(next);
-    },
-    afterChange: (current) => {
-      setCurrentSlide(current);
-      updateSliderHeight(current);
-    },
-    nextArrow: null,
-    prevArrow: null,
-  };
-
   const updateSliderHeight = (index) => {
     if (
-      sliderRef.current &&
-      sliderRef.current.innerSlider &&
-      sliderRef.current.innerSlider.list &&
-      sliderRef.current.innerSlider.list.querySelectorAll(".slick-slide")
+      carouselRef.current &&
+      carouselRef.current.innerSlider?.list?.querySelectorAll(".slick-slide.slick-current")
         .length > 0
     ) {
-      const currentSlide =
-        sliderRef.current.innerSlider?.list.querySelectorAll(".slick-slide")[
-          value?.length > 0 ? index : 0
+      const currSlide =
+        carouselRef.current.innerSlider?.list.querySelectorAll(".slick-slide.slick-current")[
+          index
         ];
-      const newHeight = currentSlide?.offsetHeight;
+      const newHeight = currSlide?.offsetHeight;
+      debugger;
+      console.log(newHeight)
       setSliderHeight(newHeight);
     } else {
       setSliderHeight(0);
@@ -112,18 +94,20 @@ const TaggedQuestions = () => {
   // }
 
   function handleChange(e) {
-    const temp = e.target.value;
-    if (temp && temp !== "") {
+    const temp = e.target.value ?? "";
+    console.log(e.target.value);
+    if (temp !== "") {
       const tempData = COMPANIES.slice().filter((x) =>
         x.text.toLowerCase().includes(temp.toLowerCase())
       );
       setData(tempData.slice());
-      setValue(temp);
     } else {
       setData(COMPANIES.slice());
-      setValue("");
+      carouselRef.current?.goTo(0, true);
+      setSliderHeight(0);
     }
     updateSliderHeight(0);
+    setValue(temp);
   }
 
   return (
@@ -132,19 +116,20 @@ const TaggedQuestions = () => {
         <CardTitle>Trending Companies</CardTitle>
         <ArrowContainers>
           <ArrowLeftBackgroundContainer
-            onClick={() => sliderRef.current?.slickPrev()}
+            onClick={() => carouselRef?.current.prev()}
           >
-            {currentSlide === 0 || data.length <= 20 ? (
+            {currentSlide === 0 || data.length <= 20 || value?.length > 0 ? (
               <img alt="" src={ArrowLeftDisabledSvg} />
             ) : (
               <img alt="" src={ArrowLeftSvg} />
             )}
           </ArrowLeftBackgroundContainer>
           <ArrowRightBackgroundContainer
-            onClick={() => sliderRef.current?.slickNext()}
+            onClick={() => carouselRef.current?.next()}
           >
             {currentSlide === parseInt(data.length / 20) - 1 ||
-            data.length <= 20 ? (
+            data.length <= 20 ||
+            value?.length > 0 ? (
               <img alt="" src={ArrowRightDisabledSvg} />
             ) : (
               <img alt="" src={ArrowRightSvg} />
@@ -160,27 +145,45 @@ const TaggedQuestions = () => {
           placeholder="Search for a company..."
         />
       </InputContainer>
-      <TagsContainer height={sliderHeight + 16 + "px"}>
-        <Slider {...settings} ref={sliderRef}>
-          {data.length > 0 && data.reduce((result, _, index) => {
-            if (index % 20 === 0) {
-              const chunk = data.slice(index, index + 20).map((item) => (
-                <TagConst key={item.text}>
-                  <span>{item.text}</span> <TagSpan>{item.count}</TagSpan>
-                </TagConst>
-              ));
-              result.push(
-                <SlickItem
-                  key={`${index}_${Math.floor(Math.random() * data.length)}`}
-                >
-                  {chunk}
-                </SlickItem>
-              );
-            }
-            return result;
-          }, [])}
-        </Slider>
+      <TagsContainer
+        height={value > 0 ? "fit-content" : sliderHeight + 16 + "px"}
+      >
+        <Carousel
+          infinite={false}
+          ref={carouselRef}
+          dots={false}
+          beforeChange={(_, next) => {
+            setCurrentSlide(next);
+            updateSliderHeight(next);
+          }}
+          afterChang={(current) => {
+            setCurrentSlide(current);
+            updateSliderHeight(current);
+          }}
+        >
+          {data.length > 0 &&
+            data.reduce((result, _, index) => {
+              if (index % 20 === 0) {
+                const chunk = data.slice(index, index + 20).map((item) => (
+                  <TagConst key={item.text + index + nanoid()}>
+                    <span>{item.text}</span> <TagSpan>{item.count}</TagSpan>
+                  </TagConst>
+                ));
+                result.push(
+                  <SlickItem
+                    key={`${index}_${Math.floor(
+                      Math.random() * data.length
+                    )}_${nanoid()}}`}
+                  >
+                    {chunk}
+                  </SlickItem>
+                );
+              }
+              return result;
+            }, [])}
+        </Carousel>
       </TagsContainer>
+      {data?.length === 0 && <p>There aren't any tags here yet!</p>}
     </Card>
   );
 };

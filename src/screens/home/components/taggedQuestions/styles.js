@@ -53,7 +53,7 @@ export const Card = styled.div`
 export const TagsContainer = styled.div`
   padding-bottom: 0.5rem;
   ${({ height }) => css`
-    height: ${height};
+    height: ${height} !important;
   `};
   .slick-slider {
     width: 100%;
