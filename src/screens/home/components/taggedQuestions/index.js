@@ -41,6 +41,15 @@ const TaggedQuestions = () => {
 
   const executeScroll = () => containerRef.current.scrollIntoView();
 
+  function handleResize() {
+    if (data.length === 0 && (value === "" || value === null)) {
+      setData(COMPANIES);
+    }
+    setTimeout(() => {
+      updateSliderHeight();
+    }, 10);
+  }
+
   useEffect(() => {
     updateSliderHeight(0);
     if (window.location.hash === "#companies") {
@@ -48,6 +57,12 @@ const TaggedQuestions = () => {
         executeScroll();
       }, 10);
     }
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const updateSliderHeight = (index) => {
