@@ -151,7 +151,7 @@ const TaggedQuestions = () => {
         />
       </InputContainer>
       <TagsContainer
-        height={value > 0 ? "fit-content" : parseInt(sliderHeight) + 16 + "px"}
+        height={value > 0 ? "fit-content" : parseInt(sliderHeight) + 8 + "px"}
       >
         <Carousel
           infinite={false}
