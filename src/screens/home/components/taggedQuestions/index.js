@@ -37,9 +37,17 @@ const TaggedQuestions = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderHeight, setSliderHeight] = useState(0);
   const carouselRef = useRef(null);
+  const containerRef = useRef(null);
+
+  const executeScroll = () => containerRef.current.scrollIntoView();
 
   useEffect(() => {
     updateSliderHeight(0);
+    if (window.location.hash === "#companies") {
+      setTimeout(() => {
+        executeScroll();
+      }, 100);
+    }
   }, []);
 
   const updateSliderHeight = (index) => {
@@ -116,7 +124,7 @@ const TaggedQuestions = () => {
   }
 
   return (
-    <Card>
+    <Card ref={containerRef} id="companies">
       <CardTitleContainer>
         <CardTitle>Trending Companies</CardTitle>
         <ArrowContainers>
