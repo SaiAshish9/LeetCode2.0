@@ -21,7 +21,6 @@ import ArrowLeftDisabledSvg from "../../../../assets/arrow_left_disabled.svg";
 import ArrowRightSvg from "../../../../assets/arrowRight.svg";
 import ArrowRightDisabledSvg from "../../../../assets/arrowRightDisabled.svg";
 import { nanoid } from "nanoid";
-import debounce from "lodash/debounce";
 
 // [
 //   ...Array(10)
