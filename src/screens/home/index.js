@@ -43,6 +43,7 @@ const HomeScreen = () => {
           <Table />
           <SBottomContainer>
             <Calendar />
+            <TaggedQuestions />
             <SessionCard />
           </SBottomContainer>
         </TopLeftContainer>
