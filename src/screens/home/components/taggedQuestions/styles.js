@@ -134,3 +134,11 @@ export const ArrowContainers = styled.div`
   display: flex;
   align-items: center;
 `;
+
+export const DefaultText = styled.p`
+  color: rgb(74 74 74);
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+  text-align-center;
+  margin-bottom: 0.25rem;
+`;

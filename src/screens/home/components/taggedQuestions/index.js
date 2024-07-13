@@ -6,6 +6,7 @@ import {
   Card,
   CardTitle,
   CardTitleContainer,
+  DefaultText,
   InputContainer,
   SlickItem,
   TagConst,
@@ -42,24 +43,24 @@ const TaggedQuestions = () => {
   }, []);
 
   const updateSliderHeight = (index) => {
-    if (
-      carouselRef.current &&
-      carouselRef.current.innerSlider?.list?.querySelectorAll(".slick-slide.slick-current")
-        .length > 0
-    ) {
-      const currSlide =
-        carouselRef.current.innerSlider?.list.querySelectorAll(".slick-slide.slick-current")[
-          index
-        ];
-      const newHeight = currSlide?.offsetHeight;
-      debugger;
-      console.log(newHeight)
-      setSliderHeight(newHeight);
-    } else {
-      setSliderHeight(0);
-    }
+    setTimeout(() => {
+      if (
+        carouselRef.current &&
+        carouselRef.current.innerSlider?.list?.querySelectorAll(
+          ".slick-slide.slick-current"
+        ).length > 0
+      ) {
+        const currSlide =
+          carouselRef.current.innerSlider?.list.querySelectorAll(
+            ".slick-slide.slick-current"
+          )[index];
+        const newHeight = currSlide?.offsetHeight;
+        setSliderHeight(newHeight);
+      } else {
+        setSliderHeight(0);
+      }
+    }, 2); 
   };
-
   // function renderItems() {
   //   const result = [];
   //   const n = data.length;
@@ -154,11 +155,11 @@ const TaggedQuestions = () => {
           dots={false}
           beforeChange={(_, next) => {
             setCurrentSlide(next);
-            updateSliderHeight(next);
+            if (value === "" || value === null) updateSliderHeight(next);
           }}
           afterChang={(current) => {
             setCurrentSlide(current);
-            updateSliderHeight(current);
+            if (value === "" || value === null) updateSliderHeight(current);
           }}
         >
           {data.length > 0 &&
@@ -183,7 +184,7 @@ const TaggedQuestions = () => {
             }, [])}
         </Carousel>
       </TagsContainer>
-      {data?.length === 0 && <p>There aren't any tags here yet!</p>}
+      {data?.length === 0 && <DefaultText>There aren't any tags here yet!</DefaultText>}
     </Card>
   );
 };
