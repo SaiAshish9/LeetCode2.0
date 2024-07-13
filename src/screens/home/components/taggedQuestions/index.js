@@ -51,7 +51,7 @@ const TaggedQuestions = () => {
   }
 
   useEffect(() => {
-    updateSliderHeight(0);
+    updateSliderHeight();
     if (window.location.hash === "#companies") {
       setTimeout(() => {
         executeScroll();
@@ -65,7 +65,7 @@ const TaggedQuestions = () => {
     };
   }, []);
 
-  const updateSliderHeight = (index) => {
+  const updateSliderHeight = () => {
     setTimeout(() => {
       if (
         carouselRef.current &&
@@ -134,7 +134,7 @@ const TaggedQuestions = () => {
       carouselRef.current?.goTo(0, true);
       setSliderHeight(0);
     }
-    updateSliderHeight(0);
+    updateSliderHeight();
     setValue(temp);
   }
 
@@ -181,11 +181,11 @@ const TaggedQuestions = () => {
           dots={false}
           beforeChange={(_, next) => {
             setCurrentSlide(next);
-            updateSliderHeight(next);
+            updateSliderHeight();
           }}
           afterChange={(current) => {
             setCurrentSlide(current);
-            updateSliderHeight(current);
+            updateSliderHeight();
           }}
         >
           {data.length > 0 &&
