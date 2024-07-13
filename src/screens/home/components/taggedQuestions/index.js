@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   ArrowContainers,
   ArrowLeftBackgroundContainer,
@@ -7,6 +7,7 @@ import {
   CardTitle,
   CardTitleContainer,
   InputContainer,
+  SlickItem,
   TagConst,
   TagSpan,
   TagsContainer,
@@ -29,9 +30,15 @@ import Slider from "react-slick";
 
 const TaggedQuestions = () => {
   const [value, setValue] = useState("");
-  const [data, setData] = useState(COMPANIES.slice(0, 20));
+  const [data, setData] = useState(COMPANIES);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [sliderHeight, setSliderHeight] = useState(0);
+
   let sliderRef = useRef(null);
+
+  useEffect(() => {
+    updateSliderHeight(0);
+  }, []);
 
   const settings = {
     dots: false,
@@ -40,10 +47,61 @@ const TaggedQuestions = () => {
     slidesToShow: 1,
     swipeToSlide: true,
     slidesToScroll: 1,
-    afterChange: (current) => setCurrentSlide(current),
+    beforeChange: (current, next) => {
+      if (current === 0 || current === parseInt(data.length / 20) - 1) {
+        setCurrentSlide(next);
+        return;
+      }
+      updateSliderHeight(next);
+    },
+    afterChange: (current) => {
+      if (current === 0 || current === parseInt(data.length / 20) - 1) {
+        setCurrentSlide(current);
+        return;
+      }
+      updateSliderHeight(current);
+    },
     nextArrow: null,
     prevArrow: null,
   };
+
+  const updateSliderHeight = (index) => {
+    if (sliderRef.current) {
+      const currentSlide =
+        sliderRef.current?.innerSlider?.list.querySelectorAll(".slick-slide")[
+          index
+        ];
+      const newHeight = currentSlide?.offsetHeight;
+      setSliderHeight(newHeight);
+    }
+  };
+
+  function renderItems() {
+    const result = [];
+    const n = data.length;
+    for (let i = 0; i < n; i += 20) {
+      let curr = [];
+      if (i + 20 > n - 1) {
+        curr.push(
+          data.slice(i).map((item, _) => (
+            <TagConst key={item.text}>
+              <span>{item.text}</span> <TagSpan>{item.count}</TagSpan>
+            </TagConst>
+          ))
+        );
+      } else {
+        curr.push(
+          data.slice(i, i + 20).map((item, _) => (
+            <TagConst key={item.text}>
+              {item.text} <TagSpan>{item.count}</TagSpan>
+            </TagConst>
+          ))
+        );
+      }
+      result.push(<SlickItem>{curr}</SlickItem>);
+    }
+    return result;
+  }
 
   return (
     <Card>
@@ -62,7 +120,8 @@ const TaggedQuestions = () => {
           <ArrowRightBackgroundContainer
             onClick={() => sliderRef.current?.slickNext()}
           >
-            {currentSlide === 0 ? (
+            {currentSlide === parseInt(data.length / 20) - 1 ||
+            currentSlide === 0 ? (
               <img alt="" src={ArrowRightDisabledSvg} />
             ) : (
               <img alt="" src={ArrowRightSvg} />
@@ -88,22 +147,9 @@ const TaggedQuestions = () => {
           placeholder="Search for a company..."
         />
       </InputContainer>
-      <TagsContainer>
+      <TagsContainer height={sliderHeight + 16 + "px"}>
         <Slider {...settings} ref={sliderRef}>
-          <div>
-            {data.slice(0, 20).map((item, _) => (
-              <TagConst key={item.text}>
-                {item.text} <TagSpan>{item.count}</TagSpan>
-              </TagConst>
-            ))}
-          </div>
-          <div>
-            {data.slice(21, 40).map((item, _) => (
-              <TagConst key={item.text}>
-                {item.text} <TagSpan>{item.count}</TagSpan>
-              </TagConst>
-            ))}
-          </div>
+          {renderItems()}
         </Slider>
       </TagsContainer>
     </Card>

@@ -51,24 +51,46 @@ export const Card = styled.div`
 `;
 
 export const TagsContainer = styled.div`
-  display: flex;
+  padding-bottom: 0.5rem;
+  ${({ height }) => css`
+    height: ${height};
+  `};
+  .slick-slider {
+    width: 100%;
+  }
+  .slick-track {
+    width: 100%;
+  }
+  overflow-y: hidden;
+`;
+
+export const SlickItem = styled.div`
+  display: flex !important;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 0.5rem;
+  width: 100%;
 `;
 
 export const TagConst = styled.div`
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-radius: 9999px;
-  white-space: nowrap;
   align-items: center;
   color: #eff2f699;
   background-color: #ffffff1a;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  flex-wrap: no-wrap;
+  max-width: 90%;
+  overflow-x: hidden;
+  span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  text-align: start;
+  white-space: nowrap;
   font-size: 0.75rem;
   margin-top: 1rem;
   margin-right: 0.75rem;
@@ -79,7 +101,7 @@ export const TagConst = styled.div`
 `;
 
 export const TagSpan = styled.span`
-  display: flex;
+  display: inline;
   align-items: center;
   justify-content: center;
   background-color: #ffa116;
@@ -90,6 +112,8 @@ export const TagSpan = styled.span`
   padding-left: 0.375rem;
   padding-right: 0.375rem;
   border-radius: 9999px;
+  text-overflow: initial !important;
+  margin-right: 0rem;
   margin-left: 0.25rem;
 `;
 
