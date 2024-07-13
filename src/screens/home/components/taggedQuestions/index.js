@@ -61,7 +61,7 @@ const TaggedQuestions = () => {
         const currSlide =
           carouselRef.current.innerSlider?.list.querySelectorAll(
             ".slick-slide.slick-current"
-          )[value === null || value.length === 0 ? 0 : index];
+          )[0];
         const newHeight = currSlide?.offsetHeight;
         setSliderHeight(newHeight);
       } else {
@@ -131,7 +131,7 @@ const TaggedQuestions = () => {
           <ArrowLeftBackgroundContainer
             onClick={() => carouselRef?.current.prev()}
           >
-            {currentSlide === 0 || data.length <= 20 || value?.length > 0 ? (
+            {currentSlide === 0 || data.length <= 20 ? (
               <img alt="" src={ArrowLeftDisabledSvg} />
             ) : (
               <img alt="" src={ArrowLeftSvg} />
@@ -140,9 +140,8 @@ const TaggedQuestions = () => {
           <ArrowRightBackgroundContainer
             onClick={() => carouselRef.current?.next()}
           >
-            {currentSlide === parseInt(data.length / 20) - 1 ||
-            data.length <= 20 ||
-            value?.length > 0 ? (
+            {currentSlide >= parseInt(data.length / 20) - 1 ||
+            data.length <= 20 ? (
               <img alt="" src={ArrowRightDisabledSvg} />
             ) : (
               <img alt="" src={ArrowRightSvg} />
