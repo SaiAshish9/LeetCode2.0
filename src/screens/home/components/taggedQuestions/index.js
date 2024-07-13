@@ -46,7 +46,7 @@ const TaggedQuestions = () => {
     if (window.location.hash === "#companies") {
       setTimeout(() => {
         executeScroll();
-      }, 100);
+      }, 10);
     }
   }, []);
 
