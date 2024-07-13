@@ -118,7 +118,7 @@ const Navbar = () => {
               );
             }}
             alt="pic"
-            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
+            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1726099200&v=beta&t=EQ8pnkIbAEz_gdLEobys_8sXAbsPRUzJWhfPqXz4up4"
           />
           <NavIcon noMR>
             <PremiumButton>
@@ -166,7 +166,7 @@ const Navbar = () => {
         >
           <ProfileAvatar
             alt="pic"
-            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
+            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1726099200&v=beta&t=EQ8pnkIbAEz_gdLEobys_8sXAbsPRUzJWhfPqXz4up4"
           />
           <NavItem1 isHome={!isDark}>Sai</NavItem1>
         </StyledDrawerIconContainer>
