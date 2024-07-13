@@ -53,14 +53,18 @@ const TaggedQuestions = () => {
         const currSlide =
           carouselRef.current.innerSlider?.list.querySelectorAll(
             ".slick-slide.slick-current"
-          )[index];
+          )[0];
         const newHeight = currSlide?.offsetHeight;
         setSliderHeight(newHeight);
       } else {
         setSliderHeight(0);
       }
-    }, 2); 
+    }, 10);
   };
+
+  useEffect(() => {
+    updateSliderHeight(currentSlide);
+  }, [data, currentSlide]);
   // function renderItems() {
   //   const result = [];
   //   const n = data.length;
@@ -147,7 +151,7 @@ const TaggedQuestions = () => {
         />
       </InputContainer>
       <TagsContainer
-        height={value > 0 ? "fit-content" : sliderHeight + 16 + "px"}
+        height={value > 0 ? "fit-content" : parseInt(sliderHeight) + 16 + "px"}
       >
         <Carousel
           infinite={false}
@@ -155,11 +159,11 @@ const TaggedQuestions = () => {
           dots={false}
           beforeChange={(_, next) => {
             setCurrentSlide(next);
-            if (value === "" || value === null) updateSliderHeight(next);
+            updateSliderHeight(next);
           }}
           afterChang={(current) => {
             setCurrentSlide(current);
-            if (value === "" || value === null) updateSliderHeight(current);
+            updateSliderHeight(current);
           }}
         >
           {data.length > 0 &&
@@ -184,7 +188,9 @@ const TaggedQuestions = () => {
             }, [])}
         </Carousel>
       </TagsContainer>
-      {data?.length === 0 && <DefaultText>There aren't any tags here yet!</DefaultText>}
+      {data?.length === 0 && (
+        <DefaultText>There aren't any tags here yet!</DefaultText>
+      )}
     </Card>
   );
 };
