@@ -29,3 +29,8 @@ a {
 .CircularProgressbar-trail {
   stroke-width: 3px;
 } 
+
+.slick-prev,
+.slick-next {
+    display: none !important;
+}
