@@ -178,6 +178,7 @@ const TaggedQuestions = () => {
           infinite={false}
           ref={carouselRef}
           dots={false}
+          draggable={true}
           beforeChange={(_, next) => {
             setCurrentSlide(next);
             updateSliderHeight();
