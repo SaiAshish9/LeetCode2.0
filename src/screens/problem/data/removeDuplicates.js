@@ -20,1698 +20,16693 @@ function combineObjects(obj1, obj2) {
 }
 
 const obj2 = {
-  critical_connections_in_a_network: {
-    qno: 1192,
-    title: "Critical Connections in a Network",
-    tags: ["Depth-First Search", "Graph", "Biconnected Component"],
-    default: "Biconnected Component",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 55.7,
+  "median_of_two_sorted_arrays": {
+      "qno": "4",
+      "title": "Median of Two Sorted Arrays",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.7
   },
-  "implement_rand10()_using_rand7()": {
-    qno: 470,
-    title: "Implement Rand10() Using Rand7()",
-    tags: [
-      "Math",
-      "Rejection Sampling",
-      "Randomized",
-      "Probability And Statistics",
-    ],
-    default: "Rejection Sampling",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.9,
+  "search_in_rotated_sorted_array": {
+      "qno": "33",
+      "title": "Search in Rotated Sorted Array",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.1
   },
-  generate_random_point_in_a_circle: {
-    qno: 478,
-    title: "Generate Random Point in a Circle",
-    tags: ["Math", "Geometry", "Rejection Sampling", "Randomized"],
-    default: "Rejection Sampling",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.8,
+  "find_first_and_last_position_of_element_in_sorted_array": {
+      "qno": "34",
+      "title": "Find First and Last Position of Element in Sorted Array",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.7
   },
-  maximum_gap: {
-    qno: 164,
-    title: "Maximum Gap",
-    tags: ["Array", "Sorting", "Bucket Sort", "Radix Sort"],
-    default: "Radix Sort",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.3,
+  "search_insert_position": {
+      "qno": "35",
+      "title": "Search Insert Position",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 46.5
   },
-  sort_an_array: {
-    qno: 912,
-    title: "Sort an Array",
-    tags: [
-      "Array",
-      "Divide and Conquer",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Merge Sort",
-      "Bucket Sort",
-      "Radix Sort",
-      "Counting Sort",
-    ],
-    default: "Radix Sort",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.3,
+  "sqrt(x)": {
+      "qno": "69",
+      "title": "Sqrt(x)",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 39.1
   },
-  query_kth_smallest_trimmed_number: {
-    qno: 2343,
-    title: "Query Kth Smallest Trimmed Number",
-    tags: [
-      "Array",
-      "String",
-      "Divide and Conquer",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Radix Sort",
-      "Quickselect",
-    ],
-    default: "Radix Sort",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.1,
+  "search_a_2d_matrix": {
+      "qno": "74",
+      "title": "Search a 2D Matrix",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.5
   },
-  reconstruct_itinerary: {
-    qno: 332,
-    title: "Reconstruct Itinerary",
-    tags: ["Depth-First Search", "Graph", "Eulerian Circuit"],
-    default: "Eulerian Circuit",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.2,
+  "search_in_rotated_sorted_array_ii": {
+      "qno": "81",
+      "title": "Search in Rotated Sorted Array II",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.9
   },
-  cracking_the_safe: {
-    qno: 753,
-    title: "Cracking the Safe",
-    tags: ["Depth-First Search", "Graph", "Eulerian Circuit"],
-    default: "Eulerian Circuit",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 56.9,
+  "find_minimum_in_rotated_sorted_array": {
+      "qno": "153",
+      "title": "Find Minimum in Rotated Sorted Array",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.8
   },
-  valid_arrangement_of_pairs: {
-    qno: 2097,
-    title: "Valid Arrangement of Pairs",
-    tags: ["Depth-First Search", "Graph", "Eulerian Circuit"],
-    default: "Eulerian Circuit",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.2,
+  "find_minimum_in_rotated_sorted_array_ii": {
+      "qno": "154",
+      "title": "Find Minimum in Rotated Sorted Array II",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.7
   },
-  "find_critical_and_pseudo-critical_edges_in_minimum_spanning_tree": {
-    qno: 1489,
-    title: "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
-    tags: [
-      "Union Find",
-      "Graph",
-      "Sorting",
-      "Minimum Spanning Tree",
-      "Strongly Connected Component",
-    ],
-    default: "Strongly Connected Component",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 67.7,
+  "find_peak_element": {
+      "qno": "162",
+      "title": "Find Peak Element",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46
   },
-  minimum_edge_weight_equilibrium_queries_in_a_tree: {
-    qno: 2846,
-    title: "Minimum Edge Weight Equilibrium Queries in a Tree",
-    tags: ["Array", "Tree", "Graph", "Strongly Connected Component"],
-    default: "Strongly Connected Component",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.8,
+  "two_sum_ii_-_input_array_is_sorted": {
+      "qno": "167",
+      "title": "Two Sum II - Input Array Is Sorted",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.7
   },
-  linked_list_random_node: {
-    qno: 382,
-    title: "Linked List Random Node",
-    tags: ["Linked List", "Math", "Reservoir Sampling", "Randomized"],
-    default: "Reservoir Sampling",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.2,
+  "minimum_size_subarray_sum": {
+      "qno": "209",
+      "title": "Minimum Size Subarray Sum",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.4
   },
-  random_pick_index: {
-    qno: 398,
-    title: "Random Pick Index",
-    tags: ["Hash Table", "Math", "Reservoir Sampling", "Randomized"],
-    default: "Reservoir Sampling",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.4,
+  "count_complete_tree_nodes": {
+      "qno": "222",
+      "title": "Count Complete Tree Nodes",
+      "tags": [
+          "Binary Search",
+          "Bit Manipulation",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.2
   },
-  random_flip_matrix: {
-    qno: 519,
-    title: "Random Flip Matrix",
-    tags: ["Hash Table", "Math", "Reservoir Sampling", "Randomized"],
-    default: "Reservoir Sampling",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.9,
+  "search_a_2d_matrix_ii": {
+      "qno": "240",
+      "title": "Search a 2D Matrix II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.1
+  },
+  "3sum_smaller": {
+      "qno": "259",
+      "title": "3Sum Smaller",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.8
+  },
+  "missing_number": {
+      "qno": "268",
+      "title": "Missing Number",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Binary Search",
+          "Bit Manipulation",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.4
+  },
+  "closest_binary_search_tree_value": {
+      "qno": "270",
+      "title": "Closest Binary Search Tree Value",
+      "tags": [
+          "Binary Search",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.4
+  },
+  "h-index_ii": {
+      "qno": "275",
+      "title": "H-Index II",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.3
+  },
+  "first_bad_version": {
+      "qno": "278",
+      "title": "First Bad Version",
+      "tags": [
+          "Binary Search",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 44.6
+  },
+  "find_the_duplicate_number": {
+      "qno": "287",
+      "title": "Find the Duplicate Number",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Bit Manipulation"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.1
+  },
+  "longest_increasing_subsequence": {
+      "qno": "300",
+      "title": "Longest Increasing Subsequence",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.8
+  },
+  "smallest_rectangle_enclosing_black_pixels": {
+      "qno": "302",
+      "title": "Smallest Rectangle Enclosing Black Pixels",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 59
+  },
+  "count_of_smaller_numbers_after_self": {
+      "qno": "315",
+      "title": "Count of Smaller Numbers After Self",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.5
+  },
+  "count_of_range_sum": {
+      "qno": "327",
+      "title": "Count of Range Sum",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36
+  },
+  "intersection_of_two_arrays": {
+      "qno": "349",
+      "title": "Intersection of Two Arrays",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.8
+  },
+  "intersection_of_two_arrays_ii": {
+      "qno": "350",
+      "title": "Intersection of Two Arrays II",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.5
+  },
+  "data_stream_as_disjoint_intervals": {
+      "qno": "352",
+      "title": "Data Stream as Disjoint Intervals",
+      "tags": [
+          "Binary Search",
+          "Design",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 60.1
+  },
+  "russian_doll_envelopes": {
+      "qno": "354",
+      "title": "Russian Doll Envelopes",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.1
+  },
+  "design_hit_counter": {
+      "qno": "362",
+      "title": "Design Hit Counter",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Design",
+          "Queue",
+          "Data Stream"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.7
+  },
+  "max_sum_of_rectangle_no_larger_than_k": {
+      "qno": "363",
+      "title": "Max Sum of Rectangle No Larger Than K",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Matrix",
+          "Prefix Sum",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.2
+  },
+  "valid_perfect_square": {
+      "qno": "367",
+      "title": "Valid Perfect Square",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 43.8
+  },
+  "guess_number_higher_or_lower": {
+      "qno": "374",
+      "title": "Guess Number Higher or Lower",
+      "tags": [
+          "Binary Search",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53.8
+  },
+  "kth_smallest_element_in_a_sorted_matrix": {
+      "qno": "378",
+      "title": "Kth Smallest Element in a Sorted Matrix",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.6
+  },
+  "nth_digit": {
+      "qno": "400",
+      "title": "Nth Digit",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35
+  },
+  "split_array_largest_sum": {
+      "qno": "410",
+      "title": "Split Array Largest Sum",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Greedy",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 55.8
+  },
+  "find_right_interval": {
+      "qno": "436",
+      "title": "Find Right Interval",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.4
+  },
+  "arranging_coins": {
+      "qno": "441",
+      "title": "Arranging Coins",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 46.7
+  },
+  "132_pattern": {
+      "qno": "456",
+      "title": "132 Pattern",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Stack",
+          "Monotonic Stack",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.8
+  },
+  "heaters": {
+      "qno": "475",
+      "title": "Heaters",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.2
+  },
+  "smallest_good_base": {
+      "qno": "483",
+      "title": "Smallest Good Base",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41
+  },
+  "reverse_pairs": {
+      "qno": "493",
+      "title": "Reverse Pairs",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 30.8
+  },
+  "count_subarrays_with_more_ones_than_zeros": {
+      "qno": "2031",
+      "title": "Count Subarrays With More Ones Than Zeros",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.1
+  },
+  "k-diff_pairs_in_an_array": {
+      "qno": "532",
+      "title": "K-diff Pairs in an Array",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.1
+  },
+  "single_element_in_a_sorted_array": {
+      "qno": "540",
+      "title": "Single Element in a Sorted Array",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.2
+  },
+  "valid_triangle_number": {
+      "qno": "611",
+      "title": "Valid Triangle Number",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.3
+  },
+  "sum_of_square_numbers": {
+      "qno": "633",
+      "title": "Sum of Square Numbers",
+      "tags": [
+          "Math",
+          "Two Pointers",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.6
+  },
+  "maximum_average_subarray_ii": {
+      "qno": "644",
+      "title": "Maximum Average Subarray II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.8
+  },
+  "find_k_closest_elements": {
+      "qno": "658",
+      "title": "Find K Closest Elements",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sliding Window",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.6
+  },
+  "kth_smallest_number_in_multiplication_table": {
+      "qno": "668",
+      "title": "Kth Smallest Number in Multiplication Table",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51.8
+  },
+  "maximum_length_of_repeated_subarray": {
+      "qno": "718",
+      "title": "Maximum Length of Repeated Subarray",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sliding Window",
+          "Rolling Hash",
+          "Hash Function"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.9
+  },
+  "find_k-th_smallest_pair_distance": {
+      "qno": "719",
+      "title": "Find K-th Smallest Pair Distance",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.3
+  },
+  "my_calendar_i": {
+      "qno": "729",
+      "title": "My Calendar I",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Design",
+          "Segment Tree",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.6
+  },
+  "my_calendar_ii": {
+      "qno": "731",
+      "title": "My Calendar II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Design",
+          "Segment Tree",
+          "Prefix Sum",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.6
+  },
+  "my_calendar_iii": {
+      "qno": "732",
+      "title": "My Calendar III",
+      "tags": [
+          "Binary Search",
+          "Design",
+          "Segment Tree",
+          "Prefix Sum",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 71.7
+  },
+  "find_smallest_letter_greater_than_target": {
+      "qno": "744",
+      "title": "Find Smallest Letter Greater Than Target",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.4
+  },
+  "reach_a_number": {
+      "qno": "754",
+      "title": "Reach a Number",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.2
+  },
+  "search_in_a_sorted_array_of_unknown_size": {
+      "qno": "702",
+      "title": "Search in a Sorted Array of Unknown Size",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.2
+  },
+  "minimize_max_distance_to_gas_station": {
+      "qno": "774",
+      "title": "Minimize Max Distance to Gas Station",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 52.4
+  },
+  "binary_search": {
+      "qno": "704",
+      "title": "Binary Search",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.9
+  },
+  "swim_in_rising_water": {
+      "qno": "778",
+      "title": "Swim in Rising Water",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.1
+  },
+  "k-th_smallest_prime_fraction": {
+      "qno": "786",
+      "title": "K-th Smallest Prime Fraction",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.1
+  },
+  "number_of_matching_subsequences": {
+      "qno": "792",
+      "title": "Number of Matching Subsequences",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "String",
+          "Binary Search",
+          "Dynamic Programming",
+          "Trie",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.9
+  },
+  "preimage_size_of_factorial_zeroes_function": {
+      "qno": "793",
+      "title": "Preimage Size of Factorial Zeroes Function",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.7
+  },
+  "friends_of_appropriate_ages": {
+      "qno": "825",
+      "title": "Friends Of Appropriate Ages",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.8
+  },
+  "most_profit_assigning_work": {
+      "qno": "826",
+      "title": "Most Profit Assigning Work",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.9
+  },
+  "peak_index_in_a_mountain_array": {
+      "qno": "852",
+      "title": "Peak Index in a Mountain Array",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.3
+  },
+  "shortest_subarray_with_sum_at_least_k": {
+      "qno": "862",
+      "title": "Shortest Subarray with Sum at Least K",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Queue",
+          "Sliding Window",
+          "Heap (Priority Queue)",
+          "Prefix Sum",
+          "Monotonic Queue"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 26.1
+  },
+  "random_pick_with_blacklist": {
+      "qno": "710",
+      "title": "Random Pick with Blacklist",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Binary Search",
+          "Sorting",
+          "Randomized"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 33.5
+  },
+  "koko_eating_bananas": {
+      "qno": "875",
+      "title": "Koko Eating Bananas",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.5
+  },
+  "nth_magical_number": {
+      "qno": "878",
+      "title": "Nth Magical Number",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 35.4
+  },
+  "random_pick_with_weight": {
+      "qno": "528",
+      "title": "Random Pick with Weight",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Prefix Sum",
+          "Randomized"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47
   },
   "random_point_in_non-overlapping_rectangles": {
-    qno: 497,
-    title: "Random Point in Non-overlapping Rectangles",
-    tags: [
-      "Array",
-      "Math",
-      "Binary Search",
-      "Reservoir Sampling",
-      "Prefix Sum",
-      "Ordered Set",
-      "Randomized",
-    ],
-    default: "Reservoir Sampling",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.0,
+      "qno": "497",
+      "title": "Random Point in Non-overlapping Rectangles",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Reservoir Sampling",
+          "Prefix Sum",
+          "Ordered Set",
+          "Randomized"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.1
   },
-  the_skyline_problem: {
-    qno: 218,
-    title: "The Skyline Problem",
-    tags: [
-      "Array",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Line Sweep",
-      "Heap (Priority Queue)",
-      "Ordered Set",
-    ],
-    default: "Line Sweep",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 42.7,
+  "super_egg_drop": {
+      "qno": "887",
+      "title": "Super Egg Drop",
+      "tags": [
+          "Math",
+          "Binary Search",
+          "Dynamic Programming"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 27.8
   },
-  perfect_rectangle: {
-    qno: 391,
-    title: "Perfect Rectangle",
-    tags: ["Array", "Line Sweep"],
-    default: "Line Sweep",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 33.8,
+  "fair_candy_swap": {
+      "qno": "888",
+      "title": "Fair Candy Swap",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.9
   },
-  rectangle_area_ii: {
-    qno: 850,
-    title: "Rectangle Area II",
-    tags: ["Array", "Segment Tree", "Line Sweep"],
-    default: "Line Sweep",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 54.2,
+  "numbers_at_most_n_given_digit_set": {
+      "qno": "902",
+      "title": "Numbers At Most N Given Digit Set",
+      "tags": [
+          "Array",
+          "Math",
+          "String",
+          "Binary Search",
+          "Dynamic Programming"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.6
   },
-  minimum_interval_to_include_each_query: {
-    qno: 1851,
-    title: "Minimum Interval to Include Each Query",
-    tags: [
-      "Ordered Set",
-      "Array",
-      "Binary Search",
-      "Line Sweep",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Line Sweep",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 49.6,
+  "online_election": {
+      "qno": "911",
+      "title": "Online Election",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Design"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.1
   },
-  word_frequency: {
-    qno: 192,
-    title: "Word Frequency",
-    tags: ["Shell"],
-    default: "Shell",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 25.8,
+  "time_based_key-value_store": {
+      "qno": "981",
+      "title": "Time Based Key-Value Store",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Binary Search",
+          "Design"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.3
   },
-  valid_phone_numbers: {
-    qno: 193,
-    title: "Valid Phone Numbers",
-    tags: ["Shell"],
-    default: "Shell",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 26.1,
+  "max_consecutive_ones_iii": {
+      "qno": "1004",
+      "title": "Max Consecutive Ones III",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.5
   },
-  transpose_file: {
-    qno: 194,
-    title: "Transpose File",
-    tags: ["Shell"],
-    default: "Shell",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 26.4,
+  "capacity_to_ship_packages_within_d_days": {
+      "qno": "1011",
+      "title": "Capacity To Ship Packages Within D Days",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.9
   },
-  tenth_line: {
-    qno: 195,
-    title: "Tenth Line",
-    tags: ["Shell"],
-    default: "Shell",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 33.8,
+  "missing_element_in_sorted_array": {
+      "qno": "1060",
+      "title": "Missing Element in Sorted Array",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.2
+  },
+  "longest_repeating_substring": {
+      "qno": "1062",
+      "title": "Longest Repeating Substring",
+      "tags": [
+          "String",
+          "Binary Search",
+          "Dynamic Programming",
+          "Rolling Hash",
+          "Suffix Array",
+          "Hash Function"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.9
+  },
+  "fixed_point": {
+      "qno": "1064",
+      "title": "Fixed Point",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.1
+  },
+  "two_sum_less_than_k": {
+      "qno": "1099",
+      "title": "Two Sum Less Than K",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.8
+  },
+  "longest_arithmetic_subsequence": {
+      "qno": "1027",
+      "title": "Longest Arithmetic Subsequence",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Dynamic Programming"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.1
+  },
+  "path_with_maximum_minimum_value": {
+      "qno": "1102",
+      "title": "Path With Maximum Minimum Value",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.7
+  },
+  "check_if_a_number_is_majority_element_in_a_sorted_array": {
+      "qno": "1150",
+      "title": "Check If a Number Is Majority Element in a Sorted Array",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.9
+  },
+  "longest_duplicate_substring": {
+      "qno": "1044",
+      "title": "Longest Duplicate Substring",
+      "tags": [
+          "String",
+          "Binary Search",
+          "Sliding Window",
+          "Rolling Hash",
+          "Suffix Array",
+          "Hash Function"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 30.6
+  },
+  "shortest_distance_to_target_color": {
+      "qno": "1182",
+      "title": "Shortest Distance to Target Color",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.4
+  },
+  "find_smallest_common_element_in_all_rows": {
+      "qno": "1198",
+      "title": "Find Smallest Common Element in All Rows",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Matrix",
+          "Counting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 76.5
+  },
+  "intersection_of_three_sorted_arrays": {
+      "qno": "1213",
+      "title": "Intersection of Three Sorted Arrays",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Counting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79.8
+  },
+  "two_sum_bsts": {
+      "qno": "1214",
+      "title": "Two Sum BSTs",
+      "tags": [
+          "Two Pointers",
+          "Binary Search",
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.2
+  },
+  "find_in_mountain_array": {
+      "qno": "1095",
+      "title": "Find in Mountain Array",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.3
+  },
+  "divide_chocolate": {
+      "qno": "1231",
+      "title": "Divide Chocolate",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 58.8
+  },
+  "sum_of_mutated_array_closest_to_target": {
+      "qno": "1300",
+      "title": "Sum of Mutated Array Closest to Target",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.5
+  },
+  "snapshot_array": {
+      "qno": "1146",
+      "title": "Snapshot Array",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Design"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.9
+  },
+  "online_majority_element_in_subarray": {
+      "qno": "1157",
+      "title": "Online Majority Element In Subarray",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Design",
+          "Binary Indexed Tree",
+          "Segment Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41.8
+  },
+  "compare_strings_by_frequency_of_the_smallest_character": {
+      "qno": "1170",
+      "title": "Compare Strings by Frequency of the Smallest Character",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "String",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.3
+  },
+  "make_array_strictly_increasing": {
+      "qno": "1187",
+      "title": "Make Array Strictly Increasing",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 58.2
+  },
+  "range_frequency_queries": {
+      "qno": "2080",
+      "title": "Range Frequency Queries",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Design",
+          "Segment Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.1
+  },
+  "minimum_garden_perimeter_to_collect_enough_apples": {
+      "qno": "1954",
+      "title": "Minimum Garden Perimeter to Collect Enough Apples",
+      "tags": [
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.4
+  },
+  "kth_ancestor_of_a_tree_node": {
+      "qno": "1483",
+      "title": "Kth Ancestor of a Tree Node",
+      "tags": [
+          "Binary Search",
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Design"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 34.8
+  },
+  "ugly_number_iii": {
+      "qno": "1201",
+      "title": "Ugly Number III",
+      "tags": [
+          "Math",
+          "Binary Search",
+          "Combinatorics",
+          "Number Theory"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 29.7
+  },
+  "get_equal_substrings_within_budget": {
+      "qno": "1208",
+      "title": "Get Equal Substrings Within Budget",
+      "tags": [
+          "String",
+          "Binary Search",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.3
+  },
+  "sum_of_floored_pairs": {
+      "qno": "1862",
+      "title": "Sum of Floored Pairs",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 28.8
+  },
+  "maximum_candies_allocated_to_k_children": {
+      "qno": "2226",
+      "title": "Maximum Candies Allocated to K Children",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.2
+  },
+  "maximum_profit_in_job_scheduling": {
+      "qno": "1235",
+      "title": "Maximum Profit in Job Scheduling",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 54.4
+  },
+  "find_positive_integer_solution_for_a_given_equation": {
+      "qno": "1237",
+      "title": "Find Positive Integer Solution for a Given Equation",
+      "tags": [
+          "Math",
+          "Two Pointers",
+          "Binary Search",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.6
+  },
+  "leftmost_column_with_at_least_a_one": {
+      "qno": "1428",
+      "title": "Leftmost Column with at Least a One",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Matrix",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.5
+  },
+  "maximum_font_to_fit_a_sentence_in_a_screen": {
+      "qno": "1618",
+      "title": "Maximum Font to Fit a Sentence in a Screen",
+      "tags": [
+          "Array",
+          "String",
+          "Binary Search",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.9
+  },
+  "search_suggestions_system": {
+      "qno": "1268",
+      "title": "Search Suggestions System",
+      "tags": [
+          "Array",
+          "String",
+          "Binary Search",
+          "Trie",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.1
+  },
+  "find_the_smallest_divisor_given_a_threshold": {
+      "qno": "1283",
+      "title": "Find the Smallest Divisor Given a Threshold",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.6
+  },
+  "maximum_side_length_of_a_square_with_sum_less_than_or_equal_to_threshold": {
+      "qno": "1292",
+      "title": "Maximum Side Length of a Square with Sum Less than or Equal to Threshold",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.5
+  },
+  "the_k_weakest_rows_in_a_matrix": {
+      "qno": "1337",
+      "title": "The K Weakest Rows in a Matrix",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.5
+  },
+  "check_if_n_and_its_double_exist": {
+      "qno": "1346",
+      "title": "Check If N and Its Double Exist",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 37.3
+  },
+  "tweet_counts_per_frequency": {
+      "qno": "1348",
+      "title": "Tweet Counts Per Frequency",
+      "tags": [
+          "Hash Table",
+          "Binary Search",
+          "Design",
+          "Sorting",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.6
+  },
+  "count_negative_numbers_in_a_sorted_matrix": {
+      "qno": "1351",
+      "title": "Count Negative Numbers in a Sorted Matrix",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.4
+  },
+  "find_the_distance_value_between_two_arrays": {
+      "qno": "1385",
+      "title": "Find the Distance Value Between Two Arrays",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.6
+  },
+  "find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows": {
+      "qno": "1439",
+      "title": "Find the Kth Smallest Sum of a Matrix With Sorted Rows",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.7
+  },
+  "find_two_non-overlapping_sub-arrays_each_with_target_sum": {
+      "qno": "1477",
+      "title": "Find Two Non-overlapping Sub-arrays Each With Target Sum",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sliding Window"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.5
+  },
+  "minimum_number_of_days_to_make_m_bouquets": {
+      "qno": "1482",
+      "title": "Minimum Number of Days to Make m Bouquets",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.2
+  },
+  "avoid_flood_in_the_city": {
+      "qno": "1488",
+      "title": "Avoid Flood in The City",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 27
+  },
+  "range_sum_of_sorted_subarray_sums": {
+      "qno": "1508",
+      "title": "Range Sum of Sorted Subarray Sums",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.4
+  },
+  "number_of_subsequences_that_satisfy_the_given_sum_condition": {
+      "qno": "1498",
+      "title": "Number of Subsequences That Satisfy the Given Sum Condition",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.7
+  },
+  "find_a_value_of_a_mysterious_function_closest_to_target": {
+      "qno": "1521",
+      "title": "Find a Value of a Mysterious Function Closest to Target",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Bit Manipulation",
+          "Segment Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 45.2
+  },
+  "kth_missing_positive_number": {
+      "qno": "1539",
+      "title": "Kth Missing Positive Number",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.3
+  },
+  "find_the_index_of_the_large_integer": {
+      "qno": "1533",
+      "title": "Find the Index of the Large Integer",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.1
+  },
+  "magnetic_force_between_two_balls": {
+      "qno": "1552",
+      "title": "Magnetic Force Between Two Balls",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.1
+  },
+  "shortest_subarray_to_be_removed_to_make_array_sorted": {
+      "qno": "1574",
+      "title": "Shortest Subarray to be Removed to Make Array Sorted",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38
+  },
+  "find_latest_group_of_size_m": {
+      "qno": "1562",
+      "title": "Find Latest Group of Size M",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Simulation"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.9
+  },
+  "special_array_with_x_elements_greater_than_or_equal_x": {
+      "qno": "1608",
+      "title": "Special Array With X Elements Greater Than or Equal X",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.9
+  },
+  "path_with_minimum_effort": {
+      "qno": "1631",
+      "title": "Path With Minimum Effort",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.8
+  },
+  "minimum_number_of_removals_to_make_mountain_array": {
+      "qno": "1671",
+      "title": "Minimum Number of Removals to Make Mountain Array",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Greedy"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41.8
+  },
+  "sell_diminishing-valued_colored_balls": {
+      "qno": "1648",
+      "title": "Sell Diminishing-Valued Colored Balls",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30
+  },
+  "create_sorted_array_through_instructions": {
+      "qno": "1649",
+      "title": "Create Sorted Array through Instructions",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39
+  },
+  "minimum_operations_to_reduce_x_to_zero": {
+      "qno": "1658",
+      "title": "Minimum Operations to Reduce X to Zero",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.7
+  },
+  "ways_to_split_array_into_three_subarrays": {
+      "qno": "1712",
+      "title": "Ways to Split Array Into Three Subarrays",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33
+  },
+  "minimum_operations_to_make_a_subsequence": {
+      "qno": "1713",
+      "title": "Minimum Operations to Make a Subsequence",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Greedy"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.6
+  },
+  "maximum_number_of_events_that_can_be_attended_ii": {
+      "qno": "1751",
+      "title": "Maximum Number of Events That Can Be Attended II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.7
+  },
+  "building_boxes": {
+      "qno": "1739",
+      "title": "Building Boxes",
+      "tags": [
+          "Math",
+          "Binary Search",
+          "Greedy"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51.9
+  },
+  "minimum_limit_of_balls_in_a_bag": {
+      "qno": "1760",
+      "title": "Minimum Limit of Balls in a Bag",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.3
+  },
+  "count_pairs_of_nodes": {
+      "qno": "1782",
+      "title": "Count Pairs Of Nodes",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Graph",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.2
+  },
+  "maximum_score_of_a_good_subarray": {
+      "qno": "1793",
+      "title": "Maximum Score of a Good Subarray",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 64.3
+  },
+  "maximum_value_at_a_given_index_in_a_bounded_array": {
+      "qno": "1802",
+      "title": "Maximum Value at a Given Index in a Bounded Array",
+      "tags": [
+          "Binary Search",
+          "Greedy"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.2
+  },
+  "minimum_absolute_sum_difference": {
+      "qno": "1818",
+      "title": "Minimum Absolute Sum Difference",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30.7
+  },
+  "closest_room": {
+      "qno": "1847",
+      "title": "Closest Room",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.9
+  },
+  "frequency_of_the_most_frequent_element": {
+      "qno": "1838",
+      "title": "Frequency of the Most Frequent Element",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Sliding Window",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.5
+  },
+  "minimum_interval_to_include_each_query": {
+      "qno": "1851",
+      "title": "Minimum Interval to Include Each Query",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Line Sweep",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 49.9
+  },
+  "maximum_distance_between_a_pair_of_values": {
+      "qno": "1855",
+      "title": "Maximum Distance Between a Pair of Values",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.4
+  },
+  "minimum_speed_to_arrive_on_time": {
+      "qno": "1870",
+      "title": "Minimum Speed to Arrive on Time",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.8
+  },
+  "find_the_student_that_will_replace_the_chalk": {
+      "qno": "1894",
+      "title": "Find the Student that Will Replace the Chalk",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Simulation",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.7
+  },
+  "minimum_space_wasted_from_packaging": {
+      "qno": "1889",
+      "title": "Minimum Space Wasted From Packaging",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 31.8
+  },
+  "maximum_number_of_removable_characters": {
+      "qno": "1898",
+      "title": "Maximum Number of Removable Characters",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.8
+  },
+  "count_pairs_in_two_arrays": {
+      "qno": "1885",
+      "title": "Count Pairs in Two Arrays",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.8
+  },
+  "cutting_ribbons": {
+      "qno": "1891",
+      "title": "Cutting Ribbons",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.6
+  },
+  "find_a_peak_element_ii": {
+      "qno": "1901",
+      "title": "Find a Peak Element II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.8
+  },
+  "longest_common_subpath": {
+      "qno": "1923",
+      "title": "Longest Common Subpath",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Rolling Hash",
+          "Suffix Array",
+          "Hash Function"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 28.2
+  },
+  "merge_bsts_to_create_single_bst": {
+      "qno": "1932",
+      "title": "Merge BSTs to Create Single BST",
+      "tags": [
+          "Hash Table",
+          "Binary Search",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.2
+  },
+  "kth_smallest_subarray_sum": {
+      "qno": "1918",
+      "title": "Kth Smallest Subarray Sum",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sliding Window"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.7
+  },
+  "minimum_time_for_k_virus_variants_to_spread": {
+      "qno": "1956",
+      "title": "Minimum Time For K Virus Variants to Spread",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Geometry",
+          "Enumeration"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.2
+  },
+  "find_the_longest_valid_obstacle_course_at_each_position": {
+      "qno": "1964",
+      "title": "Find the Longest Valid Obstacle Course at Each Position",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Binary Indexed Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.9
+  },
+  "last_day_where_you_can_still_cross": {
+      "qno": "1970",
+      "title": "Last Day Where You Can Still Cross",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.9
+  },
+  "binary_searchable_numbers_in_an_unsorted_array": {
+      "qno": "1966",
+      "title": "Binary Searchable Numbers in an Unsorted Array",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.9
+  },
+  "maximum_earnings_from_taxi": {
+      "qno": "2008",
+      "title": "Maximum Earnings From Taxi",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.3
+  },
+  "minimum_number_of_operations_to_make_array_continuous": {
+      "qno": "2009",
+      "title": "Minimum Number of Operations to Make Array Continuous",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Sliding Window"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 52.7
+  },
+  "maximize_the_confusion_of_an_exam": {
+      "qno": "2024",
+      "title": "Maximize the Confusion of an Exam",
+      "tags": [
+          "String",
+          "Binary Search",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.3
+  },
+  "kth_smallest_product_of_two_sorted_arrays": {
+      "qno": "2040",
+      "title": "Kth Smallest Product of Two Sorted Arrays",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 29.1
+  },
+  "partition_array_into_two_arrays_to_minimize_sum_difference": {
+      "qno": "2035",
+      "title": "Partition Array Into Two Arrays to Minimize Sum Difference",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Dynamic Programming",
+          "Bit Manipulation",
+          "Ordered Set",
+          "Bitmask"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 20.4
+  },
+  "two_best_non-overlapping_events": {
+      "qno": "2054",
+      "title": "Two Best Non-Overlapping Events",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.6
+  },
+  "plates_between_candles": {
+      "qno": "2055",
+      "title": "Plates Between Candles",
+      "tags": [
+          "Array",
+          "String",
+          "Binary Search",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.9
+  },
+  "most_beautiful_item_for_each_query": {
+      "qno": "2070",
+      "title": "Most Beautiful Item for Each Query",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.6
+  },
+  "maximum_number_of_tasks_you_can_assign": {
+      "qno": "2071",
+      "title": "Maximum Number of Tasks You Can Assign",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Queue",
+          "Sorting",
+          "Monotonic Queue"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 33.6
+  },
+  "minimized_maximum_of_products_distributed_to_any_store": {
+      "qno": "2064",
+      "title": "Minimized Maximum of Products Distributed to Any Store",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.1
+  },
+  "find_target_indices_after_sorting_array": {
+      "qno": "2089",
+      "title": "Find Target Indices After Sorting Array",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.4
+  },
+  "maximum_fruits_harvested_after_at_most_k_steps": {
+      "qno": "2106",
+      "title": "Maximum Fruits Harvested After at Most K Steps",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.2
+  },
+  "minimum_operations_to_make_the_array_k-increasing": {
+      "qno": "2111",
+      "title": "Minimum Operations to Make the Array K-Increasing",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.6
+  },
+  "maximum_running_time_of_n_computers": {
+      "qno": "2141",
+      "title": "Maximum Running Time of N Computers",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50
+  },
+  "pour_water_between_buckets_to_make_water_levels_equal": {
+      "qno": "2137",
+      "title": "Pour Water Between Buckets to Make Water Levels Equal",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.6
+  },
+  "count_good_triplets_in_an_array": {
+      "qno": "2179",
+      "title": "Count Good Triplets in an Array",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41.2
+  },
+  "minimum_time_to_complete_trips": {
+      "qno": "2187",
+      "title": "Minimum Time to Complete Trips",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.8
+  },
+  "sum_of_scores_of_built_strings": {
+      "qno": "2223",
+      "title": "Sum of Scores of Built Strings",
+      "tags": [
+          "String",
+          "Binary Search",
+          "Rolling Hash",
+          "Suffix Array",
+          "String Matching",
+          "Hash Function"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.2
+  },
+  "maximum_total_beauty_of_the_gardens": {
+      "qno": "2234",
+      "title": "Maximum Total Beauty of the Gardens",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 29.4
+  },
+  "count_number_of_rectangles_containing_each_point": {
+      "qno": "2250",
+      "title": "Count Number of Rectangles Containing Each Point",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Binary Indexed Tree",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.1
+  },
+  "number_of_flowers_in_full_bloom": {
+      "qno": "2251",
+      "title": "Number of Flowers in Full Bloom",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Sorting",
+          "Prefix Sum",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 56.8
+  },
+  "escape_the_spreading_fire": {
+      "qno": "2258",
+      "title": "Escape the Spreading Fire",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 35.2
+  },
+  "maximum_white_tiles_covered_by_a_carpet": {
+      "qno": "2271",
+      "title": "Maximum White Tiles Covered by a Carpet",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.7
+  },
+  "booking_concert_tickets_in_groups": {
+      "qno": "2286",
+      "title": "Booking Concert Tickets in Groups",
+      "tags": [
+          "Binary Search",
+          "Design",
+          "Binary Indexed Tree",
+          "Segment Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 17.8
+  },
+  "successful_pairs_of_spells_and_potions": {
+      "qno": "2300",
+      "title": "Successful Pairs of Spells and Potions",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.3
+  },
+  "count_subarrays_with_score_less_than_k": {
+      "qno": "2302",
+      "title": "Count Subarrays With Score Less Than K",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 54.9
+  },
+  "the_latest_time_to_catch_a_bus": {
+      "qno": "2332",
+      "title": "The Latest Time to Catch a Bus",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 27.2
+  },
+  "number_of_excellent_pairs": {
+      "qno": "2354",
+      "title": "Number of Excellent Pairs",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Bit Manipulation"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.3
+  },
+  "maximum_number_of_groups_entering_a_competition": {
+      "qno": "2358",
+      "title": "Maximum Number of Groups Entering a Competition",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Greedy"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68
+  },
+  "maximum_number_of_robots_within_budget": {
+      "qno": "2398",
+      "title": "Maximum Number of Robots Within Budget",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Queue",
+          "Sliding Window",
+          "Heap (Priority Queue)",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 34.6
+  },
+  "longest_subsequence_with_limited_sum": {
+      "qno": "2389",
+      "title": "Longest Subsequence With Limited Sum",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.8
+  },
+  "smallest_subarrays_with_maximum_bitwise_or": {
+      "qno": "2411",
+      "title": "Smallest Subarrays With Maximum Bitwise OR",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Bit Manipulation",
+          "Sliding Window"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.2
+  },
+  "longest_uploaded_prefix": {
+      "qno": "2424",
+      "title": "Longest Uploaded Prefix",
+      "tags": [
+          "Binary Search",
+          "Union Find",
+          "Design",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.4
+  },
+  "number_of_pairs_satisfying_inequality": {
+      "qno": "2426",
+      "title": "Number of Pairs Satisfying Inequality",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.1
+  },
+  "median_of_a_row_wise_sorted_matrix": {
+      "qno": "2387",
+      "title": "Median of a Row Wise Sorted Matrix",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.1
+  },
+  "minimize_maximum_of_array": {
+      "qno": "2439",
+      "title": "Minimize Maximum of Array",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Greedy",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.5
+  },
+  "minimum_cost_to_make_array_equal": {
+      "qno": "2448",
+      "title": "Minimum Cost to Make Array Equal",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 46
+  },
+  "next_greater_element_iv": {
+      "qno": "2454",
+      "title": "Next Greater Element IV",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Stack",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Monotonic Stack"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.7
+  },
+  "split_message_based_on_limit": {
+      "qno": "2468",
+      "title": "Split Message Based on Limit",
+      "tags": [
+          "String",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.6
+  },
+  "closest_nodes_queries_in_a_binary_search_tree": {
+      "qno": "2476",
+      "title": "Closest Nodes Queries in a Binary Search Tree",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.6
+  },
+  "longest_square_streak_in_an_array": {
+      "qno": "2501",
+      "title": "Longest Square Streak in an Array",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.7
+  },
+  "frog_jump_ii": {
+      "qno": "2498",
+      "title": "Frog Jump II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62
+  },
+  "maximum_tastiness_of_candy_basket": {
+      "qno": "2517",
+      "title": "Maximum Tastiness of Candy Basket",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.7
+  },
+  "maximum_count_of_positive_integer_and_negative_integer": {
+      "qno": "2529",
+      "title": "Maximum Count of Positive Integer and Negative Integer",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Counting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71
+  },
+  "maximize_the_minimum_powered_city": {
+      "qno": "2528",
+      "title": "Maximize the Minimum Powered City",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Queue",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.4
+  },
+  "minimize_the_maximum_of_two_arrays": {
+      "qno": "2513",
+      "title": "Minimize the Maximum of Two Arrays",
+      "tags": [
+          "Math",
+          "Binary Search",
+          "Number Theory"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30.5
+  },
+  "minimum_common_value": {
+      "qno": "2540",
+      "title": "Minimum Common Value",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59
+  },
+  "maximum_number_of_integers_to_choose_from_a_range_i": {
+      "qno": "2554",
+      "title": "Maximum Number of Integers to Choose From a Range I",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.9
+  },
+  "minimum_time_to_complete_all_tasks": {
+      "qno": "2589",
+      "title": "Minimum Time to Complete All Tasks",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Stack",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.2
+  },
+  "count_the_number_of_k-big_indices": {
+      "qno": "2519",
+      "title": "Count the Number of K-Big Indices",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.6
+  },
+  "minimum_time_to_repair_cars": {
+      "qno": "2594",
+      "title": "Minimum Time to Repair Cars",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.6
+  },
+  "minimum_time_to_eat_all_grains": {
+      "qno": "2604",
+      "title": "Minimum Time to Eat All Grains",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.7
+  },
+  "maximize_win_from_two_segments": {
+      "qno": "2555",
+      "title": "Maximize Win From Two Segments",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sliding Window"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.1
+  },
+  "house_robber_iv": {
+      "qno": "2560",
+      "title": "House Robber IV",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.6
+  },
+  "count_the_number_of_fair_pairs": {
+      "qno": "2563",
+      "title": "Count the Number of Fair Pairs",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 32.8
+  },
+  "subsequence_with_the_minimum_score": {
+      "qno": "2565",
+      "title": "Subsequence With the Minimum Score",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 31.4
+  },
+  "maximum_number_of_integers_to_choose_from_a_range_ii": {
+      "qno": "2557",
+      "title": "Maximum Number of Integers to Choose From a Range II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.9
+  },
+  "find_the_maximum_number_of_marked_indices": {
+      "qno": "2576",
+      "title": "Find the Maximum Number of Marked Indices",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.6
+  },
+  "prime_subtraction_operation": {
+      "qno": "2601",
+      "title": "Prime Subtraction Operation",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Greedy",
+          "Number Theory"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.8
+  },
+  "minimum_operations_to_make_all_array_elements_equal": {
+      "qno": "2602",
+      "title": "Minimum Operations to Make All Array Elements Equal",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.5
+  },
+  "minimize_the_maximum_difference_of_pairs": {
+      "qno": "2616",
+      "title": "Minimize the Maximum Difference of Pairs",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+  },
+  "minimum_operations_to_make_numbers_non-positive": {
+      "qno": "2702",
+      "title": "Minimum Operations to Make Numbers Non-positive",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51.4
+  },
+  "make_array_empty": {
+      "qno": "2659",
+      "title": "Make Array Empty",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Sorting",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 25.4
+  },
+  "maximum_strictly_increasing_cells_in_a_matrix": {
+      "qno": "2713",
+      "title": "Maximum Strictly Increasing Cells in a Matrix",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Dynamic Programming",
+          "Memoization",
+          "Sorting",
+          "Matrix",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 30.6
+  },
+  "find_the_longest_equal_subarray": {
+      "qno": "2831",
+      "title": "Find the Longest Equal Subarray",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Sliding Window"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.8
+  },
+  "maximum_sum_queries": {
+      "qno": "2736",
+      "title": "Maximum Sum Queries",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Stack",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Sorting",
+          "Monotonic Stack"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 29.1
+  },
+  "maximum_beauty_of_an_array_after_applying_operation": {
+      "qno": "2779",
+      "title": "Maximum Beauty of an Array After Applying Operation",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sliding Window",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.2
+  },
+  "sorting_three_groups": {
+      "qno": "2826",
+      "title": "Sorting Three Groups",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.1
+  },
+  "find_the_safest_path_in_a_grid": {
+      "qno": "2812",
+      "title": "Find the Safest Path in a Grid",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.1
+  },
+  "count_pairs_whose_sum_is_less_than_target": {
+      "qno": "2824",
+      "title": "Count Pairs Whose Sum is Less than Target",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.2
+  },
+  "maximum_number_of_groups_with_increasing_length": {
+      "qno": "2790",
+      "title": "Maximum Number of Groups With Increasing Length",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 19.9
+  },
+  "maximize_the_profit_as_the_salesman": {
+      "qno": "2830",
+      "title": "Maximize the Profit as the Salesman",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.3
+  },
+  "minimum_absolute_difference_between_elements_with_constraint": {
+      "qno": "2817",
+      "title": "Minimum Absolute Difference Between Elements With Constraint",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.8
+  },
+  "minimum_relative_loss_after_buying_chocolates": {
+      "qno": "2819",
+      "title": "Minimum Relative Loss After Buying Chocolates",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 52
+  },
+  "minimum_array_length_after_pair_removals": {
+      "qno": "2856",
+      "title": "Minimum Array Length After Pair Removals",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Binary Search",
+          "Greedy",
+          "Counting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 22.2
+  },
+  "maximum_number_of_alloys": {
+      "qno": "2861",
+      "title": "Maximum Number of Alloys",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.4
+  },
+  "maximum_coins_heroes_can_collect": {
+      "qno": "2838",
+      "title": "Maximum Coins Heroes Can Collect",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.9
+  },
+  "find_building_where_alice_and_bob_can_meet": {
+      "qno": "2940",
+      "title": "Find Building Where Alice and Bob Can Meet",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Stack",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Heap (Priority Queue)",
+          "Monotonic Stack"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 35.3
+  },
+  "maximum_balanced_subsequence_sum": {
+      "qno": "2926",
+      "title": "Maximum Balanced Subsequence Sum",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Binary Indexed Tree",
+          "Segment Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 23.9
+  },
+  "apply_operations_to_maximize_frequency_score": {
+      "qno": "2968",
+      "title": "Apply Operations to Maximize Frequency Score",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Sliding Window",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.3
+  },
+  "find_maximum_non-decreasing_array_length": {
+      "qno": "2945",
+      "title": "Find Maximum Non-decreasing Array Length",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Stack",
+          "Queue",
+          "Monotonic Stack",
+          "Monotonic Queue"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 15.9
+  },
+  "number_of_equal_numbers_blocks": {
+      "qno": "2936",
+      "title": "Number of Equal Numbers Blocks",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Interactive"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.5
+  },
+  "maximum_gcd-sum_of_a_subarray": {
+      "qno": "2941",
+      "title": "Maximum GCD-Sum of a Subarray",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Number Theory"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.4
+  },
+  "maximum_number_that_sum_of_the_prices_is_less_than_or_equal_to_k": {
+      "qno": "3007",
+      "title": "Maximum Number That Sum of the Prices Is Less Than or Equal to K",
+      "tags": [
+          "Binary Search",
+          "Dynamic Programming",
+          "Bit Manipulation"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.4
+  },
+  "find_beautiful_indices_in_the_given_array_i": {
+      "qno": "3006",
+      "title": "Find Beautiful Indices in the Given Array I",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Binary Search",
+          "Rolling Hash",
+          "String Matching",
+          "Hash Function"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.3
+  },
+  "count_the_number_of_incremovable_subarrays_ii": {
+      "qno": "2972",
+      "title": "Count the Number of Incremovable Subarrays II",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.7
+  },
+  "count_the_number_of_incremovable_subarrays_i": {
+      "qno": "2970",
+      "title": "Count the Number of Incremovable Subarrays I",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Binary Search",
+          "Enumeration"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.6
+  },
+  "find_longest_special_substring_that_occurs_thrice_ii": {
+      "qno": "2982",
+      "title": "Find Longest Special Substring That Occurs Thrice II",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Binary Search",
+          "Sliding Window",
+          "Counting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.9
+  },
+  "find_longest_special_substring_that_occurs_thrice_i": {
+      "qno": "2981",
+      "title": "Find Longest Special Substring That Occurs Thrice I",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Binary Search",
+          "Sliding Window",
+          "Counting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.8
+  },
+  "earliest_second_to_mark_indices_ii": {
+      "qno": "3049",
+      "title": "Earliest Second to Mark Indices II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 22.6
+  },
+  "earliest_second_to_mark_indices_i": {
+      "qno": "3048",
+      "title": "Earliest Second to Mark Indices I",
+      "tags": [
+          "Array",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.7
+  },
+  "find_beautiful_indices_in_the_given_array_ii": {
+      "qno": "3008",
+      "title": "Find Beautiful Indices in the Given Array II",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Binary Search",
+          "Rolling Hash",
+          "String Matching",
+          "Hash Function"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 24.4
+  },
+  "find_the_median_of_the_uniqueness_array": {
+      "qno": "3134",
+      "title": "Find the Median of the Uniqueness Array",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Binary Search",
+          "Sliding Window"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 28.3
+  },
+  "minimum_sum_of_values_by_dividing_array": {
+      "qno": "3117",
+      "title": "Minimum Sum of Values by Dividing Array",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Dynamic Programming",
+          "Bit Manipulation",
+          "Segment Tree",
+          "Queue"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 27.4
+  },
+  "kth_smallest_amount_with_single_denomination_combination": {
+      "qno": "3116",
+      "title": "Kth Smallest Amount With Single Denomination Combination",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search",
+          "Bit Manipulation",
+          "Combinatorics",
+          "Number Theory"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 16.2
+  },
+  "find_the_number_of_subarrays_where_boundary_elements_are_maximum": {
+      "qno": "3113",
+      "title": "Find the Number of Subarrays Where Boundary Elements Are Maximum",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 29.4
+  },
+  "find_longest_self-contained_substring": {
+      "qno": "3104",
+      "title": "Find Longest Self-Contained Substring",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Binary Search",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 57.9
+  },
+  "find_products_of_elements_of_big_array": {
+      "qno": "3145",
+      "title": "Find Products of Elements of Big Array",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Bit Manipulation"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 24
+  },
+  "find_the_index_of_permutation": {
+      "qno": "3109",
+      "title": "Find the Index of Permutation",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Merge Sort",
+          "Ordered Set"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.9
+  },
+  "maximum_points_inside_the_square": {
+      "qno": "3143",
+      "title": "Maximum Points Inside the Square",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "String",
+          "Binary Search",
+          "Sorting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.5
+  },
+  "special_array_ii": {
+      "qno": "3152",
+      "title": "Special Array II",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Prefix Sum"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 29.7
+  },
+  "block_placement_queries": {
+      "qno": "3161",
+      "title": "Block Placement Queries",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Binary Indexed Tree",
+          "Segment Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 13.3
+  },
+  "find_subarray_with_bitwise_or_closest_to_k": {
+      "qno": "3171",
+      "title": "Find Subarray With Bitwise OR Closest to K",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Bit Manipulation",
+          "Segment Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 30.8
+  },
+  "maximum_total_damage_with_spell_casting": {
+      "qno": "3186",
+      "title": "Maximum Total Damage With Spell Casting",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sorting",
+          "Counting"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 25.5
+  },
+  "equalize_strings_by_adding_or_removing_characters_at_ends": {
+      "qno": "3135",
+      "title": "Equalize Strings by Adding or Removing Characters at Ends",
+      "tags": [
+          "String",
+          "Binary Search",
+          "Dynamic Programming",
+          "Sliding Window",
+          "Hash Function"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.5
+  },
+  "maximum_number_of_upgradable_servers": {
+      "qno": "3155",
+      "title": "Maximum Number of Upgradable Servers",
+      "tags": [
+          "Array",
+          "Math",
+          "Binary Search"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.1
+  },
+  "number_of_subarrays_with_and_value_of_k": {
+      "qno": "3209",
+      "title": "Number of Subarrays With AND Value of K",
+      "tags": [
+          "Array",
+          "Binary Search",
+          "Bit Manipulation",
+          "Segment Tree"
+      ],
+      "default": "Binary Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.2
+  },
+  "critical_connections_in_a_network": {
+      "qno": 1192,
+      "title": "Critical Connections in a Network",
+      "tags": [
+          "Depth-First Search",
+          "Graph",
+          "Biconnected Component"
+      ],
+      "default": "Biconnected Component",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 55.7
+  },
+  "implement_rand10()_using_rand7()": {
+      "qno": 470,
+      "title": "Implement Rand10() Using Rand7()",
+      "tags": [
+          "Math",
+          "Rejection Sampling",
+          "Randomized",
+          "Probability And Statistics"
+      ],
+      "default": "Rejection Sampling",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.9
+  },
+  "generate_random_point_in_a_circle": {
+      "qno": 478,
+      "title": "Generate Random Point in a Circle",
+      "tags": [
+          "Math",
+          "Geometry",
+          "Rejection Sampling",
+          "Randomized"
+      ],
+      "default": "Rejection Sampling",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.8
+  },
+  "maximum_gap": {
+      "qno": 164,
+      "title": "Maximum Gap",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Bucket Sort",
+          "Radix Sort"
+      ],
+      "default": "Radix Sort",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.3
+  },
+  "sort_an_array": {
+      "qno": 912,
+      "title": "Sort an Array",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Merge Sort",
+          "Bucket Sort",
+          "Radix Sort",
+          "Counting Sort"
+      ],
+      "default": "Radix Sort",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.3
+  },
+  "query_kth_smallest_trimmed_number": {
+      "qno": 2343,
+      "title": "Query Kth Smallest Trimmed Number",
+      "tags": [
+          "Array",
+          "String",
+          "Divide and Conquer",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Radix Sort",
+          "Quickselect"
+      ],
+      "default": "Radix Sort",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.1
+  },
+  "reconstruct_itinerary": {
+      "qno": 332,
+      "title": "Reconstruct Itinerary",
+      "tags": [
+          "Depth-First Search",
+          "Graph",
+          "Eulerian Circuit"
+      ],
+      "default": "Eulerian Circuit",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.2
+  },
+  "cracking_the_safe": {
+      "qno": 753,
+      "title": "Cracking the Safe",
+      "tags": [
+          "Depth-First Search",
+          "Graph",
+          "Eulerian Circuit"
+      ],
+      "default": "Eulerian Circuit",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 56.9
+  },
+  "valid_arrangement_of_pairs": {
+      "qno": 2097,
+      "title": "Valid Arrangement of Pairs",
+      "tags": [
+          "Depth-First Search",
+          "Graph",
+          "Eulerian Circuit"
+      ],
+      "default": "Eulerian Circuit",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.2
+  },
+  "find_critical_and_pseudo-critical_edges_in_minimum_spanning_tree": {
+      "qno": 1489,
+      "title": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+      "tags": [
+          "Union Find",
+          "Graph",
+          "Sorting",
+          "Minimum Spanning Tree",
+          "Strongly Connected Component"
+      ],
+      "default": "Strongly Connected Component",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 67.7
+  },
+  "minimum_edge_weight_equilibrium_queries_in_a_tree": {
+      "qno": 2846,
+      "title": "Minimum Edge Weight Equilibrium Queries in a Tree",
+      "tags": [
+          "Array",
+          "Tree",
+          "Graph",
+          "Strongly Connected Component"
+      ],
+      "default": "Strongly Connected Component",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.8
+  },
+  "linked_list_random_node": {
+      "qno": 382,
+      "title": "Linked List Random Node",
+      "tags": [
+          "Linked List",
+          "Math",
+          "Reservoir Sampling",
+          "Randomized"
+      ],
+      "default": "Reservoir Sampling",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.2
+  },
+  "random_pick_index": {
+      "qno": 398,
+      "title": "Random Pick Index",
+      "tags": [
+          "Hash Table",
+          "Math",
+          "Reservoir Sampling",
+          "Randomized"
+      ],
+      "default": "Reservoir Sampling",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.4
+  },
+  "random_flip_matrix": {
+      "qno": 519,
+      "title": "Random Flip Matrix",
+      "tags": [
+          "Hash Table",
+          "Math",
+          "Reservoir Sampling",
+          "Randomized"
+      ],
+      "default": "Reservoir Sampling",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.9
+  },
+  "the_skyline_problem": {
+      "qno": 218,
+      "title": "The Skyline Problem",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Line Sweep",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Line Sweep",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.7
+  },
+  "perfect_rectangle": {
+      "qno": 391,
+      "title": "Perfect Rectangle",
+      "tags": [
+          "Array",
+          "Line Sweep"
+      ],
+      "default": "Line Sweep",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 33.8
+  },
+  "rectangle_area_ii": {
+      "qno": 850,
+      "title": "Rectangle Area II",
+      "tags": [
+          "Array",
+          "Segment Tree",
+          "Line Sweep"
+      ],
+      "default": "Line Sweep",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 54.2
+  },
+  "word_frequency": {
+      "qno": 192,
+      "title": "Word Frequency",
+      "tags": [
+          "Shell"
+      ],
+      "default": "Shell",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 25.8
+  },
+  "valid_phone_numbers": {
+      "qno": 193,
+      "title": "Valid Phone Numbers",
+      "tags": [
+          "Shell"
+      ],
+      "default": "Shell",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 26.1
+  },
+  "transpose_file": {
+      "qno": 194,
+      "title": "Transpose File",
+      "tags": [
+          "Shell"
+      ],
+      "default": "Shell",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 26.4
+  },
+  "tenth_line": {
+      "qno": 195,
+      "title": "Tenth Line",
+      "tags": [
+          "Shell"
+      ],
+      "default": "Shell",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 33.8
   },
   "h-index": {
-    qno: 274,
-    title: "H-Index",
-    tags: ["Array", "Sorting", "Counting Sort"],
-    default: "Counting Sort",
+      "qno": 274,
+      "title": "H-Index",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Counting Sort"
+      ],
+      "default": "Counting Sort",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39
+  },
+  "array_partition": {
+      "qno": 561,
+      "title": "Array Partition",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Counting Sort"
+      ],
+      "default": "Counting Sort",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.9
+  },
+  "height_checker": {
+      "qno": 1051,
+      "title": "Height Checker",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Counting Sort"
+      ],
+      "default": "Counting Sort",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.6
+  },
+  "relative_sort_array": {
+      "qno": 1122,
+      "title": "Relative Sort Array",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sorting",
+          "Counting Sort"
+      ],
+      "default": "Counting Sort",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.6
+  },
+  "connecting_cities_with_minimum_cost": {
+      "qno": 1135,
+      "title": "Connecting Cities With Minimum Cost",
+      "tags": [
+          "Union Find",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Minimum Spanning Tree"
+      ],
+      "default": "Minimum Spanning Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62
+  },
+  "optimize_water_distribution_in_a_village": {
+      "qno": 1168,
+      "title": "Optimize Water Distribution in a Village",
+      "tags": [
+          "Union Find",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Minimum Spanning Tree"
+      ],
+      "default": "Minimum Spanning Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 64.8
+  },
+  "min_cost_to_connect_all_points": {
+      "qno": 1584,
+      "title": "Min Cost to Connect All Points",
+      "tags": [
+          "Array",
+          "Union Find",
+          "Graph",
+          "Minimum Spanning Tree"
+      ],
+      "default": "Minimum Spanning Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67
+  },
+  "checking_existence_of_edge_length_limited_paths_ii": {
+      "qno": 1724,
+      "title": "Checking Existence of Edge Length Limited Paths II",
+      "tags": [
+          "Union Find",
+          "Graph",
+          "Minimum Spanning Tree"
+      ],
+      "default": "Minimum Spanning Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51.6
+  },
+  "number_of_distinct_substrings_in_a_string": {
+      "qno": 1698,
+      "title": "Number of Distinct Substrings in a String",
+      "tags": [
+          "String",
+          "Trie",
+          "Rolling Hash",
+          "Suffix Array",
+          "Hash Function"
+      ],
+      "default": "Suffix Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64
+  },
+  "number_of_ways_to_separate_numbers": {
+      "qno": 1977,
+      "title": "Number of Ways to Separate Numbers",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Suffix Array"
+      ],
+      "default": "Suffix Array",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 20.8
+  },
+  "contains_duplicate_iii": {
+      "qno": 220,
+      "title": "Contains Duplicate III",
+      "tags": [
+          "Array",
+          "Sliding Window",
+          "Sorting",
+          "Bucket Sort",
+          "Ordered Set"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 22.8
+  },
+  "top_k_frequent_elements": {
+      "qno": 347,
+      "title": "Top K Frequent Elements",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Divide and Conquer",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Bucket Sort",
+          "Counting",
+          "Quickselect"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.9
+  },
+  "sort_characters_by_frequency": {
+      "qno": 451,
+      "title": "Sort Characters By Frequency",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Bucket Sort",
+          "Counting"
+      ],
+      "default": "Bucket Sort",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.6
+  },
+  "top_k_frequent_words": {
+      "qno": 692,
+      "title": "Top K Frequent Words",
+      "tags": [
+          "String",
+          "Trie",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Bucket Sort",
+          "Counting"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.1
+  },
+  "kth_largest_element_in_an_array": {
+      "qno": 215,
+      "title": "Kth Largest Element in an Array",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Quickselect"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.8
+  },
+  "wiggle_sort_ii": {
+      "qno": 324,
+      "title": "Wiggle Sort II",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Greedy",
+          "Sorting",
+          "Quickselect"
+      ],
+      "default": "Quickselect",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.4
+  },
+  "k_closest_points_to_origin": {
+      "qno": 973,
+      "title": "K Closest Points to Origin",
+      "tags": [
+          "Array",
+          "Math",
+          "Divide and Conquer",
+          "Geometry",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Quickselect"
+      ],
+      "default": "Quickselect",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.5
+  },
+  "find_kth_largest_xor_coordinate_value": {
+      "qno": 1738,
+      "title": "Find Kth Largest XOR Coordinate Value",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Bit Manipulation",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Prefix Sum",
+          "Quickselect"
+      ],
+      "default": "Quickselect",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.8
+  },
+  "find_the_kth_largest_integer_in_the_array": {
+      "qno": 1985,
+      "title": "Find the Kth Largest Integer in the Array",
+      "tags": [
+          "Array",
+          "String",
+          "Divide and Conquer",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Quickselect"
+      ],
+      "default": "Quickselect",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+  },
+  "soup_servings": {
+      "qno": 808,
+      "title": "Soup Servings",
+      "tags": [
+          "Math",
+          "Dynamic Programming",
+          "Probability And Statistics"
+      ],
+      "default": "Probability And Statistics",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54
+  },
+  "new_21_game": {
+      "qno": 837,
+      "title": "New 21 Game",
+      "tags": [
+          "Math",
+          "Dynamic Programming",
+          "Sliding Window",
+          "Probability And Statistics"
+      ],
+      "default": "Probability And Statistics",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45
+  },
+  "toss_strange_coins": {
+      "qno": 1230,
+      "title": "Toss Strange Coins",
+      "tags": [
+          "Array",
+          "Math",
+          "Dynamic Programming",
+          "Probability And Statistics"
+      ],
+      "default": "Probability And Statistics",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.3
+  },
+  "statistics_from_a_large_sample": {
+      "qno": 1093,
+      "title": "Statistics from a Large Sample",
+      "tags": [
+          "Array",
+          "Math",
+          "Probability And Statistics"
+      ],
+      "default": "Probability And Statistics",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42
+  },
+  "airplane_seat_assignment_probability": {
+      "qno": 1227,
+      "title": "Airplane Seat Assignment Probability",
+      "tags": [
+          "Math",
+          "Dynamic Programming",
+          "Brainteaser",
+          "Probability And Statistics"
+      ],
+      "default": "Probability And Statistics",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.4
+  },
+  "probability_of_a_two_boxes_having_the_same_number_of_distinct_balls": {
+      "qno": 1467,
+      "title": "Probability of a Two Boxes Having The Same Number of Distinct Balls",
+      "tags": [
+          "Array",
+          "Math",
+          "Dynamic Programming",
+          "Backtracking",
+          "Combinatorics",
+          "Probability And Statistics"
+      ],
+      "default": "Probability And Statistics",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 60.4
+  },
+  "lru_cache": {
+      "qno": "146",
+      "title": "LRU Cache",
+      "tags": [
+          "Hash Table",
+          "Linked List",
+          "Design",
+          "Doubly-Linked List"
+      ],
+      "default": "Doubly-Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.7
+  },
+  "all_o`one_data_structure": {
+      "qno": "432",
+      "title": "All O`one Data Structure",
+      "tags": [
+          "Hash Table",
+          "Linked List",
+          "Design",
+          "Doubly-Linked List"
+      ],
+      "default": "Doubly-Linked List",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.8
+  },
+  "lfu_cache": {
+      "qno": "460",
+      "title": "LFU Cache",
+      "tags": [
+          "Hash Table",
+          "Linked List",
+          "Design",
+          "Doubly-Linked List"
+      ],
+      "default": "Doubly-Linked List",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.3
+  },
+  "max_stack": {
+      "qno": "716",
+      "title": "Max Stack",
+      "tags": [
+          "Linked List",
+          "Stack",
+          "Design",
+          "Doubly-Linked List",
+          "Ordered Set"
+      ],
+      "default": "Doubly-Linked List",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 45.1
+  },
+  "convert_binary_search_tree_to_sorted_doubly_linked_list": {
+      "qno": "426",
+      "title": "Convert Binary Search Tree to Sorted Doubly Linked List",
+      "tags": [
+          "Linked List",
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree",
+          "Doubly-Linked List"
+      ],
+      "default": "Doubly-Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.8
+  },
+  "flatten_a_multilevel_doubly_linked_list": {
+      "qno": "430",
+      "title": "Flatten a Multilevel Doubly Linked List",
+      "tags": [
+          "Linked List",
+          "Depth-First Search",
+          "Doubly-Linked List"
+      ],
+      "default": "Doubly-Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.1
+  },
+  "design_browser_history": {
+      "qno": "1472",
+      "title": "Design Browser History",
+      "tags": [
+          "Array",
+          "Linked List",
+          "Stack",
+          "Design",
+          "Doubly-Linked List",
+          "Data Stream"
+      ],
+      "default": "Doubly-Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 77.6
+  },
+  "design_a_text_editor": {
+      "qno": "2296",
+      "title": "Design a Text Editor",
+      "tags": [
+          "Linked List",
+          "String",
+          "Stack",
+          "Design",
+          "Simulation",
+          "Doubly-Linked List"
+      ],
+      "default": "Doubly-Linked List",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.6
+  },
+  "building_h2o": {
+      "qno": "1117",
+      "title": "Building H2O",
+      "tags": [
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.2
+  },
+  "print_foobar_alternately": {
+      "qno": "1115",
+      "title": "Print FooBar Alternately",
+      "tags": [
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66
+  },
+  "print_in_order": {
+      "qno": "1114",
+      "title": "Print in Order",
+      "tags": [
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.4
+  },
+  "design_bounded_blocking_queue": {
+      "qno": "1188",
+      "title": "Design Bounded Blocking Queue",
+      "tags": [
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.4
+  },
+  "print_zero_even_odd": {
+      "qno": "1116",
+      "title": "Print Zero Even Odd",
+      "tags": [
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61
+  },
+  "fizz_buzz_multithreaded": {
+      "qno": "1195",
+      "title": "Fizz Buzz Multithreaded",
+      "tags": [
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.4
+  },
+  "the_dining_philosophers": {
+      "qno": "1226",
+      "title": "The Dining Philosophers",
+      "tags": [
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.6
+  },
+  "web_crawler_multithreaded": {
+      "qno": "1242",
+      "title": "Web Crawler Multithreaded",
+      "tags": [
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.1
+  },
+  "traffic_light_controlled_intersection": {
+      "qno": "1279",
+      "title": "Traffic Light Controlled Intersection",
+      "tags": [
+          "Concurrency"
+      ],
+      "default": "Concurrency",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73
+  },
+  "binary_search_tree_iterator": {
+      "qno": "173",
+      "title": "Binary Search Tree Iterator",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Design",
+          "Binary Search Tree",
+          "Binary Tree",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.3
+  },
+  "flatten_2d_vector": {
+      "qno": "251",
+      "title": "Flatten 2D Vector",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Design",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.6
+  },
+  "zigzag_iterator": {
+      "qno": "281",
+      "title": "Zigzag Iterator",
+      "tags": [
+          "Array",
+          "Design",
+          "Queue",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64
+  },
+  "peeking_iterator": {
+      "qno": "284",
+      "title": "Peeking Iterator",
+      "tags": [
+          "Array",
+          "Design",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.6
+  },
+  "flatten_nested_list_iterator": {
+      "qno": "341",
+      "title": "Flatten Nested List Iterator",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Design",
+          "Queue",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.5
+  },
+  "design_compressed_string_iterator": {
+      "qno": "604",
+      "title": "Design Compressed String Iterator",
+      "tags": [
+          "Array",
+          "String",
+          "Design",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 39.8
+  },
+  "rle_iterator": {
+      "qno": "900",
+      "title": "RLE Iterator",
+      "tags": [
+          "Array",
+          "Design",
+          "Counting",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.5
+  },
+  "iterator_for_combination": {
+      "qno": "1286",
+      "title": "Iterator for Combination",
+      "tags": [
+          "String",
+          "Backtracking",
+          "Design",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.3
+  },
+  "binary_search_tree_iterator_ii": {
+      "qno": "1586",
+      "title": "Binary Search Tree Iterator II",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Design",
+          "Binary Search Tree",
+          "Binary Tree",
+          "Iterator"
+      ],
+      "default": "Iterator",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.4
+  },
+  "merge_k_sorted_lists": {
+      "qno": "23",
+      "title": "Merge k Sorted Lists",
+      "tags": [
+          "Linked List",
+          "Divide and Conquer",
+          "Heap (Priority Queue)",
+          "Merge Sort"
+      ],
+      "default": "Merge Sort",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.1
+  },
+  "sort_list": {
+      "qno": "148",
+      "title": "Sort List",
+      "tags": [
+          "Linked List",
+          "Two Pointers",
+          "Divide and Conquer",
+          "Sorting",
+          "Merge Sort"
+      ],
+      "default": "Merge Sort",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.3
+  },
+  "insert_delete_getrandom_o(1)": {
+      "qno": "380",
+      "title": "Insert Delete GetRandom O(1)",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Design",
+          "Randomized"
+      ],
+      "default": "Randomized",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.5
+  },
+  "insert_delete_getrandom_o(1)_-_duplicates_allowed": {
+      "qno": "381",
+      "title": "Insert Delete GetRandom O(1) - Duplicates allowed",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Design",
+          "Randomized"
+      ],
+      "default": "Randomized",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 35.5
+  },
+  "shuffle_an_array": {
+      "qno": "384",
+      "title": "Shuffle an Array",
+      "tags": [
+          "Array",
+          "Math",
+          "Randomized"
+      ],
+      "default": "Randomized",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.4
+  },
+  "best_position_for_a_service_centre": {
+      "qno": "1515",
+      "title": "Best Position for a Service Centre",
+      "tags": [
+          "Math",
+          "Geometry",
+          "Randomized"
+      ],
+      "default": "Randomized",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 35.5
+  },
+  "sliding_window_maximum": {
+      "qno": "239",
+      "title": "Sliding Window Maximum",
+      "tags": [
+          "Array",
+          "Queue",
+          "Sliding Window",
+          "Heap (Priority Queue)",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 46.6
+  },
+  "maximum_sum_circular_subarray": {
+      "qno": "918",
+      "title": "Maximum Sum Circular Subarray",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Dynamic Programming",
+          "Queue",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45
+  },
+  "constrained_subsequence_sum": {
+      "qno": "1425",
+      "title": "Constrained Subsequence Sum",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Queue",
+          "Sliding Window",
+          "Heap (Priority Queue)",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 56.7
+  },
+  "longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit": {
+      "qno": "1438",
+      "title": "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
+      "tags": [
+          "Array",
+          "Queue",
+          "Sliding Window",
+          "Heap (Priority Queue)",
+          "Ordered Set",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.6
+  },
+  "max_value_of_equation": {
+      "qno": "1499",
+      "title": "Max Value of Equation",
+      "tags": [
+          "Array",
+          "Queue",
+          "Sliding Window",
+          "Heap (Priority Queue)",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.1
+  },
+  "delivering_boxes_from_storage_to_ports": {
+      "qno": "1687",
+      "title": "Delivering Boxes from Storage to Ports",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Segment Tree",
+          "Queue",
+          "Heap (Priority Queue)",
+          "Prefix Sum",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.9
+  },
+  "jump_game_vi": {
+      "qno": "1696",
+      "title": "Jump Game VI",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Queue",
+          "Heap (Priority Queue)",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.7
+  },
+  "longest_increasing_subsequence_ii": {
+      "qno": "2407",
+      "title": "Longest Increasing Subsequence II",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Dynamic Programming",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Queue",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 23.7
+  },
+  "count_subarrays_with_fixed_bounds": {
+      "qno": "2444",
+      "title": "Count Subarrays With Fixed Bounds",
+      "tags": [
+          "Array",
+          "Queue",
+          "Sliding Window",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 68
+  },
+  "continuous_subarrays": {
+      "qno": "2762",
+      "title": "Continuous Subarrays",
+      "tags": [
+          "Array",
+          "Queue",
+          "Sliding Window",
+          "Heap (Priority Queue)",
+          "Ordered Set",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.9
+  },
+  "minimum_number_of_coins_for_fruits": {
+      "qno": "2944",
+      "title": "Minimum Number of Coins for Fruits",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Queue",
+          "Heap (Priority Queue)",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.8
+  },
+  "minimum_number_of_coins_for_fruits_ii": {
+      "qno": "2969",
+      "title": "Minimum Number of Coins for Fruits II",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Queue",
+          "Heap (Priority Queue)",
+          "Monotonic Queue"
+      ],
+      "default": "Monotonic Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 55.7
+  },
+  "longest_palindromic_substring": {
+      "qno": "5",
+      "title": "Longest Palindromic Substring",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Dynamic Programming"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34
+  },
+  "container_with_most_water": {
+      "qno": "11",
+      "title": "Container With Most Water",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.5
+  },
+  "3sum": {
+      "qno": "15",
+      "title": "3Sum",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.7
+  },
+  "3sum_closest": {
+      "qno": "16",
+      "title": "3Sum Closest",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.9
+  },
+  "4sum": {
+      "qno": "18",
+      "title": "4Sum",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.4
+  },
+  "remove_nth_node_from_end_of_list": {
+      "qno": "19",
+      "title": "Remove Nth Node From End of List",
+      "tags": [
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.7
+  },
+  "remove_duplicates_from_sorted_array": {
+      "qno": "26",
+      "title": "Remove Duplicates from Sorted Array",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.3
+  },
+  "remove_element": {
+      "qno": "27",
+      "title": "Remove Element",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.2
+  },
+  "find_the_index_of_the_first_occurrence_in_a_string": {
+      "qno": "28",
+      "title": "Find the Index of the First Occurrence in a String",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "String Matching"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 42.7
+  },
+  "next_permutation": {
+      "qno": "31",
+      "title": "Next Permutation",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.3
+  },
+  "trapping_rain_water": {
+      "qno": "42",
+      "title": "Trapping Rain Water",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Dynamic Programming",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.3
+  },
+  "rotate_list": {
+      "qno": "61",
+      "title": "Rotate List",
+      "tags": [
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38
+  },
+  "sort_colors": {
+      "qno": "75",
+      "title": "Sort Colors",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.9
+  },
+  "remove_duplicates_from_sorted_array_ii": {
+      "qno": "80",
+      "title": "Remove Duplicates from Sorted Array II",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.9
+  },
+  "remove_duplicates_from_sorted_list_ii": {
+      "qno": "82",
+      "title": "Remove Duplicates from Sorted List II",
+      "tags": [
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.7
+  },
+  "partition_list": {
+      "qno": "86",
+      "title": "Partition List",
+      "tags": [
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.5
+  },
+  "merge_sorted_array": {
+      "qno": "88",
+      "title": "Merge Sorted Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50
+  },
+  "valid_palindrome": {
+      "qno": "125",
+      "title": "Valid Palindrome",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 47.9
+  },
+  "linked_list_cycle": {
+      "qno": "141",
+      "title": "Linked List Cycle",
+      "tags": [
+          "Hash Table",
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.6
+  },
+  "linked_list_cycle_ii": {
+      "qno": "142",
+      "title": "Linked List Cycle II",
+      "tags": [
+          "Hash Table",
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.7
+  },
+  "reorder_list": {
+      "qno": "143",
+      "title": "Reorder List",
+      "tags": [
+          "Linked List",
+          "Two Pointers",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.1
+  },
+  "reverse_words_in_a_string": {
+      "qno": "151",
+      "title": "Reverse Words in a String",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.6
+  },
+  "intersection_of_two_linked_lists": {
+      "qno": "160",
+      "title": "Intersection of Two Linked Lists",
+      "tags": [
+          "Hash Table",
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.9
+  },
+  "one_edit_distance": {
+      "qno": "161",
+      "title": "One Edit Distance",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.3
+  },
+  "compare_version_numbers": {
+      "qno": "165",
+      "title": "Compare Version Numbers",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.9
+  },
+  "two_sum_iii_-_data_structure_design": {
+      "qno": "170",
+      "title": "Two Sum III - Data structure design",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Design",
+          "Data Stream"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 38.1
+  },
+  "reverse_words_in_a_string_ii": {
+      "qno": "186",
+      "title": "Reverse Words in a String II",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.8
+  },
+  "rotate_array": {
+      "qno": "189",
+      "title": "Rotate Array",
+      "tags": [
+          "Array",
+          "Math",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.8
+  },
+  "happy_number": {
+      "qno": "202",
+      "title": "Happy Number",
+      "tags": [
+          "Hash Table",
+          "Math",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.3
+  },
+  "palindrome_linked_list": {
+      "qno": "234",
+      "title": "Palindrome Linked List",
+      "tags": [
+          "Linked List",
+          "Two Pointers",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53.4
+  },
+  "shortest_word_distance_ii": {
+      "qno": "244",
+      "title": "Shortest Word Distance II",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "String",
+          "Design"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.3
+  },
+  "strobogrammatic_number": {
+      "qno": "246",
+      "title": "Strobogrammatic Number",
+      "tags": [
+          "Hash Table",
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 47.7
+  },
+  "meeting_rooms_ii": {
+      "qno": "253",
+      "title": "Meeting Rooms II",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Prefix Sum"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.4
+  },
+  "closest_binary_search_tree_value_ii": {
+      "qno": "272",
+      "title": "Closest Binary Search Tree Value II",
+      "tags": [
+          "Two Pointers",
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Heap (Priority Queue)",
+          "Binary Tree"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 59.2
+  },
+  "find_the_celebrity": {
+      "qno": "277",
+      "title": "Find the Celebrity",
+      "tags": [
+          "Two Pointers",
+          "Graph",
+          "Interactive"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.4
+  },
+  "move_zeroes": {
+      "qno": "283",
+      "title": "Move Zeroes",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.8
+  },
+  "find_median_from_data_stream": {
+      "qno": "295",
+      "title": "Find Median from Data Stream",
+      "tags": [
+          "Two Pointers",
+          "Design",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Data Stream"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 52
+  },
+  "create_maximum_number": {
+      "qno": "321",
+      "title": "Create Maximum Number",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 30.3
+  },
+  "reverse_string": {
+      "qno": "344",
+      "title": "Reverse String",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.7
+  },
+  "reverse_vowels_of_a_string": {
+      "qno": "345",
+      "title": "Reverse Vowels of a String",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53.4
+  },
+  "sort_transformed_array": {
+      "qno": "360",
+      "title": "Sort Transformed Array",
+      "tags": [
+          "Array",
+          "Math",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.9
+  },
+  "is_subsequence": {
+      "qno": "392",
+      "title": "Is Subsequence",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Dynamic Programming"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48
+  },
+  "valid_word_abbreviation": {
+      "qno": "408",
+      "title": "Valid Word Abbreviation",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 35.9
+  },
+  "string_compression": {
+      "qno": "443",
+      "title": "String Compression",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.8
+  },
+  "assign_cookies": {
+      "qno": "455",
+      "title": "Assign Cookies",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.7
+  },
+  "circular_array_loop": {
+      "qno": "457",
+      "title": "Circular Array Loop",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.2
+  },
+  "magical_string": {
+      "qno": "481",
+      "title": "Magical String",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.4
+  },
+  "longest_uncommon_subsequence_ii": {
+      "qno": "522",
+      "title": "Longest Uncommon Subsequence II",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "String",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.7
+  },
+  "longest_word_in_dictionary_through_deleting": {
+      "qno": "524",
+      "title": "Longest Word in Dictionary through Deleting",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.2
+  },
+  "swapping_nodes_in_a_linked_list": {
+      "qno": "1721",
+      "title": "Swapping Nodes in a Linked List",
+      "tags": [
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68
+  },
+  "reverse_string_ii": {
+      "qno": "541",
+      "title": "Reverse String II",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.8
+  },
+  "next_greater_element_iii": {
+      "qno": "556",
+      "title": "Next Greater Element III",
+      "tags": [
+          "Math",
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.1
+  },
+  "reverse_words_in_a_string_iii": {
+      "qno": "557",
+      "title": "Reverse Words in a String III",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.1
+  },
+  "permutation_in_string": {
+      "qno": "567",
+      "title": "Permutation in String",
+      "tags": [
+          "Hash Table",
+          "Two Pointers",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.5
+  },
+  "shortest_unsorted_continuous_subarray": {
+      "qno": "581",
+      "title": "Shortest Unsorted Continuous Subarray",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Stack",
+          "Greedy",
+          "Sorting",
+          "Monotonic Stack"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.9
+  },
+  "palindromic_substrings": {
+      "qno": "647",
+      "title": "Palindromic Substrings",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Dynamic Programming"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.3
+  },
+  "two_sum_iv_-_input_is_a_bst": {
+      "qno": "653",
+      "title": "Two Sum IV - Input is a BST",
+      "tags": [
+          "Hash Table",
+          "Two Pointers",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.3
+  },
+  "valid_palindrome_ii": {
+      "qno": "680",
+      "title": "Valid Palindrome II",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 40.9
+  },
+  "count_binary_substrings": {
+      "qno": "696",
+      "title": "Count Binary Substrings",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.6
+  },
+  "partition_labels": {
+      "qno": "763",
+      "title": "Partition Labels",
+      "tags": [
+          "Hash Table",
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.9
+  },
+  "swap_adjacent_in_lr_string": {
+      "qno": "777",
+      "title": "Swap Adjacent in LR String",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.8
+  },
+  "number_of_subarrays_with_bounded_maximum": {
+      "qno": "795",
+      "title": "Number of Subarrays with Bounded Maximum",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.2
+  },
+  "expressive_words": {
+      "qno": "809",
+      "title": "Expressive Words",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.2
+  },
+  "shortest_distance_to_a_character": {
+      "qno": "821",
+      "title": "Shortest Distance to a Character",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.6
+  },
+  "push_dominoes": {
+      "qno": "838",
+      "title": "Push Dominoes",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Dynamic Programming"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.2
+  },
+  "backspace_string_compare": {
+      "qno": "844",
+      "title": "Backspace String Compare",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.2
+  },
+  "longest_mountain_in_array": {
+      "qno": "845",
+      "title": "Longest Mountain in Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Dynamic Programming",
+          "Enumeration"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.5
+  },
+  "advantage_shuffle": {
+      "qno": "870",
+      "title": "Advantage Shuffle",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.6
+  },
+  "middle_of_the_linked_list": {
+      "qno": "876",
+      "title": "Middle of the Linked List",
+      "tags": [
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.7
+  },
+  "boats_to_save_people": {
+      "qno": "881",
+      "title": "Boats to Save People",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.4
+  },
+  "sort_array_by_parity": {
+      "qno": "905",
+      "title": "Sort Array By Parity",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.2
+  },
+  "reverse_only_letters": {
+      "qno": "917",
+      "title": "Reverse Only Letters",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.8
+  },
+  "sort_array_by_parity_ii": {
+      "qno": "922",
+      "title": "Sort Array By Parity II",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.8
+  },
+  "3sum_with_multiplicity": {
+      "qno": "923",
+      "title": "3Sum With Multiplicity",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Sorting",
+          "Counting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.4
+  },
+  "long_pressed_name": {
+      "qno": "925",
+      "title": "Long Pressed Name",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 32.3
+  },
+  "di_string_match": {
+      "qno": "942",
+      "title": "DI String Match",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.8
+  },
+  "bag_of_tokens": {
+      "qno": "948",
+      "title": "Bag of Tokens",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59
+  },
+  "pancake_sorting": {
+      "qno": "969",
+      "title": "Pancake Sorting",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.7
+  },
+  "squares_of_a_sorted_array": {
+      "qno": "977",
+      "title": "Squares of a Sorted Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.8
+  },
+  "interval_list_intersections": {
+      "qno": "986",
+      "title": "Interval List Intersections",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.7
+  },
+  "shortest_way_to_form_string": {
+      "qno": "1055",
+      "title": "Shortest Way to Form String",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.3
+  },
+  "camelcase_matching": {
+      "qno": "1023",
+      "title": "Camelcase Matching",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String",
+          "Trie",
+          "String Matching"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.3
+  },
+  "moving_stones_until_consecutive_ii": {
+      "qno": "1040",
+      "title": "Moving Stones Until Consecutive II",
+      "tags": [
+          "Array",
+          "Math",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.7
+  },
+  "longest_string_chain": {
+      "qno": "1048",
+      "title": "Longest String Chain",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "String",
+          "Dynamic Programming"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.1
+  },
+  "last_substring_in_lexicographical_order": {
+      "qno": "1163",
+      "title": "Last Substring in Lexicographical Order",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 34.5
+  },
+  "meeting_scheduler": {
+      "qno": "1229",
+      "title": "Meeting Scheduler",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55
+  },
+  "duplicate_zeros": {
+      "qno": "1089",
+      "title": "Duplicate Zeros",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52
+  },
+  "longest_chunked_palindrome_decomposition": {
+      "qno": "1147",
+      "title": "Longest Chunked Palindrome Decomposition",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Dynamic Programming",
+          "Greedy",
+          "Rolling Hash",
+          "Hash Function"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 58.7
+  },
+  "minimum_number_of_moves_to_make_palindrome": {
+      "qno": "2193",
+      "title": "Minimum Number of Moves to Make Palindrome",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Greedy",
+          "Binary Indexed Tree"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50.9
+  },
+  "print_immutable_linked_list_in_reverse": {
+      "qno": "1265",
+      "title": "Print Immutable Linked List in Reverse",
+      "tags": [
+          "Linked List",
+          "Two Pointers",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 94
+  },
+  "remove_palindromic_subsequences": {
+      "qno": "1332",
+      "title": "Remove Palindromic Subsequences",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.4
+  },
+  "check_if_a_word_occurs_as_a_prefix_of_any_word_in_a_sentence": {
+      "qno": "1455",
+      "title": "Check If a Word Occurs As a Prefix of Any Word in a Sentence",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "String Matching"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.3
+  },
+  "the_k_strongest_values_in_an_array": {
+      "qno": "1471",
+      "title": "The k Strongest Values in an Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.3
+  },
+  "get_the_maximum_score": {
+      "qno": "1537",
+      "title": "Get the Maximum Score",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Dynamic Programming",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.5
+  },
+  "number_of_ways_where_square_of_number_is_equal_to_product_of_two_numbers": {
+      "qno": "1577",
+      "title": "Number of Ways Where Square of Number Is Equal to Product of Two Numbers",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.2
+  },
+  "dot_product_of_two_sparse_vectors": {
+      "qno": "1570",
+      "title": "Dot Product of Two Sparse Vectors",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Design"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 89.8
+  },
+  "split_two_strings_to_make_palindrome": {
+      "qno": "1616",
+      "title": "Split Two Strings to Make Palindrome",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 31.1
+  },
+  "add_two_polynomials_represented_as_linked_lists": {
+      "qno": "1634",
+      "title": "Add Two Polynomials Represented as Linked Lists",
+      "tags": [
+          "Linked List",
+          "Math",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.5
+  },
+  "lowest_common_ancestor_of_a_binary_tree_iii": {
+      "qno": "1650",
+      "title": "Lowest Common Ancestor of a Binary Tree III",
+      "tags": [
+          "Hash Table",
+          "Two Pointers",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.9
+  },
+  "max_number_of_k-sum_pairs": {
+      "qno": "1679",
+      "title": "Max Number of K-Sum Pairs",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.1
+  },
+  "checking_existence_of_edge_length_limited_paths": {
+      "qno": "1697",
+      "title": "Checking Existence of Edge Length Limited Paths",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Union Find",
+          "Graph",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.4
+  },
+  "minimum_length_of_string_after_deleting_similar_ends": {
+      "qno": "1750",
+      "title": "Minimum Length of String After Deleting Similar Ends",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56
+  },
+  "form_array_by_concatenating_subarrays_of_another_array": {
+      "qno": "1764",
+      "title": "Form Array by Concatenating Subarrays of Another Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "String Matching"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.5
+  },
+  "largest_merge_of_two_strings": {
+      "qno": "1754",
+      "title": "Largest Merge Of Two Strings",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.2
+  },
+  "closest_subsequence_sum": {
+      "qno": "1755",
+      "title": "Closest Subsequence Sum",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Dynamic Programming",
+          "Bit Manipulation",
+          "Bitmask"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.2
+  },
+  "merge_strings_alternately": {
+      "qno": "1768",
+      "title": "Merge Strings Alternately",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80
+  },
+  "sentence_similarity_iii": {
+      "qno": "1813",
+      "title": "Sentence Similarity III",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.5
+  },
+  "rotating_the_box": {
+      "qno": "1861",
+      "title": "Rotating the Box",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Matrix"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.5
+  },
+  "minimum_adjacent_swaps_to_reach_the_kth_smallest_number": {
+      "qno": "1850",
+      "title": "Minimum Adjacent Swaps to Reach the Kth Smallest Number",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.3
+  },
+  "faulty_sensor": {
+      "qno": "1826",
+      "title": "Faulty Sensor",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50
+  },
+  "minimize_maximum_pair_sum_in_array": {
+      "qno": "1877",
+      "title": "Minimize Maximum Pair Sum in Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 81.5
+  },
+  "sort_linked_list_already_sorted_using_absolute_values": {
+      "qno": "2046",
+      "title": "Sort Linked List Already Sorted Using Absolute Values",
+      "tags": [
+          "Linked List",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.1
+  },
+  "next_palindrome_using_same_digits": {
+      "qno": "1842",
+      "title": "Next Palindrome Using Same Digits",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.3
+  },
+  "product_of_two_run-length_encoded_arrays": {
+      "qno": "1868",
+      "title": "Product of Two Run-Length Encoded Arrays",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.6
+  },
+  "check_if_string_is_a_prefix_of_array": {
+      "qno": "1961",
+      "title": "Check If String Is a Prefix of Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.8
+  },
+  "minimum_number_of_swaps_to_make_the_string_balanced": {
+      "qno": "1963",
+      "title": "Minimum Number of Swaps to Make the String Balanced",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.7
+  },
+  "reverse_prefix_of_word": {
+      "qno": "2000",
+      "title": "Reverse Prefix of Word",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.2
+  },
+  "delete_the_middle_node_of_a_linked_list": {
+      "qno": "2095",
+      "title": "Delete the Middle Node of a Linked List",
+      "tags": [
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.1
+  },
+  "watering_plants_ii": {
+      "qno": "2105",
+      "title": "Watering Plants II",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Simulation"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.4
+  },
+  "find_first_palindromic_string_in_the_array": {
+      "qno": "2108",
+      "title": "Find First Palindromic String in the Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.9
+  },
+  "adding_spaces_to_a_string": {
+      "qno": "2109",
+      "title": "Adding Spaces to a String",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "String",
+          "Simulation"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.9
+  },
+  "maximum_twin_sum_of_a_linked_list": {
+      "qno": "2130",
+      "title": "Maximum Twin Sum of a Linked List",
+      "tags": [
+          "Linked List",
+          "Two Pointers",
+          "Stack"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.9
+  },
+  "partition_array_according_to_given_pivot": {
+      "qno": "2161",
+      "title": "Partition Array According to Given Pivot",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Simulation"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 84.9
+  },
+  "rearrange_array_elements_by_sign": {
+      "qno": "2149",
+      "title": "Rearrange Array Elements by Sign",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Simulation"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 84.1
+  },
+  "find_all_k-distant_indices_in_an_array": {
+      "qno": "2200",
+      "title": "Find All K-Distant Indices in an Array",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.8
+  },
+  "move_pieces_to_obtain_a_string": {
+      "qno": "2337",
+      "title": "Move Pieces to Obtain a String",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.6
+  },
+  "number_of_arithmetic_triplets": {
+      "qno": "2367",
+      "title": "Number of Arithmetic Triplets",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Enumeration"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.1
+  },
+  "valid_palindrome_iv": {
+      "qno": "2330",
+      "title": "Valid Palindrome IV",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.9
+  },
+  "strictly_palindromic_number": {
+      "qno": "2396",
+      "title": "Strictly Palindromic Number",
+      "tags": [
+          "Math",
+          "Two Pointers",
+          "Brainteaser"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 87.5
+  },
+  "divide_intervals_into_minimum_number_of_groups": {
+      "qno": "2406",
+      "title": "Divide Intervals Into Minimum Number of Groups",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Prefix Sum"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.1
+  },
+  "maximum_matching_of_players_with_trainers": {
+      "qno": "2410",
+      "title": "Maximum Matching of Players With Trainers",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.2
+  },
+  "largest_positive_integer_that_exists_with_its_negative": {
+      "qno": "2441",
+      "title": "Largest Positive Integer That Exists With Its Negative",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.2
+  },
+  "apply_operations_to_an_array": {
+      "qno": "2460",
+      "title": "Apply Operations to an Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Simulation"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.5
+  },
+  "total_cost_to_hire_k_workers": {
+      "qno": "2462",
+      "title": "Total Cost to Hire K Workers",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43
+  },
+  "number_of_distinct_averages": {
+      "qno": "2465",
+      "title": "Number of Distinct Averages",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.9
+  },
+  "merge_operations_to_turn_array_into_a_palindrome": {
+      "qno": "2422",
+      "title": "Merge Operations to Turn Array Into a Palindrome",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.4
+  },
+  "append_characters_to_string_to_make_subsequence": {
+      "qno": "2486",
+      "title": "Append Characters to String to Make Subsequence",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.1
+  },
+  "divide_players_into_teams_of_equal_skill": {
+      "qno": "2491",
+      "title": "Divide Players Into Teams of Equal Skill",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.8
+  },
+  "maximum_number_of_points_from_grid_queries": {
+      "qno": "2503",
+      "title": "Maximum Number of Points From Grid Queries",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Breadth-First Search",
+          "Union Find",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.4
+  },
+  "maximum_enemy_forts_that_can_be_captured": {
+      "qno": "2511",
+      "title": "Maximum Enemy Forts That Can Be Captured",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 38.3
+  },
+  "maximize_greatness_of_an_array": {
+      "qno": "2592",
+      "title": "Maximize Greatness of an Array",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Greedy",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.6
+  },
+  "find_the_array_concatenation_value": {
+      "qno": "2562",
+      "title": "Find the Array Concatenation Value",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Simulation"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.8
+  },
+  "merge_two_2d_arrays_by_summing_values": {
+      "qno": "2570",
+      "title": "Merge Two 2D Arrays by Summing Values",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.6
+  },
+  "lexicographically_smallest_palindrome": {
+      "qno": "2697",
+      "title": "Lexicographically Smallest Palindrome",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.7
+  },
+  "split_a_circular_linked_list": {
+      "qno": "2674",
+      "title": "Split a Circular Linked List",
+      "tags": [
+          "Linked List",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.2
+  },
+  "minimum_changes_to_make_k_semi-palindromes": {
+      "qno": "2911",
+      "title": "Minimum Changes to Make K Semi-palindromes",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Dynamic Programming"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 35.8
+  },
+  "make_string_a_subsequence_using_cyclic_increments": {
+      "qno": "2825",
+      "title": "Make String a Subsequence Using Cyclic Increments",
+      "tags": [
+          "Two Pointers",
+          "String"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.1
+  },
+  "find_indices_with_index_and_value_difference_i": {
+      "qno": "2903",
+      "title": "Find Indices With Index and Value Difference I",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62
+  },
+  "find_indices_with_index_and_value_difference_ii": {
+      "qno": "2905",
+      "title": "Find Indices With Index and Value Difference II",
+      "tags": [
+          "Array",
+          "Two Pointers"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 32.1
+  },
+  "the_wording_game": {
+      "qno": "2868",
+      "title": "The Wording Game",
+      "tags": [
+          "Array",
+          "Math",
+          "Two Pointers",
+          "String",
+          "Game Theory"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 60.6
+  },
+  "separate_black_and_white_balls": {
+      "qno": "2938",
+      "title": "Separate Black and White Balls",
+      "tags": [
+          "Two Pointers",
+          "String",
+          "Greedy"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.1
+  },
+  "find_the_integer_added_to_array_ii": {
+      "qno": "3132",
+      "title": "Find the Integer Added to Array II",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting",
+          "Enumeration"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 31
+  },
+  "longest_substring_without_repeating_characters": {
+      "qno": "3",
+      "title": "Longest Substring Without Repeating Characters",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35
+  },
+  "substring_with_concatenation_of_all_words": {
+      "qno": "30",
+      "title": "Substring with Concatenation of All Words",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.6
+  },
+  "minimum_window_substring": {
+      "qno": "76",
+      "title": "Minimum Window Substring",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.2
+  },
+  "longest_substring_with_at_most_two_distinct_characters": {
+      "qno": "159",
+      "title": "Longest Substring with At Most Two Distinct Characters",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.5
+  },
+  "repeated_dna_sequences": {
+      "qno": "187",
+      "title": "Repeated DNA Sequences",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Bit Manipulation",
+          "Sliding Window",
+          "Rolling Hash",
+          "Hash Function"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.1
+  },
+  "contains_duplicate_ii": {
+      "qno": "219",
+      "title": "Contains Duplicate II",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.5
+  },
+  "longest_substring_with_at_most_k_distinct_characters": {
+      "qno": "340",
+      "title": "Longest Substring with At Most K Distinct Characters",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.9
+  },
+  "longest_substring_with_at_least_k_repeating_characters": {
+      "qno": "395",
+      "title": "Longest Substring with At Least K Repeating Characters",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Divide and Conquer",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45
+  },
+  "longest_repeating_character_replacement": {
+      "qno": "424",
+      "title": "Longest Repeating Character Replacement",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.3
+  },
+  "find_all_anagrams_in_a_string": {
+      "qno": "438",
+      "title": "Find All Anagrams in a String",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51
+  },
+  "sliding_window_median": {
+      "qno": "480",
+      "title": "Sliding Window Median",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.1
+  },
+  "max_consecutive_ones_ii": {
+      "qno": "487",
+      "title": "Max Consecutive Ones II",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.4
+  },
+  "longest_harmonious_subsequence": {
+      "qno": "594",
+      "title": "Longest Harmonious Subsequence",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window",
+          "Sorting",
+          "Counting"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54.8
+  },
+  "smallest_range_covering_elements_from_k_lists": {
+      "qno": "632",
+      "title": "Smallest Range Covering Elements from K Lists",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Greedy",
+          "Sliding Window",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.7
+  },
+  "maximum_average_subarray_i": {
+      "qno": "643",
+      "title": "Maximum Average Subarray I",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 43.5
+  },
+  "k_empty_slots": {
+      "qno": "683",
+      "title": "K Empty Slots",
+      "tags": [
+          "Array",
+          "Binary Indexed Tree",
+          "Sliding Window",
+          "Ordered Set"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.1
+  },
+  "subarray_product_less_than_k": {
+      "qno": "713",
+      "title": "Subarray Product Less Than K",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.5
+  },
+  "minimum_window_subsequence": {
+      "qno": "727",
+      "title": "Minimum Window Subsequence",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.5
+  },
+  "fruit_into_baskets": {
+      "qno": "904",
+      "title": "Fruit Into Baskets",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.4
+  },
+  "binary_subarrays_with_sum": {
+      "qno": "930",
+      "title": "Binary Subarrays With Sum",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.7
+  },
+  "longest_turbulent_subarray": {
+      "qno": "978",
+      "title": "Longest Turbulent Subarray",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.5
+  },
+  "subarrays_with_k_different_integers": {
+      "qno": "992",
+      "title": "Subarrays with K Different Integers",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window",
+          "Counting"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 63.4
+  },
+  "minimum_number_of_k_consecutive_bit_flips": {
+      "qno": "995",
+      "title": "Minimum Number of K Consecutive Bit Flips",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Queue",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51.7
+  },
+  "find_k-length_substrings_with_no_repeated_characters": {
+      "qno": "1100",
+      "title": "Find K-Length Substrings With No Repeated Characters",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.7
+  },
+  "maximum_sum_of_two_non-overlapping_subarrays": {
+      "qno": "1031",
+      "title": "Maximum Sum of Two Non-Overlapping Subarrays",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.8
+  },
+  "minimum_swaps_to_group_all_1's_together": {
+      "qno": "1151",
+      "title": "Minimum Swaps to Group All 1's Together",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.2
+  },
+  "grumpy_bookstore_owner": {
+      "qno": "1052",
+      "title": "Grumpy Bookstore Owner",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.1
+  },
+  "swap_for_longest_repeated_character_substring": {
+      "qno": "1156",
+      "title": "Swap For Longest Repeated Character Substring",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.1
+  },
+  "diet_plan_performance": {
+      "qno": "1176",
+      "title": "Diet Plan Performance",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53.4
+  },
+  "replace_the_substring_for_balanced_string": {
+      "qno": "1234",
+      "title": "Replace the Substring for Balanced String",
+      "tags": [
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.4
+  },
+  "count_number_of_nice_subarrays": {
+      "qno": "1248",
+      "title": "Count Number of Nice Subarrays",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.4
+  },
+  "maximum_number_of_occurrences_of_a_substring": {
+      "qno": "1297",
+      "title": "Maximum Number of Occurrences of a Substring",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52
+  },
+  "find_the_k-beauty_of_a_number": {
+      "qno": "2269",
+      "title": "Find the K-Beauty of a Number",
+      "tags": [
+          "Math",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.9
+  },
+  "number_of_sub-arrays_of_size_k_and_average_greater_than_or_equal_to_threshold": {
+      "qno": "1343",
+      "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.5
+  },
+  "number_of_substrings_containing_all_three_characters": {
+      "qno": "1358",
+      "title": "Number of Substrings Containing All Three Characters",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67
+  },
+  "maximum_points_you_can_obtain_from_cards": {
+      "qno": "1423",
+      "title": "Maximum Points You Can Obtain from Cards",
+      "tags": [
+          "Array",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53
+  },
+  "maximum_number_of_vowels_in_a_substring_of_given_length": {
+      "qno": "1456",
+      "title": "Maximum Number of Vowels in a Substring of Given Length",
+      "tags": [
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.6
+  },
+  "longest_subarray_of_1's_after_deleting_one_element": {
+      "qno": "1493",
+      "title": "Longest Subarray of 1's After Deleting One Element",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.5
+  },
+  "maximum_number_of_visible_points": {
+      "qno": "1610",
+      "title": "Maximum Number of Visible Points",
+      "tags": [
+          "Array",
+          "Math",
+          "Geometry",
+          "Sliding Window",
+          "Sorting"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.4
+  },
+  "defuse_the_bomb": {
+      "qno": "1652",
+      "title": "Defuse the Bomb",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.6
+  },
+  "minimum_adjacent_swaps_for_k_consecutive_ones": {
+      "qno": "1703",
+      "title": "Minimum Adjacent Swaps for K Consecutive Ones",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.9
+  },
+  "maximum_erasure_value": {
+      "qno": "1695",
+      "title": "Maximum Erasure Value",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.3
+  },
+  "longest_nice_substring": {
+      "qno": "1763",
+      "title": "Longest Nice Substring",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Divide and Conquer",
+          "Bit Manipulation",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.6
+  },
+  "longest_substring_of_all_vowels_in_order": {
+      "qno": "1839",
+      "title": "Longest Substring Of All Vowels in Order",
+      "tags": [
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.3
+  },
+  "substrings_of_size_three_with_distinct_characters": {
+      "qno": "1876",
+      "title": "Substrings of Size Three with Distinct Characters",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window",
+          "Counting"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.5
+  },
+  "jump_game_vii": {
+      "qno": "1871",
+      "title": "Jump Game VII",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 24.9
+  },
+  "distinct_numbers_in_each_subarray": {
+      "qno": "1852",
+      "title": "Distinct Numbers in Each Subarray",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.3
+  },
+  "minimum_number_of_flips_to_make_the_binary_string_alternating": {
+      "qno": "1888",
+      "title": "Minimum Number of Flips to Make the Binary String Alternating",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Greedy",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.9
+  },
+  "minimum_difference_between_highest_and_lowest_of_k_scores": {
+      "qno": "1984",
+      "title": "Minimum Difference Between Highest and Lowest of K Scores",
+      "tags": [
+          "Array",
+          "Sliding Window",
+          "Sorting"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.8
+  },
+  "k_radius_subarray_averages": {
+      "qno": "2090",
+      "title": "K Radius Subarray Averages",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.2
+  },
+  "number_of_unique_flavors_after_sharing_k_candies": {
+      "qno": "2107",
+      "title": "Number of Unique Flavors After Sharing K Candies",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.5
+  },
+  "minimum_swaps_to_group_all_1's_together_ii": {
+      "qno": "2134",
+      "title": "Minimum Swaps to Group All 1's Together II",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.5
+  },
+  "find_substring_with_given_hash_value": {
+      "qno": "2156",
+      "title": "Find Substring With Given Hash Value",
+      "tags": [
+          "String",
+          "Sliding Window",
+          "Rolling Hash",
+          "Hash Function"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 23.5
+  },
+  "minimum_consecutive_cards_to_pick_up": {
+      "qno": "2260",
+      "title": "Minimum Consecutive Cards to Pick Up",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.3
+  },
+  "minimum_recolors_to_get_k_consecutive_black_blocks": {
+      "qno": "2379",
+      "title": "Minimum Recolors to Get K Consecutive Black Blocks",
+      "tags": [
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.8
+  },
+  "longest_nice_subarray": {
+      "qno": "2401",
+      "title": "Longest Nice Subarray",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.4
+  },
+  "maximum_sum_of_distinct_subarrays_with_length_k": {
+      "qno": "2461",
+      "title": "Maximum Sum of Distinct Subarrays With Length K",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34
+  },
+  "take_k_of_each_character_from_left_and_right": {
+      "qno": "2516",
+      "title": "Take K of Each Character From Left and Right",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.4
+  },
+  "count_the_number_of_good_subarrays": {
+      "qno": "2537",
+      "title": "Count the Number of Good Subarrays",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.5
+  },
+  "maximum_frequency_score_of_a_subarray": {
+      "qno": "2524",
+      "title": "Maximum Frequency Score of a Subarray",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.3
+  },
+  "sliding_subarray_beauty": {
+      "qno": "2653",
+      "title": "Sliding Subarray Beauty",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33
+  },
+  "find_the_longest_semi-repetitive_substring": {
+      "qno": "2730",
+      "title": "Find the Longest Semi-Repetitive Substring",
+      "tags": [
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.5
+  },
+  "count_zero_request_servers": {
+      "qno": "2747",
+      "title": "Count Zero Request Servers",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window",
+          "Sorting"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 32.5
+  },
+  "count_complete_subarrays_in_an_array": {
+      "qno": "2799",
+      "title": "Count Complete Subarrays in an Array",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.8
+  },
+  "longest_even_odd_subarray_with_threshold": {
+      "qno": "2760",
+      "title": "Longest Even Odd Subarray With Threshold",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 29.5
+  },
+  "length_of_the_longest_valid_substring": {
+      "qno": "2781",
+      "title": "Length of the Longest Valid Substring",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.4
+  },
+  "count_substrings_without_repeating_character": {
+      "qno": "2743",
+      "title": "Count Substrings Without Repeating Character",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.7
+  },
+  "maximum_sum_of_almost_unique_subarray": {
+      "qno": "2841",
+      "title": "Maximum Sum of Almost Unique Subarray",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.9
+  },
+  "count_of_sub-multisets_with_bounded_sum": {
+      "qno": "2902",
+      "title": "Count of Sub-Multisets With Bounded Sum",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Dynamic Programming",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 20.7
+  },
+  "minimum_size_subarray_in_infinite_array": {
+      "qno": "2875",
+      "title": "Minimum Size Subarray in Infinite Array",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30.8
+  },
+  "shortest_and_lexicographically_smallest_beautiful_string": {
+      "qno": "2904",
+      "title": "Shortest and Lexicographically Smallest Beautiful String",
+      "tags": [
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.8
+  },
+  "maximum_strong_pair_xor_i": {
+      "qno": "2932",
+      "title": "Maximum Strong Pair XOR I",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Bit Manipulation",
+          "Trie",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76
+  },
+  "maximum_strong_pair_xor_ii": {
+      "qno": "2935",
+      "title": "Maximum Strong Pair XOR II",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Bit Manipulation",
+          "Trie",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 30.1
+  },
+  "count_subarrays_where_max_element_appears_at_least_k_times": {
+      "qno": "2962",
+      "title": "Count Subarrays Where Max Element Appears at Least K Times",
+      "tags": [
+          "Array",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.1
+  },
+  "count_complete_substrings": {
+      "qno": "2953",
+      "title": "Count Complete Substrings",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 26.8
+  },
+  "length_of_longest_subarray_with_at_most_k_frequency": {
+      "qno": "2958",
+      "title": "Length of Longest Subarray With at Most K Frequency",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.8
+  },
+  "divide_an_array_into_subarrays_with_minimum_cost_ii": {
+      "qno": "3013",
+      "title": "Divide an Array Into Subarrays With Minimum Cost II",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sliding Window",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 31.8
+  },
+  "minimum_moves_to_pick_k_ones": {
+      "qno": "3086",
+      "title": "Minimum Moves to Pick K Ones",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 23.8
+  },
+  "find_pattern_in_infinite_stream_i": {
+      "qno": "3023",
+      "title": "Find Pattern in Infinite Stream I",
+      "tags": [
+          "Array",
+          "Sliding Window",
+          "Rolling Hash",
+          "String Matching",
+          "Hash Function"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.8
+  },
+  "maximum_length_substring_with_two_occurrences": {
+      "qno": "3090",
+      "title": "Maximum Length Substring With Two Occurrences",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.9
+  },
+  "find_pattern_in_infinite_stream_ii": {
+      "qno": "3037",
+      "title": "Find Pattern in Infinite Stream II",
+      "tags": [
+          "Array",
+          "Sliding Window",
+          "Rolling Hash",
+          "String Matching",
+          "Hash Function"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 70.2
+  },
+  "shortest_subarray_with_or_at_least_k_ii": {
+      "qno": "3097",
+      "title": "Shortest Subarray With OR at Least K II",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 29.9
+  },
+  "shortest_subarray_with_or_at_least_k_i": {
+      "qno": "3095",
+      "title": "Shortest Subarray With OR at Least K I",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Sliding Window"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 41
+  },
+  "unique_binary_search_trees_ii": {
+      "qno": "95",
+      "title": "Unique Binary Search Trees II",
+      "tags": [
+          "Dynamic Programming",
+          "Backtracking",
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.1
+  },
+  "unique_binary_search_trees": {
+      "qno": "96",
+      "title": "Unique Binary Search Trees",
+      "tags": [
+          "Math",
+          "Dynamic Programming",
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.2
+  },
+  "validate_binary_search_tree": {
+      "qno": "98",
+      "title": "Validate Binary Search Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.1
+  },
+  "recover_binary_search_tree": {
+      "qno": "99",
+      "title": "Recover Binary Search Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.5
+  },
+  "convert_sorted_array_to_binary_search_tree": {
+      "qno": "108",
+      "title": "Convert Sorted Array to Binary Search Tree",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72
+  },
+  "convert_sorted_list_to_binary_search_tree": {
+      "qno": "109",
+      "title": "Convert Sorted List to Binary Search Tree",
+      "tags": [
+          "Linked List",
+          "Divide and Conquer",
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.2
+  },
+  "kth_smallest_element_in_a_bst": {
+      "qno": "230",
+      "title": "Kth Smallest Element in a BST",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.9
+  },
+  "lowest_common_ancestor_of_a_binary_search_tree": {
+      "qno": "235",
+      "title": "Lowest Common Ancestor of a Binary Search Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.2
+  },
+  "verify_preorder_sequence_in_binary_search_tree": {
+      "qno": "255",
+      "title": "Verify Preorder Sequence in Binary Search Tree",
+      "tags": [
+          "Array",
+          "Stack",
+          "Tree",
+          "Binary Search Tree",
+          "Recursion",
+          "Monotonic Stack",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50
+  },
+  "inorder_successor_in_bst": {
+      "qno": "285",
+      "title": "Inorder Successor in BST",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.9
+  },
+  "largest_bst_subtree": {
+      "qno": "333",
+      "title": "Largest BST Subtree",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44
+  },
+  "serialize_and_deserialize_bst": {
+      "qno": "449",
+      "title": "Serialize and Deserialize BST",
+      "tags": [
+          "String",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Design",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.8
+  },
+  "delete_node_in_a_bst": {
+      "qno": "450",
+      "title": "Delete Node in a BST",
+      "tags": [
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.5
+  },
+  "find_mode_in_binary_search_tree": {
+      "qno": "501",
+      "title": "Find Mode in Binary Search Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.3
+  },
+  "inorder_successor_in_bst_ii": {
+      "qno": "510",
+      "title": "Inorder Successor in BST II",
+      "tags": [
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.9
+  },
+  "minimum_absolute_difference_in_bst": {
+      "qno": "530",
+      "title": "Minimum Absolute Difference in BST",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.4
+  },
+  "convert_bst_to_greater_tree": {
+      "qno": "538",
+      "title": "Convert BST to Greater Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.5
+  },
+  "trim_a_binary_search_tree": {
+      "qno": "669",
+      "title": "Trim a Binary Search Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.3
+  },
+  "search_in_a_binary_search_tree": {
+      "qno": "700",
+      "title": "Search in a Binary Search Tree",
+      "tags": [
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80
+  },
+  "insert_into_a_binary_search_tree": {
+      "qno": "701",
+      "title": "Insert into a Binary Search Tree",
+      "tags": [
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.8
+  },
+  "kth_largest_element_in_a_stream": {
+      "qno": "703",
+      "title": "Kth Largest Element in a Stream",
+      "tags": [
+          "Tree",
+          "Design",
+          "Binary Search Tree",
+          "Heap (Priority Queue)",
+          "Binary Tree",
+          "Data Stream"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.9
+  },
+  "split_bst": {
+      "qno": "776",
+      "title": "Split BST",
+      "tags": [
+          "Tree",
+          "Binary Search Tree",
+          "Recursion",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82.7
+  },
+  "minimum_distance_between_bst_nodes": {
+      "qno": "783",
+      "title": "Minimum Distance Between BST Nodes",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.6
+  },
+  "increasing_order_search_tree": {
+      "qno": "897",
+      "title": "Increasing Order Search Tree",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.3
+  },
+  "range_sum_of_bst": {
+      "qno": "938",
+      "title": "Range Sum of BST",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.9
+  },
+  "construct_binary_search_tree_from_preorder_traversal": {
+      "qno": "1008",
+      "title": "Construct Binary Search Tree from Preorder Traversal",
+      "tags": [
+          "Array",
+          "Stack",
+          "Tree",
+          "Binary Search Tree",
+          "Monotonic Stack",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82.1
+  },
+  "binary_search_tree_to_greater_sum_tree": {
+      "qno": "1038",
+      "title": "Binary Search Tree to Greater Sum Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 88.2
+  },
+  "all_elements_in_two_binary_search_trees": {
+      "qno": "1305",
+      "title": "All Elements in Two Binary Search Trees",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Sorting",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.8
+  },
+  "maximum_sum_bst_in_binary_tree": {
+      "qno": "1373",
+      "title": "Maximum Sum BST in Binary Tree",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41.3
+  },
+  "balance_a_binary_search_tree": {
+      "qno": "1382",
+      "title": "Balance a Binary Search Tree",
+      "tags": [
+          "Divide and Conquer",
+          "Greedy",
+          "Tree",
+          "Depth-First Search",
+          "Binary Search Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 84.6
+  },
+  "number_of_ways_to_reorder_array_to_get_same_bst": {
+      "qno": "1569",
+      "title": "Number of Ways to Reorder Array to Get Same BST",
+      "tags": [
+          "Array",
+          "Math",
+          "Divide and Conquer",
+          "Dynamic Programming",
+          "Tree",
+          "Union Find",
+          "Binary Search Tree",
+          "Memoization",
+          "Combinatorics",
+          "Binary Tree"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.5
+  },
+  "depth_of_bst_given_insertion_order": {
+      "qno": "1902",
+      "title": "Depth of BST Given Insertion Order",
+      "tags": [
+          "Tree",
+          "Binary Search Tree",
+          "Binary Tree",
+          "Ordered Set"
+      ],
+      "default": "Binary Search Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.4
+  },
+  "valid_sudoku": {
+      "qno": "36",
+      "title": "Valid Sudoku",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60
+  },
+  "sudoku_solver": {
+      "qno": "37",
+      "title": "Sudoku Solver",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Backtracking",
+          "Matrix"
+      ],
+      "default": "Backtracking",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.8
+  },
+  "rotate_image": {
+      "qno": "48",
+      "title": "Rotate Image",
+      "tags": [
+          "Array",
+          "Math",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.9
+  },
+  "spiral_matrix": {
+      "qno": "54",
+      "title": "Spiral Matrix",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.1
+  },
+  "spiral_matrix_ii": {
+      "qno": "59",
+      "title": "Spiral Matrix II",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.4
+  },
+  "unique_paths_ii": {
+      "qno": "63",
+      "title": "Unique Paths II",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.8
+  },
+  "minimum_path_sum": {
+      "qno": "64",
+      "title": "Minimum Path Sum",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.3
+  },
+  "set_matrix_zeroes": {
+      "qno": "73",
+      "title": "Set Matrix Zeroes",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.3
+  },
+  "word_search": {
+      "qno": "79",
+      "title": "Word Search",
+      "tags": [
+          "Array",
+          "String",
+          "Backtracking",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.1
+  },
+  "maximal_rectangle": {
+      "qno": "85",
+      "title": "Maximal Rectangle",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Matrix",
+          "Monotonic Stack"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50.9
+  },
+  "surrounded_regions": {
+      "qno": "130",
+      "title": "Surrounded Regions",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.9
+  },
+  "dungeon_game": {
+      "qno": "174",
+      "title": "Dungeon Game",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.2
+  },
+  "number_of_islands": {
+      "qno": "200",
+      "title": "Number of Islands",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.8
+  },
+  "word_search_ii": {
+      "qno": "212",
+      "title": "Word Search II",
+      "tags": [
+          "Array",
+          "String",
+          "Backtracking",
+          "Trie",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.4
+  },
+  "maximal_square": {
+      "qno": "221",
+      "title": "Maximal Square",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.8
+  },
+  "walls_and_gates": {
+      "qno": "286",
+      "title": "Walls and Gates",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.6
+  },
+  "game_of_life": {
+      "qno": "289",
+      "title": "Game of Life",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.5
+  },
+  "best_meeting_point": {
+      "qno": "296",
+      "title": "Best Meeting Point",
+      "tags": [
+          "Array",
+          "Math",
+          "Sorting",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 60.9
+  },
+  "range_sum_query_2d_-_immutable": {
+      "qno": "304",
+      "title": "Range Sum Query 2D - Immutable",
+      "tags": [
+          "Array",
+          "Design",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.9
+  },
+  "range_sum_query_2d_-_mutable": {
+      "qno": "308",
+      "title": "Range Sum Query 2D - Mutable",
+      "tags": [
+          "Array",
+          "Design",
+          "Binary Indexed Tree",
+          "Segment Tree",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.2
+  },
+  "sparse_matrix_multiplication": {
+      "qno": "311",
+      "title": "Sparse Matrix Multiplication",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.1
+  },
+  "shortest_distance_from_all_buildings": {
+      "qno": "317",
+      "title": "Shortest Distance from All Buildings",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.3
+  },
+  "longest_increasing_path_in_a_matrix": {
+      "qno": "329",
+      "title": "Longest Increasing Path in a Matrix",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Graph",
+          "Topological Sort",
+          "Memoization",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.8
+  },
+  "design_tic-tac-toe": {
+      "qno": "348",
+      "title": "Design Tic-Tac-Toe",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Design",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.1
+  },
+  "bomb_enemy": {
+      "qno": "361",
+      "title": "Bomb Enemy",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.8
+  },
+  "trapping_rain_water_ii": {
+      "qno": "407",
+      "title": "Trapping Rain Water II",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 48
+  },
+  "pacific_atlantic_water_flow": {
+      "qno": "417",
+      "title": "Pacific Atlantic Water Flow",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.5
+  },
+  "battleships_in_a_board": {
+      "qno": "419",
+      "title": "Battleships in a Board",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.5
+  },
+  "valid_word_square": {
+      "qno": "422",
+      "title": "Valid Word Square",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 41.2
+  },
+  "island_perimeter": {
+      "qno": "463",
+      "title": "Island Perimeter",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.9
+  },
+  "the_maze": {
+      "qno": "490",
+      "title": "The Maze",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.1
+  },
+  "diagonal_traverse": {
+      "qno": "498",
+      "title": "Diagonal Traverse",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.5
+  },
+  "the_maze_iii": {
+      "qno": "499",
+      "title": "The Maze III",
+      "tags": [
+          "Array",
+          "String",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Shortest Path"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 48.9
+  },
+  "the_maze_ii": {
+      "qno": "505",
+      "title": "The Maze II",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Shortest Path"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.5
+  },
+  "minesweeper": {
+      "qno": "529",
+      "title": "Minesweeper",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.8
+  },
+  "lonely_pixel_i": {
+      "qno": "531",
+      "title": "Lonely Pixel I",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.3
+  },
+  "lonely_pixel_ii": {
+      "qno": "533",
+      "title": "Lonely Pixel II",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.6
+  },
+  "01_matrix": {
+      "qno": "542",
+      "title": "01 Matrix",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.8
+  },
+  "shortest_path_to_get_food": {
+      "qno": "1730",
+      "title": "Shortest Path to Get Food",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.9
+  },
+  "longest_line_of_consecutive_one_in_matrix": {
+      "qno": "562",
+      "title": "Longest Line of Consecutive One in Matrix",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.4
+  },
+  "reshape_the_matrix": {
+      "qno": "566",
+      "title": "Reshape the Matrix",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.1
+  },
+  "maximum_vacation_days": {
+      "qno": "568",
+      "title": "Maximum Vacation Days",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 45.8
+  },
+  "design_excel_sum_formula": {
+      "qno": "631",
+      "title": "Design Excel Sum Formula",
+      "tags": [
+          "Array",
+          "Graph",
+          "Design",
+          "Topological Sort",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.8
+  },
+  "image_smoother": {
+      "qno": "661",
+      "title": "Image Smoother",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.4
+  },
+  "cut_off_trees_for_golf_event": {
+      "qno": "675",
+      "title": "Cut Off Trees for Golf Event",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 34.4
+  },
+  "max_area_of_island": {
+      "qno": "695",
+      "title": "Max Area of Island",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.3
+  },
+  "candy_crush": {
+      "qno": "723",
+      "title": "Candy Crush",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 76.9
+  },
+  "flood_fill": {
+      "qno": "733",
+      "title": "Flood Fill",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.2
+  },
+  "cherry_pickup": {
+      "qno": "741",
+      "title": "Cherry Pickup",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37
+  },
+  "contain_virus": {
+      "qno": "749",
+      "title": "Contain Virus",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51
+  },
+  "number_of_corner_rectangles": {
+      "qno": "750",
+      "title": "Number Of Corner Rectangles",
+      "tags": [
+          "Array",
+          "Math",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.7
+  },
+  "construct_quad_tree": {
+      "qno": "427",
+      "title": "Construct Quad Tree",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Tree",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.6
+  },
+  "toeplitz_matrix": {
+      "qno": "766",
+      "title": "Toeplitz Matrix",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.1
+  },
+  "sliding_puzzle": {
+      "qno": "773",
+      "title": "Sliding Puzzle",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 64.9
+  },
+  "transform_to_chessboard": {
+      "qno": "782",
+      "title": "Transform to Chessboard",
+      "tags": [
+          "Array",
+          "Math",
+          "Bit Manipulation",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50.9
+  },
+  "valid_tic-tac-toe_state": {
+      "qno": "794",
+      "title": "Valid Tic-Tac-Toe State",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.7
+  },
+  "bricks_falling_when_hit": {
+      "qno": "803",
+      "title": "Bricks Falling When Hit",
+      "tags": [
+          "Array",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 34.8
+  },
+  "max_increase_to_keep_city_skyline": {
+      "qno": "807",
+      "title": "Max Increase to Keep City Skyline",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 86.1
+  },
+  "making_a_large_island": {
+      "qno": "827",
+      "title": "Making A Large Island",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.7
+  },
+  "flipping_an_image": {
+      "qno": "832",
+      "title": "Flipping an Image",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Bit Manipulation",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.1
+  },
+  "image_overlap": {
+      "qno": "835",
+      "title": "Image Overlap",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.7
+  },
+  "magic_squares_in_grid": {
+      "qno": "840",
+      "title": "Magic Squares In Grid",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39
+  },
+  "score_after_flipping_matrix": {
+      "qno": "861",
+      "title": "Score After Flipping Matrix",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Bit Manipulation",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.4
+  },
+  "shortest_path_to_get_all_keys": {
+      "qno": "864",
+      "title": "Shortest Path to Get All Keys",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.6
+  },
+  "transpose_matrix": {
+      "qno": "867",
+      "title": "Transpose Matrix",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.9
+  },
+  "projection_area_of_3d_shapes": {
+      "qno": "883",
+      "title": "Projection Area of 3D Shapes",
+      "tags": [
+          "Array",
+          "Math",
+          "Geometry",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.8
+  },
+  "spiral_matrix_iii": {
+      "qno": "885",
+      "title": "Spiral Matrix III",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.6
+  },
+  "surface_area_of_3d_shapes": {
+      "qno": "892",
+      "title": "Surface Area of 3D Shapes",
+      "tags": [
+          "Array",
+          "Math",
+          "Geometry",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.1
+  },
+  "snakes_and_ladders": {
+      "qno": "909",
+      "title": "Snakes and Ladders",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.8
+  },
+  "minimum_falling_path_sum": {
+      "qno": "931",
+      "title": "Minimum Falling Path Sum",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.7
+  },
+  "shortest_bridge": {
+      "qno": "934",
+      "title": "Shortest Bridge",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.8
+  },
+  "regions_cut_by_slashes": {
+      "qno": "959",
+      "title": "Regions Cut By Slashes",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.4
+  },
+  "unique_paths_iii": {
+      "qno": "980",
+      "title": "Unique Paths III",
+      "tags": [
+          "Array",
+          "Backtracking",
+          "Bit Manipulation",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 81.8
+  },
+  "rotting_oranges": {
+      "qno": "994",
+      "title": "Rotting Oranges",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.4
+  },
+  "available_captures_for_rook": {
+      "qno": "999",
+      "title": "Available Captures for Rook",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.1
+  },
+  "number_of_enclaves": {
+      "qno": "1020",
+      "title": "Number of Enclaves",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69
+  },
+  "matrix_cells_in_distance_order": {
+      "qno": "1030",
+      "title": "Matrix Cells in Distance Order",
+      "tags": [
+          "Array",
+          "Math",
+          "Geometry",
+          "Sorting",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.3
+  },
+  "coloring_a_border": {
+      "qno": "1034",
+      "title": "Coloring A Border",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49
+  },
+  "as_far_from_land_as_possible": {
+      "qno": "1162",
+      "title": "As Far from Land as Possible",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.6
+  },
+  "number_of_submatrices_that_sum_to_target": {
+      "qno": "1074",
+      "title": "Number of Submatrices That Sum to Target",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 74.4
+  },
+  "flip_columns_for_maximum_number_of_equal_rows": {
+      "qno": "1072",
+      "title": "Flip Columns For Maximum Number of Equal Rows",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64
+  },
+  "shortest_path_in_binary_matrix": {
+      "qno": "1091",
+      "title": "Shortest Path in Binary Matrix",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.6
+  },
+  "minimum_falling_path_sum_ii": {
+      "qno": "1289",
+      "title": "Minimum Falling Path Sum II",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 64.4
+  },
+  "number_of_paths_with_max_score": {
+      "qno": "1301",
+      "title": "Number of Paths with Max Score",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.5
+  },
+  "largest_1-bordered_square": {
+      "qno": "1139",
+      "title": "Largest 1-Bordered Square",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.3
+  },
+  "matrix_block_sum": {
+      "qno": "1314",
+      "title": "Matrix Block Sum",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.5
+  },
+  "sort_the_matrix_diagonally": {
+      "qno": "1329",
+      "title": "Sort the Matrix Diagonally",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82.9
+  },
+  "rank_transform_of_a_matrix": {
+      "qno": "1632",
+      "title": "Rank Transform of a Matrix",
+      "tags": [
+          "Array",
+          "Union Find",
+          "Graph",
+          "Topological Sort",
+          "Sorting",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.9
+  },
+  "largest_magic_square": {
+      "qno": "1895",
+      "title": "Largest Magic Square",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.4
+  },
+  "minimum_moves_to_reach_target_with_rotations": {
+      "qno": "1210",
+      "title": "Minimum Moves to Reach Target with Rotations",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 49.7
+  },
+  "where_will_the_ball_fall": {
+      "qno": "1706",
+      "title": "Where Will the Ball Fall",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.8
+  },
+  "path_with_maximum_gold": {
+      "qno": "1219",
+      "title": "Path with Maximum Gold",
+      "tags": [
+          "Array",
+          "Backtracking",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68
+  },
+  "queens_that_can_attack_the_king": {
+      "qno": "1222",
+      "title": "Queens That Can Attack the King",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.9
+  },
+  "reconstruct_a_2-row_binary_matrix": {
+      "qno": "1253",
+      "title": "Reconstruct a 2-Row Binary Matrix",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46
+  },
+  "number_of_closed_islands": {
+      "qno": "1254",
+      "title": "Number of Closed Islands",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.4
+  },
+  "shift_2d_grid": {
+      "qno": "1260",
+      "title": "Shift 2D Grid",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.4
+  },
+  "minimum_moves_to_move_a_box_to_their_target_location": {
+      "qno": "1263",
+      "title": "Minimum Moves to Move a Box to Their Target Location",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 49
+  },
+  "minimum_path_cost_in_a_grid": {
+      "qno": "2304",
+      "title": "Minimum Path Cost in a Grid",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.7
+  },
+  "count_servers_that_communicate": {
+      "qno": "1267",
+      "title": "Count Servers that Communicate",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix",
+          "Counting"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.5
+  },
+  "find_winner_on_a_tic_tac_toe_game": {
+      "qno": "1275",
+      "title": "Find Winner on a Tic Tac Toe Game",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53.9
+  },
+  "count_square_submatrices_with_all_ones": {
+      "qno": "1277",
+      "title": "Count Square Submatrices with All Ones",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.2
+  },
+  "minimum_number_of_flips_to_convert_binary_matrix_to_zero_matrix": {
+      "qno": "1284",
+      "title": "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Bit Manipulation",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 72.1
+  },
+  "shortest_path_in_a_grid_with_obstacles_elimination": {
+      "qno": "1293",
+      "title": "Shortest Path in a Grid with Obstacles Elimination",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 45.2
+  },
+  "maximum_students_taking_exam": {
+      "qno": "1349",
+      "title": "Maximum Students Taking Exam",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Bit Manipulation",
+          "Matrix",
+          "Bitmask"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50.5
+  },
+  "minimum_cost_to_make_at_least_one_valid_path_in_a_grid": {
+      "qno": "1368",
+      "title": "Minimum Cost to Make at Least One Valid Path in a Grid",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Shortest Path"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.1
+  },
+  "lucky_numbers_in_a_matrix": {
+      "qno": "1380",
+      "title": "Lucky Numbers in a Matrix",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.5
+  },
+  "check_if_there_is_a_valid_path_in_a_grid": {
+      "qno": "1391",
+      "title": "Check if There is a Valid Path in a Grid",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.9
+  },
+  "number_of_ways_of_cutting_a_pizza": {
+      "qno": "1444",
+      "title": "Number of Ways of Cutting a Pizza",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Memoization",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.1
+  },
+  "cherry_pickup_ii": {
+      "qno": "1463",
+      "title": "Cherry Pickup II",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 71.9
+  },
+  "subrectangle_queries": {
+      "qno": "1476",
+      "title": "Subrectangle Queries",
+      "tags": [
+          "Array",
+          "Design",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 88.2
+  },
+  "count_submatrices_with_all_ones": {
+      "qno": "1504",
+      "title": "Count Submatrices With All Ones",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Matrix",
+          "Monotonic Stack"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.2
+  },
+  "minimum_swaps_to_arrange_a_binary_grid": {
+      "qno": "1536",
+      "title": "Minimum Swaps to Arrange a Binary Grid",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.6
+  },
+  "detect_cycles_in_2d_grid": {
+      "qno": "1559",
+      "title": "Detect Cycles in 2D Grid",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.7
+  },
+  "matrix_diagonal_sum": {
+      "qno": "1572",
+      "title": "Matrix Diagonal Sum",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83
+  },
+  "minimum_number_of_days_to_disconnect_island": {
+      "qno": "1568",
+      "title": "Minimum Number of Days to Disconnect Island",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix",
+          "Strongly Connected Component"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.8
+  },
+  "strange_printer_ii": {
+      "qno": "1591",
+      "title": "Strange Printer II",
+      "tags": [
+          "Array",
+          "Graph",
+          "Topological Sort",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 59.1
+  },
+  "special_positions_in_a_binary_matrix": {
+      "qno": "1582",
+      "title": "Special Positions in a Binary Matrix",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.6
+  },
+  "find_valid_matrix_given_row_and_column_sums": {
+      "qno": "1605",
+      "title": "Find Valid Matrix Given Row and Column Sums",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 77.3
+  },
+  "maximum_non_negative_product_in_a_matrix": {
+      "qno": "1594",
+      "title": "Maximum Non Negative Product in a Matrix",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.7
+  },
+  "minimum_cost_to_connect_two_groups_of_points": {
+      "qno": "1595",
+      "title": "Minimum Cost to Connect Two Groups of Points",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Bit Manipulation",
+          "Matrix",
+          "Bitmask"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 48
+  },
+  "cat_and_mouse_ii": {
+      "qno": "1728",
+      "title": "Cat and Mouse II",
+      "tags": [
+          "Array",
+          "Math",
+          "Dynamic Programming",
+          "Graph",
+          "Topological Sort",
+          "Memoization",
+          "Matrix",
+          "Game Theory"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40
+  },
+  "richest_customer_wealth": {
+      "qno": "1672",
+      "title": "Richest Customer Wealth",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 88.1
+  },
+  "largest_submatrix_with_rearrangements": {
+      "qno": "1727",
+      "title": "Largest Submatrix With Rearrangements",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.3
+  },
+  "map_of_highest_peak": {
+      "qno": "1765",
+      "title": "Map of Highest Peak",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.5
+  },
+  "maximum_number_of_accepted_invitations": {
+      "qno": "1820",
+      "title": "Maximum Number of Accepted Invitations",
+      "tags": [
+          "Array",
+          "Backtracking",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.9
+  },
+  "get_biggest_three_rhombus_sums_in_a_grid": {
+      "qno": "1878",
+      "title": "Get Biggest Three Rhombus Sums in a Grid",
+      "tags": [
+          "Array",
+          "Math",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.9
+  },
+  "determine_whether_matrix_can_be_obtained_by_rotation": {
+      "qno": "1886",
+      "title": "Determine Whether Matrix Can Be Obtained By Rotation",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.9
+  },
+  "count_sub_islands": {
+      "qno": "1905",
+      "title": "Count Sub Islands",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.4
+  },
+  "nearest_exit_from_entrance_in_maze": {
+      "qno": "1926",
+      "title": "Nearest Exit from Entrance in Maze",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.6
+  },
+  "cyclically_rotating_a_grid": {
+      "qno": "1914",
+      "title": "Cyclically Rotating a Grid",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.5
+  },
+  "check_if_move_is_legal": {
+      "qno": "1958",
+      "title": "Check if Move is Legal",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Enumeration"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.9
+  },
+  "maximum_matrix_sum": {
+      "qno": "1975",
+      "title": "Maximum Matrix Sum",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.6
+  },
+  "find_all_groups_of_farmland": {
+      "qno": "1992",
+      "title": "Find All Groups of Farmland",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.8
+  },
+  "minimize_the_difference_between_target_and_chosen_elements": {
+      "qno": "1981",
+      "title": "Minimize the Difference Between Target and Chosen Elements",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.8
+  },
+  "convert_1d_array_into_2d_array": {
+      "qno": "2022",
+      "title": "Convert 1D Array Into 2D Array",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.6
+  },
+  "grid_game": {
+      "qno": "2017",
+      "title": "Grid Game",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.8
+  },
+  "check_if_word_can_be_placed_in_crossword": {
+      "qno": "2018",
+      "title": "Check if Word Can Be Placed In Crossword",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Enumeration"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.3
+  },
+  "minimum_operations_to_make_a_uni-value_grid": {
+      "qno": "2033",
+      "title": "Minimum Operations to Make a Uni-Value Grid",
+      "tags": [
+          "Array",
+          "Math",
+          "Sorting",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.3
+  },
+  "count_fertile_pyramids_in_a_land": {
+      "qno": "2088",
+      "title": "Count Fertile Pyramids in a Land",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 64.7
+  },
+  "stamping_the_grid": {
+      "qno": "2132",
+      "title": "Stamping the Grid",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.4
+  },
+  "number_of_spaces_cleaning_robot_cleaned": {
+      "qno": "2061",
+      "title": "Number of Spaces Cleaning Robot Cleaned",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.5
+  },
+  "number_of_laser_beams_in_a_bank": {
+      "qno": "2125",
+      "title": "Number of Laser Beams in a Bank",
+      "tags": [
+          "Array",
+          "Math",
+          "String",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 85.7
+  },
+  "k_highest_ranked_items_within_a_price_range": {
+      "qno": "2146",
+      "title": "K Highest Ranked Items Within a Price Range",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43
+  },
+  "check_if_every_row_and_column_contains_all_numbers": {
+      "qno": "2133",
+      "title": "Check if Every Row and Column Contains All Numbers",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.7
+  },
+  "minimum_operations_to_remove_adjacent_ones_in_matrix": {
+      "qno": "2123",
+      "title": "Minimum Operations to Remove Adjacent Ones in Matrix",
+      "tags": [
+          "Array",
+          "Graph",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.8
+  },
+  "remove_all_ones_with_row_and_column_flips": {
+      "qno": "2128",
+      "title": "Remove All Ones With Row and Column Flips",
+      "tags": [
+          "Array",
+          "Math",
+          "Bit Manipulation",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 76.3
+  },
+  "remove_all_ones_with_row_and_column_flips_ii": {
+      "qno": "2174",
+      "title": "Remove All Ones With Row and Column Flips II",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.6
+  },
+  "count_unguarded_cells_in_the_grid": {
+      "qno": "2257",
+      "title": "Count Unguarded Cells in the Grid",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.5
+  },
+  "check_if_there_is_a_valid_parentheses_string_path": {
+      "qno": "2267",
+      "title": "Check if There Is a Valid Parentheses String Path",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.7
+  },
+  "maximum_trailing_zeros_in_a_cornered_path": {
+      "qno": "2245",
+      "title": "Maximum Trailing Zeros in a Cornered Path",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.1
+  },
+  "minimum_obstacle_removal_to_reach_corner": {
+      "qno": "2290",
+      "title": "Minimum Obstacle Removal to Reach Corner",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Shortest Path"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 54
+  },
+  "check_if_matrix_is_x-matrix": {
+      "qno": "2319",
+      "title": "Check if Matrix Is X-Matrix",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.2
+  },
+  "number_of_increasing_paths_in_a_grid": {
+      "qno": "2328",
+      "title": "Number of Increasing Paths in a Grid",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Graph",
+          "Topological Sort",
+          "Memoization",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 58.4
+  },
+  "spiral_matrix_iv": {
+      "qno": "2326",
+      "title": "Spiral Matrix IV",
+      "tags": [
+          "Array",
+          "Linked List",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.2
+  },
+  "number_of_people_that_can_be_seen_in_a_grid": {
+      "qno": "2282",
+      "title": "Number of People That Can Be Seen in a Grid",
+      "tags": [
+          "Array",
+          "Stack",
+          "Matrix",
+          "Monotonic Stack"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.3
+  },
+  "equal_row_and_column_pairs": {
+      "qno": "2352",
+      "title": "Equal Row and Column Pairs",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.4
+  },
+  "largest_local_values_in_a_matrix": {
+      "qno": "2373",
+      "title": "Largest Local Values in a Matrix",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 88.1
+  },
+  "build_a_matrix_with_conditions": {
+      "qno": "2392",
+      "title": "Build a Matrix With Conditions",
+      "tags": [
+          "Array",
+          "Graph",
+          "Topological Sort",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.5
+  },
+  "maximum_rows_covered_by_columns": {
+      "qno": "2397",
+      "title": "Maximum Rows Covered by Columns",
+      "tags": [
+          "Array",
+          "Backtracking",
+          "Bit Manipulation",
+          "Matrix",
+          "Enumeration"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.9
+  },
+  "minimize_maximum_value_in_a_grid": {
+      "qno": "2371",
+      "title": "Minimize Maximum Value in a Grid",
+      "tags": [
+          "Array",
+          "Union Find",
+          "Graph",
+          "Topological Sort",
+          "Sorting",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 66
+  },
+  "maximum_sum_of_an_hourglass": {
+      "qno": "2428",
+      "title": "Maximum Sum of an Hourglass",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.9
+  },
+  "paths_in_matrix_whose_sum_is_divisible_by_k": {
+      "qno": "2435",
+      "title": "Paths in Matrix Whose Sum Is Divisible by K",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.8
+  },
+  "delete_greatest_value_in_each_row": {
+      "qno": "2500",
+      "title": "Delete Greatest Value in Each Row",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.1
+  },
+  "difference_between_ones_and_zeros_in_row_and_column": {
+      "qno": "2482",
+      "title": "Difference Between Ones and Zeros in Row and Column",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 84.5
+  },
+  "increment_submatrices_by_one": {
+      "qno": "2536",
+      "title": "Increment Submatrices by One",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.4
+  },
+  "sort_the_students_by_their_kth_score": {
+      "qno": "2545",
+      "title": "Sort the Students by Their Kth Score",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 85.3
+  },
+  "disconnect_path_in_a_binary_matrix_by_at_most_one_flip": {
+      "qno": "2556",
+      "title": "Disconnect Path in a Binary Matrix by at Most One Flip",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 27.2
+  },
+  "check_if_there_is_a_path_with_equal_number_of_0's_and_1's": {
+      "qno": "2510",
+      "title": "Check if There is a Path With Equal Number of 0's And 1's",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.2
+  },
+  "check_knight_tour_configuration": {
+      "qno": "2596",
+      "title": "Check Knight Tour Configuration",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.9
+  },
+  "find_the_width_of_columns_of_a_grid": {
+      "qno": "2639",
+      "title": "Find the Width of Columns of a Grid",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.5
+  },
+  "first_completely_painted_row_or_column": {
+      "qno": "2661",
+      "title": "First Completely Painted Row or Column",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.4
+  },
+  "minimum_number_of_visited_cells_in_a_grid": {
+      "qno": "2617",
+      "title": "Minimum Number of Visited Cells in a Grid",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Breadth-First Search",
+          "Union Find",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Monotonic Stack"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 24.7
+  },
+  "find_the_string_with_lcp": {
+      "qno": "2573",
+      "title": "Find the String with LCP",
+      "tags": [
+          "Array",
+          "String",
+          "Dynamic Programming",
+          "Greedy",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 31.5
+  },
+  "minimum_time_to_visit_a_cell_in_a_grid": {
+      "qno": "2577",
+      "title": "Minimum Time to Visit a Cell In a Grid",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Shortest Path"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 35.4
+  },
+  "prime_in_diagonal": {
+      "qno": "2614",
+      "title": "Prime In Diagonal",
+      "tags": [
+          "Array",
+          "Math",
+          "Matrix",
+          "Number Theory"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 34
+  },
+  "sum_in_a_matrix": {
+      "qno": "2679",
+      "title": "Sum in a Matrix",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.7
+  },
+  "row_with_maximum_ones": {
+      "qno": "2643",
+      "title": "Row With Maximum Ones",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.4
+  },
+  "maximum_number_of_fish_in_a_grid": {
+      "qno": "2658",
+      "title": "Maximum Number of Fish in a Grid",
+      "tags": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.7
+  },
+  "maximum_number_of_moves_in_a_grid": {
+      "qno": "2684",
+      "title": "Maximum Number of Moves in a Grid",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.8
+  },
+  "difference_of_number_of_distinct_values_on_diagonals": {
+      "qno": "2711",
+      "title": "Difference of Number of Distinct Values on Diagonals",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71
+  },
+  "the_knight’s_tour": {
+      "qno": "2664",
+      "title": "The Knight’s Tour",
+      "tags": [
+          "Array",
+          "Backtracking",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.4
+  },
+  "find_a_good_subset_of_the_matrix": {
+      "qno": "2732",
+      "title": "Find a Good Subset of the Matrix",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Bit Manipulation",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 45.4
+  },
+  "construct_product_matrix": {
+      "qno": "2906",
+      "title": "Construct Product Matrix",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30.9
+  },
+  "minimum_time_takes_to_reach_destination_without_drowning": {
+      "qno": "2814",
+      "title": "Minimum Time Takes to Reach Destination Without Drowning",
+      "tags": [
+          "Array",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 63.3
+  },
+  "minimum_moves_to_spread_stones_over_grid": {
+      "qno": "2850",
+      "title": "Minimum Moves to Spread Stones Over Grid",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Breadth-First Search",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.2
+  },
+  "maximum_spending_after_buying_items": {
+      "qno": "2931",
+      "title": "Maximum Spending After Buying Items",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 65.3
+  },
+  "sum_of_remoteness_of_all_cells": {
+      "qno": "2852",
+      "title": "Sum of Remoteness of All Cells",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.9
+  },
+  "find_champion_i": {
+      "qno": "2923",
+      "title": "Find Champion I",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.2
+  },
+  "matrix_similarity_after_cyclic_shifts": {
+      "qno": "2946",
+      "title": "Matrix Similarity After Cyclic Shifts",
+      "tags": [
+          "Array",
+          "Math",
+          "Matrix",
+          "Simulation"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58
+  },
+  "find_missing_and_repeated_values": {
+      "qno": "2965",
+      "title": "Find Missing and Repeated Values",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.5
+  },
+  "find_the_grid_of_region_average": {
+      "qno": "3030",
+      "title": "Find the Grid of Region Average",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+  },
+  "most_frequent_prime": {
+      "qno": "3044",
+      "title": "Most Frequent Prime",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Math",
+          "Matrix",
+          "Counting",
+          "Enumeration",
+          "Number Theory"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.1
+  },
+  "modify_the_matrix": {
+      "qno": "3033",
+      "title": "Modify the Matrix",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.3
+  },
+  "minimum_operations_to_write_the_letter_y_on_a_grid": {
+      "qno": "3071",
+      "title": "Minimum Operations to Write the Letter Y on a Grid",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Matrix",
+          "Counting"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.2
+  },
+  "count_submatrices_with_top-left_element_and_sum_less_than_k": {
+      "qno": "3070",
+      "title": "Count Submatrices with Top-Left Element and Sum Less Than k",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.2
+  },
+  "match_alphanumerical_pattern_in_matrix_i": {
+      "qno": "3078",
+      "title": "Match Alphanumerical Pattern in Matrix I",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "String",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.2
+  },
+  "maximum_difference_score_in_a_grid": {
+      "qno": "3148",
+      "title": "Maximum Difference Score in a Grid",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.6
+  },
+  "make_a_square_with_the_same_color": {
+      "qno": "3127",
+      "title": "Make a Square with the Same Color",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Enumeration"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.2
+  },
+  "minimum_number_of_operations_to_satisfy_conditions": {
+      "qno": "3122",
+      "title": "Minimum Number of Operations to Satisfy Conditions",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.9
+  },
+  "check_if_grid_satisfies_conditions": {
+      "qno": "3142",
+      "title": "Check if Grid Satisfies Conditions",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 43.1
+  },
+  "find_the_minimum_area_to_cover_all_ones_ii": {
+      "qno": "3197",
+      "title": "Find the Minimum Area to Cover All Ones II",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Enumeration"
+      ],
+      "default": "Matrix",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 33.2
+  },
+  "find_the_minimum_area_to_cover_all_ones_i": {
+      "qno": "3195",
+      "title": "Find the Minimum Area to Cover All Ones I",
+      "tags": [
+          "Array",
+          "Matrix"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.3
+  },
+  "minimum_operations_to_make_binary_array_elements_equal_to_one_i": {
+      "qno": "3191",
+      "title": "Minimum Operations to Make Binary Array Elements Equal to One I",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Queue",
+          "Sliding Window",
+          "Prefix Sum"
+      ],
+      "default": "Sliding Window",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.8
+  },
+  "minimum_average_of_smallest_and_largest_elements": {
+      "qno": "3194",
+      "title": "Minimum Average of Smallest and Largest Elements",
+      "tags": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+      ],
+      "default": "Two Pointers",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.5
+  },
+  "binary_tree_inorder_traversal": {
+      "qno": "94",
+      "title": "Binary Tree Inorder Traversal",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.5
+  },
+  "same_tree": {
+      "qno": "100",
+      "title": "Same Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.6
+  },
+  "symmetric_tree": {
+      "qno": "101",
+      "title": "Symmetric Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.9
+  },
+  "binary_tree_level_order_traversal": {
+      "qno": "102",
+      "title": "Binary Tree Level Order Traversal",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.8
+  },
+  "binary_tree_zigzag_level_order_traversal": {
+      "qno": "103",
+      "title": "Binary Tree Zigzag Level Order Traversal",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.4
+  },
+  "maximum_depth_of_binary_tree": {
+      "qno": "104",
+      "title": "Maximum Depth of Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.7
+  },
+  "construct_binary_tree_from_preorder_and_inorder_traversal": {
+      "qno": "105",
+      "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Divide and Conquer",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.4
+  },
+  "construct_binary_tree_from_inorder_and_postorder_traversal": {
+      "qno": "106",
+      "title": "Construct Binary Tree from Inorder and Postorder Traversal",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Divide and Conquer",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.5
+  },
+  "binary_tree_level_order_traversal_ii": {
+      "qno": "107",
+      "title": "Binary Tree Level Order Traversal II",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.8
+  },
+  "balanced_binary_tree": {
+      "qno": "110",
+      "title": "Balanced Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.6
+  },
+  "minimum_depth_of_binary_tree": {
+      "qno": "111",
+      "title": "Minimum Depth of Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.4
+  },
+  "path_sum": {
+      "qno": "112",
+      "title": "Path Sum",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.8
+  },
+  "path_sum_ii": {
+      "qno": "113",
+      "title": "Path Sum II",
+      "tags": [
+          "Backtracking",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.8
+  },
+  "flatten_binary_tree_to_linked_list": {
+      "qno": "114",
+      "title": "Flatten Binary Tree to Linked List",
+      "tags": [
+          "Linked List",
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.5
+  },
+  "populating_next_right_pointers_in_each_node": {
+      "qno": "116",
+      "title": "Populating Next Right Pointers in Each Node",
+      "tags": [
+          "Linked List",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.1
+  },
+  "populating_next_right_pointers_in_each_node_ii": {
+      "qno": "117",
+      "title": "Populating Next Right Pointers in Each Node II",
+      "tags": [
+          "Linked List",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53
+  },
+  "binary_tree_maximum_path_sum": {
+      "qno": "124",
+      "title": "Binary Tree Maximum Path Sum",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.2
+  },
+  "sum_root_to_leaf_numbers": {
+      "qno": "129",
+      "title": "Sum Root to Leaf Numbers",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.2
+  },
+  "binary_tree_preorder_traversal": {
+      "qno": "144",
+      "title": "Binary Tree Preorder Traversal",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.1
+  },
+  "binary_tree_postorder_traversal": {
+      "qno": "145",
+      "title": "Binary Tree Postorder Traversal",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.6
+  },
+  "binary_tree_upside_down": {
+      "qno": "156",
+      "title": "Binary Tree Upside Down",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63
+  },
+  "binary_tree_right_side_view": {
+      "qno": "199",
+      "title": "Binary Tree Right Side View",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.4
+  },
+  "invert_binary_tree": {
+      "qno": "226",
+      "title": "Invert Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.3
+  },
+  "lowest_common_ancestor_of_a_binary_tree": {
+      "qno": "236",
+      "title": "Lowest Common Ancestor of a Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.9
+  },
+  "count_univalue_subtrees": {
+      "qno": "250",
+      "title": "Count Univalue Subtrees",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.5
+  },
+  "binary_tree_paths": {
+      "qno": "257",
+      "title": "Binary Tree Paths",
+      "tags": [
+          "String",
+          "Backtracking",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.1
+  },
+  "serialize_and_deserialize_binary_tree": {
+      "qno": "297",
+      "title": "Serialize and Deserialize Binary Tree",
+      "tags": [
+          "String",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Design",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 57.1
+  },
+  "binary_tree_longest_consecutive_sequence": {
+      "qno": "298",
+      "title": "Binary Tree Longest Consecutive Sequence",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.6
+  },
+  "binary_tree_vertical_order_traversal": {
+      "qno": "314",
+      "title": "Binary Tree Vertical Order Traversal",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Sorting",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.7
+  },
+  "verify_preorder_serialization_of_a_binary_tree": {
+      "qno": "331",
+      "title": "Verify Preorder Serialization of a Binary Tree",
+      "tags": [
+          "String",
+          "Stack",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.4
+  },
+  "house_robber_iii": {
+      "qno": "337",
+      "title": "House Robber III",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.3
+  },
+  "find_leaves_of_binary_tree": {
+      "qno": "366",
+      "title": "Find Leaves of Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.6
+  },
+  "sum_of_left_leaves": {
+      "qno": "404",
+      "title": "Sum of Left Leaves",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.7
+  },
+  "path_sum_iii": {
+      "qno": "437",
+      "title": "Path Sum III",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.2
+  },
+  "most_frequent_subtree_sum": {
+      "qno": "508",
+      "title": "Most Frequent Subtree Sum",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.7
+  },
+  "find_bottom_left_tree_value": {
+      "qno": "513",
+      "title": "Find Bottom Left Tree Value",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.2
+  },
+  "find_largest_value_in_each_tree_row": {
+      "qno": "515",
+      "title": "Find Largest Value in Each Tree Row",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.7
+  },
+  "construct_binary_tree_from_string": {
+      "qno": "536",
+      "title": "Construct Binary Tree from String",
+      "tags": [
+          "String",
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.1
+  },
+  "diameter_of_binary_tree": {
+      "qno": "543",
+      "title": "Diameter of Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.8
+  },
+  "boundary_of_binary_tree": {
+      "qno": "545",
+      "title": "Boundary of Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.6
+  },
+  "binary_tree_longest_consecutive_sequence_ii": {
+      "qno": "549",
+      "title": "Binary Tree Longest Consecutive Sequence II",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.5
+  },
+  "binary_tree_tilt": {
+      "qno": "563",
+      "title": "Binary Tree Tilt",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.1
+  },
+  "subtree_of_another_tree": {
+      "qno": "572",
+      "title": "Subtree of Another Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "String Matching",
+          "Binary Tree",
+          "Hash Function"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.2
+  },
+  "construct_string_from_binary_tree": {
+      "qno": "606",
+      "title": "Construct String from Binary Tree",
+      "tags": [
+          "String",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.3
+  },
+  "merge_two_binary_trees": {
+      "qno": "617",
+      "title": "Merge Two Binary Trees",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79
+  },
+  "add_one_row_to_tree": {
+      "qno": "623",
+      "title": "Add One Row to Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64
+  },
+  "average_of_levels_in_binary_tree": {
+      "qno": "637",
+      "title": "Average of Levels in Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.9
+  },
+  "find_duplicate_subtrees": {
+      "qno": "652",
+      "title": "Find Duplicate Subtrees",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.5
+  },
+  "maximum_binary_tree": {
+      "qno": "654",
+      "title": "Maximum Binary Tree",
+      "tags": [
+          "Array",
+          "Divide and Conquer",
+          "Stack",
+          "Tree",
+          "Monotonic Stack",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 85.5
+  },
+  "print_binary_tree": {
+      "qno": "655",
+      "title": "Print Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.2
+  },
+  "maximum_width_of_binary_tree": {
+      "qno": "662",
+      "title": "Maximum Width of Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43
+  },
+  "equal_tree_partition": {
+      "qno": "663",
+      "title": "Equal Tree Partition",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.5
+  },
+  "path_sum_iv": {
+      "qno": "666",
+      "title": "Path Sum IV",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.4
+  },
+  "second_minimum_node_in_a_binary_tree": {
+      "qno": "671",
+      "title": "Second Minimum Node In a Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 44.6
+  },
+  "longest_univalue_path": {
+      "qno": "687",
+      "title": "Longest Univalue Path",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.7
+  },
+  "closest_leaf_in_a_binary_tree": {
+      "qno": "742",
+      "title": "Closest Leaf in a Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.4
+  },
+  "encode_n-ary_tree_to_binary_tree": {
+      "qno": "431",
+      "title": "Encode N-ary Tree to Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Design",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 79.6
+  },
+  "binary_tree_pruning": {
+      "qno": "814",
+      "title": "Binary Tree Pruning",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.3
+  },
+  "all_nodes_distance_k_in_binary_tree": {
+      "qno": "863",
+      "title": "All Nodes Distance K in Binary Tree",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.7
+  },
+  "smallest_subtree_with_all_the_deepest_nodes": {
+      "qno": "865",
+      "title": "Smallest Subtree with all the Deepest Nodes",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.8
+  },
+  "leaf-similar_trees": {
+      "qno": "872",
+      "title": "Leaf-Similar Trees",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.1
+  },
+  "construct_binary_tree_from_preorder_and_postorder_traversal": {
+      "qno": "889",
+      "title": "Construct Binary Tree from Preorder and Postorder Traversal",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Divide and Conquer",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.5
+  },
+  "all_possible_full_binary_trees": {
+      "qno": "894",
+      "title": "All Possible Full Binary Trees",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Recursion",
+          "Memoization",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82.7
+  },
+  "complete_binary_tree_inserter": {
+      "qno": "919",
+      "title": "Complete Binary Tree Inserter",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Design",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.7
+  },
+  "flip_equivalent_binary_trees": {
+      "qno": "951",
+      "title": "Flip Equivalent Binary Trees",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67
+  },
+  "check_completeness_of_a_binary_tree": {
+      "qno": "958",
+      "title": "Check Completeness of a Binary Tree",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57
+  },
+  "univalued_binary_tree": {
+      "qno": "965",
+      "title": "Univalued Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.1
+  },
+  "binary_tree_cameras": {
+      "qno": "968",
+      "title": "Binary Tree Cameras",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 46.8
+  },
+  "flip_binary_tree_to_match_preorder_traversal": {
+      "qno": "971",
+      "title": "Flip Binary Tree To Match Preorder Traversal",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.6
+  },
+  "distribute_coins_in_binary_tree": {
+      "qno": "979",
+      "title": "Distribute Coins in Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 77.1
+  },
+  "vertical_order_traversal_of_a_binary_tree": {
+      "qno": "987",
+      "title": "Vertical Order Traversal of a Binary Tree",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Sorting",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 48.1
+  },
+  "smallest_string_starting_from_leaf": {
+      "qno": "988",
+      "title": "Smallest String Starting From Leaf",
+      "tags": [
+          "String",
+          "Backtracking",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.5
+  },
+  "cousins_in_binary_tree": {
+      "qno": "993",
+      "title": "Cousins in Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.3
+  },
+  "maximum_binary_tree_ii": {
+      "qno": "998",
+      "title": "Maximum Binary Tree II",
+      "tags": [
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.3
+  },
+  "sum_of_root_to_leaf_binary_numbers": {
+      "qno": "1022",
+      "title": "Sum of Root To Leaf Binary Numbers",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.1
+  },
+  "maximum_average_subtree": {
+      "qno": "1120",
+      "title": "Maximum Average Subtree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.6
+  },
+  "maximum_difference_between_node_and_ancestor": {
+      "qno": "1026",
+      "title": "Maximum Difference Between Node and Ancestor",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 78.1
+  },
+  "recover_a_tree_from_preorder_traversal": {
+      "qno": "1028",
+      "title": "Recover a Tree From Preorder Traversal",
+      "tags": [
+          "String",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 74.9
+  },
+  "maximum_level_sum_of_a_binary_tree": {
+      "qno": "1161",
+      "title": "Maximum Level Sum of a Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.1
+  },
+  "insufficient_nodes_in_root_to_leaf_paths": {
+      "qno": "1080",
+      "title": "Insufficient Nodes in Root to Leaf Paths",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.7
+  },
+  "path_in_zigzag_labelled_binary_tree": {
+      "qno": "1104",
+      "title": "Path In Zigzag Labelled Binary Tree",
+      "tags": [
+          "Math",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.4
+  },
+  "delete_nodes_and_return_forest": {
+      "qno": "1110",
+      "title": "Delete Nodes And Return Forest",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.2
+  },
+  "lowest_common_ancestor_of_deepest_leaves": {
+      "qno": "1123",
+      "title": "Lowest Common Ancestor of Deepest Leaves",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.4
+  },
+  "sum_of_nodes_with_even-valued_grandparent": {
+      "qno": "1315",
+      "title": "Sum of Nodes with Even-Valued Grandparent",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 85.5
+  },
+  "binary_tree_coloring_game": {
+      "qno": "1145",
+      "title": "Binary Tree Coloring Game",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52
+  },
+  "deepest_leaves_sum": {
+      "qno": "1302",
+      "title": "Deepest Leaves Sum",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 86.3
+  },
+  "validate_binary_tree_nodes": {
+      "qno": "1361",
+      "title": "Validate Binary Tree Nodes",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union Find",
+          "Graph",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.8
+  },
+  "find_elements_in_a_contaminated_binary_tree": {
+      "qno": "1261",
+      "title": "Find Elements in a Contaminated Binary Tree",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Design",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 77.4
+  },
+  "check_if_a_string_is_a_valid_sequence_from_root_to_leaves_path_in_a_binary_tree": {
+      "qno": "1430",
+      "title": "Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.9
+  },
+  "delete_leaves_with_a_given_value": {
+      "qno": "1325",
+      "title": "Delete Leaves With a Given Value",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 77.5
+  },
+  "maximum_product_of_splitted_binary_tree": {
+      "qno": "1339",
+      "title": "Maximum Product of Splitted Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.7
+  },
+  "longest_zigzag_path_in_a_binary_tree": {
+      "qno": "1372",
+      "title": "Longest ZigZag Path in a Binary Tree",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.9
+  },
+  "linked_list_in_binary_tree": {
+      "qno": "1367",
+      "title": "Linked List in Binary Tree",
+      "tags": [
+          "Linked List",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+  },
+  "find_a_corresponding_node_of_a_binary_tree_in_a_clone_of_that_tree": {
+      "qno": "1379",
+      "title": "Find a Corresponding Node of a Binary Tree in a Clone of That Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.8
+  },
+  "count_good_nodes_in_binary_tree": {
+      "qno": "1448",
+      "title": "Count Good Nodes in Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73
+  },
+  "pseudo-palindromic_paths_in_a_binary_tree": {
+      "qno": "1457",
+      "title": "Pseudo-Palindromic Paths in a Binary Tree",
+      "tags": [
+          "Bit Manipulation",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.4
+  },
+  "find_all_the_lonely_nodes": {
+      "qno": "1469",
+      "title": "Find All The Lonely Nodes",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.7
+  },
+  "clone_binary_tree_with_random_pointer": {
+      "qno": "1485",
+      "title": "Clone Binary Tree With Random Pointer",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.6
+  },
+  "number_of_good_leaf_nodes_pairs": {
+      "qno": "1530",
+      "title": "Number of Good Leaf Nodes Pairs",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.7
+  },
+  "even_odd_tree": {
+      "qno": "1609",
+      "title": "Even Odd Tree",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.8
+  },
+  "build_binary_expression_tree_from_infix_expression": {
+      "qno": "1597",
+      "title": "Build Binary Expression Tree From Infix Expression",
+      "tags": [
+          "String",
+          "Stack",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.5
+  },
+  "find_nearest_right_node_in_binary_tree": {
+      "qno": "1602",
+      "title": "Find Nearest Right Node in Binary Tree",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.5
+  },
+  "check_if_two_expression_trees_are_equivalent": {
+      "qno": "1612",
+      "title": "Check If Two Expression Trees are Equivalent",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree",
+          "Counting"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71
+  },
+  "design_an_expression_tree_with_evaluate_function": {
+      "qno": "1628",
+      "title": "Design an Expression Tree With Evaluate Function",
+      "tags": [
+          "Array",
+          "Math",
+          "Stack",
+          "Tree",
+          "Design",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82.6
+  },
+  "lowest_common_ancestor_of_a_binary_tree_ii": {
+      "qno": "1644",
+      "title": "Lowest Common Ancestor of a Binary Tree II",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.6
+  },
+  "correct_a_binary_tree": {
+      "qno": "1660",
+      "title": "Correct a Binary Tree",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.4
+  },
+  "change_the_root_of_a_binary_tree": {
+      "qno": "1666",
+      "title": "Change the Root of a Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74
+  },
+  "lowest_common_ancestor_of_a_binary_tree_iv": {
+      "qno": "1676",
+      "title": "Lowest Common Ancestor of a Binary Tree IV",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 78.5
+  },
+  "find_distance_in_a_binary_tree": {
+      "qno": "1740",
+      "title": "Find Distance in a Binary Tree",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.5
+  },
+  "count_nodes_equal_to_sum_of_descendants": {
+      "qno": "1973",
+      "title": "Count Nodes Equal to Sum of Descendants",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 76.9
+  },
+  "subtree_removal_game_with_fibonacci_tree": {
+      "qno": "2005",
+      "title": "Subtree Removal Game with Fibonacci Tree",
+      "tags": [
+          "Math",
+          "Dynamic Programming",
+          "Tree",
+          "Binary Tree",
+          "Game Theory"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 58.9
+  },
+  "count_nodes_with_the_highest_score": {
+      "qno": "2049",
+      "title": "Count Nodes With the Highest Score",
+      "tags": [
+          "Array",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.5
+  },
+  "step-by-step_directions_from_a_binary_tree_node_to_another": {
+      "qno": "2096",
+      "title": "Step-By-Step Directions From a Binary Tree Node to Another",
+      "tags": [
+          "String",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.9
+  },
+  "create_binary_tree_from_descriptions": {
+      "qno": "2196",
+      "title": "Create Binary Tree From Descriptions",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.7
+  },
+  "count_nodes_equal_to_average_of_subtree": {
+      "qno": "2265",
+      "title": "Count Nodes Equal to Average of Subtree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 86.3
+  },
+  "root_equals_sum_of_children": {
+      "qno": "2236",
+      "title": "Root Equals Sum of Children",
+      "tags": [
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.4
+  },
+  "minimum_flips_in_binary_tree_to_get_result": {
+      "qno": "2313",
+      "title": "Minimum Flips in Binary Tree to Get Result",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 59.1
+  },
+  "evaluate_boolean_binary_tree": {
+      "qno": "2331",
+      "title": "Evaluate Boolean Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.9
+  },
+  "amount_of_time_for_binary_tree_to_be_infected": {
+      "qno": "2385",
+      "title": "Amount of Time for Binary Tree to Be Infected",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.7
+  },
+  "reverse_odd_levels_of_binary_tree": {
+      "qno": "2415",
+      "title": "Reverse Odd Levels of Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 77.8
+  },
+  "height_of_binary_tree_after_subtree_removal_queries": {
+      "qno": "2458",
+      "title": "Height of Binary Tree After Subtree Removal Queries",
+      "tags": [
+          "Array",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.5
+  },
+  "minimum_number_of_operations_to_sort_a_binary_tree_by_level": {
+      "qno": "2471",
+      "title": "Minimum Number of Operations to Sort a Binary Tree by Level",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.9
+  },
+  "number_of_nodes_with_value_one": {
+      "qno": "2445",
+      "title": "Number of Nodes With Value One",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.8
+  },
+  "cycle_length_queries_in_a_tree": {
+      "qno": "2509",
+      "title": "Cycle Length Queries in a Tree",
+      "tags": [
+          "Array",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 56.1
+  },
+  "kth_largest_sum_in_a_binary_tree": {
+      "qno": "2583",
+      "title": "Kth Largest Sum in a Binary Tree",
+      "tags": [
+          "Tree",
+          "Breadth-First Search",
+          "Sorting",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.5
+  },
+  "cousins_in_binary_tree_ii": {
+      "qno": "2641",
+      "title": "Cousins in Binary Tree II",
+      "tags": [
+          "Hash Table",
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.7
+  },
+  "make_costs_of_paths_equal_in_a_binary_tree": {
+      "qno": "2673",
+      "title": "Make Costs of Paths Equal in a Binary Tree",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Greedy",
+          "Tree",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59
+  },
+  "extract_kth_character_from_the_rope_tree": {
+      "qno": "2689",
+      "title": "Extract Kth Character From The Rope Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.5
+  },
+  "is_array_a_preorder_of_some_‌binary_tree": {
+      "qno": "2764",
+      "title": "Is Array a Preorder of Some ‌Binary Tree",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.6
+  },
+  "height_of_special_binary_tree": {
+      "qno": "2773",
+      "title": "Height of Special Binary Tree",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.2
+  },
+  "count_nodes_that_are_great_enough": {
+      "qno": "2792",
+      "title": "Count Nodes That Are Great Enough",
+      "tags": [
+          "Divide and Conquer",
+          "Tree",
+          "Depth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 58.2
+  },
+  "find_the_level_of_tree_with_minimum_sum": {
+      "qno": "3157",
+      "title": "Find the Level of Tree with Minimum Sum",
+      "tags": [
+          "Tree",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Binary Tree"
+      ],
+      "default": "Binary Tree",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.8
+  },
+  "implement_stack_using_queues": {
+      "qno": "225",
+      "title": "Implement Stack using Queues",
+      "tags": [
+          "Stack",
+          "Design",
+          "Queue"
+      ],
+      "default": "Queue",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.3
+  },
+  "implement_queue_using_stacks": {
+      "qno": "232",
+      "title": "Implement Queue using Stacks",
+      "tags": [
+          "Stack",
+          "Design",
+          "Queue"
+      ],
+      "default": "Queue",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.5
+  },
+  "moving_average_from_data_stream": {
+      "qno": "346",
+      "title": "Moving Average from Data Stream",
+      "tags": [
+          "Array",
+          "Design",
+          "Queue",
+          "Data Stream"
+      ],
+      "default": "Queue",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.6
+  },
+  "design_snake_game": {
+      "qno": "353",
+      "title": "Design Snake Game",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Design",
+          "Queue",
+          "Simulation"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.8
+  },
+  "design_phone_directory": {
+      "qno": "379",
+      "title": "Design Phone Directory",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Linked List",
+          "Design",
+          "Queue"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.8
+  },
+  "first_unique_character_in_a_string": {
+      "qno": "387",
+      "title": "First Unique Character in a String",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Queue",
+          "Counting"
+      ],
+      "default": "Queue",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.3
+  },
+  "dota2_senate": {
+      "qno": "649",
+      "title": "Dota2 Senate",
+      "tags": [
+          "String",
+          "Greedy",
+          "Queue"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.7
+  },
+  "design_circular_deque": {
+      "qno": "641",
+      "title": "Design Circular Deque",
+      "tags": [
+          "Array",
+          "Linked List",
+          "Design",
+          "Queue"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57
+  },
+  "design_circular_queue": {
+      "qno": "622",
+      "title": "Design Circular Queue",
+      "tags": [
+          "Array",
+          "Linked List",
+          "Design",
+          "Queue"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.5
+  },
+  "number_of_recent_calls": {
+      "qno": "933",
+      "title": "Number of Recent Calls",
+      "tags": [
+          "Design",
+          "Queue",
+          "Data Stream"
+      ],
+      "default": "Queue",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.6
+  },
+  "stamping_the_sequence": {
+      "qno": "936",
+      "title": "Stamping The Sequence",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy",
+          "Queue"
+      ],
+      "default": "Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.5
+  },
+  "reveal_cards_in_increasing_order": {
+      "qno": "950",
+      "title": "Reveal Cards In Increasing Order",
+      "tags": [
+          "Array",
+          "Queue",
+          "Sorting",
+          "Simulation"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 83
+  },
+  "first_unique_number": {
+      "qno": "1429",
+      "title": "First Unique Number",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Design",
+          "Queue",
+          "Data Stream"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.8
+  },
+  "product_of_the_last_k_numbers": {
+      "qno": "1352",
+      "title": "Product of the Last K Numbers",
+      "tags": [
+          "Array",
+          "Math",
+          "Design",
+          "Queue",
+          "Data Stream"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.6
+  },
+  "design_front_middle_back_queue": {
+      "qno": "1670",
+      "title": "Design Front Middle Back Queue",
+      "tags": [
+          "Array",
+          "Linked List",
+          "Design",
+          "Queue",
+          "Data Stream"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.4
+  },
+  "number_of_students_unable_to_eat_lunch": {
+      "qno": "1700",
+      "title": "Number of Students Unable to Eat Lunch",
+      "tags": [
+          "Array",
+          "Stack",
+          "Queue",
+          "Simulation"
+      ],
+      "default": "Queue",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.2
+  },
+  "find_the_winner_of_the_circular_game": {
+      "qno": "1823",
+      "title": "Find the Winner of the Circular Game",
+      "tags": [
+          "Array",
+          "Math",
+          "Recursion",
+          "Queue",
+          "Simulation"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.7
+  },
+  "time_needed_to_buy_tickets": {
+      "qno": "2073",
+      "title": "Time Needed to Buy Tickets",
+      "tags": [
+          "Array",
+          "Queue",
+          "Simulation"
+      ],
+      "default": "Queue",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.9
+  },
+  "number_of_people_aware_of_a_secret": {
+      "qno": "2327",
+      "title": "Number of People Aware of a Secret",
+      "tags": [
+          "Dynamic Programming",
+          "Queue",
+          "Simulation"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.9
+  },
+  "time_taken_to_cross_the_door": {
+      "qno": "2534",
+      "title": "Time Taken to Cross the Door",
+      "tags": [
+          "Array",
+          "Queue",
+          "Simulation"
+      ],
+      "default": "Queue",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 49.6
+  },
+  "find_consecutive_integers_from_a_data_stream": {
+      "qno": "2526",
+      "title": "Find Consecutive Integers from a Data Stream",
+      "tags": [
+          "Hash Table",
+          "Design",
+          "Queue",
+          "Counting",
+          "Data Stream"
+      ],
+      "default": "Queue",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.3
+  },
+  "nim_game": {
+      "qno": "292",
+      "title": "Nim Game",
+      "tags": [
+          "Math",
+          "Brainteaser",
+          "Game Theory"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57
+  },
+  "bulb_switcher": {
+      "qno": "319",
+      "title": "Bulb Switcher",
+      "tags": [
+          "Math",
+          "Brainteaser"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.9
+  },
+  "chalkboard_xor_game": {
+      "qno": "810",
+      "title": "Chalkboard XOR Game",
+      "tags": [
+          "Array",
+          "Math",
+          "Bit Manipulation",
+          "Brainteaser",
+          "Game Theory"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 60
+  },
+  "divisor_game": {
+      "qno": "1025",
+      "title": "Divisor Game",
+      "tags": [
+          "Math",
+          "Dynamic Programming",
+          "Brainteaser",
+          "Game Theory"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.9
+  },
+  "moving_stones_until_consecutive": {
+      "qno": "1033",
+      "title": "Moving Stones Until Consecutive",
+      "tags": [
+          "Math",
+          "Brainteaser"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.2
+  },
+  "last_moment_before_all_ants_fall_out_of_a_plank": {
+      "qno": "1503",
+      "title": "Last Moment Before All Ants Fall Out of a Plank",
+      "tags": [
+          "Array",
+          "Brainteaser",
+          "Simulation"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.5
+  },
+  "game_of_nim": {
+      "qno": "1908",
+      "title": "Game of Nim",
+      "tags": [
+          "Array",
+          "Math",
+          "Dynamic Programming",
+          "Bit Manipulation",
+          "Brainteaser",
+          "Game Theory"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.1
+  },
+  "longest_subarray_with_maximum_bitwise_and": {
+      "qno": "2419",
+      "title": "Longest Subarray With Maximum Bitwise AND",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Brainteaser"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.5
+  },
+  "bitwise_xor_of_all_pairings": {
+      "qno": "2425",
+      "title": "Bitwise XOR of All Pairings",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Brainteaser"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.1
+  },
+  "bitwise_or_of_all_subsequence_sums": {
+      "qno": "2505",
+      "title": "Bitwise OR of All Subsequence Sums",
+      "tags": [
+          "Array",
+          "Math",
+          "Bit Manipulation",
+          "Brainteaser"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.7
+  },
+  "minimum_impossible_or": {
+      "qno": "2568",
+      "title": "Minimum Impossible OR",
+      "tags": [
+          "Array",
+          "Bit Manipulation",
+          "Brainteaser"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.5
+  },
+  "movement_of_robots": {
+      "qno": "2731",
+      "title": "Movement of Robots",
+      "tags": [
+          "Array",
+          "Brainteaser",
+          "Sorting",
+          "Prefix Sum"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 28
+  },
+  "minimum_operations_to_make_the_integer_zero": {
+      "qno": "2749",
+      "title": "Minimum Operations to Make the Integer Zero",
+      "tags": [
+          "Bit Manipulation",
+          "Brainteaser"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 29.7
+  },
+  "construct_the_longest_new_string": {
+      "qno": "2745",
+      "title": "Construct the Longest New String",
+      "tags": [
+          "Math",
+          "Dynamic Programming",
+          "Greedy",
+          "Brainteaser"
+      ],
+      "default": "Brainteaser",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.7
+  },
+  "ugly_number_ii": {
+      "qno": "264",
+      "title": "Ugly Number II",
+      "tags": [
+          "Hash Table",
+          "Math",
+          "Dynamic Programming",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.3
+  },
+  "design_twitter": {
+      "qno": "355",
+      "title": "Design Twitter",
+      "tags": [
+          "Hash Table",
+          "Linked List",
+          "Design",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40
+  },
+  "rearrange_string_k_distance_apart": {
+      "qno": "358",
+      "title": "Rearrange String k Distance Apart",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Counting"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.9
+  },
+  "find_k_pairs_with_smallest_sums": {
+      "qno": "373",
+      "title": "Find K Pairs with Smallest Sums",
+      "tags": [
+          "Array",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40
+  },
+  "strong_password_checker": {
+      "qno": "420",
+      "title": "Strong Password Checker",
+      "tags": [
+          "String",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 13.8
+  },
+  "ipo": {
+      "qno": "502",
+      "title": "IPO",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.2
+  },
+  "relative_ranks": {
+      "qno": "506",
+      "title": "Relative Ranks",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.8
+  },
+  "task_scheduler": {
+      "qno": "621",
+      "title": "Task Scheduler",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Counting"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.1
+  },
+  "course_schedule_iii": {
+      "qno": "630",
+      "title": "Course Schedule III",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.2
+  },
+  "design_search_autocomplete_system": {
+      "qno": "642",
+      "title": "Design Search Autocomplete System",
+      "tags": [
+          "String",
+          "Design",
+          "Trie",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Data Stream"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 49
+  },
+  "split_array_into_consecutive_subsequences": {
+      "qno": "659",
+      "title": "Split Array into Consecutive Subsequences",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.1
+  },
+  "network_delay_time": {
+      "qno": "743",
+      "title": "Network Delay Time",
+      "tags": [
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.3
+  },
+  "employee_free_time": {
+      "qno": "759",
+      "title": "Employee Free Time",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 72.2
+  },
+  "reorganize_string": {
+      "qno": "767",
+      "title": "Reorganize String",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Counting"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.8
+  },
+  "cheapest_flights_within_k_stops": {
+      "qno": "787",
+      "title": "Cheapest Flights Within K Stops",
+      "tags": [
+          "Dynamic Programming",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.4
+  },
+  "exam_room": {
+      "qno": "855",
+      "title": "Exam Room",
+      "tags": [
+          "Design",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.5
+  },
+  "minimum_cost_to_hire_k_workers": {
+      "qno": "857",
+      "title": "Minimum Cost to Hire K Workers",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 63.4
+  },
+  "minimum_number_of_refueling_stops": {
+      "qno": "871",
+      "title": "Minimum Number of Refueling Stops",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.1
+  },
+  "reachable_nodes_in_subdivided_graph": {
+      "qno": "882",
+      "title": "Reachable Nodes In Subdivided Graph",
+      "tags": [
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50.5
+  },
+  "high_five": {
+      "qno": "1086",
+      "title": "High Five",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.5
+  },
+  "minimum_cost_to_connect_sticks": {
+      "qno": "1167",
+      "title": "Minimum Cost to Connect Sticks",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.1
+  },
+  "last_stone_weight": {
+      "qno": "1046",
+      "title": "Last Stone Weight",
+      "tags": [
+          "Array",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.5
+  },
+  "distant_barcodes": {
+      "qno": "1054",
+      "title": "Distant Barcodes",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Counting"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.6
+  },
+  "maximum_number_of_ones": {
+      "qno": "1183",
+      "title": "Maximum Number of Ones",
+      "tags": [
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 68
+  },
+  "minimum_time_to_build_blocks": {
+      "qno": "1199",
+      "title": "Minimum Time to Build Blocks",
+      "tags": [
+          "Array",
+          "Math",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 45.8
+  },
+  "car_pooling": {
+      "qno": "1094",
+      "title": "Car Pooling",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Simulation",
+          "Prefix Sum"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56
+  },
+  "dinner_plate_stacks": {
+      "qno": "1172",
+      "title": "Dinner Plate Stacks",
+      "tags": [
+          "Hash Table",
+          "Stack",
+          "Design",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.7
+  },
+  "longest_happy_string": {
+      "qno": "1405",
+      "title": "Longest Happy String",
+      "tags": [
+          "String",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.4
+  },
+  "path_with_maximum_probability": {
+      "qno": "1514",
+      "title": "Path with Maximum Probability",
+      "tags": [
+          "Array",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.3
+  },
+  "reduce_array_size_to_the_half": {
+      "qno": "1338",
+      "title": "Reduce Array Size to The Half",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.9
+  },
+  "maximum_number_of_events_that_can_be_attended": {
+      "qno": "1353",
+      "title": "Maximum Number of Events That Can Be Attended",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 32.5
+  },
+  "construct_target_array_with_multiple_sums": {
+      "qno": "1354",
+      "title": "Construct Target Array With Multiple Sums",
+      "tags": [
+          "Array",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.2
+  },
+  "pizza_with_3n_slices": {
+      "qno": "1388",
+      "title": "Pizza With 3n Slices",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51.9
+  },
+  "maximum_performance_of_a_team": {
+      "qno": "1383",
+      "title": "Maximum Performance of a Team",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.8
+  },
+  "diagonal_traverse_ii": {
+      "qno": "1424",
+      "title": "Diagonal Traverse II",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57
+  },
+  "maximum_product_of_two_elements_in_an_array": {
+      "qno": "1464",
+      "title": "Maximum Product of Two Elements in an Array",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.7
+  },
+  "design_a_file_sharing_system": {
+      "qno": "1500",
+      "title": "Design a File Sharing System",
+      "tags": [
+          "Hash Table",
+          "Design",
+          "Heap (Priority Queue)",
+          "Data Stream"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.4
+  },
+  "find_servers_that_handled_most_number_of_requests": {
+      "qno": "1606",
+      "title": "Find Servers That Handled Most Number of Requests",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.7
+  },
+  "furthest_building_you_can_reach": {
+      "qno": "1642",
+      "title": "Furthest Building You Can Reach",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.8
+  },
+  "stone_game_vi": {
+      "qno": "1686",
+      "title": "Stone Game VI",
+      "tags": [
+          "Array",
+          "Math",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Game Theory"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.2
+  },
+  "minimize_deviation_in_array": {
+      "qno": "1675",
+      "title": "Minimize Deviation in Array",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 54
+  },
+  "maximum_number_of_eaten_apples": {
+      "qno": "1705",
+      "title": "Maximum Number of Eaten Apples",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.2
+  },
+  "maximum_score_from_removing_stones": {
+      "qno": "1753",
+      "title": "Maximum Score From Removing Stones",
+      "tags": [
+          "Math",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.4
+  },
+  "car_fleet_ii": {
+      "qno": "1776",
+      "title": "Car Fleet II",
+      "tags": [
+          "Array",
+          "Math",
+          "Stack",
+          "Heap (Priority Queue)",
+          "Monotonic Stack"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 55.2
+  },
+  "number_of_restricted_paths_from_first_to_last_node": {
+      "qno": "1786",
+      "title": "Number of Restricted Paths From First to Last Node",
+      "tags": [
+          "Dynamic Programming",
+          "Graph",
+          "Topological Sort",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.2
+  },
+  "maximum_average_pass_ratio": {
+      "qno": "1792",
+      "title": "Maximum Average Pass Ratio",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.9
+  },
+  "number_of_orders_in_the_backlog": {
+      "qno": "1801",
+      "title": "Number of Orders in the Backlog",
+      "tags": [
+          "Array",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.8
+  },
+  "finding_mk_average": {
+      "qno": "1825",
+      "title": "Finding MK Average",
+      "tags": [
+          "Design",
+          "Queue",
+          "Heap (Priority Queue)",
+          "Data Stream",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.3
+  },
+  "seat_reservation_manager": {
+      "qno": "1845",
+      "title": "Seat Reservation Manager",
+      "tags": [
+          "Design",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.3
+  },
+  "minimum_path_cost_in_a_hidden_grid": {
+      "qno": "1810",
+      "title": "Minimum Path Cost in a Hidden Grid",
+      "tags": [
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Interactive"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.4
+  },
+  "single-threaded_cpu": {
+      "qno": "1834",
+      "title": "Single-Threaded CPU",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.6
+  },
+  "process_tasks_using_servers": {
+      "qno": "1882",
+      "title": "Process Tasks Using Servers",
+      "tags": [
+          "Array",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.3
+  },
+  "design_movie_rental_system": {
+      "qno": "1912",
+      "title": "Design Movie Rental System",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Design",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.6
+  },
+  "the_number_of_the_smallest_unoccupied_chair": {
+      "qno": "1942",
+      "title": "The Number of the Smallest Unoccupied Chair",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.1
+  },
+  "remove_stones_to_minimize_the_total": {
+      "qno": "1962",
+      "title": "Remove Stones to Minimize the Total",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.4
+  },
+  "average_height_of_buildings_in_each_segment": {
+      "qno": "2015",
+      "title": "Average Height of Buildings in Each Segment",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.4
+  },
+  "stock_price_fluctuation": {
+      "qno": "2034",
+      "title": "Stock Price Fluctuation",
+      "tags": [
+          "Hash Table",
+          "Design",
+          "Heap (Priority Queue)",
+          "Data Stream",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.7
+  },
+  "find_subsequence_of_length_k_with_the_largest_sum": {
+      "qno": "2099",
+      "title": "Find Subsequence of Length K With the Largest Sum",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 43.7
+  },
+  "sequentially_ordinal_rank_tracker": {
+      "qno": "2102",
+      "title": "Sequentially Ordinal Rank Tracker",
+      "tags": [
+          "Design",
+          "Heap (Priority Queue)",
+          "Data Stream",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 64.6
+  },
+  "minimum_cost_to_reach_city_with_discounts": {
+      "qno": "2093",
+      "title": "Minimum Cost to Reach City With Discounts",
+      "tags": [
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56
+  },
+  "minimum_difference_in_sums_after_removal_of_elements": {
+      "qno": "2163",
+      "title": "Minimum Difference in Sums After Removal of Elements",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 48
+  },
+  "construct_string_with_repeat_limit": {
+      "qno": "2182",
+      "title": "Construct String With Repeat Limit",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Greedy",
+          "Heap (Priority Queue)",
+          "Counting"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.2
+  },
+  "minimum_operations_to_halve_array_sum": {
+      "qno": "2208",
+      "title": "Minimum Operations to Halve Array Sum",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.7
+  },
+  "largest_number_after_digit_swaps_by_parity": {
+      "qno": "2231",
+      "title": "Largest Number After Digit Swaps by Parity",
+      "tags": [
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.7
+  },
+  "maximum_product_after_k_increments": {
+      "qno": "2233",
+      "title": "Maximum Product After K Increments",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.7
+  },
+  "maximum_total_importance_of_roads": {
+      "qno": "2285",
+      "title": "Maximum Total Importance of Roads",
+      "tags": [
+          "Greedy",
+          "Graph",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.4
+  },
+  "minimum_amount_of_time_to_fill_cups": {
+      "qno": "2335",
+      "title": "Minimum Amount of Time to Fill Cups",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.8
+  },
+  "smallest_number_in_infinite_set": {
+      "qno": "2336",
+      "title": "Smallest Number in Infinite Set",
+      "tags": [
+          "Hash Table",
+          "Design",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.7
+  },
+  "minimum_sum_of_squared_difference": {
+      "qno": "2333",
+      "title": "Minimum Sum of Squared Difference",
+      "tags": [
+          "Array",
+          "Math",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 25.4
+  },
+  "minimum_deletions_to_make_array_divisible": {
+      "qno": "2344",
+      "title": "Minimum Deletions to Make Array Divisible",
+      "tags": [
+          "Array",
+          "Math",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Number Theory"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 56.1
+  },
+  "design_a_food_rating_system": {
+      "qno": "2353",
+      "title": "Design a Food Rating System",
+      "tags": [
+          "Hash Table",
+          "Design",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.2
+  },
+  "design_a_number_container_system": {
+      "qno": "2349",
+      "title": "Design a Number Container System",
+      "tags": [
+          "Hash Table",
+          "Design",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.8
+  },
+  "make_array_zero_by_subtracting_equal_amounts": {
+      "qno": "2357",
+      "title": "Make Array Zero by Subtracting Equal Amounts",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.4
+  },
+  "find_the_k-sum_of_an_array": {
+      "qno": "2386",
+      "title": "Find the K-Sum of an Array",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.9
+  },
+  "max_sum_of_a_pair_with_equal_sum_of_digits": {
+      "qno": "2342",
+      "title": "Max Sum of a Pair With Equal Sum of Digits",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.1
+  },
+  "meeting_rooms_iii": {
+      "qno": "2402",
+      "title": "Meeting Rooms III",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.4
+  },
+  "most_popular_video_creator": {
+      "qno": "2456",
+      "title": "Most Popular Video Creator",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "String",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.8
+  },
+  "maximum_star_sum_of_a_graph": {
+      "qno": "2497",
+      "title": "Maximum Star Sum of a Graph",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Graph",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.4
+  },
+  "reward_top_k_students": {
+      "qno": "2512",
+      "title": "Reward Top K Students",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "String",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.1
+  },
+  "minimum_cost_to_buy_apples": {
+      "qno": "2473",
+      "title": "Minimum Cost to Buy Apples",
+      "tags": [
+          "Array",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.9
+  },
+  "maximal_score_after_applying_k_operations": {
+      "qno": "2530",
+      "title": "Maximal Score After Applying K Operations",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.9
+  },
+  "maximum_subsequence_score": {
+      "qno": "2542",
+      "title": "Maximum Subsequence Score",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.7
+  },
+  "time_to_cross_a_bridge": {
+      "qno": "2532",
+      "title": "Time to Cross a Bridge",
+      "tags": [
+          "Array",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.7
+  },
+  "make_the_prefix_sum_non-negative": {
+      "qno": "2599",
+      "title": "Make the Prefix Sum Non-negative",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.3
+  },
+  "design_graph_with_shortest_path_calculator": {
+      "qno": "2642",
+      "title": "Design Graph With Shortest Path Calculator",
+      "tags": [
+          "Graph",
+          "Design",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 70.7
+  },
+  "put_marbles_in_bags": {
+      "qno": "2551",
+      "title": "Put Marbles in Bags",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 66.6
+  },
+  "minimum_cost_of_a_path_with_special_roads": {
+      "qno": "2662",
+      "title": "Minimum Cost of a Path With Special Roads",
+      "tags": [
+          "Array",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.7
+  },
+  "take_gifts_from_the_richest_pile": {
+      "qno": "2558",
+      "title": "Take Gifts From the Richest Pile",
+      "tags": [
+          "Array",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.8
+  },
+  "find_score_of_an_array_after_marking_all_elements": {
+      "qno": "2593",
+      "title": "Find Score of an Array After Marking All Elements",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.4
+  },
+  "mice_and_cheese": {
+      "qno": "2611",
+      "title": "Mice and Cheese",
+      "tags": [
+          "Array",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.8
+  },
+  "modify_graph_edge_weights": {
+      "qno": "2699",
+      "title": "Modify Graph Edge Weights",
+      "tags": [
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 24.3
+  },
+  "find_shortest_path_with_k_hops": {
+      "qno": "2714",
+      "title": "Find Shortest Path with K Hops",
+      "tags": [
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.4
+  },
+  "find_the_closest_marked_node": {
+      "qno": "2737",
+      "title": "Find the Closest Marked Node",
+      "tags": [
+          "Array",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.1
+  },
+  "maximum_elegance_of_a_k-length_subsequence": {
+      "qno": "2813",
+      "title": "Maximum Elegance of a K-Length Subsequence",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Stack",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.9
+  },
+  "number_of_possible_sets_of_closing_branches": {
+      "qno": "2959",
+      "title": "Number of Possible Sets of Closing Branches",
+      "tags": [
+          "Bit Manipulation",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Enumeration",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51
+  },
+  "find_number_of_coins_to_place_in_tree_nodes": {
+      "qno": "2973",
+      "title": "Find Number of Coins to Place in Tree Nodes",
+      "tags": [
+          "Dynamic Programming",
+          "Tree",
+          "Depth-First Search",
+          "Sorting",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.6
+  },
+  "minimum_number_game": {
+      "qno": "2974",
+      "title": "Minimum Number Game",
+      "tags": [
+          "Array",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.8
+  },
+  "mark_elements_on_array_by_performing_queries": {
+      "qno": "3080",
+      "title": "Mark Elements on Array by Performing Queries",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.1
+  },
+  "minimum_operations_to_exceed_threshold_value_ii": {
+      "qno": "3066",
+      "title": "Minimum Operations to Exceed Threshold Value II",
+      "tags": [
+          "Array",
+          "Heap (Priority Queue)",
+          "Simulation"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 27.5
+  },
+  "replace_question_marks_in_string_to_minimize_its_value": {
+      "qno": "3081",
+      "title": "Replace Question Marks in String to Minimize Its Value",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Greedy",
+          "Sorting",
+          "Heap (Priority Queue)",
+          "Counting"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 27
+  },
+  "most_frequent_ids": {
+      "qno": "3092",
+      "title": "Most Frequent IDs",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Heap (Priority Queue)",
+          "Ordered Set"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.4
+  },
+  "find_edges_in_shortest_paths": {
+      "qno": "3123",
+      "title": "Find Edges in Shortest Paths",
+      "tags": [
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 49.3
+  },
+  "minimum_time_to_visit_disappearing_nodes": {
+      "qno": "3112",
+      "title": "Minimum Time to Visit Disappearing Nodes",
+      "tags": [
+          "Array",
+          "Graph",
+          "Heap (Priority Queue)",
+          "Shortest Path"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.2
+  },
+  "lexicographically_minimum_string_after_removing_stars": {
+      "qno": "3170",
+      "title": "Lexicographically Minimum String After Removing Stars",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Stack",
+          "Greedy",
+          "Heap (Priority Queue)"
+      ],
+      "default": "Heap (Priority Queue)",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.6
+  },
+  "max_consecutive_ones": {
+      "qno": "485",
+      "title": "Max Consecutive Ones",
+      "tags": [
+          "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.7
+  },
+  "buildings_with_an_ocean_view": {
+      "qno": "1762",
+      "title": "Buildings With an Ocean View",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.9
+  },
+  "maximum_subarray_min-product": {
+      "qno": "1856",
+      "title": "Maximum Subarray Min-Product",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack",
+          "Prefix Sum"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.1
+  },
+  "jump_game_viii": {
+      "qno": "2297",
+      "title": "Jump Game VIII",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Graph",
+          "Monotonic Stack",
+          "Shortest Path"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.7
+  },
+  "maximum_of_minimum_values_in_all_subarrays": {
+      "qno": "1950",
+      "title": "Maximum of Minimum Values in All Subarrays",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.8
+  },
+  "the_number_of_weak_characters_in_the_game": {
+      "qno": "1996",
+      "title": "The Number of Weak Characters in the Game",
+      "tags": [
+          "Array",
+          "Stack",
+          "Greedy",
+          "Sorting",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44
+  },
+  "smallest_k-length_subsequence_with_occurrences_of_a_letter": {
+      "qno": "2030",
+      "title": "Smallest K-Length Subsequence With Occurrences of a Letter",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.2
+  },
+  "sum_of_subarray_ranges": {
+      "qno": "2104",
+      "title": "Sum of Subarray Ranges",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.2
+  },
+  "sum_of_total_strength_of_wizards": {
+      "qno": "2281",
+      "title": "Sum of Total Strength of Wizards",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack",
+          "Prefix Sum"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 27.9
+  },
+  "steps_to_make_array_non-decreasing": {
+      "qno": "2289",
+      "title": "Steps to Make Array Non-decreasing",
+      "tags": [
+          "Array",
+          "Linked List",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 21.9
+  },
+  "subarray_with_elements_greater_than_varying_threshold": {
+      "qno": "2334",
+      "title": "Subarray With Elements Greater Than Varying Threshold",
+      "tags": [
+          "Array",
+          "Stack",
+          "Union Find",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.8
+  },
+  "finding_the_number_of_visible_mountains": {
+      "qno": "2345",
+      "title": "Finding the Number of Visible Mountains",
+      "tags": [
+          "Array",
+          "Stack",
+          "Sorting",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38
+  },
+  "maximum_number_of_books_you_can_take": {
+      "qno": "2355",
+      "title": "Maximum Number of Books You Can Take",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.5
+  },
+  "remove_nodes_from_linked_list": {
+      "qno": "2487",
+      "title": "Remove Nodes From Linked List",
+      "tags": [
+          "Linked List",
+          "Stack",
+          "Recursion",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.4
+  },
+  "apply_operations_to_maximize_score": {
+      "qno": "2818",
+      "title": "Apply Operations to Maximize Score",
+      "tags": [
+          "Array",
+          "Math",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack",
+          "Number Theory"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.8
+  },
+  "maximal_range_that_each_element_is_maximum_in_it": {
+      "qno": "2832",
+      "title": "Maximal Range That Each Element Is Maximum in It",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.1
+  },
+  "beautiful_towers_ii": {
+      "qno": "2866",
+      "title": "Beautiful Towers II",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 34.7
+  },
+  "beautiful_towers_i": {
+      "qno": "2865",
+      "title": "Beautiful Towers I",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.5
+  },
+  "maximum_array_hopping_score_i": {
+      "qno": "3205",
+      "title": "Maximum Array Hopping Score I",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Monotonic Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 89.2
+  },
+  "valid_parentheses": {
+      "qno": "20",
+      "title": "Valid Parentheses",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 40.7
+  },
+  "longest_valid_parentheses": {
+      "qno": "32",
+      "title": "Longest Valid Parentheses",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 34.4
+  },
+  "simplify_path": {
+      "qno": "71",
+      "title": "Simplify Path",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.2
+  },
+  "largest_rectangle_in_histogram": {
+      "qno": "84",
+      "title": "Largest Rectangle in Histogram",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.9
+  },
+  "evaluate_reverse_polish_notation": {
+      "qno": "150",
+      "title": "Evaluate Reverse Polish Notation",
+      "tags": [
+          "Array",
+          "Math",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52
+  },
+  "min_stack": {
+      "qno": "155",
+      "title": "Min Stack",
+      "tags": [
+          "Stack",
+          "Design"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.5
+  },
+  "basic_calculator": {
+      "qno": "224",
+      "title": "Basic Calculator",
+      "tags": [
+          "Math",
+          "String",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.6
+  },
+  "basic_calculator_ii": {
+      "qno": "227",
+      "title": "Basic Calculator II",
+      "tags": [
+          "Math",
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+  },
+  "remove_duplicate_letters": {
+      "qno": "316",
+      "title": "Remove Duplicate Letters",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.9
+  },
+  "nested_list_weight_sum_ii": {
+      "qno": "364",
+      "title": "Nested List Weight Sum II",
+      "tags": [
+          "Stack",
+          "Depth-First Search",
+          "Breadth-First Search"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65
+  },
+  "mini_parser": {
+      "qno": "385",
+      "title": "Mini Parser",
+      "tags": [
+          "String",
+          "Stack",
+          "Depth-First Search"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.4
+  },
+  "longest_absolute_file_path": {
+      "qno": "388",
+      "title": "Longest Absolute File Path",
+      "tags": [
+          "String",
+          "Stack",
+          "Depth-First Search"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.6
+  },
+  "decode_string": {
+      "qno": "394",
+      "title": "Decode String",
+      "tags": [
+          "String",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.4
+  },
+  "remove_k_digits": {
+      "qno": "402",
+      "title": "Remove K Digits",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.7
+  },
+  "ternary_expression_parser": {
+      "qno": "439",
+      "title": "Ternary Expression Parser",
+      "tags": [
+          "String",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61
+  },
+  "add_two_numbers_ii": {
+      "qno": "445",
+      "title": "Add Two Numbers II",
+      "tags": [
+          "Linked List",
+          "Math",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.2
+  },
+  "find_permutation": {
+      "qno": "484",
+      "title": "Find Permutation",
+      "tags": [
+          "Array",
+          "String",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.9
+  },
+  "zuma_game": {
+      "qno": "488",
+      "title": "Zuma Game",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Stack",
+          "Breadth-First Search",
+          "Memoization"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.6
+  },
+  "next_greater_element_i": {
+      "qno": "496",
+      "title": "Next Greater Element I",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.5
+  },
+  "next_greater_element_ii": {
+      "qno": "503",
+      "title": "Next Greater Element II",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.2
+  },
+  "tag_validator": {
+      "qno": "591",
+      "title": "Tag Validator",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.8
+  },
+  "exclusive_time_of_functions": {
+      "qno": "636",
+      "title": "Exclusive Time of Functions",
+      "tags": [
+          "Array",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.2
+  },
+  "valid_parenthesis_string": {
+      "qno": "678",
+      "title": "Valid Parenthesis String",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.1
+  },
+  "baseball_game": {
+      "qno": "682",
+      "title": "Baseball Game",
+      "tags": [
+          "Array",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.6
+  },
+  "number_of_atoms": {
+      "qno": "726",
+      "title": "Number of Atoms",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Stack",
+          "Sorting"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.1
+  },
+  "asteroid_collision": {
+      "qno": "735",
+      "title": "Asteroid Collision",
+      "tags": [
+          "Array",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.5
+  },
+  "parse_lisp_expression": {
+      "qno": "736",
+      "title": "Parse Lisp Expression",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51.9
+  },
+  "daily_temperatures": {
+      "qno": "739",
+      "title": "Daily Temperatures",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.1
+  },
+  "n-ary_tree_preorder_traversal": {
+      "qno": "589",
+      "title": "N-ary Tree Preorder Traversal",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Depth-First Search"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.6
+  },
+  "n-ary_tree_postorder_traversal": {
+      "qno": "590",
+      "title": "N-ary Tree Postorder Traversal",
+      "tags": [
+          "Stack",
+          "Tree",
+          "Depth-First Search"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78
+  },
+  "max_chunks_to_make_sorted_ii": {
+      "qno": "768",
+      "title": "Max Chunks To Make Sorted II",
+      "tags": [
+          "Array",
+          "Stack",
+          "Greedy",
+          "Sorting",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.3
+  },
+  "max_chunks_to_make_sorted": {
+      "qno": "769",
+      "title": "Max Chunks To Make Sorted",
+      "tags": [
+          "Array",
+          "Stack",
+          "Greedy",
+          "Sorting",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.4
+  },
+  "basic_calculator_iv": {
+      "qno": "770",
+      "title": "Basic Calculator IV",
+      "tags": [
+          "Hash Table",
+          "Math",
+          "String",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 55.6
+  },
+  "basic_calculator_iii": {
+      "qno": "772",
+      "title": "Basic Calculator III",
+      "tags": [
+          "Math",
+          "String",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50.8
+  },
+  "car_fleet": {
+      "qno": "853",
+      "title": "Car Fleet",
+      "tags": [
+          "Array",
+          "Stack",
+          "Sorting",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.4
+  },
+  "score_of_parentheses": {
+      "qno": "856",
+      "title": "Score of Parentheses",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.1
+  },
+  "decoded_string_at_index": {
+      "qno": "880",
+      "title": "Decoded String at Index",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.5
+  },
+  "maximum_frequency_stack": {
+      "qno": "895",
+      "title": "Maximum Frequency Stack",
+      "tags": [
+          "Hash Table",
+          "Stack",
+          "Design",
+          "Ordered Set"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 66.4
+  },
+  "online_stock_span": {
+      "qno": "901",
+      "title": "Online Stock Span",
+      "tags": [
+          "Stack",
+          "Design",
+          "Monotonic Stack",
+          "Data Stream"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.1
+  },
+  "sum_of_subarray_minimums": {
+      "qno": "907",
+      "title": "Sum of Subarray Minimums",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.3
+  },
+  "minimum_add_to_make_parentheses_valid": {
+      "qno": "921",
+      "title": "Minimum Add to Make Parentheses Valid",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75
+  },
+  "validate_stack_sequences": {
+      "qno": "946",
+      "title": "Validate Stack Sequences",
+      "tags": [
+          "Array",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.5
+  },
+  "maximum_width_ramp": {
+      "qno": "962",
+      "title": "Maximum Width Ramp",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.3
+  },
+  "odd_even_jump": {
+      "qno": "975",
+      "title": "Odd Even Jump",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Monotonic Stack",
+          "Ordered Set"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.1
+  },
+  "check_if_word_is_valid_after_substitutions": {
+      "qno": "1003",
+      "title": "Check If Word Is Valid After Substitutions",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.7
+  },
+  "clumsy_factorial": {
+      "qno": "1006",
+      "title": "Clumsy Factorial",
+      "tags": [
+          "Math",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.4
+  },
+  "number_of_valid_subarrays": {
+      "qno": "1063",
+      "title": "Number of Valid Subarrays",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 79.1
+  },
+  "next_greater_node_in_linked_list": {
+      "qno": "1019",
+      "title": "Next Greater Node In Linked List",
+      "tags": [
+          "Array",
+          "Linked List",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61
+  },
+  "remove_outermost_parentheses": {
+      "qno": "1021",
+      "title": "Remove Outermost Parentheses",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.1
+  },
+  "remove_all_adjacent_duplicates_in_string": {
+      "qno": "1047",
+      "title": "Remove All Adjacent Duplicates In String",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.8
+  },
+  "smallest_subsequence_of_distinct_characters": {
+      "qno": "1081",
+      "title": "Smallest Subsequence of Distinct Characters",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61
+  },
+  "brace_expansion_ii": {
+      "qno": "1096",
+      "title": "Brace Expansion II",
+      "tags": [
+          "String",
+          "Backtracking",
+          "Stack",
+          "Breadth-First Search"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 63.7
+  },
+  "parsing_a_boolean_expression": {
+      "qno": "1106",
+      "title": "Parsing A Boolean Expression",
+      "tags": [
+          "String",
+          "Stack",
+          "Recursion"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 59.5
+  },
+  "maximum_nesting_depth_of_two_valid_parentheses_strings": {
+      "qno": "1111",
+      "title": "Maximum Nesting Depth of Two Valid Parentheses Strings",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72
+  },
+  "longest_well-performing_interval": {
+      "qno": "1124",
+      "title": "Longest Well-Performing Interval",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Stack",
+          "Monotonic Stack",
+          "Prefix Sum"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.1
+  },
+  "minimum_cost_tree_from_leaf_values": {
+      "qno": "1130",
+      "title": "Minimum Cost Tree From Leaf Values",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.7
+  },
+  "reverse_substrings_between_each_pair_of_parentheses": {
+      "qno": "1190",
+      "title": "Reverse Substrings Between Each Pair of Parentheses",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.5
+  },
+  "number_of_visible_people_in_a_queue": {
+      "qno": "1944",
+      "title": "Number of Visible People in a Queue",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 69.8
+  },
+  "remove_all_adjacent_duplicates_in_string_ii": {
+      "qno": "1209",
+      "title": "Remove All Adjacent Duplicates in String II",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58
+  },
+  "minimum_deletions_to_make_array_beautiful": {
+      "qno": "2216",
+      "title": "Minimum Deletions to Make Array Beautiful",
+      "tags": [
+          "Array",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.4
+  },
+  "minimum_remove_to_make_valid_parentheses": {
+      "qno": "1249",
+      "title": "Minimum Remove to Make Valid Parentheses",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69
+  },
+  "design_a_stack_with_increment_operation": {
+      "qno": "1381",
+      "title": "Design a Stack With Increment Operation",
+      "tags": [
+          "Array",
+          "Stack",
+          "Design"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 77.1
+  },
+  "build_an_array_with_stack_operations": {
+      "qno": "1441",
+      "title": "Build an Array With Stack Operations",
+      "tags": [
+          "Array",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.9
+  },
+  "final_prices_with_a_special_discount_in_a_shop": {
+      "qno": "1475",
+      "title": "Final Prices With a Special Discount in a Shop",
+      "tags": [
+          "Array",
+          "Stack",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78
+  },
+  "minimum_number_of_increments_on_subarrays_to_form_a_target_array": {
+      "qno": "1526",
+      "title": "Minimum Number of Increments on Subarrays to Form a Target Array",
+      "tags": [
+          "Array",
+          "Dynamic Programming",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 69.8
+  },
+  "minimum_insertions_to_balance_a_parentheses_string": {
+      "qno": "1541",
+      "title": "Minimum Insertions to Balance a Parentheses String",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.6
+  },
+  "make_the_string_great": {
+      "qno": "1544",
+      "title": "Make The String Great",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.4
+  },
+  "crawler_log_folder": {
+      "qno": "1598",
+      "title": "Crawler Log Folder",
+      "tags": [
+          "Array",
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.3
+  },
+  "maximum_nesting_depth_of_the_parentheses": {
+      "qno": "1614",
+      "title": "Maximum Nesting Depth of the Parentheses",
+      "tags": [
+          "String",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.8
+  },
+  "minimum_deletions_to_make_string_balanced": {
+      "qno": "1653",
+      "title": "Minimum Deletions to Make String Balanced",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.7
+  },
+  "find_the_most_competitive_subsequence": {
+      "qno": "1673",
+      "title": "Find the Most Competitive Subsequence",
+      "tags": [
+          "Array",
+          "Stack",
+          "Greedy",
+          "Monotonic Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.5
+  },
+  "maximum_score_from_removing_substrings": {
+      "qno": "1717",
+      "title": "Maximum Score From Removing Substrings",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.3
+  },
+  "design_most_recently_used_queue": {
+      "qno": "1756",
+      "title": "Design Most Recently Used Queue",
+      "tags": [
+          "Array",
+          "Hash Table",
+          "Stack",
+          "Design",
+          "Binary Indexed Tree",
+          "Ordered Set"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.8
+  },
+  "minimum_cost_to_change_the_final_value_of_expression": {
+      "qno": "1896",
+      "title": "Minimum Cost to Change the Final Value of Expression",
+      "tags": [
+          "Math",
+          "String",
+          "Dynamic Programming",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 54.1
+  },
+  "the_score_of_students_solving_math_expression": {
+      "qno": "2019",
+      "title": "The Score of Students Solving Math Expression",
+      "tags": [
+          "Array",
+          "Math",
+          "String",
+          "Dynamic Programming",
+          "Stack",
+          "Memoization"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 33.6
+  },
+  "check_if_a_parentheses_string_can_be_valid": {
+      "qno": "2116",
+      "title": "Check if a Parentheses String Can Be Valid",
+      "tags": [
+          "String",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 31.9
+  },
+  "replace_non-coprime_numbers_in_array": {
+      "qno": "2197",
+      "title": "Replace Non-Coprime Numbers in Array",
+      "tags": [
+          "Array",
+          "Math",
+          "Stack",
+          "Number Theory"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39
+  },
+  "count_collisions_on_a_road": {
+      "qno": "2211",
+      "title": "Count Collisions on a Road",
+      "tags": [
+          "String",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.8
+  },
+  "design_video_sharing_platform": {
+      "qno": "2254",
+      "title": "Design Video Sharing Platform",
+      "tags": [
+          "Hash Table",
+          "Stack",
+          "Design",
+          "Ordered Set"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 64.3
+  },
+  "construct_smallest_number_from_di_string": {
+      "qno": "2375",
+      "title": "Construct Smallest Number From DI String",
+      "tags": [
+          "String",
+          "Backtracking",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 76
+  },
+  "removing_stars_from_a_string": {
+      "qno": "2390",
+      "title": "Removing Stars From a String",
+      "tags": [
+          "String",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.6
+  },
+  "using_a_robot_to_print_the_lexicographically_smallest_string": {
+      "qno": "2434",
+      "title": "Using a Robot to Print the Lexicographically Smallest String",
+      "tags": [
+          "Hash Table",
+          "String",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.9
+  },
+  "minimum_additions_to_make_valid_string": {
+      "qno": "2645",
+      "title": "Minimum Additions to Make Valid String",
+      "tags": [
+          "String",
+          "Dynamic Programming",
+          "Stack",
+          "Greedy"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.5
+  },
+  "minimum_string_length_after_removing_substrings": {
+      "qno": "2696",
+      "title": "Minimum String Length After Removing Substrings",
+      "tags": [
+          "String",
+          "Stack",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.5
+  },
+  "robot_collisions": {
+      "qno": "2751",
+      "title": "Robot Collisions",
+      "tags": [
+          "Array",
+          "Stack",
+          "Sorting",
+          "Simulation"
+      ],
+      "default": "Stack",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.8
+  },
+  "double_a_number_represented_as_a_linked_list": {
+      "qno": "2816",
+      "title": "Double a Number Represented as a Linked List",
+      "tags": [
+          "Linked List",
+          "Math",
+          "Stack"
+      ],
+      "default": "Stack",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.6
+  },
+  "count_submatrices_with_equal_frequency_of_x_and_y": {
+      "qno": "3212",
+      "title": "Count Submatrices With Equal Frequency of X and Y",
+      "tags": [
+          "Array",
+          "Matrix",
+          "Prefix Sum"
+      ],
+      "default": "Matrix",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.4
+  }
+}
+// existing
+
+const obj1 = {
+  minimum_size_subarray_sum: {
+    qno: "209",
+    title: "Minimum Size Subarray Sum",
+    tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 39.0,
+    acceptance: 47.4,
   },
-  array_partition: {
-    qno: 561,
-    title: "Array Partition",
-    tags: ["Array", "Greedy", "Sorting", "Counting Sort"],
-    default: "Counting Sort",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78.9,
-  },
-  height_checker: {
-    qno: 1051,
-    title: "Height Checker",
-    tags: ["Array", "Sorting", "Counting Sort"],
-    default: "Counting Sort",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 80.6,
-  },
-  relative_sort_array: {
-    qno: 1122,
-    title: "Relative Sort Array",
-    tags: ["Array", "Hash Table", "Sorting", "Counting Sort"],
-    default: "Counting Sort",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 74.6,
-  },
-  connecting_cities_with_minimum_cost: {
-    qno: 1135,
-    title: "Connecting Cities With Minimum Cost",
-    tags: [
-      "Union Find",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Minimum Spanning Tree",
-    ],
-    default: "Minimum Spanning Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.0,
-  },
-  optimize_water_distribution_in_a_village: {
-    qno: 1168,
-    title: "Optimize Water Distribution in a Village",
-    tags: [
-      "Union Find",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Minimum Spanning Tree",
-    ],
-    default: "Minimum Spanning Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 64.8,
-  },
-  min_cost_to_connect_all_points: {
-    qno: 1584,
-    title: "Min Cost to Connect All Points",
-    tags: ["Array", "Union Find", "Graph", "Minimum Spanning Tree"],
-    default: "Minimum Spanning Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.0,
-  },
-  checking_existence_of_edge_length_limited_paths_ii: {
-    qno: 1724,
-    title: "Checking Existence of Edge Length Limited Paths II",
-    tags: ["Union Find", "Graph", "Minimum Spanning Tree"],
-    default: "Minimum Spanning Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 51.6,
-  },
-  longest_repeating_substring: {
-    qno: 1062,
-    title: "Longest Repeating Substring",
-    tags: [
-      "String",
-      "Binary Search",
-      "Dynamic Programming",
-      "Rolling Hash",
-      "Suffix Array",
-      "Hash Function",
-    ],
-    default: "Suffix Array",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.8,
-  },
-  longest_duplicate_substring: {
-    qno: 1044,
-    title: "Longest Duplicate Substring",
-    tags: [
-      "String",
-      "Binary Search",
-      "Sliding Window",
-      "Rolling Hash",
-      "Suffix Array",
-      "Hash Function",
-    ],
-    default: "Suffix Array",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.6,
-  },
-  number_of_distinct_substrings_in_a_string: {
-    qno: 1698,
-    title: "Number of Distinct Substrings in a String",
-    tags: ["String", "Trie", "Rolling Hash", "Suffix Array", "Hash Function"],
-    default: "Suffix Array",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.0,
-  },
-  longest_common_subpath: {
-    qno: 1923,
-    title: "Longest Common Subpath",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Rolling Hash",
-      "Suffix Array",
-      "Hash Function",
-    ],
-    default: "Suffix Array",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 28.2,
-  },
-  number_of_ways_to_separate_numbers: {
-    qno: 1977,
-    title: "Number of Ways to Separate Numbers",
-    tags: ["String", "Dynamic Programming", "Suffix Array"],
-    default: "Suffix Array",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 20.8,
-  },
-  sum_of_scores_of_built_strings: {
-    qno: 2223,
-    title: "Sum of Scores of Built Strings",
-    tags: [
-      "String",
-      "Binary Search",
-      "Rolling Hash",
-      "Suffix Array",
-      "String Matching",
-      "Hash Function",
-    ],
-    default: "Suffix Array",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.9,
-  },
-  contains_duplicate_iii: {
-    qno: 220,
-    title: "Contains Duplicate III",
-    tags: ["Array", "Sliding Window", "Sorting", "Bucket Sort", "Ordered Set"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 22.8,
-  },
-  top_k_frequent_elements: {
-    qno: 347,
-    title: "Top K Frequent Elements",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Divide and Conquer",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Bucket Sort",
-      "Counting",
-      "Quickselect",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.9,
-  },
-  sort_characters_by_frequency: {
-    qno: 451,
-    title: "Sort Characters By Frequency",
-    tags: [
-      "Hash Table",
-      "String",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Bucket Sort",
-      "Counting",
-    ],
-    default: "Bucket Sort",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.6,
-  },
-  top_k_frequent_words: {
-    qno: 692,
-    title: "Top K Frequent Words",
-    tags: [
-      "String",
-      "Trie",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Bucket Sort",
-      "Counting",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.1,
-  },
-  kth_largest_element_in_an_array: {
-    qno: 215,
-    title: "Kth Largest Element in an Array",
-    tags: [
-      "Array",
-      "Divide and Conquer",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Quickselect",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.8,
-  },
-  wiggle_sort_ii: {
-    qno: 324,
-    title: "Wiggle Sort II",
-    tags: ["Array", "Divide and Conquer", "Greedy", "Sorting", "Quickselect"],
-    default: "Quickselect",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.4,
-  },
-  k_closest_points_to_origin: {
-    qno: 973,
-    title: "K Closest Points to Origin",
-    tags: [
-      "Array",
-      "Math",
-      "Divide and Conquer",
-      "Geometry",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Quickselect",
-    ],
-    default: "Quickselect",
+  product_of_array_except_self: {
+    qno: "238",
+    title: "Product of Array Except Self",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 66.5,
-  },
-  find_kth_largest_xor_coordinate_value: {
-    qno: 1738,
-    title: "Find Kth Largest XOR Coordinate Value",
-    tags: [
-      "Array",
-      "Divide and Conquer",
-      "Bit Manipulation",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Matrix",
-      "Prefix Sum",
-      "Quickselect",
-    ],
-    default: "Quickselect",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.8,
-  },
-  find_the_kth_largest_integer_in_the_array: {
-    qno: 1985,
-    title: "Find the Kth Largest Integer in the Array",
-    tags: [
-      "Array",
-      "String",
-      "Divide and Conquer",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Quickselect",
-    ],
-    default: "Quickselect",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.9,
-  },
-  soup_servings: {
-    qno: 808,
-    title: "Soup Servings",
-    tags: ["Math", "Dynamic Programming", "Probability And Statistics"],
-    default: "Probability And Statistics",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.0,
-  },
-  new_21_game: {
-    qno: 837,
-    title: "New 21 Game",
-    tags: [
-      "Math",
-      "Dynamic Programming",
-      "Sliding Window",
-      "Probability And Statistics",
-    ],
-    default: "Probability And Statistics",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.0,
-  },
-  toss_strange_coins: {
-    qno: 1230,
-    title: "Toss Strange Coins",
-    tags: [
-      "Array",
-      "Math",
-      "Dynamic Programming",
-      "Probability And Statistics",
-    ],
-    default: "Probability And Statistics",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.3,
-  },
-  statistics_from_a_large_sample: {
-    qno: 1093,
-    title: "Statistics from a Large Sample",
-    tags: ["Array", "Math", "Probability And Statistics"],
-    default: "Probability And Statistics",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 42.0,
-  },
-  airplane_seat_assignment_probability: {
-    qno: 1227,
-    title: "Airplane Seat Assignment Probability",
-    tags: [
-      "Math",
-      "Dynamic Programming",
-      "Brainteaser",
-      "Probability And Statistics",
-    ],
-    default: "Probability And Statistics",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.4,
-  },
-  probability_of_a_two_boxes_having_the_same_number_of_distinct_balls: {
-    qno: 1467,
-    title:
-      "Probability of a Two Boxes Having The Same Number of Distinct Balls",
-    tags: [
-      "Array",
-      "Math",
-      "Dynamic Programming",
-      "Backtracking",
-      "Combinatorics",
-      "Probability And Statistics",
-    ],
-    default: "Probability And Statistics",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 60.4,
-  },
-  lru_cache: {
-    qno: "146",
-    title: "LRU Cache",
-    tags: ["Hash Table", "Linked List", "Design", "Doubly-Linked List"],
-    default: "Doubly-Linked List",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 42.7,
-  },
-  "all_o`one_data_structure": {
-    qno: "432",
-    title: "All O`one Data Structure",
-    tags: ["Hash Table", "Linked List", "Design", "Doubly-Linked List"],
-    default: "Doubly-Linked List",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36.8,
-  },
-  lfu_cache: {
-    qno: "460",
-    title: "LFU Cache",
-    tags: ["Hash Table", "Linked List", "Design", "Doubly-Linked List"],
-    default: "Doubly-Linked List",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.3,
-  },
-  max_stack: {
-    qno: "716",
-    title: "Max Stack",
-    tags: [
-      "Linked List",
-      "Stack",
-      "Design",
-      "Doubly-Linked List",
-      "Ordered Set",
-    ],
-    default: "Doubly-Linked List",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 45.1,
-  },
-  convert_binary_search_tree_to_sorted_doubly_linked_list: {
-    qno: "426",
-    title: "Convert Binary Search Tree to Sorted Doubly Linked List",
-    tags: [
-      "Linked List",
-      "Stack",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-      "Doubly-Linked List",
-    ],
-    default: "Doubly-Linked List",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.8,
-  },
-  flatten_a_multilevel_doubly_linked_list: {
-    qno: "430",
-    title: "Flatten a Multilevel Doubly Linked List",
-    tags: ["Linked List", "Depth-First Search", "Doubly-Linked List"],
-    default: "Doubly-Linked List",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.1,
-  },
-  design_browser_history: {
-    qno: "1472",
-    title: "Design Browser History",
-    tags: [
-      "Array",
-      "Linked List",
-      "Stack",
-      "Design",
-      "Doubly-Linked List",
-      "Data Stream",
-    ],
-    default: "Doubly-Linked List",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 77.6,
-  },
-  design_a_text_editor: {
-    qno: "2296",
-    title: "Design a Text Editor",
-    tags: [
-      "Linked List",
-      "String",
-      "Stack",
-      "Design",
-      "Simulation",
-      "Doubly-Linked List",
-    ],
-    default: "Doubly-Linked List",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.6,
-  },
-  building_h2o: {
-    qno: "1117",
-    title: "Building H2O",
-    tags: ["Concurrency"],
-    default: "Concurrency",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.2,
-  },
-  print_foobar_alternately: {
-    qno: "1115",
-    title: "Print FooBar Alternately",
-    tags: ["Concurrency"],
-    default: "Concurrency",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66,
-  },
-  print_in_order: {
-    qno: "1114",
-    title: "Print in Order",
-    tags: ["Concurrency"],
-    default: "Concurrency",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 69.4,
-  },
-  design_bounded_blocking_queue: {
-    qno: "1188",
-    title: "Design Bounded Blocking Queue",
-    tags: ["Concurrency"],
-    default: "Concurrency",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.4,
-  },
-  print_zero_even_odd: {
-    qno: "1116",
-    title: "Print Zero Even Odd",
-    tags: ["Concurrency"],
-    default: "Concurrency",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61,
-  },
-  fizz_buzz_multithreaded: {
-    qno: "1195",
-    title: "Fizz Buzz Multithreaded",
-    tags: ["Concurrency"],
-    default: "Concurrency",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.4,
-  },
-  the_dining_philosophers: {
-    qno: "1226",
-    title: "The Dining Philosophers",
-    tags: ["Concurrency"],
-    default: "Concurrency",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.6,
-  },
-  web_crawler_multithreaded: {
-    qno: "1242",
-    title: "Web Crawler Multithreaded",
-    tags: ["Depth-First Search", "Breadth-First Search", "Concurrency"],
-    default: "Concurrency",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.1,
-  },
-  traffic_light_controlled_intersection: {
-    qno: "1279",
-    title: "Traffic Light Controlled Intersection",
-    tags: ["Concurrency"],
-    default: "Concurrency",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 73,
-  },
-  binary_search_tree_iterator: {
-    qno: "173",
-    title: "Binary Search Tree Iterator",
-    tags: [
-      "Stack",
-      "Tree",
-      "Design",
-      "Binary Search Tree",
-      "Binary Tree",
-      "Iterator",
-    ],
-    default: "Iterator",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.3,
-  },
-  flatten_2d_vector: {
-    qno: "251",
-    title: "Flatten 2D Vector",
-    tags: ["Array", "Two Pointers", "Design", "Iterator"],
-    default: "Iterator",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.6,
-  },
-  zigzag_iterator: {
-    qno: "281",
-    title: "Zigzag Iterator",
-    tags: ["Array", "Design", "Queue", "Iterator"],
-    default: "Iterator",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64,
-  },
-  peeking_iterator: {
-    qno: "284",
-    title: "Peeking Iterator",
-    tags: ["Array", "Design", "Iterator"],
-    default: "Iterator",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.6,
-  },
-  flatten_nested_list_iterator: {
-    qno: "341",
-    title: "Flatten Nested List Iterator",
-    tags: [
-      "Stack",
-      "Tree",
-      "Depth-First Search",
-      "Design",
-      "Queue",
-      "Iterator",
-    ],
-    default: "Iterator",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.5,
-  },
-  design_compressed_string_iterator: {
-    qno: "604",
-    title: "Design Compressed String Iterator",
-    tags: ["Array", "String", "Design", "Iterator"],
-    default: "Iterator",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 39.8,
-  },
-  rle_iterator: {
-    qno: "900",
-    title: "RLE Iterator",
-    tags: ["Array", "Design", "Counting", "Iterator"],
-    default: "Iterator",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.5,
-  },
-  iterator_for_combination: {
-    qno: "1286",
-    title: "Iterator for Combination",
-    tags: ["String", "Backtracking", "Design", "Iterator"],
-    default: "Iterator",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 73.3,
-  },
-  binary_search_tree_iterator_ii: {
-    qno: "1586",
-    title: "Binary Search Tree Iterator II",
-    tags: [
-      "Stack",
-      "Tree",
-      "Design",
-      "Binary Search Tree",
-      "Binary Tree",
-      "Iterator",
-    ],
-    default: "Iterator",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.4,
-  },
-  merge_k_sorted_lists: {
-    qno: "23",
-    title: "Merge k Sorted Lists",
-    tags: [
-      "Linked List",
-      "Divide and Conquer",
-      "Heap (Priority Queue)",
-      "Merge Sort",
-    ],
-    default: "Merge Sort",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.1,
-  },
-  sort_list: {
-    qno: "148",
-    title: "Sort List",
-    tags: [
-      "Linked List",
-      "Two Pointers",
-      "Divide and Conquer",
-      "Sorting",
-      "Merge Sort",
-    ],
-    default: "Merge Sort",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.3,
-  },
-  count_of_smaller_numbers_after_self: {
-    qno: "315",
-    title: "Count of Smaller Numbers After Self",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 42.5,
-  },
-  count_of_range_sum: {
-    qno: "327",
-    title: "Count of Range Sum",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36,
-  },
-  reverse_pairs: {
-    qno: "493",
-    title: "Reverse Pairs",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.7,
-  },
-  count_subarrays_with_more_ones_than_zeros: {
-    qno: "2031",
-    title: "Count Subarrays With More Ones Than Zeros",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52,
-  },
-  create_sorted_array_through_instructions: {
-    qno: "1649",
-    title: "Create Sorted Array through Instructions",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.7,
-  },
-  count_good_triplets_in_an_array: {
-    qno: "2179",
-    title: "Count Good Triplets in an Array",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 41,
-  },
-  number_of_pairs_satisfying_inequality: {
-    qno: "2426",
-    title: "Number of Pairs Satisfying Inequality",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44,
-  },
-  "count_the_number_of_k-big_indices": {
-    qno: "2519",
-    title: "Count the Number of K-Big Indices",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.4,
-  },
-  find_the_index_of_permutation: {
-    qno: "3109",
-    title: "Find the Index of Permutation",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Merge Sort",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 42.1,
-  },
-  "insert_delete_getrandom_o(1)": {
-    qno: "380",
-    title: "Insert Delete GetRandom O(1)",
-    tags: ["Array", "Hash Table", "Math", "Design", "Randomized"],
-    default: "Randomized",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.5,
-  },
-  "insert_delete_getrandom_o(1)_-_duplicates_allowed": {
-    qno: "381",
-    title: "Insert Delete GetRandom O(1) - Duplicates allowed",
-    tags: ["Array", "Hash Table", "Math", "Design", "Randomized"],
-    default: "Randomized",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 35.5,
-  },
-  shuffle_an_array: {
-    qno: "384",
-    title: "Shuffle an Array",
-    tags: ["Array", "Math", "Randomized"],
-    default: "Randomized",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.4,
-  },
-  random_pick_with_blacklist: {
-    qno: "710",
-    title: "Random Pick with Blacklist",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Math",
-      "Binary Search",
-      "Sorting",
-      "Randomized",
-    ],
-    default: "Randomized",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 33.4,
-  },
-  random_pick_with_weight: {
-    qno: "528",
-    title: "Random Pick with Weight",
-    tags: ["Array", "Math", "Binary Search", "Prefix Sum", "Randomized"],
-    default: "Randomized",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.9,
-  },
-  best_position_for_a_service_centre: {
-    qno: "1515",
-    title: "Best Position for a Service Centre",
-    tags: ["Math", "Geometry", "Randomized"],
-    default: "Randomized",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 35.5,
-  },
-  sliding_window_maximum: {
-    qno: "239",
-    title: "Sliding Window Maximum",
-    tags: [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 46.6,
-  },
-  shortest_subarray_with_sum_at_least_k: {
-    qno: "862",
-    title: "Shortest Subarray with Sum at Least K",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Prefix Sum",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 26,
-  },
-  maximum_sum_circular_subarray: {
-    qno: "918",
-    title: "Maximum Sum Circular Subarray",
-    tags: [
-      "Array",
-      "Divide and Conquer",
-      "Dynamic Programming",
-      "Queue",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45,
-  },
-  constrained_subsequence_sum: {
-    qno: "1425",
-    title: "Constrained Subsequence Sum",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 56.7,
-  },
-  longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit: {
-    qno: "1438",
-    title:
-      "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
-    tags: [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Ordered Set",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.6,
-  },
-  max_value_of_equation: {
-    qno: "1499",
-    title: "Max Value of Equation",
-    tags: [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.1,
-  },
-  delivering_boxes_from_storage_to_ports: {
-    qno: "1687",
-    title: "Delivering Boxes from Storage to Ports",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Segment Tree",
-      "Queue",
-      "Heap (Priority Queue)",
-      "Prefix Sum",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.9,
-  },
-  jump_game_vi: {
-    qno: "1696",
-    title: "Jump Game VI",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Queue",
-      "Heap (Priority Queue)",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.7,
-  },
-  maximum_number_of_tasks_you_can_assign: {
-    qno: "2071",
-    title: "Maximum Number of Tasks You Can Assign",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Greedy",
-      "Queue",
-      "Sorting",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 33.6,
-  },
-  longest_increasing_subsequence_ii: {
-    qno: "2407",
-    title: "Longest Increasing Subsequence II",
-    tags: [
-      "Array",
-      "Divide and Conquer",
-      "Dynamic Programming",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Queue",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 23.7,
-  },
-  count_subarrays_with_fixed_bounds: {
-    qno: "2444",
-    title: "Count Subarrays With Fixed Bounds",
-    tags: ["Array", "Queue", "Sliding Window", "Monotonic Queue"],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 68,
-  },
-  continuous_subarrays: {
-    qno: "2762",
-    title: "Continuous Subarrays",
-    tags: [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Ordered Set",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.9,
-  },
-  minimum_number_of_coins_for_fruits: {
-    qno: "2944",
-    title: "Minimum Number of Coins for Fruits",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Queue",
-      "Heap (Priority Queue)",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.8,
-  },
-  "find_maximum_non-decreasing_array_length": {
-    qno: "2945",
-    title: "Find Maximum Non-decreasing Array Length",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Stack",
-      "Queue",
-      "Monotonic Stack",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 15.8,
-  },
-  minimum_number_of_coins_for_fruits_ii: {
-    qno: "2969",
-    title: "Minimum Number of Coins for Fruits II",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Queue",
-      "Heap (Priority Queue)",
-      "Monotonic Queue",
-    ],
-    default: "Monotonic Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 55.7,
-  },
-  longest_palindromic_substring: {
-    qno: "5",
-    title: "Longest Palindromic Substring",
-    tags: ["Two Pointers", "String", "Dynamic Programming"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34,
-  },
-  container_with_most_water: {
-    qno: "11",
-    title: "Container With Most Water",
-    tags: ["Array", "Two Pointers", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.5,
-  },
-  "3sum": {
-    qno: "15",
-    title: "3Sum",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.7,
-  },
-  "3sum_closest": {
-    qno: "16",
-    title: "3Sum Closest",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.9,
-  },
-  "4sum": {
-    qno: "18",
-    title: "4Sum",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.4,
-  },
-  remove_nth_node_from_end_of_list: {
-    qno: "19",
-    title: "Remove Nth Node From End of List",
-    tags: ["Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.7,
-  },
-  remove_duplicates_from_sorted_array: {
-    qno: "26",
-    title: "Remove Duplicates from Sorted Array",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.3,
-  },
-  remove_element: {
-    qno: "27",
-    title: "Remove Element",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 57.2,
-  },
-  find_the_index_of_the_first_occurrence_in_a_string: {
-    qno: "28",
-    title: "Find the Index of the First Occurrence in a String",
-    tags: ["Two Pointers", "String", "String Matching"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 42.7,
-  },
-  next_permutation: {
-    qno: "31",
-    title: "Next Permutation",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.3,
-  },
-  trapping_rain_water: {
-    qno: "42",
-    title: "Trapping Rain Water",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Dynamic Programming",
-      "Stack",
-      "Monotonic Stack",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.3,
-  },
-  rotate_list: {
-    qno: "61",
-    title: "Rotate List",
-    tags: ["Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38,
-  },
-  sort_colors: {
-    qno: "75",
-    title: "Sort Colors",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.9,
-  },
-  remove_duplicates_from_sorted_array_ii: {
-    qno: "80",
-    title: "Remove Duplicates from Sorted Array II",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.9,
-  },
-  remove_duplicates_from_sorted_list_ii: {
-    qno: "82",
-    title: "Remove Duplicates from Sorted List II",
-    tags: ["Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.7,
-  },
-  partition_list: {
-    qno: "86",
-    title: "Partition List",
-    tags: ["Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.5,
-  },
-  merge_sorted_array: {
-    qno: "88",
-    title: "Merge Sorted Array",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 50,
-  },
-  valid_palindrome: {
-    qno: "125",
-    title: "Valid Palindrome",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 47.9,
-  },
-  linked_list_cycle: {
-    qno: "141",
-    title: "Linked List Cycle",
-    tags: ["Hash Table", "Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 50.6,
-  },
-  linked_list_cycle_ii: {
-    qno: "142",
-    title: "Linked List Cycle II",
-    tags: ["Hash Table", "Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.7,
-  },
-  reorder_list: {
-    qno: "143",
-    title: "Reorder List",
-    tags: ["Linked List", "Two Pointers", "Stack", "Recursion"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.1,
-  },
-  reverse_words_in_a_string: {
-    qno: "151",
-    title: "Reverse Words in a String",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.6,
-  },
-  intersection_of_two_linked_lists: {
-    qno: "160",
-    title: "Intersection of Two Linked Lists",
-    tags: ["Hash Table", "Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 57.9,
-  },
-  one_edit_distance: {
-    qno: "161",
-    title: "One Edit Distance",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.3,
-  },
-  compare_version_numbers: {
-    qno: "165",
-    title: "Compare Version Numbers",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.9,
-  },
-  "two_sum_ii_-_input_array_is_sorted": {
-    qno: "167",
-    title: "Two Sum II - Input Array Is Sorted",
-    tags: ["Array", "Two Pointers", "Binary Search"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.5,
-  },
-  "two_sum_iii_-_data_structure_design": {
-    qno: "170",
-    title: "Two Sum III - Data structure design",
-    tags: ["Array", "Hash Table", "Two Pointers", "Design", "Data Stream"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 38.1,
-  },
-  reverse_words_in_a_string_ii: {
-    qno: "186",
-    title: "Reverse Words in a String II",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.8,
-  },
-  rotate_array: {
-    qno: "189",
-    title: "Rotate Array",
-    tags: ["Array", "Math", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.8,
-  },
-  happy_number: {
-    qno: "202",
-    title: "Happy Number",
-    tags: ["Hash Table", "Math", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.3,
-  },
-  palindrome_linked_list: {
-    qno: "234",
-    title: "Palindrome Linked List",
-    tags: ["Linked List", "Two Pointers", "Stack", "Recursion"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 53.4,
-  },
-  shortest_word_distance_ii: {
-    qno: "244",
-    title: "Shortest Word Distance II",
-    tags: ["Array", "Hash Table", "Two Pointers", "String", "Design"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.3,
-  },
-  strobogrammatic_number: {
-    qno: "246",
-    title: "Strobogrammatic Number",
-    tags: ["Hash Table", "Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 47.7,
   },
   meeting_rooms_ii: {
     qno: "253",
@@ -1724,9785 +16719,55 @@ const obj2 = {
       "Heap (Priority Queue)",
       "Prefix Sum",
     ],
-    default: "Two Pointers",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 51.4,
   },
-  "3sum_smaller": {
-    qno: "259",
-    title: "3Sum Smaller",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.8,
-  },
-  closest_binary_search_tree_value_ii: {
-    qno: "272",
-    title: "Closest Binary Search Tree Value II",
-    tags: [
-      "Two Pointers",
-      "Stack",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Heap (Priority Queue)",
-      "Binary Tree",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 59.2,
-  },
-  find_the_celebrity: {
-    qno: "277",
-    title: "Find the Celebrity",
-    tags: ["Two Pointers", "Graph", "Interactive"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.4,
-  },
-  move_zeroes: {
-    qno: "283",
-    title: "Move Zeroes",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
+  "range_sum_query_-_immutable": {
+    qno: "303",
+    title: "Range Sum Query - Immutable",
+    tags: ["Array", "Design", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Easy",
-    language: "Java",
-    acceptance: 61.8,
-  },
-  find_the_duplicate_number: {
-    qno: "287",
-    title: "Find the Duplicate Number",
-    tags: ["Array", "Two Pointers", "Binary Search", "Bit Manipulation"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61,
-  },
-  find_median_from_data_stream: {
-    qno: "295",
-    title: "Find Median from Data Stream",
-    tags: [
-      "Two Pointers",
-      "Design",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Data Stream",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 52,
-  },
-  create_maximum_number: {
-    qno: "321",
-    title: "Create Maximum Number",
-    tags: ["Array", "Two Pointers", "Stack", "Greedy", "Monotonic Stack"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.3,
-  },
-  reverse_string: {
-    qno: "344",
-    title: "Reverse String",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78.7,
-  },
-  reverse_vowels_of_a_string: {
-    qno: "345",
-    title: "Reverse Vowels of a String",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 53.4,
-  },
-  intersection_of_two_arrays: {
-    qno: "349",
-    title: "Intersection of Two Arrays",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 74.7,
-  },
-  intersection_of_two_arrays_ii: {
-    qno: "350",
-    title: "Intersection of Two Arrays II",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.6,
-  },
-  sort_transformed_array: {
-    qno: "360",
-    title: "Sort Transformed Array",
-    tags: ["Array", "Math", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.9,
-  },
-  is_subsequence: {
-    qno: "392",
-    title: "Is Subsequence",
-    tags: ["Two Pointers", "String", "Dynamic Programming"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 48,
-  },
-  valid_word_abbreviation: {
-    qno: "408",
-    title: "Valid Word Abbreviation",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 35.9,
-  },
-  string_compression: {
-    qno: "443",
-    title: "String Compression",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.8,
-  },
-  assign_cookies: {
-    qno: "455",
-    title: "Assign Cookies",
-    tags: ["Array", "Two Pointers", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 52.7,
-  },
-  circular_array_loop: {
-    qno: "457",
-    title: "Circular Array Loop",
-    tags: ["Array", "Hash Table", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.2,
-  },
-  heaters: {
-    qno: "475",
-    title: "Heaters",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38,
-  },
-  magical_string: {
-    qno: "481",
-    title: "Magical String",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.4,
-  },
-  longest_uncommon_subsequence_ii: {
-    qno: "522",
-    title: "Longest Uncommon Subsequence II",
-    tags: ["Array", "Hash Table", "Two Pointers", "String", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.7,
-  },
-  longest_word_in_dictionary_through_deleting: {
-    qno: "524",
-    title: "Longest Word in Dictionary through Deleting",
-    tags: ["Array", "Two Pointers", "String", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.2,
-  },
-  swapping_nodes_in_a_linked_list: {
-    qno: "1721",
-    title: "Swapping Nodes in a Linked List",
-    tags: ["Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68,
-  },
-  "k-diff_pairs_in_an_array": {
-    qno: "532",
-    title: "K-diff Pairs in an Array",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43,
-  },
-  reverse_string_ii: {
-    qno: "541",
-    title: "Reverse String II",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 50.8,
-  },
-  next_greater_element_iii: {
-    qno: "556",
-    title: "Next Greater Element III",
-    tags: ["Math", "Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.1,
-  },
-  reverse_words_in_a_string_iii: {
-    qno: "557",
-    title: "Reverse Words in a String III",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 83.1,
-  },
-  permutation_in_string: {
-    qno: "567",
-    title: "Permutation in String",
-    tags: ["Hash Table", "Two Pointers", "String", "Sliding Window"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.5,
-  },
-  shortest_unsorted_continuous_subarray: {
-    qno: "581",
-    title: "Shortest Unsorted Continuous Subarray",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Stack",
-      "Greedy",
-      "Sorting",
-      "Monotonic Stack",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.9,
-  },
-  valid_triangle_number: {
-    qno: "611",
-    title: "Valid Triangle Number",
-    tags: ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.2,
-  },
-  sum_of_square_numbers: {
-    qno: "633",
-    title: "Sum of Square Numbers",
-    tags: ["Math", "Two Pointers", "Binary Search"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.7,
-  },
-  palindromic_substrings: {
-    qno: "647",
-    title: "Palindromic Substrings",
-    tags: ["Two Pointers", "String", "Dynamic Programming"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 70.3,
-  },
-  "two_sum_iv_-_input_is_a_bst": {
-    qno: "653",
-    title: "Two Sum IV - Input is a BST",
-    tags: [
-      "Hash Table",
-      "Two Pointers",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 61.3,
-  },
-  find_k_closest_elements: {
-    qno: "658",
-    title: "Find K Closest Elements",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Sliding Window",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.5,
-  },
-  valid_palindrome_ii: {
-    qno: "680",
-    title: "Valid Palindrome II",
-    tags: ["Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 40.9,
-  },
-  count_binary_substrings: {
-    qno: "696",
-    title: "Count Binary Substrings",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 65.6,
-  },
-  "find_k-th_smallest_pair_distance": {
-    qno: "719",
-    title: "Find K-th Smallest Pair Distance",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.2,
-  },
-  partition_labels: {
-    qno: "763",
-    title: "Partition Labels",
-    tags: ["Hash Table", "Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 79.9,
-  },
-  swap_adjacent_in_lr_string: {
-    qno: "777",
-    title: "Swap Adjacent in LR String",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.8,
-  },
-  "k-th_smallest_prime_fraction": {
-    qno: "786",
-    title: "K-th Smallest Prime Fraction",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.1,
-  },
-  number_of_subarrays_with_bounded_maximum: {
-    qno: "795",
-    title: "Number of Subarrays with Bounded Maximum",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.2,
-  },
-  expressive_words: {
-    qno: "809",
-    title: "Expressive Words",
-    tags: ["Array", "Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.2,
-  },
-  shortest_distance_to_a_character: {
-    qno: "821",
-    title: "Shortest Distance to a Character",
-    tags: ["Array", "Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 71.6,
-  },
-  friends_of_appropriate_ages: {
-    qno: "825",
-    title: "Friends Of Appropriate Ages",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.7,
-  },
-  most_profit_assigning_work: {
-    qno: "826",
-    title: "Most Profit Assigning Work",
-    tags: ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.9,
-  },
-  push_dominoes: {
-    qno: "838",
-    title: "Push Dominoes",
-    tags: ["Two Pointers", "String", "Dynamic Programming"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.2,
-  },
-  backspace_string_compare: {
-    qno: "844",
-    title: "Backspace String Compare",
-    tags: ["Two Pointers", "String", "Stack", "Simulation"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 49.2,
-  },
-  longest_mountain_in_array: {
-    qno: "845",
-    title: "Longest Mountain in Array",
-    tags: ["Array", "Two Pointers", "Dynamic Programming", "Enumeration"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.5,
-  },
-  advantage_shuffle: {
-    qno: "870",
-    title: "Advantage Shuffle",
-    tags: ["Array", "Two Pointers", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.6,
-  },
-  middle_of_the_linked_list: {
-    qno: "876",
-    title: "Middle of the Linked List",
-    tags: ["Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78.7,
-  },
-  boats_to_save_people: {
-    qno: "881",
-    title: "Boats to Save People",
-    tags: ["Array", "Two Pointers", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.4,
-  },
-  sort_array_by_parity: {
-    qno: "905",
-    title: "Sort Array By Parity",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 76.2,
-  },
-  reverse_only_letters: {
-    qno: "917",
-    title: "Reverse Only Letters",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 64.8,
-  },
-  sort_array_by_parity_ii: {
-    qno: "922",
-    title: "Sort Array By Parity II",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 70.8,
-  },
-  "3sum_with_multiplicity": {
-    qno: "923",
-    title: "3Sum With Multiplicity",
-    tags: ["Array", "Hash Table", "Two Pointers", "Sorting", "Counting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.4,
-  },
-  long_pressed_name: {
-    qno: "925",
-    title: "Long Pressed Name",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 32.3,
-  },
-  di_string_match: {
-    qno: "942",
-    title: "DI String Match",
-    tags: ["Array", "Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78.8,
-  },
-  bag_of_tokens: {
-    qno: "948",
-    title: "Bag of Tokens",
-    tags: ["Array", "Two Pointers", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59,
-  },
-  pancake_sorting: {
-    qno: "969",
-    title: "Pancake Sorting",
-    tags: ["Array", "Two Pointers", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 70.7,
-  },
-  squares_of_a_sorted_array: {
-    qno: "977",
-    title: "Squares of a Sorted Array",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 72.8,
-  },
-  interval_list_intersections: {
-    qno: "986",
-    title: "Interval List Intersections",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.7,
-  },
-  shortest_way_to_form_string: {
-    qno: "1055",
-    title: "Shortest Way to Form String",
-    tags: ["Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.3,
-  },
-  camelcase_matching: {
-    qno: "1023",
-    title: "Camelcase Matching",
-    tags: ["Array", "Two Pointers", "String", "Trie", "String Matching"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.3,
-  },
-  two_sum_less_than_k: {
-    qno: "1099",
-    title: "Two Sum Less Than K",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 61.8,
-  },
-  moving_stones_until_consecutive_ii: {
-    qno: "1040",
-    title: "Moving Stones Until Consecutive II",
-    tags: ["Array", "Math", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.7,
-  },
-  longest_string_chain: {
-    qno: "1048",
-    title: "Longest String Chain",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Two Pointers",
-      "String",
-      "Dynamic Programming",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.1,
-  },
-  last_substring_in_lexicographical_order: {
-    qno: "1163",
-    title: "Last Substring in Lexicographical Order",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 34.5,
-  },
-  two_sum_bsts: {
-    qno: "1214",
-    title: "Two Sum BSTs",
-    tags: [
-      "Two Pointers",
-      "Binary Search",
-      "Stack",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.2,
-  },
-  meeting_scheduler: {
-    qno: "1229",
-    title: "Meeting Scheduler",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55,
-  },
-  duplicate_zeros: {
-    qno: "1089",
-    title: "Duplicate Zeros",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 52,
-  },
-  longest_chunked_palindrome_decomposition: {
-    qno: "1147",
-    title: "Longest Chunked Palindrome Decomposition",
-    tags: [
-      "Two Pointers",
-      "String",
-      "Dynamic Programming",
-      "Greedy",
-      "Rolling Hash",
-      "Hash Function",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 58.7,
-  },
-  minimum_number_of_moves_to_make_palindrome: {
-    qno: "2193",
-    title: "Minimum Number of Moves to Make Palindrome",
-    tags: ["Two Pointers", "String", "Greedy", "Binary Indexed Tree"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 50.9,
-  },
-  find_positive_integer_solution_for_a_given_equation: {
-    qno: "1237",
-    title: "Find Positive Integer Solution for a Given Equation",
-    tags: ["Math", "Two Pointers", "Binary Search", "Interactive"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.7,
-  },
-  print_immutable_linked_list_in_reverse: {
-    qno: "1265",
-    title: "Print Immutable Linked List in Reverse",
-    tags: ["Linked List", "Two Pointers", "Stack", "Recursion"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 94,
-  },
-  remove_palindromic_subsequences: {
-    qno: "1332",
-    title: "Remove Palindromic Subsequences",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 76.4,
-  },
-  check_if_n_and_its_double_exist: {
-    qno: "1346",
-    title: "Check If N and Its Double Exist",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 37.2,
-  },
-  find_the_distance_value_between_two_arrays: {
-    qno: "1385",
-    title: "Find the Distance Value Between Two Arrays",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 68.5,
-  },
-  check_if_a_word_occurs_as_a_prefix_of_any_word_in_a_sentence: {
-    qno: "1455",
-    title: "Check If a Word Occurs As a Prefix of Any Word in a Sentence",
-    tags: ["Two Pointers", "String", "String Matching"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 64.3,
-  },
-  the_k_strongest_values_in_an_array: {
-    qno: "1471",
-    title: "The k Strongest Values in an Array",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.3,
-  },
-  range_sum_of_sorted_subarray_sums: {
-    qno: "1508",
-    title: "Range Sum of Sorted Subarray Sums",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.4,
-  },
-  number_of_subsequences_that_satisfy_the_given_sum_condition: {
-    qno: "1498",
-    title: "Number of Subsequences That Satisfy the Given Sum Condition",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.8,
-  },
-  get_the_maximum_score: {
-    qno: "1537",
-    title: "Get the Maximum Score",
-    tags: ["Array", "Two Pointers", "Dynamic Programming", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.5,
-  },
-  shortest_subarray_to_be_removed_to_make_array_sorted: {
-    qno: "1574",
-    title: "Shortest Subarray to be Removed to Make Array Sorted",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Stack",
-      "Monotonic Stack",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 37.9,
-  },
-  number_of_ways_where_square_of_number_is_equal_to_product_of_two_numbers: {
-    qno: "1577",
-    title:
-      "Number of Ways Where Square of Number Is Equal to Product of Two Numbers",
-    tags: ["Array", "Hash Table", "Math", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.2,
-  },
-  dot_product_of_two_sparse_vectors: {
-    qno: "1570",
-    title: "Dot Product of Two Sparse Vectors",
-    tags: ["Array", "Hash Table", "Two Pointers", "Design"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 89.8,
-  },
-  split_two_strings_to_make_palindrome: {
-    qno: "1616",
-    title: "Split Two Strings to Make Palindrome",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 31.1,
-  },
-  add_two_polynomials_represented_as_linked_lists: {
-    qno: "1634",
-    title: "Add Two Polynomials Represented as Linked Lists",
-    tags: ["Linked List", "Math", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.5,
-  },
-  lowest_common_ancestor_of_a_binary_tree_iii: {
-    qno: "1650",
-    title: "Lowest Common Ancestor of a Binary Tree III",
-    tags: ["Hash Table", "Two Pointers", "Tree", "Binary Tree"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 79.9,
-  },
-  "max_number_of_k-sum_pairs": {
-    qno: "1679",
-    title: "Max Number of K-Sum Pairs",
-    tags: ["Array", "Hash Table", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.1,
-  },
-  checking_existence_of_edge_length_limited_paths: {
-    qno: "1697",
-    title: "Checking Existence of Edge Length Limited Paths",
-    tags: ["Array", "Two Pointers", "Union Find", "Graph", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.4,
-  },
-  ways_to_split_array_into_three_subarrays: {
-    qno: "1712",
-    title: "Ways to Split Array Into Three Subarrays",
-    tags: ["Array", "Two Pointers", "Binary Search", "Prefix Sum"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33,
-  },
-  minimum_length_of_string_after_deleting_similar_ends: {
-    qno: "1750",
-    title: "Minimum Length of String After Deleting Similar Ends",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56,
-  },
-  form_array_by_concatenating_subarrays_of_another_array: {
-    qno: "1764",
-    title: "Form Array by Concatenating Subarrays of Another Array",
-    tags: ["Array", "Two Pointers", "Greedy", "String Matching"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.5,
-  },
-  largest_merge_of_two_strings: {
-    qno: "1754",
-    title: "Largest Merge Of Two Strings",
-    tags: ["Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.2,
-  },
-  closest_subsequence_sum: {
-    qno: "1755",
-    title: "Closest Subsequence Sum",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Dynamic Programming",
-      "Bit Manipulation",
-      "Bitmask",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.2,
-  },
-  count_pairs_of_nodes: {
-    qno: "1782",
-    title: "Count Pairs Of Nodes",
-    tags: ["Array", "Two Pointers", "Binary Search", "Graph", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.1,
-  },
-  merge_strings_alternately: {
-    qno: "1768",
-    title: "Merge Strings Alternately",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 80,
-  },
-  maximum_score_of_a_good_subarray: {
-    qno: "1793",
-    title: "Maximum Score of a Good Subarray",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Stack",
-      "Monotonic Stack",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 64.3,
-  },
-  sentence_similarity_iii: {
-    qno: "1813",
-    title: "Sentence Similarity III",
-    tags: ["Array", "Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33.5,
-  },
-  rotating_the_box: {
-    qno: "1861",
-    title: "Rotating the Box",
-    tags: ["Array", "Two Pointers", "Matrix"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.5,
-  },
-  minimum_adjacent_swaps_to_reach_the_kth_smallest_number: {
-    qno: "1850",
-    title: "Minimum Adjacent Swaps to Reach the Kth Smallest Number",
-    tags: ["Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.3,
-  },
-  faulty_sensor: {
-    qno: "1826",
-    title: "Faulty Sensor",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 50,
-  },
-  maximum_distance_between_a_pair_of_values: {
-    qno: "1855",
-    title: "Maximum Distance Between a Pair of Values",
-    tags: ["Array", "Two Pointers", "Binary Search"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.5,
-  },
-  minimize_maximum_pair_sum_in_array: {
-    qno: "1877",
-    title: "Minimize Maximum Pair Sum in Array",
-    tags: ["Array", "Two Pointers", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 81.5,
-  },
-  sort_linked_list_already_sorted_using_absolute_values: {
-    qno: "2046",
-    title: "Sort Linked List Already Sorted Using Absolute Values",
-    tags: ["Linked List", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.1,
-  },
-  next_palindrome_using_same_digits: {
-    qno: "1842",
-    title: "Next Palindrome Using Same Digits",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.3,
-  },
-  "product_of_two_run-length_encoded_arrays": {
-    qno: "1868",
-    title: "Product of Two Run-Length Encoded Arrays",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.6,
-  },
-  maximum_number_of_removable_characters: {
-    qno: "1898",
-    title: "Maximum Number of Removable Characters",
-    tags: ["Array", "Two Pointers", "String", "Binary Search"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.7,
-  },
-  count_pairs_in_two_arrays: {
-    qno: "1885",
-    title: "Count Pairs in Two Arrays",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.9,
-  },
-  check_if_string_is_a_prefix_of_array: {
-    qno: "1961",
-    title: "Check If String Is a Prefix of Array",
-    tags: ["Array", "Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 52.8,
-  },
-  minimum_number_of_swaps_to_make_the_string_balanced: {
-    qno: "1963",
-    title: "Minimum Number of Swaps to Make the String Balanced",
-    tags: ["Two Pointers", "String", "Stack", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.7,
-  },
-  reverse_prefix_of_word: {
-    qno: "2000",
-    title: "Reverse Prefix of Word",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 86.2,
-  },
-  partition_array_into_two_arrays_to_minimize_sum_difference: {
-    qno: "2035",
-    title: "Partition Array Into Two Arrays to Minimize Sum Difference",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Dynamic Programming",
-      "Bit Manipulation",
-      "Ordered Set",
-      "Bitmask",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 20.3,
-  },
-  delete_the_middle_node_of_a_linked_list: {
-    qno: "2095",
-    title: "Delete the Middle Node of a Linked List",
-    tags: ["Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.1,
-  },
-  watering_plants_ii: {
-    qno: "2105",
-    title: "Watering Plants II",
-    tags: ["Array", "Two Pointers", "Simulation"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.4,
-  },
-  find_first_palindromic_string_in_the_array: {
-    qno: "2108",
-    title: "Find First Palindromic String in the Array",
-    tags: ["Array", "Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 83.9,
-  },
-  adding_spaces_to_a_string: {
-    qno: "2109",
-    title: "Adding Spaces to a String",
-    tags: ["Array", "Two Pointers", "String", "Simulation"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.9,
-  },
-  maximum_twin_sum_of_a_linked_list: {
-    qno: "2130",
-    title: "Maximum Twin Sum of a Linked List",
-    tags: ["Linked List", "Two Pointers", "Stack"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 80.9,
-  },
-  partition_array_according_to_given_pivot: {
-    qno: "2161",
-    title: "Partition Array According to Given Pivot",
-    tags: ["Array", "Two Pointers", "Simulation"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 84.9,
-  },
-  rearrange_array_elements_by_sign: {
-    qno: "2149",
-    title: "Rearrange Array Elements by Sign",
-    tags: ["Array", "Two Pointers", "Simulation"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 84.1,
-  },
-  "find_all_k-distant_indices_in_an_array": {
-    qno: "2200",
-    title: "Find All K-Distant Indices in an Array",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 65.8,
-  },
-  maximum_total_beauty_of_the_gardens: {
-    qno: "2234",
-    title: "Maximum Total Beauty of the Gardens",
-    tags: ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 29.4,
-  },
-  successful_pairs_of_spells_and_potions: {
-    qno: "2300",
-    title: "Successful Pairs of Spells and Potions",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.1,
-  },
-  move_pieces_to_obtain_a_string: {
-    qno: "2337",
-    title: "Move Pieces to Obtain a String",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.6,
-  },
-  the_latest_time_to_catch_a_bus: {
-    qno: "2332",
-    title: "The Latest Time to Catch a Bus",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 27.1,
-  },
-  number_of_arithmetic_triplets: {
-    qno: "2367",
-    title: "Number of Arithmetic Triplets",
-    tags: ["Array", "Hash Table", "Two Pointers", "Enumeration"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 84.1,
-  },
-  valid_palindrome_iv: {
-    qno: "2330",
-    title: "Valid Palindrome IV",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.9,
-  },
-  strictly_palindromic_number: {
-    qno: "2396",
-    title: "Strictly Palindromic Number",
-    tags: ["Math", "Two Pointers", "Brainteaser"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 87.5,
-  },
-  divide_intervals_into_minimum_number_of_groups: {
-    qno: "2406",
-    title: "Divide Intervals Into Minimum Number of Groups",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Prefix Sum",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.1,
-  },
-  maximum_matching_of_players_with_trainers: {
-    qno: "2410",
-    title: "Maximum Matching of Players With Trainers",
-    tags: ["Array", "Two Pointers", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.2,
-  },
-  largest_positive_integer_that_exists_with_its_negative: {
-    qno: "2441",
-    title: "Largest Positive Integer That Exists With Its Negative",
-    tags: ["Array", "Hash Table", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 75.2,
-  },
-  apply_operations_to_an_array: {
-    qno: "2460",
-    title: "Apply Operations to an Array",
-    tags: ["Array", "Two Pointers", "Simulation"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 67.5,
-  },
-  total_cost_to_hire_k_workers: {
-    qno: "2462",
-    title: "Total Cost to Hire K Workers",
-    tags: ["Array", "Two Pointers", "Heap (Priority Queue)", "Simulation"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43,
-  },
-  number_of_distinct_averages: {
-    qno: "2465",
-    title: "Number of Distinct Averages",
-    tags: ["Array", "Hash Table", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 57.9,
-  },
-  merge_operations_to_turn_array_into_a_palindrome: {
-    qno: "2422",
-    title: "Merge Operations to Turn Array Into a Palindrome",
-    tags: ["Array", "Two Pointers", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.4,
-  },
-  append_characters_to_string_to_make_subsequence: {
-    qno: "2486",
-    title: "Append Characters to String to Make Subsequence",
-    tags: ["Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 73.1,
-  },
-  divide_players_into_teams_of_equal_skill: {
-    qno: "2491",
-    title: "Divide Players Into Teams of Equal Skill",
-    tags: ["Array", "Hash Table", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.8,
-  },
-  maximum_number_of_points_from_grid_queries: {
-    qno: "2503",
-    title: "Maximum Number of Points From Grid Queries",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Breadth-First Search",
-      "Union Find",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 37.4,
-  },
-  maximum_enemy_forts_that_can_be_captured: {
-    qno: "2511",
-    title: "Maximum Enemy Forts That Can Be Captured",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 38.3,
-  },
-  minimum_common_value: {
-    qno: "2540",
-    title: "Minimum Common Value",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 59.1,
-  },
-  maximize_greatness_of_an_array: {
-    qno: "2592",
-    title: "Maximize Greatness of an Array",
-    tags: ["Array", "Two Pointers", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.6,
-  },
-  minimum_time_to_eat_all_grains: {
-    qno: "2604",
-    title: "Minimum Time to Eat All Grains",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 41.4,
-  },
-  find_the_array_concatenation_value: {
-    qno: "2562",
-    title: "Find the Array Concatenation Value",
-    tags: ["Array", "Two Pointers", "Simulation"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 69.8,
-  },
-  count_the_number_of_fair_pairs: {
-    qno: "2563",
-    title: "Count the Number of Fair Pairs",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 32.8,
-  },
-  subsequence_with_the_minimum_score: {
-    qno: "2565",
-    title: "Subsequence With the Minimum Score",
-    tags: ["Two Pointers", "String", "Binary Search"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 31.3,
-  },
-  merge_two_2d_arrays_by_summing_values: {
-    qno: "2570",
-    title: "Merge Two 2D Arrays by Summing Values",
-    tags: ["Array", "Hash Table", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 73.6,
-  },
-  find_the_maximum_number_of_marked_indices: {
-    qno: "2576",
-    title: "Find the Maximum Number of Marked Indices",
-    tags: ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.5,
-  },
-  lexicographically_smallest_palindrome: {
-    qno: "2697",
-    title: "Lexicographically Smallest Palindrome",
-    tags: ["Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 81.7,
-  },
-  split_a_circular_linked_list: {
-    qno: "2674",
-    title: "Split a Circular Linked List",
-    tags: ["Linked List", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 73.2,
-  },
-  "minimum_changes_to_make_k_semi-palindromes": {
-    qno: "2911",
-    title: "Minimum Changes to Make K Semi-palindromes",
-    tags: ["Two Pointers", "String", "Dynamic Programming"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 35.8,
-  },
-  count_pairs_whose_sum_is_less_than_target: {
-    qno: "2824",
-    title: "Count Pairs Whose Sum is Less than Target",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 87.2,
-  },
-  make_string_a_subsequence_using_cyclic_increments: {
-    qno: "2825",
-    title: "Make String a Subsequence Using Cyclic Increments",
-    tags: ["Two Pointers", "String"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.1,
-  },
-  minimum_array_length_after_pair_removals: {
-    qno: "2856",
-    title: "Minimum Array Length After Pair Removals",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Two Pointers",
-      "Binary Search",
-      "Greedy",
-      "Counting",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 21.8,
-  },
-  maximum_coins_heroes_can_collect: {
-    qno: "2838",
-    title: "Maximum Coins Heroes Can Collect",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting", "Prefix Sum"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.9,
-  },
-  find_indices_with_index_and_value_difference_i: {
-    qno: "2903",
-    title: "Find Indices With Index and Value Difference I",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 62,
-  },
-  find_indices_with_index_and_value_difference_ii: {
-    qno: "2905",
-    title: "Find Indices With Index and Value Difference II",
-    tags: ["Array", "Two Pointers"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 32.1,
-  },
-  the_wording_game: {
-    qno: "2868",
-    title: "The Wording Game",
-    tags: ["Array", "Math", "Two Pointers", "String", "Game Theory"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 60.6,
-  },
-  separate_black_and_white_balls: {
-    qno: "2938",
-    title: "Separate Black and White Balls",
-    tags: ["Two Pointers", "String", "Greedy"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.1,
-  },
-  find_beautiful_indices_in_the_given_array_i: {
-    qno: "3006",
-    title: "Find Beautiful Indices in the Given Array I",
-    tags: [
-      "Two Pointers",
-      "String",
-      "Binary Search",
-      "Rolling Hash",
-      "String Matching",
-      "Hash Function",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.2,
-  },
-  count_the_number_of_incremovable_subarrays_ii: {
-    qno: "2972",
-    title: "Count the Number of Incremovable Subarrays II",
-    tags: ["Array", "Two Pointers", "Binary Search"],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.1,
-  },
-  count_the_number_of_incremovable_subarrays_i: {
-    qno: "2970",
-    title: "Count the Number of Incremovable Subarrays I",
-    tags: ["Array", "Two Pointers", "Binary Search", "Enumeration"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 51.2,
-  },
-  find_beautiful_indices_in_the_given_array_ii: {
-    qno: "3008",
-    title: "Find Beautiful Indices in the Given Array II",
-    tags: [
-      "Two Pointers",
-      "String",
-      "Binary Search",
-      "Rolling Hash",
-      "String Matching",
-      "Hash Function",
-    ],
-    default: "Two Pointers",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 24.1,
-  },
-  find_the_integer_added_to_array_ii: {
-    qno: "3132",
-    title: "Find the Integer Added to Array II",
-    tags: ["Array", "Two Pointers", "Sorting", "Enumeration"],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 31,
-  },
-  maximum_total_damage_with_spell_casting: {
-    qno: "3186",
-    title: "Maximum Total Damage With Spell Casting",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Two Pointers",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sorting",
-      "Counting",
-    ],
-    default: "Two Pointers",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 24.9,
-  },
-  longest_substring_without_repeating_characters: {
-    qno: "3",
-    title: "Longest Substring Without Repeating Characters",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 35,
-  },
-  substring_with_concatenation_of_all_words: {
-    qno: "30",
-    title: "Substring with Concatenation of All Words",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 32.6,
-  },
-  minimum_window_substring: {
-    qno: "76",
-    title: "Minimum Window Substring",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.2,
-  },
-  longest_substring_with_at_most_two_distinct_characters: {
-    qno: "159",
-    title: "Longest Substring with At Most Two Distinct Characters",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.5,
-  },
-  repeated_dna_sequences: {
-    qno: "187",
-    title: "Repeated DNA Sequences",
-    tags: [
-      "Hash Table",
-      "String",
-      "Bit Manipulation",
-      "Sliding Window",
-      "Rolling Hash",
-      "Hash Function",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.1,
-  },
-  minimum_size_subarray_sum: {
-    qno: "209",
-    title: "Minimum Size Subarray Sum",
-    tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.3,
-  },
-  contains_duplicate_ii: {
-    qno: "219",
-    title: "Contains Duplicate II",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 45.5,
-  },
-  longest_substring_with_at_most_k_distinct_characters: {
-    qno: "340",
-    title: "Longest Substring with At Most K Distinct Characters",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.9,
-  },
-  longest_substring_with_at_least_k_repeating_characters: {
-    qno: "395",
-    title: "Longest Substring with At Least K Repeating Characters",
-    tags: ["Hash Table", "String", "Divide and Conquer", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45,
-  },
-  longest_repeating_character_replacement: {
-    qno: "424",
-    title: "Longest Repeating Character Replacement",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.3,
-  },
-  find_all_anagrams_in_a_string: {
-    qno: "438",
-    title: "Find All Anagrams in a String",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51,
-  },
-  sliding_window_median: {
-    qno: "480",
-    title: "Sliding Window Median",
-    tags: ["Array", "Hash Table", "Sliding Window", "Heap (Priority Queue)"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.1,
-  },
-  max_consecutive_ones_ii: {
-    qno: "487",
-    title: "Max Consecutive Ones II",
-    tags: ["Array", "Dynamic Programming", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.4,
-  },
-  longest_harmonious_subsequence: {
-    qno: "594",
-    title: "Longest Harmonious Subsequence",
-    tags: ["Array", "Hash Table", "Sliding Window", "Sorting", "Counting"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 54.8,
-  },
-  smallest_range_covering_elements_from_k_lists: {
-    qno: "632",
-    title: "Smallest Range Covering Elements from K Lists",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Greedy",
-      "Sliding Window",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.7,
-  },
-  maximum_average_subarray_i: {
-    qno: "643",
-    title: "Maximum Average Subarray I",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 43.5,
-  },
-  k_empty_slots: {
-    qno: "683",
-    title: "K Empty Slots",
-    tags: ["Array", "Binary Indexed Tree", "Sliding Window", "Ordered Set"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 37.1,
-  },
-  subarray_product_less_than_k: {
-    qno: "713",
-    title: "Subarray Product Less Than K",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.5,
-  },
-  maximum_length_of_repeated_subarray: {
-    qno: "718",
-    title: "Maximum Length of Repeated Subarray",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sliding Window",
-      "Rolling Hash",
-      "Hash Function",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.9,
-  },
-  minimum_window_subsequence: {
-    qno: "727",
-    title: "Minimum Window Subsequence",
-    tags: ["String", "Dynamic Programming", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.5,
-  },
-  fruit_into_baskets: {
-    qno: "904",
-    title: "Fruit Into Baskets",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.4,
-  },
-  binary_subarrays_with_sum: {
-    qno: "930",
-    title: "Binary Subarrays With Sum",
-    tags: ["Array", "Hash Table", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.7,
-  },
-  longest_turbulent_subarray: {
-    qno: "978",
-    title: "Longest Turbulent Subarray",
-    tags: ["Array", "Dynamic Programming", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.5,
-  },
-  subarrays_with_k_different_integers: {
-    qno: "992",
-    title: "Subarrays with K Different Integers",
-    tags: ["Array", "Hash Table", "Sliding Window", "Counting"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 63.4,
-  },
-  minimum_number_of_k_consecutive_bit_flips: {
-    qno: "995",
-    title: "Minimum Number of K Consecutive Bit Flips",
-    tags: [
-      "Array",
-      "Bit Manipulation",
-      "Queue",
-      "Sliding Window",
-      "Prefix Sum",
-    ],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 51.7,
-  },
-  max_consecutive_ones_iii: {
-    qno: "1004",
-    title: "Max Consecutive Ones III",
-    tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.3,
-  },
-  "find_k-length_substrings_with_no_repeated_characters": {
-    qno: "1100",
-    title: "Find K-Length Substrings With No Repeated Characters",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.7,
-  },
-  "maximum_sum_of_two_non-overlapping_subarrays": {
-    qno: "1031",
-    title: "Maximum Sum of Two Non-Overlapping Subarrays",
-    tags: ["Array", "Dynamic Programming", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.8,
-  },
-  "minimum_swaps_to_group_all_1's_together": {
-    qno: "1151",
-    title: "Minimum Swaps to Group All 1's Together",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.2,
-  },
-  grumpy_bookstore_owner: {
-    qno: "1052",
-    title: "Grumpy Bookstore Owner",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
     language: "Java",
     acceptance: 64.1,
-  },
-  swap_for_longest_repeated_character_substring: {
-    qno: "1156",
-    title: "Swap For Longest Repeated Character Substring",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.1,
-  },
-  diet_plan_performance: {
-    qno: "1176",
-    title: "Diet Plan Performance",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 53.4,
-  },
-  get_equal_substrings_within_budget: {
-    qno: "1208",
-    title: "Get Equal Substrings Within Budget",
-    tags: ["String", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.3,
-  },
-  replace_the_substring_for_balanced_string: {
-    qno: "1234",
-    title: "Replace the Substring for Balanced String",
-    tags: ["String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.4,
-  },
-  count_number_of_nice_subarrays: {
-    qno: "1248",
-    title: "Count Number of Nice Subarrays",
-    tags: ["Array", "Hash Table", "Math", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.4,
-  },
-  maximum_number_of_occurrences_of_a_substring: {
-    qno: "1297",
-    title: "Maximum Number of Occurrences of a Substring",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52,
-  },
-  "find_the_k-beauty_of_a_number": {
-    qno: "2269",
-    title: "Find the K-Beauty of a Number",
-    tags: ["Math", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 59.9,
-  },
-  "number_of_sub-arrays_of_size_k_and_average_greater_than_or_equal_to_threshold":
-    {
-      qno: "1343",
-      title:
-        "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
-      tags: ["Array", "Sliding Window"],
-      default: "Sliding Window",
-      difficulty: "Medium",
-      language: "Java",
-      acceptance: 68.5,
-    },
-  number_of_substrings_containing_all_three_characters: {
-    qno: "1358",
-    title: "Number of Substrings Containing All Three Characters",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67,
-  },
-  maximum_points_you_can_obtain_from_cards: {
-    qno: "1423",
-    title: "Maximum Points You Can Obtain from Cards",
-    tags: ["Array", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53,
-  },
-  maximum_number_of_vowels_in_a_substring_of_given_length: {
-    qno: "1456",
-    title: "Maximum Number of Vowels in a Substring of Given Length",
-    tags: ["String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.6,
-  },
-  "find_two_non-overlapping_sub-arrays_each_with_target_sum": {
-    qno: "1477",
-    title: "Find Two Non-overlapping Sub-arrays Each With Target Sum",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sliding Window",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.5,
-  },
-  "longest_subarray_of_1's_after_deleting_one_element": {
-    qno: "1493",
-    title: "Longest Subarray of 1's After Deleting One Element",
-    tags: ["Array", "Dynamic Programming", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.5,
-  },
-  maximum_number_of_visible_points: {
-    qno: "1610",
-    title: "Maximum Number of Visible Points",
-    tags: ["Array", "Math", "Geometry", "Sliding Window", "Sorting"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 37.4,
-  },
-  defuse_the_bomb: {
-    qno: "1652",
-    title: "Defuse the Bomb",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 65.6,
-  },
-  minimum_operations_to_reduce_x_to_zero: {
-    qno: "1658",
-    title: "Minimum Operations to Reduce X to Zero",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Sliding Window",
-      "Prefix Sum",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.7,
-  },
-  minimum_adjacent_swaps_for_k_consecutive_ones: {
-    qno: "1703",
-    title: "Minimum Adjacent Swaps for K Consecutive Ones",
-    tags: ["Array", "Greedy", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 42.9,
-  },
-  maximum_erasure_value: {
-    qno: "1695",
-    title: "Maximum Erasure Value",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.3,
-  },
-  longest_nice_substring: {
-    qno: "1763",
-    title: "Longest Nice Substring",
-    tags: [
-      "Hash Table",
-      "String",
-      "Divide and Conquer",
-      "Bit Manipulation",
-      "Sliding Window",
-    ],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 60.6,
-  },
-  frequency_of_the_most_frequent_element: {
-    qno: "1838",
-    title: "Frequency of the Most Frequent Element",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Greedy",
-      "Sliding Window",
-      "Sorting",
-      "Prefix Sum",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.7,
-  },
-  longest_substring_of_all_vowels_in_order: {
-    qno: "1839",
-    title: "Longest Substring Of All Vowels in Order",
-    tags: ["String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.3,
-  },
-  substrings_of_size_three_with_distinct_characters: {
-    qno: "1876",
-    title: "Substrings of Size Three with Distinct Characters",
-    tags: ["Hash Table", "String", "Sliding Window", "Counting"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 73.5,
-  },
-  jump_game_vii: {
-    qno: "1871",
-    title: "Jump Game VII",
-    tags: ["String", "Dynamic Programming", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 24.9,
-  },
-  distinct_numbers_in_each_subarray: {
-    qno: "1852",
-    title: "Distinct Numbers in Each Subarray",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.3,
-  },
-  minimum_number_of_flips_to_make_the_binary_string_alternating: {
-    qno: "1888",
-    title: "Minimum Number of Flips to Make the Binary String Alternating",
-    tags: ["String", "Dynamic Programming", "Greedy", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.9,
-  },
-  kth_smallest_subarray_sum: {
-    qno: "1918",
-    title: "Kth Smallest Subarray Sum",
-    tags: ["Array", "Binary Search", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.8,
-  },
-  minimum_difference_between_highest_and_lowest_of_k_scores: {
-    qno: "1984",
-    title: "Minimum Difference Between Highest and Lowest of K Scores",
-    tags: ["Array", "Sliding Window", "Sorting"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.8,
-  },
-  minimum_number_of_operations_to_make_array_continuous: {
-    qno: "2009",
-    title: "Minimum Number of Operations to Make Array Continuous",
-    tags: ["Array", "Hash Table", "Binary Search", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 52.8,
-  },
-  maximize_the_confusion_of_an_exam: {
-    qno: "2024",
-    title: "Maximize the Confusion of an Exam",
-    tags: ["String", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.2,
-  },
-  k_radius_subarray_averages: {
-    qno: "2090",
-    title: "K Radius Subarray Averages",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.2,
-  },
-  maximum_fruits_harvested_after_at_most_k_steps: {
-    qno: "2106",
-    title: "Maximum Fruits Harvested After at Most K Steps",
-    tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36.2,
-  },
-  number_of_unique_flavors_after_sharing_k_candies: {
-    qno: "2107",
-    title: "Number of Unique Flavors After Sharing K Candies",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.5,
-  },
-  "minimum_swaps_to_group_all_1's_together_ii": {
-    qno: "2134",
-    title: "Minimum Swaps to Group All 1's Together II",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.5,
-  },
-  find_substring_with_given_hash_value: {
-    qno: "2156",
-    title: "Find Substring With Given Hash Value",
-    tags: ["String", "Sliding Window", "Rolling Hash", "Hash Function"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 23.5,
-  },
-  minimum_consecutive_cards_to_pick_up: {
-    qno: "2260",
-    title: "Minimum Consecutive Cards to Pick Up",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.3,
-  },
-  count_subarrays_with_score_less_than_k: {
-    qno: "2302",
-    title: "Count Subarrays With Score Less Than K",
-    tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 54.6,
-  },
-  maximum_number_of_robots_within_budget: {
-    qno: "2398",
-    title: "Maximum Number of Robots Within Budget",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Prefix Sum",
-    ],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 34.4,
-  },
-  minimum_recolors_to_get_k_consecutive_black_blocks: {
-    qno: "2379",
-    title: "Minimum Recolors to Get K Consecutive Black Blocks",
-    tags: ["String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 58.8,
-  },
-  longest_nice_subarray: {
-    qno: "2401",
-    title: "Longest Nice Subarray",
-    tags: ["Array", "Bit Manipulation", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.4,
-  },
-  smallest_subarrays_with_maximum_bitwise_or: {
-    qno: "2411",
-    title: "Smallest Subarrays With Maximum Bitwise OR",
-    tags: ["Array", "Binary Search", "Bit Manipulation", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.1,
-  },
-  maximum_sum_of_distinct_subarrays_with_length_k: {
-    qno: "2461",
-    title: "Maximum Sum of Distinct Subarrays With Length K",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34,
-  },
-  take_k_of_each_character_from_left_and_right: {
-    qno: "2516",
-    title: "Take K of Each Character From Left and Right",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.4,
-  },
-  maximize_the_minimum_powered_city: {
-    qno: "2528",
-    title: "Maximize the Minimum Powered City",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Greedy",
-      "Queue",
-      "Sliding Window",
-      "Prefix Sum",
-    ],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 32.2,
-  },
-  count_the_number_of_good_subarrays: {
-    qno: "2537",
-    title: "Count the Number of Good Subarrays",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.5,
-  },
-  maximum_frequency_score_of_a_subarray: {
-    qno: "2524",
-    title: "Maximum Frequency Score of a Subarray",
-    tags: ["Array", "Hash Table", "Math", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.3,
-  },
-  maximize_win_from_two_segments: {
-    qno: "2555",
-    title: "Maximize Win From Two Segments",
-    tags: ["Array", "Binary Search", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33,
-  },
-  sliding_subarray_beauty: {
-    qno: "2653",
-    title: "Sliding Subarray Beauty",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33,
-  },
-  "find_the_longest_semi-repetitive_substring": {
-    qno: "2730",
-    title: "Find the Longest Semi-Repetitive Substring",
-    tags: ["String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.5,
-  },
-  find_the_longest_equal_subarray: {
-    qno: "2831",
-    title: "Find the Longest Equal Subarray",
-    tags: ["Array", "Hash Table", "Binary Search", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 35.6,
-  },
-  count_zero_request_servers: {
-    qno: "2747",
-    title: "Count Zero Request Servers",
-    tags: ["Array", "Hash Table", "Sliding Window", "Sorting"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 32.5,
-  },
-  count_complete_subarrays_in_an_array: {
-    qno: "2799",
-    title: "Count Complete Subarrays in an Array",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.8,
-  },
-  longest_even_odd_subarray_with_threshold: {
-    qno: "2760",
-    title: "Longest Even Odd Subarray With Threshold",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 29.5,
-  },
-  length_of_the_longest_valid_substring: {
-    qno: "2781",
-    title: "Length of the Longest Valid Substring",
-    tags: ["Array", "Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 37.4,
-  },
-  count_substrings_without_repeating_character: {
-    qno: "2743",
-    title: "Count Substrings Without Repeating Character",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 70.7,
-  },
-  maximum_beauty_of_an_array_after_applying_operation: {
-    qno: "2779",
-    title: "Maximum Beauty of an Array After Applying Operation",
-    tags: ["Array", "Binary Search", "Sliding Window", "Sorting"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38,
-  },
-  maximum_sum_of_almost_unique_subarray: {
-    qno: "2841",
-    title: "Maximum Sum of Almost Unique Subarray",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 37.9,
-  },
-  "count_of_sub-multisets_with_bounded_sum": {
-    qno: "2902",
-    title: "Count of Sub-Multisets With Bounded Sum",
-    tags: ["Array", "Hash Table", "Dynamic Programming", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 20.7,
-  },
-  minimum_size_subarray_in_infinite_array: {
-    qno: "2875",
-    title: "Minimum Size Subarray in Infinite Array",
-    tags: ["Array", "Hash Table", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 30.8,
-  },
-  shortest_and_lexicographically_smallest_beautiful_string: {
-    qno: "2904",
-    title: "Shortest and Lexicographically Smallest Beautiful String",
-    tags: ["String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.8,
-  },
-  maximum_strong_pair_xor_i: {
-    qno: "2932",
-    title: "Maximum Strong Pair XOR I",
-    tags: ["Array", "Hash Table", "Bit Manipulation", "Trie", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 76,
-  },
-  apply_operations_to_maximize_frequency_score: {
-    qno: "2968",
-    title: "Apply Operations to Maximize Frequency Score",
-    tags: ["Array", "Binary Search", "Sliding Window", "Sorting", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.1,
-  },
-  maximum_strong_pair_xor_ii: {
-    qno: "2935",
-    title: "Maximum Strong Pair XOR II",
-    tags: ["Array", "Hash Table", "Bit Manipulation", "Trie", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.1,
-  },
-  count_subarrays_where_max_element_appears_at_least_k_times: {
-    qno: "2962",
-    title: "Count Subarrays Where Max Element Appears at Least K Times",
-    tags: ["Array", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.1,
-  },
-  count_complete_substrings: {
-    qno: "2953",
-    title: "Count Complete Substrings",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 26.8,
-  },
-  length_of_longest_subarray_with_at_most_k_frequency: {
-    qno: "2958",
-    title: "Length of Longest Subarray With at Most K Frequency",
-    tags: ["Array", "Hash Table", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.8,
-  },
-  divide_an_array_into_subarrays_with_minimum_cost_ii: {
-    qno: "3013",
-    title: "Divide an Array Into Subarrays With Minimum Cost II",
-    tags: ["Array", "Hash Table", "Sliding Window", "Heap (Priority Queue)"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 31.8,
-  },
-  find_longest_special_substring_that_occurs_thrice_ii: {
-    qno: "2982",
-    title: "Find Longest Special Substring That Occurs Thrice II",
-    tags: [
-      "Hash Table",
-      "String",
-      "Binary Search",
-      "Sliding Window",
-      "Counting",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33.9,
-  },
-  find_longest_special_substring_that_occurs_thrice_i: {
-    qno: "2981",
-    title: "Find Longest Special Substring That Occurs Thrice I",
-    tags: [
-      "Hash Table",
-      "String",
-      "Binary Search",
-      "Sliding Window",
-      "Counting",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 42.7,
-  },
-  minimum_moves_to_pick_k_ones: {
-    qno: "3086",
-    title: "Minimum Moves to Pick K Ones",
-    tags: ["Array", "Greedy", "Sliding Window", "Prefix Sum"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 23.8,
-  },
-  find_pattern_in_infinite_stream_i: {
-    qno: "3023",
-    title: "Find Pattern in Infinite Stream I",
-    tags: [
-      "Array",
-      "Sliding Window",
-      "Rolling Hash",
-      "String Matching",
-      "Hash Function",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.8,
-  },
-  maximum_length_substring_with_two_occurrences: {
-    qno: "3090",
-    title: "Maximum Length Substring With Two Occurrences",
-    tags: ["Hash Table", "String", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 63.9,
-  },
-  find_pattern_in_infinite_stream_ii: {
-    qno: "3037",
-    title: "Find Pattern in Infinite Stream II",
-    tags: [
-      "Array",
-      "Sliding Window",
-      "Rolling Hash",
-      "String Matching",
-      "Hash Function",
-    ],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 70.2,
-  },
-  find_the_median_of_the_uniqueness_array: {
-    qno: "3134",
-    title: "Find the Median of the Uniqueness Array",
-    tags: ["Array", "Hash Table", "Binary Search", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 29,
-  },
-  shortest_subarray_with_or_at_least_k_ii: {
-    qno: "3097",
-    title: "Shortest Subarray With OR at Least K II",
-    tags: ["Array", "Bit Manipulation", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 29.9,
-  },
-  shortest_subarray_with_or_at_least_k_i: {
-    qno: "3095",
-    title: "Shortest Subarray With OR at Least K I",
-    tags: ["Array", "Bit Manipulation", "Sliding Window"],
-    default: "Sliding Window",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 41,
-  },
-  equalize_strings_by_adding_or_removing_characters_at_ends: {
-    qno: "3135",
-    title: "Equalize Strings by Adding or Removing Characters at Ends",
-    tags: [
-      "String",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sliding Window",
-      "Hash Function",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.5,
-  },
-  unique_binary_search_trees_ii: {
-    qno: "95",
-    title: "Unique Binary Search Trees II",
-    tags: [
-      "Dynamic Programming",
-      "Backtracking",
-      "Tree",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.1,
-  },
-  unique_binary_search_trees: {
-    qno: "96",
-    title: "Unique Binary Search Trees",
-    tags: [
-      "Math",
-      "Dynamic Programming",
-      "Tree",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.2,
-  },
-  validate_binary_search_tree: {
-    qno: "98",
-    title: "Validate Binary Search Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33.1,
-  },
-  recover_binary_search_tree: {
-    qno: "99",
-    title: "Recover Binary Search Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.5,
-  },
-  convert_sorted_array_to_binary_search_tree: {
-    qno: "108",
-    title: "Convert Sorted Array to Binary Search Tree",
-    tags: [
-      "Array",
-      "Divide and Conquer",
-      "Tree",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 72,
-  },
-  convert_sorted_list_to_binary_search_tree: {
-    qno: "109",
-    title: "Convert Sorted List to Binary Search Tree",
-    tags: [
-      "Linked List",
-      "Divide and Conquer",
-      "Tree",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.2,
-  },
-  kth_smallest_element_in_a_bst: {
-    qno: "230",
-    title: "Kth Smallest Element in a BST",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.9,
-  },
-  lowest_common_ancestor_of_a_binary_search_tree: {
-    qno: "235",
-    title: "Lowest Common Ancestor of a Binary Search Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.2,
-  },
-  verify_preorder_sequence_in_binary_search_tree: {
-    qno: "255",
-    title: "Verify Preorder Sequence in Binary Search Tree",
-    tags: [
-      "Array",
-      "Stack",
-      "Tree",
-      "Binary Search Tree",
-      "Recursion",
-      "Monotonic Stack",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50,
-  },
-  closest_binary_search_tree_value: {
-    qno: "270",
-    title: "Closest Binary Search Tree Value",
-    tags: [
-      "Binary Search",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 51.4,
-  },
-  inorder_successor_in_bst: {
-    qno: "285",
-    title: "Inorder Successor in BST",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.9,
-  },
-  largest_bst_subtree: {
-    qno: "333",
-    title: "Largest BST Subtree",
-    tags: [
-      "Dynamic Programming",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44,
-  },
-  serialize_and_deserialize_bst: {
-    qno: "449",
-    title: "Serialize and Deserialize BST",
-    tags: [
-      "String",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Design",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.8,
-  },
-  delete_node_in_a_bst: {
-    qno: "450",
-    title: "Delete Node in a BST",
-    tags: ["Tree", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.5,
-  },
-  find_mode_in_binary_search_tree: {
-    qno: "501",
-    title: "Find Mode in Binary Search Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.3,
-  },
-  inorder_successor_in_bst_ii: {
-    qno: "510",
-    title: "Inorder Successor in BST II",
-    tags: ["Tree", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.9,
-  },
-  minimum_absolute_difference_in_bst: {
-    qno: "530",
-    title: "Minimum Absolute Difference in BST",
-    tags: [
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 58.4,
-  },
-  convert_bst_to_greater_tree: {
-    qno: "538",
-    title: "Convert BST to Greater Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.5,
-  },
-  trim_a_binary_search_tree: {
-    qno: "669",
-    title: "Trim a Binary Search Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.3,
-  },
-  search_in_a_binary_search_tree: {
-    qno: "700",
-    title: "Search in a Binary Search Tree",
-    tags: ["Tree", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 80,
-  },
-  insert_into_a_binary_search_tree: {
-    qno: "701",
-    title: "Insert into a Binary Search Tree",
-    tags: ["Tree", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 73.8,
-  },
-  kth_largest_element_in_a_stream: {
-    qno: "703",
-    title: "Kth Largest Element in a Stream",
-    tags: [
-      "Tree",
-      "Design",
-      "Binary Search Tree",
-      "Heap (Priority Queue)",
-      "Binary Tree",
-      "Data Stream",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.9,
-  },
-  split_bst: {
-    qno: "776",
-    title: "Split BST",
-    tags: ["Tree", "Binary Search Tree", "Recursion", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 82.7,
-  },
-  minimum_distance_between_bst_nodes: {
-    qno: "783",
-    title: "Minimum Distance Between BST Nodes",
-    tags: [
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 59.6,
-  },
-  increasing_order_search_tree: {
-    qno: "897",
-    title: "Increasing Order Search Tree",
-    tags: [
-      "Stack",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78.3,
-  },
-  range_sum_of_bst: {
-    qno: "938",
-    title: "Range Sum of BST",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 86.9,
-  },
-  construct_binary_search_tree_from_preorder_traversal: {
-    qno: "1008",
-    title: "Construct Binary Search Tree from Preorder Traversal",
-    tags: [
-      "Array",
-      "Stack",
-      "Tree",
-      "Binary Search Tree",
-      "Monotonic Stack",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 82.1,
-  },
-  binary_search_tree_to_greater_sum_tree: {
-    qno: "1038",
-    title: "Binary Search Tree to Greater Sum Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 88.2,
-  },
-  all_elements_in_two_binary_search_trees: {
-    qno: "1305",
-    title: "All Elements in Two Binary Search Trees",
-    tags: [
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Sorting",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 79.8,
-  },
-  maximum_sum_bst_in_binary_tree: {
-    qno: "1373",
-    title: "Maximum Sum BST in Binary Tree",
-    tags: [
-      "Dynamic Programming",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 41.3,
-  },
-  balance_a_binary_search_tree: {
-    qno: "1382",
-    title: "Balance a Binary Search Tree",
-    tags: [
-      "Divide and Conquer",
-      "Greedy",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 84.6,
-  },
-  number_of_ways_to_reorder_array_to_get_same_bst: {
-    qno: "1569",
-    title: "Number of Ways to Reorder Array to Get Same BST",
-    tags: [
-      "Array",
-      "Math",
-      "Divide and Conquer",
-      "Dynamic Programming",
-      "Tree",
-      "Union Find",
-      "Binary Search Tree",
-      "Memoization",
-      "Combinatorics",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.5,
-  },
-  depth_of_bst_given_insertion_order: {
-    qno: "1902",
-    title: "Depth of BST Given Insertion Order",
-    tags: ["Tree", "Binary Search Tree", "Binary Tree", "Ordered Set"],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.4,
-  },
-  closest_nodes_queries_in_a_binary_search_tree: {
-    qno: "2476",
-    title: "Closest Nodes Queries in a Binary Search Tree",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.5,
-  },
-  valid_sudoku: {
-    qno: "36",
-    title: "Valid Sudoku",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60,
-  },
-  sudoku_solver: {
-    qno: "37",
-    title: "Sudoku Solver",
-    tags: ["Array", "Hash Table", "Backtracking", "Matrix"],
-    default: "Backtracking",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 61.8,
-  },
-  rotate_image: {
-    qno: "48",
-    title: "Rotate Image",
-    tags: ["Array", "Math", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.9,
-  },
-  spiral_matrix: {
-    qno: "54",
-    title: "Spiral Matrix",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.1,
-  },
-  spiral_matrix_ii: {
-    qno: "59",
-    title: "Spiral Matrix II",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.4,
-  },
-  unique_paths_ii: {
-    qno: "63",
-    title: "Unique Paths II",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.8,
-  },
-  minimum_path_sum: {
-    qno: "64",
-    title: "Minimum Path Sum",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.3,
-  },
-  set_matrix_zeroes: {
-    qno: "73",
-    title: "Set Matrix Zeroes",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.3,
-  },
-  search_a_2d_matrix: {
-    qno: "74",
-    title: "Search a 2D Matrix",
-    tags: ["Array", "Binary Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.5,
-  },
-  word_search: {
-    qno: "79",
-    title: "Word Search",
-    tags: ["Array", "String", "Backtracking", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.1,
-  },
-  maximal_rectangle: {
-    qno: "85",
-    title: "Maximal Rectangle",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Stack",
-      "Matrix",
-      "Monotonic Stack",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 50.9,
-  },
-  surrounded_regions: {
-    qno: "130",
-    title: "Surrounded Regions",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.9,
-  },
-  dungeon_game: {
-    qno: "174",
-    title: "Dungeon Game",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.2,
-  },
-  number_of_islands: {
-    qno: "200",
-    title: "Number of Islands",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.8,
-  },
-  word_search_ii: {
-    qno: "212",
-    title: "Word Search II",
-    tags: ["Array", "String", "Backtracking", "Trie", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36.4,
-  },
-  maximal_square: {
-    qno: "221",
-    title: "Maximal Square",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.8,
-  },
-  search_a_2d_matrix_ii: {
-    qno: "240",
-    title: "Search a 2D Matrix II",
-    tags: ["Array", "Binary Search", "Divide and Conquer", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53,
-  },
-  walls_and_gates: {
-    qno: "286",
-    title: "Walls and Gates",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.6,
-  },
-  game_of_life: {
-    qno: "289",
-    title: "Game of Life",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.5,
-  },
-  best_meeting_point: {
-    qno: "296",
-    title: "Best Meeting Point",
-    tags: ["Array", "Math", "Sorting", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 60.9,
-  },
-  smallest_rectangle_enclosing_black_pixels: {
-    qno: "302",
-    title: "Smallest Rectangle Enclosing Black Pixels",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 59,
   },
   "range_sum_query_2d_-_immutable": {
     qno: "304",
     title: "Range Sum Query 2D - Immutable",
     tags: ["Array", "Design", "Matrix", "Prefix Sum"],
-    default: "Matrix",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 54.9,
   },
-  "range_sum_query_2d_-_mutable": {
-    qno: "308",
-    title: "Range Sum Query 2D - Mutable",
-    tags: ["Array", "Design", "Binary Indexed Tree", "Segment Tree", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.2,
-  },
-  sparse_matrix_multiplication: {
-    qno: "311",
-    title: "Sparse Matrix Multiplication",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
+  maximum_size_subarray_sum_equals_k: {
+    qno: "325",
+    title: "Maximum Size Subarray Sum Equals k",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 68.1,
-  },
-  shortest_distance_from_all_buildings: {
-    qno: "317",
-    title: "Shortest Distance from All Buildings",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.3,
-  },
-  longest_increasing_path_in_a_matrix: {
-    qno: "329",
-    title: "Longest Increasing Path in a Matrix",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph",
-      "Topological Sort",
-      "Memoization",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.8,
-  },
-  "design_tic-tac-toe": {
-    qno: "348",
-    title: "Design Tic-Tac-Toe",
-    tags: ["Array", "Hash Table", "Design", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.1,
-  },
-  bomb_enemy: {
-    qno: "361",
-    title: "Bomb Enemy",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.8,
+    acceptance: 49.6,
   },
   max_sum_of_rectangle_no_larger_than_k: {
     qno: "363",
     title: "Max Sum of Rectangle No Larger Than K",
     tags: ["Array", "Binary Search", "Matrix", "Prefix Sum", "Ordered Set"],
-    default: "Matrix",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 44.2,
   },
-  kth_smallest_element_in_a_sorted_matrix: {
-    qno: "378",
-    title: "Kth Smallest Element in a Sorted Matrix",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.6,
-  },
-  trapping_rain_water_ii: {
-    qno: "407",
-    title: "Trapping Rain Water II",
-    tags: ["Array", "Breadth-First Search", "Heap (Priority Queue)", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 48,
-  },
-  pacific_atlantic_water_flow: {
-    qno: "417",
-    title: "Pacific Atlantic Water Flow",
-    tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.5,
-  },
-  battleships_in_a_board: {
-    qno: "419",
-    title: "Battleships in a Board",
-    tags: ["Array", "Depth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.5,
-  },
-  valid_word_square: {
-    qno: "422",
-    title: "Valid Word Square",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 41.2,
-  },
-  island_perimeter: {
-    qno: "463",
-    title: "Island Perimeter",
-    tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 72.9,
-  },
-  the_maze: {
-    qno: "490",
-    title: "The Maze",
-    tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.1,
-  },
-  diagonal_traverse: {
-    qno: "498",
-    title: "Diagonal Traverse",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.5,
-  },
-  the_maze_iii: {
-    qno: "499",
-    title: "The Maze III",
-    tags: [
-      "Array",
-      "String",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Matrix",
-      "Shortest Path",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 48.9,
-  },
-  the_maze_ii: {
-    qno: "505",
-    title: "The Maze II",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Matrix",
-      "Shortest Path",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.5,
-  },
-  minesweeper: {
-    qno: "529",
-    title: "Minesweeper",
-    tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.8,
-  },
-  lonely_pixel_i: {
-    qno: "531",
-    title: "Lonely Pixel I",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.3,
-  },
-  lonely_pixel_ii: {
-    qno: "533",
-    title: "Lonely Pixel II",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.6,
-  },
-  "01_matrix": {
-    qno: "542",
-    title: "01 Matrix",
-    tags: ["Array", "Dynamic Programming", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.8,
-  },
-  shortest_path_to_get_food: {
-    qno: "1730",
-    title: "Shortest Path to Get Food",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.9,
-  },
-  longest_line_of_consecutive_one_in_matrix: {
-    qno: "562",
-    title: "Longest Line of Consecutive One in Matrix",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.4,
-  },
-  reshape_the_matrix: {
-    qno: "566",
-    title: "Reshape the Matrix",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 63.1,
-  },
-  maximum_vacation_days: {
-    qno: "568",
-    title: "Maximum Vacation Days",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 45.8,
-  },
-  design_excel_sum_formula: {
-    qno: "631",
-    title: "Design Excel Sum Formula",
-    tags: ["Array", "Graph", "Design", "Topological Sort", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.8,
-  },
-  image_smoother: {
-    qno: "661",
-    title: "Image Smoother",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 67.4,
-  },
-  cut_off_trees_for_golf_event: {
-    qno: "675",
-    title: "Cut Off Trees for Golf Event",
-    tags: ["Array", "Breadth-First Search", "Heap (Priority Queue)", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 34.4,
-  },
-  max_area_of_island: {
-    qno: "695",
-    title: "Max Area of Island",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.3,
-  },
-  candy_crush: {
-    qno: "723",
-    title: "Candy Crush",
-    tags: ["Array", "Two Pointers", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 76.9,
-  },
-  flood_fill: {
-    qno: "733",
-    title: "Flood Fill",
-    tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 64.2,
-  },
-  cherry_pickup: {
-    qno: "741",
-    title: "Cherry Pickup",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 37,
-  },
-  contain_virus: {
-    qno: "749",
-    title: "Contain Virus",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Matrix",
-      "Simulation",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 51,
-  },
-  number_of_corner_rectangles: {
-    qno: "750",
-    title: "Number Of Corner Rectangles",
-    tags: ["Array", "Math", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.7,
-  },
-  construct_quad_tree: {
-    qno: "427",
-    title: "Construct Quad Tree",
-    tags: ["Array", "Divide and Conquer", "Tree", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.6,
-  },
-  toeplitz_matrix: {
-    qno: "766",
-    title: "Toeplitz Matrix",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 69.1,
-  },
-  sliding_puzzle: {
-    qno: "773",
-    title: "Sliding Puzzle",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 64.9,
-  },
-  swim_in_rising_water: {
-    qno: "778",
-    title: "Swim in Rising Water",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 61,
-  },
-  transform_to_chessboard: {
-    qno: "782",
-    title: "Transform to Chessboard",
-    tags: ["Array", "Math", "Bit Manipulation", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 50.9,
-  },
-  "valid_tic-tac-toe_state": {
-    qno: "794",
-    title: "Valid Tic-Tac-Toe State",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.7,
-  },
-  bricks_falling_when_hit: {
-    qno: "803",
-    title: "Bricks Falling When Hit",
-    tags: ["Array", "Union Find", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 34.8,
-  },
-  max_increase_to_keep_city_skyline: {
-    qno: "807",
-    title: "Max Increase to Keep City Skyline",
-    tags: ["Array", "Greedy", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 86.1,
-  },
-  making_a_large_island: {
-    qno: "827",
-    title: "Making A Large Island",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 47.7,
-  },
-  flipping_an_image: {
-    qno: "832",
-    title: "Flipping an Image",
-    tags: ["Array", "Two Pointers", "Bit Manipulation", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 82.1,
-  },
-  image_overlap: {
-    qno: "835",
-    title: "Image Overlap",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.7,
-  },
-  magic_squares_in_grid: {
-    qno: "840",
-    title: "Magic Squares In Grid",
-    tags: ["Array", "Hash Table", "Math", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39,
-  },
-  score_after_flipping_matrix: {
-    qno: "861",
-    title: "Score After Flipping Matrix",
-    tags: ["Array", "Greedy", "Bit Manipulation", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 80.4,
-  },
-  shortest_path_to_get_all_keys: {
-    qno: "864",
-    title: "Shortest Path to Get All Keys",
-    tags: ["Array", "Bit Manipulation", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.6,
-  },
-  transpose_matrix: {
-    qno: "867",
-    title: "Transpose Matrix",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 71.9,
-  },
-  projection_area_of_3d_shapes: {
-    qno: "883",
-    title: "Projection Area of 3D Shapes",
-    tags: ["Array", "Math", "Geometry", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 72.8,
-  },
-  spiral_matrix_iii: {
-    qno: "885",
-    title: "Spiral Matrix III",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.6,
-  },
-  surface_area_of_3d_shapes: {
-    qno: "892",
-    title: "Surface Area of 3D Shapes",
-    tags: ["Array", "Math", "Geometry", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 66.1,
-  },
-  snakes_and_ladders: {
-    qno: "909",
-    title: "Snakes and Ladders",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.8,
-  },
-  minimum_falling_path_sum: {
-    qno: "931",
-    title: "Minimum Falling Path Sum",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.7,
-  },
-  shortest_bridge: {
-    qno: "934",
-    title: "Shortest Bridge",
-    tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.8,
-  },
-  regions_cut_by_slashes: {
-    qno: "959",
-    title: "Regions Cut By Slashes",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.4,
-  },
-  unique_paths_iii: {
-    qno: "980",
-    title: "Unique Paths III",
-    tags: ["Array", "Backtracking", "Bit Manipulation", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 81.8,
-  },
-  rotting_oranges: {
-    qno: "994",
-    title: "Rotting Oranges",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.4,
-  },
-  available_captures_for_rook: {
-    qno: "999",
-    title: "Available Captures for Rook",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 69.1,
-  },
-  number_of_enclaves: {
-    qno: "1020",
-    title: "Number of Enclaves",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69,
-  },
-  matrix_cells_in_distance_order: {
-    qno: "1030",
-    title: "Matrix Cells in Distance Order",
-    tags: ["Array", "Math", "Geometry", "Sorting", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 71.3,
-  },
-  path_with_maximum_minimum_value: {
-    qno: "1102",
-    title: "Path With Maximum Minimum Value",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.7,
-  },
-  coloring_a_border: {
-    qno: "1034",
-    title: "Coloring A Border",
-    tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49,
-  },
-  as_far_from_land_as_possible: {
-    qno: "1162",
-    title: "As Far from Land as Possible",
-    tags: ["Array", "Dynamic Programming", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.6,
-  },
-  find_smallest_common_element_in_all_rows: {
-    qno: "1198",
-    title: "Find Smallest Common Element in All Rows",
-    tags: ["Array", "Hash Table", "Binary Search", "Matrix", "Counting"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 76.5,
-  },
-  number_of_submatrices_that_sum_to_target: {
-    qno: "1074",
-    title: "Number of Submatrices That Sum to Target",
-    tags: ["Array", "Hash Table", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 74.4,
-  },
-  flip_columns_for_maximum_number_of_equal_rows: {
-    qno: "1072",
-    title: "Flip Columns For Maximum Number of Equal Rows",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64,
-  },
-  shortest_path_in_binary_matrix: {
-    qno: "1091",
-    title: "Shortest Path in Binary Matrix",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.6,
-  },
-  minimum_falling_path_sum_ii: {
-    qno: "1289",
-    title: "Minimum Falling Path Sum II",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 64.4,
-  },
-  number_of_paths_with_max_score: {
-    qno: "1301",
-    title: "Number of Paths with Max Score",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.5,
-  },
-  "largest_1-bordered_square": {
-    qno: "1139",
-    title: "Largest 1-Bordered Square",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.3,
-  },
-  matrix_block_sum: {
-    qno: "1314",
-    title: "Matrix Block Sum",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.5,
-  },
-  sort_the_matrix_diagonally: {
-    qno: "1329",
-    title: "Sort the Matrix Diagonally",
-    tags: ["Array", "Sorting", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 82.9,
-  },
-  rank_transform_of_a_matrix: {
-    qno: "1632",
-    title: "Rank Transform of a Matrix",
-    tags: [
-      "Array",
-      "Union Find",
-      "Graph",
-      "Topological Sort",
-      "Sorting",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.9,
-  },
-  largest_magic_square: {
-    qno: "1895",
-    title: "Largest Magic Square",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.4,
-  },
-  minimum_moves_to_reach_target_with_rotations: {
-    qno: "1210",
-    title: "Minimum Moves to Reach Target with Rotations",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 49.7,
-  },
-  where_will_the_ball_fall: {
-    qno: "1706",
-    title: "Where Will the Ball Fall",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.8,
-  },
-  path_with_maximum_gold: {
-    qno: "1219",
-    title: "Path with Maximum Gold",
-    tags: ["Array", "Backtracking", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68,
-  },
-  queens_that_can_attack_the_king: {
-    qno: "1222",
-    title: "Queens That Can Attack the King",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.9,
-  },
-  leftmost_column_with_at_least_a_one: {
-    qno: "1428",
-    title: "Leftmost Column with at Least a One",
-    tags: ["Array", "Binary Search", "Matrix", "Interactive"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.5,
-  },
-  "reconstruct_a_2-row_binary_matrix": {
-    qno: "1253",
-    title: "Reconstruct a 2-Row Binary Matrix",
-    tags: ["Array", "Greedy", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46,
-  },
-  number_of_closed_islands: {
-    qno: "1254",
-    title: "Number of Closed Islands",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.4,
-  },
-  shift_2d_grid: {
-    qno: "1260",
-    title: "Shift 2D Grid",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 67.4,
-  },
-  minimum_moves_to_move_a_box_to_their_target_location: {
-    qno: "1263",
-    title: "Minimum Moves to Move a Box to Their Target Location",
-    tags: ["Array", "Breadth-First Search", "Heap (Priority Queue)", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 49,
-  },
-  minimum_path_cost_in_a_grid: {
-    qno: "2304",
-    title: "Minimum Path Cost in a Grid",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.7,
-  },
-  count_servers_that_communicate: {
-    qno: "1267",
-    title: "Count Servers that Communicate",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-      "Counting",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.5,
-  },
-  find_winner_on_a_tic_tac_toe_game: {
-    qno: "1275",
-    title: "Find Winner on a Tic Tac Toe Game",
-    tags: ["Array", "Hash Table", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 53.9,
-  },
-  count_square_submatrices_with_all_ones: {
-    qno: "1277",
-    title: "Count Square Submatrices with All Ones",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.2,
-  },
-  minimum_number_of_flips_to_convert_binary_matrix_to_zero_matrix: {
-    qno: "1284",
-    title: "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Bit Manipulation",
-      "Breadth-First Search",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 72.1,
-  },
-  maximum_side_length_of_a_square_with_sum_less_than_or_equal_to_threshold: {
-    qno: "1292",
-    title:
-      "Maximum Side Length of a Square with Sum Less than or Equal to Threshold",
-    tags: ["Array", "Binary Search", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.5,
-  },
-  shortest_path_in_a_grid_with_obstacles_elimination: {
-    qno: "1293",
-    title: "Shortest Path in a Grid with Obstacles Elimination",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 45.2,
-  },
-  the_k_weakest_rows_in_a_matrix: {
-    qno: "1337",
-    title: "The K Weakest Rows in a Matrix",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 73.5,
-  },
-  maximum_students_taking_exam: {
-    qno: "1349",
-    title: "Maximum Students Taking Exam",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Bit Manipulation",
-      "Matrix",
-      "Bitmask",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 50.5,
-  },
-  count_negative_numbers_in_a_sorted_matrix: {
-    qno: "1351",
-    title: "Count Negative Numbers in a Sorted Matrix",
-    tags: ["Array", "Binary Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 77.4,
-  },
-  minimum_cost_to_make_at_least_one_valid_path_in_a_grid: {
-    qno: "1368",
-    title: "Minimum Cost to Make at Least One Valid Path in a Grid",
-    tags: [
-      "Array",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Matrix",
-      "Shortest Path",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.1,
-  },
-  lucky_numbers_in_a_matrix: {
-    qno: "1380",
-    title: "Lucky Numbers in a Matrix",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 71.5,
-  },
-  check_if_there_is_a_valid_path_in_a_grid: {
-    qno: "1391",
-    title: "Check if There is a Valid Path in a Grid",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.9,
-  },
-  find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows: {
-    qno: "1439",
-    title: "Find the Kth Smallest Sum of a Matrix With Sorted Rows",
-    tags: ["Array", "Binary Search", "Heap (Priority Queue)", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 61.7,
-  },
-  number_of_ways_of_cutting_a_pizza: {
-    qno: "1444",
-    title: "Number of Ways of Cutting a Pizza",
-    tags: ["Array", "Dynamic Programming", "Memoization", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.1,
-  },
-  cherry_pickup_ii: {
-    qno: "1463",
-    title: "Cherry Pickup II",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 71.9,
-  },
-  subrectangle_queries: {
-    qno: "1476",
-    title: "Subrectangle Queries",
-    tags: ["Array", "Design", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 88.2,
-  },
-  count_submatrices_with_all_ones: {
-    qno: "1504",
-    title: "Count Submatrices With All Ones",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Stack",
-      "Matrix",
-      "Monotonic Stack",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.2,
-  },
-  minimum_swaps_to_arrange_a_binary_grid: {
-    qno: "1536",
-    title: "Minimum Swaps to Arrange a Binary Grid",
-    tags: ["Array", "Greedy", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.6,
-  },
-  detect_cycles_in_2d_grid: {
-    qno: "1559",
-    title: "Detect Cycles in 2D Grid",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.7,
-  },
-  matrix_diagonal_sum: {
-    qno: "1572",
-    title: "Matrix Diagonal Sum",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 83,
-  },
-  minimum_number_of_days_to_disconnect_island: {
-    qno: "1568",
-    title: "Minimum Number of Days to Disconnect Island",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Matrix",
-      "Strongly Connected Component",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.8,
-  },
-  strange_printer_ii: {
-    qno: "1591",
-    title: "Strange Printer II",
-    tags: ["Array", "Graph", "Topological Sort", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 59.1,
-  },
-  special_positions_in_a_binary_matrix: {
-    qno: "1582",
-    title: "Special Positions in a Binary Matrix",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 68.6,
-  },
-  find_valid_matrix_given_row_and_column_sums: {
-    qno: "1605",
-    title: "Find Valid Matrix Given Row and Column Sums",
-    tags: ["Array", "Greedy", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 77.3,
-  },
-  maximum_non_negative_product_in_a_matrix: {
-    qno: "1594",
-    title: "Maximum Non Negative Product in a Matrix",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33.7,
-  },
-  minimum_cost_to_connect_two_groups_of_points: {
-    qno: "1595",
-    title: "Minimum Cost to Connect Two Groups of Points",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Bit Manipulation",
-      "Matrix",
-      "Bitmask",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 48,
-  },
-  cat_and_mouse_ii: {
-    qno: "1728",
-    title: "Cat and Mouse II",
-    tags: [
-      "Array",
-      "Math",
-      "Dynamic Programming",
-      "Graph",
-      "Topological Sort",
-      "Memoization",
-      "Matrix",
-      "Game Theory",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40,
-  },
-  path_with_minimum_effort: {
-    qno: "1631",
-    title: "Path With Minimum Effort",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.8,
-  },
-  richest_customer_wealth: {
-    qno: "1672",
-    title: "Richest Customer Wealth",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 88.1,
-  },
-  largest_submatrix_with_rearrangements: {
-    qno: "1727",
-    title: "Largest Submatrix With Rearrangements",
-    tags: ["Array", "Greedy", "Sorting", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.3,
-  },
-  map_of_highest_peak: {
-    qno: "1765",
-    title: "Map of Highest Peak",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.5,
-  },
-  maximum_number_of_accepted_invitations: {
-    qno: "1820",
-    title: "Maximum Number of Accepted Invitations",
-    tags: ["Array", "Backtracking", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.9,
-  },
-  get_biggest_three_rhombus_sums_in_a_grid: {
-    qno: "1878",
-    title: "Get Biggest Three Rhombus Sums in a Grid",
-    tags: [
-      "Array",
-      "Math",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Matrix",
-      "Prefix Sum",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.9,
-  },
-  determine_whether_matrix_can_be_obtained_by_rotation: {
-    qno: "1886",
-    title: "Determine Whether Matrix Can Be Obtained By Rotation",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.9,
-  },
-  count_sub_islands: {
-    qno: "1905",
-    title: "Count Sub Islands",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.4,
-  },
-  nearest_exit_from_entrance_in_maze: {
-    qno: "1926",
-    title: "Nearest Exit from Entrance in Maze",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.6,
-  },
-  cyclically_rotating_a_grid: {
-    qno: "1914",
-    title: "Cyclically Rotating a Grid",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.5,
-  },
-  find_a_peak_element_ii: {
-    qno: "1901",
-    title: "Find a Peak Element II",
-    tags: ["Array", "Binary Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.7,
-  },
-  check_if_move_is_legal: {
-    qno: "1958",
-    title: "Check if Move is Legal",
-    tags: ["Array", "Matrix", "Enumeration"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.9,
-  },
-  maximum_matrix_sum: {
-    qno: "1975",
-    title: "Maximum Matrix Sum",
-    tags: ["Array", "Greedy", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.6,
-  },
-  last_day_where_you_can_still_cross: {
-    qno: "1970",
-    title: "Last Day Where You Can Still Cross",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 61.9,
-  },
-  find_all_groups_of_farmland: {
-    qno: "1992",
-    title: "Find All Groups of Farmland",
-    tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.8,
-  },
-  minimize_the_difference_between_target_and_chosen_elements: {
-    qno: "1981",
-    title: "Minimize the Difference Between Target and Chosen Elements",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.8,
-  },
-  convert_1d_array_into_2d_array: {
-    qno: "2022",
-    title: "Convert 1D Array Into 2D Array",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 61.6,
-  },
-  grid_game: {
-    qno: "2017",
-    title: "Grid Game",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.8,
-  },
-  check_if_word_can_be_placed_in_crossword: {
-    qno: "2018",
-    title: "Check if Word Can Be Placed In Crossword",
-    tags: ["Array", "Matrix", "Enumeration"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.3,
-  },
-  "minimum_operations_to_make_a_uni-value_grid": {
-    qno: "2033",
-    title: "Minimum Operations to Make a Uni-Value Grid",
-    tags: ["Array", "Math", "Sorting", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.3,
-  },
-  count_fertile_pyramids_in_a_land: {
-    qno: "2088",
-    title: "Count Fertile Pyramids in a Land",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 64.7,
-  },
-  stamping_the_grid: {
-    qno: "2132",
-    title: "Stamping the Grid",
-    tags: ["Array", "Greedy", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 32.4,
-  },
-  number_of_spaces_cleaning_robot_cleaned: {
-    qno: "2061",
-    title: "Number of Spaces Cleaning Robot Cleaned",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.5,
-  },
-  number_of_laser_beams_in_a_bank: {
-    qno: "2125",
-    title: "Number of Laser Beams in a Bank",
-    tags: ["Array", "Math", "String", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 85.7,
-  },
-  k_highest_ranked_items_within_a_price_range: {
-    qno: "2146",
-    title: "K Highest Ranked Items Within a Price Range",
-    tags: [
-      "Array",
-      "Breadth-First Search",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43,
-  },
-  check_if_every_row_and_column_contains_all_numbers: {
-    qno: "2133",
-    title: "Check if Every Row and Column Contains All Numbers",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 51.7,
-  },
-  minimum_operations_to_remove_adjacent_ones_in_matrix: {
-    qno: "2123",
-    title: "Minimum Operations to Remove Adjacent Ones in Matrix",
-    tags: ["Array", "Graph", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.8,
-  },
-  remove_all_ones_with_row_and_column_flips: {
-    qno: "2128",
-    title: "Remove All Ones With Row and Column Flips",
-    tags: ["Array", "Math", "Bit Manipulation", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 76.3,
-  },
-  remove_all_ones_with_row_and_column_flips_ii: {
-    qno: "2174",
-    title: "Remove All Ones With Row and Column Flips II",
-    tags: ["Array", "Bit Manipulation", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.6,
-  },
-  count_unguarded_cells_in_the_grid: {
-    qno: "2257",
-    title: "Count Unguarded Cells in the Grid",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.5,
-  },
-  escape_the_spreading_fire: {
-    qno: "2258",
-    title: "Escape the Spreading Fire",
-    tags: ["Array", "Binary Search", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 35.1,
-  },
-  check_if_there_is_a_valid_parentheses_string_path: {
-    qno: "2267",
-    title: "Check if There Is a Valid Parentheses String Path",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.7,
-  },
-  maximum_trailing_zeros_in_a_cornered_path: {
-    qno: "2245",
-    title: "Maximum Trailing Zeros in a Cornered Path",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.1,
-  },
-  minimum_obstacle_removal_to_reach_corner: {
-    qno: "2290",
-    title: "Minimum Obstacle Removal to Reach Corner",
-    tags: [
-      "Array",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Matrix",
-      "Shortest Path",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 54,
-  },
-  "check_if_matrix_is_x-matrix": {
-    qno: "2319",
-    title: "Check if Matrix Is X-Matrix",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 65.2,
-  },
-  number_of_increasing_paths_in_a_grid: {
-    qno: "2328",
-    title: "Number of Increasing Paths in a Grid",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph",
-      "Topological Sort",
-      "Memoization",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 58.4,
-  },
-  spiral_matrix_iv: {
-    qno: "2326",
-    title: "Spiral Matrix IV",
-    tags: ["Array", "Linked List", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.2,
-  },
-  number_of_people_that_can_be_seen_in_a_grid: {
-    qno: "2282",
-    title: "Number of People That Can Be Seen in a Grid",
-    tags: ["Array", "Stack", "Matrix", "Monotonic Stack"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.3,
-  },
-  equal_row_and_column_pairs: {
-    qno: "2352",
-    title: "Equal Row and Column Pairs",
-    tags: ["Array", "Hash Table", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 70.4,
-  },
-  largest_local_values_in_a_matrix: {
-    qno: "2373",
-    title: "Largest Local Values in a Matrix",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 88.1,
-  },
-  build_a_matrix_with_conditions: {
-    qno: "2392",
-    title: "Build a Matrix With Conditions",
-    tags: ["Array", "Graph", "Topological Sort", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 61.5,
-  },
-  maximum_rows_covered_by_columns: {
-    qno: "2397",
-    title: "Maximum Rows Covered by Columns",
-    tags: [
-      "Array",
-      "Backtracking",
-      "Bit Manipulation",
-      "Matrix",
-      "Enumeration",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.9,
-  },
-  minimize_maximum_value_in_a_grid: {
-    qno: "2371",
-    title: "Minimize Maximum Value in a Grid",
-    tags: [
-      "Array",
-      "Union Find",
-      "Graph",
-      "Topological Sort",
-      "Sorting",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 66,
-  },
-  maximum_sum_of_an_hourglass: {
-    qno: "2428",
-    title: "Maximum Sum of an Hourglass",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.9,
-  },
-  paths_in_matrix_whose_sum_is_divisible_by_k: {
-    qno: "2435",
-    title: "Paths in Matrix Whose Sum Is Divisible by K",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 42.8,
-  },
-  median_of_a_row_wise_sorted_matrix: {
-    qno: "2387",
-    title: "Median of a Row Wise Sorted Matrix",
-    tags: ["Array", "Binary Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71,
-  },
-  delete_greatest_value_in_each_row: {
-    qno: "2500",
-    title: "Delete Greatest Value in Each Row",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78.1,
-  },
-  difference_between_ones_and_zeros_in_row_and_column: {
-    qno: "2482",
-    title: "Difference Between Ones and Zeros in Row and Column",
-    tags: ["Array", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 84.5,
-  },
-  increment_submatrices_by_one: {
-    qno: "2536",
-    title: "Increment Submatrices by One",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.4,
-  },
-  sort_the_students_by_their_kth_score: {
-    qno: "2545",
-    title: "Sort the Students by Their Kth Score",
-    tags: ["Array", "Sorting", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 85.3,
-  },
-  disconnect_path_in_a_binary_matrix_by_at_most_one_flip: {
-    qno: "2556",
-    title: "Disconnect Path in a Binary Matrix by at Most One Flip",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 27.2,
-  },
-  "check_if_there_is_a_path_with_equal_number_of_0's_and_1's": {
-    qno: "2510",
-    title: "Check if There is a Path With Equal Number of 0's And 1's",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.2,
-  },
-  check_knight_tour_configuration: {
-    qno: "2596",
-    title: "Check Knight Tour Configuration",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Matrix",
-      "Simulation",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.9,
-  },
-  find_the_width_of_columns_of_a_grid: {
-    qno: "2639",
-    title: "Find the Width of Columns of a Grid",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 67.5,
-  },
-  first_completely_painted_row_or_column: {
-    qno: "2661",
-    title: "First Completely Painted Row or Column",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.4,
-  },
-  minimum_number_of_visited_cells_in_a_grid: {
-    qno: "2617",
-    title: "Minimum Number of Visited Cells in a Grid",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Stack",
-      "Breadth-First Search",
-      "Union Find",
-      "Heap (Priority Queue)",
-      "Matrix",
-      "Monotonic Stack",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 24.7,
-  },
-  find_the_string_with_lcp: {
-    qno: "2573",
-    title: "Find the String with LCP",
-    tags: [
-      "Array",
-      "String",
-      "Dynamic Programming",
-      "Greedy",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 31.5,
-  },
-  minimum_time_to_visit_a_cell_in_a_grid: {
-    qno: "2577",
-    title: "Minimum Time to Visit a Cell In a Grid",
-    tags: [
-      "Array",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Matrix",
-      "Shortest Path",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 35.4,
-  },
-  prime_in_diagonal: {
-    qno: "2614",
-    title: "Prime In Diagonal",
-    tags: ["Array", "Math", "Matrix", "Number Theory"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 34,
-  },
-  sum_in_a_matrix: {
-    qno: "2679",
-    title: "Sum in a Matrix",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.7,
-  },
-  row_with_maximum_ones: {
-    qno: "2643",
-    title: "Row With Maximum Ones",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 75.4,
-  },
-  maximum_number_of_fish_in_a_grid: {
-    qno: "2658",
-    title: "Maximum Number of Fish in a Grid",
-    tags: [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.7,
-  },
-  maximum_number_of_moves_in_a_grid: {
-    qno: "2684",
-    title: "Maximum Number of Moves in a Grid",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.8,
-  },
-  difference_of_number_of_distinct_values_on_diagonals: {
-    qno: "2711",
-    title: "Difference of Number of Distinct Values on Diagonals",
-    tags: ["Array", "Hash Table", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71,
-  },
-  maximum_strictly_increasing_cells_in_a_matrix: {
-    qno: "2713",
-    title: "Maximum Strictly Increasing Cells in a Matrix",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Dynamic Programming",
-      "Memoization",
-      "Sorting",
-      "Matrix",
-      "Ordered Set",
-    ],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.6,
-  },
-  "the_knight’s_tour": {
-    qno: "2664",
-    title: "The Knight’s Tour",
-    tags: ["Array", "Backtracking", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.4,
-  },
-  find_a_good_subset_of_the_matrix: {
-    qno: "2732",
-    title: "Find a Good Subset of the Matrix",
-    tags: ["Array", "Hash Table", "Bit Manipulation", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 45.4,
-  },
-  find_the_safest_path_in_a_grid: {
-    qno: "2812",
-    title: "Find the Safest Path in a Grid",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.1,
-  },
-  construct_product_matrix: {
-    qno: "2906",
-    title: "Construct Product Matrix",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 30.9,
-  },
-  minimum_time_takes_to_reach_destination_without_drowning: {
-    qno: "2814",
-    title: "Minimum Time Takes to Reach Destination Without Drowning",
-    tags: ["Array", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 63.3,
-  },
-  minimum_moves_to_spread_stones_over_grid: {
-    qno: "2850",
-    title: "Minimum Moves to Spread Stones Over Grid",
-    tags: ["Array", "Dynamic Programming", "Breadth-First Search", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.2,
-  },
-  maximum_spending_after_buying_items: {
-    qno: "2931",
-    title: "Maximum Spending After Buying Items",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)", "Matrix"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 65.3,
-  },
-  sum_of_remoteness_of_all_cells: {
-    qno: "2852",
-    title: "Sum of Remoteness of All Cells",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.9,
-  },
-  find_champion_i: {
-    qno: "2923",
-    title: "Find Champion I",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 73.2,
-  },
-  matrix_similarity_after_cyclic_shifts: {
-    qno: "2946",
-    title: "Matrix Similarity After Cyclic Shifts",
-    tags: ["Array", "Math", "Matrix", "Simulation"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 58,
-  },
-  find_missing_and_repeated_values: {
-    qno: "2965",
-    title: "Find Missing and Repeated Values",
-    tags: ["Array", "Hash Table", "Math", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 75.5,
-  },
-  find_the_grid_of_region_average: {
-    qno: "3030",
-    title: "Find the Grid of Region Average",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.9,
-  },
-  most_frequent_prime: {
-    qno: "3044",
-    title: "Most Frequent Prime",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Math",
-      "Matrix",
-      "Counting",
-      "Enumeration",
-      "Number Theory",
-    ],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.1,
-  },
-  modify_the_matrix: {
-    qno: "3033",
-    title: "Modify the Matrix",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 68.3,
-  },
-  minimum_operations_to_write_the_letter_y_on_a_grid: {
-    qno: "3071",
-    title: "Minimum Operations to Write the Letter Y on a Grid",
-    tags: ["Array", "Hash Table", "Matrix", "Counting"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.2,
-  },
-  "count_submatrices_with_top-left_element_and_sum_less_than_k": {
-    qno: "3070",
-    title: "Count Submatrices with Top-Left Element and Sum Less Than k",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.2,
-  },
-  match_alphanumerical_pattern_in_matrix_i: {
-    qno: "3078",
-    title: "Match Alphanumerical Pattern in Matrix I",
-    tags: ["Array", "Hash Table", "String", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.2,
-  },
-  maximum_difference_score_in_a_grid: {
-    qno: "3148",
-    title: "Maximum Difference Score in a Grid",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.6,
-  },
-  make_a_square_with_the_same_color: {
-    qno: "3127",
-    title: "Make a Square with the Same Color",
-    tags: ["Array", "Matrix", "Enumeration"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 51.2,
-  },
-  minimum_number_of_operations_to_satisfy_conditions: {
-    qno: "3122",
-    title: "Minimum Number of Operations to Satisfy Conditions",
-    tags: ["Array", "Dynamic Programming", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.9,
-  },
-  check_if_grid_satisfies_conditions: {
-    qno: "3142",
-    title: "Check if Grid Satisfies Conditions",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 43.1,
-  },
-  find_the_minimum_area_to_cover_all_ones_ii: {
-    qno: "3197",
-    title: "Find the Minimum Area to Cover All Ones II",
-    tags: ["Array", "Matrix", "Enumeration"],
-    default: "Matrix",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 33.2,
-  },
-  find_the_minimum_area_to_cover_all_ones_i: {
-    qno: "3195",
-    title: "Find the Minimum Area to Cover All Ones I",
-    tags: ["Array", "Matrix"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.3,
-  },
-  minimum_operations_to_make_binary_array_elements_equal_to_one_i: {
-    qno: "3191",
-    title: "Minimum Operations to Make Binary Array Elements Equal to One I",
-    tags: [
-      "Array",
-      "Bit Manipulation",
-      "Queue",
-      "Sliding Window",
-      "Prefix Sum",
-    ],
-    default: "Sliding Window",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 70.8,
-  },
-  minimum_average_of_smallest_and_largest_elements: {
-    qno: "3194",
-    title: "Minimum Average of Smallest and Largest Elements",
-    tags: ["Array", "Two Pointers", "Sorting"],
-    default: "Two Pointers",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 84.5,
-  },
-  binary_tree_inorder_traversal: {
-    qno: "94",
-    title: "Binary Tree Inorder Traversal",
-    tags: ["Stack", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 76.5,
-  },
-  same_tree: {
-    qno: "100",
-    title: "Same Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 62.6,
-  },
-  symmetric_tree: {
-    qno: "101",
-    title: "Symmetric Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.9,
-  },
-  binary_tree_level_order_traversal: {
-    qno: "102",
-    title: "Binary Tree Level Order Traversal",
-    tags: ["Tree", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.8,
-  },
-  binary_tree_zigzag_level_order_traversal: {
-    qno: "103",
-    title: "Binary Tree Zigzag Level Order Traversal",
-    tags: ["Tree", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.4,
-  },
-  maximum_depth_of_binary_tree: {
-    qno: "104",
-    title: "Maximum Depth of Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 75.7,
-  },
-  construct_binary_tree_from_preorder_and_inorder_traversal: {
-    qno: "105",
-    title: "Construct Binary Tree from Preorder and Inorder Traversal",
-    tags: ["Array", "Hash Table", "Divide and Conquer", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.4,
-  },
-  construct_binary_tree_from_inorder_and_postorder_traversal: {
-    qno: "106",
-    title: "Construct Binary Tree from Inorder and Postorder Traversal",
-    tags: ["Array", "Hash Table", "Divide and Conquer", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.5,
-  },
-  binary_tree_level_order_traversal_ii: {
-    qno: "107",
-    title: "Binary Tree Level Order Traversal II",
-    tags: ["Tree", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.8,
-  },
-  balanced_binary_tree: {
-    qno: "110",
-    title: "Balanced Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 52.6,
-  },
-  minimum_depth_of_binary_tree: {
-    qno: "111",
-    title: "Minimum Depth of Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 48.4,
-  },
-  path_sum: {
-    qno: "112",
-    title: "Path Sum",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 50.8,
-  },
-  path_sum_ii: {
-    qno: "113",
-    title: "Path Sum II",
-    tags: ["Backtracking", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.8,
-  },
-  flatten_binary_tree_to_linked_list: {
-    qno: "114",
-    title: "Flatten Binary Tree to Linked List",
-    tags: ["Linked List", "Stack", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.5,
-  },
-  populating_next_right_pointers_in_each_node: {
-    qno: "116",
-    title: "Populating Next Right Pointers in Each Node",
-    tags: [
-      "Linked List",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.1,
-  },
-  populating_next_right_pointers_in_each_node_ii: {
-    qno: "117",
-    title: "Populating Next Right Pointers in Each Node II",
-    tags: [
-      "Linked List",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53,
-  },
-  binary_tree_maximum_path_sum: {
-    qno: "124",
-    title: "Binary Tree Maximum Path Sum",
-    tags: ["Dynamic Programming", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.2,
-  },
-  sum_root_to_leaf_numbers: {
-    qno: "129",
-    title: "Sum Root to Leaf Numbers",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.2,
-  },
-  binary_tree_preorder_traversal: {
-    qno: "144",
-    title: "Binary Tree Preorder Traversal",
-    tags: ["Stack", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 70.1,
-  },
-  binary_tree_postorder_traversal: {
-    qno: "145",
-    title: "Binary Tree Postorder Traversal",
-    tags: ["Stack", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 71.6,
-  },
-  binary_tree_upside_down: {
-    qno: "156",
-    title: "Binary Tree Upside Down",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63,
-  },
-  binary_tree_right_side_view: {
-    qno: "199",
-    title: "Binary Tree Right Side View",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.4,
-  },
-  count_complete_tree_nodes: {
-    qno: "222",
-    title: "Count Complete Tree Nodes",
-    tags: ["Binary Search", "Bit Manipulation", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 66.1,
-  },
-  invert_binary_tree: {
-    qno: "226",
-    title: "Invert Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 77.3,
-  },
-  lowest_common_ancestor_of_a_binary_tree: {
-    qno: "236",
-    title: "Lowest Common Ancestor of a Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.9,
-  },
-  count_univalue_subtrees: {
-    qno: "250",
-    title: "Count Univalue Subtrees",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.5,
-  },
-  binary_tree_paths: {
-    qno: "257",
-    title: "Binary Tree Paths",
-    tags: [
-      "String",
-      "Backtracking",
-      "Tree",
-      "Depth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 64.1,
-  },
-  serialize_and_deserialize_binary_tree: {
-    qno: "297",
-    title: "Serialize and Deserialize Binary Tree",
-    tags: [
-      "String",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Design",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 57.1,
-  },
-  binary_tree_longest_consecutive_sequence: {
-    qno: "298",
-    title: "Binary Tree Longest Consecutive Sequence",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.6,
-  },
-  binary_tree_vertical_order_traversal: {
-    qno: "314",
-    title: "Binary Tree Vertical Order Traversal",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Sorting",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.7,
-  },
-  verify_preorder_serialization_of_a_binary_tree: {
-    qno: "331",
-    title: "Verify Preorder Serialization of a Binary Tree",
-    tags: ["String", "Stack", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.4,
-  },
-  house_robber_iii: {
-    qno: "337",
-    title: "House Robber III",
-    tags: ["Dynamic Programming", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.3,
-  },
-  find_leaves_of_binary_tree: {
-    qno: "366",
-    title: "Find Leaves of Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 80.6,
-  },
-  sum_of_left_leaves: {
-    qno: "404",
-    title: "Sum of Left Leaves",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 60.7,
-  },
-  path_sum_iii: {
-    qno: "437",
-    title: "Path Sum III",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.2,
-  },
-  most_frequent_subtree_sum: {
-    qno: "508",
-    title: "Most Frequent Subtree Sum",
-    tags: ["Hash Table", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.7,
-  },
-  find_bottom_left_tree_value: {
-    qno: "513",
-    title: "Find Bottom Left Tree Value",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.2,
-  },
-  find_largest_value_in_each_tree_row: {
-    qno: "515",
-    title: "Find Largest Value in Each Tree Row",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.7,
-  },
-  construct_binary_tree_from_string: {
-    qno: "536",
-    title: "Construct Binary Tree from String",
-    tags: ["String", "Stack", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.1,
-  },
-  diameter_of_binary_tree: {
-    qno: "543",
-    title: "Diameter of Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 60.8,
-  },
-  boundary_of_binary_tree: {
-    qno: "545",
-    title: "Boundary of Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.6,
-  },
-  binary_tree_longest_consecutive_sequence_ii: {
-    qno: "549",
-    title: "Binary Tree Longest Consecutive Sequence II",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.5,
-  },
-  binary_tree_tilt: {
-    qno: "563",
-    title: "Binary Tree Tilt",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 62.1,
-  },
-  subtree_of_another_tree: {
-    qno: "572",
-    title: "Subtree of Another Tree",
-    tags: [
-      "Tree",
-      "Depth-First Search",
-      "String Matching",
-      "Binary Tree",
-      "Hash Function",
-    ],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 48.2,
-  },
-  construct_string_from_binary_tree: {
-    qno: "606",
-    title: "Construct String from Binary Tree",
-    tags: ["String", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.3,
-  },
-  merge_two_binary_trees: {
-    qno: "617",
-    title: "Merge Two Binary Trees",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 79,
-  },
-  add_one_row_to_tree: {
-    qno: "623",
-    title: "Add One Row to Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64,
-  },
-  average_of_levels_in_binary_tree: {
-    qno: "637",
-    title: "Average of Levels in Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 72.9,
-  },
-  find_duplicate_subtrees: {
-    qno: "652",
-    title: "Find Duplicate Subtrees",
-    tags: ["Hash Table", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.5,
-  },
-  maximum_binary_tree: {
-    qno: "654",
-    title: "Maximum Binary Tree",
-    tags: [
-      "Array",
-      "Divide and Conquer",
-      "Stack",
-      "Tree",
-      "Monotonic Stack",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 85.5,
-  },
-  print_binary_tree: {
-    qno: "655",
-    title: "Print Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.2,
-  },
-  maximum_width_of_binary_tree: {
-    qno: "662",
-    title: "Maximum Width of Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43,
-  },
-  equal_tree_partition: {
-    qno: "663",
-    title: "Equal Tree Partition",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.5,
-  },
-  path_sum_iv: {
-    qno: "666",
-    title: "Path Sum IV",
-    tags: ["Array", "Hash Table", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.4,
-  },
-  second_minimum_node_in_a_binary_tree: {
-    qno: "671",
-    title: "Second Minimum Node In a Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 44.6,
-  },
-  longest_univalue_path: {
-    qno: "687",
-    title: "Longest Univalue Path",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.7,
-  },
-  closest_leaf_in_a_binary_tree: {
-    qno: "742",
-    title: "Closest Leaf in a Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.4,
-  },
-  "encode_n-ary_tree_to_binary_tree": {
-    qno: "431",
-    title: "Encode N-ary Tree to Binary Tree",
-    tags: [
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Design",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 79.6,
-  },
-  binary_tree_pruning: {
-    qno: "814",
-    title: "Binary Tree Pruning",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.3,
-  },
-  all_nodes_distance_k_in_binary_tree: {
-    qno: "863",
-    title: "All Nodes Distance K in Binary Tree",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.7,
-  },
-  smallest_subtree_with_all_the_deepest_nodes: {
-    qno: "865",
-    title: "Smallest Subtree with all the Deepest Nodes",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 70.8,
-  },
-  "leaf-similar_trees": {
-    qno: "872",
-    title: "Leaf-Similar Trees",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 70.1,
-  },
-  construct_binary_tree_from_preorder_and_postorder_traversal: {
-    qno: "889",
-    title: "Construct Binary Tree from Preorder and Postorder Traversal",
-    tags: ["Array", "Hash Table", "Divide and Conquer", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.5,
-  },
-  all_possible_full_binary_trees: {
-    qno: "894",
-    title: "All Possible Full Binary Trees",
-    tags: [
-      "Dynamic Programming",
-      "Tree",
-      "Recursion",
-      "Memoization",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 82.7,
-  },
-  complete_binary_tree_inserter: {
-    qno: "919",
-    title: "Complete Binary Tree Inserter",
-    tags: ["Tree", "Breadth-First Search", "Design", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.7,
-  },
-  flip_equivalent_binary_trees: {
-    qno: "951",
-    title: "Flip Equivalent Binary Trees",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67,
-  },
-  check_completeness_of_a_binary_tree: {
-    qno: "958",
-    title: "Check Completeness of a Binary Tree",
-    tags: ["Tree", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57,
-  },
-  univalued_binary_tree: {
-    qno: "965",
-    title: "Univalued Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 71.1,
-  },
-  binary_tree_cameras: {
-    qno: "968",
-    title: "Binary Tree Cameras",
-    tags: ["Dynamic Programming", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 46.8,
-  },
-  flip_binary_tree_to_match_preorder_traversal: {
-    qno: "971",
-    title: "Flip Binary Tree To Match Preorder Traversal",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.6,
-  },
-  distribute_coins_in_binary_tree: {
-    qno: "979",
-    title: "Distribute Coins in Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 77.1,
-  },
-  vertical_order_traversal_of_a_binary_tree: {
-    qno: "987",
-    title: "Vertical Order Traversal of a Binary Tree",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Sorting",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 48.1,
-  },
-  smallest_string_starting_from_leaf: {
-    qno: "988",
-    title: "Smallest String Starting From Leaf",
-    tags: [
-      "String",
-      "Backtracking",
-      "Tree",
-      "Depth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.5,
-  },
-  cousins_in_binary_tree: {
-    qno: "993",
-    title: "Cousins in Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 56.3,
-  },
-  maximum_binary_tree_ii: {
-    qno: "998",
-    title: "Maximum Binary Tree II",
-    tags: ["Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.3,
-  },
-  sum_of_root_to_leaf_binary_numbers: {
-    qno: "1022",
-    title: "Sum of Root To Leaf Binary Numbers",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 73.1,
-  },
-  maximum_average_subtree: {
-    qno: "1120",
-    title: "Maximum Average Subtree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.6,
-  },
-  maximum_difference_between_node_and_ancestor: {
-    qno: "1026",
-    title: "Maximum Difference Between Node and Ancestor",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 78.1,
-  },
-  recover_a_tree_from_preorder_traversal: {
-    qno: "1028",
-    title: "Recover a Tree From Preorder Traversal",
-    tags: ["String", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 74.9,
-  },
-  maximum_level_sum_of_a_binary_tree: {
-    qno: "1161",
-    title: "Maximum Level Sum of a Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.1,
-  },
-  insufficient_nodes_in_root_to_leaf_paths: {
-    qno: "1080",
-    title: "Insufficient Nodes in Root to Leaf Paths",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.7,
-  },
-  path_in_zigzag_labelled_binary_tree: {
-    qno: "1104",
-    title: "Path In Zigzag Labelled Binary Tree",
-    tags: ["Math", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.4,
-  },
-  delete_nodes_and_return_forest: {
-    qno: "1110",
-    title: "Delete Nodes And Return Forest",
-    tags: ["Array", "Hash Table", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.2,
-  },
-  lowest_common_ancestor_of_deepest_leaves: {
-    qno: "1123",
-    title: "Lowest Common Ancestor of Deepest Leaves",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.4,
-  },
-  "sum_of_nodes_with_even-valued_grandparent": {
-    qno: "1315",
-    title: "Sum of Nodes with Even-Valued Grandparent",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 85.5,
-  },
-  binary_tree_coloring_game: {
-    qno: "1145",
-    title: "Binary Tree Coloring Game",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52,
-  },
-  deepest_leaves_sum: {
-    qno: "1302",
-    title: "Deepest Leaves Sum",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 86.3,
-  },
-  validate_binary_tree_nodes: {
-    qno: "1361",
-    title: "Validate Binary Tree Nodes",
-    tags: [
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Graph",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.8,
-  },
-  find_elements_in_a_contaminated_binary_tree: {
-    qno: "1261",
-    title: "Find Elements in a Contaminated Binary Tree",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Design",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 77.4,
-  },
-  check_if_a_string_is_a_valid_sequence_from_root_to_leaves_path_in_a_binary_tree:
-    {
-      qno: "1430",
-      title:
-        "Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree",
-      tags: [
-        "Tree",
-        "Depth-First Search",
-        "Breadth-First Search",
-        "Binary Tree",
-      ],
-      default: "Binary Tree",
-      difficulty: "Medium",
-      language: "Java",
-      acceptance: 46.9,
-    },
-  delete_leaves_with_a_given_value: {
-    qno: "1325",
-    title: "Delete Leaves With a Given Value",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 77.5,
-  },
-  maximum_product_of_splitted_binary_tree: {
-    qno: "1339",
-    title: "Maximum Product of Splitted Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.7,
-  },
-  longest_zigzag_path_in_a_binary_tree: {
-    qno: "1372",
-    title: "Longest ZigZag Path in a Binary Tree",
-    tags: ["Dynamic Programming", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.9,
-  },
-  linked_list_in_binary_tree: {
-    qno: "1367",
-    title: "Linked List in Binary Tree",
-    tags: [
-      "Linked List",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.9,
-  },
-  find_a_corresponding_node_of_a_binary_tree_in_a_clone_of_that_tree: {
-    qno: "1379",
-    title: "Find a Corresponding Node of a Binary Tree in a Clone of That Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 85.8,
-  },
-  count_good_nodes_in_binary_tree: {
-    qno: "1448",
-    title: "Count Good Nodes in Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 73,
-  },
-  "pseudo-palindromic_paths_in_a_binary_tree": {
-    qno: "1457",
-    title: "Pseudo-Palindromic Paths in a Binary Tree",
-    tags: [
-      "Bit Manipulation",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.4,
-  },
-  find_all_the_lonely_nodes: {
-    qno: "1469",
-    title: "Find All The Lonely Nodes",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 83.7,
-  },
-  clone_binary_tree_with_random_pointer: {
-    qno: "1485",
-    title: "Clone Binary Tree With Random Pointer",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 80.6,
-  },
-  number_of_good_leaf_nodes_pairs: {
-    qno: "1530",
-    title: "Number of Good Leaf Nodes Pairs",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.7,
-  },
-  even_odd_tree: {
-    qno: "1609",
-    title: "Even Odd Tree",
-    tags: ["Tree", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.8,
-  },
-  build_binary_expression_tree_from_infix_expression: {
-    qno: "1597",
-    title: "Build Binary Expression Tree From Infix Expression",
-    tags: ["String", "Stack", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.5,
-  },
-  find_nearest_right_node_in_binary_tree: {
-    qno: "1602",
-    title: "Find Nearest Right Node in Binary Tree",
-    tags: ["Tree", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.5,
-  },
-  check_if_two_expression_trees_are_equivalent: {
-    qno: "1612",
-    title: "Check If Two Expression Trees are Equivalent",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Binary Tree",
-      "Counting",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71,
-  },
-  design_an_expression_tree_with_evaluate_function: {
-    qno: "1628",
-    title: "Design an Expression Tree With Evaluate Function",
-    tags: ["Array", "Math", "Stack", "Tree", "Design", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 82.6,
-  },
-  lowest_common_ancestor_of_a_binary_tree_ii: {
-    qno: "1644",
-    title: "Lowest Common Ancestor of a Binary Tree II",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.6,
-  },
-  correct_a_binary_tree: {
-    qno: "1660",
-    title: "Correct a Binary Tree",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.4,
-  },
-  change_the_root_of_a_binary_tree: {
-    qno: "1666",
-    title: "Change the Root of a Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74,
-  },
-  lowest_common_ancestor_of_a_binary_tree_iv: {
-    qno: "1676",
-    title: "Lowest Common Ancestor of a Binary Tree IV",
-    tags: ["Hash Table", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 78.5,
-  },
-  find_distance_in_a_binary_tree: {
-    qno: "1740",
-    title: "Find Distance in a Binary Tree",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 71.5,
-  },
-  merge_bsts_to_create_single_bst: {
-    qno: "1932",
-    title: "Merge BSTs to Create Single BST",
-    tags: [
-      "Hash Table",
-      "Binary Search",
-      "Tree",
-      "Depth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36.2,
-  },
-  count_nodes_equal_to_sum_of_descendants: {
-    qno: "1973",
-    title: "Count Nodes Equal to Sum of Descendants",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 76.9,
-  },
-  subtree_removal_game_with_fibonacci_tree: {
-    qno: "2005",
-    title: "Subtree Removal Game with Fibonacci Tree",
-    tags: ["Math", "Dynamic Programming", "Tree", "Binary Tree", "Game Theory"],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 58.9,
-  },
-  count_nodes_with_the_highest_score: {
-    qno: "2049",
-    title: "Count Nodes With the Highest Score",
-    tags: ["Array", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.5,
-  },
-  "step-by-step_directions_from_a_binary_tree_node_to_another": {
-    qno: "2096",
-    title: "Step-By-Step Directions From a Binary Tree Node to Another",
-    tags: ["String", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.9,
-  },
-  create_binary_tree_from_descriptions: {
-    qno: "2196",
-    title: "Create Binary Tree From Descriptions",
-    tags: ["Array", "Hash Table", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.7,
-  },
-  count_nodes_equal_to_average_of_subtree: {
-    qno: "2265",
-    title: "Count Nodes Equal to Average of Subtree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 86.3,
-  },
-  root_equals_sum_of_children: {
-    qno: "2236",
-    title: "Root Equals Sum of Children",
-    tags: ["Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 84.4,
-  },
-  minimum_flips_in_binary_tree_to_get_result: {
-    qno: "2313",
-    title: "Minimum Flips in Binary Tree to Get Result",
-    tags: ["Dynamic Programming", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 59.1,
-  },
-  evaluate_boolean_binary_tree: {
-    qno: "2331",
-    title: "Evaluate Boolean Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 82.9,
-  },
-  amount_of_time_for_binary_tree_to_be_infected: {
-    qno: "2385",
-    title: "Amount of Time for Binary Tree to Be Infected",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.7,
-  },
-  reverse_odd_levels_of_binary_tree: {
-    qno: "2415",
-    title: "Reverse Odd Levels of Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 77.8,
-  },
-  height_of_binary_tree_after_subtree_removal_queries: {
-    qno: "2458",
-    title: "Height of Binary Tree After Subtree Removal Queries",
-    tags: [
-      "Array",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.5,
-  },
-  minimum_number_of_operations_to_sort_a_binary_tree_by_level: {
-    qno: "2471",
-    title: "Minimum Number of Operations to Sort a Binary Tree by Level",
-    tags: ["Tree", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.9,
-  },
-  number_of_nodes_with_value_one: {
-    qno: "2445",
-    title: "Number of Nodes With Value One",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.8,
-  },
-  cycle_length_queries_in_a_tree: {
-    qno: "2509",
-    title: "Cycle Length Queries in a Tree",
-    tags: ["Array", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 56.1,
-  },
-  kth_largest_sum_in_a_binary_tree: {
-    qno: "2583",
-    title: "Kth Largest Sum in a Binary Tree",
-    tags: ["Tree", "Breadth-First Search", "Sorting", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.5,
-  },
-  cousins_in_binary_tree_ii: {
-    qno: "2641",
-    title: "Cousins in Binary Tree II",
-    tags: [
-      "Hash Table",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.7,
-  },
-  make_costs_of_paths_equal_in_a_binary_tree: {
-    qno: "2673",
-    title: "Make Costs of Paths Equal in a Binary Tree",
-    tags: ["Array", "Dynamic Programming", "Greedy", "Tree", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59,
-  },
-  extract_kth_character_from_the_rope_tree: {
-    qno: "2689",
-    title: "Extract Kth Character From The Rope Tree",
-    tags: ["Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 74.5,
-  },
-  is_array_a_preorder_of_some_‌binary_tree: {
-    qno: "2764",
-    title: "Is Array a Preorder of Some ‌Binary Tree",
-    tags: ["Stack", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.6,
-  },
-  height_of_special_binary_tree: {
-    qno: "2773",
-    title: "Height of Special Binary Tree",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.2,
-  },
-  count_nodes_that_are_great_enough: {
-    qno: "2792",
-    title: "Count Nodes That Are Great Enough",
-    tags: ["Divide and Conquer", "Tree", "Depth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 58.2,
-  },
-  find_the_level_of_tree_with_minimum_sum: {
-    qno: "3157",
-    title: "Find the Level of Tree with Minimum Sum",
-    tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
-    default: "Binary Tree",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.8,
-  },
-  implement_stack_using_queues: {
-    qno: "225",
-    title: "Implement Stack using Queues",
-    tags: ["Stack", "Design", "Queue"],
-    default: "Queue",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 64.3,
-  },
-  implement_queue_using_stacks: {
-    qno: "232",
-    title: "Implement Queue using Stacks",
-    tags: ["Stack", "Design", "Queue"],
-    default: "Queue",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 66.5,
-  },
-  moving_average_from_data_stream: {
-    qno: "346",
-    title: "Moving Average from Data Stream",
-    tags: ["Array", "Design", "Queue", "Data Stream"],
-    default: "Queue",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78.6,
-  },
-  design_snake_game: {
-    qno: "353",
-    title: "Design Snake Game",
-    tags: ["Array", "Hash Table", "Design", "Queue", "Simulation"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.8,
-  },
-  design_hit_counter: {
-    qno: "362",
-    title: "Design Hit Counter",
-    tags: ["Array", "Binary Search", "Design", "Queue", "Data Stream"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.7,
-  },
-  design_phone_directory: {
-    qno: "379",
-    title: "Design Phone Directory",
-    tags: ["Array", "Hash Table", "Linked List", "Design", "Queue"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.8,
-  },
-  first_unique_character_in_a_string: {
-    qno: "387",
-    title: "First Unique Character in a String",
-    tags: ["Hash Table", "String", "Queue", "Counting"],
-    default: "Queue",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 62.3,
-  },
-  dota2_senate: {
-    qno: "649",
-    title: "Dota2 Senate",
-    tags: ["String", "Greedy", "Queue"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.7,
-  },
-  design_circular_deque: {
-    qno: "641",
-    title: "Design Circular Deque",
-    tags: ["Array", "Linked List", "Design", "Queue"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57,
-  },
-  design_circular_queue: {
-    qno: "622",
-    title: "Design Circular Queue",
-    tags: ["Array", "Linked List", "Design", "Queue"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.5,
-  },
-  number_of_recent_calls: {
-    qno: "933",
-    title: "Number of Recent Calls",
-    tags: ["Design", "Queue", "Data Stream"],
-    default: "Queue",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 75.6,
-  },
-  stamping_the_sequence: {
-    qno: "936",
-    title: "Stamping The Sequence",
-    tags: ["String", "Stack", "Greedy", "Queue"],
-    default: "Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.5,
-  },
-  reveal_cards_in_increasing_order: {
-    qno: "950",
-    title: "Reveal Cards In Increasing Order",
-    tags: ["Array", "Queue", "Sorting", "Simulation"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 83,
-  },
-  first_unique_number: {
-    qno: "1429",
-    title: "First Unique Number",
-    tags: ["Array", "Hash Table", "Design", "Queue", "Data Stream"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.8,
-  },
-  product_of_the_last_k_numbers: {
-    qno: "1352",
-    title: "Product of the Last K Numbers",
-    tags: ["Array", "Math", "Design", "Queue", "Data Stream"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.6,
-  },
-  design_front_middle_back_queue: {
-    qno: "1670",
-    title: "Design Front Middle Back Queue",
-    tags: ["Array", "Linked List", "Design", "Queue", "Data Stream"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.4,
-  },
-  number_of_students_unable_to_eat_lunch: {
-    qno: "1700",
-    title: "Number of Students Unable to Eat Lunch",
-    tags: ["Array", "Stack", "Queue", "Simulation"],
-    default: "Queue",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78.2,
-  },
-  find_the_winner_of_the_circular_game: {
-    qno: "1823",
-    title: "Find the Winner of the Circular Game",
-    tags: ["Array", "Math", "Recursion", "Queue", "Simulation"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 80.7,
-  },
-  time_needed_to_buy_tickets: {
-    qno: "2073",
-    title: "Time Needed to Buy Tickets",
-    tags: ["Array", "Queue", "Simulation"],
-    default: "Queue",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 69.9,
-  },
-  number_of_people_aware_of_a_secret: {
-    qno: "2327",
-    title: "Number of People Aware of a Secret",
-    tags: ["Dynamic Programming", "Queue", "Simulation"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.9,
-  },
-  time_taken_to_cross_the_door: {
-    qno: "2534",
-    title: "Time Taken to Cross the Door",
-    tags: ["Array", "Queue", "Simulation"],
-    default: "Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 49.6,
-  },
-  find_consecutive_integers_from_a_data_stream: {
-    qno: "2526",
-    title: "Find Consecutive Integers from a Data Stream",
-    tags: ["Hash Table", "Design", "Queue", "Counting", "Data Stream"],
-    default: "Queue",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.3,
-  },
-  minimum_sum_of_values_by_dividing_array: {
-    qno: "3117",
-    title: "Minimum Sum of Values by Dividing Array",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Bit Manipulation",
-      "Segment Tree",
-      "Queue",
-    ],
-    default: "Queue",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 27.4,
-  },
-  nim_game: {
-    qno: "292",
-    title: "Nim Game",
-    tags: ["Math", "Brainteaser", "Game Theory"],
-    default: "Brainteaser",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 57,
-  },
-  bulb_switcher: {
-    qno: "319",
-    title: "Bulb Switcher",
-    tags: ["Math", "Brainteaser"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.9,
-  },
-  chalkboard_xor_game: {
-    qno: "810",
-    title: "Chalkboard XOR Game",
-    tags: ["Array", "Math", "Bit Manipulation", "Brainteaser", "Game Theory"],
-    default: "Brainteaser",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 60,
-  },
-  divisor_game: {
-    qno: "1025",
-    title: "Divisor Game",
-    tags: ["Math", "Dynamic Programming", "Brainteaser", "Game Theory"],
-    default: "Brainteaser",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 68.9,
-  },
-  moving_stones_until_consecutive: {
-    qno: "1033",
-    title: "Moving Stones Until Consecutive",
-    tags: ["Math", "Brainteaser"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.2,
-  },
-  last_moment_before_all_ants_fall_out_of_a_plank: {
-    qno: "1503",
-    title: "Last Moment Before All Ants Fall Out of a Plank",
-    tags: ["Array", "Brainteaser", "Simulation"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.5,
-  },
-  game_of_nim: {
-    qno: "1908",
-    title: "Game of Nim",
-    tags: [
-      "Array",
-      "Math",
-      "Dynamic Programming",
-      "Bit Manipulation",
-      "Brainteaser",
-      "Game Theory",
-    ],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.1,
-  },
-  longest_subarray_with_maximum_bitwise_and: {
-    qno: "2419",
-    title: "Longest Subarray With Maximum Bitwise AND",
-    tags: ["Array", "Bit Manipulation", "Brainteaser"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.5,
-  },
-  bitwise_xor_of_all_pairings: {
-    qno: "2425",
-    title: "Bitwise XOR of All Pairings",
-    tags: ["Array", "Bit Manipulation", "Brainteaser"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.1,
-  },
-  bitwise_or_of_all_subsequence_sums: {
-    qno: "2505",
-    title: "Bitwise OR of All Subsequence Sums",
-    tags: ["Array", "Math", "Bit Manipulation", "Brainteaser"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.7,
-  },
-  minimum_impossible_or: {
-    qno: "2568",
-    title: "Minimum Impossible OR",
-    tags: ["Array", "Bit Manipulation", "Brainteaser"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.5,
-  },
-  movement_of_robots: {
-    qno: "2731",
-    title: "Movement of Robots",
-    tags: ["Array", "Brainteaser", "Sorting", "Prefix Sum"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 28,
-  },
-  minimum_operations_to_make_the_integer_zero: {
-    qno: "2749",
-    title: "Minimum Operations to Make the Integer Zero",
-    tags: ["Bit Manipulation", "Brainteaser"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 29.7,
-  },
-  construct_the_longest_new_string: {
-    qno: "2745",
-    title: "Construct the Longest New String",
-    tags: ["Math", "Dynamic Programming", "Greedy", "Brainteaser"],
-    default: "Brainteaser",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.7,
-  },
-  ugly_number_ii: {
-    qno: "264",
-    title: "Ugly Number II",
-    tags: [
-      "Hash Table",
-      "Math",
-      "Dynamic Programming",
-      "Heap (Priority Queue)",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.3,
-  },
-  design_twitter: {
-    qno: "355",
-    title: "Design Twitter",
-    tags: ["Hash Table", "Linked List", "Design", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40,
-  },
-  rearrange_string_k_distance_apart: {
-    qno: "358",
-    title: "Rearrange String k Distance Apart",
-    tags: [
-      "Hash Table",
-      "String",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Counting",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.9,
-  },
-  find_k_pairs_with_smallest_sums: {
-    qno: "373",
-    title: "Find K Pairs with Smallest Sums",
-    tags: ["Array", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40,
-  },
-  strong_password_checker: {
-    qno: "420",
-    title: "Strong Password Checker",
-    tags: ["String", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 13.8,
-  },
-  ipo: {
-    qno: "502",
-    title: "IPO",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.2,
-  },
-  relative_ranks: {
-    qno: "506",
-    title: "Relative Ranks",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 71.8,
-  },
-  task_scheduler: {
-    qno: "621",
-    title: "Task Scheduler",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Counting",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.1,
-  },
-  course_schedule_iii: {
-    qno: "630",
-    title: "Course Schedule III",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.2,
-  },
-  design_search_autocomplete_system: {
-    qno: "642",
-    title: "Design Search Autocomplete System",
-    tags: [
-      "String",
-      "Design",
-      "Trie",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Data Stream",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 49,
-  },
-  split_array_into_consecutive_subsequences: {
-    qno: "659",
-    title: "Split Array into Consecutive Subsequences",
-    tags: ["Array", "Hash Table", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.1,
-  },
-  network_delay_time: {
-    qno: "743",
-    title: "Network Delay Time",
-    tags: [
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Shortest Path",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.3,
-  },
-  employee_free_time: {
-    qno: "759",
-    title: "Employee Free Time",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 72.2,
-  },
-  reorganize_string: {
-    qno: "767",
-    title: "Reorganize String",
-    tags: [
-      "Hash Table",
-      "String",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Counting",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.8,
-  },
-  cheapest_flights_within_k_stops: {
-    qno: "787",
-    title: "Cheapest Flights Within K Stops",
-    tags: [
-      "Dynamic Programming",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Shortest Path",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.4,
-  },
-  exam_room: {
-    qno: "855",
-    title: "Exam Room",
-    tags: ["Design", "Heap (Priority Queue)", "Ordered Set"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.5,
-  },
-  minimum_cost_to_hire_k_workers: {
-    qno: "857",
-    title: "Minimum Cost to Hire K Workers",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 63.4,
-  },
-  minimum_number_of_refueling_stops: {
-    qno: "871",
-    title: "Minimum Number of Refueling Stops",
-    tags: ["Array", "Dynamic Programming", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.1,
-  },
-  reachable_nodes_in_subdivided_graph: {
-    qno: "882",
-    title: "Reachable Nodes In Subdivided Graph",
-    tags: ["Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 50.5,
-  },
-  high_five: {
-    qno: "1086",
-    title: "High Five",
-    tags: ["Array", "Hash Table", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 74.5,
-  },
-  minimum_cost_to_connect_sticks: {
-    qno: "1167",
-    title: "Minimum Cost to Connect Sticks",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 70.1,
-  },
-  last_stone_weight: {
-    qno: "1046",
-    title: "Last Stone Weight",
-    tags: ["Array", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 65.5,
-  },
-  distant_barcodes: {
-    qno: "1054",
-    title: "Distant Barcodes",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Counting",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.6,
-  },
-  maximum_number_of_ones: {
-    qno: "1183",
-    title: "Maximum Number of Ones",
-    tags: ["Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 68,
-  },
-  minimum_time_to_build_blocks: {
-    qno: "1199",
-    title: "Minimum Time to Build Blocks",
-    tags: ["Array", "Math", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 45.8,
-  },
-  car_pooling: {
-    qno: "1094",
-    title: "Car Pooling",
-    tags: [
-      "Array",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Simulation",
-      "Prefix Sum",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56,
-  },
-  dinner_plate_stacks: {
-    qno: "1172",
-    title: "Dinner Plate Stacks",
-    tags: ["Hash Table", "Stack", "Design", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 32.7,
-  },
-  longest_happy_string: {
-    qno: "1405",
-    title: "Longest Happy String",
-    tags: ["String", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.4,
-  },
-  path_with_maximum_probability: {
-    qno: "1514",
-    title: "Path with Maximum Probability",
-    tags: ["Array", "Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.3,
-  },
-  search_suggestions_system: {
-    qno: "1268",
-    title: "Search Suggestions System",
-    tags: [
-      "Array",
-      "String",
-      "Binary Search",
-      "Trie",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.1,
-  },
-  reduce_array_size_to_the_half: {
-    qno: "1338",
-    title: "Reduce Array Size to The Half",
-    tags: ["Array", "Hash Table", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.9,
-  },
-  maximum_number_of_events_that_can_be_attended: {
-    qno: "1353",
-    title: "Maximum Number of Events That Can Be Attended",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 32.5,
-  },
-  construct_target_array_with_multiple_sums: {
-    qno: "1354",
-    title: "Construct Target Array With Multiple Sums",
-    tags: ["Array", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36.2,
-  },
-  pizza_with_3n_slices: {
-    qno: "1388",
-    title: "Pizza With 3n Slices",
-    tags: ["Array", "Dynamic Programming", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 51.9,
-  },
-  maximum_performance_of_a_team: {
-    qno: "1383",
-    title: "Maximum Performance of a Team",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 47.8,
-  },
-  diagonal_traverse_ii: {
-    qno: "1424",
-    title: "Diagonal Traverse II",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57,
-  },
-  maximum_product_of_two_elements_in_an_array: {
-    qno: "1464",
-    title: "Maximum Product of Two Elements in an Array",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 82.7,
-  },
-  avoid_flood_in_the_city: {
-    qno: "1488",
-    title: "Avoid Flood in The City",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Greedy",
-      "Heap (Priority Queue)",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 27,
-  },
-  design_a_file_sharing_system: {
-    qno: "1500",
-    title: "Design a File Sharing System",
-    tags: ["Hash Table", "Design", "Heap (Priority Queue)", "Data Stream"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.4,
-  },
-  find_servers_that_handled_most_number_of_requests: {
-    qno: "1606",
-    title: "Find Servers That Handled Most Number of Requests",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)", "Ordered Set"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.7,
-  },
-  furthest_building_you_can_reach: {
-    qno: "1642",
-    title: "Furthest Building You Can Reach",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.8,
-  },
-  "sell_diminishing-valued_colored_balls": {
-    qno: "1648",
-    title: "Sell Diminishing-Valued Colored Balls",
-    tags: [
-      "Array",
-      "Math",
-      "Binary Search",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 30,
-  },
-  stone_game_vi: {
-    qno: "1686",
-    title: "Stone Game VI",
-    tags: [
-      "Array",
-      "Math",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Game Theory",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.2,
-  },
-  minimize_deviation_in_array: {
-    qno: "1675",
-    title: "Minimize Deviation in Array",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)", "Ordered Set"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 54,
-  },
-  maximum_number_of_eaten_apples: {
-    qno: "1705",
-    title: "Maximum Number of Eaten Apples",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.2,
-  },
-  maximum_score_from_removing_stones: {
-    qno: "1753",
-    title: "Maximum Score From Removing Stones",
-    tags: ["Math", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.4,
-  },
-  car_fleet_ii: {
-    qno: "1776",
-    title: "Car Fleet II",
-    tags: [
-      "Array",
-      "Math",
-      "Stack",
-      "Heap (Priority Queue)",
-      "Monotonic Stack",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 55.2,
-  },
-  number_of_restricted_paths_from_first_to_last_node: {
-    qno: "1786",
-    title: "Number of Restricted Paths From First to Last Node",
-    tags: [
-      "Dynamic Programming",
-      "Graph",
-      "Topological Sort",
-      "Heap (Priority Queue)",
-      "Shortest Path",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.2,
-  },
-  maximum_average_pass_ratio: {
-    qno: "1792",
-    title: "Maximum Average Pass Ratio",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.9,
-  },
-  number_of_orders_in_the_backlog: {
-    qno: "1801",
-    title: "Number of Orders in the Backlog",
-    tags: ["Array", "Heap (Priority Queue)", "Simulation"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.8,
-  },
-  finding_mk_average: {
-    qno: "1825",
-    title: "Finding MK Average",
-    tags: [
-      "Design",
-      "Queue",
-      "Heap (Priority Queue)",
-      "Data Stream",
-      "Ordered Set",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 37.3,
-  },
-  seat_reservation_manager: {
-    qno: "1845",
-    title: "Seat Reservation Manager",
-    tags: ["Design", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.3,
-  },
-  minimum_path_cost_in_a_hidden_grid: {
-    qno: "1810",
-    title: "Minimum Path Cost in a Hidden Grid",
-    tags: [
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Interactive",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.4,
-  },
-  "single-threaded_cpu": {
-    qno: "1834",
-    title: "Single-Threaded CPU",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.6,
-  },
-  process_tasks_using_servers: {
-    qno: "1882",
-    title: "Process Tasks Using Servers",
-    tags: ["Array", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.3,
-  },
-  design_movie_rental_system: {
-    qno: "1912",
-    title: "Design Movie Rental System",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Design",
-      "Heap (Priority Queue)",
-      "Ordered Set",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36.6,
-  },
-  the_number_of_the_smallest_unoccupied_chair: {
-    qno: "1942",
-    title: "The Number of the Smallest Unoccupied Chair",
-    tags: ["Array", "Hash Table", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 42.1,
-  },
-  remove_stones_to_minimize_the_total: {
-    qno: "1962",
-    title: "Remove Stones to Minimize the Total",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.4,
-  },
-  average_height_of_buildings_in_each_segment: {
-    qno: "2015",
-    title: "Average Height of Buildings in Each Segment",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.4,
-  },
-  stock_price_fluctuation: {
-    qno: "2034",
-    title: "Stock Price Fluctuation",
-    tags: [
-      "Hash Table",
-      "Design",
-      "Heap (Priority Queue)",
-      "Data Stream",
-      "Ordered Set",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.7,
-  },
-  "two_best_non-overlapping_events": {
-    qno: "2054",
-    title: "Two Best Non-Overlapping Events",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.5,
-  },
-  find_subsequence_of_length_k_with_the_largest_sum: {
-    qno: "2099",
-    title: "Find Subsequence of Length K With the Largest Sum",
-    tags: ["Array", "Hash Table", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 43.7,
-  },
-  sequentially_ordinal_rank_tracker: {
-    qno: "2102",
-    title: "Sequentially Ordinal Rank Tracker",
-    tags: ["Design", "Heap (Priority Queue)", "Data Stream", "Ordered Set"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 64.6,
-  },
-  minimum_cost_to_reach_city_with_discounts: {
-    qno: "2093",
-    title: "Minimum Cost to Reach City With Discounts",
-    tags: ["Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56,
-  },
-  minimum_difference_in_sums_after_removal_of_elements: {
-    qno: "2163",
-    title: "Minimum Difference in Sums After Removal of Elements",
-    tags: ["Array", "Dynamic Programming", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 48,
-  },
-  construct_string_with_repeat_limit: {
-    qno: "2182",
-    title: "Construct String With Repeat Limit",
-    tags: [
-      "Hash Table",
-      "String",
-      "Greedy",
-      "Heap (Priority Queue)",
-      "Counting",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.2,
-  },
-  minimum_operations_to_halve_array_sum: {
-    qno: "2208",
-    title: "Minimum Operations to Halve Array Sum",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.7,
-  },
-  largest_number_after_digit_swaps_by_parity: {
-    qno: "2231",
-    title: "Largest Number After Digit Swaps by Parity",
-    tags: ["Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 61.7,
-  },
-  maximum_product_after_k_increments: {
-    qno: "2233",
-    title: "Maximum Product After K Increments",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.7,
-  },
-  maximum_total_importance_of_roads: {
-    qno: "2285",
-    title: "Maximum Total Importance of Roads",
-    tags: ["Greedy", "Graph", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.4,
-  },
-  minimum_amount_of_time_to_fill_cups: {
-    qno: "2335",
-    title: "Minimum Amount of Time to Fill Cups",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 57.8,
-  },
-  smallest_number_in_infinite_set: {
-    qno: "2336",
-    title: "Smallest Number in Infinite Set",
-    tags: ["Hash Table", "Design", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
+  range_addition: {
+    qno: "370",
+    title: "Range Addition",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 71.7,
-  },
-  minimum_sum_of_squared_difference: {
-    qno: "2333",
-    title: "Minimum Sum of Squared Difference",
-    tags: ["Array", "Math", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 25.4,
-  },
-  minimum_deletions_to_make_array_divisible: {
-    qno: "2344",
-    title: "Minimum Deletions to Make Array Divisible",
-    tags: [
-      "Array",
-      "Math",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Number Theory",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 56.1,
-  },
-  design_a_food_rating_system: {
-    qno: "2353",
-    title: "Design a Food Rating System",
-    tags: ["Hash Table", "Design", "Heap (Priority Queue)", "Ordered Set"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.2,
-  },
-  design_a_number_container_system: {
-    qno: "2349",
-    title: "Design a Number Container System",
-    tags: ["Hash Table", "Design", "Heap (Priority Queue)", "Ordered Set"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.8,
-  },
-  make_array_zero_by_subtracting_equal_amounts: {
-    qno: "2357",
-    title: "Make Array Zero by Subtracting Equal Amounts",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Simulation",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 72.4,
-  },
-  "find_the_k-sum_of_an_array": {
-    qno: "2386",
-    title: "Find the K-Sum of an Array",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.9,
-  },
-  max_sum_of_a_pair_with_equal_sum_of_digits: {
-    qno: "2342",
-    title: "Max Sum of a Pair With Equal Sum of Digits",
-    tags: ["Array", "Hash Table", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.1,
-  },
-  meeting_rooms_iii: {
-    qno: "2402",
-    title: "Meeting Rooms III",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Simulation",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.4,
-  },
-  longest_uploaded_prefix: {
-    qno: "2424",
-    title: "Longest Uploaded Prefix",
-    tags: [
-      "Binary Search",
-      "Union Find",
-      "Design",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Heap (Priority Queue)",
-      "Ordered Set",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.4,
-  },
-  most_popular_video_creator: {
-    qno: "2456",
-    title: "Most Popular Video Creator",
-    tags: ["Array", "Hash Table", "String", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.8,
-  },
-  next_greater_element_iv: {
-    qno: "2454",
-    title: "Next Greater Element IV",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Stack",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Monotonic Stack",
-    ],
-    default: "Monotonic Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.7,
-  },
-  maximum_star_sum_of_a_graph: {
-    qno: "2497",
-    title: "Maximum Star Sum of a Graph",
-    tags: ["Array", "Greedy", "Graph", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.4,
-  },
-  reward_top_k_students: {
-    qno: "2512",
-    title: "Reward Top K Students",
-    tags: ["Array", "Hash Table", "String", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.1,
-  },
-  minimum_cost_to_buy_apples: {
-    qno: "2473",
-    title: "Minimum Cost to Buy Apples",
-    tags: ["Array", "Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.9,
-  },
-  maximal_score_after_applying_k_operations: {
-    qno: "2530",
-    title: "Maximal Score After Applying K Operations",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.9,
-  },
-  maximum_subsequence_score: {
-    qno: "2542",
-    title: "Maximum Subsequence Score",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.7,
-  },
-  time_to_cross_a_bridge: {
-    qno: "2532",
-    title: "Time to Cross a Bridge",
-    tags: ["Array", "Heap (Priority Queue)", "Simulation"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.7,
-  },
-  "make_the_prefix_sum_non-negative": {
-    qno: "2599",
-    title: "Make the Prefix Sum Non-negative",
-    tags: ["Array", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.3,
-  },
-  design_graph_with_shortest_path_calculator: {
-    qno: "2642",
-    title: "Design Graph With Shortest Path Calculator",
-    tags: ["Graph", "Design", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 70.7,
-  },
-  put_marbles_in_bags: {
-    qno: "2551",
-    title: "Put Marbles in Bags",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 66.6,
-  },
-  minimum_cost_of_a_path_with_special_roads: {
-    qno: "2662",
-    title: "Minimum Cost of a Path With Special Roads",
-    tags: ["Array", "Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.7,
-  },
-  take_gifts_from_the_richest_pile: {
-    qno: "2558",
-    title: "Take Gifts From the Richest Pile",
-    tags: ["Array", "Heap (Priority Queue)", "Simulation"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 66.8,
-  },
-  find_score_of_an_array_after_marking_all_elements: {
-    qno: "2593",
-    title: "Find Score of an Array After Marking All Elements",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Simulation",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.4,
-  },
-  mice_and_cheese: {
-    qno: "2611",
-    title: "Mice and Cheese",
-    tags: ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.8,
-  },
-  modify_graph_edge_weights: {
-    qno: "2699",
-    title: "Modify Graph Edge Weights",
-    tags: ["Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 24.3,
-  },
-  find_shortest_path_with_k_hops: {
-    qno: "2714",
-    title: "Find Shortest Path with K Hops",
-    tags: ["Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.4,
-  },
-  find_the_closest_marked_node: {
-    qno: "2737",
-    title: "Find the Closest Marked Node",
-    tags: ["Array", "Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.1,
-  },
-  "maximum_elegance_of_a_k-length_subsequence": {
-    qno: "2813",
-    title: "Maximum Elegance of a K-Length Subsequence",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Stack",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 32.9,
-  },
-  find_building_where_alice_and_bob_can_meet: {
-    qno: "2940",
-    title: "Find Building Where Alice and Bob Can Meet",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Stack",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Heap (Priority Queue)",
-      "Monotonic Stack",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 35.3,
-  },
-  number_of_possible_sets_of_closing_branches: {
-    qno: "2959",
-    title: "Number of Possible Sets of Closing Branches",
-    tags: [
-      "Bit Manipulation",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Enumeration",
-      "Shortest Path",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 51,
-  },
-  find_number_of_coins_to_place_in_tree_nodes: {
-    qno: "2973",
-    title: "Find Number of Coins to Place in Tree Nodes",
-    tags: [
-      "Dynamic Programming",
-      "Tree",
-      "Depth-First Search",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36.6,
-  },
-  minimum_number_game: {
-    qno: "2974",
-    title: "Minimum Number Game",
-    tags: ["Array", "Sorting", "Heap (Priority Queue)", "Simulation"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 85.8,
-  },
-  earliest_second_to_mark_indices_ii: {
-    qno: "3049",
-    title: "Earliest Second to Mark Indices II",
-    tags: ["Array", "Binary Search", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 22.5,
-  },
-  mark_elements_on_array_by_performing_queries: {
-    qno: "3080",
-    title: "Mark Elements on Array by Performing Queries",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Simulation",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.1,
-  },
-  minimum_operations_to_exceed_threshold_value_ii: {
-    qno: "3066",
-    title: "Minimum Operations to Exceed Threshold Value II",
-    tags: ["Array", "Heap (Priority Queue)", "Simulation"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 27.5,
-  },
-  replace_question_marks_in_string_to_minimize_its_value: {
-    qno: "3081",
-    title: "Replace Question Marks in String to Minimize Its Value",
-    tags: [
-      "Hash Table",
-      "String",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Counting",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 27,
-  },
-  most_frequent_ids: {
-    qno: "3092",
-    title: "Most Frequent IDs",
-    tags: ["Array", "Hash Table", "Heap (Priority Queue)", "Ordered Set"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 42.4,
-  },
-  find_edges_in_shortest_paths: {
-    qno: "3123",
-    title: "Find Edges in Shortest Paths",
-    tags: [
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph",
-      "Heap (Priority Queue)",
-      "Shortest Path",
-    ],
-    default: "Heap (Priority Queue)",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 49.3,
-  },
-  minimum_time_to_visit_disappearing_nodes: {
-    qno: "3112",
-    title: "Minimum Time to Visit Disappearing Nodes",
-    tags: ["Array", "Graph", "Heap (Priority Queue)", "Shortest Path"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.2,
-  },
-  lexicographically_minimum_string_after_removing_stars: {
-    qno: "3170",
-    title: "Lexicographically Minimum String After Removing Stars",
-    tags: ["Hash Table", "String", "Stack", "Greedy", "Heap (Priority Queue)"],
-    default: "Heap (Priority Queue)",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 35.6,
-  },
-  max_consecutive_ones: {
-    qno: "485",
-    title: "Max Consecutive Ones",
-    tags: ["Array"],
-    default: "Array",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 59.7,
-  },
-  buildings_with_an_ocean_view: {
-    qno: "1762",
-    title: "Buildings With an Ocean View",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 79.9,
-  },
-  "maximum_subarray_min-product": {
-    qno: "1856",
-    title: "Maximum Subarray Min-Product",
-    tags: ["Array", "Stack", "Monotonic Stack", "Prefix Sum"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.1,
-  },
-  jump_game_viii: {
-    qno: "2297",
-    title: "Jump Game VIII",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Stack",
-      "Graph",
-      "Monotonic Stack",
-      "Shortest Path",
-    ],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 45.7,
-  },
-  maximum_of_minimum_values_in_all_subarrays: {
-    qno: "1950",
-    title: "Maximum of Minimum Values in All Subarrays",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.8,
-  },
-  the_number_of_weak_characters_in_the_game: {
-    qno: "1996",
-    title: "The Number of Weak Characters in the Game",
-    tags: ["Array", "Stack", "Greedy", "Sorting", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44,
-  },
-  "smallest_k-length_subsequence_with_occurrences_of_a_letter": {
-    qno: "2030",
-    title: "Smallest K-Length Subsequence With Occurrences of a Letter",
-    tags: ["String", "Stack", "Greedy", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.2,
-  },
-  sum_of_subarray_ranges: {
-    qno: "2104",
-    title: "Sum of Subarray Ranges",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.2,
-  },
-  sum_of_total_strength_of_wizards: {
-    qno: "2281",
-    title: "Sum of Total Strength of Wizards",
-    tags: ["Array", "Stack", "Monotonic Stack", "Prefix Sum"],
-    default: "Monotonic Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 27.9,
-  },
-  "steps_to_make_array_non-decreasing": {
-    qno: "2289",
-    title: "Steps to Make Array Non-decreasing",
-    tags: ["Array", "Linked List", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 21.9,
-  },
-  subarray_with_elements_greater_than_varying_threshold: {
-    qno: "2334",
-    title: "Subarray With Elements Greater Than Varying Threshold",
-    tags: ["Array", "Stack", "Union Find", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 42.8,
-  },
-  finding_the_number_of_visible_mountains: {
-    qno: "2345",
-    title: "Finding the Number of Visible Mountains",
-    tags: ["Array", "Stack", "Sorting", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38,
-  },
-  maximum_number_of_books_you_can_take: {
-    qno: "2355",
-    title: "Maximum Number of Books You Can Take",
-    tags: ["Array", "Dynamic Programming", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.5,
-  },
-  remove_nodes_from_linked_list: {
-    qno: "2487",
-    title: "Remove Nodes From Linked List",
-    tags: ["Linked List", "Stack", "Recursion", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.4,
-  },
-  maximum_sum_queries: {
-    qno: "2736",
-    title: "Maximum Sum Queries",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Stack",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Sorting",
-      "Monotonic Stack",
-    ],
-    default: "Monotonic Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 29.1,
-  },
-  apply_operations_to_maximize_score: {
-    qno: "2818",
-    title: "Apply Operations to Maximize Score",
-    tags: [
-      "Array",
-      "Math",
-      "Stack",
-      "Greedy",
-      "Monotonic Stack",
-      "Number Theory",
-    ],
-    default: "Monotonic Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 32.8,
-  },
-  maximal_range_that_each_element_is_maximum_in_it: {
-    qno: "2832",
-    title: "Maximal Range That Each Element Is Maximum in It",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 74.1,
-  },
-  beautiful_towers_ii: {
-    qno: "2866",
-    title: "Beautiful Towers II",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 34.7,
-  },
-  beautiful_towers_i: {
-    qno: "2865",
-    title: "Beautiful Towers I",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.5,
-  },
-  find_the_number_of_subarrays_where_boundary_elements_are_maximum: {
-    qno: "3113",
-    title: "Find the Number of Subarrays Where Boundary Elements Are Maximum",
-    tags: ["Array", "Binary Search", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 29.3,
-  },
-  maximum_array_hopping_score_i: {
-    qno: "3205",
-    title: "Maximum Array Hopping Score I",
-    tags: ["Array", "Dynamic Programming", "Stack", "Monotonic Stack"],
-    default: "Monotonic Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 89.2,
-  },
-  valid_parentheses: {
-    qno: "20",
-    title: "Valid Parentheses",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 40.7,
-  },
-  longest_valid_parentheses: {
-    qno: "32",
-    title: "Longest Valid Parentheses",
-    tags: ["String", "Dynamic Programming", "Stack"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 34.4,
-  },
-  simplify_path: {
-    qno: "71",
-    title: "Simplify Path",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.2,
-  },
-  largest_rectangle_in_histogram: {
-    qno: "84",
-    title: "Largest Rectangle in Histogram",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.9,
-  },
-  evaluate_reverse_polish_notation: {
-    qno: "150",
-    title: "Evaluate Reverse Polish Notation",
-    tags: ["Array", "Math", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52,
-  },
-  min_stack: {
-    qno: "155",
-    title: "Min Stack",
-    tags: ["Stack", "Design"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.5,
-  },
-  basic_calculator: {
-    qno: "224",
-    title: "Basic Calculator",
-    tags: ["Math", "String", "Stack", "Recursion"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.6,
-  },
-  basic_calculator_ii: {
-    qno: "227",
-    title: "Basic Calculator II",
-    tags: ["Math", "String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.9,
-  },
-  remove_duplicate_letters: {
-    qno: "316",
-    title: "Remove Duplicate Letters",
-    tags: ["String", "Stack", "Greedy", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.9,
-  },
-  nested_list_weight_sum_ii: {
-    qno: "364",
-    title: "Nested List Weight Sum II",
-    tags: ["Stack", "Depth-First Search", "Breadth-First Search"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65,
-  },
-  mini_parser: {
-    qno: "385",
-    title: "Mini Parser",
-    tags: ["String", "Stack", "Depth-First Search"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.4,
-  },
-  longest_absolute_file_path: {
-    qno: "388",
-    title: "Longest Absolute File Path",
-    tags: ["String", "Stack", "Depth-First Search"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.6,
-  },
-  decode_string: {
-    qno: "394",
-    title: "Decode String",
-    tags: ["String", "Stack", "Recursion"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.4,
-  },
-  remove_k_digits: {
-    qno: "402",
-    title: "Remove K Digits",
-    tags: ["String", "Stack", "Greedy", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33.7,
-  },
-  ternary_expression_parser: {
-    qno: "439",
-    title: "Ternary Expression Parser",
-    tags: ["String", "Stack", "Recursion"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61,
-  },
-  add_two_numbers_ii: {
-    qno: "445",
-    title: "Add Two Numbers II",
-    tags: ["Linked List", "Math", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.2,
-  },
-  "132_pattern": {
-    qno: "456",
-    title: "132 Pattern",
-    tags: ["Array", "Binary Search", "Stack", "Monotonic Stack", "Ordered Set"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33.8,
-  },
-  find_permutation: {
-    qno: "484",
-    title: "Find Permutation",
-    tags: ["Array", "String", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.9,
-  },
-  zuma_game: {
-    qno: "488",
-    title: "Zuma Game",
-    tags: [
-      "String",
-      "Dynamic Programming",
-      "Stack",
-      "Breadth-First Search",
-      "Memoization",
-    ],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 32.6,
-  },
-  next_greater_element_i: {
-    qno: "496",
-    title: "Next Greater Element I",
-    tags: ["Array", "Hash Table", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 72.5,
-  },
-  next_greater_element_ii: {
-    qno: "503",
-    title: "Next Greater Element II",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.2,
-  },
-  tag_validator: {
-    qno: "591",
-    title: "Tag Validator",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.8,
-  },
-  exclusive_time_of_functions: {
-    qno: "636",
-    title: "Exclusive Time of Functions",
-    tags: ["Array", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.2,
-  },
-  valid_parenthesis_string: {
-    qno: "678",
-    title: "Valid Parenthesis String",
-    tags: ["String", "Dynamic Programming", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.1,
-  },
-  baseball_game: {
-    qno: "682",
-    title: "Baseball Game",
-    tags: ["Array", "Stack", "Simulation"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 76.6,
-  },
-  number_of_atoms: {
-    qno: "726",
-    title: "Number of Atoms",
-    tags: ["Hash Table", "String", "Stack", "Sorting"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.1,
-  },
-  asteroid_collision: {
-    qno: "735",
-    title: "Asteroid Collision",
-    tags: ["Array", "Stack", "Simulation"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.5,
-  },
-  parse_lisp_expression: {
-    qno: "736",
-    title: "Parse Lisp Expression",
-    tags: ["Hash Table", "String", "Stack", "Recursion"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 51.9,
-  },
-  daily_temperatures: {
-    qno: "739",
-    title: "Daily Temperatures",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.1,
-  },
-  "n-ary_tree_preorder_traversal": {
-    qno: "589",
-    title: "N-ary Tree Preorder Traversal",
-    tags: ["Stack", "Tree", "Depth-First Search"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 75.6,
-  },
-  "n-ary_tree_postorder_traversal": {
-    qno: "590",
-    title: "N-ary Tree Postorder Traversal",
-    tags: ["Stack", "Tree", "Depth-First Search"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78,
-  },
-  max_chunks_to_make_sorted_ii: {
-    qno: "768",
-    title: "Max Chunks To Make Sorted II",
-    tags: ["Array", "Stack", "Greedy", "Sorting", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 53.3,
-  },
-  max_chunks_to_make_sorted: {
-    qno: "769",
-    title: "Max Chunks To Make Sorted",
-    tags: ["Array", "Stack", "Greedy", "Sorting", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.4,
-  },
-  basic_calculator_iv: {
-    qno: "770",
-    title: "Basic Calculator IV",
-    tags: ["Hash Table", "Math", "String", "Stack", "Recursion"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 55.6,
-  },
-  basic_calculator_iii: {
-    qno: "772",
-    title: "Basic Calculator III",
-    tags: ["Math", "String", "Stack", "Recursion"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 50.8,
-  },
-  car_fleet: {
-    qno: "853",
-    title: "Car Fleet",
-    tags: ["Array", "Stack", "Sorting", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.4,
-  },
-  score_of_parentheses: {
-    qno: "856",
-    title: "Score of Parentheses",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.1,
-  },
-  decoded_string_at_index: {
-    qno: "880",
-    title: "Decoded String at Index",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.5,
-  },
-  maximum_frequency_stack: {
-    qno: "895",
-    title: "Maximum Frequency Stack",
-    tags: ["Hash Table", "Stack", "Design", "Ordered Set"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 66.4,
-  },
-  online_stock_span: {
-    qno: "901",
-    title: "Online Stock Span",
-    tags: ["Stack", "Design", "Monotonic Stack", "Data Stream"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.1,
-  },
-  sum_of_subarray_minimums: {
-    qno: "907",
-    title: "Sum of Subarray Minimums",
-    tags: ["Array", "Dynamic Programming", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 37.3,
-  },
-  minimum_add_to_make_parentheses_valid: {
-    qno: "921",
-    title: "Minimum Add to Make Parentheses Valid",
-    tags: ["String", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75,
-  },
-  validate_stack_sequences: {
-    qno: "946",
-    title: "Validate Stack Sequences",
-    tags: ["Array", "Stack", "Simulation"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.5,
-  },
-  maximum_width_ramp: {
-    qno: "962",
-    title: "Maximum Width Ramp",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.3,
-  },
-  odd_even_jump: {
-    qno: "975",
-    title: "Odd Even Jump",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Stack",
-      "Monotonic Stack",
-      "Ordered Set",
-    ],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.1,
-  },
-  check_if_word_is_valid_after_substitutions: {
-    qno: "1003",
-    title: "Check If Word Is Valid After Substitutions",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.7,
-  },
-  clumsy_factorial: {
-    qno: "1006",
-    title: "Clumsy Factorial",
-    tags: ["Math", "Stack", "Simulation"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.4,
-  },
-  number_of_valid_subarrays: {
-    qno: "1063",
-    title: "Number of Valid Subarrays",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 79.1,
-  },
-  next_greater_node_in_linked_list: {
-    qno: "1019",
-    title: "Next Greater Node In Linked List",
-    tags: ["Array", "Linked List", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61,
-  },
-  remove_outermost_parentheses: {
-    qno: "1021",
-    title: "Remove Outermost Parentheses",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 83.1,
-  },
-  remove_all_adjacent_duplicates_in_string: {
-    qno: "1047",
-    title: "Remove All Adjacent Duplicates In String",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 69.8,
-  },
-  smallest_subsequence_of_distinct_characters: {
-    qno: "1081",
-    title: "Smallest Subsequence of Distinct Characters",
-    tags: ["String", "Stack", "Greedy", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61,
-  },
-  brace_expansion_ii: {
-    qno: "1096",
-    title: "Brace Expansion II",
-    tags: ["String", "Backtracking", "Stack", "Breadth-First Search"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 63.7,
-  },
-  parsing_a_boolean_expression: {
-    qno: "1106",
-    title: "Parsing A Boolean Expression",
-    tags: ["String", "Stack", "Recursion"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 59.5,
-  },
-  maximum_nesting_depth_of_two_valid_parentheses_strings: {
-    qno: "1111",
-    title: "Maximum Nesting Depth of Two Valid Parentheses Strings",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72,
-  },
-  "longest_well-performing_interval": {
-    qno: "1124",
-    title: "Longest Well-Performing Interval",
-    tags: ["Array", "Hash Table", "Stack", "Monotonic Stack", "Prefix Sum"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 35.1,
-  },
-  minimum_cost_tree_from_leaf_values: {
-    qno: "1130",
-    title: "Minimum Cost Tree From Leaf Values",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Stack",
-      "Greedy",
-      "Monotonic Stack",
-    ],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.7,
-  },
-  reverse_substrings_between_each_pair_of_parentheses: {
-    qno: "1190",
-    title: "Reverse Substrings Between Each Pair of Parentheses",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 66.5,
-  },
-  number_of_visible_people_in_a_queue: {
-    qno: "1944",
-    title: "Number of Visible People in a Queue",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 69.8,
-  },
-  remove_all_adjacent_duplicates_in_string_ii: {
-    qno: "1209",
-    title: "Remove All Adjacent Duplicates in String II",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58,
-  },
-  minimum_deletions_to_make_array_beautiful: {
-    qno: "2216",
-    title: "Minimum Deletions to Make Array Beautiful",
-    tags: ["Array", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.4,
-  },
-  minimum_remove_to_make_valid_parentheses: {
-    qno: "1249",
-    title: "Minimum Remove to Make Valid Parentheses",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69,
-  },
-  design_a_stack_with_increment_operation: {
-    qno: "1381",
-    title: "Design a Stack With Increment Operation",
-    tags: ["Array", "Stack", "Design"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 77.1,
-  },
-  build_an_array_with_stack_operations: {
-    qno: "1441",
-    title: "Build an Array With Stack Operations",
-    tags: ["Array", "Stack", "Simulation"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 79.9,
-  },
-  final_prices_with_a_special_discount_in_a_shop: {
-    qno: "1475",
-    title: "Final Prices With a Special Discount in a Shop",
-    tags: ["Array", "Stack", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 78,
-  },
-  minimum_number_of_increments_on_subarrays_to_form_a_target_array: {
-    qno: "1526",
-    title: "Minimum Number of Increments on Subarrays to Form a Target Array",
-    tags: [
-      "Array",
-      "Dynamic Programming",
-      "Stack",
-      "Greedy",
-      "Monotonic Stack",
-    ],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 69.8,
-  },
-  minimum_insertions_to_balance_a_parentheses_string: {
-    qno: "1541",
-    title: "Minimum Insertions to Balance a Parentheses String",
-    tags: ["String", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.6,
-  },
-  make_the_string_great: {
-    qno: "1544",
-    title: "Make The String Great",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 68.4,
-  },
-  crawler_log_folder: {
-    qno: "1598",
-    title: "Crawler Log Folder",
-    tags: ["Array", "String", "Stack"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 65.3,
-  },
-  maximum_nesting_depth_of_the_parentheses: {
-    qno: "1614",
-    title: "Maximum Nesting Depth of the Parentheses",
-    tags: ["String", "Stack"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 83.8,
-  },
-  minimum_deletions_to_make_string_balanced: {
-    qno: "1653",
-    title: "Minimum Deletions to Make String Balanced",
-    tags: ["String", "Dynamic Programming", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.7,
-  },
-  find_the_most_competitive_subsequence: {
-    qno: "1673",
-    title: "Find the Most Competitive Subsequence",
-    tags: ["Array", "Stack", "Greedy", "Monotonic Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.5,
-  },
-  maximum_score_from_removing_substrings: {
-    qno: "1717",
-    title: "Maximum Score From Removing Substrings",
-    tags: ["String", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.3,
-  },
-  design_most_recently_used_queue: {
-    qno: "1756",
-    title: "Design Most Recently Used Queue",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Stack",
-      "Design",
-      "Binary Indexed Tree",
-      "Ordered Set",
-    ],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.8,
-  },
-  minimum_cost_to_change_the_final_value_of_expression: {
-    qno: "1896",
-    title: "Minimum Cost to Change the Final Value of Expression",
-    tags: ["Math", "String", "Dynamic Programming", "Stack"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 54.1,
-  },
-  the_score_of_students_solving_math_expression: {
-    qno: "2019",
-    title: "The Score of Students Solving Math Expression",
-    tags: [
-      "Array",
-      "Math",
-      "String",
-      "Dynamic Programming",
-      "Stack",
-      "Memoization",
-    ],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 33.6,
-  },
-  check_if_a_parentheses_string_can_be_valid: {
-    qno: "2116",
-    title: "Check if a Parentheses String Can Be Valid",
-    tags: ["String", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 31.9,
-  },
-  "replace_non-coprime_numbers_in_array": {
-    qno: "2197",
-    title: "Replace Non-Coprime Numbers in Array",
-    tags: ["Array", "Math", "Stack", "Number Theory"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39,
-  },
-  count_collisions_on_a_road: {
-    qno: "2211",
-    title: "Count Collisions on a Road",
-    tags: ["String", "Stack", "Simulation"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.8,
-  },
-  design_video_sharing_platform: {
-    qno: "2254",
-    title: "Design Video Sharing Platform",
-    tags: ["Hash Table", "Stack", "Design", "Ordered Set"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 64.3,
-  },
-  construct_smallest_number_from_di_string: {
-    qno: "2375",
-    title: "Construct Smallest Number From DI String",
-    tags: ["String", "Backtracking", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 76,
-  },
-  removing_stars_from_a_string: {
-    qno: "2390",
-    title: "Removing Stars From a String",
-    tags: ["String", "Stack", "Simulation"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 75.6,
-  },
-  using_a_robot_to_print_the_lexicographically_smallest_string: {
-    qno: "2434",
-    title: "Using a Robot to Print the Lexicographically Smallest String",
-    tags: ["Hash Table", "String", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.9,
-  },
-  minimum_time_to_complete_all_tasks: {
-    qno: "2589",
-    title: "Minimum Time to Complete All Tasks",
-    tags: ["Array", "Binary Search", "Stack", "Greedy", "Sorting"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39.2,
-  },
-  minimum_additions_to_make_valid_string: {
-    qno: "2645",
-    title: "Minimum Additions to Make Valid String",
-    tags: ["String", "Dynamic Programming", "Stack", "Greedy"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.5,
-  },
-  minimum_string_length_after_removing_substrings: {
-    qno: "2696",
-    title: "Minimum String Length After Removing Substrings",
-    tags: ["String", "Stack", "Simulation"],
-    default: "Stack",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 69.5,
-  },
-  robot_collisions: {
-    qno: "2751",
-    title: "Robot Collisions",
-    tags: ["Array", "Stack", "Sorting", "Simulation"],
-    default: "Stack",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.8,
-  },
-  double_a_number_represented_as_a_linked_list: {
-    qno: "2816",
-    title: "Double a Number Represented as a Linked List",
-    tags: ["Linked List", "Math", "Stack"],
-    default: "Stack",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.6,
-  },
-  count_submatrices_with_equal_frequency_of_x_and_y: {
-    qno: "3212",
-    title: "Count Submatrices With Equal Frequency of X and Y",
-    tags: ["Array", "Matrix", "Prefix Sum"],
-    default: "Matrix",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.4,
-  },
-};
-// existing
-
-const obj1 = {
-  median_of_two_sorted_arrays: {
-    qno: "4",
-    title: "Median of Two Sorted Arrays",
-    tags: ["Array", "Binary Search", "Divide and Conquer"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.7,
-  },
-  search_in_rotated_sorted_array: {
-    qno: "33",
-    title: "Search in Rotated Sorted Array",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.1,
-  },
-  find_first_and_last_position_of_element_in_sorted_array: {
-    qno: "34",
-    title: "Find First and Last Position of Element in Sorted Array",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.7,
-  },
-  search_insert_position: {
-    qno: "35",
-    title: "Search Insert Position",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 46.5,
-  },
-  "sqrt(x)": {
-    qno: "69",
-    title: "Sqrt(x)",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 39.1,
-  },
-  search_a_2d_matrix: {
-    qno: "74",
-    title: "Search a 2D Matrix",
-    tags: ["Array", "Binary Search", "Matrix"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.5,
-  },
-  search_in_rotated_sorted_array_ii: {
-    qno: "81",
-    title: "Search in Rotated Sorted Array II",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 37.9,
-  },
-  find_minimum_in_rotated_sorted_array: {
-    qno: "153",
-    title: "Find Minimum in Rotated Sorted Array",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.8,
-  },
-  find_minimum_in_rotated_sorted_array_ii: {
-    qno: "154",
-    title: "Find Minimum in Rotated Sorted Array II",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 43.7,
-  },
-  find_peak_element: {
-    qno: "162",
-    title: "Find Peak Element",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46,
-  },
-  "two_sum_ii_-_input_array_is_sorted": {
-    qno: "167",
-    title: "Two Sum II - Input Array Is Sorted",
-    tags: ["Array", "Two Pointers", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.7,
-  },
-  minimum_size_subarray_sum: {
-    qno: "209",
-    title: "Minimum Size Subarray Sum",
-    tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.4,
-  },
-  count_complete_tree_nodes: {
-    qno: "222",
-    title: "Count Complete Tree Nodes",
-    tags: ["Binary Search", "Bit Manipulation", "Tree", "Binary Tree"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 66.2,
-  },
-  search_a_2d_matrix_ii: {
-    qno: "240",
-    title: "Search a 2D Matrix II",
-    tags: ["Array", "Binary Search", "Divide and Conquer", "Matrix"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 53.1,
-  },
-  "3sum_smaller": {
-    qno: "259",
-    title: "3Sum Smaller",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.8,
-  },
-  missing_number: {
-    qno: "268",
-    title: "Missing Number",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Math",
-      "Binary Search",
-      "Bit Manipulation",
-      "Sorting",
-    ],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 67.4,
-  },
-  closest_binary_search_tree_value: {
-    qno: "270",
-    title: "Closest Binary Search Tree Value",
-    tags: [
-      "Binary Search",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 51.4,
-  },
-  "h-index_ii": {
-    qno: "275",
-    title: "H-Index II",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.3,
-  },
-  first_bad_version: {
-    qno: "278",
-    title: "First Bad Version",
-    tags: ["Binary Search", "Interactive"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 44.6,
-  },
-  find_the_duplicate_number: {
-    qno: "287",
-    title: "Find the Duplicate Number",
-    tags: ["Array", "Two Pointers", "Binary Search", "Bit Manipulation"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 61.1,
-  },
-  longest_increasing_subsequence: {
-    qno: "300",
-    title: "Longest Increasing Subsequence",
-    tags: ["Array", "Binary Search", "Dynamic Programming"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.8,
-  },
-  smallest_rectangle_enclosing_black_pixels: {
-    qno: "302",
-    title: "Smallest Rectangle Enclosing Black Pixels",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Matrix",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 59,
-  },
-  count_of_smaller_numbers_after_self: {
-    qno: "315",
-    title: "Count of Smaller Numbers After Self",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 42.5,
-  },
-  count_of_range_sum: {
-    qno: "327",
-    title: "Count of Range Sum",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36,
-  },
-  intersection_of_two_arrays: {
-    qno: "349",
-    title: "Intersection of Two Arrays",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 74.8,
-  },
-  intersection_of_two_arrays_ii: {
-    qno: "350",
-    title: "Intersection of Two Arrays II",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 58.5,
-  },
-  data_stream_as_disjoint_intervals: {
-    qno: "352",
-    title: "Data Stream as Disjoint Intervals",
-    tags: ["Binary Search", "Design", "Ordered Set"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 60.1,
-  },
-  russian_doll_envelopes: {
-    qno: "354",
-    title: "Russian Doll Envelopes",
-    tags: ["Array", "Binary Search", "Dynamic Programming", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 37.1,
-  },
-  design_hit_counter: {
-    qno: "362",
-    title: "Design Hit Counter",
-    tags: ["Array", "Binary Search", "Design", "Queue", "Data Stream"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.7,
-  },
-  max_sum_of_rectangle_no_larger_than_k: {
-    qno: "363",
-    title: "Max Sum of Rectangle No Larger Than K",
-    tags: ["Array", "Binary Search", "Matrix", "Prefix Sum", "Ordered Set"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.2,
-  },
-  valid_perfect_square: {
-    qno: "367",
-    title: "Valid Perfect Square",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 43.8,
-  },
-  guess_number_higher_or_lower: {
-    qno: "374",
-    title: "Guess Number Higher or Lower",
-    tags: ["Binary Search", "Interactive"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 53.8,
-  },
-  kth_smallest_element_in_a_sorted_matrix: {
-    qno: "378",
-    title: "Kth Smallest Element in a Sorted Matrix",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62.6,
-  },
-  nth_digit: {
-    qno: "400",
-    title: "Nth Digit",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 35,
   },
   split_array_largest_sum: {
     qno: "410",
@@ -11514,193 +16779,73 @@ const obj1 = {
       "Greedy",
       "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 55.8,
   },
-  find_right_interval: {
-    qno: "436",
-    title: "Find Right Interval",
-    tags: ["Array", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  widest_pair_of_indices_with_equal_range_sum: {
+    qno: "1983",
+    title: "Widest Pair of Indices With Equal Range Sum",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 52.4,
+    acceptance: 53.4,
   },
-  arranging_coins: {
-    qno: "441",
-    title: "Arranging Coins",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 46.7,
-  },
-  "132_pattern": {
-    qno: "456",
-    title: "132 Pattern",
-    tags: ["Array", "Binary Search", "Stack", "Monotonic Stack", "Ordered Set"],
-    default: "Binary Search",
+  continuous_subarray_sum: {
+    qno: "523",
+    title: "Continuous Subarray Sum",
+    tags: ["Array", "Hash Table", "Math", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 33.8,
+    acceptance: 30.3,
   },
-  heaters: {
-    qno: "475",
-    title: "Heaters",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  contiguous_array: {
+    qno: "525",
+    title: "Contiguous Array",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 38.2,
+    acceptance: 49,
   },
-  smallest_good_base: {
-    qno: "483",
-    title: "Smallest Good Base",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
+  split_array_with_equal_sum: {
+    qno: "548",
+    title: "Split Array with Equal Sum",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 41,
+    acceptance: 50.1,
   },
-  reverse_pairs: {
-    qno: "493",
-    title: "Reverse Pairs",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.8,
-  },
-  count_subarrays_with_more_ones_than_zeros: {
-    qno: "2031",
-    title: "Count Subarrays With More Ones Than Zeros",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
+  subarray_sum_equals_k: {
+    qno: "560",
+    title: "Subarray Sum Equals K",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 52.1,
-  },
-  "k-diff_pairs_in_an_array": {
-    qno: "532",
-    title: "K-diff Pairs in an Array",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.1,
-  },
-  single_element_in_a_sorted_array: {
-    qno: "540",
-    title: "Single Element in a Sorted Array",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.2,
-  },
-  valid_triangle_number: {
-    qno: "611",
-    title: "Valid Triangle Number",
-    tags: ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 51.3,
-  },
-  sum_of_square_numbers: {
-    qno: "633",
-    title: "Sum of Square Numbers",
-    tags: ["Math", "Two Pointers", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.6,
+    acceptance: 43.8,
   },
   maximum_average_subarray_ii: {
     qno: "644",
     title: "Maximum Average Subarray II",
     tags: ["Array", "Binary Search", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 36.8,
   },
-  find_k_closest_elements: {
-    qno: "658",
-    title: "Find K Closest Elements",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Sliding Window",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
+  find_pivot_index: {
+    qno: "724",
+    title: "Find Pivot Index",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Easy",
     language: "Java",
-    acceptance: 47.6,
-  },
-  kth_smallest_number_in_multiplication_table: {
-    qno: "668",
-    title: "Kth Smallest Number in Multiplication Table",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 51.8,
-  },
-  maximum_length_of_repeated_subarray: {
-    qno: "718",
-    title: "Maximum Length of Repeated Subarray",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sliding Window",
-      "Rolling Hash",
-      "Hash Function",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 50.9,
-  },
-  "find_k-th_smallest_pair_distance": {
-    qno: "719",
-    title: "Find K-th Smallest Pair Distance",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.3,
-  },
-  my_calendar_i: {
-    qno: "729",
-    title: "My Calendar I",
-    tags: ["Array", "Binary Search", "Design", "Segment Tree", "Ordered Set"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 56.6,
+    acceptance: 58.1,
   },
   my_calendar_ii: {
     qno: "731",
@@ -11713,7 +16858,7 @@ const obj1 = {
       "Prefix Sum",
       "Ordered Set",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 55.6,
@@ -11728,140 +16873,37 @@ const obj1 = {
       "Prefix Sum",
       "Ordered Set",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 71.7,
   },
-  find_smallest_letter_greater_than_target: {
-    qno: "744",
-    title: "Find Smallest Letter Greater Than Target",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 52.4,
-  },
-  reach_a_number: {
-    qno: "754",
-    title: "Reach a Number",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.2,
-  },
-  search_in_a_sorted_array_of_unknown_size: {
-    qno: "702",
-    title: "Search in a Sorted Array of Unknown Size",
-    tags: ["Array", "Binary Search", "Interactive"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 72.2,
-  },
-  minimize_max_distance_to_gas_station: {
-    qno: "774",
-    title: "Minimize Max Distance to Gas Station",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  smallest_rotation_with_highest_score: {
+    qno: "798",
+    title: "Smallest Rotation with Highest Score",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 52.4,
+    acceptance: 51.4,
   },
-  binary_search: {
-    qno: "704",
-    title: "Binary Search",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 57.9,
-  },
-  swim_in_rising_water: {
-    qno: "778",
-    title: "Swim in Rising Water",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 61.1,
-  },
-  "k-th_smallest_prime_fraction": {
-    qno: "786",
-    title: "K-th Smallest Prime Fraction",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Binary Search",
+  largest_sum_of_averages: {
+    qno: "813",
+    title: "Largest Sum of Averages",
+    tags: ["Array", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 68.1,
+    acceptance: 53.6,
   },
-  number_of_matching_subsequences: {
-    qno: "792",
-    title: "Number of Matching Subsequences",
-    tags: [
-      "Array",
-      "Hash Table",
-      "String",
-      "Binary Search",
-      "Dynamic Programming",
-      "Trie",
-      "Sorting",
-    ],
-    default: "Binary Search",
+  shifting_letters: {
+    qno: "848",
+    title: "Shifting Letters",
+    tags: ["Array", "String", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 50.9,
-  },
-  preimage_size_of_factorial_zeroes_function: {
-    qno: "793",
-    title: "Preimage Size of Factorial Zeroes Function",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.7,
-  },
-  friends_of_appropriate_ages: {
-    qno: "825",
-    title: "Friends Of Appropriate Ages",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 47.8,
-  },
-  most_profit_assigning_work: {
-    qno: "826",
-    title: "Most Profit Assigning Work",
-    tags: ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.9,
-  },
-  peak_index_in_a_mountain_array: {
-    qno: "852",
-    title: "Peak Index in a Mountain Array",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68.3,
+    acceptance: 44.8,
   },
   shortest_subarray_with_sum_at_least_k: {
     qno: "862",
@@ -11875,50 +16917,16 @@ const obj1 = {
       "Prefix Sum",
       "Monotonic Queue",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 26.1,
-  },
-  random_pick_with_blacklist: {
-    qno: "710",
-    title: "Random Pick with Blacklist",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Math",
-      "Binary Search",
-      "Sorting",
-      "Randomized",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 33.5,
-  },
-  koko_eating_bananas: {
-    qno: "875",
-    title: "Koko Eating Bananas",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 48.5,
-  },
-  nth_magical_number: {
-    qno: "878",
-    title: "Nth Magical Number",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 35.4,
   },
   random_pick_with_weight: {
     qno: "528",
     title: "Random Pick with Weight",
     tags: ["Array", "Math", "Binary Search", "Prefix Sum", "Randomized"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 47,
@@ -11935,329 +16943,154 @@ const obj1 = {
       "Ordered Set",
       "Randomized",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 40.1,
   },
-  super_egg_drop: {
-    qno: "887",
-    title: "Super Egg Drop",
-    tags: ["Math", "Binary Search", "Dynamic Programming"],
-    default: "Binary Search",
+  valid_permutations_for_di_sequence: {
+    qno: "903",
+    title: "Valid Permutations for DI Sequence",
+    tags: ["String", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 27.8,
+    acceptance: 57.2,
   },
-  fair_candy_swap: {
-    qno: "888",
-    title: "Fair Candy Swap",
-    tags: ["Array", "Hash Table", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Easy",
+  binary_subarrays_with_sum: {
+    qno: "930",
+    title: "Binary Subarrays With Sum",
+    tags: ["Array", "Hash Table", "Sliding Window", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
     language: "Java",
-    acceptance: 61.9,
+    acceptance: 63.2,
   },
-  numbers_at_most_n_given_digit_set: {
-    qno: "902",
-    title: "Numbers At Most N Given Digit Set",
-    tags: ["Array", "Math", "String", "Binary Search", "Dynamic Programming"],
-    default: "Binary Search",
+  subarray_sums_divisible_by_k: {
+    qno: "974",
+    title: "Subarray Sums Divisible by K",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 55.5,
+  },
+  minimum_number_of_k_consecutive_bit_flips: {
+    qno: "995",
+    title: "Minimum Number of K Consecutive Bit Flips",
+    tags: [
+      "Array",
+      "Bit Manipulation",
+      "Queue",
+      "Sliding Window",
+      "Prefix Sum",
+    ],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 42.6,
+    acceptance: 62.8,
   },
-  online_election: {
-    qno: "911",
-    title: "Online Election",
-    tags: ["Array", "Hash Table", "Binary Search", "Design"],
-    default: "Binary Search",
-    difficulty: "Medium",
+  minimum_cost_to_merge_stones: {
+    qno: "1000",
+    title: "Minimum Cost to Merge Stones",
+    tags: ["Array", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
     language: "Java",
-    acceptance: 52.1,
-  },
-  "time_based_key-value_store": {
-    qno: "981",
-    title: "Time Based Key-Value Store",
-    tags: ["Hash Table", "String", "Binary Search", "Design"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.3,
+    acceptance: 43.2,
   },
   max_consecutive_ones_iii: {
     qno: "1004",
     title: "Max Consecutive Ones III",
     tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 63.5,
   },
-  capacity_to_ship_packages_within_d_days: {
-    qno: "1011",
-    title: "Capacity To Ship Packages Within D Days",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
+  number_of_submatrices_that_sum_to_target: {
+    qno: "1074",
+    title: "Number of Submatrices That Sum to Target",
+    tags: ["Array", "Hash Table", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
     language: "Java",
-    acceptance: 69.9,
+    acceptance: 74.4,
   },
-  missing_element_in_sorted_array: {
-    qno: "1060",
-    title: "Missing Element in Sorted Array",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 57.2,
-  },
-  longest_repeating_substring: {
-    qno: "1062",
-    title: "Longest Repeating Substring",
-    tags: [
-      "String",
-      "Binary Search",
-      "Dynamic Programming",
-      "Rolling Hash",
-      "Suffix Array",
-      "Hash Function",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.9,
-  },
-  fixed_point: {
-    qno: "1064",
-    title: "Fixed Point",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 64.1,
-  },
-  two_sum_less_than_k: {
-    qno: "1099",
-    title: "Two Sum Less Than K",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 61.8,
-  },
-  longest_arithmetic_subsequence: {
-    qno: "1027",
-    title: "Longest Arithmetic Subsequence",
-    tags: ["Array", "Hash Table", "Binary Search", "Dynamic Programming"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.1,
-  },
-  path_with_maximum_minimum_value: {
-    qno: "1102",
-    title: "Path With Maximum Minimum Value",
+  car_pooling: {
+    qno: "1094",
+    title: "Car Pooling",
     tags: [
       "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
+      "Sorting",
       "Heap (Priority Queue)",
-      "Matrix",
+      "Simulation",
+      "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 53.7,
+    acceptance: 56,
   },
-  check_if_a_number_is_majority_element_in_a_sorted_array: {
-    qno: "1150",
-    title: "Check If a Number Is Majority Element in a Sorted Array",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 58.9,
-  },
-  longest_duplicate_substring: {
-    qno: "1044",
-    title: "Longest Duplicate Substring",
-    tags: [
-      "String",
-      "Binary Search",
-      "Sliding Window",
-      "Rolling Hash",
-      "Suffix Array",
-      "Hash Function",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.6,
-  },
-  shortest_distance_to_target_color: {
-    qno: "1182",
-    title: "Shortest Distance to Target Color",
-    tags: ["Array", "Binary Search", "Dynamic Programming"],
-    default: "Binary Search",
+  corporate_flight_bookings: {
+    qno: "1109",
+    title: "Corporate Flight Bookings",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 55.4,
+    acceptance: 62.2,
   },
-  find_smallest_common_element_in_all_rows: {
-    qno: "1198",
-    title: "Find Smallest Common Element in All Rows",
-    tags: ["Array", "Hash Table", "Binary Search", "Matrix", "Counting"],
-    default: "Binary Search",
+  "longest_well-performing_interval": {
+    qno: "1124",
+    title: "Longest Well-Performing Interval",
+    tags: ["Array", "Hash Table", "Stack", "Monotonic Stack", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 76.5,
+    acceptance: 35.2,
   },
-  intersection_of_three_sorted_arrays: {
-    qno: "1213",
-    title: "Intersection of Three Sorted Arrays",
-    tags: ["Array", "Hash Table", "Binary Search", "Counting"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 79.8,
-  },
-  two_sum_bsts: {
-    qno: "1214",
-    title: "Two Sum BSTs",
-    tags: [
-      "Two Pointers",
-      "Binary Search",
-      "Stack",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search",
+  stone_game_ii: {
+    qno: "1140",
+    title: "Stone Game II",
+    tags: ["Array", "Math", "Dynamic Programming", "Prefix Sum", "Game Theory"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 67.2,
+    acceptance: 67.5,
   },
-  find_in_mountain_array: {
-    qno: "1095",
-    title: "Find in Mountain Array",
-    tags: ["Array", "Binary Search", "Interactive"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.3,
-  },
-  divide_chocolate: {
-    qno: "1231",
-    title: "Divide Chocolate",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 58.8,
-  },
-  sum_of_mutated_array_closest_to_target: {
-    qno: "1300",
-    title: "Sum of Mutated Array Closest to Target",
-    tags: ["Array", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  matrix_block_sum: {
+    qno: "1314",
+    title: "Matrix Block Sum",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 44.5,
+    acceptance: 75.5,
   },
-  snapshot_array: {
-    qno: "1146",
-    title: "Snapshot Array",
-    tags: ["Array", "Hash Table", "Binary Search", "Design"],
-    default: "Binary Search",
+  can_make_palindrome_from_substring: {
+    qno: "1177",
+    title: "Can Make Palindrome from Substring",
+    tags: ["Array", "Hash Table", "String", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 36.9,
+    acceptance: 39.2,
   },
-  online_majority_element_in_subarray: {
-    qno: "1157",
-    title: "Online Majority Element In Subarray",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Design",
-      "Binary Indexed Tree",
-      "Segment Tree",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 41.8,
-  },
-  compare_strings_by_frequency_of_the_smallest_character: {
-    qno: "1170",
-    title: "Compare Strings by Frequency of the Smallest Character",
-    tags: ["Array", "Hash Table", "String", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  largest_magic_square: {
+    qno: "1895",
+    title: "Largest Magic Square",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 62.3,
-  },
-  make_array_strictly_increasing: {
-    qno: "1187",
-    title: "Make Array Strictly Increasing",
-    tags: ["Array", "Binary Search", "Dynamic Programming", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 58.2,
-  },
-  range_frequency_queries: {
-    qno: "2080",
-    title: "Range Frequency Queries",
-    tags: ["Array", "Hash Table", "Binary Search", "Design", "Segment Tree"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.1,
-  },
-  minimum_garden_perimeter_to_collect_enough_apples: {
-    qno: "1954",
-    title: "Minimum Garden Perimeter to Collect Enough Apples",
-    tags: ["Math", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.4,
-  },
-  kth_ancestor_of_a_tree_node: {
-    qno: "1483",
-    title: "Kth Ancestor of a Tree Node",
-    tags: [
-      "Binary Search",
-      "Dynamic Programming",
-      "Tree",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Design",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 34.8,
-  },
-  ugly_number_iii: {
-    qno: "1201",
-    title: "Ugly Number III",
-    tags: ["Math", "Binary Search", "Combinatorics", "Number Theory"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 29.7,
+    acceptance: 52.5,
   },
   get_equal_substrings_within_budget: {
     qno: "1208",
     title: "Get Equal Substrings Within Budget",
     tags: ["String", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 58.3,
@@ -12266,78 +17099,17 @@ const obj1 = {
     qno: "1862",
     title: "Sum of Floored Pairs",
     tags: ["Array", "Math", "Binary Search", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 28.8,
   },
-  maximum_candies_allocated_to_k_children: {
-    qno: "2226",
-    title: "Maximum Candies Allocated to K Children",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.2,
-  },
-  maximum_profit_in_job_scheduling: {
-    qno: "1235",
-    title: "Maximum Profit in Job Scheduling",
-    tags: ["Array", "Binary Search", "Dynamic Programming", "Sorting"],
-    default: "Binary Search",
+  maximum_value_of_k_coins_from_piles: {
+    qno: "2218",
+    title: "Maximum Value of K Coins From Piles",
+    tags: ["Array", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
-    language: "Java",
-    acceptance: 54.4,
-  },
-  find_positive_integer_solution_for_a_given_equation: {
-    qno: "1237",
-    title: "Find Positive Integer Solution for a Given Equation",
-    tags: ["Math", "Two Pointers", "Binary Search", "Interactive"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 69.6,
-  },
-  leftmost_column_with_at_least_a_one: {
-    qno: "1428",
-    title: "Leftmost Column with at Least a One",
-    tags: ["Array", "Binary Search", "Matrix", "Interactive"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 54.5,
-  },
-  maximum_font_to_fit_a_sentence_in_a_screen: {
-    qno: "1618",
-    title: "Maximum Font to Fit a Sentence in a Screen",
-    tags: ["Array", "String", "Binary Search", "Interactive"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 60.9,
-  },
-  search_suggestions_system: {
-    qno: "1268",
-    title: "Search Suggestions System",
-    tags: [
-      "Array",
-      "String",
-      "Binary Search",
-      "Trie",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 65.1,
-  },
-  find_the_smallest_divisor_given_a_threshold: {
-    qno: "1283",
-    title: "Find the Smallest Divisor Given a Threshold",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
     language: "Java",
     acceptance: 60.6,
   },
@@ -12346,255 +17118,127 @@ const obj1 = {
     title:
       "Maximum Side Length of a Square with Sum Less than or Equal to Threshold",
     tags: ["Array", "Binary Search", "Matrix", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 53.5,
   },
-  the_k_weakest_rows_in_a_matrix: {
-    qno: "1337",
-    title: "The K Weakest Rows in a Matrix",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 73.5,
-  },
-  check_if_n_and_its_double_exist: {
-    qno: "1346",
-    title: "Check If N and Its Double Exist",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 37.3,
-  },
-  tweet_counts_per_frequency: {
-    qno: "1348",
-    title: "Tweet Counts Per Frequency",
-    tags: ["Hash Table", "Binary Search", "Design", "Sorting", "Ordered Set"],
-    default: "Binary Search",
+  xor_queries_of_a_subarray: {
+    qno: "1310",
+    title: "XOR Queries of a Subarray",
+    tags: ["Array", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 44.6,
+    acceptance: 73.1,
   },
-  count_negative_numbers_in_a_sorted_matrix: {
-    qno: "1351",
-    title: "Count Negative Numbers in a Sorted Matrix",
-    tags: ["Array", "Binary Search", "Matrix"],
-    default: "Binary Search",
+  find_the_longest_substring_containing_vowels_in_even_counts: {
+    qno: "1371",
+    title: "Find the Longest Substring Containing Vowels in Even Counts",
+    tags: ["Hash Table", "String", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 64,
+  },
+  minimum_value_to_get_positive_step_by_step_sum: {
+    qno: "1413",
+    title: "Minimum Value to Get Positive Step by Step Sum",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Easy",
     language: "Java",
-    acceptance: 77.4,
+    acceptance: 65.5,
   },
-  find_the_distance_value_between_two_arrays: {
-    qno: "1385",
-    title: "Find the Distance Value Between Two Arrays",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 68.6,
-  },
-  find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows: {
-    qno: "1439",
-    title: "Find the Kth Smallest Sum of a Matrix With Sorted Rows",
-    tags: ["Array", "Binary Search", "Heap (Priority Queue)", "Matrix"],
-    default: "Binary Search",
+  build_array_where_you_can_find_the_maximum_exactly_k_comparisons: {
+    qno: "1420",
+    title: "Build Array Where You Can Find The Maximum Exactly K Comparisons",
+    tags: ["Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 61.7,
+    acceptance: 68.3,
   },
-  "find_two_non-overlapping_sub-arrays_each_with_target_sum": {
-    qno: "1477",
-    title: "Find Two Non-overlapping Sub-arrays Each With Target Sum",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sliding Window",
-    ],
-    default: "Binary Search",
+  maximum_score_after_splitting_a_string: {
+    qno: "1422",
+    title: "Maximum Score After Splitting a String",
+    tags: ["String", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Easy",
+    language: "Java",
+    acceptance: 62.2,
+  },
+  maximum_points_you_can_obtain_from_cards: {
+    qno: "1423",
+    title: "Maximum Points You Can Obtain from Cards",
+    tags: ["Array", "Sliding Window", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 36.5,
+    acceptance: 53.3,
   },
-  minimum_number_of_days_to_make_m_bouquets: {
-    qno: "1482",
-    title: "Minimum Number of Days to Make m Bouquets",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  count_triplets_that_can_form_two_arrays_of_equal_xor: {
+    qno: "1442",
+    title: "Count Triplets That Can Form Two Arrays of Equal XOR",
+    tags: ["Array", "Hash Table", "Math", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 56.2,
+    acceptance: 85,
   },
-  avoid_flood_in_the_city: {
-    qno: "1488",
-    title: "Avoid Flood in The City",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Greedy",
-      "Heap (Priority Queue)",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
+  running_sum_of_1d_array: {
+    qno: "1480",
+    title: "Running Sum of 1d Array",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Easy",
     language: "Java",
-    acceptance: 27,
+    acceptance: 86.8,
   },
-  range_sum_of_sorted_subarray_sums: {
-    qno: "1508",
-    title: "Range Sum of Sorted Subarray Sums",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 58.4,
-  },
-  number_of_subsequences_that_satisfy_the_given_sum_condition: {
-    qno: "1498",
-    title: "Number of Subsequences That Satisfy the Given Sum Condition",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  "number_of_sub-arrays_with_odd_sum": {
+    qno: "1524",
+    title: "Number of Sub-arrays With Odd Sum",
+    tags: ["Array", "Math", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 43.7,
   },
-  find_a_value_of_a_mysterious_function_closest_to_target: {
-    qno: "1521",
-    title: "Find a Value of a Mysterious Function Closest to Target",
-    tags: ["Array", "Binary Search", "Bit Manipulation", "Segment Tree"],
-    default: "Binary Search",
-    difficulty: "Hard",
+  "maximum_number_of_non-overlapping_subarrays_with_sum_equals_target": {
+    qno: "1546",
+    title: "Maximum Number of Non-Overlapping Subarrays With Sum Equals Target",
+    tags: ["Array", "Hash Table", "Greedy", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
     language: "Java",
-    acceptance: 45.2,
+    acceptance: 47.7,
   },
-  kth_missing_positive_number: {
-    qno: "1539",
-    title: "Kth Missing Positive Number",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  sum_of_all_odd_length_subarrays: {
+    qno: "1588",
+    title: "Sum of All Odd Length Subarrays",
+    tags: ["Array", "Math", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Easy",
     language: "Java",
-    acceptance: 60.3,
+    acceptance: 83.1,
   },
-  find_the_index_of_the_large_integer: {
-    qno: "1533",
-    title: "Find the Index of the Large Integer",
-    tags: ["Array", "Binary Search", "Interactive"],
-    default: "Binary Search",
+  make_sum_divisible_by_p: {
+    qno: "1590",
+    title: "Make Sum Divisible by P",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 56.1,
+    acceptance: 29.2,
   },
-  magnetic_force_between_two_balls: {
-    qno: "1552",
-    title: "Magnetic Force Between Two Balls",
-    tags: ["Array", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  maximum_sum_obtained_of_any_permutation: {
+    qno: "1589",
+    title: "Maximum Sum Obtained of Any Permutation",
+    tags: ["Array", "Greedy", "Sorting", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 71.1,
-  },
-  shortest_subarray_to_be_removed_to_make_array_sorted: {
-    qno: "1574",
-    title: "Shortest Subarray to be Removed to Make Array Sorted",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Stack",
-      "Monotonic Stack",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38,
-  },
-  find_latest_group_of_size_m: {
-    qno: "1562",
-    title: "Find Latest Group of Size M",
-    tags: ["Array", "Binary Search", "Simulation"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 42.9,
-  },
-  special_array_with_x_elements_greater_than_or_equal_x: {
-    qno: "1608",
-    title: "Special Array With X Elements Greater Than or Equal X",
-    tags: ["Array", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 66.9,
-  },
-  path_with_minimum_effort: {
-    qno: "1631",
-    title: "Path With Minimum Effort",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Heap (Priority Queue)",
-      "Matrix",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 59.8,
-  },
-  minimum_number_of_removals_to_make_mountain_array: {
-    qno: "1671",
-    title: "Minimum Number of Removals to Make Mountain Array",
-    tags: ["Array", "Binary Search", "Dynamic Programming", "Greedy"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 41.8,
-  },
-  "sell_diminishing-valued_colored_balls": {
-    qno: "1648",
-    title: "Sell Diminishing-Valued Colored Balls",
-    tags: [
-      "Array",
-      "Math",
-      "Binary Search",
-      "Greedy",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 30,
-  },
-  create_sorted_array_through_instructions: {
-    qno: "1649",
-    title: "Create Sorted Array through Instructions",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 39,
+    acceptance: 38.1,
   },
   minimum_operations_to_reduce_x_to_zero: {
     qno: "1658",
@@ -12606,106 +17250,135 @@ const obj1 = {
       "Sliding Window",
       "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 39.7,
+  },
+  ways_to_make_a_fair_array: {
+    qno: "1664",
+    title: "Ways to Make a Fair Array",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 63.6,
+  },
+  sum_of_absolute_differences_in_a_sorted_array: {
+    qno: "1685",
+    title: "Sum of Absolute Differences in a Sorted Array",
+    tags: ["Array", "Math", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 68.5,
+  },
+  delivering_boxes_from_storage_to_ports: {
+    qno: "1687",
+    title: "Delivering Boxes from Storage to Ports",
+    tags: [
+      "Array",
+      "Dynamic Programming",
+      "Segment Tree",
+      "Queue",
+      "Heap (Priority Queue)",
+      "Prefix Sum",
+      "Monotonic Queue",
+    ],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 39,
+  },
+  minimum_moves_to_make_array_complementary: {
+    qno: "1674",
+    title: "Minimum Moves to Make Array Complementary",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 39.8,
+  },
+  minimum_adjacent_swaps_for_k_consecutive_ones: {
+    qno: "1703",
+    title: "Minimum Adjacent Swaps for K Consecutive Ones",
+    tags: ["Array", "Greedy", "Sliding Window", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 42.7,
   },
   ways_to_split_array_into_three_subarrays: {
     qno: "1712",
     title: "Ways to Split Array Into Three Subarrays",
     tags: ["Array", "Two Pointers", "Binary Search", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 33,
   },
-  minimum_operations_to_make_a_subsequence: {
-    qno: "1713",
-    title: "Minimum Operations to Make a Subsequence",
-    tags: ["Array", "Hash Table", "Binary Search", "Greedy"],
-    default: "Binary Search",
-    difficulty: "Hard",
+  find_the_highest_altitude: {
+    qno: "1732",
+    title: "Find the Highest Altitude",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Easy",
     language: "Java",
-    acceptance: 47.6,
+    acceptance: 83.3,
   },
-  maximum_number_of_events_that_can_be_attended_ii: {
-    qno: "1751",
-    title: "Maximum Number of Events That Can Be Attended II",
-    tags: ["Array", "Binary Search", "Dynamic Programming", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 61.7,
-  },
-  building_boxes: {
-    qno: "1739",
-    title: "Building Boxes",
-    tags: ["Math", "Binary Search", "Greedy"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 51.9,
-  },
-  minimum_limit_of_balls_in_a_bag: {
-    qno: "1760",
-    title: "Minimum Limit of Balls in a Bag",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  change_minimum_characters_to_satisfy_one_of_three_conditions: {
+    qno: "1737",
+    title: "Change Minimum Characters to Satisfy One of Three Conditions",
+    tags: ["Hash Table", "String", "Counting", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 60.3,
+    acceptance: 36.7,
   },
-  count_pairs_of_nodes: {
-    qno: "1782",
-    title: "Count Pairs Of Nodes",
-    tags: ["Array", "Two Pointers", "Binary Search", "Graph", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.2,
-  },
-  maximum_score_of_a_good_subarray: {
-    qno: "1793",
-    title: "Maximum Score of a Good Subarray",
+  find_kth_largest_xor_coordinate_value: {
+    qno: "1738",
+    title: "Find Kth Largest XOR Coordinate Value",
     tags: [
       "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Stack",
-      "Monotonic Stack",
+      "Divide and Conquer",
+      "Bit Manipulation",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Prefix Sum",
+      "Quickselect",
     ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 64.3,
-  },
-  maximum_value_at_a_given_index_in_a_bounded_array: {
-    qno: "1802",
-    title: "Maximum Value at a Given Index in a Bounded Array",
-    tags: ["Binary Search", "Greedy"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 39.2,
+    acceptance: 62,
   },
-  minimum_absolute_sum_difference: {
-    qno: "1818",
-    title: "Minimum Absolute Sum Difference",
-    tags: ["Array", "Binary Search", "Sorting", "Ordered Set"],
-    default: "Binary Search",
+  "can_you_eat_your_favorite_candy_on_your_favorite_day?": {
+    qno: "1744",
+    title: "Can You Eat Your Favorite Candy on Your Favorite Day?",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 30.7,
+    acceptance: 34.2,
   },
-  closest_room: {
-    qno: "1847",
-    title: "Closest Room",
-    tags: ["Array", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  maximize_the_beauty_of_the_garden: {
+    qno: "1788",
+    title: "Maximize the Beauty of the Garden",
+    tags: ["Array", "Greedy", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 37.9,
+    acceptance: 67.1,
+  },
+  maximum_xor_for_each_query: {
+    qno: "1829",
+    title: "Maximum XOR for Each Query",
+    tags: ["Array", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 77.2,
   },
   frequency_of_the_most_frequent_element: {
     qno: "1838",
@@ -12718,49 +17391,77 @@ const obj1 = {
       "Sorting",
       "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 44.5,
   },
-  minimum_interval_to_include_each_query: {
-    qno: "1851",
-    title: "Minimum Interval to Include Each Query",
+  maximum_population_year: {
+    qno: "1854",
+    title: "Maximum Population Year",
+    tags: ["Array", "Counting", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Easy",
+    language: "Java",
+    acceptance: 61,
+  },
+  "maximum_subarray_min-product": {
+    qno: "1856",
+    title: "Maximum Subarray Min-Product",
+    tags: ["Array", "Stack", "Monotonic Stack", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 38.1,
+  },
+  get_biggest_three_rhombus_sums_in_a_grid: {
+    qno: "1878",
+    title: "Get Biggest Three Rhombus Sums in a Grid",
     tags: [
       "Array",
-      "Binary Search",
-      "Line Sweep",
+      "Math",
       "Sorting",
       "Heap (Priority Queue)",
+      "Matrix",
+      "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 47.9,
+  },
+  jump_game_vii: {
+    qno: "1871",
+    title: "Jump Game VII",
+    tags: ["String", "Dynamic Programming", "Sliding Window", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 24.9,
+  },
+  stone_game_viii: {
+    qno: "1872",
+    title: "Stone Game VIII",
+    tags: ["Array", "Math", "Dynamic Programming", "Prefix Sum", "Game Theory"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 49.9,
+    acceptance: 53,
   },
-  maximum_distance_between_a_pair_of_values: {
-    qno: "1855",
-    title: "Maximum Distance Between a Pair of Values",
-    tags: ["Array", "Two Pointers", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
+  check_if_all_the_integers_in_a_range_are_covered: {
+    qno: "1893",
+    title: "Check if All the Integers in a Range Are Covered",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Easy",
     language: "Java",
-    acceptance: 53.4,
-  },
-  minimum_speed_to_arrive_on_time: {
-    qno: "1870",
-    title: "Minimum Speed to Arrive on Time",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 46.8,
+    acceptance: 50,
   },
   find_the_student_that_will_replace_the_chalk: {
     qno: "1894",
     title: "Find the Student that Will Replace the Chalk",
     tags: ["Array", "Binary Search", "Simulation", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 45.7,
@@ -12769,350 +17470,190 @@ const obj1 = {
     qno: "1889",
     title: "Minimum Space Wasted From Packaging",
     tags: ["Array", "Binary Search", "Sorting", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 31.8,
   },
-  maximum_number_of_removable_characters: {
-    qno: "1898",
-    title: "Maximum Number of Removable Characters",
-    tags: ["Array", "Two Pointers", "String", "Binary Search"],
-    default: "Binary Search",
+  number_of_wonderful_substrings: {
+    qno: "1915",
+    title: "Number of Wonderful Substrings",
+    tags: ["Hash Table", "String", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 43.8,
+    acceptance: 67.1,
   },
-  count_pairs_in_two_arrays: {
-    qno: "1885",
-    title: "Count Pairs in Two Arrays",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  describe_the_painting: {
+    qno: "1943",
+    title: "Describe the Painting",
+    tags: ["Array", "Hash Table", "Sorting", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 60.8,
+    acceptance: 49.9,
   },
-  cutting_ribbons: {
-    qno: "1891",
-    title: "Cutting Ribbons",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  "unique_length-3_palindromic_subsequences": {
+    qno: "1930",
+    title: "Unique Length-3 Palindromic Subsequences",
+    tags: ["Hash Table", "String", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 49.6,
+    acceptance: 66.1,
   },
-  find_a_peak_element_ii: {
-    qno: "1901",
-    title: "Find a Peak Element II",
-    tags: ["Array", "Binary Search", "Matrix"],
-    default: "Binary Search",
+  brightest_position_on_street: {
+    qno: "2021",
+    title: "Brightest Position on Street",
+    tags: ["Array", "Prefix Sum", "Ordered Set"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 51.8,
+    acceptance: 62.2,
   },
-  longest_common_subpath: {
-    qno: "1923",
-    title: "Longest Common Subpath",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Rolling Hash",
-      "Suffix Array",
-      "Hash Function",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
+  find_the_middle_index_in_array: {
+    qno: "1991",
+    title: "Find the Middle Index in Array",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Easy",
     language: "Java",
-    acceptance: 28.2,
-  },
-  merge_bsts_to_create_single_bst: {
-    qno: "1932",
-    title: "Merge BSTs to Create Single BST",
-    tags: [
-      "Hash Table",
-      "Binary Search",
-      "Tree",
-      "Depth-First Search",
-      "Binary Tree",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 36.2,
-  },
-  kth_smallest_subarray_sum: {
-    qno: "1918",
-    title: "Kth Smallest Subarray Sum",
-    tags: ["Array", "Binary Search", "Sliding Window"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 52.7,
-  },
-  minimum_time_for_k_virus_variants_to_spread: {
-    qno: "1956",
-    title: "Minimum Time For K Virus Variants to Spread",
-    tags: ["Array", "Math", "Binary Search", "Geometry", "Enumeration"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 47.2,
-  },
-  find_the_longest_valid_obstacle_course_at_each_position: {
-    qno: "1964",
-    title: "Find the Longest Valid Obstacle Course at Each Position",
-    tags: ["Array", "Binary Search", "Binary Indexed Tree"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 62.9,
-  },
-  last_day_where_you_can_still_cross: {
-    qno: "1970",
-    title: "Last Day Where You Can Still Cross",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 61.9,
-  },
-  binary_searchable_numbers_in_an_unsorted_array: {
-    qno: "1966",
-    title: "Binary Searchable Numbers in an Unsorted Array",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 64.9,
-  },
-  maximum_earnings_from_taxi: {
-    qno: "2008",
-    title: "Maximum Earnings From Taxi",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sorting",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 44.3,
-  },
-  minimum_number_of_operations_to_make_array_continuous: {
-    qno: "2009",
-    title: "Minimum Number of Operations to Make Array Continuous",
-    tags: ["Array", "Hash Table", "Binary Search", "Sliding Window"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 52.7,
+    acceptance: 67.5,
   },
   maximize_the_confusion_of_an_exam: {
     qno: "2024",
     title: "Maximize the Confusion of an Exam",
     tags: ["String", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 67.3,
   },
-  kth_smallest_product_of_two_sorted_arrays: {
-    qno: "2040",
-    title: "Kth Smallest Product of Two Sorted Arrays",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  maximum_number_of_ways_to_partition_an_array: {
+    qno: "2025",
+    title: "Maximum Number of Ways to Partition an Array",
+    tags: ["Array", "Hash Table", "Counting", "Enumeration", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 29.1,
+    acceptance: 34.4,
   },
-  partition_array_into_two_arrays_to_minimize_sum_difference: {
-    qno: "2035",
-    title: "Partition Array Into Two Arrays to Minimize Sum Difference",
-    tags: [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Dynamic Programming",
-      "Bit Manipulation",
-      "Ordered Set",
-      "Bitmask",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 20.4,
-  },
-  "two_best_non-overlapping_events": {
-    qno: "2054",
-    title: "Two Best Non-Overlapping Events",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sorting",
-      "Heap (Priority Queue)",
-    ],
-    default: "Binary Search",
+  grid_game: {
+    qno: "2017",
+    title: "Grid Game",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 46.6,
+    acceptance: 45.9,
   },
   plates_between_candles: {
     qno: "2055",
     title: "Plates Between Candles",
     tags: ["Array", "String", "Binary Search", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 44.9,
   },
-  most_beautiful_item_for_each_query: {
-    qno: "2070",
-    title: "Most Beautiful Item for Each Query",
-    tags: ["Array", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 49.6,
-  },
-  maximum_number_of_tasks_you_can_assign: {
-    qno: "2071",
-    title: "Maximum Number of Tasks You Can Assign",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Greedy",
-      "Queue",
-      "Sorting",
-      "Monotonic Queue",
-    ],
-    default: "Binary Search",
+  stamping_the_grid: {
+    qno: "2132",
+    title: "Stamping the Grid",
+    tags: ["Array", "Greedy", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 33.6,
+    acceptance: 32.5,
   },
-  minimized_maximum_of_products_distributed_to_any_store: {
-    qno: "2064",
-    title: "Minimized Maximum of Products Distributed to Any Store",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  find_good_days_to_rob_the_bank: {
+    qno: "2100",
+    title: "Find Good Days to Rob the Bank",
+    tags: ["Array", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 53.1,
+    acceptance: 49.5,
   },
-  find_target_indices_after_sorting_array: {
-    qno: "2089",
-    title: "Find Target Indices After Sorting Array",
-    tags: ["Array", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Easy",
+  number_of_equal_count_substrings: {
+    qno: "2067",
+    title: "Number of Equal Count Substrings",
+    tags: ["String", "Counting", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
     language: "Java",
-    acceptance: 76.4,
+    acceptance: 47,
+  },
+  substrings_that_begin_and_end_with_the_same_letter: {
+    qno: "2083",
+    title: "Substrings That Begin and End With the Same Letter",
+    tags: ["Hash Table", "Math", "String", "Counting", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 74.3,
   },
   maximum_fruits_harvested_after_at_most_k_steps: {
     qno: "2106",
     title: "Maximum Fruits Harvested After at Most K Steps",
     tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 36.2,
   },
-  "minimum_operations_to_make_the_array_k-increasing": {
-    qno: "2111",
-    title: "Minimum Operations to Make the Array K-Increasing",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.6,
-  },
-  maximum_running_time_of_n_computers: {
-    qno: "2141",
-    title: "Maximum Running Time of N Computers",
-    tags: ["Array", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 50,
-  },
-  pour_water_between_buckets_to_make_water_levels_equal: {
-    qno: "2137",
-    title: "Pour Water Between Buckets to Make Water Levels Equal",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  intervals_between_identical_elements: {
+    qno: "2121",
+    title: "Intervals Between Identical Elements",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 67.6,
+    acceptance: 44.4,
   },
-  count_good_triplets_in_an_array: {
-    qno: "2179",
-    title: "Count Good Triplets in an Array",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 41.2,
-  },
-  minimum_time_to_complete_trips: {
-    qno: "2187",
-    title: "Minimum Time to Complete Trips",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  count_the_hidden_sequences: {
+    qno: "2145",
+    title: "Count the Hidden Sequences",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 38.8,
+    acceptance: 38.3,
   },
-  sum_of_scores_of_built_strings: {
-    qno: "2223",
-    title: "Sum of Scores of Built Strings",
-    tags: [
-      "String",
-      "Binary Search",
-      "Rolling Hash",
-      "Suffix Array",
-      "String Matching",
-      "Hash Function",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 40.2,
-  },
-  maximum_total_beauty_of_the_gardens: {
-    qno: "2234",
-    title: "Maximum Total Beauty of the Gardens",
-    tags: ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 29.4,
-  },
-  count_number_of_rectangles_containing_each_point: {
-    qno: "2250",
-    title: "Count Number of Rectangles Containing Each Point",
-    tags: ["Array", "Binary Search", "Binary Indexed Tree", "Sorting"],
-    default: "Binary Search",
+  removing_minimum_number_of_magic_beans: {
+    qno: "2171",
+    title: "Removing Minimum Number of Magic Beans",
+    tags: ["Array", "Greedy", "Sorting", "Enumeration", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 35.1,
+    acceptance: 42.8,
+  },
+  maximize_number_of_subsequences_in_a_string: {
+    qno: "2207",
+    title: "Maximize Number of Subsequences in a String",
+    tags: ["String", "Greedy", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 34.7,
+  },
+  minimum_white_tiles_after_covering_with_carpets: {
+    qno: "2209",
+    title: "Minimum White Tiles After Covering With Carpets",
+    tags: ["String", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 36.7,
+  },
+  number_of_ways_to_select_buildings: {
+    qno: "2222",
+    title: "Number of Ways to Select Buildings",
+    tags: ["String", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 50.7,
   },
   number_of_flowers_in_full_bloom: {
     qno: "2251",
@@ -13125,82 +17666,82 @@ const obj1 = {
       "Prefix Sum",
       "Ordered Set",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 56.8,
   },
-  escape_the_spreading_fire: {
-    qno: "2258",
-    title: "Escape the Spreading Fire",
-    tags: ["Array", "Binary Search", "Breadth-First Search", "Matrix"],
-    default: "Binary Search",
-    difficulty: "Hard",
+  minimum_average_difference: {
+    qno: "2256",
+    title: "Minimum Average Difference",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
     language: "Java",
-    acceptance: 35.2,
+    acceptance: 43.2,
+  },
+  number_of_ways_to_split_array: {
+    qno: "2270",
+    title: "Number of Ways to Split Array",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 47.9,
   },
   maximum_white_tiles_covered_by_a_carpet: {
     qno: "2271",
     title: "Maximum White Tiles Covered by a Carpet",
     tags: ["Array", "Binary Search", "Greedy", "Sorting", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 33.7,
   },
-  booking_concert_tickets_in_groups: {
-    qno: "2286",
-    title: "Booking Concert Tickets in Groups",
-    tags: ["Binary Search", "Design", "Binary Indexed Tree", "Segment Tree"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 17.8,
-  },
-  successful_pairs_of_spells_and_potions: {
-    qno: "2300",
-    title: "Successful Pairs of Spells and Potions",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  maximum_trailing_zeros_in_a_cornered_path: {
+    qno: "2245",
+    title: "Maximum Trailing Zeros in a Cornered Path",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 43.3,
+    acceptance: 36.2,
+  },
+  sum_of_total_strength_of_wizards: {
+    qno: "2281",
+    title: "Sum of Total Strength of Wizards",
+    tags: ["Array", "Stack", "Monotonic Stack", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 27.9,
+  },
+  maximum_sum_score_of_array: {
+    qno: "2219",
+    title: "Maximum Sum Score of Array",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 62.1,
+  },
+  count_positions_on_street_with_required_brightness: {
+    qno: "2237",
+    title: "Count Positions on Street With Required Brightness",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 63.9,
   },
   count_subarrays_with_score_less_than_k: {
     qno: "2302",
     title: "Count Subarrays With Score Less Than K",
     tags: ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 54.9,
-  },
-  the_latest_time_to_catch_a_bus: {
-    qno: "2332",
-    title: "The Latest Time to Catch a Bus",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 27.2,
-  },
-  number_of_excellent_pairs: {
-    qno: "2354",
-    title: "Number of Excellent Pairs",
-    tags: ["Array", "Hash Table", "Binary Search", "Bit Manipulation"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 47.3,
-  },
-  maximum_number_of_groups_entering_a_competition: {
-    qno: "2358",
-    title: "Maximum Number of Groups Entering a Competition",
-    tags: ["Array", "Math", "Binary Search", "Greedy"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 68,
   },
   maximum_number_of_robots_within_budget: {
     qno: "2398",
@@ -13213,71 +17754,89 @@ const obj1 = {
       "Heap (Priority Queue)",
       "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 34.6,
+  },
+  shifting_letters_ii: {
+    qno: "2381",
+    title: "Shifting Letters II",
+    tags: ["Array", "String", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 37.6,
+  },
+  maximum_segment_sum_after_removals: {
+    qno: "2382",
+    title: "Maximum Segment Sum After Removals",
+    tags: ["Array", "Union Find", "Prefix Sum", "Ordered Set"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 49.1,
   },
   longest_subsequence_with_limited_sum: {
     qno: "2389",
     title: "Longest Subsequence With Limited Sum",
     tags: ["Array", "Binary Search", "Greedy", "Sorting", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Easy",
     language: "Java",
     acceptance: 71.8,
   },
-  smallest_subarrays_with_maximum_bitwise_or: {
-    qno: "2411",
-    title: "Smallest Subarrays With Maximum Bitwise OR",
-    tags: ["Array", "Binary Search", "Bit Manipulation", "Sliding Window"],
-    default: "Binary Search",
+  minimum_amount_of_time_to_collect_garbage: {
+    qno: "2391",
+    title: "Minimum Amount of Time to Collect Garbage",
+    tags: ["Array", "String", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 44.2,
+    acceptance: 85.3,
   },
-  longest_uploaded_prefix: {
-    qno: "2424",
-    title: "Longest Uploaded Prefix",
-    tags: [
-      "Binary Search",
-      "Union Find",
-      "Design",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Heap (Priority Queue)",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 55.4,
-  },
-  number_of_pairs_satisfying_inequality: {
-    qno: "2426",
-    title: "Number of Pairs Satisfying Inequality",
+  divide_intervals_into_minimum_number_of_groups: {
+    qno: "2406",
+    title: "Divide Intervals Into Minimum Number of Groups",
     tags: [
       "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
+      "Two Pointers",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Prefix Sum",
     ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.1,
-  },
-  median_of_a_row_wise_sorted_matrix: {
-    qno: "2387",
-    title: "Median of a Row Wise Sorted Matrix",
-    tags: ["Array", "Binary Search", "Matrix"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 71.1,
+    acceptance: 47.2,
+  },
+  find_all_good_indices: {
+    qno: "2420",
+    title: "Find All Good Indices",
+    tags: ["Array", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 38.8,
+  },
+  maximum_sum_of_an_hourglass: {
+    qno: "2428",
+    title: "Maximum Sum of an Hourglass",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 74.9,
+  },
+  range_product_queries_of_powers: {
+    qno: "2438",
+    title: "Range Product Queries of Powers",
+    tags: ["Array", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 40.3,
   },
   minimize_maximum_of_array: {
     qno: "2439",
@@ -13289,7 +17848,7 @@ const obj1 = {
       "Greedy",
       "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 46.5,
@@ -13298,93 +17857,37 @@ const obj1 = {
     qno: "2448",
     title: "Minimum Cost to Make Array Equal",
     tags: ["Array", "Binary Search", "Greedy", "Sorting", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 46,
   },
-  next_greater_element_iv: {
-    qno: "2454",
-    title: "Next Greater Element IV",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Stack",
-      "Sorting",
-      "Heap (Priority Queue)",
-      "Monotonic Stack",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 38.7,
-  },
-  split_message_based_on_limit: {
-    qno: "2468",
-    title: "Split Message Based on Limit",
-    tags: ["String", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 44.6,
-  },
-  closest_nodes_queries_in_a_binary_search_tree: {
-    qno: "2476",
-    title: "Closest Nodes Queries in a Binary Search Tree",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Tree",
-      "Depth-First Search",
-      "Binary Search Tree",
-      "Binary Tree",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 41.6,
-  },
-  longest_square_streak_in_an_array: {
-    qno: "2501",
-    title: "Longest Square Streak in an Array",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sorting",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 39.7,
-  },
-  frog_jump_ii: {
-    qno: "2498",
-    title: "Frog Jump II",
-    tags: ["Array", "Binary Search", "Greedy"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 62,
-  },
-  maximum_tastiness_of_candy_basket: {
-    qno: "2517",
-    title: "Maximum Tastiness of Candy Basket",
-    tags: ["Array", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 63.7,
-  },
-  maximum_count_of_positive_integer_and_negative_integer: {
-    qno: "2529",
-    title: "Maximum Count of Positive Integer and Negative Integer",
-    tags: ["Array", "Binary Search", "Counting"],
-    default: "Binary Search",
+  find_the_pivot_integer: {
+    qno: "2485",
+    title: "Find the Pivot Integer",
+    tags: ["Math", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Easy",
     language: "Java",
-    acceptance: 71,
+    acceptance: 84,
+  },
+  count_subarrays_with_median_k: {
+    qno: "2488",
+    title: "Count Subarrays With Median K",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 44.4,
+  },
+  minimum_penalty_for_a_shop: {
+    qno: "2483",
+    title: "Minimum Penalty for a Shop",
+    tags: ["String", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 67.3,
   },
   maximize_the_minimum_powered_city: {
     qno: "2528",
@@ -13397,704 +17900,416 @@ const obj1 = {
       "Sliding Window",
       "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 32.4,
+    acceptance: 32.5,
   },
-  minimize_the_maximum_of_two_arrays: {
-    qno: "2513",
-    title: "Minimize the Maximum of Two Arrays",
-    tags: ["Math", "Binary Search", "Number Theory"],
-    default: "Binary Search",
+  increment_submatrices_by_one: {
+    qno: "2536",
+    title: "Increment Submatrices by One",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 30.5,
+    acceptance: 49.6,
   },
-  minimum_common_value: {
-    qno: "2540",
-    title: "Minimum Common Value",
-    tags: ["Array", "Hash Table", "Two Pointers", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Easy",
-    language: "Java",
-    acceptance: 59,
-  },
-  maximum_number_of_integers_to_choose_from_a_range_i: {
-    qno: "2554",
-    title: "Maximum Number of Integers to Choose From a Range I",
-    tags: ["Array", "Hash Table", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
+  number_of_substrings_with_fixed_ratio: {
+    qno: "2489",
+    title: "Number of Substrings With Fixed Ratio",
+    tags: ["Hash Table", "Math", "String", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 53.9,
+    acceptance: 57.8,
   },
-  minimum_time_to_complete_all_tasks: {
-    qno: "2589",
-    title: "Minimum Time to Complete All Tasks",
-    tags: ["Array", "Binary Search", "Stack", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
+  rearrange_array_to_maximize_prefix_score: {
+    qno: "2587",
+    title: "Rearrange Array to Maximize Prefix Score",
+    tags: ["Array", "Greedy", "Sorting", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
     language: "Java",
-    acceptance: 39.2,
+    acceptance: 41,
   },
-  "count_the_number_of_k-big_indices": {
-    qno: "2519",
-    title: "Count the Number of K-Big Indices",
+  count_the_number_of_beautiful_subarrays: {
+    qno: "2588",
+    title: "Count the Number of Beautiful Subarrays",
+    tags: ["Array", "Hash Table", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 50.5,
+  },
+  find_the_score_of_all_prefixes_of_an_array: {
+    qno: "2640",
+    title: "Find the Score of All Prefixes of an Array",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 70.4,
+  },
+  count_increasing_quadruplets: {
+    qno: "2552",
+    title: "Count Increasing Quadruplets",
     tags: [
       "Array",
-      "Binary Search",
-      "Divide and Conquer",
+      "Dynamic Programming",
       "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
+      "Enumeration",
+      "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 53.6,
+    acceptance: 33.4,
   },
-  minimum_time_to_repair_cars: {
-    qno: "2594",
-    title: "Minimum Time to Repair Cars",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  count_vowel_strings_in_ranges: {
+    qno: "2559",
+    title: "Count Vowel Strings in Ranges",
+    tags: ["Array", "String", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 44.6,
+    acceptance: 52.1,
   },
-  minimum_time_to_eat_all_grains: {
-    qno: "2604",
-    title: "Minimum Time to Eat All Grains",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
+  left_and_right_sum_differences: {
+    qno: "2574",
+    title: "Left and Right Sum Differences",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Easy",
     language: "Java",
-    acceptance: 40.7,
-  },
-  maximize_win_from_two_segments: {
-    qno: "2555",
-    title: "Maximize Win From Two Segments",
-    tags: ["Array", "Binary Search", "Sliding Window"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33.1,
-  },
-  house_robber_iv: {
-    qno: "2560",
-    title: "House Robber IV",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 43.6,
-  },
-  count_the_number_of_fair_pairs: {
-    qno: "2563",
-    title: "Count the Number of Fair Pairs",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 32.8,
-  },
-  subsequence_with_the_minimum_score: {
-    qno: "2565",
-    title: "Subsequence With the Minimum Score",
-    tags: ["Two Pointers", "String", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 31.4,
-  },
-  maximum_number_of_integers_to_choose_from_a_range_ii: {
-    qno: "2557",
-    title: "Maximum Number of Integers to Choose From a Range II",
-    tags: ["Array", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 40.9,
-  },
-  find_the_maximum_number_of_marked_indices: {
-    qno: "2576",
-    title: "Find the Maximum Number of Marked Indices",
-    tags: ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.6,
-  },
-  prime_subtraction_operation: {
-    qno: "2601",
-    title: "Prime Subtraction Operation",
-    tags: ["Array", "Math", "Binary Search", "Greedy", "Number Theory"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 37.8,
+    acceptance: 86.6,
   },
   minimum_operations_to_make_all_array_elements_equal: {
     qno: "2602",
     title: "Minimum Operations to Make All Array Elements Equal",
     tags: ["Array", "Binary Search", "Sorting", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 35.5,
+    acceptance: 35.4,
   },
-  minimize_the_maximum_difference_of_pairs: {
-    qno: "2616",
-    title: "Minimize the Maximum Difference of Pairs",
-    tags: ["Array", "Binary Search", "Greedy"],
-    default: "Binary Search",
+  sum_of_distances: {
+    qno: "2615",
+    title: "Sum of Distances",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 43.9,
+    acceptance: 31,
   },
-  "minimum_operations_to_make_numbers_non-positive": {
-    qno: "2702",
-    title: "Minimum Operations to Make Numbers Non-positive",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  maximum_or: {
+    qno: "2680",
+    title: "Maximum OR",
+    tags: ["Array", "Greedy", "Bit Manipulation", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 40.8,
+  },
+  power_of_heroes: {
+    qno: "2681",
+    title: "Power of Heroes",
+    tags: ["Array", "Math", "Dynamic Programming", "Sorting", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 51.4,
+    acceptance: 30.7,
   },
-  make_array_empty: {
-    qno: "2659",
-    title: "Make Array Empty",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Greedy",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Sorting",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 25.4,
-  },
-  maximum_strictly_increasing_cells_in_a_matrix: {
-    qno: "2713",
-    title: "Maximum Strictly Increasing Cells in a Matrix",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Dynamic Programming",
-      "Memoization",
-      "Sorting",
-      "Matrix",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.6,
-  },
-  find_the_longest_equal_subarray: {
-    qno: "2831",
-    title: "Find the Longest Equal Subarray",
-    tags: ["Array", "Hash Table", "Binary Search", "Sliding Window"],
-    default: "Binary Search",
+  movement_of_robots: {
+    qno: "2731",
+    title: "Movement of Robots",
+    tags: ["Array", "Brainteaser", "Sorting", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 35.8,
+    acceptance: 28,
   },
-  maximum_sum_queries: {
-    qno: "2736",
-    title: "Maximum Sum Queries",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Stack",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Sorting",
-      "Monotonic Stack",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 29.1,
-  },
-  maximum_beauty_of_an_array_after_applying_operation: {
-    qno: "2779",
-    title: "Maximum Beauty of an Array After Applying Operation",
-    tags: ["Array", "Binary Search", "Sliding Window", "Sorting"],
-    default: "Binary Search",
+  apply_operations_to_make_all_array_elements_equal_to_zero: {
+    qno: "2772",
+    title: "Apply Operations to Make All Array Elements Equal to Zero",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 38.2,
+    acceptance: 33.1,
   },
-  sorting_three_groups: {
-    qno: "2826",
-    title: "Sorting Three Groups",
-    tags: ["Array", "Binary Search", "Dynamic Programming"],
-    default: "Binary Search",
+  count_of_interesting_subarrays: {
+    qno: "2845",
+    title: "Count of Interesting Subarrays",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 42.1,
+    acceptance: 35.3,
   },
-  find_the_safest_path_in_a_grid: {
-    qno: "2812",
-    title: "Find the Safest Path in a Grid",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Breadth-First Search",
-      "Union Find",
-      "Matrix",
-    ],
-    default: "Binary Search",
+  construct_product_matrix: {
+    qno: "2906",
+    title: "Construct Product Matrix",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 49.1,
+    acceptance: 30.9,
   },
-  count_pairs_whose_sum_is_less_than_target: {
-    qno: "2824",
-    title: "Count Pairs Whose Sum is Less than Target",
-    tags: ["Array", "Two Pointers", "Binary Search", "Sorting"],
-    default: "Binary Search",
+  points_that_intersect_with_cars: {
+    qno: "2848",
+    title: "Points That Intersect With Cars",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Easy",
     language: "Java",
-    acceptance: 87.2,
-  },
-  maximum_number_of_groups_with_increasing_length: {
-    qno: "2790",
-    title: "Maximum Number of Groups With Increasing Length",
-    tags: ["Array", "Math", "Binary Search", "Greedy", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 19.9,
-  },
-  maximize_the_profit_as_the_salesman: {
-    qno: "2830",
-    title: "Maximize the Profit as the Salesman",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sorting",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.3,
-  },
-  minimum_absolute_difference_between_elements_with_constraint: {
-    qno: "2817",
-    title: "Minimum Absolute Difference Between Elements With Constraint",
-    tags: ["Array", "Binary Search", "Ordered Set"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 33.8,
+    acceptance: 75.2,
   },
   minimum_relative_loss_after_buying_chocolates: {
     qno: "2819",
     title: "Minimum Relative Loss After Buying Chocolates",
     tags: ["Array", "Binary Search", "Sorting", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
     acceptance: 52,
-  },
-  minimum_array_length_after_pair_removals: {
-    qno: "2856",
-    title: "Minimum Array Length After Pair Removals",
-    tags: [
-      "Array",
-      "Hash Table",
-      "Two Pointers",
-      "Binary Search",
-      "Greedy",
-      "Counting",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 22.2,
-  },
-  maximum_number_of_alloys: {
-    qno: "2861",
-    title: "Maximum Number of Alloys",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.4,
   },
   maximum_coins_heroes_can_collect: {
     qno: "2838",
     title: "Maximum Coins Heroes Can Collect",
     tags: ["Array", "Two Pointers", "Binary Search", "Sorting", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 68.9,
   },
-  find_building_where_alice_and_bob_can_meet: {
-    qno: "2940",
-    title: "Find Building Where Alice and Bob Can Meet",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Stack",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Heap (Priority Queue)",
-      "Monotonic Stack",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
+  minimum_size_subarray_in_infinite_array: {
+    qno: "2875",
+    title: "Minimum Size Subarray in Infinite Array",
+    tags: ["Array", "Hash Table", "Sliding Window", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
     language: "Java",
-    acceptance: 35.3,
-  },
-  maximum_balanced_subsequence_sum: {
-    qno: "2926",
-    title: "Maximum Balanced Subsequence Sum",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Binary Indexed Tree",
-      "Segment Tree",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 23.9,
+    acceptance: 30.8,
   },
   apply_operations_to_maximize_frequency_score: {
     qno: "2968",
     title: "Apply Operations to Maximize Frequency Score",
     tags: ["Array", "Binary Search", "Sliding Window", "Sorting", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 39.3,
+    acceptance: 38.7,
   },
-  "find_maximum_non-decreasing_array_length": {
-    qno: "2945",
-    title: "Find Maximum Non-decreasing Array Length",
+  palindrome_rearrangement_queries: {
+    qno: "2983",
+    title: "Palindrome Rearrangement Queries",
+    tags: ["Hash Table", "String", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 25.9,
+  },
+  count_beautiful_substrings_ii: {
+    qno: "2949",
+    title: "Count Beautiful Substrings II",
+    tags: ["Hash Table", "Math", "String", "Number Theory", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 25.1,
+  },
+  count_beautiful_substrings_i: {
+    qno: "2947",
+    title: "Count Beautiful Substrings I",
     tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Stack",
-      "Queue",
-      "Monotonic Stack",
-      "Monotonic Queue",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 15.9,
-  },
-  number_of_equal_numbers_blocks: {
-    qno: "2936",
-    title: "Number of Equal Numbers Blocks",
-    tags: ["Array", "Binary Search", "Interactive"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 67.5,
-  },
-  "maximum_gcd-sum_of_a_subarray": {
-    qno: "2941",
-    title: "Maximum GCD-Sum of a Subarray",
-    tags: ["Array", "Math", "Binary Search", "Number Theory"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 47.4,
-  },
-  maximum_number_that_sum_of_the_prices_is_less_than_or_equal_to_k: {
-    qno: "3007",
-    title: "Maximum Number That Sum of the Prices Is Less Than or Equal to K",
-    tags: ["Binary Search", "Dynamic Programming", "Bit Manipulation"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 36.4,
-  },
-  find_beautiful_indices_in_the_given_array_i: {
-    qno: "3006",
-    title: "Find Beautiful Indices in the Given Array I",
-    tags: [
-      "Two Pointers",
+      "Hash Table",
+      "Math",
       "String",
-      "Binary Search",
-      "Rolling Hash",
-      "String Matching",
-      "Hash Function",
+      "Enumeration",
+      "Number Theory",
+      "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 36.3,
+    acceptance: 61.8,
   },
-  count_the_number_of_incremovable_subarrays_ii: {
-    qno: "2972",
-    title: "Count the Number of Incremovable Subarrays II",
-    tags: ["Array", "Two Pointers", "Binary Search"],
-    default: "Binary Search",
+  number_of_divisible_substrings: {
+    qno: "2950",
+    title: "Number of Divisible Substrings",
+    tags: ["Hash Table", "String", "Counting", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 76.1,
+  },
+  "number_of_same-end_substrings": {
+    qno: "2955",
+    title: "Number of Same-End Substrings",
+    tags: ["Array", "Hash Table", "String", "Counting", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 70.7,
+  },
+  find_polygon_with_the_largest_perimeter: {
+    qno: "2971",
+    title: "Find Polygon With the Largest Perimeter",
+    tags: ["Array", "Greedy", "Sorting", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 66.1,
+  },
+  maximum_good_subarray_sum: {
+    qno: "3026",
+    title: "Maximum Good Subarray Sum",
+    tags: ["Array", "Hash Table", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 18.2,
+  },
+  count_the_number_of_houses_at_a_certain_distance_i: {
+    qno: "3015",
+    title: "Count the Number of Houses at a Certain Distance I",
+    tags: ["Breadth-First Search", "Graph", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 55.8,
+  },
+  count_the_number_of_houses_at_a_certain_distance_ii: {
+    qno: "3017",
+    title: "Count the Number of Houses at a Certain Distance II",
+    tags: ["Graph", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 39.7,
+    acceptance: 21.6,
   },
-  count_the_number_of_incremovable_subarrays_i: {
-    qno: "2970",
-    title: "Count the Number of Incremovable Subarrays I",
-    tags: ["Array", "Two Pointers", "Binary Search", "Enumeration"],
-    default: "Binary Search",
+  ant_on_the_boundary: {
+    qno: "3028",
+    title: "Ant on the Boundary",
+    tags: ["Array", "Simulation", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Easy",
     language: "Java",
-    acceptance: 51.6,
+    acceptance: 74.9,
   },
-  find_longest_special_substring_that_occurs_thrice_ii: {
-    qno: "2982",
-    title: "Find Longest Special Substring That Occurs Thrice II",
-    tags: [
-      "Hash Table",
-      "String",
-      "Binary Search",
-      "Sliding Window",
-      "Counting",
-    ],
-    default: "Binary Search",
+  maximum_strength_of_k_disjoint_subarrays: {
+    qno: "3077",
+    title: "Maximum Strength of K Disjoint Subarrays",
+    tags: ["Array", "Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 27.9,
+  },
+  minimum_moves_to_pick_k_ones: {
+    qno: "3086",
+    title: "Minimum Moves to Pick K Ones",
+    tags: ["Array", "Greedy", "Sliding Window", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Hard",
+    language: "Java",
+    acceptance: 22.7,
+  },
+  "count_submatrices_with_top-left_element_and_sum_less_than_k": {
+    qno: "3070",
+    title: "Count Submatrices with Top-Left Element and Sum Less Than k",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 33.9,
+    acceptance: 59.3,
   },
-  find_longest_special_substring_that_occurs_thrice_i: {
-    qno: "2981",
-    title: "Find Longest Special Substring That Occurs Thrice I",
-    tags: [
-      "Hash Table",
-      "String",
-      "Binary Search",
-      "Sliding Window",
-      "Counting",
-    ],
-    default: "Binary Search",
+  minimum_levels_to_gain_more_points: {
+    qno: "3096",
+    title: "Minimum Levels to Gain More Points",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 42.8,
+    acceptance: 40.3,
   },
-  earliest_second_to_mark_indices_ii: {
-    qno: "3049",
-    title: "Earliest Second to Mark Indices II",
-    tags: ["Array", "Binary Search", "Greedy", "Heap (Priority Queue)"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 22.6,
-  },
-  earliest_second_to_mark_indices_i: {
-    qno: "3048",
-    title: "Earliest Second to Mark Indices I",
-    tags: ["Array", "Binary Search"],
-    default: "Binary Search",
+  taking_maximum_energy_from_the_mystic_dungeon: {
+    qno: "3147",
+    title: "Taking Maximum Energy From the Mystic Dungeon",
+    tags: ["Array", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 35.7,
+    acceptance: 40.4,
   },
-  find_beautiful_indices_in_the_given_array_ii: {
-    qno: "3008",
-    title: "Find Beautiful Indices in the Given Array II",
-    tags: [
-      "Two Pointers",
-      "String",
-      "Binary Search",
-      "Rolling Hash",
-      "String Matching",
-      "Hash Function",
-    ],
-    default: "Binary Search",
+  find_all_possible_stable_binary_arrays_i: {
+    qno: "3129",
+    title: "Find All Possible Stable Binary Arrays I",
+    tags: ["Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
+    difficulty: "Medium",
+    language: "Java",
+    acceptance: 26.8,
+  },
+  find_all_possible_stable_binary_arrays_ii: {
+    qno: "3130",
+    title: "Find All Possible Stable Binary Arrays II",
+    tags: ["Dynamic Programming", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 24.4,
-  },
-  find_the_median_of_the_uniqueness_array: {
-    qno: "3134",
-    title: "Find the Median of the Uniqueness Array",
-    tags: ["Array", "Hash Table", "Binary Search", "Sliding Window"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 28.3,
-  },
-  minimum_sum_of_values_by_dividing_array: {
-    qno: "3117",
-    title: "Minimum Sum of Values by Dividing Array",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Bit Manipulation",
-      "Segment Tree",
-      "Queue",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 27.4,
-  },
-  kth_smallest_amount_with_single_denomination_combination: {
-    qno: "3116",
-    title: "Kth Smallest Amount With Single Denomination Combination",
-    tags: [
-      "Array",
-      "Math",
-      "Binary Search",
-      "Bit Manipulation",
-      "Combinatorics",
-      "Number Theory",
-    ],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 16.2,
-  },
-  find_the_number_of_subarrays_where_boundary_elements_are_maximum: {
-    qno: "3113",
-    title: "Find the Number of Subarrays Where Boundary Elements Are Maximum",
-    tags: ["Array", "Binary Search", "Stack", "Monotonic Stack"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 29.4,
+    acceptance: 27.7,
   },
   "find_longest_self-contained_substring": {
     qno: "3104",
     title: "Find Longest Self-Contained Substring",
     tags: ["Hash Table", "String", "Binary Search", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Hard",
     language: "Java",
-    acceptance: 57.9,
+    acceptance: 58.2,
   },
-  find_products_of_elements_of_big_array: {
-    qno: "3145",
-    title: "Find Products of Elements of Big Array",
-    tags: ["Array", "Binary Search", "Bit Manipulation"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 24,
-  },
-  find_the_index_of_permutation: {
-    qno: "3109",
-    title: "Find the Index of Permutation",
-    tags: [
-      "Array",
-      "Binary Search",
-      "Divide and Conquer",
-      "Binary Indexed Tree",
-      "Segment Tree",
-      "Merge Sort",
-      "Ordered Set",
-    ],
-    default: "Binary Search",
+  "find_the_n-th_value_after_k_seconds": {
+    qno: "3179",
+    title: "Find the N-th Value After K Seconds",
+    tags: ["Array", "Math", "Simulation", "Combinatorics", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 41.9,
-  },
-  maximum_points_inside_the_square: {
-    qno: "3143",
-    title: "Maximum Points Inside the Square",
-    tags: ["Array", "Hash Table", "String", "Binary Search", "Sorting"],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 38.5,
+    acceptance: 54.7,
   },
   special_array_ii: {
     qno: "3152",
     title: "Special Array II",
     tags: ["Array", "Binary Search", "Prefix Sum"],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
     acceptance: 29.7,
   },
-  block_placement_queries: {
-    qno: "3161",
-    title: "Block Placement Queries",
-    tags: ["Array", "Binary Search", "Binary Indexed Tree", "Segment Tree"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 13.3,
-  },
-  find_subarray_with_bitwise_or_closest_to_k: {
-    qno: "3171",
-    title: "Find Subarray With Bitwise OR Closest to K",
-    tags: ["Array", "Binary Search", "Bit Manipulation", "Segment Tree"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 30.8,
-  },
-  maximum_total_damage_with_spell_casting: {
-    qno: "3186",
-    title: "Maximum Total Damage With Spell Casting",
+  minimum_operations_to_make_binary_array_elements_equal_to_one_i: {
+    qno: "3191",
+    title: "Minimum Operations to Make Binary Array Elements Equal to One I",
     tags: [
       "Array",
-      "Hash Table",
-      "Two Pointers",
-      "Binary Search",
-      "Dynamic Programming",
-      "Sorting",
-      "Counting",
-    ],
-    default: "Binary Search",
-    difficulty: "Medium",
-    language: "Java",
-    acceptance: 25.5,
-  },
-  equalize_strings_by_adding_or_removing_characters_at_ends: {
-    qno: "3135",
-    title: "Equalize Strings by Adding or Removing Characters at Ends",
-    tags: [
-      "String",
-      "Binary Search",
-      "Dynamic Programming",
+      "Bit Manipulation",
+      "Queue",
       "Sliding Window",
-      "Hash Function",
+      "Prefix Sum",
     ],
-    default: "Binary Search",
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 56.5,
+    acceptance: 71,
   },
-  maximum_number_of_upgradable_servers: {
-    qno: "3155",
-    title: "Maximum Number of Upgradable Servers",
-    tags: ["Array", "Math", "Binary Search"],
-    default: "Binary Search",
+  count_submatrices_with_equal_frequency_of_x_and_y: {
+    qno: "3212",
+    title: "Count Submatrices With Equal Frequency of X and Y",
+    tags: ["Array", "Matrix", "Prefix Sum"],
+    default: "Prefix Sum",
     difficulty: "Medium",
     language: "Java",
-    acceptance: 53.1,
-  },
-  number_of_subarrays_with_and_value_of_k: {
-    qno: "3209",
-    title: "Number of Subarrays With AND Value of K",
-    tags: ["Array", "Binary Search", "Bit Manipulation", "Segment Tree"],
-    default: "Binary Search",
-    difficulty: "Hard",
-    language: "Java",
-    acceptance: 32.2,
+    acceptance: 50.7,
   },
 };
 
