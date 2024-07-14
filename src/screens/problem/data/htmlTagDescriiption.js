@@ -1872,6 +1872,187 @@ void postorderRec(TreeNode root) {
       <br />
     </>
   ),
+  "Prefix Sum": (
+    <>
+      <p>
+        Prefix sum is a powerful technique often used in algorithm problems to
+        quickly compute the sum of elements in a subarray. By precomputing the
+        cumulative sums of elements up to each index, we can answer range sum
+        queries in constant time.
+      </p>
+
+      <h2>Definition</h2>
+      <p>
+        The prefix sum array for a given array <code>nums</code> is an array{" "}
+        <code>prefix</code> where <code>prefix[i]</code> is the sum of the
+        elements from the start of the array up to index <code>i</code>.
+        Formally:
+      </p>
+      <p>
+        <code>prefix[i] = sum(nums[j])</code> where <code>j</code> ranges from{" "}
+        <code>0</code> to <code>i</code>
+      </p>
+
+      <h2>Construction</h2>
+      <p>
+        To construct the prefix sum array, we can use the following iterative
+        approach:
+      </p>
+      <ul>
+        <li>
+          Initialize an array <code>prefix</code> of the same length as{" "}
+          <code>nums</code> and set <code>prefix[0] = nums[0]</code>.
+        </li>
+        <li>
+          For each index <code>i</code> from 1 to <code>n-1</code> (where{" "}
+          <code>n</code> is the length of <code>nums</code>), set:
+          <ul>
+            <li>
+              <code>prefix[i] = prefix[i-1] + nums[i]</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example</h2>
+      <p>
+        Let's consider an example with the array{" "}
+        <code>nums = [1, 2, 3, 4]</code>.
+      </p>
+      <ul>
+        <li>
+          Initialize <code>prefix[0] = 1</code> (since <code>nums[0] = 1</code>
+          ).
+        </li>
+        <li>
+          Compute the rest of the prefix sums:
+          <ul>
+            <li>
+              <code>prefix[1] = prefix[0] + nums[1] = 1 + 2 = 3</code>
+            </li>
+            <li>
+              <code>prefix[2] = prefix[1] + nums[2] = 3 + 3 = 6</code>
+            </li>
+            <li>
+              <code>prefix[3] = prefix[2] + nums[3] = 6 + 4 = 10</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        So, the prefix sum array is <code>prefix = [1, 3, 6, 10]</code>.
+      </p>
+
+      <h2>Range Sum Queries</h2>
+      <p>
+        Once we have the prefix sum array, we can quickly calculate the sum of
+        any subarray <code>nums[l, r]</code> (from index <code>l</code> to{" "}
+        <code>r</code>) using:
+      </p>
+      <p>
+        <code>sum(nums[l, r]) = prefix[r] - prefix[l-1]</code>
+      </p>
+      <p>
+        For <code>l = 0</code>, the sum is just <code>prefix[r]</code>.
+      </p>
+
+      <h2>Example of a LeetCode Problem</h2>
+      <p>
+        A classic LeetCode problem that uses prefix sums is{" "}
+        <a href="https://leetcode.com/problems/range-sum-query-immutable/">
+          Range Sum Query - Immutable
+        </a>
+        .
+      </p>
+
+      <h3>Problem Statement</h3>
+      <p>
+        Given an integer array <code>nums</code>, handle multiple queries of the
+        following type:
+      </p>
+      <ul>
+        <li>
+          Calculate the sum of the elements of <code>nums</code> between indices{" "}
+          <code>i</code> and <code>j</code> inclusive.
+        </li>
+      </ul>
+      <p>
+        Implement the <code>NumArray</code> class:
+      </p>
+      <ul>
+        <li>
+          <code>NumArray(int[] nums)</code> initializes the object with the
+          integer array <code>nums</code>.
+        </li>
+        <li>
+          <code>int sumRange(int i, int j)</code> returns the sum of the
+          elements of <code>nums</code> between indices <code>i</code> and{" "}
+          <code>j</code> inclusive (i.e.,{" "}
+          <code>nums[i] + nums[i + 1] + ... + nums[j]</code>).
+        </li>
+      </ul>
+
+      <h3>Solution</h3>
+      <pre>
+        <code>
+          {`class NumArray {
+    private int[] prefix;
+
+    public NumArray(int[] nums) {
+        int n = nums.length;
+        prefix = new int[n + 1]; // Create a prefix sum array with an extra element
+        prefix[0] = 0; // Prefix sum up to index -1 is 0
+        for (int i = 0; i < n; i++) {
+            prefix[i + 1] = prefix[i] + nums[i]; // Compute prefix sums
+        }
+    }
+
+    public int sumRange(int i, int j) {
+        return prefix[j + 1] - prefix[i]; // Use the prefix sum array to calculate range sum
+    }
+}`}
+        </code>
+      </pre>
+
+      <h3>Explanation</h3>
+      <ul>
+        <li>
+          <strong>Initialization:</strong>
+          <ul>
+            <li>
+              Create a prefix sum array with an extra element to handle sum
+              queries more conveniently.
+            </li>
+            <li>Initialize the first element of the prefix sum array to 0.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Prefix Sum Calculation:</strong>
+          <ul>
+            <li>
+              Iterate through the <code>nums</code> array and compute the
+              cumulative sums.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Range Sum Query:</strong>
+          <ul>
+            <li>
+              For a query <code>sumRange(i, j)</code>, return the difference
+              between <code>prefix[j + 1]</code> and <code>prefix[i]</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>
+        By using this approach, we can efficiently handle multiple range sum
+        queries in constant time after an initial <code>O(n)</code>{" "}
+        preprocessing step.
+      </p>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
