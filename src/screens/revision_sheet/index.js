@@ -61,16 +61,38 @@ const RevisionSheet = () => {
 
   useEffect(() => {
     fetchData();
+  }, []);
 
+  useEffect(() => {
     const handleKeydown = (event) => {
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
         event.preventDefault();
-        if (setUp.length !== 71) {
+        if (
+          data &&
+          up.length !==
+            Object.keys(data).filter((x) => data[x].length > 0).length
+        ) {
+          console.log(
+            up,
+            new Array(
+              Array.from(
+                Array(
+                  Object.keys(data).filter((x) => data[x].length > 0).length
+                )
+                  .keys()
+                  .map((x) => +x)
+              )
+            )
+          );
           setUp(
-            Array.from(
-              Array(71)
-                .keys()
-                .map((x) => +x)
+            new Array(
+              Array.from(
+                Array(
+                  Object.keys(data).filter((x) => data[x].length > 0).length
+                )
+                  .keys()
+                  .map((x) => +x)
+              )
             )
           );
         } else {
@@ -84,7 +106,7 @@ const RevisionSheet = () => {
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, []);
+  }, [up]);
 
   return (
     <Container>
