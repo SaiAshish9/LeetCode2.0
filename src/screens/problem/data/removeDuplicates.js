@@ -13759,7 +13759,7 @@ const obj2 = {
   read_n_characters_given_read4: {
     qno: "157",
     title: "Read N Characters Given Read4",
-    tags: [],
+    tags: ["Array", "Simulation", "Interactive"],
     default: "Interactive",
     difficulty: "Easy",
     language: "Java",
@@ -13768,7 +13768,7 @@ const obj2 = {
   "read_n_characters_given_read4_ii_-_call_multiple_times": {
     qno: "158",
     title: "Read N Characters Given read4 II - Call Multiple Times",
-    tags: [],
+    tags: ["Array", "Simulation", "Interactive"],
     default: "Interactive",
     difficulty: "Hard",
     language: "Java",
@@ -13777,7 +13777,7 @@ const obj2 = {
   find_the_celebrity: {
     qno: "277",
     title: "Find the Celebrity",
-    tags: [],
+    tags: ["Two Pointers", "Graph", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13786,7 +13786,7 @@ const obj2 = {
   first_bad_version: {
     qno: "278",
     title: "First Bad Version",
-    tags: [],
+    tags: ["Binary Search", "Interactive"],
     default: "Interactive",
     difficulty: "Easy",
     language: "Java",
@@ -13795,7 +13795,7 @@ const obj2 = {
   guess_number_higher_or_lower: {
     qno: "374",
     title: "Guess Number Higher or Lower",
-    tags: [],
+    tags: ["Binary Search", "Interactive"],
     default: "Interactive",
     difficulty: "Easy",
     language: "Java",
@@ -13804,7 +13804,7 @@ const obj2 = {
   search_in_a_sorted_array_of_unknown_size: {
     qno: "702",
     title: "Search in a Sorted Array of Unknown Size",
-    tags: [],
+    tags: ["Array", "Binary Search", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13813,7 +13813,7 @@ const obj2 = {
   robot_room_cleaner: {
     qno: "489",
     title: "Robot Room Cleaner",
-    tags: [],
+    tags: ["Backtracking", "Interactive"],
     default: "Interactive",
     difficulty: "Hard",
     language: "Java",
@@ -13822,7 +13822,7 @@ const obj2 = {
   guess_the_word: {
     qno: "843",
     title: "Guess the Word",
-    tags: [],
+    tags: ["Array", "Math", "String", "Interactive", "Game Theory"],
     default: "Interactive",
     difficulty: "Hard",
     language: "Java",
@@ -13831,7 +13831,7 @@ const obj2 = {
   find_in_mountain_array: {
     qno: "1095",
     title: "Find in Mountain Array",
-    tags: [],
+    tags: ["Array", "Binary Search", "Interactive"],
     default: "Interactive",
     difficulty: "Hard",
     language: "Java",
@@ -13840,7 +13840,7 @@ const obj2 = {
   number_of_ships_in_a_rectangle: {
     qno: "1274",
     title: "Number of Ships in a Rectangle",
-    tags: [],
+    tags: ["Array", "Divide and Conquer", "Interactive"],
     default: "Interactive",
     difficulty: "Hard",
     language: "Java",
@@ -13849,7 +13849,12 @@ const obj2 = {
   web_crawler: {
     qno: "1236",
     title: "Web Crawler",
-    tags: [],
+    tags: [
+      "String",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Interactive",
+    ],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13858,7 +13863,7 @@ const obj2 = {
   find_positive_integer_solution_for_a_given_equation: {
     qno: "1237",
     title: "Find Positive Integer Solution for a Given Equation",
-    tags: [],
+    tags: ["Math", "Two Pointers", "Binary Search", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13867,7 +13872,7 @@ const obj2 = {
   leftmost_column_with_at_least_a_one: {
     qno: "1428",
     title: "Leftmost Column with at Least a One",
-    tags: [],
+    tags: ["Array", "Binary Search", "Matrix", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13876,7 +13881,7 @@ const obj2 = {
   maximum_font_to_fit_a_sentence_in_a_screen: {
     qno: "1618",
     title: "Maximum Font to Fit a Sentence in a Screen",
-    tags: [],
+    tags: ["Array", "String", "Binary Search", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13885,7 +13890,7 @@ const obj2 = {
   find_the_index_of_the_large_integer: {
     qno: "1533",
     title: "Find the Index of the Large Integer",
-    tags: [],
+    tags: ["Array", "Binary Search", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13894,7 +13899,7 @@ const obj2 = {
   guess_the_majority_in_a_hidden_array: {
     qno: "1538",
     title: "Guess the Majority in a Hidden Array",
-    tags: [],
+    tags: ["Array", "Math", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13903,7 +13908,12 @@ const obj2 = {
   shortest_path_in_a_hidden_grid: {
     qno: "1778",
     title: "Shortest Path in a Hidden Grid",
-    tags: [],
+    tags: [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Interactive",
+    ],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13912,7 +13922,13 @@ const obj2 = {
   minimum_path_cost_in_a_hidden_grid: {
     qno: "1810",
     title: "Minimum Path Cost in a Hidden Grid",
-    tags: [],
+    tags: [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Interactive",
+    ],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13921,7 +13937,7 @@ const obj2 = {
   count_houses_in_a_circular_street: {
     qno: "2728",
     title: "Count Houses in a Circular Street",
-    tags: [],
+    tags: ["Array", "Interactive"],
     default: "Interactive",
     difficulty: "Easy",
     language: "Java",
@@ -13930,7 +13946,7 @@ const obj2 = {
   number_of_unique_categories: {
     qno: "2782",
     title: "Number of Unique Categories",
-    tags: [],
+    tags: ["Union Find", "Interactive", "Counting"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13939,7 +13955,7 @@ const obj2 = {
   number_of_equal_numbers_blocks: {
     qno: "2936",
     title: "Number of Equal Numbers Blocks",
-    tags: [],
+    tags: ["Array", "Binary Search", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13948,7 +13964,7 @@ const obj2 = {
   guess_the_number_using_bitwise_questions_i: {
     qno: "3064",
     title: "Guess the Number Using Bitwise Questions I",
-    tags: [],
+    tags: ["Bit Manipulation", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
@@ -13957,7 +13973,7 @@ const obj2 = {
   guess_the_number_using_bitwise_questions_ii: {
     qno: "3094",
     title: "Guess the Number Using Bitwise Questions II",
-    tags: [],
+    tags: ["Bit Manipulation", "Interactive"],
     default: "Interactive",
     difficulty: "Medium",
     language: "Java",
