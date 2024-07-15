@@ -68,7 +68,13 @@ const RevisionSheet = () => {
         event.preventDefault();
         setPressedK((p) => !p);
         if (pressedK) {
-          setUp(Array.from(Array(71).keys()));
+          setUp(
+            Array.from(
+              Array(71)
+                .keys()
+                .map((x) => +x)
+            )
+          );
         } else {
           setUp([]);
         }
@@ -141,10 +147,10 @@ const RevisionSheet = () => {
                       e.preventDefault();
                       e.stopPropagation();
                       if (!up.includes(key)) {
-                        setUp([...up, key]);
+                        setUp([...up, +key]);
                       } else {
                         let temp = up.slice();
-                        temp = temp.filter((x) => x !== key);
+                        temp = temp.filter((x) => x !== +key);
                         setUp(temp);
                       }
                     }}
