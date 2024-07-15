@@ -18,7 +18,6 @@ const RevisionSheet = () => {
   const [data, setData] = useState(null);
   const [count, setCount] = useState(0);
   const [up, setUp] = useState([]);
-  const [pressedK, setPressedK] = useState(false);
 
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -66,8 +65,7 @@ const RevisionSheet = () => {
     const handleKeydown = (event) => {
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
         event.preventDefault();
-        setPressedK((p) => !p);
-        if (pressedK) {
+        if (setUp.length !== 71) {
           setUp(
             Array.from(
               Array(71)
