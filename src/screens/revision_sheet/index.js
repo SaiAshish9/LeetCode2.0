@@ -18,6 +18,7 @@ const RevisionSheet = () => {
   const [data, setData] = useState(null);
   const [count, setCount] = useState(0);
   const [up, setUp] = useState([]);
+  const [pressedK, setPressedK] = useState(false);
 
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -61,6 +62,24 @@ const RevisionSheet = () => {
 
   useEffect(() => {
     fetchData();
+
+    const handleKeydown = (event) => {
+      if ((event.metaKey || event.ctrlKey) && event.key === "k") {
+        event.preventDefault();
+        setPressedK((p) => !p);
+        if (pressedK) {
+          setUp(Array.from(Array(71).keys()));
+        } else {
+          setUp([]);
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeydown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
   }, []);
 
   return (
@@ -92,7 +111,7 @@ const RevisionSheet = () => {
               *Note: Click on the tag name highlighted in a different color to
               view descriptions and time and space complexities of various
               operations. Use the arrow keys to collapse or expand selected
-              questions.
+              questions. Use Cmd + K to toggle the view of all tag questions."
             </ContentText>
           </>
         )}{" "}
