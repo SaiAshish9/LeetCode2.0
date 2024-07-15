@@ -680,6 +680,11 @@ const obj1 = {
         "class Solution {\n    public boolean canWinNim(int n) {\n        return n % 4 != 0;\n    }\n}\n",
     },
   },
+  294: {
+    java: {
+      "game-theory": "",
+    },
+  },
   295: {
     java: {
       "two-pointers": "",
@@ -903,6 +908,11 @@ const obj1 = {
   374: {
     java: {
       interactive: "",
+    },
+  },
+  375: {
+    java: {
+      "game-theory": "",
     },
   },
   378: {
@@ -1130,6 +1140,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  464: {
+    java: {
+      "game-theory": "",
+    },
+  },
   470: {
     java: {
       "rejection-sampling":
@@ -1167,6 +1182,11 @@ const obj1 = {
     java: {
       array:
         "class Solution {\n    public int findMaxConsecutiveOnes(int[] nums) {\n        int maxCount = 0;\n        int currentCount = 0;\n        \n        for (int num : nums) {\n            if (num == 1) {\n                currentCount++;\n                maxCount = Math.max(maxCount, currentCount);\n            } else {\n                currentCount = 0;\n            }\n        }\n        \n        return maxCount;\n    }\n}\n",
+    },
+  },
+  486: {
+    java: {
+      "game-theory": "",
     },
   },
   487: {
@@ -1963,6 +1983,11 @@ const obj1 = {
   876: {
     java: {
       "two-pointers": "",
+    },
+  },
+  877: {
+    java: {
+      "game-theory": "",
     },
   },
   880: {
@@ -2943,6 +2968,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  1406: {
+    java: {
+      "game-theory": "",
+    },
+  },
   1413: {
     java: {
       "prefix-sum": "",
@@ -3126,6 +3156,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  1510: {
+    java: {
+      "game-theory": "",
+    },
+  },
   1514: {
     java: {
       "heap-(priority-queue)": "",
@@ -3185,6 +3220,16 @@ const obj1 = {
   1559: {
     java: {
       matrix: "",
+    },
+  },
+  1561: {
+    java: {
+      "game-theory": "",
+    },
+  },
+  1563: {
+    java: {
+      "game-theory": "",
     },
   },
   1568: {
@@ -3419,6 +3464,11 @@ const obj1 = {
     java: {
       "monotonic-queue":
         "class Solution {\n    public int boxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {\n        int length = boxes.length;\n        int[] ports = new int[length + 1];\n        int[] weights = new int[length + 1];\n        int[] differences = new int[length + 1];\n        long[] prefixWeights = new long[length + 1];\n        for (int i = 1; i <= length; i++) {\n            ports[i] = boxes[i - 1][0];\n            weights[i] = boxes[i - 1][1];\n            if (i > 1)\n                differences[i] = differences[i - 1] + (ports[i - 1] != ports[i] ? 1 : 0);\n            prefixWeights[i] = prefixWeights[i - 1] + weights[i];\n        }\n        Deque<Integer> deque = new LinkedList<Integer>();\n        deque.offerLast(0);\n        int[] dp = new int[length + 1];\n        int[] remain = new int[length + 1];\n        for (int i = 1; i <= length; i++) {\n            while (!deque.isEmpty() && (i - deque.peekFirst() > maxBoxes || prefixWeights[i] - prefixWeights[deque.peekFirst()] > maxWeight))\n                deque.pollFirst();\n            dp[i] = remain[deque.peekFirst()] + differences[i] + 2;\n            if (i != length) {\n                remain[i] = dp[i] - differences[i + 1];\n                while (!deque.isEmpty() && remain[i] <= remain[deque.peekLast()])\n                    deque.pollLast();\n                deque.offerLast(i);\n            }\n        }\n        return dp[length];\n    }\n}",
+    },
+  },
+  1690: {
+    java: {
+      "game-theory": "",
     },
   },
   1695: {
@@ -3869,6 +3919,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1927: {
+    java: {
+      "game-theory": "",
+    },
+  },
   1930: {
     java: {
       "prefix-sum": "",
@@ -3980,6 +4035,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  2005: {
+    java: {
+      "game-theory": "",
+    },
+  },
   2009: {
     java: {
       "sliding-window":
@@ -4027,6 +4087,11 @@ const obj1 = {
       "prefix-sum": "",
     },
   },
+  2029: {
+    java: {
+      "game-theory": "",
+    },
+  },
   2030: {
     java: {
       "monotonic-stack": "",
@@ -4051,6 +4116,11 @@ const obj1 = {
   2035: {
     java: {
       "two-pointers": "",
+    },
+  },
+  2038: {
+    java: {
+      "game-theory": "",
     },
   },
   2046: {
@@ -5923,129 +5993,309 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  292: {
+  218: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  294: {
+  220: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  375: {
+  315: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  464: {
+  327: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  486: {
+  352: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  810: {
+  363: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  843: {
+  456: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  877: {
+  493: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  913: {
+  497: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1025: {
+  635: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1140: {
+  683: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1406: {
+  699: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1510: {
+  715: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1561: {
+  716: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1563: {
+  729: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1686: {
+  731: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1690: {
+  732: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1728: {
+  850: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1872: {
+  855: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1908: {
+  895: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  1927: {
+  975: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  2005: {
+  1348: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  2029: {
+  1418: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  2038: {
+  1438: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
     },
   },
-  2868: {
+  1606: {
     java: {
-      "game-theory": "",
+      "ordered-set": "",
+    },
+  },
+  1649: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  1675: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  1756: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  1818: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  1825: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  1902: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  1912: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2021: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2031: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2034: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2035: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2102: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2158: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2179: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2213: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2251: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2254: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2276: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2349: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2353: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2363: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2382: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2424: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2426: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2519: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2612: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2613: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2659: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2713: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2762: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2763: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  2817: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  3073: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  3092: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  3102: {
+    java: {
+      "ordered-set": "",
+    },
+  },
+  3109: {
+    java: {
+      "ordered-set": "",
     },
   },
 };
