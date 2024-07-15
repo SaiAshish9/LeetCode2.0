@@ -67,36 +67,15 @@ const RevisionSheet = () => {
     const handleKeydown = (event) => {
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
         event.preventDefault();
-        if (
-          data &&
-          up.length !==
-            Object.keys(data).filter((x) => data[x].length > 0).length
-        ) {
-          console.log(
-            up,
-            new Array(
-              Array.from(
-                Array(
-                  Object.keys(data).filter((x) => data[x].length > 0).length
-                )
-                  .keys()
-                  .map((x) => +x)
-              )
-            )
-          );
-          setUp(
-            new Array(
-              Array.from(
-                Array(
-                  Object.keys(data).filter((x) => data[x].length > 0).length
-                )
-                  .keys()
-                  .map((x) => +x)
-              )
-            )
-          );
-        } else {
-          setUp([]);
+        if (data) {
+          const dataLength = Object.keys(data).filter(
+            (x) => data[x].length > 0
+          ).length;
+          if (up.length !== dataLength) {
+            setUp(Array.from({ length: dataLength }, (_, index) => index));
+          } else {
+            setUp([]);
+          }
         }
       }
     };
@@ -106,7 +85,7 @@ const RevisionSheet = () => {
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, [up]);
+  }, [data, up]);
 
   return (
     <Container>
@@ -137,7 +116,7 @@ const RevisionSheet = () => {
               *Note: Click on the tag name highlighted in a different color to
               view descriptions and time and space complexities of various
               operations. Use the arrow keys to collapse or expand selected
-              questions. Use Cmd + K to toggle the view of all tag questions."
+              questions. Use Cmd (⌘) + K to toggle the view of all tag questions."
             </ContentText>
           </>
         )}{" "}
