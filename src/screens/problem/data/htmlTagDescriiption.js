@@ -2053,6 +2053,155 @@ void postorderRec(TreeNode root) {
       </p>
     </>
   ),
+  "Game Theory": (
+    <>
+      <p>
+        Game theory is a branch of mathematics that studies strategic
+        interactions between rational decision-makers. In the context of
+        LeetCode, game theory problems involve scenarios where two or more
+        players make decisions to maximize their respective payoffs or minimize
+        their losses. Here are the main concepts of game theory as applied to
+        LeetCode problems:
+      </p>
+
+      <h2>Key Concepts</h2>
+      <ul>
+        <li>
+          <strong>Players</strong>
+          <ul>
+            <li>
+              The decision-makers in the game. In LeetCode problems, this
+              usually involves two players taking turns, making decisions, and
+              trying to optimize their outcomes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Strategies</strong>
+          <ul>
+            <li>
+              A plan of action a player follows in a given game. In LeetCode
+              problems, strategies involve choosing the best possible moves from
+              a set of available options.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Payoffs</strong>
+          <ul>
+            <li>
+              The rewards or outcomes that players receive based on their
+              choices. The objective is often to maximize one's score or to
+              guarantee a win.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Games</strong>
+          <ul>
+            <li>
+              <strong>Zero-Sum Games</strong>: Many LeetCode game theory
+              problems are zero-sum games, where one player's gain is another
+              player's loss.
+            </li>
+            <li>
+              <strong>Perfect Information</strong>: Most problems assume perfect
+              information, meaning both players have complete knowledge of the
+              game state and the sequence of possible moves.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Examples of Game Theory Problems on LeetCode</h2>
+      <ul>
+        <li>
+          <a href="https://leetcode.com/problems/nim-game/">Nim Game (292)</a>
+          <ul>
+            <li>
+              <strong>Scenario</strong>: Players take turns removing 1 to 3
+              stones from a heap. The player who removes the last stone wins.
+            </li>
+            <li>
+              <strong>Strategy</strong>: The game can be analyzed using modular
+              arithmetic to determine the winning strategy.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/stone-game/">
+            Stone Game (877)
+          </a>
+          <ul>
+            <li>
+              <strong>Scenario</strong>: Players take turns picking stones from
+              either end of an array of piles. Each pile has a positive number
+              of stones. The objective is to maximize the number of stones
+              collected.
+            </li>
+            <li>
+              <strong>Strategy</strong>: Use dynamic programming to determine
+              the optimal moves for both players.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/predict-the-winner/">
+            Predict the Winner (486)
+          </a>
+          <ul>
+            <li>
+              <strong>Scenario</strong>: Similar to the Stone Game, players take
+              turns picking numbers from either end of an array to maximize
+              their total score.
+            </li>
+            <li>
+              <strong>Strategy</strong>: Dynamic programming or minimax
+              algorithm can be used to predict the winner assuming both players
+              play optimally.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/flip-game-ii/">
+            Flip Game II (294)
+          </a>
+          <ul>
+            <li>
+              <strong>Scenario</strong>: Players take turns flipping two
+              consecutive "++" into "--". The game ends when no more moves can
+              be made, and the last player to make a move wins.
+            </li>
+            <li>
+              <strong>Strategy</strong>: Use recursion and memoization to
+              determine if the starting player can guarantee a win.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Solving Game Theory Problems</h2>
+      <ul>
+        <li>
+          <strong>Understand the Game Rules</strong>: Clearly understand how
+          players take turns and how the game progresses.
+        </li>
+        <li>
+          <strong>Model the Game State</strong>: Represent the game state using
+          appropriate data structures (arrays, strings, etc.).
+        </li>
+        <li>
+          <strong>Determine Optimal Strategies</strong>: Use techniques like
+          dynamic programming, recursion, minimax algorithms, and memoization to
+          evaluate the best possible moves.
+        </li>
+        <li>
+          <strong>Predict Opponent Moves</strong>: Consider the opponent's
+          possible moves and optimize your strategy accordingly.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
