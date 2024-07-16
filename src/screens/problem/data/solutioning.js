@@ -27075,6 +27075,149 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </li>
     </ul>
   ),
+  "1044_rolling_hash": (
+    <>
+      <p>
+        This Java solution uses a combination of binary search and the
+        Rabin-Karp algorithm with polynomial rolling hash to find the longest
+        duplicate substring in a given string <code>s</code>.
+      </p>
+
+      <h2>Class and Method Structure</h2>
+      <ul>
+        <li>
+          <strong>Class:</strong> <code>Solution</code>
+        </li>
+        <li>
+          <strong>Main Method:</strong>{" "}
+          <code>longestDupSubstring(String s)</code>
+        </li>
+        <li>
+          <strong>Helper Method:</strong>{" "}
+          <code>getStart(String s, int k, int[] pows, int kMod)</code>
+        </li>
+        <li>
+          <strong>Helper Method:</strong> <code>val(char c)</code>
+        </li>
+      </ul>
+
+      <h2>
+        Main Method: <code>longestDupSubstring(String s)</code>
+      </h2>
+      <ul>
+        <li>
+          Initializes constants and variables:
+          <ul>
+            <li>
+              <code>kMod</code>: A large prime number used for modulus to
+              minimize hash collisions.
+            </li>
+            <li>
+              <code>n</code>: Length of the string <code>s</code>.
+            </li>
+            <li>
+              <code>pows</code>: Array to store powers of 26 modulo{" "}
+              <code>kMod</code>.
+            </li>
+            <li>
+              <code>bestStart</code>: Tracks the starting index of the longest
+              duplicate substring found.
+            </li>
+            <li>
+              <code>left</code> and <code>right</code>: Used for binary search
+              on substring length.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Precomputes powers of 26 modulo <code>kMod</code>:
+          <ul>
+            <li>
+              Fills the <code>pows</code> array with values{" "}
+              <code>26^i % kMod</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Binary Search to find the maximum length of the duplicate substring:
+          <ul>
+            <li>
+              Calculates mid-point <code>mid</code> and uses{" "}
+              <code>getStart</code> to check if there's a duplicate substring of
+              length <code>mid</code>.
+            </li>
+            <li>
+              If found, updates <code>bestStart</code> and adjusts{" "}
+              <code>left</code> and <code>right</code> accordingly.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Returns the longest duplicate substring found:
+          <ul>
+            <li>Handles edge cases where no duplicate is found.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>
+        Helper Method:{" "}
+        <code>getStart(String s, int k, int[] pows, int kMod)</code>
+      </h2>
+      <ul>
+        <li>
+          Initializes a map to store hashes and their starting indices:
+          <ul>
+            <li>
+              <code>hashToStarts</code>: Maps hash values to lists of starting
+              indices.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Computes the initial hash for the first substring of length{" "}
+          <code>k</code>:
+          <ul>
+            <li>Calculates hash using polynomial rolling hash.</li>
+          </ul>
+        </li>
+        <li>
+          Uses a rolling hash to check all substrings of length <code>k</code>:
+          <ul>
+            <li>Updates the hash as the window slides over the string.</li>
+            <li>
+              Checks if the current hash exists in <code>hashToStarts</code>{" "}
+              map.
+            </li>
+            <li>
+              If a match is found, verifies the substring by comparing actual
+              strings.
+            </li>
+            <li>Adds the current hash and starting index to the map.</li>
+          </ul>
+        </li>
+        <li>
+          Returns the starting index of the duplicate substring if found,
+          otherwise -1.
+        </li>
+      </ul>
+
+      <h2>
+        Helper Method: <code>val(char c)</code>
+      </h2>
+      <ul>
+        <li>
+          Converts a character <code>c</code> to its corresponding integer
+          value:
+          <ul>
+            <li>
+              Subtracts 'a' from <code>c</code> to get a value between 0 and 25.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
