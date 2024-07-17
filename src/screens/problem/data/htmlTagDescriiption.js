@@ -4005,7 +4005,7 @@ public class Main {
         <li>
           <h3>What is a Bitmask?</h3> <br />
           <p>
-            a bitmask is a technique that uses the properties of binary numbers
+            A bitmask is a technique that uses the properties of binary numbers
             to represent or manipulate subsets of elements or states. Here's an
             explanation of how bitmasking is used in problem-solving on
             LeetCode:
