@@ -4758,9 +4758,6 @@ def gcd(a, b):
   ),
   "Union Find": (
     <>
-      <h1>Union-Find in LeetCode</h1>
-
-      <h2>What is Union-Find?</h2>
       <ul>
         <li>
           <strong>Union-Find</strong> (or Disjoint Set Union) is a data
