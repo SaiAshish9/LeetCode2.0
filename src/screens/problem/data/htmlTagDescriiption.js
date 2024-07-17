@@ -3959,7 +3959,6 @@ public class Main {
         </li>
       </ul>
       <h2>Trie Operations Complexity</h2>
-      <br />
       <ul>
         <li>
           <strong>Insertion:</strong>
