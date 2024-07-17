@@ -4003,7 +4003,7 @@ public class Main {
     <>
       <ul>
         <li>
-          <h3>What is a Bitmask?</h3>
+          <h3>What is a Bitmask?</h3> <br />
           <p>
             Binary Representation: Bitmasks use binary digits (bits) to
             represent subsets of elements or states. <br />
@@ -4011,7 +4011,6 @@ public class Main {
             (|), XOR (^), and shifting (&lt;&lt;, &gt;&gt;) to manipulate and
             check subsets efficiently.
           </p>
-          <br />
           <ul>
             <li>
               <strong>Binary Representation:</strong> Bitmasks use binary digits
@@ -4027,8 +4026,8 @@ public class Main {
           </ul>
         </li>
         <li>
-          <h3>Typical Uses in LeetCode Problems:</h3>
-          <ol>
+          <h3>Typical Uses in LeetCode Problems:</h3> <br />
+          <ul>
             <li>
               <h4>Subset Generation:</h4>
               <ul>
@@ -4070,7 +4069,7 @@ public class Main {
                 </li>
               </ul>
             </li>
-          </ol>
+          </ul>
         </li>
         <li>
           <h3>Advantages of Bitmasking:</h3>
