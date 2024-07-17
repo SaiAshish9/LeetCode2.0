@@ -1809,6 +1809,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  459: {
+    java: {
+      "string-matching": "",
+    },
+  },
   460: {
     java: {
       "doubly-linked-list":
@@ -2292,6 +2297,11 @@ const obj1 = {
         "import java.util.Arrays;\n\npublic class Solution {\n    public int triangleNumber(int[] nums) {\n        Arrays.sort(nums);\n        int count = 0;\n        for (int i = nums.length - 1; i >= 2; i--) {\n            int left = 0, right = i - 1;\n            while (left < right) {\n                if (nums[left] + nums[right] > nums[i]) {\n                    count += right - left;\n                    right--;\n                } else {\n                    left++;\n                }\n            }\n        }\n        return count;\n    }\n}\n",
     },
   },
+  616: {
+    java: {
+      "string-matching": "",
+    },
+  },
   617: {
     java: {
       tree: "",
@@ -2526,6 +2536,11 @@ const obj1 = {
     java: {
       "sliding-window":
         "class Solution {\n    public int kEmptySlots(int[] bulbs, int k) {\n      int n = bulbs.length;\n        int ans = Integer.MAX_VALUE;\n        int[] day = new int[n]; // day[i] will store the day when bulb at position (i+1) is turned on\n\n        for (int i = 0; i < n; ++i)\n            day[bulbs[i] - 1] = i + 1;\n\n        int left = 0;\n        int right = left + k + 1;\n        \n        for (int i = 1; right < n; ++i) {\n            if (i == right) {\n                ans = Math.min(ans, Math.max(day[left], day[right]));\n                left = i;\n                right = i + k + 1;\n            } else if (day[i] < Math.max(day[left], day[right])) {\n                left = i;\n                right = i + k + 1;\n            }\n        }\n\n        return ans == Integer.MAX_VALUE ? -1 : ans;\n    }\n}\n",
+    },
+  },
+  686: {
+    java: {
+      "string-matching": "",
     },
   },
   687: {
@@ -2772,6 +2787,11 @@ const obj1 = {
         "class Solution {\n\n    public String crackSafe(int n, int k) {\n        if (n == 1) {\n            StringBuilder sb = new StringBuilder();\n            for (int i = 0; i < k; i++) {\n                sb.append(i);\n            }\n            return sb.toString();\n        }\n\n        StringBuilder result = new StringBuilder();\n        Set<String> visited = new HashSet<>();\n        Stack<String> stack = new Stack<>();\n        String start = String.join('', Collections.nCopies(n - 1, '0'));\n        stack.push(start);\n\n        while (!stack.isEmpty()) {\n            String node = stack.peek();\n            boolean hasUnvisitedEdge = false;\n\n            // Try all possible edges from this node by appending each digit from 0 to k-1\n            for (int i = 0; i < k; i++) {\n                String next = node + i;\n                if (!visited.contains(next)) {\n                    visited.add(next);\n                    stack.push(next.substring(1));\n                    hasUnvisitedEdge = true;\n                    break;\n                }\n            }\n\n            // If all edges from this node are visited, backtrack and append the last\n            // character to the result\n            if (!hasUnvisitedEdge) {\n                result.append(stack.pop().charAt(node.length() - 1));\n            }\n        }\n\n        result.append(start.substring(0, start.length() - 1));\n        return result.toString();\n    }\n\n    // public String crackSafe(int n, int k) {\n    // StringBuilder result = new StringBuilder();\n    // Set<String> visited = new HashSet<>();\n    // String start = String.join('', Collections.nCopies(n - 1, '0'));\n    // dfs(start, k, visited, result, n);\n    // result.append(start);\n    // return result.toString();\n    // }\n    // private void dfs(String node, int k, Set<String> visited, StringBuilder\n    // result, int n) {\n    // for (int i = 0; i < k; i++) {\n    // String next = node + i;\n    // if (!visited.contains(next)) {\n    // visited.add(next);\n    // dfs(next.substring(1), k, visited, result, n);\n    // result.append(i);\n    // }\n    // }\n    // }\n\n}",
     },
   },
+  758: {
+    java: {
+      "string-matching": "",
+    },
+  },
   759: {
     java: {
       "heap-(priority-queue)": "",
@@ -2900,6 +2920,11 @@ const obj1 = {
   795: {
     java: {
       "two-pointers": "",
+    },
+  },
+  796: {
+    java: {
+      "string-matching": "",
     },
   },
   797: {
@@ -4686,6 +4711,11 @@ const obj1 = {
   1406: {
     java: {
       "game-theory": "",
+    },
+  },
+  1408: {
+    java: {
+      "string-matching": "",
     },
   },
   1411: {
@@ -6752,6 +6782,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2185: {
+    java: {
+      "string-matching": "",
+    },
+  },
   2188: {
     java: {
       "dynamic-programming": "",
@@ -7031,6 +7066,11 @@ const obj1 = {
   2300: {
     java: {
       "two-pointers": "",
+    },
+  },
+  2301: {
+    java: {
+      "string-matching": "",
     },
   },
   2302: {
@@ -9295,154 +9335,189 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  28: {
+  149: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  214: {
+  223: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  459: {
+  335: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  572: {
+  469: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  616: {
+  478: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  686: {
+  587: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  758: {
+  593: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  796: {
+  812: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  1023: {
+  836: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  1392: {
+  858: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  1397: {
+  883: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  1408: {
+  892: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  1455: {
+  939: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  1668: {
+  963: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  1764: {
+  973: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  2185: {
+  1030: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  2223: {
+  1037: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  2301: {
+  1232: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  2430: {
+  1266: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  2851: {
+  1401: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3006: {
+  1453: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3008: {
+  1515: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3023: {
+  1610: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3029: {
+  1828: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3031: {
+  1924: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3034: {
+  1956: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3036: {
+  2101: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3037: {
+  2152: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3042: {
+  2249: {
     java: {
-      "string-matching": "",
+      geometry: "",
     },
   },
-  3045: {
+  2280: {
     java: {
-      "string-matching": "",
+      geometry: "",
+    },
+  },
+  2481: {
+    java: {
+      geometry: "",
+    },
+  },
+  2613: {
+    java: {
+      geometry: "",
+    },
+  },
+  3009: {
+    java: {
+      geometry: "",
+    },
+  },
+  3025: {
+    java: {
+      geometry: "",
+    },
+  },
+  3027: {
+    java: {
+      geometry: "",
+    },
+  },
+  3047: {
+    java: {
+      geometry: "",
+    },
+  },
+  3102: {
+    java: {
+      geometry: "",
     },
   },
 };

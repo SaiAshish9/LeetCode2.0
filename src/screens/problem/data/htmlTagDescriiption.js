@@ -3335,6 +3335,134 @@ public class Solution {
       </ul>
     </>
   ),
+  Geometry: (
+    <>
+      <p>
+        The "geometry" tag in LeetCode refers to problems that involve geometric
+        shapes, spatial relationships, and computational geometry algorithms.
+        These problems often require applying mathematical concepts to solve
+        problems related to points, lines, angles, polygons, and more.
+      </p>
+
+      <h2>Key Concepts:</h2>
+      <ul>
+        <li>
+          <strong>Geometric Shapes</strong>:
+          <ul>
+            <li>
+              Problems involving points, lines, circles, triangles, rectangles,
+              and other geometric primitives.
+            </li>
+            <li>
+              Tasks can include determining intersections, calculating areas,
+              perimeters, or distances between points.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Spatial Relationships</strong>:
+          <ul>
+            <li>
+              Identifying positions relative to geometric objects, such as
+              inside, outside, or on the boundary.
+            </li>
+            <li>
+              Dealing with concepts like convex hulls, centroid, and geometric
+              transformations.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Computational Geometry Algorithms</strong>:
+          <ul>
+            <li>
+              Efficient algorithms for solving geometric problems, often
+              involving sorting, searching, and geometric data structures.
+            </li>
+            <li>
+              Examples include algorithms for line sweeping, Voronoi diagrams,
+              and triangulation.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Applications in Problems:</h2>
+      <ul>
+        <li>
+          <strong>Intersection Problems</strong>:
+          <ul>
+            <li>
+              Detecting intersections between geometric objects like lines,
+              segments, or circles.
+            </li>
+            <li>
+              Examples: Line Sweep Algorithm (LeetCode 218), Intersection of Two
+              Arrays (LeetCode 350).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Area and Perimeter Calculations</strong>:
+          <ul>
+            <li>Calculating areas of polygons, rectangles, or circles.</li>
+            <li>
+              Examples: Rectangle Area (LeetCode 223), Minimum Area Rectangle
+              (LeetCode 939).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Geometric Transformations</strong>:
+          <ul>
+            <li>Rotating, translating, or scaling geometric objects.</li>
+            <li>
+              Examples: Rotate Image (LeetCode 48), Construct the Rectangle
+              (LeetCode 492).
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Problems:</h2>
+      <ul>
+        <li>
+          <strong>LeetCode 587 - Erect the Fence</strong>:
+          <ul>
+            <li>Determining the convex hull of a set of points.</li>
+            <li>
+              Requires understanding of geometric algorithms like Graham's scan
+              or Andrew's monotone chain.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>LeetCode 816 - Ambiguous Coordinates</strong>:
+          <ul>
+            <li>
+              Generating valid coordinates from a string representing ambiguous
+              coordinates.
+            </li>
+            <li>
+              Involves parsing and checking for valid geometric transformations.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>LeetCode 963 - Minimum Area Rectangle II</strong>:
+          <ul>
+            <li>
+              Finding the minimum area rectangle that can be formed with any
+              three points on a plane.
+            </li>
+            <li>
+              Utilizes concepts of distance, slopes, and geometric calculations.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
   // add dijkstra and floyd warshall algorithm as well
 };
 
