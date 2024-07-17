@@ -2836,7 +2836,7 @@ public class Permutations {
         the same inputs occur again. This can significantly reduce the time
         complexity of problems that have overlapping subproblems.
       </p>
-
+      <br />
       <h2>Key Concepts:</h2>
       <ul>
         <li>
