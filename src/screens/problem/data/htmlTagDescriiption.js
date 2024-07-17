@@ -3611,6 +3611,173 @@ public class Solution {
           </ul>
         </li>
       </ul>
+      <br />
+      <pre>
+        <code>{`class FenwickTree {
+  public FenwickTree(int n) {
+    sums = new int[n + 1];
+  }
+
+  public void add(int i, int delta) {
+    while (i < sums.length) {
+      sums[i] += delta;
+      i += lowbit(i);
+    }
+  }
+
+  public int get(int i) {
+    int sum = 0;
+    while (i > 0) {
+      sum += sums[i];
+      i -= lowbit(i);
+    }
+    return sum;
+  }
+
+  private int[] sums;
+
+  private static int lowbit(int i) {
+    return i & -i;
+  }
+}`}</code>
+      </pre>
+      <br />
+      <p>
+        The <code>FenwickTree</code> class is an implementation of a Binary
+        Indexed Tree (BIT) that supports efficient prefix sum calculations and
+        updates. Below is a detailed explanation of the class and its methods:
+      </p>
+      <h2>Class Definition:</h2>
+      <ul>
+        <li>
+          <code>FenwickTree</code>:
+          <ul>
+            <li>
+              Constructs a Fenwick Tree (Binary Indexed Tree) for an array of
+              size <code>n</code>.
+            </li>
+            <li>
+              Initializes an internal array <code>sums</code> to store
+              cumulative sums, with size <code>n + 1</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Constructor:</h2>
+      <ul>
+        <li>
+          <code>public FenwickTree(int n)</code>:
+          <ul>
+            <li>
+              Initializes the <code>sums</code> array with <code>n + 1</code>{" "}
+              elements.
+            </li>
+            <li>
+              The extra element (at index 0) simplifies calculations, as the
+              tree is 1-indexed.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Methods:</h2>
+      <ul>
+        <li>
+          <code>public void add(int i, int delta)</code>:
+          <ul>
+            <li>
+              Adds <code>delta</code> to the element at index <code>i</code> in
+              the Fenwick Tree.
+            </li>
+            <li>
+              Iteratively updates the <code>sums</code> array to reflect the
+              change.
+              <ul>
+                <li>
+                  Uses a loop to propagate the change to all relevant indices.
+                </li>
+                <li>
+                  Increments <code>i</code> by its lowest set bit (using the{" "}
+                  <code>lowbit</code> method) in each iteration.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>public int get(int i)</code>:
+          <ul>
+            <li>
+              Calculates the prefix sum from the start of the array to index{" "}
+              <code>i</code>.
+            </li>
+            <li>
+              Iteratively sums the values in the <code>sums</code> array.
+              <ul>
+                <li>
+                  Uses a loop to accumulate the sum from all relevant indices.
+                </li>
+                <li>
+                  Decrements <code>i</code> by its lowest set bit (using the{" "}
+                  <code>lowbit</code> method) in each iteration.
+                </li>
+              </ul>
+            </li>
+            <li>Returns the calculated sum.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Helper Method:</h2>
+      <ul>
+        <li>
+          <code>private static int lowbit(int i)</code>:
+          <ul>
+            <li>
+              Calculates and returns the lowest set bit of <code>i</code>.
+            </li>
+            <li>
+              Uses the bitwise AND operation: <code>i & -i</code>.
+            </li>
+            <li>
+              Example:
+              <ul>
+                <li>
+                  If <code>i = 6</code> (binary <code>110</code>),{" "}
+                  <code>lowbit(6)</code> returns <code>2</code> (binary{" "}
+                  <code>010</code>).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Usage:</h2>
+      <ul>
+        <li>
+          <code>FenwickTree fenwickTree = new FenwickTree(5);</code>
+          <ul>
+            <li>Creates a Fenwick Tree for an array of size 5.</li>
+          </ul>
+        </li>
+        <li>
+          <code>fenwickTree.add(3, 5);</code>
+          <ul>
+            <li>Adds 5 to the element at index 3.</li>
+            <li>
+              Updates the internal <code>sums</code> array to reflect this
+              change.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>int sum = fenwickTree.get(3);</code>
+          <ul>
+            <li>
+              Calculates the prefix sum from the start of the array to index 3.
+            </li>
+            <li>Returns the calculated sum.</li>
+          </ul>
+        </li>
+      </ul>
     </>
   ),
 };
