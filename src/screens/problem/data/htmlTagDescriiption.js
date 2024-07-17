@@ -3013,7 +3013,6 @@ public class Solution {
   ),
   "Shortest Path": (
     <>
-      <h1>Shortest Path in LeetCode</h1>
       <p>
         The "Shortest Path" is a common algorithmic problem that aims to find
         the shortest distance or minimum number of steps required to travel
