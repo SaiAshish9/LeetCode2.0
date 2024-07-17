@@ -3464,6 +3464,136 @@ public class Solution {
     </>
   ),
   // add dijkstra and floyd warshall algorithm as well
+  "Binary Indexed Tree": (
+    <>
+      {" "}
+      <p>
+        The "Binary Indexed Tree" (BIT), also known as Fenwick Tree, is a
+        specialized data structure that allows efficient updates and prefix sum
+        calculations in arrays. It is particularly useful for solving problems
+        where frequent updates and sum queries on prefix ranges are required.
+      </p>
+      <h2>Key Concepts:</h2>
+      <ul>
+        <li>
+          <strong>Prefix Sum Calculation</strong>:
+          <ul>
+            <li>
+              Allows quick computation of cumulative sums of elements up to any
+              index in an array.
+            </li>
+            <li>Supports efficient updates and queries on prefix sums.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Operations</strong>:
+          <ul>
+            <li>
+              <strong>Update Operation</strong>: Adjusts the value of an element
+              in the array and updates the corresponding prefix sums.
+            </li>
+            <li>
+              <strong>Query Operation</strong>: Computes the sum of elements in
+              a prefix range from the start of the array up to any index.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Structure</strong>:
+          <ul>
+            <li>
+              Implemented as an array where each element maintains cumulative
+              sums based on specific index calculations.
+            </li>
+            <li>
+              Efficiently handles updates and queries using bitwise operations.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Applications in Problems:</h2>
+      <ul>
+        <li>
+          <strong>Range Sum Queries</strong>:
+          <ul>
+            <li>
+              Calculating sums of elements within a specified range efficiently.
+            </li>
+            <li>
+              Examples: Range Sum Query - Immutable (LeetCode 303), Range Sum
+              Query 2D - Mutable (LeetCode 308).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Frequency Counting</strong>:
+          <ul>
+            <li>
+              Maintaining counts of elements and efficiently querying
+              frequencies.
+            </li>
+            <li>
+              Examples: Count of Smaller Numbers After Self (LeetCode 315),
+              Count of Range Sum (LeetCode 327).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Coordinate Compression</strong>:
+          <ul>
+            <li>
+              Mapping and compressing coordinate values to efficiently manage
+              and query ranges.
+            </li>
+            <li>
+              Examples: Count of Range Sums (LeetCode 327), Reverse Pairs
+              (LeetCode 493).
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Problems:</h2>
+      <ul>
+        <li>
+          <strong>LeetCode 307 - Range Sum Query - Mutable</strong>:
+          <ul>
+            <li>
+              Supports both point updates and range sum queries using BIT.
+            </li>
+            <li>
+              Updates and queries are performed in logarithmic time relative to
+              the array size.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>LeetCode 315 - Count of Smaller Numbers After Self</strong>:
+          <ul>
+            <li>
+              Uses BIT to maintain and query frequencies of numbers after
+              processing each element.
+            </li>
+            <li>
+              Efficiently counts smaller elements following each element in an
+              array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>LeetCode 327 - Count of Range Sum</strong>:
+          <ul>
+            <li>
+              Applies BIT to count ranges of sums within a specified interval.
+            </li>
+            <li>
+              Handles large input sizes efficiently by compressing coordinate
+              values.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
