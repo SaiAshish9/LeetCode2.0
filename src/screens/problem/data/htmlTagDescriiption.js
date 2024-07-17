@@ -4909,6 +4909,7 @@ def gcd(a, b):
         </li>
         <li>
           <strong>Solution</strong>:
+          <br />
           <pre>
             <code>
               {`def countComponents(n, edges):
