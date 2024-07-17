@@ -4003,7 +4003,156 @@ public class Main {
     <>
       <ul>
         <li>
-          <strong>Setting a Bit:</strong>
+          <h3>What is a Bitmask?</h3>
+          <ul>
+            <li>
+              <strong>Binary Representation:</strong> Bitmasks use binary digits
+              (bits) to represent subsets of elements or states.
+            </li>
+            <li>
+              <strong>Binary Operations:</strong> They leverage bitwise
+              operations like AND (<code>&</code>), OR (<code>|</code>), XOR (
+              <code>^</code>), and shifting (<code>&lt;&lt;</code>,{" "}
+              <code>&gt;&gt;</code>) to manipulate and check subsets
+              efficiently.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Typical Uses in LeetCode Problems:</h3>
+          <ol>
+            <li>
+              <h4>Subset Generation:</h4>
+              <ul>
+                <li>
+                  <strong>Example:</strong> Given a set of elements, generate
+                  all possible subsets.
+                </li>
+                <li>
+                  <strong>Approach:</strong> Use bitmasking where each bit
+                  represents whether an element is included in the subset or
+                  not.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>State Representation:</h4>
+              <ul>
+                <li>
+                  <strong>Example:</strong> Solve problems involving states
+                  (e.g., states in a game, combinations of choices).
+                </li>
+                <li>
+                  <strong>Approach:</strong> Use bitmasking to represent
+                  different states and transitions between them.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>Subset Sum or Permutations:</h4>
+              <ul>
+                <li>
+                  <strong>Example:</strong> Find subsets with a specific sum or
+                  generate permutations.
+                </li>
+                <li>
+                  <strong>Approach:</strong> Iterate through all possible
+                  subsets or permutations using bitmasking.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h3>Advantages of Bitmasking:</h3>
+          <ul>
+            <li>
+              <strong>Efficiency:</strong> Bitwise operations are fast and can
+              efficiently handle large sets of elements.
+            </li>
+            <li>
+              <strong>Compact Representation:</strong> Representing subsets or
+              states with bits is memory-efficient compared to storing them
+              explicitly.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Example Problem:</h3>
+          <p>
+            <strong>Problem:</strong> Given an array of integers, find all
+            subsets that sum up to a specific target.
+          </p>
+          <p>
+            <strong>Solution (Using Bitmasking):</strong>
+          </p>
+          <pre>
+            <code>
+              {`function subsetsWithSum(nums, target) {
+    let n = nums.length;
+    let result = [];
+    
+    for (let i = 0; i &lt; (1 &lt;&lt; n); i++) {
+        let subsetSum = 0;
+        let subset = [];
+        
+        for (let j = 0; j &lt; n; j++) {
+            if (i & (1 &lt;&lt; j)) {
+                subsetSum += nums[j];
+                subset.push(nums[j]);
+            }
+        }
+        
+        if (subsetSum === target) {
+            result.push(subset);
+        }
+    }
+    
+    return result;
+}`}
+            </code>
+          </pre>
+          <p>
+            <strong>Explanation:</strong>
+          </p>
+          <ul>
+            <li>
+              <code>1 &lt;&lt; n</code> generates all possible subsets using
+              bitmasking (from 0 to \( 2^n - 1 \)).
+            </li>
+            <li>
+              <code>i & (1 &lt;&lt; j)</code> checks if the j-th element is
+              included in the current subset (<code>i</code>).
+            </li>
+            <li>
+              <code>subsetSum</code> calculates the sum of elements in the
+              current subset.
+            </li>
+            <li>
+              If <code>subsetSum</code> equals <code>target</code>, the subset
+              is added to <code>result</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Summary:</h3>
+          <ul>
+            <li>
+              Bitmasking is a powerful technique in problem-solving on LeetCode,
+              especially for dealing with subsets, permutations, and state
+              representations.
+            </li>
+            <li>
+              It leverages binary operations to efficiently explore and
+              manipulate combinations and states, making complex problems more
+              manageable and computationally efficient.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h3>Setting a Bit:</h3>
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
@@ -4020,7 +4169,7 @@ public class Main {
           </ul>
         </li>
         <li>
-          <strong>Clearing a Bit:</strong>
+          <h3>Clearing a Bit:</h3>
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
@@ -4037,7 +4186,7 @@ public class Main {
           </ul>
         </li>
         <li>
-          <strong>Toggling a Bit:</strong>
+          <h3>Toggling a Bit:</h3>
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
@@ -4054,7 +4203,7 @@ public class Main {
           </ul>
         </li>
         <li>
-          <strong>Checking if a Bit is Set:</strong>
+          <h3>Checking if a Bit is Set:</h3>
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
@@ -4071,7 +4220,7 @@ public class Main {
           </ul>
         </li>
         <li>
-          <strong>Iterating through Subsets:</strong>
+          <h3>Iterating through Subsets:</h3>
           <ul>
             <li>
               <strong>Operation:</strong> Iterate from <code>0</code> to{" "}
@@ -4089,6 +4238,24 @@ public class Main {
               <code>{(1, 2)}</code>, <code>{(0, 1, 2)}</code>.
             </li>
           </ul>
+        </li>
+      </ul>
+
+      <h2>Time and Space Complexities</h2>
+
+      <ul>
+        <li>
+          <strong>Time Complexity:</strong> Operations involving bitmasking (
+          <code>|</code>, <code>&</code>, <code>&lt;&lt;</code>,{" "}
+          <code>&gt;&gt;</code>, <code>~</code>) are generally <code>O(1)</code>{" "}
+          because they are executed in constant time relative to the size of the
+          bitmask (typically 32 or 64 bits).
+        </li>
+        <li>
+          <strong>Space Complexity:</strong> The space complexity depends on the
+          number of bits required to store the bitmask, which is{" "}
+          <code>O(1)</code> in practical terms since it's a fixed-size
+          representation.
         </li>
       </ul>
     </>
