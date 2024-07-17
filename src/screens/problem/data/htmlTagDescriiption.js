@@ -4756,6 +4756,214 @@ def gcd(a, b):
       </ul>
     </>
   ),
+  "Union Find": (
+    <>
+      <h1>Union-Find in LeetCode</h1>
+
+      <h2>What is Union-Find?</h2>
+      <ul>
+        <li>
+          <strong>Union-Find</strong> (or Disjoint Set Union) is a data
+          structure that keeps track of a partition of a set into disjoint
+          subsets.
+        </li>
+        <li>
+          It supports two primary operations:
+          <ul>
+            <li>
+              <strong>Find</strong>: Determine which subset a particular element
+              is in. This can be used to determine if two elements are in the
+              same subset.
+            </li>
+            <li>
+              <strong>Union</strong>: Join two subsets into a single subset.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Typical Uses in LeetCode Problems:</h2>
+      <ul>
+        <li>
+          <strong>Connected Components</strong>:
+          <ul>
+            <li>
+              <strong>Example</strong>: Determine the number of connected
+              components in a graph.
+            </li>
+            <li>
+              <strong>Approach</strong>: Use Union-Find to group connected
+              nodes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Cycle Detection</strong>:
+          <ul>
+            <li>
+              <strong>Example</strong>: Detect cycles in an undirected graph.
+            </li>
+            <li>
+              <strong>Approach</strong>: Use Union-Find to detect if adding an
+              edge creates a cycle.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Kruskal's Algorithm</strong>:
+          <ul>
+            <li>
+              <strong>Example</strong>: Find the Minimum Spanning Tree (MST) of
+              a graph.
+            </li>
+            <li>
+              <strong>Approach</strong>: Use Union-Find to efficiently check for
+              cycles while adding edges in Kruskal's algorithm.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Advantages of Union-Find:</h2>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: Both the Find and Union operations can be
+          performed in nearly constant time, O(α(N)), where α is the inverse
+          Ackermann function, which grows very slowly.
+        </li>
+        <li>
+          <strong>Simplicity</strong>: The Union-Find data structure is simple
+          to implement and use.
+        </li>
+      </ul>
+
+      <h2>Union-Find Operations:</h2>
+      <ul>
+        <li>
+          <strong>Initialization</strong>:
+          <ul>
+            <li>
+              <strong>Operation</strong>: Initialize the parent array where each
+              element is its own parent and the rank array to keep track of tree
+              heights.
+              <pre>
+                <code>
+                  {`class UnionFind:
+    def __init__(self, size):
+        self.parent = [i for i in range(size)]
+        self.rank = [1] * size`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Find</strong>:
+          <ul>
+            <li>
+              <strong>Operation</strong>: Find the root of the element with path
+              compression to flatten the structure, improving future queries.
+              <pre>
+                <code>
+                  {`def find(self, p):
+    if self.parent[p] != p:
+        self.parent[p] = self.find(self.parent[p])
+    return self.parent[p]`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Union</strong>:
+          <ul>
+            <li>
+              <strong>Operation</strong>: Union two elements by rank to keep the
+              tree shallow, improving performance.
+              <pre>
+                <code>
+                  {`def union(self, p, q):
+    rootP = self.find(p)
+    rootQ = self.find(q)
+    if rootP != rootQ:
+        if self.rank[rootP] > self.rank[rootQ]:
+            self.parent[rootQ] = rootP
+        elif self.rank[rootP] < self.rank[rootQ]:
+            self.parent[rootP] = rootQ
+        else:
+            self.parent[rootQ] = rootP
+            self.rank[rootP] += 1`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>
+        Example Application: Finding the Number of Connected Components in a
+        Graph
+      </h2>
+      <ul>
+        <li>
+          <strong>Problem</strong>: Given n nodes labeled from 0 to n-1 and a
+          list of undirected edges, count the number of connected components in
+          the graph.
+        </li>
+        <li>
+          <strong>Solution</strong>:
+          <pre>
+            <code>
+              {`def countComponents(n, edges):
+    uf = UnionFind(n)
+    for p, q in edges:
+        uf.union(p, q)
+    return len(set(uf.find(i) for i in range(n)))
+
+class UnionFind:
+    def __init__(self, size):
+        self.parent = [i for i in range(size)]
+        self.rank = [1] * size
+
+    def find(self, p):
+        if self.parent[p] != p:
+            self.parent[p] = self.find(self.parent[p])
+        return self.parent[p]
+
+    def union(self, p, q):
+        rootP = self.find(p)
+        rootQ = self.find(q)
+        if rootP != rootQ:
+            if self.rank[rootP] > self.rank[rootQ]:
+                self.parent[rootQ] = rootP
+            elif self.rank[rootP] < self.rank[rootQ]:
+                self.parent[rootP] = rootQ
+            else:
+                self.parent[rootQ] = rootP
+                self.rank[rootP] += 1`}
+            </code>
+          </pre>
+        </li>
+      </ul>
+
+      <h2>Summary:</h2>
+      <ul>
+        <li>
+          <strong>Union-Find</strong>: A powerful data structure for efficiently
+          managing disjoint sets and performing union and find operations.
+        </li>
+        <li>
+          <strong>Common Applications</strong>: Include finding connected
+          components, cycle detection, and Kruskal's algorithm for MST.
+        </li>
+        <li>
+          <strong>Advantages</strong>: Provides nearly constant time complexity
+          for union and find operations, making it suitable for solving problems
+          on platforms like LeetCode.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
