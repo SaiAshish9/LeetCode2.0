@@ -3961,8 +3961,7 @@ public class Main {
 
       <p>Here's a basic visualization of a Trie:</p>
       <pre>
-        {`
-          root
+        {`root
           / \
          a   b
         /     \
