@@ -166,7 +166,7 @@ const RevisionSheet = () => {
                 </ContentText>
                 {up.includes(key) &&
                   data[item].map(
-                    (value, key) =>
+                    (value, _) =>
                       value.title && (
                         <ParentContent key={value.title}>
                           <TitleContainer
