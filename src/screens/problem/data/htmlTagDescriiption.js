@@ -4510,6 +4510,251 @@ public class Main {
       </ul>
     </>
   ),
+  "Number Theory": (
+    <>
+      {" "}
+      <h2>What is Number Theory?</h2>
+      <ul>
+        <li>
+          <strong>Number theory</strong> is the study of numbers and the
+          relationships between them. It involves concepts such as divisibility,
+          prime numbers, greatest common divisors (GCD), least common multiples
+          (LCM), modular arithmetic, and more.
+        </li>
+      </ul>
+      <h2>Typical Uses in LeetCode Problems:</h2>
+      <ul>
+        <li>
+          <strong>Divisibility and Factors</strong>:
+          <ul>
+            <li>
+              <strong>Example</strong>: Find all factors of a given number.
+            </li>
+            <li>
+              <strong>Approach</strong>: Iterate up to the square root of the
+              number to check for divisibility.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Prime Numbers</strong>:
+          <ul>
+            <li>
+              <strong>Example</strong>: Determine if a number is prime or
+              generate all prime numbers up to a certain limit.
+            </li>
+            <li>
+              <strong>Approach</strong>: Use the Sieve of Eratosthenes to find
+              all primes up to a given limit efficiently.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>
+            Greatest Common Divisor (GCD) and Least Common Multiple (LCM)
+          </strong>
+          :
+          <ul>
+            <li>
+              <strong>Example</strong>: Find the GCD or LCM of two numbers.
+            </li>
+            <li>
+              <strong>Approach</strong>: Use the Euclidean algorithm for GCD and
+              the relationship between GCD and LCM.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Modular Arithmetic</strong>:
+          <ul>
+            <li>
+              <strong>Example</strong>: Compute large powers modulo a number,
+              find modular inverses.
+            </li>
+            <li>
+              <strong>Approach</strong>: Use properties of modular arithmetic,
+              such as Fermat's Little Theorem for modular inverses.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Counting and Combinatorics</strong>:
+          <ul>
+            <li>
+              <strong>Example</strong>: Find the number of ways to distribute
+              items or count permutations/combinations.
+            </li>
+            <li>
+              <strong>Approach</strong>: Use combinatorial formulas and
+              properties.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Advantages of Number Theory:</h2>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: Many number theory algorithms are highly
+          efficient and can handle large inputs.
+        </li>
+        <li>
+          <strong>Mathematical Insight</strong>: Provides deep insights into the
+          properties of numbers, which can simplify complex problems.
+        </li>
+      </ul>
+      <h2>Number Theory Operations:</h2>
+      <ul>
+        <li>
+          <strong>Prime Checking</strong>:
+          <ul>
+            <li>
+              <strong>Operation</strong>: Check if a number is prime by testing
+              divisibility up to its square root.
+            </li>
+            <li>
+              <strong>Example</strong>:
+              <pre>
+                <code>
+                  {`def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sieve of Eratosthenes</strong>:
+          <ul>
+            <li>
+              <strong>Operation</strong>: Generate all prime numbers up to a
+              given limit.
+            </li>
+            <li>
+              <strong>Example</strong>:
+              <pre>
+                <code>
+                  {`def sieve_of_eratosthenes(limit):
+    is_prime = [True] * (limit + 1)
+    p = 2
+    while p * p <= limit:
+        if is_prime[p]:
+            for i in range(p * p, limit + 1, p):
+                is_prime[i] = False
+        p += 1
+    return [p for p in range(2, limit + 1) if is_prime[p]]`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>GCD using Euclidean Algorithm</strong>:
+          <ul>
+            <li>
+              <strong>Operation</strong>: Compute the greatest common divisor of
+              two numbers.
+            </li>
+            <li>
+              <strong>Example</strong>:
+              <pre>
+                <code>
+                  {`def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>LCM using GCD</strong>:
+          <ul>
+            <li>
+              <strong>Operation</strong>: Compute the least common multiple of
+              two numbers using their GCD.
+            </li>
+            <li>
+              <strong>Example</strong>:
+              <pre>
+                <code>
+                  {`def lcm(a, b):
+    return a * b // gcd(a, b)`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Modular Exponentiation</strong>:
+          <ul>
+            <li>
+              <strong>Operation</strong>: Compute (base^exp) % mod efficiently.
+            </li>
+            <li>
+              <strong>Example</strong>:
+              <pre>
+                <code>
+                  {`def modular_exponentiation(base, exp, mod):
+    result = 1
+    base = base % mod
+    while exp > 0:
+        if (exp % 2) == 1:
+            result = (result * base) % mod
+        exp = exp >> 1
+        base = (base * base) % mod
+    return result`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Application: Finding the GCD of an Array</h2>
+      <ul>
+        <li>
+          <strong>Problem</strong>: Given an array of integers, find the
+          greatest common divisor (GCD) of the array.
+        </li>
+        <li>
+          <strong>Solution</strong>:
+          <pre>
+            <code>
+              {`from functools import reduce
+
+def gcd_of_array(arr):
+    return reduce(gcd, arr)
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a`}
+            </code>
+          </pre>
+        </li>
+      </ul>
+      <h2>Summary:</h2>
+      <ul>
+        <li>
+          <strong>Number Theory</strong>: Provides powerful tools and insights
+          for solving problems involving numbers.
+        </li>
+        <li>
+          <strong>Common Operations</strong>: Include prime checking, GCD/LCM
+          computation, modular arithmetic, and more.
+        </li>
+        <li>
+          <strong>Advantages</strong>: Algorithms are efficient and can handle
+          large inputs, providing deep mathematical insights.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
