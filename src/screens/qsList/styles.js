@@ -191,7 +191,7 @@ export const TitleContainer = styled.div`
   ${({ maxW }) =>
     maxW &&
     css`
-      max-width: 200px;
+      width: 200px;
     `};
 `;
 
