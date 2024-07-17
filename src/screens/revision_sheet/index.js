@@ -43,7 +43,11 @@ const RevisionSheet = () => {
               value &&
               value.tags &&
               value.tags.length > 0 &&
-              value.tags.includes(key)
+              value.tags.includes(
+                key === "Probability and Statistics"
+                  ? "Probability And Statistics"
+                  : key
+              )
             ) {
               temp[key].push(value);
             }
@@ -116,7 +120,8 @@ const RevisionSheet = () => {
               *Note: Click on the tag name highlighted in a different color to
               view descriptions and time and space complexities of various
               operations. Use the arrow keys to collapse or expand selected
-              questions. Use Cmd (⌘) + K to toggle the view of all tag questions.
+              questions. Use Cmd (⌘) + K to toggle the view of all tag
+              questions.
             </ContentText>
           </>
         )}{" "}
