@@ -3011,6 +3011,201 @@ public class Solution {
       </ul>
     </>
   ),
+  "Shortest Path": (
+    <>
+      <h1>Shortest Path in LeetCode</h1>
+      <p>
+        The "Shortest Path" is a common algorithmic problem that aims to find
+        the shortest distance or minimum number of steps required to travel
+        between two points, usually in a graph or grid. This concept is widely
+        used in many LeetCode problems.
+      </p>
+
+      <h2>Key Concepts:</h2>
+      <ul>
+        <li>
+          <strong>Graph Representation</strong>:
+          <ul>
+            <li>
+              Graphs can be represented using adjacency lists, adjacency
+              matrices, or edge lists.
+            </li>
+            <li>
+              Nodes (vertices) and edges (connections) form the basis of the
+              graph.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Common Algorithms</strong>:
+          <ul>
+            <li>
+              <strong>Breadth-First Search (BFS)</strong>:
+              <ul>
+                <li>Used for unweighted graphs or grids.</li>
+                <li>
+                  Explores all neighbors at the present depth before moving on
+                  to nodes at the next depth level.
+                </li>
+                <li>
+                  Guarantees finding the shortest path in terms of the number of
+                  edges (or steps).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Dijkstra's Algorithm</strong>:
+              <ul>
+                <li>Used for weighted graphs.</li>
+                <li>
+                  Finds the shortest path from a source node to all other nodes.
+                </li>
+                <li>
+                  Maintains a priority queue to explore the next closest node.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>A*</strong>:
+              <ul>
+                <li>
+                  Used for weighted graphs, similar to Dijkstra's but with a
+                  heuristic to improve efficiency.
+                </li>
+                <li>
+                  Combines the cost to reach a node and the estimated cost to
+                  the goal.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Applications in LeetCode Problems</strong>:
+          <ul>
+            <li>
+              <strong>Grids</strong>:
+              <ul>
+                <li>Finding the shortest path in 2D grids with obstacles.</li>
+                <li>
+                  Examples: Shortest Path in a Grid with Obstacles Elimination
+                  (LeetCode 1293), Shortest Path in Binary Matrix (LeetCode
+                  1091).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Graphs</strong>:
+              <ul>
+                <li>
+                  Finding the shortest path in unweighted or weighted graphs.
+                </li>
+                <li>
+                  Examples: Network Delay Time (LeetCode 743), Cheapest Flights
+                  Within K Stops (LeetCode 787).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Strings</strong>:
+              <ul>
+                <li>
+                  Transforming one string to another in the minimum number of
+                  operations.
+                </li>
+                <li>
+                  Examples: Word Ladder (LeetCode 127), Minimum Genetic Mutation
+                  (LeetCode 433).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Common Strategies:</h2>
+      <ul>
+        <li>
+          <strong>BFS for Unweighted Problems</strong>:
+          <ul>
+            <li>Use a queue to explore nodes layer by layer.</li>
+            <li>Track visited nodes to avoid cycles.</li>
+            <li>Suitable for problems where each step has the same cost.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Dijkstra's for Weighted Problems</strong>:
+          <ul>
+            <li>
+              Use a priority queue to always expand the shortest known distance
+              node.
+            </li>
+            <li>Update the shortest path estimates for neighboring nodes.</li>
+            <li>
+              Best for finding the shortest path in graphs with varying edge
+              weights.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>A* for Heuristic Search</strong>:
+          <ul>
+            <li>
+              Incorporate a heuristic to prioritize nodes likely to lead to the
+              goal.
+            </li>
+            <li>
+              Combine the actual cost to a node with an estimated cost to the
+              goal.
+            </li>
+            <li>
+              Effective for pathfinding in large, complex graphs or grids.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Problems and Solutions:</h2>
+      <ul>
+        <li>
+          <strong>LeetCode 127 - Word Ladder</strong>:
+          <ul>
+            <li>
+              Use BFS to transform one word to another with the shortest
+              sequence of transformations.
+            </li>
+            <li>
+              Each transformation changes one letter and must be a valid word
+              from the given list.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>LeetCode 1091 - Shortest Path in Binary Matrix</strong>:
+          <ul>
+            <li>
+              Use BFS to find the shortest path from the top-left corner to the
+              bottom-right corner of a binary matrix.
+            </li>
+            <li>Only move to neighboring cells that are 0 (walkable).</li>
+          </ul>
+        </li>
+        <li>
+          <strong>LeetCode 743 - Network Delay Time</strong>:
+          <ul>
+            <li>
+              Use Dijkstra's algorithm to find the shortest time for all nodes
+              to receive a signal from a starting node.
+            </li>
+            <li>
+              Each edge has a travel time, and the goal is to minimize the time
+              for the signal to reach all nodes.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;

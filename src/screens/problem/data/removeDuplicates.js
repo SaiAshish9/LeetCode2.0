@@ -31,6 +31,12 @@ const obj1 = {
         'public class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        int[] charIndex = new int[128]; \n        int left = 0, right = 0;\n        int maxLength = 0;\n\n        while (right < s.length()) {\n            char right = s.charAt(right);\n            left = Math.max(charIndex[right], left);\n            maxLength = Math.max(maxLength, right - left + 1);\n            charIndex[right] = right + 1;\n            right++;\n        }\n\n        return maxLength;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        String input = "abcabcbb";\n        int result = sol.lengthOfLongestSubstring(input);\n        System.out.println("Length of Longest Substring Without Repeating Characters: " + result);\n    }\n}',
     },
   },
+  4: {
+    java: {
+      "divide-and-conquer":
+        "public class Solution {\n    public double findMedianSortedArrays(int[] nums1, int[] nums2) {\n        if (nums1.length > nums2.length) {\n            return findMedianSortedArrays(nums2, nums1);\n        }\n\n        int x = nums1.length;\n        int y = nums2.length;\n        int low = 0, high = x;\n\n        while (low <= high) {\n            int partitionX = (low + high) / 2;\n            int partitionY = (x + y + 1) / 2 - partitionX;\n\n            int maxX = (partitionX == 0) ? Integer.MIN_VALUE : nums1[partitionX - 1];\n            int minX = (partitionX == x) ? Integer.MAX_VALUE : nums1[partitionX];\n\n            int maxY = (partitionY == 0) ? Integer.MIN_VALUE : nums2[partitionY - 1];\n            int minY = (partitionY == y) ? Integer.MAX_VALUE : nums2[partitionY];\n\n            if (maxX <= minY && maxY <= minX) {\n                if ((x + y) % 2 == 0) {\n                    return ((double) Math.max(maxX, maxY) + Math.min(minX, minY)) / 2;\n                } else {\n                    return (double) Math.max(maxX, maxY);\n                }\n            } else if (maxX > minY) {\n                high = partitionX - 1;\n            } else {\n                low = partitionX + 1;\n            }\n        }\n\n        throw new IllegalArgumentException();\n    }\n}",
+    },
+  },
   5: {
     java: {
       "two-pointers":
@@ -97,6 +103,8 @@ const obj1 = {
     java: {
       "merge-sort":
         "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode mergeKLists(ListNode[] lists) {\n        if (lists == null || lists.length == 0) {\n            return null;\n        }\n        return mergeKLists(lists, 0, lists.length - 1);\n    }\n    \n    private ListNode mergeKLists(ListNode[] lists, int left, int right) {\n        if (left == right) {\n            return lists[left];\n        }\n        int mid = left + (right - left) / 2;\n        ListNode l1 = mergeKLists(lists, left, mid);\n        ListNode l2 = mergeKLists(lists, mid + 1, right);\n        return mergeTwoLists(l1, l2);\n    }\n    \n    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        \n        while (l1 != null && l2 != null) {\n            if (l1.val < l2.val) {\n                current.next = l1;\n                l1 = l1.next;\n            } else {\n                current.next = l2;\n                l2 = l2.next;\n            }\n            current = current.next;\n        }\n        \n        if (l1 != null) {\n            current.next = l1;\n        } else if (l2 != null) {\n            current.next = l2;\n        }\n        \n        return dummy.next;\n    }\n}\n",
+      "heap-(priority-queue)":
+        "/**\n * Definition for singly-linked list.\n * public class ListNode {\n * int val;\n * ListNode next;\n * ListNode() {}\n * ListNode(int val) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode mergeKLists(ListNode[] lists) {\n        ListNode dummy = new ListNode(0);\n        ListNode curr = dummy;\n        Queue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.val - b.val);\n\n        for (ListNode list : lists)\n            if (list != null)\n                minHeap.offer(list);\n\n        while (!minHeap.isEmpty()) {\n            ListNode minNode = minHeap.poll();\n            if (minNode.next != null)\n                minHeap.offer(minNode.next);\n            curr.next = minNode;\n            curr = curr.next;\n        }\n\n        return dummy.next;\n    }\n}",
     },
   },
   24: {
@@ -217,6 +225,8 @@ const obj1 = {
   53: {
     java: {
       "dynamic-programming": "",
+      "divide-and-conquer":
+        "public class Solution {\n    public int maxSubArray(int[] nums) {\n        return maxSubArrayHelper(nums, 0, nums.length - 1);\n    }\n\n    private int maxSubArrayHelper(int[] nums, int left, int right) {\n        if (left == right) {\n            return nums[left];\n        }\n\n        int mid = (left + right) / 2;\n        int leftMax = maxSubArrayHelper(nums, left, mid);\n        int rightMax = maxSubArrayHelper(nums, mid + 1, right);\n        int crossMax = findMaxCrossingSubarray(nums, left, mid, right);\n\n        return Math.max(leftMax, Math.max(rightMax, crossMax));\n    }\n\n    private int findMaxCrossingSubarray(int[] nums, int left, int mid, int right) {\n        int leftSum = Integer.MIN_VALUE;\n        int sum = 0;\n        for (int i = mid; i >= left; i--) {\n            sum += nums[i];\n            if (sum > leftSum) {\n                leftSum = sum;\n            }\n        }\n\n        int rightSum = Integer.MIN_VALUE;\n        sum = 0;\n        for (int i = mid + 1; i <= right; i++) {\n            sum += nums[i];\n            if (sum > rightSum) {\n                rightSum = sum;\n            }\n        }\n\n        return leftSum + rightSum;\n    }\n\n}",
     },
   },
   54: {
@@ -687,6 +697,11 @@ const obj1 = {
         "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        int left = 0;\n        int right = numbers.length - 1;\n\n        while (left < right) {\n            int sum = numbers[left] + numbers[right];\n            if (sum == target) {\n                return new int[] { left + 1, right + 1 };\n            } else if (sum < target) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n        \n        return new int[] {};\n    }\n}",
     },
   },
+  169: {
+    java: {
+      "divide-and-conquer": "",
+    },
+  },
   170: {
     java: {
       "two-pointers": "",
@@ -723,6 +738,16 @@ const obj1 = {
     java: {
       "two-pointers":
         "class Solution {\n    public void rotate(int[] nums, int k) {\n        k = k % nums.length;\n        reverse(nums, 0, nums.length - 1);\n        reverse(nums, 0, k - 1);\n        reverse(nums, k, nums.length - 1);\n    }\n\n    private void reverse(int[] nums, int start, int end) {\n        while (start < end) {\n            int temp = nums[start];\n            nums[start] = nums[end];\n            nums[end] = temp;\n            start++;\n            end--;\n        }\n    }\n}",
+    },
+  },
+  190: {
+    java: {
+      "divide-and-conquer": "",
+    },
+  },
+  191: {
+    java: {
+      "divide-and-conquer": "",
     },
   },
   192: {
@@ -1443,6 +1468,11 @@ const obj1 = {
   370: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  372: {
+    java: {
+      "divide-and-conquer": "",
     },
   },
   373: {
@@ -3310,6 +3340,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  932: {
+    java: {
+      "divide-and-conquer": "",
+    },
+  },
   933: {
     java: {
       queue: "",
@@ -3934,6 +3969,8 @@ const obj1 = {
   1137: {
     java: {
       "dynamic-programming": "",
+      memoization:
+        "public class Solution {\n    private HashMap<Integer, Integer> memo = new HashMap<>();\n\n    public int tribonacci(int n) {\n        if (n == 0)\n            return 0;\n        if (n == 1 || n == 2)\n            return 1;\n\n        if (memo.containsKey(n)) {\n            return memo.get(n);\n        }\n\n        int result = tribonacci(n - 1) + tribonacci(n - 2) + tribonacci(n - 3);\n        memo.put(n, result);\n\n        return result;\n    }\n\n}",
     },
   },
   1139: {
@@ -6182,6 +6219,11 @@ const obj1 = {
   1981: {
     java: {
       matrix: "",
+    },
+  },
+  1982: {
+    java: {
+      "divide-and-conquer": "",
     },
   },
   1983: {
@@ -9103,6 +9145,8 @@ const obj1 = {
   3154: {
     java: {
       "dynamic-programming": "",
+      memoization:
+        'class Solution {\n    HashMap<String, Integer> memoizeMap = new HashMap<>();\n    int K;\n\n    public int waysToReachStair(int k) {\n\n        K = k;\n        int index = 1;\n        int jump = 0;\n        boolean canJumpBack = true;\n\n        return solve(index, jump, canJumpBack);\n    }\n\n    public int solve(int index, int jump, boolean canJumpBack) {\n\n        if (index > K + 1) {\n            return 0;\n        }\n\n        String str = String.valueOf(index) + "_" + String.valueOf(jump) + "_" + String.valueOf(canJumpBack);\n\n        if (memoizeMap.containsKey(str)) {\n\n            return memoizeMap.get(str);\n        }\n\n        int totalWays = 0;\n\n        if (index == K) {\n            totalWays++;\n        }\n\n        if (canJumpBack == true) {\n\n            totalWays += solve(index - 1, jump, false);\n        }\n        totalWays += solve(index + (int) Math.pow(2, jump), jump + 1, true);\n        memoizeMap.put(str, totalWays);\n\n        return totalWays;\n    }\n}',
     },
   },
   3157: {
@@ -9231,239 +9275,144 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  4: {
+  399: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  23: {
+  499: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  53: {
+  505: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  105: {
+  743: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  106: {
+  787: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  108: {
+  882: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  109: {
+  1334: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  148: {
+  1368: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  169: {
+  1514: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  190: {
+  1786: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  191: {
+  1976: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  215: {
+  2045: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  218: {
+  2093: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  240: {
+  2203: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  315: {
+  2290: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  324: {
+  2297: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  327: {
+  2473: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  347: {
+  2577: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  372: {
+  2642: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  395: {
+  2662: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  427: {
+  2699: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  493: {
+  2714: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  558: {
+  2737: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  654: {
+  2959: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  889: {
+  2976: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  912: {
+  2977: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  918: {
+  3112: {
     java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
-  932: {
+  3123: {
     java: {
-      "divide-and-conquer": "",
-    },
-  },
-  973: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  1274: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  1382: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  1569: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  1649: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  1738: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  1763: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  1982: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  1985: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  2031: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  2179: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  2343: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  2407: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  2426: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  2519: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  2613: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  2792: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  3109: {
-    java: {
-      "divide-and-conquer": "",
-    },
-  },
-  3165: {
-    java: {
-      "divide-and-conquer": "",
+      "shortest-path": "",
     },
   },
 };
