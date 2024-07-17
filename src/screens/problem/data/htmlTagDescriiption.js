@@ -3487,15 +3487,33 @@ public class Solution {
           </ul>
         </li>
         <li>
-          <strong>Operations</strong>:
+          <strong>Operations and Their Complexities</strong>:
           <ul>
             <li>
               <strong>Update Operation</strong>: Adjusts the value of an element
               in the array and updates the corresponding prefix sums.
+              <ul>
+                <li>
+                  Time Complexity: <code>O(log n)</code>
+                </li>
+              </ul>
             </li>
             <li>
               <strong>Query Operation</strong>: Computes the sum of elements in
               a prefix range from the start of the array up to any index.
+              <ul>
+                <li>
+                  Time Complexity: <code>O(log n)</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Construction</strong>: Initializing the BIT from an array.
+              <ul>
+                <li>
+                  Time Complexity: <code>O(n log n)</code>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
