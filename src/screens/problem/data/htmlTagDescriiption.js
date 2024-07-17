@@ -3958,20 +3958,6 @@ public class Main {
           </ul>
         </li>
       </ul>
-
-      <p>Here's a basic visualization of a Trie:</p>
-      <pre>
-      {``}root
-      {``}/ \
-     {``}a   b
-    {``}/     \
-   {``}p       a
-  {``}/ \     /
- {``}p   l   t
-{``}/     \  
-{``}e       e
-</pre>
-
     </>
   ),
 };
