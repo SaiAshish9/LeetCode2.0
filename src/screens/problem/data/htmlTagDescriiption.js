@@ -2636,6 +2636,7 @@ public class Permutations {
         subproblems, solving each subproblem independently, and then combining
         the solutions to solve the original problem.
       </p>
+      <br />
       <h2>Key Concepts:</h2>
       <ul>
         <li>
@@ -2714,7 +2715,7 @@ public class Permutations {
           </ul>
         </li>
       </ul>
-      <h2>Example Implementation: Merge Sort in Java</h2>
+      <h2>Example Implementation: Merge Sort in Java</h2> <br />
       <pre>
         <code>
           {`public class MergeSort {
@@ -2772,7 +2773,8 @@ public class Permutations {
     }
 }`}
         </code>
-      </pre>
+      </pre>{" "}
+      <br />
       <h2>Explanation of Merge Sort Implementation:</h2>
       <ul>
         <li>
