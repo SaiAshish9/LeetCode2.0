@@ -4278,6 +4278,242 @@ public class Main {
       </ul>
     </>
   ),
+  "Bit Manipulation": (
+    <>
+      <p>
+        Bit manipulation involves using bitwise operations to perform tasks
+        directly on the binary representation of data. This technique is
+        particularly useful in competitive programming and coding challenges on
+        platforms like LeetCode due to its efficiency and low-level control over
+        data. Here's an explanation of bit manipulation and its various
+        operations, along with their time and space complexities:
+      </p>
+
+      <h3>What is Bit Manipulation?</h3>
+      <ul>
+        <li>
+          <strong>Binary Representation:</strong> Bit manipulation works
+          directly with the binary digits (bits) of data.
+        </li>
+        <li>
+          <strong>Bitwise Operations:</strong> It uses operations like AND (
+          <code>&amp;</code>), OR (<code>|</code>), XOR (<code>^</code>), NOT (
+          <code>~</code>), and bit shifts (<code>&lt;&lt;</code>,{" "}
+          <code>&gt;&gt;</code>) to manipulate bits.
+        </li>
+      </ul>
+
+      <h3>Typical Uses in LeetCode Problems</h3>
+      <ul>
+        <li>
+          <h4>Counting Bits:</h4>
+          <ul>
+            <li>
+              <strong>Example:</strong> Count the number of 1s in the binary
+              representation of an integer.
+            </li>
+            <li>
+              <strong>Approach:</strong> Use bitwise operations to isolate and
+              count the bits.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Swapping Values:</h4>
+          <ul>
+            <li>
+              <strong>Example:</strong> Swap two values without using a
+              temporary variable.
+            </li>
+            <li>
+              <strong>Approach:</strong> Use XOR to swap values efficiently.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Finding Unique Elements:</h4>
+          <ul>
+            <li>
+              <strong>Example:</strong> Find the element that appears only once
+              in an array where every other element appears twice.
+            </li>
+            <li>
+              <strong>Approach:</strong> Use XOR to cancel out duplicate
+              elements.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Checking Powers of Two:</h4>
+          <ul>
+            <li>
+              <strong>Example:</strong> Check if a number is a power of two.
+            </li>
+            <li>
+              <strong>Approach:</strong> Use bitwise operations to determine if
+              only one bit is set.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Setting, Clearing, and Toggling Bits:</h4>
+          <ul>
+            <li>
+              <strong>Example:</strong> Manipulate individual bits in a binary
+              number.
+            </li>
+            <li>
+              <strong>Approach:</strong> Use specific bitwise operations to set,
+              clear, or toggle bits.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Advantages of Bit Manipulation</h3>
+      <ul>
+        <li>
+          <strong>Efficiency:</strong> Bitwise operations are performed in
+          constant time, making them very fast.
+        </li>
+        <li>
+          <strong>Low-Level Control:</strong> Allows precise control over
+          individual bits for optimization.
+        </li>
+      </ul>
+
+      <h3>Bit Manipulation Operations</h3>
+      <ul>
+        <li>
+          <h4>Setting a Bit:</h4>
+          <ul>
+            <li>
+              <strong>Operation:</strong> <code>num |= (1 &lt;&lt; pos)</code>
+            </li>
+            <li>
+              <strong>Effect:</strong> Sets the bit at position <code>pos</code>{" "}
+              to 1.
+            </li>
+            <li>
+              <strong>Example:</strong> If <code>pos = 2</code>,{" "}
+              <code>num = 0b0001</code> becomes <code>0b0101</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Clearing a Bit:</h4>
+          <ul>
+            <li>
+              <strong>Operation:</strong>{" "}
+              <code>num &amp;= ~(1 &lt;&lt; pos)</code>
+            </li>
+            <li>
+              <strong>Effect:</strong> Clears the bit at position{" "}
+              <code>pos</code>.
+            </li>
+            <li>
+              <strong>Example:</strong> If <code>pos = 1</code>,{" "}
+              <code>num = 0b1010</code> becomes <code>0b1000</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Toggling a Bit:</h4>
+          <ul>
+            <li>
+              <strong>Operation:</strong> <code>num ^= (1 &lt;&lt; pos)</code>
+            </li>
+            <li>
+              <strong>Effect:</strong> Toggles the bit at position{" "}
+              <code>pos</code>.
+            </li>
+            <li>
+              <strong>Example:</strong> If <code>pos = 3</code>,{" "}
+              <code>num = 0b0110</code> becomes <code>0b1110</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Checking if a Bit is Set:</h4>
+          <ul>
+            <li>
+              <strong>Operation:</strong>{" "}
+              <code>(num &amp; (1 &lt;&lt; pos)) != 0</code>
+            </li>
+            <li>
+              <strong>Effect:</strong> Checks if the bit at position{" "}
+              <code>pos</code> is set to 1.
+            </li>
+            <li>
+              <strong>Example:</strong> If <code>pos = 2</code>, checks if{" "}
+              <code>num = 0b1010</code> has the bit set.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Counting Set Bits:</h4>
+          <ul>
+            <li>
+              <strong>Operation:</strong> Use <code>num &amp; (num - 1)</code>{" "}
+              to repeatedly clear the lowest set bit.
+            </li>
+            <li>
+              <strong>Effect:</strong> Counts the number of 1s in the binary
+              representation.
+            </li>
+            <li>
+              <strong>Example:</strong> For <code>num = 0b1011</code>, it counts
+              3 set bits.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Time and Space Complexities</h3>
+      <ul>
+        <li>
+          <strong>Time Complexity:</strong> Operations involving bit
+          manipulation (<code>|</code>, <code>&amp;</code>,{" "}
+          <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>~</code>) are
+          generally <code>O(1)</code> because they are executed in constant time
+          relative to the size of the bitmask (typically 32 or 64 bits).
+        </li>
+        <li>
+          <strong>Space Complexity:</strong> The space complexity is{" "}
+          <code>O(1)</code> as bitwise operations do not require additional
+          space proportional to the input size.
+        </li>
+      </ul>
+
+      <h3>Example Application: Finding the Single Number</h3>
+      <p>
+        <strong>Problem:</strong> Given a non-empty array of integers where
+        every element appears twice except for one, find that single one.
+      </p>
+      <pre>
+        <code>
+          {`def singleNumber(nums):
+    result = 0
+    for num in nums:
+        result ^= num
+    return result`}
+        </code>
+      </pre>
+      <p>
+        <strong>Explanation:</strong>
+      </p>
+      <ul>
+        <li>
+          The XOR operation (<code>^</code>) is used to cancel out duplicate
+          numbers because <code>x ^ x = 0</code> and <code>x ^ 0 = x</code>.
+        </li>
+        <li>
+          Iterating through the array and XORing all elements will result in the
+          single number.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;

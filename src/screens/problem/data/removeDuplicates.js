@@ -54,6 +54,11 @@ const obj1 = {
         "public class Solution {\n    public int maxArea(int[] height) {\n        int max = 0;\n        int left = 0;\n        int right = height.length - 1;\n\n        while (left < right) {\n            int currentArea = Math.min(height[left], height[right]) * (right - left);\n            max = Math.max(max, currentArea);\n\n            if (height[left] < height[right]) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n\n        return max;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] heights = {1, 2, 1};\n        System.out.println(solution.maxArea(heights)); // Output: 2\n    }\n}\n",
     },
   },
+  14: {
+    java: {
+      trie: "",
+    },
+  },
   15: {
     java: {
       "two-pointers":
@@ -814,6 +819,11 @@ const obj1 = {
       "topological-sort": "",
     },
   },
+  208: {
+    java: {
+      trie: "",
+    },
+  },
   209: {
     java: {
       "sliding-window":
@@ -823,6 +833,11 @@ const obj1 = {
   210: {
     java: {
       "topological-sort": "",
+    },
+  },
+  211: {
+    java: {
+      trie: "",
     },
   },
   212: {
@@ -1330,6 +1345,11 @@ const obj1 = {
       geometry: "",
     },
   },
+  336: {
+    java: {
+      trie: "",
+    },
+  },
   337: {
     java: {
       "dynamic-programming": "",
@@ -1557,6 +1577,11 @@ const obj1 = {
       stack: "",
     },
   },
+  386: {
+    java: {
+      trie: "",
+    },
+  },
   387: {
     java: {
       queue:
@@ -1688,6 +1713,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  421: {
+    java: {
+      trie: "",
+    },
+  },
   422: {
     java: {
       matrix: "",
@@ -1763,6 +1793,11 @@ const obj1 = {
   439: {
     java: {
       stack: "",
+    },
+  },
+  440: {
+    java: {
+      trie: "",
     },
   },
   443: {
@@ -2090,6 +2125,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  527: {
+    java: {
+      trie: "",
+    },
+  },
   528: {
     java: {
       randomized:
@@ -2279,6 +2319,11 @@ const obj1 = {
       geometry: "",
     },
   },
+  588: {
+    java: {
+      trie: "",
+    },
+  },
   589: {
     java: {
       stack:
@@ -2443,6 +2488,11 @@ const obj1 = {
         "public class Solution {\n    public int countSubstrings(String s) {\n        int n = s.length();\n        int count = 0;\n\n        for (int i = 0; i < n; i++) {\n            count += countPalindromesAroundCenter(s, i, i); // Odd length palindromes\n            count += countPalindromesAroundCenter(s, i, i + 1); // Even length palindromes\n        }\n\n        return count;\n    }\n\n    private int countPalindromesAroundCenter(String s, int left, int right) {\n        int count = 0;\n        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {\n            count++;\n            left--;\n            right++;\n        }\n        return count;\n    }\n}\n",
     },
   },
+  648: {
+    java: {
+      trie: "",
+    },
+  },
   649: {
     java: {
       queue: "",
@@ -2537,6 +2587,16 @@ const obj1 = {
   675: {
     java: {
       matrix: "",
+    },
+  },
+  676: {
+    java: {
+      trie: "",
+    },
+  },
+  677: {
+    java: {
+      trie: "",
     },
   },
   678: {
@@ -2715,6 +2775,11 @@ const obj1 = {
         "import java.util.Arrays;\n\npublic class Solution {\n    public int smallestDistancePair(int[] nums, int k) {\n        Arrays.sort(nums);\n        int n = nums.length;\n        int left = 0;\n        int right = nums[n - 1] - nums[0];\n\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (countPairs(nums, mid) < k) {\n                left = mid + 1;\n            } else {\n                right = mid;\n            }\n        }\n\n        return left;\n    }\n\n    private int countPairs(int[] nums, int mid) {\n        int count = 0;\n        int n = nums.length;\n        for (int i = 0; i < n; i++) {\n            int j = i;\n            while (j < n && nums[j] - nums[i] <= mid) {\n                j++;\n            }\n            count += j - i - 1;\n        }\n        return count;\n    }\n}\n",
     },
   },
+  720: {
+    java: {
+      trie: "",
+    },
+  },
   723: {
     java: {
       "two-pointers": "",
@@ -2796,6 +2861,11 @@ const obj1 = {
   743: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  745: {
+    java: {
+      trie: "",
     },
   },
   746: {
@@ -3038,6 +3108,11 @@ const obj1 = {
   818: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  820: {
+    java: {
+      trie: "",
     },
   },
   821: {
@@ -3857,6 +3932,11 @@ const obj1 = {
         "class Solution {\n    public int validSubarrays(int[] nums) {\n        int n = nums.length;\n        int[] right = new int[n];\n        Arrays.fill(right, n);\n        Deque<Integer> stack = new ArrayDeque<>();\n        for (int i = n - 1; i >= 0; --i) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {\n                stack.pop();\n            }\n            if (!stack.isEmpty()) {\n                right[i] = stack.peek();\n            }\n            stack.push(i);\n        }\n        int ans = 0;\n        for (int i = 0; i < n; ++i) {\n            ans += right[i] - i;\n        }\n        return ans;\n    }\n}",
     },
   },
+  1065: {
+    java: {
+      trie: "",
+    },
+  },
   1066: {
     java: {
       "dynamic-programming": "",
@@ -4122,6 +4202,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  1166: {
+    java: {
+      trie: "",
+    },
+  },
   1167: {
     java: {
       "heap-(priority-queue)": "",
@@ -4147,6 +4232,11 @@ const obj1 = {
   1177: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  1178: {
+    java: {
+      trie: "",
     },
   },
   1182: {
@@ -4305,6 +4395,11 @@ const obj1 = {
   1232: {
     java: {
       geometry: "",
+    },
+  },
+  1233: {
+    java: {
+      trie: "",
     },
   },
   1234: {
@@ -5647,6 +5742,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1707: {
+    java: {
+      trie: "",
+    },
+  },
   1712: {
     java: {
       "two-pointers":
@@ -5877,6 +5977,16 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  1803: {
+    java: {
+      trie: "",
+    },
+  },
+  1804: {
+    java: {
+      trie: "",
+    },
+  },
   1808: {
     java: {
       recursion: "",
@@ -6011,6 +6121,11 @@ const obj1 = {
   1857: {
     java: {
       "topological-sort": "",
+    },
+  },
+  1858: {
+    java: {
+      trie: "",
     },
   },
   1861: {
@@ -6239,6 +6354,11 @@ const obj1 = {
   1937: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1938: {
+    java: {
+      trie: "",
     },
   },
   1942: {
@@ -6990,6 +7110,11 @@ const obj1 = {
         "class Solution {\n    public long sumScores(String s) {\n      int n = s.length();\n        // https://cp-algorithms.com/string/z-function.html#implementation\n        int[] z = new int[n];\n        // [left, right] := the indices of the rightmost segment match\n        int left = 0;\n        int right = 0;\n\n        for (int i = 1; i < n; ++i) {\n            if (i < right)\n                z[i] = Math.min(right - i, z[i - left]);\n            while (i + z[i] < n && s.charAt(z[i]) == s.charAt(i + z[i]))\n                ++z[i];\n            if (i + z[i] > right) {\n                left = i;\n                right = i + z[i];\n            }\n        }\n\n        return Arrays.stream(z).asLongStream().sum() + n;\n    }\n}",
     },
   },
+  2227: {
+    java: {
+      trie: "",
+    },
+  },
   2231: {
     java: {
       "heap-(priority-queue)":
@@ -7539,6 +7664,11 @@ const obj1 = {
   2415: {
     java: {
       tree: "",
+    },
+  },
+  2416: {
+    java: {
+      trie: "",
     },
   },
   2419: {
@@ -9106,6 +9236,11 @@ const obj1 = {
       "rolling-hash": "",
     },
   },
+  3043: {
+    java: {
+      trie: "",
+    },
+  },
   3044: {
     java: {
       matrix: "",
@@ -9161,6 +9296,11 @@ const obj1 = {
       "ordered-set": "",
     },
   },
+  3076: {
+    java: {
+      trie: "",
+    },
+  },
   3077: {
     java: {
       "prefix-sum": "",
@@ -9201,6 +9341,11 @@ const obj1 = {
   3092: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  3093: {
+    java: {
+      trie: "",
     },
   },
   3094: {
@@ -9477,269 +9622,1094 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  14: {
+  29: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  139: {
+  67: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  140: {
+  78: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  208: {
+  89: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  211: {
+  90: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  212: {
+  136: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  336: {
+  137: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  386: {
+  187: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
+    },
+  },
+  190: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  191: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  201: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  222: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  231: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  260: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  266: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  268: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  287: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  318: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  320: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  338: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  342: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  351: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  371: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  389: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  393: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  397: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  401: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  405: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  411: {
+    java: {
+      "bit-manipulation": "",
     },
   },
   421: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  425: {
+  461: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  440: {
+  464: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  472: {
+  465: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  527: {
+  473: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  588: {
+  476: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  616: {
+  477: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  642: {
+  491: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  648: {
+  526: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  676: {
+  638: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  677: {
+  645: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  692: {
+  672: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  720: {
+  691: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  745: {
+  693: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  758: {
+  698: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  792: {
+  751: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  820: {
+  756: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1023: {
+  762: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1032: {
+  779: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1065: {
+  782: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1166: {
+  784: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
+    },
+  },
+  805: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  810: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  832: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  847: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  861: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  864: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  868: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  898: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  943: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  957: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  980: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  982: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  995: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  996: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1009: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1018: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1066: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1125: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1177: {
+    java: {
+      "bit-manipulation": "",
     },
   },
   1178: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1233: {
+  1238: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1268: {
+  1239: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1316: {
+  1255: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1698: {
+  1256: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
+    },
+  },
+  1284: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1310: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1318: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1342: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1349: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1356: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1371: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1386: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1404: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1434: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1442: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1457: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1461: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1486: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1494: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1506: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1521: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1525: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1542: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1558: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1595: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1601: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1611: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1617: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1655: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1659: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1680: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1681: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1684: {
+    java: {
+      "bit-manipulation": "",
     },
   },
   1707: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
+    },
+  },
+  1720: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1723: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1734: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1738: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1755: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1763: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1787: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1799: {
+    java: {
+      "bit-manipulation": "",
     },
   },
   1803: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1804: {
+  1815: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1858: {
+  1829: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
+    },
+  },
+  1835: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1863: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1879: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1908: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1915: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  1930: {
+    java: {
+      "bit-manipulation": "",
     },
   },
   1938: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  1948: {
+  1947: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  2227: {
+  1986: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  2261: {
+  1994: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  2416: {
+  2002: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  2479: {
+  2032: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  2707: {
+  2035: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
+    },
+  },
+  2044: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2128: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2135: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2151: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2152: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2157: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2172: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2174: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2184: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2206: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2212: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2220: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2247: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2275: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2305: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2306: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2317: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2322: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2351: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2354: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2397: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2401: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2403: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2411: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2419: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2425: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2429: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2433: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2438: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2505: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2506: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2527: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2546: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2564: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2568: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2571: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2572: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2588: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2595: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2657: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2680: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2683: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2708: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2732: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2741: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2749: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2791: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2802: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2835: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2836: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2857: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2859: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2869: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2871: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2897: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2917: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  2920: {
+    java: {
+      "bit-manipulation": "",
     },
   },
   2932: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
   2935: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  2977: {
+  2939: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  3042: {
+  2959: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  3043: {
+  2980: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  3045: {
+  2992: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  3076: {
+  2997: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
     },
   },
-  3093: {
+  3003: {
     java: {
-      trie: "",
+      "bit-manipulation": "",
+    },
+  },
+  3007: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3011: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3022: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3064: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3068: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3094: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3095: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3097: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3108: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3116: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3117: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3133: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3141: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3145: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3149: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3154: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3158: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3171: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3173: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3181: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3191: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3199: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3209: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3211: {
+    java: {
+      "bit-manipulation": "",
+    },
+  },
+  3215: {
+    java: {
+      "bit-manipulation": "",
     },
   },
 };
