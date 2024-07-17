@@ -2828,6 +2828,188 @@ public class Permutations {
       </ul>
     </>
   ),
+  Memoization: (
+    <>
+      <p>
+        Memoization is a technique used to optimize recursive algorithms by
+        storing the results of expensive function calls and reusing them when
+        the same inputs occur again. This can significantly reduce the time
+        complexity of problems that have overlapping subproblems.
+      </p>
+
+      <h2>Key Concepts:</h2>
+      <ul>
+        <li>
+          <strong>Overlapping Subproblems</strong>:
+          <ul>
+            <li>
+              Occurs when a problem can be broken down into smaller subproblems
+              which are reused multiple times.
+            </li>
+            <li>
+              Examples include Fibonacci sequence, dynamic programming problems
+              like knapsack, and more.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Memoization</strong>:
+          <ul>
+            <li>
+              Store the results of expensive function calls in a data structure
+              like a hash map or array.
+            </li>
+            <li>
+              Check the data structure before computing the result again to
+              avoid redundant calculations.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Benefits</strong>:
+          <ul>
+            <li>Reduces time complexity by avoiding repeated calculations.</li>
+            <li>Optimizes recursive solutions, making them more efficient.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Problems on LeetCode:</h2>
+      <ul>
+        <li>
+          <strong>Fibonacci Number (LeetCode 509)</strong>:
+          <ul>
+            <li>
+              Calculate the nth Fibonacci number using memoization to avoid
+              redundant calculations.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Climbing Stairs (LeetCode 70)</strong>:
+          <ul>
+            <li>
+              Count the number of ways to climb a given number of stairs using
+              memoization to optimize the solution.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>House Robber (LeetCode 198)</strong>:
+          <ul>
+            <li>
+              Determine the maximum amount of money that can be robbed from a
+              series of houses without triggering alarms using memoization.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Implementation: Fibonacci Number in Java</h2>
+      <pre>
+        <code>
+          {`import java.util.HashMap;
+
+public class Solution {
+    private HashMap<Integer, Integer> memo = new HashMap<>();
+
+    public int fib(int n) {
+        if (n <= 1) {
+            return n;
+        }
+
+        if (memo.containsKey(n)) {
+            return memo.get(n);
+        }
+
+        int result = fib(n - 1) + fib(n - 2);
+        memo.put(n, result);
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println("Fib(5): " + solution.fib(5)); // Output: 5
+        System.out.println("Fib(10): " + solution.fib(10)); // Output: 55
+    }
+}`}
+        </code>
+      </pre>
+
+      <h2>Explanation of Fibonacci Implementation:</h2>
+      <ul>
+        <li>
+          <strong>Memo Data Structure</strong>:
+          <ul>
+            <li>
+              Use a <code>HashMap</code> to store previously computed Fibonacci
+              numbers.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Base Case</strong>:
+          <ul>
+            <li>
+              If <code>n</code> is 0 or 1, return <code>n</code> directly as the
+              base case.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Memoization Check</strong>:
+          <ul>
+            <li>
+              Before computing, check if the result for <code>n</code> is
+              already in the memo.
+            </li>
+            <li>
+              If it is, return the stored result to avoid redundant
+              calculations.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Recursive Calculation</strong>:
+          <ul>
+            <li>
+              If the result is not in the memo, compute it recursively by
+              summing the results of <code>fib(n - 1)</code> and{" "}
+              <code>fib(n - 2)</code>.
+            </li>
+            <li>Store the computed result in the memo before returning it.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Main Method</strong>:
+          <ul>
+            <li>
+              Creates an instance of the <code>Solution</code> class and
+              demonstrates the use of the <code>fib</code> method with sample
+              inputs.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Advantages of Memoization:</h2>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: Significantly reduces the number of
+          calculations needed by storing and reusing results.
+        </li>
+        <li>
+          <strong>Simplicity</strong>: Easy to implement and understand, making
+          it a powerful tool for optimizing recursive algorithms.
+        </li>
+        <li>
+          <strong>Performance</strong>: Improves the performance of algorithms
+          with overlapping subproblems, making them feasible for larger inputs.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
