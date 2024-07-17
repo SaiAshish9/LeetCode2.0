@@ -2906,6 +2906,7 @@ public class Permutations {
       </ul>
 
       <h2>Example Implementation: Fibonacci Number in Java</h2>
+      <br />
       <pre>
         <code>
           {`import java.util.HashMap;
@@ -2936,7 +2937,7 @@ public class Solution {
 }`}
         </code>
       </pre>
-
+      <br />
       <h2>Explanation of Fibonacci Implementation:</h2>
       <ul>
         <li>
