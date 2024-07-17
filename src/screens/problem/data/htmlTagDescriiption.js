@@ -4004,6 +4004,14 @@ public class Main {
       <ul>
         <li>
           <h3>What is a Bitmask?</h3>
+          <p>
+            Binary Representation: Bitmasks use binary digits (bits) to
+            represent subsets of elements or states. <br />
+            Binary Operations: They leverage bitwise operations like AND (&), OR
+            (|), XOR (^), and shifting (&lt;&lt;, &gt;&gt;) to manipulate and
+            check subsets efficiently.
+          </p>
+          <br />
           <ul>
             <li>
               <strong>Binary Representation:</strong> Bitmasks use binary digits
@@ -4028,6 +4036,7 @@ public class Main {
                   <strong>Example:</strong> Given a set of elements, generate
                   all possible subsets.
                 </li>
+                <br />
                 <li>
                   <strong>Approach:</strong> Use bitmasking where each bit
                   represents whether an element is included in the subset or
@@ -4078,7 +4087,7 @@ public class Main {
           </ul>
         </li>
         <li>
-          <h3>Example Problem:</h3>
+          <h3>Example Problem:</h3> <br />
           <p>
             <strong>Problem:</strong> Given an array of integers, find all
             subsets that sum up to a specific target.
@@ -4111,7 +4120,8 @@ public class Main {
     return result;
 }`}
             </code>
-          </pre>
+          </pre>{" "}
+          <br />
           <p>
             <strong>Explanation:</strong>
           </p>
