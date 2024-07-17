@@ -615,6 +615,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  214: {
+    java: {
+      "rolling-hash": "",
+    },
+  },
   215: {
     java: {
       quickselect:
@@ -3019,6 +3024,8 @@ const obj1 = {
     java: {
       "suffix-array":
         'import java.util.Arrays;\n\npublic class Solution {\n\n    public String longestDupSubstring(String s) {\n        int n = s.length();\n        int[] suffixArray = buildSuffixArray(s);\n        int[] lcpArray = buildLCPArray(suffixArray, s);\n\n        int pos = -1, maxLen = 0;\n        for (int i = 0; i < n - 1; i++) {\n            if (lcpArray[i] > maxLen) {\n                maxLen = lcpArray[i];\n                pos = suffixArray[i];\n            }\n        }\n\n        return pos == -1 ? "" : s.substring(pos, pos + maxLen);\n    }\n\n    private int[] buildSuffixArray(String S) {\n        int n = S.length();\n        Integer[] order = new Integer[n];\n        for (int i = 0; i < n; i++)\n            order[i] = n - 1 - i;\n\n        Arrays.sort(order, (a, b) -> Character.compare(S.charAt(a), S.charAt(b)));\n\n        int[] suffixArray = new int[n];\n        int[] classes = new int[n];\n        for (int i = 0; i < n; i++) {\n            suffixArray[i] = order[i];\n            classes[i] = S.charAt(i);\n        }\n\n        for (int len = 1; len < n; len *= 2) {\n            int[] c = classes.clone();\n            for (int i = 0; i < n; i++) {\n                classes[suffixArray[i]] = i > 0 && c[suffixArray[i - 1]] == c[suffixArray[i]] && suffixArray[i - 1] + len < n\n                        && c[suffixArray[i - 1] + len / 2] == c[suffixArray[i] + len / 2] ? classes[suffixArray[i - 1]] : i;\n            }\n\n            int[] count = new int[n];\n            for (int i = 0; i < n; i++)\n                count[i] = i;\n            int[] s = suffixArray.clone();\n            for (int i = 0; i < n; i++) {\n                int s1 = s[i] - len;\n                if (s1 >= 0)\n                    suffixArray[count[classes[s1]]++] = s1;\n            }\n        }\n\n        return suffixArray;\n    }\n\n    private int[] buildLCPArray(int[] suffixArray, String s) {\n        int n = suffixArray.length;\n        int[] rank = new int[n];\n        for (int i = 0; i < n; i++)\n            rank[suffixArray[i]] = i;\n        int[] lcpArray = new int[n - 1];\n        for (int i = 0, h = 0; i < n; i++) {\n            if (rank[i] < n - 1) {\n                int j = suffixArray[rank[i] + 1];\n                while (i + h < n && j + h < n && s.charAt(i + h) == s.charAt(j + h)) {\n                    h++;\n                }\n                lcpArray[rank[i]] = h;\n                if (h > 0) {\n                    h--;\n                }\n            }\n        }\n        return lcpArray;\n    }\n}\n',
+      "rolling-hash":
+        "class Solution {\n    public String longestDupSubstring(String s) {\n        int kMod = 1_000_000_007;\n        int n = s.length();\n        int[] pows = new int[n];\n        int bestStart = -1;\n        int left = 1;\n        int right = n;\n\n        pows[0] = 1;\n        for (int i = 1; i < n; ++i)\n            pows[i] = (int) ((pows[i - 1] * 26L) % (long) kMod);\n\n        while (left < right) {\n            int mid = (left + right) / 2;\n            int start = getStart(s, mid, pows, kMod);\n            if (start == -1) {\n                right = mid;\n            } else {\n                bestStart = start;\n                left = mid + 1;\n            }\n        }\n\n        if (bestStart == -1)\n            return \"\";\n        if (getStart(s, left, pows, kMod) == -1)\n            return s.substring(bestStart, bestStart + left - 1);\n        return s.substring(bestStart, bestStart + left);\n    }\n\n    private int getStart(String s, int k, int[] pows, int kMod) {\n        Map<Long, List<Integer>> hashToStarts = new HashMap<>();\n        long hash = 0;\n\n        for (int i = 0; i < k; ++i)\n            hash = ((hash * 26) % kMod + val(s.charAt(i))) % kMod;\n        hashToStarts.put(hash, new ArrayList<>());\n        hashToStarts.get(hash).add(0);\n\n        for (int i = k; i < s.length(); ++i) {\n            int startIndex = i - k + 1;\n            hash = ((hash - (long) (pows[k - 1]) * val(s.charAt(i - k))) % kMod + kMod) % kMod;\n            hash = (hash * 26 + val(s.charAt(i))) % kMod;\n            if (hashToStarts.containsKey(hash)) {\n                String currSub = s.substring(startIndex, startIndex + k);\n                for (int start : hashToStarts.get(hash))\n                    if (s.substring(start, start + k).equals(currSub))\n                        return startIndex;\n            }\n            hashToStarts.put(hash, new ArrayList<>());\n            hashToStarts.get(hash).add(startIndex);\n        }\n\n        return -1;\n    }\n\n    private int val(char c) {\n        return c - 'a';\n    }\n}",
     },
   },
   1046: {
@@ -3652,6 +3659,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1316: {
+    java: {
+      "rolling-hash": "",
+    },
+  },
   1320: {
     java: {
       "dynamic-programming": "",
@@ -3818,6 +3830,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1392: {
+    java: {
+      "rolling-hash": "",
+    },
+  },
   1395: {
     java: {
       "dynamic-programming": "",
@@ -3952,6 +3969,11 @@ const obj1 = {
   1458: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1461: {
+    java: {
+      "rolling-hash": "",
     },
   },
   1462: {
@@ -4160,6 +4182,11 @@ const obj1 = {
   1553: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1554: {
+    java: {
+      "rolling-hash": "",
     },
   },
   1559: {
@@ -5135,6 +5162,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1960: {
+    java: {
+      "rolling-hash": "",
+    },
+  },
   1961: {
     java: {
       "two-pointers": "",
@@ -5606,6 +5638,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2168: {
+    java: {
+      "rolling-hash": "",
+    },
+  },
   2171: {
     java: {
       "prefix-sum": "",
@@ -5784,6 +5821,11 @@ const obj1 = {
     java: {
       "sliding-window":
         "class Solution {\n  public int minimumCardPickup(int[] cards) {\n    int ans = Integer.MAX_VALUE;\n    Map<Integer, Integer> seen = new HashMap<>();\n\n    for (int i = 0; i < cards.length; ++i) {\n      if (seen.containsKey(cards[i]))\n        ans = Math.min(ans, i - seen.get(cards[i]) + 1);\n      seen.put(cards[i], i);\n    }\n\n    return ans == Integer.MAX_VALUE ? -1 : ans;\n  }\n}",
+    },
+  },
+  2261: {
+    java: {
+      "rolling-hash": "",
     },
   },
   2262: {
@@ -7563,9 +7605,19 @@ const obj1 = {
       "prefix-sum": "",
     },
   },
+  3029: {
+    java: {
+      "rolling-hash": "",
+    },
+  },
   3030: {
     java: {
       matrix: "",
+    },
+  },
+  3031: {
+    java: {
+      "rolling-hash": "",
     },
   },
   3032: {
@@ -7576,6 +7628,16 @@ const obj1 = {
   3033: {
     java: {
       matrix: "",
+    },
+  },
+  3034: {
+    java: {
+      "rolling-hash": "",
+    },
+  },
+  3036: {
+    java: {
+      "rolling-hash": "",
     },
   },
   3037: {
@@ -7594,9 +7656,19 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  3042: {
+    java: {
+      "rolling-hash": "",
+    },
+  },
   3044: {
     java: {
       matrix: "",
+    },
+  },
+  3045: {
+    java: {
+      "rolling-hash": "",
     },
   },
   3049: {
@@ -7925,142 +7997,182 @@ const obj1 = {
 const obj2 = {
   187: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   214: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
+    },
+  },
+  535: {
+    java: {
+      "hash-function": "",
+    },
+  },
+  572: {
+    java: {
+      "hash-function": "",
+    },
+  },
+  694: {
+    java: {
+      "hash-function": "",
+    },
+  },
+  705: {
+    java: {
+      "hash-function": "",
+    },
+  },
+  706: {
+    java: {
+      "hash-function": "",
+    },
+  },
+  711: {
+    java: {
+      "hash-function": "",
     },
   },
   718: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1044: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1062: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1147: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1316: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1392: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1461: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1554: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1698: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   1923: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
+    },
+  },
+  1948: {
+    java: {
+      "hash-function": "",
     },
   },
   1960: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   2156: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   2168: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   2223: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   2261: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   2430: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3006: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3008: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3023: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3029: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3031: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3034: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3036: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3037: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3042: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
     },
   },
   3045: {
     java: {
-      "rolling-hash": "",
+      "hash-function": "",
+    },
+  },
+  3135: {
+    java: {
+      "hash-function": "",
     },
   },
 };
