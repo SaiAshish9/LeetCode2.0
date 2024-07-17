@@ -4288,8 +4288,6 @@ public class Main {
         data. Here's an explanation of bit manipulation and its various
         operations, along with their time and space complexities:
       </p>
-
-      <h3>What is Bit Manipulation?</h3>
       <ul>
         <li>
           <strong>Binary Representation:</strong> Bit manipulation works
@@ -4302,7 +4300,6 @@ public class Main {
           <code>&gt;&gt;</code>) to manipulate bits.
         </li>
       </ul>
-
       <h3>Typical Uses in LeetCode Problems</h3>
       <ul>
         <li>
@@ -4369,7 +4366,6 @@ public class Main {
           </ul>
         </li>
       </ul>
-
       <h3>Advantages of Bit Manipulation</h3>
       <ul>
         <li>
@@ -4381,7 +4377,6 @@ public class Main {
           individual bits for optimization.
         </li>
       </ul>
-
       <h3>Bit Manipulation Operations</h3>
       <ul>
         <li>
@@ -4468,7 +4463,6 @@ public class Main {
           </ul>
         </li>
       </ul>
-
       <h3>Time and Space Complexities</h3>
       <ul>
         <li>
@@ -4484,12 +4478,13 @@ public class Main {
           space proportional to the input size.
         </li>
       </ul>
-
       <h3>Example Application: Finding the Single Number</h3>
+      <br />
       <p>
         <strong>Problem:</strong> Given a non-empty array of integers where
         every element appears twice except for one, find that single one.
-      </p>
+      </p>{" "}
+      <br />
       <pre>
         <code>
           {`def singleNumber(nums):
@@ -4498,7 +4493,8 @@ public class Main {
         result ^= num
     return result`}
         </code>
-      </pre>
+      </pre>{" "}
+      <br />
       <p>
         <strong>Explanation:</strong>
       </p>
