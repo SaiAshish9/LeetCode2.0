@@ -3647,8 +3647,9 @@ public class Solution {
         Indexed Tree (BIT) that supports efficient prefix sum calculations and
         updates. <br /> <br />
         Below is a detailed explanation of the class and its methods:
-      </p>
-      <h2>Class Definition:</h2> <br />
+      </p>{" "}
+      <br />
+      <h2>Class Definition:</h2>
       <ul>
         <li>
           <code>FenwickTree</code>:
