@@ -3788,8 +3788,7 @@ public class Solution {
         Segment trees are used for efficient range queries and updates. Here's
         an example implementation in Java for range sum queries and updates:
       </p>
-
-      <h2>Java Code:</h2>
+      <br />{" "}
       <pre>
         <code class="language-java">
           {`class SegmentTree {
@@ -3852,7 +3851,7 @@ public class Main {
 }`}
         </code>
       </pre>
-
+      <br/>
       <h2>Explanation:</h2>
       <ul>
         <li>
@@ -3860,11 +3859,11 @@ public class Main {
           <ul>
             <li>
               <code>SegmentTree(int[] arr)</code>: Constructs the segment tree
-              from the given array. Complexity: \(O(n)\).
+              from the given array. Complexity: (O(n)).
             </li>
             <li>
               <code>buildTree(int[] arr)</code>: Initializes the leaf nodes and
-              internal nodes of the tree. Complexity: \(O(n)\).
+              internal nodes of the tree. Complexity: (O(n)).
               <ul>
                 <li>Leaf nodes are initialized directly from the array.</li>
                 <li>
@@ -3875,7 +3874,7 @@ public class Main {
             <li>
               <code>update(int index, int value)</code>: Updates the value at
               the specified index and adjusts the tree accordingly. Complexity:
-              \(O(\log n)\).
+              (O(log n)).
               <ul>
                 <li>Updates the leaf node corresponding to the index.</li>
                 <li>
