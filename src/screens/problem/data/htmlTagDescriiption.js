@@ -4109,7 +4109,7 @@ public class Main {
     let n = nums.length;
     let result = [];
     
-    for (let i = 0; i &lt; (1 &lt;&lt; n); i++) {
+    for (let i = 0; i &lt; (1 << n); i++) {
         let subsetSum = 0;
         let subset = [];
         
