@@ -27497,6 +27497,84 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  "4_divide_and_conquer": (
+    <>
+      <ul>
+        <li>
+          <strong>Function Signature</strong>:
+          <ul>
+            <li>
+              The method <code>maxSubArray(int[] nums)</code> takes an array of
+              integers and returns the maximum subarray sum as an integer.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Base Case</strong>:
+          <ul>
+            <li>
+              If the array has one element, return that element as the maximum
+              subarray sum.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Recursive Case</strong>:
+          <ul>
+            <li>Divide the array into two halves by finding the midpoint.</li>
+            <li>
+              Recursively find the maximum subarray sum in the left half and the
+              right half.
+            </li>
+            <li>
+              Find the maximum subarray sum that crosses the midpoint using the{" "}
+              <code>findMaxCrossingSubarray</code> method.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Combine</strong>:
+          <ul>
+            <li>
+              Return the maximum of the three values: left maximum, right
+              maximum, and crossing maximum.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>findMaxCrossingSubarray Method</strong>:
+          <ul>
+            <li>
+              Calculate the maximum subarray sum that crosses the midpoint by
+              iterating from the midpoint to the left and from the midpoint to
+              the right.
+            </li>
+            <li>Sum the elements and update the left and right sums.</li>
+            <li>
+              Return the sum of the left and right sums as the maximum crossing
+              subarray sum.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Advantages of Divide and Conquer:</h2>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: Reduces the time complexity to O(n log
+          n), making it faster than a brute-force approach.
+        </li>
+        <li>
+          <strong>Simplicity</strong>: By focusing on smaller subarrays, the
+          problem becomes easier to handle and solve.
+        </li>
+        <li>
+          <strong>Optimal Performance</strong>: Handles large arrays efficiently
+          and can be applied to arrays of different sizes.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
