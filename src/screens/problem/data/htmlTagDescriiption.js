@@ -2627,6 +2627,205 @@ public class Permutations {
       </ul>
     </>
   ),
+  "Divide And Conquer": (
+    <>
+      {" "}
+      <p>
+        The "Divide and Conquer" approach is a fundamental algorithm design
+        paradigm used to solve problems by breaking them down into smaller
+        subproblems, solving each subproblem independently, and then combining
+        the solutions to solve the original problem.
+      </p>
+      <h2>Key Concepts:</h2>
+      <ul>
+        <li>
+          <strong>Divide</strong>:
+          <ul>
+            <li>
+              Break the original problem into smaller subproblems that are
+              similar to the original problem.
+            </li>
+            <li>
+              Each subproblem should be a smaller instance of the same problem.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Conquer</strong>:
+          <ul>
+            <li>Recursively solve each of the smaller subproblems.</li>
+            <li>
+              Base case: Solve the simplest instances of the problem directly.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Combine</strong>:
+          <ul>
+            <li>
+              Combine the solutions of the subproblems to get the solution to
+              the original problem.
+            </li>
+            <li>
+              This step may involve merging, summing, or any other operation
+              that integrates the subproblem solutions.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Problems on LeetCode:</h2>
+      <ul>
+        <li>
+          <strong>Merge Sort</strong>:
+          <ul>
+            <li>Divide the array into two halves.</li>
+            <li>Recursively sort each half.</li>
+            <li>Merge the two sorted halves to produce the sorted array.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Quick Sort</strong>:
+          <ul>
+            <li>
+              Choose a pivot element and partition the array into two halves
+              based on the pivot.
+            </li>
+            <li>Recursively sort each partition.</li>
+            <li>Combine the partitions to get the sorted array.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Maximum Subarray (Divide and Conquer Approach)</strong>:
+          <ul>
+            <li>Divide the array into two halves.</li>
+            <li>Recursively find the maximum subarray sum in each half.</li>
+            <li>Find the maximum subarray sum that crosses the midpoint.</li>
+            <li>
+              Combine the results to get the overall maximum subarray sum.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Median of Two Sorted Arrays</strong>:
+          <ul>
+            <li>Divide the arrays into smaller subarrays.</li>
+            <li>Recursively find the median of the combined subarrays.</li>
+            <li>Combine the results to get the overall median.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Implementation: Merge Sort in Java</h2>
+      <pre>
+        <code>
+          {`public class MergeSort {
+    public void mergeSort(int[] arr, int left, int right) {
+        if (left < right) {
+            int mid = (left + right) / 2;
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+            merge(arr, left, mid, right);
+        }
+    }
+
+    private void merge(int[] arr, int left, int mid, int right) {
+        int n1 = mid - left + 1;
+        int n2 = right - mid;
+
+        int[] leftArr = new int[n1];
+        int[] rightArr = new int[n2];
+
+        for (int i = 0; i < n1; i++)
+            leftArr[i] = arr[left + i];
+        for (int j = 0; j < n2; j++)
+            rightArr[j] = arr[mid + 1 + j];
+
+        int i = 0, j = 0, k = left;
+        while (i < n1 && j < n2) {
+            if (leftArr[i] <= rightArr[j]) {
+                arr[k] = leftArr[i];
+                i++;
+            } else {
+                arr[k] = rightArr[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i < n1) {
+            arr[k] = leftArr[i];
+            i++;
+            k++;
+        }
+
+        while (j < n2) {
+            arr[k] = rightArr[j];
+            j++;
+            k++;
+        }
+    }
+
+    public static void main(String[] args) {
+        MergeSort sorter = new MergeSort();
+        int[] arr = {12, 11, 13, 5, 6, 7};
+        sorter.mergeSort(arr, 0, arr.length - 1);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}`}
+        </code>
+      </pre>
+      <h2>Explanation of Merge Sort Implementation:</h2>
+      <ul>
+        <li>
+          <strong>mergeSort Method</strong>:
+          <ul>
+            <li>
+              Recursively divides the array into two halves until each subarray
+              has one element.
+            </li>
+            <li>
+              Calls the <code>merge</code> method to combine the sorted halves.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>merge Method</strong>:
+          <ul>
+            <li>Creates temporary arrays for the left and right halves.</li>
+            <li>
+              Merges the temporary arrays back into the original array in sorted
+              order.
+            </li>
+            <li>Handles any remaining elements in the temporary arrays.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>main Method</strong>:
+          <ul>
+            <li>
+              Creates an instance of <code>MergeSort</code> and sorts a sample
+              array.
+            </li>
+            <li>Prints the sorted array to demonstrate the result.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Advantages of Divide and Conquer:</h2>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: Breaks down complex problems into simpler
+          subproblems that are easier to solve.
+        </li>
+        <li>
+          <strong>Parallelism</strong>: Subproblems can often be solved in
+          parallel, leading to faster execution on multi-core processors.
+        </li>
+        <li>
+          <strong>Simplicity</strong>: Simplifies the problem-solving process by
+          focusing on smaller, manageable parts of the problem.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
