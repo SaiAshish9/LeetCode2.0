@@ -27399,6 +27399,104 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  4: (
+    <>
+      <ul>
+        <li>
+          <strong>Function Signature</strong>:
+          <ul>
+            <li>
+              The method{" "}
+              <code>findMedianSortedArrays(int[] nums1, int[] nums2)</code>{" "}
+              takes two sorted arrays as input and returns the median as a{" "}
+              <code>double</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Initial Check</strong>:
+          <ul>
+            <li>
+              Ensure that the first array is the smaller array. If not, swap
+              them.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Binary Search</strong>:
+          <ul>
+            <li>
+              Perform binary search on the smaller array to find the correct
+              partition.
+            </li>
+            <li>
+              Calculate partitions for both arrays: <code>partitionX</code> and{" "}
+              <code>partitionY</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Edge Values</strong>:
+          <ul>
+            <li>
+              Determine the maximum and minimum values on both sides of the
+              partitions: <code>maxX</code>, <code>minX</code>,{" "}
+              <code>maxY</code>, and <code>minY</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Valid Partition</strong>:
+          <ul>
+            <li>
+              Check if the partitions are correct by comparing edge values.
+            </li>
+            <li>
+              If valid, calculate the median based on the combined length of the
+              arrays (even or odd).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Adjust Search Range</strong>:
+          <ul>
+            <li>
+              If <code>maxX &gt; minY</code>, move the search range to the left.
+            </li>
+            <li>
+              If <code>maxY &gt; minX</code>, move the search range to the
+              right.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Exception Handling</strong>:
+          <ul>
+            <li>
+              Throw an <code>IllegalArgumentException</code> if the input is
+              invalid.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Advantages of Divide and Conquer:</h2>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: Reduces the time complexity to
+          O(log(min(m, n))), making it much faster than a brute-force approach.
+        </li>
+        <li>
+          <strong>Simplicity</strong>: By focusing on one array (the smaller
+          one), the problem becomes easier to handle.
+        </li>
+        <li>
+          <strong>Optimal Performance</strong>: Handles large arrays efficiently
+          and can be applied to arrays of different sizes.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
