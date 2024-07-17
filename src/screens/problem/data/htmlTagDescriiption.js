@@ -3065,6 +3065,20 @@ public class Solution {
               </ul>
             </li>
             <li>
+              <strong>Floyd-Warshall Algorithm</strong>:
+              <ul>
+                <li>
+                  Used for finding shortest paths in graphs with weighted edges
+                  (positive or negative).
+                </li>
+                <li>Computes shortest paths between all pairs of nodes.</li>
+                <li>
+                  Dynamic programming approach that iteratively updates shortest
+                  path estimates.
+                </li>
+              </ul>
+            </li>
+            <li>
               <strong>A*</strong>:
               <ul>
                 <li>
