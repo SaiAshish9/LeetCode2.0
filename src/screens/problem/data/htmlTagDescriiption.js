@@ -3999,6 +3999,100 @@ public class Main {
       </ul>
     </>
   ),
+  Bitmask: (
+    <>
+      <ul>
+        <li>
+          <strong>Setting a Bit:</strong>
+          <ul>
+            <li>
+              <strong>Operation:</strong>{" "}
+              <code>bitmask |= (1 &lt;&lt; pos)</code>
+            </li>
+            <li>
+              <strong>Effect:</strong> Sets the bit at position <code>pos</code>{" "}
+              to 1 in <code>bitmask</code>.
+            </li>
+            <li>
+              <strong>Example:</strong> If <code>pos = 2</code>,{" "}
+              <code>bitmask = 0b0001</code> becomes <code>0b0101</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Clearing a Bit:</strong>
+          <ul>
+            <li>
+              <strong>Operation:</strong>{" "}
+              <code>bitmask &= ~(1 &lt;&lt; pos)</code>
+            </li>
+            <li>
+              <strong>Effect:</strong> Clears the bit at position{" "}
+              <code>pos</code> (sets it to 0) in <code>bitmask</code>.
+            </li>
+            <li>
+              <strong>Example:</strong> If <code>pos = 1</code>,{" "}
+              <code>bitmask = 0b1010</code> becomes <code>0b1000</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Toggling a Bit:</strong>
+          <ul>
+            <li>
+              <strong>Operation:</strong>{" "}
+              <code>bitmask ^= (1 &lt;&lt; pos)</code>
+            </li>
+            <li>
+              <strong>Effect:</strong> Toggles (flips) the bit at position{" "}
+              <code>pos</code> in <code>bitmask</code>.
+            </li>
+            <li>
+              <strong>Example:</strong> If <code>pos = 3</code>,{" "}
+              <code>bitmask = 0b0110</code> becomes <code>0b1110</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Checking if a Bit is Set:</strong>
+          <ul>
+            <li>
+              <strong>Operation:</strong>{" "}
+              <code>(bitmask & (1 &lt;&lt; pos)) != 0</code>
+            </li>
+            <li>
+              <strong>Effect:</strong> Checks if the bit at position{" "}
+              <code>pos</code> is set to 1 in <code>bitmask</code>.
+            </li>
+            <li>
+              <strong>Example:</strong> If <code>pos = 2</code>, checks if{" "}
+              <code>bitmask = 0b1010</code> has the bit set.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterating through Subsets:</strong>
+          <ul>
+            <li>
+              <strong>Operation:</strong> Iterate from <code>0</code> to{" "}
+              <code>(1 &lt;&lt; n) - 1</code>, where <code>n</code> is the
+              number of elements.
+            </li>
+            <li>
+              <strong>Effect:</strong> Generates all possible subsets using
+              bitmasking.
+            </li>
+            <li>
+              <strong>Example:</strong> For <code>n = 3</code>, generates
+              subsets <code>{}</code>, <code>{0}</code>, <code>{1}</code>,{" "}
+              <code>{2}</code>, <code>{(0, 1)}</code>, <code>{(0, 2)}</code>,{" "}
+              <code>{(1, 2)}</code>, <code>{(0, 1, 2)}</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
