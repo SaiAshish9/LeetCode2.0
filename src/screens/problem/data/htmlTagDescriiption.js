@@ -2486,7 +2486,8 @@ public class Solution {
         The "Combinatorics" tag on LeetCode categorizes problems that involve
         counting, arranging, or selecting elements in specific ways using
         combinatorial mathematics.
-      </p>
+      </p>{" "}
+      <br />
       <h2>Key Concepts in Combinatorics:</h2>
       <ul>
         <li>
@@ -2549,7 +2550,7 @@ public class Solution {
           </ul>
         </li>
       </ul>
-      <h2>Example Problems:</h2>
+      <h2>Example Problems:</h2> <br />
       <p>
         Below are examples of problems that fall under the Combinatorics tag:
       </p>
@@ -2561,8 +2562,11 @@ public class Solution {
           Counting arrangements or selections that meet specific criteria.
         </li>
       </ul>
-      <h2>Java Implementation Example:</h2>
-      <p>Here's an example of solving a combinatorics problem using Java:</p>
+      <br />
+      <p>
+        Here's an example of solving a combinatorics problem using Java:
+      </p>{" "}
+      <br />
       <pre>
         <code>
           {`import java.util.*;
@@ -2600,10 +2604,12 @@ public class Permutations {
 }`}
         </code>
       </pre>
+      <br />
       <p>
         This example demonstrates generating permutations of an array{" "}
         {`{1, 2, 3}`} using recursion and backtracking.
-      </p>
+      </p>{" "}
+      <br />
       <h2>Advantages of Using Combinatorics:</h2>
       <ul>
         <li>
