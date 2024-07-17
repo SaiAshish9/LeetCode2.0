@@ -3958,6 +3958,46 @@ public class Main {
           </ul>
         </li>
       </ul>
+      <h2>Trie Operations Complexity</h2>
+      <br />
+      <ul>
+        <li>
+          <strong>Insertion:</strong>
+          <ul>
+            <li>
+              <strong>Time Complexity:</strong> (O(m)), where (m) is the length
+              of the word being inserted.
+            </li>
+            <li>
+              <strong>Space Complexity:</strong> (O(m)), in the worst case.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Search:</strong>
+          <ul>
+            <li>
+              <strong>Time Complexity:</strong> (O(m)), where (m) is the length
+              of the word being searched.
+            </li>
+            <li>
+              <strong>Space Complexity:</strong> (O(1)).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Prefix Search (StartsWith):</strong>
+          <ul>
+            <li>
+              <strong>Time Complexity:</strong> (O(m)), where (m) is the length
+              of the prefix being searched.
+            </li>
+            <li>
+              <strong>Space Complexity:</strong> (O(1)).
+            </li>
+          </ul>
+        </li>
+      </ul>
     </>
   ),
 };
