@@ -3902,66 +3902,47 @@ public class Main {
       </ul>
     </>
   ),
-  Trie: (
-    <>
-      <p>
-        A Trie (Prefix Tree) is a tree-like data structure used to store a
-        dynamic set of strings.
-      </p>
+  "Trie":(
+    <><p>A Trie (Prefix Tree) is a tree-like data structure used to store a dynamic set of strings.</p>
 
-      <ul>
+    <ul>
         <li>
-          <strong>Root:</strong>
-          <ul>
-            <li class="trie-node">
-              Empty node that doesn't store any character.
-            </li>
-          </ul>
+            <strong>Root:</strong>
+            <ul>
+                <li class="trie-node">Empty node that doesn't store any character.</li>
+            </ul>
         </li>
         <li>
-          <strong>Nodes:</strong>
-          <ul>
-            <li class="trie-node">Each node represents a single character.</li>
-            <li class="trie-node">
-              Each edge represents a path from one character to the next.
-            </li>
-          </ul>
+            <strong>Nodes:</strong>
+            <ul>
+                <li class="trie-node">Each node represents a single character.</li>
+                <li class="trie-node">Each edge represents a path from one character to the next.</li>
+            </ul>
         </li>
         <li>
-          <strong>Insertion:</strong>
-          <ul>
-            <li class="trie-node">
-              Start from the root and follow edges corresponding to each
-              character in the word.
-            </li>
-            <li class="trie-node">Create new nodes and edges as needed.</li>
-          </ul>
+            <strong>Insertion:</strong>
+            <ul>
+                <li class="trie-node">Start from the root and follow edges corresponding to each character in the word.</li>
+                <li class="trie-node">Create new nodes and edges as needed.</li>
+            </ul>
         </li>
         <li>
-          <strong>Search:</strong>
-          <ul>
-            <li class="trie-node">
-              Start from the root and follow edges corresponding to each
-              character in the query.
-            </li>
-            <li class="trie-node">
-              Check if the query word exists in the Trie.
-            </li>
-          </ul>
+            <strong>Search:</strong>
+            <ul>
+                <li class="trie-node">Start from the root and follow edges corresponding to each character in the query.</li>
+                <li class="trie-node">Check if the query word exists in the Trie.</li>
+            </ul>
         </li>
         <li>
-          <strong>End-of-Word Marker:</strong>
-          <ul>
-            <li class="trie-node">
-              Special marker (e.g., boolean flag) to indicate the end of a word.
-            </li>
-          </ul>
+            <strong>End-of-Word Marker:</strong>
+            <ul>
+                <li class="trie-node">Special marker (e.g., boolean flag) to indicate the end of a word.</li>
+            </ul>
         </li>
-      </ul>
+    </ul>
 
-      <p>Here's a basic visualization of a Trie:</p>
-      <pre>
-        {`root
+    <p>Here's a basic visualization of a Trie:</p>
+    <pre>{`        root
           / \
          a   b
         /     \
@@ -3970,9 +3951,8 @@ public class Main {
      p   l   t
     /     \  
    e       e`}
-      </pre>
-    </>
-  ),
+    </pre></>
+  )
 };
 
 export default TAG_DESCRIPTION;
