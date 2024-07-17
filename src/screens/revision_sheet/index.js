@@ -46,6 +46,8 @@ const RevisionSheet = () => {
               value.tags.includes(
                 key === "Probability and Statistics"
                   ? "Probability And Statistics"
+                  : key === "Divide and Conquer"
+                  ? "Divide And Conquer"
                   : key
               )
             ) {
