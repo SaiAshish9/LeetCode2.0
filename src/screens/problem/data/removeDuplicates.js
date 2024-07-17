@@ -1691,6 +1691,12 @@ const obj1 = {
       matrix: "",
     },
   },
+  535: {
+    java: {
+      "hash-function":
+        'import java.util.HashMap;\nimport java.util.Map;\n\npublic class Codec {\n    private static final String BASE_URL = "http://tinyurl.com/";\n    private Map<String, String> shortToLongMap = new HashMap<>();\n    private Map<String, String> longToShortMap = new HashMap<>();\n    \n    private String getHash(String url) {\n        return Integer.toHexString(url.hashCode());\n    }\n\n    public String encode(String longUrl) {\n        if (longToShortMap.containsKey(longUrl)) {\n            return BASE_URL + longToShortMap.get(longUrl);\n        }\n\n        String shortKey = getHash(longUrl);\n        while (shortToLongMap.containsKey(shortKey)) {\n            longUrl += " ";\n            shortKey = getHash(longUrl);\n        }\n        \n        shortToLongMap.put(shortKey, longUrl);\n        longToShortMap.put(longUrl, shortKey);\n        \n        return BASE_URL + shortKey;\n    }\n\n    public String decode(String shortUrl) {\n        String shortKey = shortUrl.replace(BASE_URL, "");\n        return shortToLongMap.get(shortKey);\n    }\n\n}\n',
+    },
+  },
   536: {
     java: {
       stack: "",
@@ -1773,6 +1779,11 @@ const obj1 = {
   568: {
     java: {
       matrix: "",
+    },
+  },
+  572: {
+    java: {
+      "hash-function": "",
     },
   },
   576: {
@@ -2035,6 +2046,11 @@ const obj1 = {
         "import java.util.*;\n\nclass Solution {\n    public List<String> topKFrequent(String[] words, int k) {\n        Map<String, Integer> frequencyMap = new HashMap<>();\n        for (String word : words) {\n            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);\n        }\n\n        PriorityQueue<String> minHeap = new PriorityQueue<>(\n                (a, b) -> frequencyMap.get(a).equals(frequencyMap.get(b))\n                        ? b.compareTo(a)\n                        : frequencyMap.get(a) - frequencyMap.get(b));\n\n        for (String word : frequencyMap.keySet()) {\n            minHeap.offer(word);\n            if (minHeap.size() > k) {\n                minHeap.poll();\n            }\n        }\n\n        List<String> result = new ArrayList<>();\n        while (!minHeap.isEmpty()) {\n            result.add(minHeap.poll());\n        }\n        Collections.reverse(result);\n        return result;\n    }\n}\n",
     },
   },
+  694: {
+    java: {
+      "hash-function": "",
+    },
+  },
   695: {
     java: {
       matrix: "",
@@ -2078,9 +2094,24 @@ const obj1 = {
         "import java.util.PriorityQueue;\n\nclass KthLargest {\n    private PriorityQueue<Integer> minHeap;\n    private int k;\n\n    public KthLargest(int k, int[] nums) {\n        this.k = k;\n        this.minHeap = new PriorityQueue<>(k);\n        \n        for (int num : nums) {\n            add(num);\n        }\n    }\n    \n    public int add(int val) {\n        if (minHeap.size() < k) {\n            minHeap.offer(val);\n        } else if (val > minHeap.peek()) {\n            minHeap.poll();\n            minHeap.offer(val);\n        }\n        return minHeap.peek();\n    }\n}\n",
     },
   },
+  705: {
+    java: {
+      "hash-function": "",
+    },
+  },
+  706: {
+    java: {
+      "hash-function": "",
+    },
+  },
   710: {
     java: {
       randomized: "",
+    },
+  },
+  711: {
+    java: {
+      "hash-function": "",
     },
   },
   712: {
@@ -5142,6 +5173,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1948: {
+    java: {
+      "hash-function": "",
+    },
+  },
   1950: {
     java: {
       "monotonic-stack": "",
@@ -7995,184 +8031,1154 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  187: {
+  94: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  214: {
+  95: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  535: {
+  96: {
     java: {
-      "hash-function": "",
+      tree: "",
+    },
+  },
+  98: {
+    java: {
+      tree: "",
+    },
+  },
+  99: {
+    java: {
+      tree: "",
+    },
+  },
+  100: {
+    java: {
+      tree: "",
+    },
+  },
+  101: {
+    java: {
+      tree: "",
+    },
+  },
+  102: {
+    java: {
+      tree: "",
+    },
+  },
+  103: {
+    java: {
+      tree: "",
+    },
+  },
+  104: {
+    java: {
+      tree: "",
+    },
+  },
+  105: {
+    java: {
+      tree: "",
+    },
+  },
+  106: {
+    java: {
+      tree: "",
+    },
+  },
+  107: {
+    java: {
+      tree: "",
+    },
+  },
+  108: {
+    java: {
+      tree: "",
+    },
+  },
+  109: {
+    java: {
+      tree: "",
+    },
+  },
+  110: {
+    java: {
+      tree: "",
+    },
+  },
+  111: {
+    java: {
+      tree: "",
+    },
+  },
+  112: {
+    java: {
+      tree: "",
+    },
+  },
+  113: {
+    java: {
+      tree: "",
+    },
+  },
+  114: {
+    java: {
+      tree: "",
+    },
+  },
+  116: {
+    java: {
+      tree: "",
+    },
+  },
+  117: {
+    java: {
+      tree: "",
+    },
+  },
+  124: {
+    java: {
+      tree: "",
+    },
+  },
+  129: {
+    java: {
+      tree: "",
+    },
+  },
+  144: {
+    java: {
+      tree: "",
+    },
+  },
+  145: {
+    java: {
+      tree: "",
+    },
+  },
+  156: {
+    java: {
+      tree: "",
+    },
+  },
+  173: {
+    java: {
+      tree: "",
+    },
+  },
+  199: {
+    java: {
+      tree: "",
+    },
+  },
+  222: {
+    java: {
+      tree: "",
+    },
+  },
+  226: {
+    java: {
+      tree: "",
+    },
+  },
+  230: {
+    java: {
+      tree: "",
+    },
+  },
+  235: {
+    java: {
+      tree: "",
+    },
+  },
+  236: {
+    java: {
+      tree: "",
+    },
+  },
+  250: {
+    java: {
+      tree: "",
+    },
+  },
+  255: {
+    java: {
+      tree: "",
+    },
+  },
+  257: {
+    java: {
+      tree: "",
+    },
+  },
+  270: {
+    java: {
+      tree: "",
+    },
+  },
+  272: {
+    java: {
+      tree: "",
+    },
+  },
+  285: {
+    java: {
+      tree: "",
+    },
+  },
+  297: {
+    java: {
+      tree: "",
+    },
+  },
+  298: {
+    java: {
+      tree: "",
+    },
+  },
+  314: {
+    java: {
+      tree: "",
+    },
+  },
+  331: {
+    java: {
+      tree: "",
+    },
+  },
+  333: {
+    java: {
+      tree: "",
+    },
+  },
+  337: {
+    java: {
+      tree: "",
+    },
+  },
+  341: {
+    java: {
+      tree: "",
+    },
+  },
+  366: {
+    java: {
+      tree: "",
+    },
+  },
+  404: {
+    java: {
+      tree: "",
+    },
+  },
+  426: {
+    java: {
+      tree: "",
+    },
+  },
+  427: {
+    java: {
+      tree: "",
+    },
+  },
+  428: {
+    java: {
+      tree: "",
+    },
+  },
+  429: {
+    java: {
+      tree: "",
+    },
+  },
+  431: {
+    java: {
+      tree: "",
+    },
+  },
+  437: {
+    java: {
+      tree: "",
+    },
+  },
+  449: {
+    java: {
+      tree: "",
+    },
+  },
+  450: {
+    java: {
+      tree: "",
+    },
+  },
+  501: {
+    java: {
+      tree: "",
+    },
+  },
+  508: {
+    java: {
+      tree: "",
+    },
+  },
+  510: {
+    java: {
+      tree: "",
+    },
+  },
+  513: {
+    java: {
+      tree: "",
+    },
+  },
+  515: {
+    java: {
+      tree: "",
+    },
+  },
+  530: {
+    java: {
+      tree: "",
+    },
+  },
+  536: {
+    java: {
+      tree: "",
+    },
+  },
+  538: {
+    java: {
+      tree: "",
+    },
+  },
+  543: {
+    java: {
+      tree: "",
+    },
+  },
+  545: {
+    java: {
+      tree: "",
+    },
+  },
+  549: {
+    java: {
+      tree: "",
+    },
+  },
+  558: {
+    java: {
+      tree: "",
+    },
+  },
+  559: {
+    java: {
+      tree: "",
+    },
+  },
+  563: {
+    java: {
+      tree: "",
     },
   },
   572: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  694: {
+  582: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  705: {
+  589: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  706: {
+  590: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  711: {
+  606: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  718: {
+  617: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1044: {
+  623: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1062: {
+  637: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1147: {
+  652: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1316: {
+  653: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1392: {
+  654: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1461: {
+  655: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1554: {
+  662: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1698: {
+  663: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1923: {
+  666: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1948: {
+  669: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  1960: {
+  671: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  2156: {
+  687: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  2168: {
+  690: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  2223: {
+  700: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  2261: {
+  701: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  2430: {
+  703: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3006: {
+  742: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3008: {
+  776: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3023: {
+  783: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3029: {
+  814: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3031: {
+  834: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3034: {
+  863: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3036: {
+  865: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3037: {
+  872: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3042: {
+  889: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3045: {
+  894: {
     java: {
-      "hash-function": "",
+      tree: "",
     },
   },
-  3135: {
+  897: {
     java: {
-      "hash-function": "",
+      tree: "",
+    },
+  },
+  919: {
+    java: {
+      tree: "",
+    },
+  },
+  938: {
+    java: {
+      tree: "",
+    },
+  },
+  951: {
+    java: {
+      tree: "",
+    },
+  },
+  958: {
+    java: {
+      tree: "",
+    },
+  },
+  965: {
+    java: {
+      tree: "",
+    },
+  },
+  968: {
+    java: {
+      tree: "",
+    },
+  },
+  971: {
+    java: {
+      tree: "",
+    },
+  },
+  979: {
+    java: {
+      tree: "",
+    },
+  },
+  987: {
+    java: {
+      tree: "",
+    },
+  },
+  988: {
+    java: {
+      tree: "",
+    },
+  },
+  993: {
+    java: {
+      tree: "",
+    },
+  },
+  998: {
+    java: {
+      tree: "",
+    },
+  },
+  1008: {
+    java: {
+      tree: "",
+    },
+  },
+  1022: {
+    java: {
+      tree: "",
+    },
+  },
+  1026: {
+    java: {
+      tree: "",
+    },
+  },
+  1028: {
+    java: {
+      tree: "",
+    },
+  },
+  1038: {
+    java: {
+      tree: "",
+    },
+  },
+  1080: {
+    java: {
+      tree: "",
+    },
+  },
+  1104: {
+    java: {
+      tree: "",
+    },
+  },
+  1110: {
+    java: {
+      tree: "",
+    },
+  },
+  1120: {
+    java: {
+      tree: "",
+    },
+  },
+  1123: {
+    java: {
+      tree: "",
+    },
+  },
+  1145: {
+    java: {
+      tree: "",
+    },
+  },
+  1161: {
+    java: {
+      tree: "",
+    },
+  },
+  1214: {
+    java: {
+      tree: "",
+    },
+  },
+  1245: {
+    java: {
+      tree: "",
+    },
+  },
+  1257: {
+    java: {
+      tree: "",
+    },
+  },
+  1261: {
+    java: {
+      tree: "",
+    },
+  },
+  1273: {
+    java: {
+      tree: "",
+    },
+  },
+  1302: {
+    java: {
+      tree: "",
+    },
+  },
+  1305: {
+    java: {
+      tree: "",
+    },
+  },
+  1315: {
+    java: {
+      tree: "",
+    },
+  },
+  1325: {
+    java: {
+      tree: "",
+    },
+  },
+  1339: {
+    java: {
+      tree: "",
+    },
+  },
+  1361: {
+    java: {
+      tree: "",
+    },
+  },
+  1367: {
+    java: {
+      tree: "",
+    },
+  },
+  1372: {
+    java: {
+      tree: "",
+    },
+  },
+  1373: {
+    java: {
+      tree: "",
+    },
+  },
+  1376: {
+    java: {
+      tree: "",
+    },
+  },
+  1377: {
+    java: {
+      tree: "",
+    },
+  },
+  1379: {
+    java: {
+      tree: "",
+    },
+  },
+  1382: {
+    java: {
+      tree: "",
+    },
+  },
+  1430: {
+    java: {
+      tree: "",
+    },
+  },
+  1443: {
+    java: {
+      tree: "",
+    },
+  },
+  1448: {
+    java: {
+      tree: "",
+    },
+  },
+  1457: {
+    java: {
+      tree: "",
+    },
+  },
+  1469: {
+    java: {
+      tree: "",
+    },
+  },
+  1483: {
+    java: {
+      tree: "",
+    },
+  },
+  1485: {
+    java: {
+      tree: "",
+    },
+  },
+  1490: {
+    java: {
+      tree: "",
+    },
+  },
+  1506: {
+    java: {
+      tree: "",
+    },
+  },
+  1516: {
+    java: {
+      tree: "",
+    },
+  },
+  1519: {
+    java: {
+      tree: "",
+    },
+  },
+  1522: {
+    java: {
+      tree: "",
+    },
+  },
+  1530: {
+    java: {
+      tree: "",
+    },
+  },
+  1569: {
+    java: {
+      tree: "",
+    },
+  },
+  1586: {
+    java: {
+      tree: "",
+    },
+  },
+  1597: {
+    java: {
+      tree: "",
+    },
+  },
+  1600: {
+    java: {
+      tree: "",
+    },
+  },
+  1602: {
+    java: {
+      tree: "",
+    },
+  },
+  1609: {
+    java: {
+      tree: "",
+    },
+  },
+  1612: {
+    java: {
+      tree: "",
+    },
+  },
+  1617: {
+    java: {
+      tree: "",
+    },
+  },
+  1628: {
+    java: {
+      tree: "",
+    },
+  },
+  1644: {
+    java: {
+      tree: "",
+    },
+  },
+  1650: {
+    java: {
+      tree: "",
+    },
+  },
+  1660: {
+    java: {
+      tree: "",
+    },
+  },
+  1666: {
+    java: {
+      tree: "",
+    },
+  },
+  1676: {
+    java: {
+      tree: "",
+    },
+  },
+  1719: {
+    java: {
+      tree: "",
+    },
+  },
+  1740: {
+    java: {
+      tree: "",
+    },
+  },
+  1766: {
+    java: {
+      tree: "",
+    },
+  },
+  1902: {
+    java: {
+      tree: "",
+    },
+  },
+  1916: {
+    java: {
+      tree: "",
+    },
+  },
+  1932: {
+    java: {
+      tree: "",
+    },
+  },
+  1973: {
+    java: {
+      tree: "",
+    },
+  },
+  1993: {
+    java: {
+      tree: "",
+    },
+  },
+  2003: {
+    java: {
+      tree: "",
+    },
+  },
+  2005: {
+    java: {
+      tree: "",
+    },
+  },
+  2049: {
+    java: {
+      tree: "",
+    },
+  },
+  2096: {
+    java: {
+      tree: "",
+    },
+  },
+  2196: {
+    java: {
+      tree: "",
+    },
+  },
+  2236: {
+    java: {
+      tree: "",
+    },
+  },
+  2246: {
+    java: {
+      tree: "",
+    },
+  },
+  2265: {
+    java: {
+      tree: "",
+    },
+  },
+  2277: {
+    java: {
+      tree: "",
+    },
+  },
+  2313: {
+    java: {
+      tree: "",
+    },
+  },
+  2322: {
+    java: {
+      tree: "",
+    },
+  },
+  2331: {
+    java: {
+      tree: "",
+    },
+  },
+  2368: {
+    java: {
+      tree: "",
+    },
+  },
+  2378: {
+    java: {
+      tree: "",
+    },
+  },
+  2385: {
+    java: {
+      tree: "",
+    },
+  },
+  2415: {
+    java: {
+      tree: "",
+    },
+  },
+  2421: {
+    java: {
+      tree: "",
+    },
+  },
+  2440: {
+    java: {
+      tree: "",
+    },
+  },
+  2445: {
+    java: {
+      tree: "",
+    },
+  },
+  2458: {
+    java: {
+      tree: "",
+    },
+  },
+  2467: {
+    java: {
+      tree: "",
+    },
+  },
+  2471: {
+    java: {
+      tree: "",
+    },
+  },
+  2476: {
+    java: {
+      tree: "",
+    },
+  },
+  2477: {
+    java: {
+      tree: "",
+    },
+  },
+  2479: {
+    java: {
+      tree: "",
+    },
+  },
+  2509: {
+    java: {
+      tree: "",
+    },
+  },
+  2538: {
+    java: {
+      tree: "",
+    },
+  },
+  2581: {
+    java: {
+      tree: "",
+    },
+  },
+  2583: {
+    java: {
+      tree: "",
+    },
+  },
+  2603: {
+    java: {
+      tree: "",
+    },
+  },
+  2641: {
+    java: {
+      tree: "",
+    },
+  },
+  2646: {
+    java: {
+      tree: "",
+    },
+  },
+  2673: {
+    java: {
+      tree: "",
+    },
+  },
+  2689: {
+    java: {
+      tree: "",
+    },
+  },
+  2764: {
+    java: {
+      tree: "",
+    },
+  },
+  2773: {
+    java: {
+      tree: "",
+    },
+  },
+  2791: {
+    java: {
+      tree: "",
+    },
+  },
+  2792: {
+    java: {
+      tree: "",
+    },
+  },
+  2846: {
+    java: {
+      tree: "",
+    },
+  },
+  2867: {
+    java: {
+      tree: "",
+    },
+  },
+  2872: {
+    java: {
+      tree: "",
+    },
+  },
+  2920: {
+    java: {
+      tree: "",
+    },
+  },
+  2925: {
+    java: {
+      tree: "",
+    },
+  },
+  2973: {
+    java: {
+      tree: "",
+    },
+  },
+  3004: {
+    java: {
+      tree: "",
+    },
+  },
+  3067: {
+    java: {
+      tree: "",
+    },
+  },
+  3068: {
+    java: {
+      tree: "",
+    },
+  },
+  3157: {
+    java: {
+      tree: "",
+    },
+  },
+  3203: {
+    java: {
+      tree: "",
     },
   },
 };

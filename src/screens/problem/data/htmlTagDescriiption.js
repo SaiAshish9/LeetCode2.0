@@ -2479,6 +2479,148 @@ public class Solution {
       </ul>
     </>
   ),
+  Combinatorics: (
+    <>
+      {" "}
+      <p>
+        The "Combinatorics" tag on LeetCode categorizes problems that involve
+        counting, arranging, or selecting elements in specific ways using
+        combinatorial mathematics.
+      </p>
+      <h2>Key Concepts in Combinatorics:</h2>
+      <ul>
+        <li>
+          <strong>Permutations</strong>:
+          <ul>
+            <li>Arrangements of elements in a specific order.</li>
+            <li>
+              Examples include generating permutations of a set or finding the
+              k-th permutation.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Combinations</strong>:
+          <ul>
+            <li>Selection of subsets without regard to the order.</li>
+            <li>
+              Tasks may involve finding combinations that meet certain criteria
+              or selecting subsets from a set.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Subsets</strong>:
+          <ul>
+            <li>
+              All possible groups of elements that can be formed from a given
+              set.
+            </li>
+            <li>
+              Common tasks include generating all subsets (power set) or finding
+              subsets that satisfy specific conditions.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Counting Problems</strong>:
+          <ul>
+            <li>
+              Problems focused on counting various configurations or
+              arrangements of elements.
+            </li>
+            <li>
+              These often involve permutations, combinations, or recursive
+              counting techniques.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Factorials and Binomial Coefficients</strong>:
+          <ul>
+            <li>
+              Factorials (n!) and binomial coefficients (n choose k) are
+              fundamental in combinatorial calculations.
+            </li>
+            <li>
+              They are used extensively in combinatorial problems for
+              calculating permutations, combinations, and subsets.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example Problems:</h2>
+      <p>
+        Below are examples of problems that fall under the Combinatorics tag:
+      </p>
+      <ul>
+        <li>Generating permutations of a string or array.</li>
+        <li>Finding combinations that sum up to a target value.</li>
+        <li>Generating all possible subsets of a set.</li>
+        <li>
+          Counting arrangements or selections that meet specific criteria.
+        </li>
+      </ul>
+      <h2>Java Implementation Example:</h2>
+      <p>Here's an example of solving a combinatorics problem using Java:</p>
+      <pre>
+        <code>
+          {`import java.util.*;
+
+public class Permutations {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> current = new ArrayList<>();
+        boolean[] used = new boolean[nums.length];
+        backtrack(nums, used, current, result);
+        return result;
+    }
+
+    private void backtrack(int[] nums, boolean[] used, List<Integer> current, List<List<Integer>> result) {
+        if (current.size() == nums.length) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (used[i]) continue;
+            used[i] = true;
+            current.add(nums[i]);
+            backtrack(nums, used, current, result);
+            current.remove(current.size() - 1);
+            used[i] = false;
+        }
+    }
+
+    public static void main(String[] args) {
+        Permutations solution = new Permutations();
+        int[] nums = {1, 2, 3};
+        List<List<Integer>> permutations = solution.permute(nums);
+        System.out.println("Permutations: " + permutations);
+    }
+}`}
+        </code>
+      </pre>
+      <p>
+        This example demonstrates generating permutations of an array{" "}
+        {`{1, 2, 3}`} using recursion and backtracking.
+      </p>
+      <h2>Advantages of Using Combinatorics:</h2>
+      <ul>
+        <li>
+          <strong>Versatility</strong>: Applicable to a wide range of problems
+          involving arrangement, selection, or counting.
+        </li>
+        <li>
+          <strong>Efficiency</strong>: Many combinatorial problems can be solved
+          efficiently using recursive techniques.
+        </li>
+        <li>
+          <strong>Understanding</strong>: Solving combinatorial problems
+          enhances understanding of fundamental mathematical concepts.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
