@@ -3648,7 +3648,7 @@ public class Solution {
         updates. <br /> <br />
         Below is a detailed explanation of the class and its methods:
       </p>
-      <h2>Class Definition:</h2>
+      <h2>Class Definition:</h2> <br />
       <ul>
         <li>
           <code>FenwickTree</code>:
