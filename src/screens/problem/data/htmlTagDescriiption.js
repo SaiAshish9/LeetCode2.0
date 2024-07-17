@@ -3645,8 +3645,8 @@ public class Solution {
       <p>
         The <code>FenwickTree</code> class is an implementation of a Binary
         Indexed Tree (BIT) that supports efficient prefix sum calculations and
-        updates. <br /> Below is a detailed explanation of the class and its
-        methods:
+        updates. <br /> <br />
+        Below is a detailed explanation of the class and its methods:
       </p>
       <h2>Class Definition:</h2>
       <ul>
