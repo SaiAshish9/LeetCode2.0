@@ -4098,9 +4098,11 @@ public class Main {
             <strong>Problem:</strong> Given an array of integers, find all
             subsets that sum up to a specific target.
           </p>
+          <br />
           <p>
             <strong>Solution (Using Bitmasking):</strong>
           </p>
+          <br />
           <pre>
             <code>
               {`function subsetsWithSum(nums, target) {
