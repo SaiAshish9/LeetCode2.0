@@ -572,6 +572,11 @@ const obj1 = {
       backtracking: "",
     },
   },
+  128: {
+    java: {
+      "union-find": "",
+    },
+  },
   129: {
     java: {
       tree: "",
@@ -579,7 +584,7 @@ const obj1 = {
   },
   130: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   131: {
@@ -815,7 +820,7 @@ const obj1 = {
   },
   200: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   201: {
@@ -832,6 +837,11 @@ const obj1 = {
   203: {
     java: {
       recursion: "",
+    },
+  },
+  204: {
+    java: {
+      "number-theory": "",
     },
   },
   206: {
@@ -1066,6 +1076,11 @@ const obj1 = {
       tree: "",
     },
   },
+  258: {
+    java: {
+      "number-theory": "",
+    },
+  },
   259: {
     java: {
       "two-pointers": "",
@@ -1074,6 +1089,11 @@ const obj1 = {
   260: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  261: {
+    java: {
+      "union-find": "",
     },
   },
   264: {
@@ -1255,6 +1275,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  305: {
+    java: {
+      "union-find": "",
+    },
+  },
   306: {
     java: {
       backtracking: "",
@@ -1337,6 +1362,11 @@ const obj1 = {
   322: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  323: {
+    java: {
+      "union-find": "",
     },
   },
   324: {
@@ -1699,7 +1729,7 @@ const obj1 = {
   },
   399: {
     java: {
-      "shortest-path": "",
+      "union-find": "",
     },
   },
   401: {
@@ -2289,6 +2319,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  547: {
+    java: {
+      "union-find": "",
+    },
+  },
   548: {
     java: {
       "prefix-sum": "",
@@ -2720,6 +2755,16 @@ const obj1 = {
         "class Solution {\n    public int kEmptySlots(int[] bulbs, int k) {\n      int n = bulbs.length;\n        int ans = Integer.MAX_VALUE;\n        int[] day = new int[n]; // day[i] will store the day when bulb at position (i+1) is turned on\n\n        for (int i = 0; i < n; ++i)\n            day[bulbs[i] - 1] = i + 1;\n\n        int left = 0;\n        int right = left + k + 1;\n        \n        for (int i = 1; right < n; ++i) {\n            if (i == right) {\n                ans = Math.min(ans, Math.max(day[left], day[right]));\n                left = i;\n                right = i + k + 1;\n            } else if (day[i] < Math.max(day[left], day[right])) {\n                left = i;\n                right = i + k + 1;\n            }\n        }\n\n        return ans == Integer.MAX_VALUE ? -1 : ans;\n    }\n}\n",
     },
   },
+  684: {
+    java: {
+      "union-find": "",
+    },
+  },
+  685: {
+    java: {
+      "union-find": "",
+    },
+  },
   686: {
     java: {
       "string-matching": "",
@@ -2765,12 +2810,12 @@ const obj1 = {
   },
   694: {
     java: {
-      "hash-function": "",
+      "union-find": "",
     },
   },
   695: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   696: {
@@ -2828,7 +2873,7 @@ const obj1 = {
   },
   711: {
     java: {
-      "hash-function": "",
+      "union-find": "",
     },
   },
   712: {
@@ -2873,6 +2918,11 @@ const obj1 = {
   720: {
     java: {
       trie: "",
+    },
+  },
+  721: {
+    java: {
+      "union-find": "",
     },
   },
   723: {
@@ -2931,6 +2981,11 @@ const obj1 = {
   736: {
     java: {
       stack: "",
+    },
+  },
+  737: {
+    java: {
+      "union-find": "",
     },
   },
   739: {
@@ -3024,6 +3079,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  765: {
+    java: {
+      "union-find": "",
+    },
+  },
   766: {
     java: {
       matrix: "",
@@ -3074,7 +3134,7 @@ const obj1 = {
   },
   778: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   779: {
@@ -3096,6 +3156,11 @@ const obj1 = {
   784: {
     java: {
       backtracking: "",
+    },
+  },
+  785: {
+    java: {
+      "union-find": "",
     },
   },
   786: {
@@ -3166,7 +3231,7 @@ const obj1 = {
   },
   803: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   805: {
@@ -3247,7 +3312,7 @@ const obj1 = {
   },
   827: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   828: {
@@ -3284,6 +3349,11 @@ const obj1 = {
   838: {
     java: {
       "two-pointers": "",
+    },
+  },
+  839: {
+    java: {
+      "union-find": "",
     },
   },
   840: {
@@ -3383,6 +3453,11 @@ const obj1 = {
       tree: "",
     },
   },
+  866: {
+    java: {
+      "number-theory": "",
+    },
+  },
   867: {
     java: {
       matrix: "",
@@ -3451,6 +3526,11 @@ const obj1 = {
   885: {
     java: {
       matrix: "",
+    },
+  },
+  886: {
+    java: {
+      "union-find": "",
     },
   },
   887: {
@@ -3549,6 +3629,11 @@ const obj1 = {
       "topological-sort": "",
     },
   },
+  914: {
+    java: {
+      "number-theory": "",
+    },
+  },
   917: {
     java: {
       "two-pointers": "",
@@ -3586,6 +3671,11 @@ const obj1 = {
         "import java.util.Arrays;\n\npublic class Solution {\n    public int threeSumMulti(int[] arr, int target) {\n        int MOD = 1_000_000_007;\n        Arrays.sort(arr);\n        int n = arr.length;\n        long result = 0;\n\n        for (int left = 0; left < n; left++) {\n            int T = target - arr[left];\n            int right = left + 1, k = n - 1;\n            while (right < k) {\n                if (arr[right] + arr[k] < T) {\n                    right++;\n                } else if (arr[right] + arr[k] > T) {\n                    k--;\n                } else if (arr[right] != arr[k]) {\n                    int leftCount = 1, rightCount = 1;\n                    while (right + 1 < k && arr[right] == arr[right + 1]) {\n                        leftCount++;\n                        right++;\n                    }\n                    while (k - 1 > right && arr[k] == arr[k - 1]) {\n                        rightCount++;\n                        k--;\n                    }\n                    result += leftCount * rightCount;\n                    result %= MOD;\n                    right++;\n                    k--;\n                } else {\n                    result += (k - right + 1) * (k - right) / 2;\n                    result %= MOD;\n                    break;\n                }\n            }\n        }\n\n        return (int) result;\n    }\n}\n",
     },
   },
+  924: {
+    java: {
+      "union-find": "",
+    },
+  },
   925: {
     java: {
       "two-pointers": "",
@@ -3594,6 +3684,11 @@ const obj1 = {
   926: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  928: {
+    java: {
+      "union-find": "",
     },
   },
   930: {
@@ -3662,6 +3757,11 @@ const obj1 = {
       stack: "",
     },
   },
+  947: {
+    java: {
+      "union-find": "",
+    },
+  },
   948: {
     java: {
       "two-pointers": "",
@@ -3675,6 +3775,11 @@ const obj1 = {
   951: {
     java: {
       tree: "",
+    },
+  },
+  952: {
+    java: {
+      "union-find": "",
     },
   },
   956: {
@@ -3694,7 +3799,7 @@ const obj1 = {
   },
   959: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   960: {
@@ -3807,6 +3912,11 @@ const obj1 = {
       tree: "",
     },
   },
+  990: {
+    java: {
+      "union-find": "",
+    },
+  },
   992: {
     java: {
       "sliding-window":
@@ -3899,7 +4009,7 @@ const obj1 = {
   },
   1020: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1021: {
@@ -4053,6 +4163,11 @@ const obj1 = {
       "topological-sort": "",
     },
   },
+  1061: {
+    java: {
+      "union-find": "",
+    },
+  },
   1062: {
     java: {
       "suffix-array":
@@ -4171,9 +4286,14 @@ const obj1 = {
         "public class Solution {\n    public int numKLenSubstrNoRepeats(String S, int K) {\n        int n = S.length();\n        if (n < K) return 0;\n\n        HashSet<Character> set = new HashSet<>();\n        int count = 0;\n\n        for (int i = 0; i <= n - K; i++) {\n            set.clear();\n            boolean isValid = true;\n            for (int j = i; j < i + K; j++) {\n                char ch = S.charAt(j);\n                if (set.contains(ch)) {\n                    isValid = false;\n                    break;\n                }\n                set.add(ch);\n            }\n            if (isValid) {\n                count++;\n            }\n        }\n        return count;\n    }\n}",
     },
   },
+  1101: {
+    java: {
+      "union-find": "",
+    },
+  },
   1102: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1104: {
@@ -4264,8 +4384,7 @@ const obj1 = {
   },
   1135: {
     java: {
-      "minimum-spanning-tree":
-        'import java.util.*;\n\nclass Solution {\n    class Edge {\n        int src, dest, weight;\n        Edge(int src, int dest, int weight) {\n            this.src = src;\n            this.dest = dest;\n            this.weight = weight;\n        }\n    }\n\n    class UnionFind {\n        int[] parent, rank;\n\n        UnionFind(int n) {\n            parent = new int[n];\n            rank = new int[n];\n            for (int i = 0; i < n; i++) {\n                parent[i] = i;\n                rank[i] = 0;\n            }\n        }\n\n        int find(int x) {\n            if (parent[x] != x) {\n                parent[x] = find(parent[x]);\n            }\n            return parent[x];\n        }\n\n        boolean union(int x, int y) {\n            int rootX = find(x);\n            int rootY = find(y);\n            if (rootX != rootY) {\n                if (rank[rootX] > rank[rootY]) {\n                    parent[rootY] = rootX;\n                } else if (rank[rootX] < rank[rootY]) {\n                    parent[rootX] = rootY;\n                } else {\n                    parent[rootY] = rootX;\n                    rank[rootX]++;\n                }\n                return true;\n            }\n            return false;\n        }\n    }\n\n    public int minimumCost(int n, int[][] connections) {\n        List<Edge> edges = new ArrayList<>();\n        for (int[] connection : connections) {\n            edges.add(new Edge(connection[0] - 1, connection[1] - 1, connection[2]));\n        }\n        edges.sort(Comparator.comparingInt(e -> e.weight));\n\n        UnionFind uf = new UnionFind(n);\n        int cost = 0, count = 0;\n        for (Edge edge : edges) {\n            if (uf.union(edge.src, edge.dest)) {\n                cost += edge.weight;\n                count++;\n                if (count == n - 1) {\n                    return cost;\n                }\n            }\n        }\n        return -1; // if it\'s not possible to connect all cities\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] connections = { {1, 2, 5}, {1, 3, 6}, {2, 3, 1} };\n        int n = 3;\n        int result = solution.minimumCost(n, connections);\n        System.out.println("Minimum cost to connect all cities: " + result); // Output: 6\n    }\n}\n',
+      "union-find": "",
     },
   },
   1136: {
@@ -4349,8 +4468,7 @@ const obj1 = {
   },
   1168: {
     java: {
-      "minimum-spanning-tree":
-        'import java.util.*;\n\nclass Solution {\n    class Edge {\n        int u, v, cost;\n        Edge(int u, int v, int cost) {\n            this.u = u;\n            this.v = v;\n            this.cost = cost;\n        }\n    }\n\n    class UnionFind {\n        int[] parent, rank;\n\n        UnionFind(int n) {\n            parent = new int[n];\n            rank = new int[n];\n            for (int i = 0; i < n; i++) {\n                parent[i] = i;\n                rank[i] = 0;\n            }\n        }\n\n        int find(int x) {\n            if (parent[x] != x) {\n                parent[x] = find(parent[x]);\n            }\n            return parent[x];\n        }\n\n        boolean union(int x, int y) {\n            int rootX = find(x);\n            int rootY = find(y);\n            if (rootX != rootY) {\n                if (rank[rootX] > rank[rootY]) {\n                    parent[rootY] = rootX;\n                } else if (rank[rootX] < rank[rootY]) {\n                    parent[rootX] = rootY;\n                } else {\n                    parent[rootY] = rootX;\n                    rank[rootX]++;\n                }\n                return true;\n            }\n            return false;\n        }\n    }\n\n    public int minCostToSupplyWater(int n, int[] wells, int[][] pipes) {\n        List<Edge> edges = new ArrayList<>();\n\n        // Add the virtual vertex connections to the wells\n        for (int i = 0; i < wells.length; i++) {\n            edges.add(new Edge(0, i + 1, wells[i]));\n        }\n\n        // Add the existing pipes connections\n        for (int[] pipe : pipes) {\n            edges.add(new Edge(pipe[0], pipe[1], pipe[2]));\n        }\n\n        // Sort all edges by cost\n        edges.sort(Comparator.comparingInt(e -> e.cost));\n\n        // Kruskal\'s algorithm to find the MST\n        UnionFind uf = new UnionFind(n + 1);\n        int minCost = 0;\n\n        for (Edge edge : edges) {\n            if (uf.union(edge.u, edge.v)) {\n                minCost += edge.cost;\n            }\n        }\n\n        return minCost;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int n = 3;\n        int[] wells = {1, 2, 2};\n        int[][] pipes = {{1, 2, 1}, {2, 3, 1}};\n        System.out.println("Minimum cost to supply water: " + solution.minCostToSupplyWater(n, wells, pipes)); // Output: 3\n    }\n}\n',
+      "union-find": "",
     },
   },
   1172: {
@@ -4440,6 +4558,11 @@ const obj1 = {
   1201: {
     java: {
       combinatorics: "",
+    },
+  },
+  1202: {
+    java: {
+      "union-find": "",
     },
   },
   1203: {
@@ -4601,6 +4724,11 @@ const obj1 = {
         "class Solution {\n    public String minRemoveToMakeValid(String s) {\n        Stack<Integer> stack = new Stack<>();\n        char[] chars = s.toCharArray();\n        \n        for (int i = 0; i < chars.length; i++) {\n            if (chars[i] == '(') {\n                stack.push(i); \n            } else if (chars[i] == ')') {\n                if (!stack.isEmpty()) {\n                    stack.pop();\n                } else {\n                    chars[i] = '*'; \n                }\n            }\n        }\n        \n        while (!stack.isEmpty()) {\n            chars[stack.pop()] = '*';\n        }\n        \n        StringBuilder result = new StringBuilder();\n        for (char c : chars) {\n            if (c != '*') {\n                result.append(c);\n            }\n        }\n        \n        return result.toString();\n    }\n}\n",
     },
   },
+  1250: {
+    java: {
+      "number-theory": "",
+    },
+  },
   1253: {
     java: {
       matrix: "",
@@ -4608,7 +4736,7 @@ const obj1 = {
   },
   1254: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1255: {
@@ -4628,7 +4756,7 @@ const obj1 = {
   },
   1258: {
     java: {
-      backtracking: "",
+      "union-find": "",
     },
   },
   1259: {
@@ -4668,7 +4796,7 @@ const obj1 = {
   },
   1267: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1268: {
@@ -4794,6 +4922,11 @@ const obj1 = {
       "bit-manipulation": "",
     },
   },
+  1319: {
+    java: {
+      "union-find": "",
+    },
+  },
   1320: {
     java: {
       "dynamic-programming": "",
@@ -4915,7 +5048,7 @@ const obj1 = {
   },
   1361: {
     java: {
-      tree: "",
+      "union-find": "",
     },
   },
   1363: {
@@ -5007,7 +5140,7 @@ const obj1 = {
   },
   1391: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1392: {
@@ -5160,6 +5293,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1447: {
+    java: {
+      "number-theory": "",
+    },
+  },
   1448: {
     java: {
       tree: "",
@@ -5291,13 +5429,17 @@ const obj1 = {
   },
   1489: {
     java: {
-      "strongly-connected-component":
-        "import java.util.*;\n\nclass UnionFind {\n    private int[] id;\n    private int[] rank;\n\n    public UnionFind(int n) {\n        id = new int[n];\n        rank = new int[n];\n        for (int i = 0; i < n; ++i)\n            id[i] = i;\n    }\n\n    public void unionByRank(int u, int v) {\n        int i = find(u);\n        int j = find(v);\n        if (i == j)\n            return;\n        if (rank[i] < rank[j]) {\n            id[i] = j;\n        } else if (rank[i] > rank[j]) {\n            id[j] = i;\n        } else {\n            id[i] = j;\n            ++rank[j];\n        }\n    }\n\n    public int find(int u) {\n        return id[u] == u ? u : (id[u] = find(id[u]));\n    }\n}\n\nclass Solution {\n    public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {\n        List<Integer> criticalEdges = new ArrayList<>();\n        List<Integer> pseudoCriticalEdges = new ArrayList<>();\n\n        for (int i = 0; i < edges.length; ++i)\n            edges[i] = new int[] {edges[i][0], edges[i][1], edges[i][2], i};\n\n        Arrays.sort(edges, (a, b) -> a[2] - b[2]);\n\n      int mstWeight = getMSTWeight(n, edges, new int[] {}, -1);\n\n        for (int[] edge : edges) {\n          int index = edge[3];\n            // Deleting the `edge` increases the MST's weight or makes the MST invalid.\n            if (getMSTWeight(n, edges, new int[] {}, index) > mstWeight)\n                criticalEdges.add(index);\n            // If an edge can be in any MST, we can always add `edge` to the edge set.\n            else if (getMSTWeight(n, edges, edge, -1) == mstWeight)\n                pseudoCriticalEdges.add(index);\n        }\n\n        return new ArrayList<>(Arrays.asList(criticalEdges, pseudoCriticalEdges));\n    }\n\n    private int getMSTWeight(int n, int[][] edges, int[] firstEdge, int deletedEdgeIndex) {\n        int mstWeight = 0;\n        UnionFind uf = new UnionFind(n);\n\n        if (firstEdge.length == 4) {\n            uf.unionByRank(firstEdge[0], firstEdge[1]);\n            mstWeight += firstEdge[2];\n        }\n\n        for (int[] edge : edges) {\n          int u = edge[0];\n          int v = edge[1];\n          int weight = edge[2];\n          int index = edge[3];\n            if (index == deletedEdgeIndex)\n                continue;\n            if (uf.find(u) == uf.find(v))\n                continue;\n            uf.unionByRank(u, v);\n            mstWeight += weight;\n        }\n\n      int root = uf.find(0);\n        for (int i = 0; i < n; ++i)\n            if (uf.find(i) != root)\n                return Integer.MAX_VALUE;\n\n        return mstWeight;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int n = 14;\n        int[][] edges = {\n            {0, 1, 13}, {0, 2, 6}, {2, 3, 13}, {3, 4, 4}, {0, 5, 11}, {4, 6, 14}, {4, 7, 8}, \n            {2, 8, 6}, {4, 9, 6}, {7, 10, 4}, {5, 11, 3}, {6, 12, 7}, {12, 13, 9}, {7, 13, 2}, \n            {5, 13, 10}, {0, 6, 4}, {2, 7, 3}, {0, 7, 8}, {1, 12, 9}, {10, 12, 11}, {1, 2, 7}, \n            {1, 3, 10}, {3, 10, 6}, {6, 10, 4}, {4, 8, 5}, {1, 13, 4}, {11, 13, 8}, {2, 12, 10}, \n            {5, 8, 1}, {3, 7, 6}, {7, 12, 12}, {1, 7, 9}, {5, 9, 1}, {2, 13, 10}, {10, 11, 4}, \n            {3, 5, 10}, {6, 11, 14}, {5, 12, 3}, {0, 8, 13}, {8, 9, 1}, {3, 6, 8}, {0, 3, 4}, \n            {2, 9, 6}, {0, 11, 4}, {2, 5, 14}, {4, 11, 2}, {7, 11, 11}, {1, 11, 6}, {2, 10, 12}, \n            {0, 13, 4}, {3, 9, 9}, {4, 12, 3}, {6, 7, 10}, {6, 8, 13}, {9, 11, 3}, {1, 6, 2}, \n            {2, 4, 12}, {0, 10, 3}, {3, 12, 1}, {3, 8, 12}, {1, 8, 6}, {8, 13, 2}, {10, 13, 12}, \n            {9, 13, 11}, {2, 11, 14}, {5, 10, 9}, {5, 6, 10}, {2, 6, 9}, {8, 11, 3}\n        };\n        List<List<Integer>> result = sol.findCriticalAndPseudoCriticalEdges(n, edges);\n        System.out.println(result); \n    }\n}\n",
+      "union-find": "",
     },
   },
   1490: {
     java: {
       tree: "",
+    },
+  },
+  1492: {
+    java: {
+      "number-theory": "",
     },
   },
   1493: {
@@ -5481,7 +5623,7 @@ const obj1 = {
   },
   1559: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1561: {
@@ -5507,7 +5649,7 @@ const obj1 = {
   },
   1569: {
     java: {
-      "binary-search-tree": "",
+      "union-find": "",
     },
   },
   1570: {
@@ -5541,6 +5683,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1579: {
+    java: {
+      "union-find": "",
+    },
+  },
   1582: {
     java: {
       matrix: "",
@@ -5548,8 +5695,7 @@ const obj1 = {
   },
   1584: {
     java: {
-      "minimum-spanning-tree":
-        'import java.util.*;\n\nclass Solution {\n    class Edge {\n        int u, v, cost;\n        Edge(int u, int v, int cost) {\n            this.u = u;\n            this.v = v;\n            this.cost = cost;\n        }\n    }\n\n    class UnionFind {\n        int[] parent, rank;\n\n        UnionFind(int n) {\n            parent = new int[n];\n            rank = new int[n];\n            for (int i = 0; i < n; i++) {\n                parent[i] = i;\n                rank[i] = 0;\n            }\n        }\n\n        int find(int x) {\n            if (parent[x] != x) {\n                parent[x] = find(parent[x]);\n            }\n            return parent[x];\n        }\n\n        boolean union(int x, int y) {\n            int rootX = find(x);\n            int rootY = find(y);\n            if (rootX != rootY) {\n                if (rank[rootX] > rank[rootY]) {\n                    parent[rootY] = rootX;\n                } else if (rank[rootX] < rank[rootY]) {\n                    parent[rootX] = rootY;\n                } else {\n                    parent[rootY] = rootX;\n                    rank[rootX]++;\n                }\n                return true;\n            }\n            return false;\n        }\n    }\n\n    public int minCostConnectPoints(int[][] points) {\n        int n = points.length;\n        List<Edge> edges = new ArrayList<>();\n\n        // Create all possible edges with their costs\n        for (int i = 0; i < n; i++) {\n            for (int j = i + 1; j < n; j++) {\n                int cost = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);\n                edges.add(new Edge(i, j, cost));\n            }\n        }\n\n        // Sort edges by cost\n        edges.sort(Comparator.comparingInt(e -> e.cost));\n\n        // Kruskal\'s algorithm to find the MST\n        UnionFind uf = new UnionFind(n);\n        int minCost = 0, edgesUsed = 0;\n\n        for (Edge edge : edges) {\n            if (uf.union(edge.u, edge.v)) {\n                minCost += edge.cost;\n                edgesUsed++;\n                if (edgesUsed == n - 1) {\n                    break;\n                }\n            }\n        }\n\n        return minCost;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] points = { {0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0} };\n        System.out.println("Minimum cost to connect all points: " + solution.minCostConnectPoints(points));\n    }\n}\n',
+      "union-find": "",
     },
   },
   1586: {
@@ -5679,6 +5825,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1627: {
+    java: {
+      "union-find": "",
+    },
+  },
   1628: {
     java: {
       stack: "",
@@ -5686,12 +5837,12 @@ const obj1 = {
   },
   1631: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1632: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1634: {
@@ -5907,7 +6058,7 @@ const obj1 = {
   },
   1697: {
     java: {
-      "two-pointers": "",
+      "union-find": "",
     },
   },
   1698: {
@@ -5978,6 +6129,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  1722: {
+    java: {
+      "union-find": "",
+    },
+  },
   1723: {
     java: {
       "dynamic-programming": "",
@@ -5985,8 +6141,7 @@ const obj1 = {
   },
   1724: {
     java: {
-      "minimum-spanning-tree":
-        "import java.util.*;\n\nclass PersistentUnionFind {\n    private int[] parent;\n    private int[] rank;\n    private int[] version;\n\n    public PersistentUnionFind(int n) {\n        parent = new int[n];\n        rank = new int[n];\n        version = new int[n];\n        Arrays.fill(rank, 0);\n        for (int i = 0; i < n; i++) {\n            parent[i] = i;\n            version[i] = Integer.MAX_VALUE;\n        }\n    }\n\n    public int find(int x, int t) {\n        if (parent[x] == x || version[x] >= t) {\n            return x;\n        }\n        return find(parent[x], t);\n    }\n\n    public boolean union(int a, int b, int t) {\n        int rootX = find(a, Integer.MAX_VALUE);\n        int rootY = find(b, Integer.MAX_VALUE);\n        if (rootX == rootY) {\n            return false;\n        }\n        if (rank[rootX] > rank[rootY]) {\n            version[rootY] = t;\n            parent[rootY] = rootX;\n        } else {\n            version[rootX] = t;\n            parent[rootX] = rootY;\n            if (rank[rootX] == rank[rootY]) {\n                rank[rootY]++;\n            }\n        }\n        return true;\n    }\n}\n\nclass DistanceLimitedPathsExist {\n    private PersistentUnionFind puf;\n\n    public DistanceLimitedPathsExist(int n, int[][] edgeList) {\n        puf = new PersistentUnionFind(n);\n        Arrays.sort(edgeList, Comparator.comparingInt(a -> a[2]));\n        for (int[] edge : edgeList) {\n            int u = edge[0];\n            int v = edge[1];\n            int dis = edge[2];\n            puf.union(u, v, dis);\n        }\n    }\n\n    public boolean query(int p, int q, int limit) {\n        return puf.find(p, limit) == puf.find(q, limit);\n    }\n\n    public static void main(String[] args) {\n        int n = 4;\n        int[][] edgeList = { {0, 1, 2}, {1, 2, 3}, {2, 3, 4} };\n\n        DistanceLimitedPathsExist checker = new DistanceLimitedPathsExist(n, edgeList);\n\n        System.out.println(checker.query(0, 3, 4));  // Output: true\n        System.out.println(checker.query(0, 3, 2));  // Output: false\n    }\n}\n",
+      "union-find": "",
     },
   },
   1727: {
@@ -6215,6 +6370,11 @@ const obj1 = {
   1818: {
     java: {
       "ordered-set": "",
+    },
+  },
+  1819: {
+    java: {
+      "number-theory": "",
     },
   },
   1820: {
@@ -6475,7 +6635,7 @@ const obj1 = {
   },
   1905: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   1908: {
@@ -6602,6 +6762,11 @@ const obj1 = {
       "monotonic-stack": "",
     },
   },
+  1952: {
+    java: {
+      "number-theory": "",
+    },
+  },
   1955: {
     java: {
       "dynamic-programming": "",
@@ -6649,7 +6814,12 @@ const obj1 = {
   },
   1970: {
     java: {
-      matrix: "",
+      "union-find": "",
+    },
+  },
+  1971: {
+    java: {
+      "union-find": "",
     },
   },
   1973: {
@@ -6671,6 +6841,11 @@ const obj1 = {
     java: {
       "suffix-array":
         "class Solution {\n    public int numberOfCombinations(String num) {\n        if (num.charAt(0) == '0')\n            return 0;\n\n      int kMod = 1_000_000_007;\n      int n = num.length();\n        // dp[i][k] := the number of possible lists of integers ending in num[i] with\n        // the length of the last number being 1..k\n        long[][] dp = new long[n][n + 1];\n        // lcs[i][j] := the number of the same digits in num[i..n) and num[j..n)\n        int[][] lcs = new int[n + 1][n + 1];\n\n        // Step 1: Compute LCS array\n        for (int i = n - 1; i >= 0; --i)\n            for (int j = i + 1; j < n; ++j)\n                if (num.charAt(i) == num.charAt(j))\n                    lcs[i][j] = lcs[i + 1][j + 1] + 1;\n\n        // Step 2: Dynamic programming to count number of combinations\n        for (int i = 0; i < n; ++i)\n            for (int k = 1; k <= i + 1; ++k) {\n                dp[i][k] += dp[i][k - 1];\n                dp[i][k] %= kMod;\n                // The last number is num[s..i].\n              int s = i - k + 1;\n                if (num.charAt(s) == '0')\n                    // If the number starts with '0', skip it as it's invalid\n                    continue;\n                if (s == 0) {\n                    // If the whole string is considered, increment the count by 1\n                    dp[i][k] += 1;\n                    continue;\n                }\n                if (s < k) {\n                    // If the length k is not enough, add counts from num[0..s - 1]\n                    dp[i][k] += dp[s - 1][s];\n                    continue;\n                }\n              int left = lcs[s - k][s];\n                if (left >= k || num.charAt(s - k + left) <= num.charAt(s + left))\n                    // If num[s - k..s - 1] <= num[s..i], add counts from dp[s - 1][k]\n                    dp[i][k] += dp[s - 1][k];\n                else\n                    // Otherwise, add counts from dp[s - 1][k - 1]\n                    dp[i][k] += dp[s - 1][k - 1];\n                \n                dp[i][k] %= kMod;\n            }\n\n        return (int) dp[n - 1][n] % kMod;\n    }\n}\n",
+    },
+  },
+  1979: {
+    java: {
+      "number-theory": "",
     },
   },
   1980: {
@@ -6747,9 +6922,19 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1998: {
+    java: {
+      "union-find": "",
+    },
+  },
   2000: {
     java: {
       "two-pointers": "",
+    },
+  },
+  2001: {
+    java: {
+      "number-theory": "",
     },
   },
   2002: {
@@ -6759,7 +6944,7 @@ const obj1 = {
   },
   2003: {
     java: {
-      "dynamic-programming": "",
+      "union-find": "",
     },
   },
   2005: {
@@ -6956,6 +7141,11 @@ const obj1 = {
       queue: "",
     },
   },
+  2076: {
+    java: {
+      "union-find": "",
+    },
+  },
   2083: {
     java: {
       "prefix-sum": "",
@@ -6975,6 +7165,11 @@ const obj1 = {
     java: {
       "sliding-window":
         "class Solution {\n    public int[] getAverages(int[] nums, int k) {\n        int n = nums.length;\n        int[] result = new int[n];\n        Arrays.fill(result, -1);\n\n        if (2 * k + 1 > n) return result;  \n        long windowSum = 0;\n        int windowSize = 2 * k + 1;\n        for (int i = 0; i < windowSize; i++) {\n            windowSum += nums[i];\n        }\n        result[k] = (int)(windowSum / windowSize);\n        for (int i = k + 1; i < n - k; i++) {\n            windowSum = windowSum - nums[i - k - 1] + nums[i + k];\n            result[i] = (int)(windowSum / windowSize);\n        }\n\n        return result;\n    }\n}\n",
+    },
+  },
+  2092: {
+    java: {
+      "union-find": "",
     },
   },
   2093: {
@@ -7165,7 +7360,7 @@ const obj1 = {
   },
   2157: {
     java: {
-      "bit-manipulation": "",
+      "union-find": "",
     },
   },
   2158: {
@@ -7224,6 +7419,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  2183: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2184: {
     java: {
       "dynamic-programming": "",
@@ -7272,6 +7472,11 @@ const obj1 = {
   2203: {
     java: {
       "shortest-path": "",
+    },
+  },
+  2204: {
+    java: {
+      "union-find": "",
     },
   },
   2206: {
@@ -7571,6 +7776,11 @@ const obj1 = {
       "bit-manipulation": "",
     },
   },
+  2307: {
+    java: {
+      "union-find": "",
+    },
+  },
   2310: {
     java: {
       "dynamic-programming": "",
@@ -7589,6 +7799,11 @@ const obj1 = {
   2313: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2316: {
+    java: {
+      "union-find": "",
     },
   },
   2317: {
@@ -7659,7 +7874,7 @@ const obj1 = {
   },
   2334: {
     java: {
-      "monotonic-stack": "",
+      "union-find": "",
     },
   },
   2335: {
@@ -7762,7 +7977,7 @@ const obj1 = {
   },
   2368: {
     java: {
-      tree: "",
+      "union-find": "",
     },
   },
   2369: {
@@ -7777,7 +7992,7 @@ const obj1 = {
   },
   2371: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   2373: {
@@ -7818,7 +8033,7 @@ const obj1 = {
   },
   2382: {
     java: {
-      "prefix-sum": "",
+      "union-find": "",
     },
   },
   2385: {
@@ -7921,6 +8136,11 @@ const obj1 = {
         "class Solution {\n  public int[] smallestSubarrays(int[] nums) {\n  int kMaxBit = 30;\n    int[] ans = new int[nums.length];\n    int[] closest = new int[kMaxBit];\n\n    Arrays.fill(ans, 1);\n\n    for (int i = nums.length - 1; i >= 0; --i)\n      for (int j = 0; j < kMaxBit; ++j) {\n        if ((nums[i] >> j & 1) == 1)\n          closest[j] = i;\n        ans[i] = Math.max(ans[i], closest[j] - i + 1);\n      }\n\n    return ans;\n  }\n}",
     },
   },
+  2413: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2415: {
     java: {
       tree: "",
@@ -7944,7 +8164,7 @@ const obj1 = {
   },
   2421: {
     java: {
-      tree: "",
+      "union-find": "",
     },
   },
   2422: {
@@ -7954,7 +8174,7 @@ const obj1 = {
   },
   2424: {
     java: {
-      "heap-(priority-queue)": "",
+      "union-find": "",
     },
   },
   2425: {
@@ -7966,6 +8186,11 @@ const obj1 = {
     java: {
       "merge-sort":
         "import java.util.*;\n\nclass Solution {\n    public long numberOfPairs(int[] nums1, int[] nums2, int diff) {\n        int n = nums1.length;\n        int[] A = new int[n];\n        \n        for (int i = 0; i < n; ++i) {\n            A[i] = nums1[i] - nums2[i];\n        }\n        \n        long[] ans = {0}; \n        mergeSort(A, 0, n - 1, diff, ans);\n        \n        return ans[0];\n    }\n\n    private void mergeSort(int[] A, int left, int right, int diff, long[] ans) {\n        if (left >= right) {\n            return;\n        }\n        \n        int m = (left + right) / 2;\n        mergeSort(A, left, m, diff, ans);\n        mergeSort(A, m + 1, right, diff, ans);\n        merge(A, left, m, right, diff, ans);\n    }\n\n    private void merge(int[] A, int left, int m, int right, int diff, long[] ans) {\n        int lo = m + 1;\n        int hi = m + 1; \n        for (int i = left; i <= m; ++i) {\n            while (hi <= right && A[i] > A[hi] + diff) {\n                ++hi;\n            }\n            ans[0] += right - hi + 1;\n        }\n        \n        int[] sorted = new int[right - left + 1];\n        int k = 0; // Index for sorted array\n        int i = left; // Index for left subarray\n        int j = m + 1; // Index for right subarray\n        \n        while (i <= m && j <= right) {\n            if (A[i] <= A[j]) {\n                sorted[k++] = A[i++];\n            } else {\n                sorted[k++] = A[j++];\n            }\n        }\n        \n        while (i <= m) {\n            sorted[k++] = A[i++];\n        }\n        \n        while (j <= right) {\n            sorted[k++] = A[j++];\n        }\n        \n        System.arraycopy(sorted, 0, A, left, sorted.length);\n    }\n}\n",
+    },
+  },
+  2427: {
+    java: {
+      "number-theory": "",
     },
   },
   2428: {
@@ -8039,6 +8264,11 @@ const obj1 = {
       tree: "",
     },
   },
+  2447: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2448: {
     java: {
       "prefix-sum": "",
@@ -8099,6 +8329,11 @@ const obj1 = {
   2467: {
     java: {
       tree: "",
+    },
+  },
+  2470: {
+    java: {
+      "number-theory": "",
     },
   },
   2471: {
@@ -8187,6 +8422,16 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  2492: {
+    java: {
+      "union-find": "",
+    },
+  },
+  2493: {
+    java: {
+      "union-find": "",
+    },
+  },
   2495: {
     java: {
       "dynamic-programming": "",
@@ -8209,7 +8454,7 @@ const obj1 = {
   },
   2503: {
     java: {
-      "two-pointers": "",
+      "union-find": "",
     },
   },
   2505: {
@@ -8220,6 +8465,11 @@ const obj1 = {
   2506: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  2507: {
+    java: {
+      "number-theory": "",
     },
   },
   2509: {
@@ -8240,6 +8490,11 @@ const obj1 = {
   2512: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  2513: {
+    java: {
+      "number-theory": "",
     },
   },
   2514: {
@@ -8264,9 +8519,19 @@ const obj1 = {
         "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int kBigIndices(int[] nums, int k) {\n  int n = nums.length;\n    int ans = 0;\n    FenwickTree leftTree = new FenwickTree(n);\n    FenwickTree rightTree = new FenwickTree(n);\n    int[] left = new int[n];\n    int[] right = new int[n];\n\n    for (int i = 0; i < n; ++i) {\n      left[i] = leftTree.get(nums[i] - 1);\n      leftTree.add(nums[i], 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      right[i] = rightTree.get(nums[i] - 1);\n      rightTree.add(nums[i], 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      if (left[i] >= k && right[i] >= k)\n        ++ans;\n\n    return ans;\n  }\n}",
     },
   },
+  2521: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2522: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2523: {
+    java: {
+      "number-theory": "",
     },
   },
   2524: {
@@ -8340,6 +8605,11 @@ const obj1 = {
   2542: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  2543: {
+    java: {
+      "number-theory": "",
     },
   },
   2545: {
@@ -8441,7 +8711,7 @@ const obj1 = {
   },
   2573: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   2574: {
@@ -8467,6 +8737,11 @@ const obj1 = {
   2583: {
     java: {
       tree: "",
+    },
+  },
+  2584: {
+    java: {
+      "number-theory": "",
     },
   },
   2585: {
@@ -8519,6 +8794,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  2601: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2602: {
     java: {
       "prefix-sum": "",
@@ -8537,6 +8817,11 @@ const obj1 = {
   2606: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2607: {
+    java: {
+      "number-theory": "",
     },
   },
   2611: {
@@ -8566,7 +8851,7 @@ const obj1 = {
   },
   2617: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   2638: {
@@ -8615,6 +8900,11 @@ const obj1 = {
         "class Solution {\n    public int[] getSubarrayBeauty(int[] nums, int k, int x) {\n        int[] ans = new int[nums.length - k + 1];\n        int[] count = new int[50];\n\n        for (int i = 0; i < nums.length; ++i) {\n            if (nums[i] < 0)\n                ++count[nums[i] + 50];\n            if (i - k >= 0 && nums[i - k] < 0)\n                --count[nums[i - k] + 50];\n            if (i + 1 >= k)\n                ans[i - k + 1] = getXthSmallestNum(count, x);\n        }\n\n        return ans;\n    }\n\n    private int getXthSmallestNum(int[] count, int x) {\n        int prefix = 0;\n        for (int i = 0; i < 50; ++i) {\n            prefix += count[i];\n            if (prefix >= x)\n                return i - 50;\n        }\n        return 0;\n    }\n}",
     },
   },
+  2654: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2657: {
     java: {
       "bit-manipulation": "",
@@ -8622,7 +8912,7 @@ const obj1 = {
   },
   2658: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   2659: {
@@ -8715,6 +9005,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2709: {
+    java: {
+      "union-find": "",
+    },
+  },
   2711: {
     java: {
       matrix: "",
@@ -8804,6 +9099,11 @@ const obj1 = {
         "class Solution {\n    private class Query {\n        public int query;\n        public int index;\n        public Query(int q, int index) {\n            this.query = q;\n            this.index = index;\n        }\n    }\n\n    public int[] countServers(int n, int[][] logs, int x, int[] queries) {\n        Arrays.sort(logs, (int[] a, int[] b) -> Integer.compare(a[1], b[1]));\n        List<Query> queryList = new ArrayList<>();\n        for (int i = 0; i < queries.length; ++i) {\n            queryList.add(new Query(queries[i], i));\n        }\n        Collections.sort(queryList, (a, b) -> Integer.compare(a.query, b.query));\n\n        int[] ans = new int[queries.length];\n        Map<Integer, Integer> countMap = new HashMap<>();\n        int left = 0;\n        int right = 0;\n        for (int i = 0; i < queryList.size(); ++i) {\n            Query q = queryList.get(i);\n            while (right < logs.length && logs[right][1] <= q.query) {\n                countMap.put(logs[right][0], countMap.getOrDefault(logs[right][0], 0) + 1);\n                ++right;\n            }\n\n            while (left < logs.length && logs[left][1] < q.query - x) {\n                int newCount = countMap.get(logs[left][0]) - 1;\n                if (newCount == 0) {\n                    countMap.remove(logs[left][0]);\n                } else {\n                    countMap.put(logs[left][0], newCount);\n                }\n                ++left;\n            }\n            ans[q.index] = n - countMap.size();\n        }\n        return ans;\n    }\n}",
     },
   },
+  2748: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2749: {
     java: {
       brainteaser: "",
@@ -8824,6 +9124,11 @@ const obj1 = {
     java: {
       "sliding-window":
         "class Solution {\n    public int longestAlternatingSubarray(int[] nums, int threshold) {\n        int ans = 0;\n        int dp = 0;\n\n        for (int i = 0; i < nums.length; ++i) {\n            if (nums[i] > threshold)\n                dp = 0;\n            else if (i > 0 && dp > 0 && isOddEven(nums[i - 1], nums[i]))\n                ++dp;\n            else\n                dp = nums[i] % 2 == 0 ? 1 : 0;\n            ans = Math.max(ans, dp);\n        }\n\n        return ans;\n    }\n\n    private boolean isOddEven(int a, int b) {\n        return a % 2 != b % 2;\n    }\n}",
+    },
+  },
+  2761: {
+    java: {
+      "number-theory": "",
     },
   },
   2762: {
@@ -8881,7 +9186,7 @@ const obj1 = {
   },
   2782: {
     java: {
-      interactive: "",
+      "union-find": "",
     },
   },
   2786: {
@@ -8920,6 +9225,11 @@ const obj1 = {
       "bit-manipulation": "",
     },
   },
+  2807: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2809: {
     java: {
       "dynamic-programming": "",
@@ -8932,7 +9242,7 @@ const obj1 = {
   },
   2812: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   2813: {
@@ -9055,7 +9365,7 @@ const obj1 = {
   },
   2852: {
     java: {
-      matrix: "",
+      "union-find": "",
     },
   },
   2856: {
@@ -9077,6 +9387,11 @@ const obj1 = {
   2859: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  2862: {
+    java: {
+      "number-theory": "",
     },
   },
   2865: {
@@ -9287,6 +9602,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  2941: {
+    java: {
+      "number-theory": "",
+    },
+  },
   2944: {
     java: {
       "monotonic-queue":
@@ -9307,6 +9627,11 @@ const obj1 = {
   2947: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  2948: {
+    java: {
+      "union-find": "",
     },
   },
   2949: {
@@ -9496,6 +9821,11 @@ const obj1 = {
   3011: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  3012: {
+    java: {
+      "number-theory": "",
     },
   },
   3013: {
@@ -9757,7 +10087,7 @@ const obj1 = {
   },
   3108: {
     java: {
-      "bit-manipulation": "",
+      "union-find": "",
     },
   },
   3109: {
@@ -9775,6 +10105,11 @@ const obj1 = {
     java: {
       "monotonic-stack":
         "class Solution {\n    public long numberOfSubarrays(int[] nums) {\n        Deque<int[]> stack = new ArrayDeque<>();\n        long ans = 0;\n        int top = -1;\n\n        for (int num : nums) {\n            while (!stack.isEmpty() && stack.peek()[0] < num)\n                stack.pop();\n            if (stack.isEmpty() || stack.peek()[0] != num)\n                stack.push(new int[] { num, 0 });\n            ans += ++stack.peek()[1];\n        }\n\n        return ans;\n    }\n}",
+    },
+  },
+  3115: {
+    java: {
+      "number-theory": "",
     },
   },
   3116: {
@@ -10044,277 +10379,437 @@ const obj1 = {
 const obj2 = {
   204: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  258: {
+  479: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  858: {
+  681: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  866: {
+  800: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  914: {
+  816: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  952: {
+  829: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1201: {
+  845: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1250: {
+  869: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1447: {
+  906: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1492: {
+  949: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1627: {
+  970: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1735: {
+  1291: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1766: {
+  1534: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1799: {
+  1566: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1819: {
+  1601: {
     java: {
-      "number-theory": "",
+      enumeration: "",
+    },
+  },
+  1617: {
+    java: {
+      enumeration: "",
+    },
+  },
+  1620: {
+    java: {
+      enumeration: "",
+    },
+  },
+  1625: {
+    java: {
+      enumeration: "",
+    },
+  },
+  1638: {
+    java: {
+      enumeration: "",
+    },
+  },
+  1863: {
+    java: {
+      enumeration: "",
+    },
+  },
+  1925: {
+    java: {
+      enumeration: "",
     },
   },
   1952: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1979: {
+  1956: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  1998: {
+  1958: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2001: {
+  1995: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2183: {
+  1999: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2197: {
+  2014: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2280: {
+  2018: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2338: {
+  2025: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2344: {
+  2044: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2413: {
+  2048: {
     java: {
-      "number-theory": "",
+      enumeration: "",
+    },
+  },
+  2081: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2094: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2122: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2151: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2162: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2171: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2212: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2232: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2240: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2242: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2249: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2259: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2261: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2306: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2309: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2310: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2367: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2397: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2417: {
+    java: {
+      enumeration: "",
     },
   },
   2427: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2436: {
+  2437: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2447: {
+  2440: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2464: {
+  2443: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2470: {
+  2552: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2507: {
+  2605: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2513: {
+  2708: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2521: {
+  2735: {
     java: {
-      "number-theory": "",
-    },
-  },
-  2523: {
-    java: {
-      "number-theory": "",
-    },
-  },
-  2543: {
-    java: {
-      "number-theory": "",
-    },
-  },
-  2584: {
-    java: {
-      "number-theory": "",
-    },
-  },
-  2601: {
-    java: {
-      "number-theory": "",
-    },
-  },
-  2607: {
-    java: {
-      "number-theory": "",
-    },
-  },
-  2614: {
-    java: {
-      "number-theory": "",
-    },
-  },
-  2654: {
-    java: {
-      "number-theory": "",
-    },
-  },
-  2709: {
-    java: {
-      "number-theory": "",
-    },
-  },
-  2748: {
-    java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
   2761: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2807: {
+  2765: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2818: {
+  2768: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2862: {
+  2778: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2867: {
+  2800: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2941: {
+  2843: {
     java: {
-      "number-theory": "",
+      enumeration: "",
+    },
+  },
+  2844: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2860: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2928: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2929: {
+    java: {
+      enumeration: "",
+    },
+  },
+  2934: {
+    java: {
+      enumeration: "",
     },
   },
   2947: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2949: {
+  2951: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  2979: {
+  2959: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  3012: {
+  2970: {
     java: {
-      "number-theory": "",
+      enumeration: "",
+    },
+  },
+  2975: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3001: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3010: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3020: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3025: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3027: {
+    java: {
+      enumeration: "",
     },
   },
   3044: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  3115: {
+  3091: {
     java: {
-      "number-theory": "",
+      enumeration: "",
     },
   },
-  3116: {
+  3114: {
     java: {
-      "number-theory": "",
+      enumeration: "",
+    },
+  },
+  3127: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3132: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3139: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3197: {
+    java: {
+      enumeration: "",
+    },
+  },
+  3200: {
+    java: {
+      enumeration: "",
     },
   },
 };
