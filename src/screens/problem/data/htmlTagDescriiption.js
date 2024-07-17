@@ -4723,6 +4723,7 @@ public class Main {
         </li>
         <li>
           <strong>Solution</strong>:
+          <br />
           <pre>
             <code>
               {`from functools import reduce
