@@ -20,6 +20,11 @@ function combineObjects(obj1, obj2) {
 }
 
 const obj1 = {
+  2: {
+    java: {
+      recursion: "",
+    },
+  },
   3: {
     java: {
       "sliding-window":
@@ -78,6 +83,11 @@ const obj1 = {
         "import java.util.*;\n\nclass Solution {\n    public boolean isValid(String s) {\n        Deque<Character> stack = new ArrayDeque<>();\n\n        for (char ch : s.toCharArray()) {\n            if (ch == '(' || ch == '{' || ch == '[') {\n                stack.push(ch);\n            } else {\n                if (stack.isEmpty())\n                    return false;\n                char open = stack.pop();\n                if (!isMatchingPair(open, ch))\n                    return false;\n            }\n        }\n\n        return stack.isEmpty();\n    }\n\n    private boolean isMatchingPair(char open, char close) {\n        return (open == '(' && close == ')') ||\n                (open == '{' && close == '}') ||\n                (open == '[' && close == ']');\n    }\n}\n",
     },
   },
+  21: {
+    java: {
+      recursion: "",
+    },
+  },
   22: {
     java: {
       "dynamic-programming": "",
@@ -87,6 +97,16 @@ const obj1 = {
     java: {
       "merge-sort":
         "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode mergeKLists(ListNode[] lists) {\n        if (lists == null || lists.length == 0) {\n            return null;\n        }\n        return mergeKLists(lists, 0, lists.length - 1);\n    }\n    \n    private ListNode mergeKLists(ListNode[] lists, int left, int right) {\n        if (left == right) {\n            return lists[left];\n        }\n        int mid = left + (right - left) / 2;\n        ListNode l1 = mergeKLists(lists, left, mid);\n        ListNode l2 = mergeKLists(lists, mid + 1, right);\n        return mergeTwoLists(l1, l2);\n    }\n    \n    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        \n        while (l1 != null && l2 != null) {\n            if (l1.val < l2.val) {\n                current.next = l1;\n                l1 = l1.next;\n            } else {\n                current.next = l2;\n                l2 = l2.next;\n            }\n            current = current.next;\n        }\n        \n        if (l1 != null) {\n            current.next = l1;\n        } else if (l2 != null) {\n            current.next = l2;\n        }\n        \n        return dummy.next;\n    }\n}\n",
+    },
+  },
+  24: {
+    java: {
+      recursion: "",
+    },
+  },
+  25: {
+    java: {
+      recursion: "",
     },
   },
   26: {
@@ -179,6 +199,11 @@ const obj1 = {
         'public class RotateImage {\n\n    public void rotate(int[][] matrix) {\n        if (matrix == null || matrix.length == 0) return;\n        \n        int n = matrix.length;\n        transpose(matrix, n);\n        \n        for (int i = 0; i < n; i++) {\n            reverseRow(matrix[i], n);\n        }\n    }\n    \n    private void transpose(int[][] matrix, int n) {\n        for (int i = 0; i < n; i++) {\n            for (int j = i + 1; j < n; j++) {\n                swap(matrix, i, j, j, i);\n            }\n        }\n    }\n    \n    private void reverseRow(int[] row, int n) {\n        int left = 0, right = n - 1;\n        while (left < right) {\n            int temp = row[left];\n            row[left] = row[right];\n            row[right] = temp;\n            left++;\n            right--;\n        }\n    }\n    \n    private void swap(int[][] matrix, int i, int j, int x, int y) {\n        int temp = matrix[i][j];\n        matrix[i][j] = matrix[x][y];\n        matrix[x][y] = temp;\n    }\n\n    public static void main(String[] args) {\n        RotateImage ri = new RotateImage();\n        int[][] matrix = {\n            {1, 2, 3},\n            {4, 5, 6},\n            {7, 8, 9}\n        };\n        \n        ri.rotate(matrix);\n        \n        for (int i = 0; i < matrix.length; i++) {\n            for (int j = 0; j < matrix[i].length; j++) {\n                System.out.print(matrix[i][j] + " ");\n            }\n            System.out.println();\n        }\n    }\n}\n',
     },
   },
+  50: {
+    java: {
+      recursion: "",
+    },
+  },
   51: {
     java: {
       backtracking: "",
@@ -209,6 +234,11 @@ const obj1 = {
     java: {
       matrix:
         "public class Solution {\n\n    private static final int[] dr = {0, 1, 0, -1}; \n    private static final int[] dc = {1, 0, -1, 0}; \n\n    public int[][] generateMatrix(int n) {\n        int[][] matrix = new int[n][n];\n        boolean[][] visited = new boolean[n][n];\n        int row = 0, col = 0, dir = 0;\n        for (int i = 1; i <= n * n; i++) {\n            matrix[row][col] = i;\n            visited[row][col] = true;\n\n            int nextRow = row + dr[dir];\n            int nextCol = col + dc[dir];\n\n            if (nextRow < 0 || nextRow >= n || nextCol < 0 || nextCol >= n || visited[nextRow][nextCol]) {\n                dir = (dir + 1) % 4; // change direction\n                nextRow = row + dr[dir];\n                nextCol = col + dc[dir];\n            }\n\n            row = nextRow;\n            col = nextCol;\n        }\n        return matrix;\n    }\n\n}\n",
+    },
+  },
+  60: {
+    java: {
+      recursion: "",
     },
   },
   61: {
@@ -739,6 +769,16 @@ const obj1 = {
         "import java.util.HashSet;\n\npublic class Solution {\n    public boolean isHappy(int n) {\n        HashSet<Integer> seen = new HashSet<>();\n\n        while (n != 1 && !seen.contains(n)) {\n            seen.add(n);\n            n = getNextNumber(n);\n        }\n\n        return n == 1;\n    }\n\n    private int getNextNumber(int n) {\n        int sum = 0;\n        while (n > 0) {\n            int digit = n % 10;\n            sum += digit * digit;\n            n /= 10;\n        }\n        return sum;\n    }\n}\n",
     },
   },
+  203: {
+    java: {
+      recursion: "",
+    },
+  },
+  206: {
+    java: {
+      recursion: "",
+    },
+  },
   207: {
     java: {
       "topological-sort": "",
@@ -841,6 +881,11 @@ const obj1 = {
         "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n * int val;\n * TreeNode left;\n * TreeNode right;\n * TreeNode() {}\n * TreeNode(int val) { this.val = val; }\n * TreeNode(int val, TreeNode left, TreeNode right) {\n * this.val = val;\n * this.left = left;\n * this.right = right;\n * }\n * }\n */\nclass Solution {\n    private int count = 0;\n    private int result = 0;\n\n    public int kthSmallest(TreeNode root, int k) {\n        inorder(root, k);\n        return result;\n    }\n\n    private void inorder(TreeNode root, int k) {\n        if (root == null) {\n            return;\n        }\n\n        inorder(root.left, k);\n\n        count++;\n        if (count == k) {\n            result = root.val;\n            return;\n        }\n\n        inorder(root.right, k);\n    }\n}",
     },
   },
+  231: {
+    java: {
+      recursion: "",
+    },
+  },
   232: {
     java: {
       queue:
@@ -897,6 +942,16 @@ const obj1 = {
   246: {
     java: {
       "two-pointers": "",
+    },
+  },
+  247: {
+    java: {
+      recursion: "",
+    },
+  },
+  248: {
+    java: {
+      recursion: "",
     },
   },
   250: {
@@ -971,6 +1026,11 @@ const obj1 = {
     java: {
       "two-pointers":
         "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private List<Integer> ans;\n    private double target;\n    private int k;\n\n    public List<Integer> closestKValues(TreeNode root, double target, int k) {\n        ans = new LinkedList<>();\n        this.target = target;\n        this.k = k;\n        dfs(root);\n        return ans;\n    }\n\n    private void dfs(TreeNode root) {\n        if (root == null) {\n            return;\n        }\n        dfs(root.left);\n        if (ans.size() < k) {\n            ans.add(root.val);\n        } else {\n            if (Math.abs(root.val - target) >= Math.abs(ans.get(0) - target)) {\n                return;\n            }\n            ans.remove(0);\n            ans.add(root.val);\n        }\n        dfs(root.right);\n    }\n}",
+    },
+  },
+  273: {
+    java: {
+      recursion: "",
     },
   },
   274: {
@@ -1195,6 +1255,11 @@ const obj1 = {
       "prefix-sum": "",
     },
   },
+  326: {
+    java: {
+      recursion: "",
+    },
+  },
   327: {
     java: {
       "merge-sort":
@@ -1243,6 +1308,11 @@ const obj1 = {
     java: {
       iterator:
         "public class NestedIterator implements Iterator<Integer> {\n    private Stack<NestedInteger> stack = new Stack<>();\n\n    public NestedIterator(List<NestedInteger> nestedList) {\n        addInteger(nestedList);\n    }\n\n    @Override\n    public Integer next() {\n        return stack.pop().getInteger();\n    }\n\n    @Override\n    public boolean hasNext() {\n        while (!stack.isEmpty() && !stack.peek().isInteger()) {\n          NestedInteger ni = stack.pop();\n            addInteger(ni.getList());\n        }\n        return !stack.isEmpty();\n    }\n\n    private void addInteger(final List<NestedInteger> nestedList) {\n        for (int i = nestedList.size() - 1; i >= 0; --i)\n            stack.push(nestedList.get(i));\n    }\n}\n",
+    },
+  },
+  342: {
+    java: {
+      recursion: "",
     },
   },
   343: {
@@ -1450,6 +1520,11 @@ const obj1 = {
     java: {
       stack:
         'import java.util.HashMap;\n\npublic class Solution {\n    public int lengthLongestPath(String input) {\n        HashMap<Integer, Integer> pathLengths = new HashMap<>();\n        pathLengths.put(0, 0); \n        int maxLength = 0;\n\n        for (String part : input.split("\\n")) {\n            int level = part.lastIndexOf(\'\t\') + 1; \n            int len = part.length() - level; \n\n            if (part.contains(".")) { \n                maxLength = Math.max(maxLength, pathLengths.get(level) + len);\n            } else { \n                pathLengths.put(level + 1, pathLengths.get(level) + len + 1);\n            }\n        }\n\n        return maxLength;\n    }\n\n}\n',
+    },
+  },
+  390: {
+    java: {
+      recursion: "",
     },
   },
   391: {
@@ -2015,6 +2090,11 @@ const obj1 = {
   543: {
     java: {
       tree: "",
+    },
+  },
+  544: {
+    java: {
+      recursion: "",
     },
   },
   545: {
@@ -2662,6 +2742,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  761: {
+    java: {
+      recursion: "",
+    },
+  },
   763: {
     java: {
       "two-pointers": "",
@@ -2723,6 +2808,11 @@ const obj1 = {
   778: {
     java: {
       matrix: "",
+    },
+  },
+  779: {
+    java: {
+      recursion: "",
     },
   },
   782: {
@@ -4925,6 +5015,11 @@ const obj1 = {
       stack: "",
     },
   },
+  1545: {
+    java: {
+      recursion: "",
+    },
+  },
   1546: {
     java: {
       "prefix-sum": "",
@@ -5628,6 +5723,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  1808: {
+    java: {
+      recursion: "",
+    },
+  },
   1810: {
     java: {
       "heap-(priority-queue)": "",
@@ -5931,6 +6031,11 @@ const obj1 = {
         "class Solution {\n    public int kthSmallestSubarraySum(int[] nums, int k) {\n        int min = Integer.MAX_VALUE, sum = 0;\n        for (int num : nums) {\n            min = Math.min(min, num);\n            sum += num;\n        }\n        int low = min, high = sum;\n        while (low < high) {\n            int mid = (high - low) / 2 + low;\n            int count = countSubarrays(nums, mid);\n            if (count < k)\n                low = mid + 1;\n            else\n                high = mid;\n        }\n        return low;\n    }\n\n    public int countSubarrays(int[] nums, int threshold) {\n        int count = 0;\n        int sum = 0;\n        int length = nums.length;\n        int left = 0, right = 0;\n        while (right < length) {\n            sum += nums[right];\n            while (sum > threshold) {\n                sum -= nums[left];\n                left++;\n            }\n            count += right - left + 1;\n            right++;\n        }\n        return count;\n    }\n}",
     },
   },
+  1922: {
+    java: {
+      recursion: "",
+    },
+  },
   1923: {
     java: {
       "suffix-array":
@@ -6036,6 +6141,11 @@ const obj1 = {
   1963: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1969: {
+    java: {
+      recursion: "",
     },
   },
   1970: {
@@ -7618,6 +7728,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2550: {
+    java: {
+      recursion: "",
+    },
+  },
   2551: {
     java: {
       "heap-(priority-queue)": "",
@@ -9097,6 +9212,11 @@ const obj1 = {
       "monotonic-stack": "",
     },
   },
+  3211: {
+    java: {
+      recursion: "",
+    },
+  },
   3212: {
     java: {
       matrix: "",
@@ -9111,234 +9231,239 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  2: {
+  4: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  10: {
+  23: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  21: {
+  53: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  24: {
+  105: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  25: {
+  106: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  44: {
+  108: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  50: {
+  109: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  60: {
+  148: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  143: {
+  169: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  203: {
+  190: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  206: {
+  191: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  224: {
+  215: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  231: {
+  218: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  233: {
+  240: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  234: {
+  315: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  241: {
+  324: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  247: {
+  327: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  248: {
+  347: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  255: {
+  372: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  273: {
+  395: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  326: {
+  427: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  342: {
+  493: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  390: {
+  558: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  394: {
+  654: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  439: {
+  889: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  486: {
+  912: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  509: {
+  918: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  544: {
+  932: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  736: {
+  973: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  761: {
+  1274: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  770: {
+  1382: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  772: {
+  1569: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  776: {
+  1649: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  779: {
+  1738: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  894: {
+  1763: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  1106: {
+  1982: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  1265: {
+  1985: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  1545: {
+  2031: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  1808: {
+  2179: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  1823: {
+  2343: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  1922: {
+  2407: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  1969: {
+  2426: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  2487: {
+  2519: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  2550: {
+  2613: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  2992: {
+  2792: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
     },
   },
-  3211: {
+  3109: {
     java: {
-      recursion: "",
+      "divide-and-conquer": "",
+    },
+  },
+  3165: {
+    java: {
+      "divide-and-conquer": "",
     },
   },
 };
