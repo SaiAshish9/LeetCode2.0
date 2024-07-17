@@ -2202,6 +2202,166 @@ void postorderRec(TreeNode root) {
       </ul>
     </>
   ),
+  "Rolling Hash": (
+    <>
+      {" "}
+      <ul>
+        <li>
+          <strong>Class Definition:</strong> The code is encapsulated in a class{" "}
+          <code>Solution</code> with a method <code>longestDupSubstring</code>{" "}
+          that takes a string <code>S</code> as input and returns the longest
+          duplicate substring.
+        </li>
+
+        <li>
+          <strong>Search Function:</strong>
+          <ul>
+            <li>
+              The nested function <code>search(L)</code> is defined to search
+              for a duplicate substring of length <code>L</code>.
+            </li>
+            <li>
+              <strong>Parameters:</strong>
+              <ul>
+                <li>
+                  <code>base = 256</code>: The base value for hashing, suitable
+                  for ASCII characters.
+                </li>
+                <li>
+                  <code>mod = 2**63 - 1</code>: A large prime modulus to prevent
+                  overflow and reduce hash collisions.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Initial Hash Calculation:</strong> Compute the hash for
+              the first substring of length <code>L</code>.
+              <ul>
+                <li>
+                  <code>
+                    current_hash = (current_hash * base + ord(S[i])) % mod
+                  </code>
+                  : Update the hash for each character in the substring.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Hash Storage:</strong> Store the hash in a set{" "}
+              <code>seen</code> and calculate{" "}
+              <code>baseL = pow(base, L, mod)</code> for efficient hash updates.
+              <ul>
+                <li>
+                  <code>seen = {"{current_hash}"}</code>: Initialize the set with
+                  the first hash value.
+                </li>
+                <li>
+                  <code>baseL</code>: Pre-computed value for removing the
+                  leftmost character in the hash update.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Sliding Window Hash Update:</strong> Update the hash for
+              each subsequent window.
+              <ul>
+                <li>
+                  <code>for i in range(1, len(S) - L + 1)</code>: Iterate over
+                  each window position.
+                </li>
+                <li>
+                  <code>
+                    current_hash = (current_hash * base - ord(S[i-1]) * baseL +
+                    ord(S[i + L - 1])) % mod
+                  </code>
+                  : Update the hash by removing the leftmost character and
+                  adding the new rightmost character.
+                </li>
+                <li>
+                  <code>if current_hash in seen</code>: Check if the updated
+                  hash is already in the set. If it is, return the starting
+                  position <code>i</code>.
+                </li>
+                <li>
+                  <code>seen.add(current_hash)</code>: Add the updated hash to
+                  the set if it is not already present.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Return -1:</strong> If no duplicate substring is found,
+              return -1.
+              <ul>
+                <li>
+                  <code>return -1</code>: Indicates no duplicate substring of
+                  length <code>L</code> was found.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Binary Search:</strong> Use binary search to find the maximum
+          length of the duplicate substring.
+          <ul>
+            <li>
+              <code>left, right = 1, len(S)</code>: Initialize the binary search
+              bounds.
+            </li>
+            <li>
+              <code>start = 0</code>: Initialize the starting position of the
+              longest duplicate substring.
+            </li>
+            <li>
+              <code>while left &lt; right</code>: Perform the binary search.
+              <ul>
+                <li>
+                  <code>mid = (left + right) // 2</code>: Calculate the middle
+                  point.
+                </li>
+                <li>
+                  <code>pos = search(mid)</code>: Search for a duplicate
+                  substring of length <code>mid</code>.
+                </li>
+                <li>
+                  <code>if pos != -1</code>: If a duplicate substring is found,
+                  update the starting position and adjust the left bound.
+                  <ul>
+                    <li>
+                      <code>start = pos</code>: Update the starting position.
+                    </li>
+                    <li>
+                      <code>left = mid + 1</code>: Increase the left bound.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code>else</code>: If no duplicate substring is found, adjust
+                  the right bound.
+                  <ul>
+                    <li>
+                      <code>right = mid</code>: Decrease the right bound.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Return the Result:</strong> Return the longest duplicate
+          substring found.
+          <ul>
+            <li>
+              <code>return S[start:start + left - 1]</code>: Slice the string to
+              get the longest duplicate substring.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
