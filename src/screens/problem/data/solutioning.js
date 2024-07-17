@@ -27575,6 +27575,140 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  3154: (
+    <>
+      <h2>Key Components:</h2>
+      <ul>
+        <li>
+          <strong>Memoization</strong>:
+          <ul>
+            <li>
+              Uses a <code>HashMap</code> named <code>memoizeMap</code> to store
+              previously computed results for specific states.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>State Variables</strong>:
+          <ul>
+            <li>
+              <code>K</code>: The target stair Alice wants to reach.
+            </li>
+            <li>
+              <code>index</code>: The current stair Alice is on.
+            </li>
+            <li>
+              <code>jump</code>: The current value of the jump, used to
+              determine the step size when moving up.
+            </li>
+            <li>
+              <code>canJumpBack</code>: A boolean indicating if Alice can move
+              down to the previous stair.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Core Methods:</h2>
+      <ul>
+        <li>
+          <strong>waysToReachStair(int k)</strong>:
+          <ul>
+            <li>
+              Initializes the target stair <code>K</code> and sets the starting
+              position to stair 1 with an initial jump value of 0.
+            </li>
+            <li>
+              Calls the recursive <code>solve</code> method to compute the total
+              number of ways to reach stair <code>K</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>solve(int index, int jump, boolean canJumpBack)</strong>:
+          <ul>
+            <li>
+              Base Case:
+              <ul>
+                <li>
+                  If the current stair <code>index</code> exceeds{" "}
+                  <code>K + 1</code>, return 0 as it's not possible to reach
+                  stair <code>K</code>.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Memoization Check:
+              <ul>
+                <li>
+                  Constructs a unique string key using the current state
+                  variables <code>index</code>, <code>jump</code>, and{" "}
+                  <code>canJumpBack</code>.
+                </li>
+                <li>
+                  If the result for this state is already computed and stored in{" "}
+                  <code>memoizeMap</code>, return the stored result.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Compute Total Ways:
+              <ul>
+                <li>
+                  Initialize <code>totalWays</code> to 0.
+                </li>
+                <li>
+                  If the current stair <code>index</code> equals <code>K</code>,
+                  increment <code>totalWays</code> as a valid way is found.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Recursive Calls:
+              <ul>
+                <li>
+                  If <code>canJumpBack</code> is true, recursively call{" "}
+                  <code>solve</code> with <code>index - 1</code> and set{" "}
+                  <code>canJumpBack</code> to false to prevent consecutive down
+                  moves.
+                </li>
+                <li>
+                  Recursively call <code>solve</code> with{" "}
+                  <code>index + 2^{"{jump}"}</code> and increment the{" "}
+                  <code>jump</code> value by 1.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Memoization Store:
+              <ul>
+                <li>
+                  Store the computed <code>totalWays</code> for the current
+                  state in <code>memoizeMap</code> and return it.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Advantages of Memoization:</h2>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: Avoids redundant calculations by storing
+          and reusing results.
+        </li>
+        <li>
+          <strong>Simplicity</strong>: Easy to implement and understand, making
+          it a powerful tool for optimizing recursive algorithms.
+        </li>
+        <li>
+          <strong>Performance</strong>: Improves the performance of algorithms
+          with overlapping subproblems, making them feasible for larger inputs.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
