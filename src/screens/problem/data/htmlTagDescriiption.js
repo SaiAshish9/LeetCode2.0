@@ -3782,7 +3782,7 @@ public class Solution {
       </ul>
     </>
   ),
-  "Segment Trees": (
+  "Segment Tree": (
     <>
       <p>
         Segment trees are used for efficient range queries and updates. Here's
