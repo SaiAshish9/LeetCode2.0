@@ -2204,160 +2204,111 @@ void postorderRec(TreeNode root) {
   ),
   "Rolling Hash": (
     <>
-      {" "}
+      <p>
+        A rolling hash is a hash function that allows efficient computation of
+        hash values for substrings of a given string as the window slides over
+        the string. It is commonly used in string matching algorithms.
+      </p>
+
+      <h2>Key Concepts</h2>
       <ul>
         <li>
-          <strong>Class Definition:</strong> The code is encapsulated in a class{" "}
-          <code>Solution</code> with a method <code>longestDupSubstring</code>{" "}
-          that takes a string <code>S</code> as input and returns the longest
-          duplicate substring.
+          <strong>Hash Function:</strong> Converts input data into a fixed-size
+          numerical value called a hash. The same input always produces the same
+          hash.
         </li>
-
         <li>
-          <strong>Search Function:</strong>
+          <strong>Sliding Window:</strong> Maintains a window of fixed size that
+          moves over the input data, processing only a subset of the data at
+          each step.
+        </li>
+        <li>
+          <strong>Modulus Operation:</strong> Used in hash functions to keep
+          hash values within a manageable range and avoid overflow.
+        </li>
+      </ul>
+
+      <h2>How Rolling Hash Works</h2>
+      <ul>
+        <li>
+          <strong>Initial Hash Calculation:</strong> Compute the hash for the
+          first window of the string.
+        </li>
+        <li>
+          <strong>Update Hash Efficiently:</strong> When the window slides one
+          character to the right, update the hash by removing the leftmost
+          character and adding the new rightmost character. This avoids
+          recalculating the hash from scratch.
+        </li>
+      </ul>
+
+      <h2>Formula</h2>
+      <p>
+        For a string <code>s</code> of length <code>n</code> and a window size{" "}
+        <code>k</code>, the rolling hash can be defined as follows:
+      </p>
+      <ul>
+        <li>
+          Let <code>h(s, k)</code> be the hash value of the substring{" "}
+          <code>s[0:k]</code>.
+        </li>
+        <li>
+          For a prime number <code>p</code> and a base <code>b</code> (commonly
+          256 for ASCII characters), the hash value can be computed as:
+        </li>
+        <ul>
+          <li>
+            <code>{`h(s, k) = (s[0] * b^{k-1} + s[1] * b^{k-2} + ... + s[k-1]) % p`}</code>
+          </li>
+        </ul>
+        <li>
+          When the window slides to the next substring <code>s[1:k+1]</code>,
+          update the hash as:
+        </li>
+        <ul>
+          <li>
+            <code>{`h(s, k) = (b * (h(s, k) - s[0] * b^{k - 1}) + s[k]) % p`}</code>
+          </li>
+        </ul>
+      </ul>
+
+      <h2>Example</h2>
+      <ul>
+        <li>
+          Consider the string <code>s = "abcd"</code> with a window size{" "}
+          <code>k = 2</code>:
+        </li>
+        <ul>
+          <li>Calculate the initial hash for the first window "ab":</li>
           <ul>
             <li>
-              The nested function <code>search(L)</code> is defined to search
-              for a duplicate substring of length <code>L</code>.
-            </li>
-            <li>
-              <strong>Parameters:</strong>
-              <ul>
-                <li>
-                  <code>base = 256</code>: The base value for hashing, suitable
-                  for ASCII characters.
-                </li>
-                <li>
-                  <code>mod = 2**63 - 1</code>: A large prime modulus to prevent
-                  overflow and reduce hash collisions.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Initial Hash Calculation:</strong> Compute the hash for
-              the first substring of length <code>L</code>.
-              <ul>
-                <li>
-                  <code>
-                    current_hash = (current_hash * base + ord(S[i])) % mod
-                  </code>
-                  : Update the hash for each character in the substring.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Hash Storage:</strong> Store the hash in a set{" "}
-              <code>seen</code> and calculate{" "}
-              <code>baseL = pow(base, L, mod)</code> for efficient hash updates.
-              <ul>
-                <li>
-                  <code>seen = {"{current_hash}"}</code>: Initialize the set with
-                  the first hash value.
-                </li>
-                <li>
-                  <code>baseL</code>: Pre-computed value for removing the
-                  leftmost character in the hash update.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Sliding Window Hash Update:</strong> Update the hash for
-              each subsequent window.
-              <ul>
-                <li>
-                  <code>for i in range(1, len(S) - L + 1)</code>: Iterate over
-                  each window position.
-                </li>
-                <li>
-                  <code>
-                    current_hash = (current_hash * base - ord(S[i-1]) * baseL +
-                    ord(S[i + L - 1])) % mod
-                  </code>
-                  : Update the hash by removing the leftmost character and
-                  adding the new rightmost character.
-                </li>
-                <li>
-                  <code>if current_hash in seen</code>: Check if the updated
-                  hash is already in the set. If it is, return the starting
-                  position <code>i</code>.
-                </li>
-                <li>
-                  <code>seen.add(current_hash)</code>: Add the updated hash to
-                  the set if it is not already present.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Return -1:</strong> If no duplicate substring is found,
-              return -1.
-              <ul>
-                <li>
-                  <code>return -1</code>: Indicates no duplicate substring of
-                  length <code>L</code> was found.
-                </li>
-              </ul>
+              <code>h("ab", 2) = (97 * 256^1 + 98) % p</code>
             </li>
           </ul>
-        </li>
-
-        <li>
-          <strong>Binary Search:</strong> Use binary search to find the maximum
-          length of the duplicate substring.
+          <li>Slide the window to "bc" and update the hash:</li>
           <ul>
             <li>
-              <code>left, right = 1, len(S)</code>: Initialize the binary search
-              bounds.
-            </li>
-            <li>
-              <code>start = 0</code>: Initialize the starting position of the
-              longest duplicate substring.
-            </li>
-            <li>
-              <code>while left &lt; right</code>: Perform the binary search.
-              <ul>
-                <li>
-                  <code>mid = (left + right) // 2</code>: Calculate the middle
-                  point.
-                </li>
-                <li>
-                  <code>pos = search(mid)</code>: Search for a duplicate
-                  substring of length <code>mid</code>.
-                </li>
-                <li>
-                  <code>if pos != -1</code>: If a duplicate substring is found,
-                  update the starting position and adjust the left bound.
-                  <ul>
-                    <li>
-                      <code>start = pos</code>: Update the starting position.
-                    </li>
-                    <li>
-                      <code>left = mid + 1</code>: Increase the left bound.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <code>else</code>: If no duplicate substring is found, adjust
-                  the right bound.
-                  <ul>
-                    <li>
-                      <code>right = mid</code>: Decrease the right bound.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <code>
+                h("bc", 2) = (256 * (h("ab", 2) - 97 * 256^1) + 99) % p
+              </code>
             </li>
           </ul>
-        </li>
+        </ul>
+      </ul>
 
+      <h2>Applications in LeetCode Problems</h2>
+      <ul>
         <li>
-          <strong>Return the Result:</strong> Return the longest duplicate
-          substring found.
-          <ul>
-            <li>
-              <code>return S[start:start + left - 1]</code>: Slice the string to
-              get the longest duplicate substring.
-            </li>
-          </ul>
+          <strong>Substring Search:</strong> Used in problems like the
+          Rabin-Karp algorithm to find patterns in a text efficiently.
+        </li>
+        <li>
+          <strong>Anagram Checking:</strong> Useful for checking if one string
+          is a permutation of another, such as finding all anagrams in a string.
+        </li>
+        <li>
+          <strong>Duplicate Substrings:</strong> Helps in finding the longest
+          duplicate substring by comparing substrings efficiently.
         </li>
       </ul>
     </>
