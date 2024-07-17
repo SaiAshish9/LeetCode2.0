@@ -3473,6 +3473,7 @@ public class Solution {
         calculations in arrays. It is particularly useful for solving problems
         where frequent updates and sum queries on prefix ranges are required.
       </p>
+      <br />
       <h2>Key Concepts:</h2>
       <ul>
         <li>
