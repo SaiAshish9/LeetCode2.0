@@ -3885,7 +3885,7 @@ public class Main {
             </li>
             <li>
               <code>query(int left, int right)</code>: Returns the sum of
-              elements in the specified range. Complexity: \(O(\log n)\).
+              elements in the specified range. Complexity: (O(log n)).
               <ul>
                 <li>
                   Converts the query range to the corresponding indices in the
