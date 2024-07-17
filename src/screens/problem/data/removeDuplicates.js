@@ -1595,6 +1595,11 @@ const obj1 = {
         "public class Solution {\n    private int[] nums;\n    private Random rand;\n\n    public Solution(int[] nums) {\n        this.nums = nums;\n        this.rand = new Random();\n    }\n\n    public int pick(int target) {\n        int count = 0;\n        int result = -1; // Variable to store the chosen index\n\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] == target) {\n                count++;\n                // With probability 1/count, select the current index\n                if (rand.nextInt(count) == 0) {\n                    result = i;\n                }\n            }\n        }\n\n        return result;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(nums);\n * int param_1 = obj.pick(target);\n */",
     },
   },
+  399: {
+    java: {
+      "shortest-path": "",
+    },
+  },
   401: {
     java: {
       backtracking: "",
@@ -6408,6 +6413,11 @@ const obj1 = {
       backtracking: "",
     },
   },
+  2045: {
+    java: {
+      "shortest-path": "",
+    },
+  },
   2046: {
     java: {
       "two-pointers": "",
@@ -6775,6 +6785,11 @@ const obj1 = {
   2200: {
     java: {
       "two-pointers": "",
+    },
+  },
+  2203: {
+    java: {
+      "shortest-path": "",
     },
   },
   2207: {
@@ -8749,6 +8764,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  2976: {
+    java: {
+      "shortest-path": "",
+    },
+  },
   2977: {
     java: {
       "dynamic-programming": "",
@@ -9275,144 +9295,154 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  399: {
+  28: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  499: {
+  214: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  505: {
+  459: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  743: {
+  572: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  787: {
+  616: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  882: {
+  686: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  1334: {
+  758: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  1368: {
+  796: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  1514: {
+  1023: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  1786: {
+  1392: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  1976: {
+  1397: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2045: {
+  1408: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2093: {
+  1455: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2203: {
+  1668: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2290: {
+  1764: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2297: {
+  2185: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2473: {
+  2223: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2577: {
+  2301: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2642: {
+  2430: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2662: {
+  2851: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2699: {
+  3006: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2714: {
+  3008: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2737: {
+  3023: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2959: {
+  3029: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2976: {
+  3031: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  2977: {
+  3034: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  3112: {
+  3036: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
     },
   },
-  3123: {
+  3037: {
     java: {
-      "shortest-path": "",
+      "string-matching": "",
+    },
+  },
+  3042: {
+    java: {
+      "string-matching": "",
+    },
+  },
+  3045: {
+    java: {
+      "string-matching": "",
     },
   },
 };

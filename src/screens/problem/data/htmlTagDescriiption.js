@@ -3219,6 +3219,122 @@ public class Solution {
       </ul>
     </>
   ),
+  "String Matching": (
+    <>
+      <p>
+        String matching problems in LeetCode often involve searching for
+        patterns, substrings, or specific structures within strings. These
+        problems are common across various domains, including algorithms, data
+        structures, and even database queries.
+      </p>
+
+      <h2>Key Concepts:</h2>
+      <ul>
+        <li>
+          <strong>Pattern Matching</strong>:
+          <ul>
+            <li>
+              Identifying occurrences of a pattern (substring) within a larger
+              string.
+            </li>
+            <li>
+              Examples include finding substrings, checking for regular
+              expression matches, or searching for specific characters.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Efficiency</strong>:
+          <ul>
+            <li>
+              Optimizing algorithms for pattern matching, especially in large
+              datasets.
+            </li>
+            <li>
+              Using techniques like hashing, KMP algorithm (Knuth-Morris-Pratt),
+              or Boyer-Moore algorithm for faster searches.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Applications in Problems</strong>:
+          <ul>
+            <li>
+              <strong>Substring Search</strong>:
+              <ul>
+                <li>Finding if a substring exists within a string.</li>
+                <li>
+                  Examples: Implement strStr() (LeetCode 28), Regular Expression
+                  Matching (LeetCode 10).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>String Comparison</strong>:
+              <ul>
+                <li>Comparing strings based on specific rules or patterns.</li>
+                <li>
+                  Examples: Longest Palindromic Substring (LeetCode 5), Compare
+                  Version Numbers (LeetCode 165).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>String Operations</strong>:
+              <ul>
+                <li>
+                  Manipulating strings to match a given format or structure.
+                </li>
+                <li>
+                  Examples: Simplify Path (LeetCode 71), Valid Parentheses
+                  (LeetCode 20).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Problems:</h2>
+      <ul>
+        <li>
+          <strong>LeetCode 28 - Implement strStr()</strong>:
+          <ul>
+            <li>
+              Find the index of the first occurrence of a substring (needle) in
+              another string (haystack).
+            </li>
+            <li>
+              Edge cases include handling empty strings and strings where the
+              substring does not exist.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>LeetCode 5 - Longest Palindromic Substring</strong>:
+          <ul>
+            <li>
+              Find the longest substring that is a palindrome within a given
+              string.
+            </li>
+            <li>
+              Requires efficient algorithms due to potential large input sizes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>LeetCode 165 - Compare Version Numbers</strong>:
+          <ul>
+            <li>
+              Compare two version numbers represented as strings and determine
+              if one version is greater than, equal to, or less than the other.
+            </li>
+            <li>Handles complex versioning schemes and edge cases.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
   // add dijkstra and floyd warshall algorithm as well
 };
 
