@@ -27310,6 +27310,95 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  "23_heap_(priority_queue)": (
+    <>
+      <ul>
+        <li>
+          <strong>Class and Variables</strong>:
+          <ul>
+            <li>
+              <code>Solution</code> class contains the <code>mergeKLists</code>{" "}
+              method.
+            </li>
+            <li>
+              <code>dummy</code> and <code>curr</code> are pointers to the dummy
+              node and the current node in the merged list, respectively.
+            </li>
+            <li>
+              <code>minHeap</code> is a priority queue that stores the list
+              nodes ordered by their values.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Initialization</strong>:
+          <ul>
+            <li>
+              A dummy node with value 0 is created to simplify edge cases.
+            </li>
+            <li>
+              A priority queue (<code>minHeap</code>) is initialized with a
+              custom comparator to order nodes by their values.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Inserting Nodes into Min-Heap</strong>:
+          <ul>
+            <li>Each non-null list head is added to the min-heap.</li>
+            <li>
+              This ensures that the smallest node among all the list heads is
+              accessible at the top of the heap.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Merging Process</strong>:
+          <ul>
+            <li>
+              While the min-heap is not empty, the smallest node is polled from
+              the heap.
+            </li>
+            <li>
+              If the polled node has a next node, it is added to the heap.
+            </li>
+            <li>
+              The polled node is appended to the merged list, and the current
+              pointer is updated.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Returning the Result</strong>:
+          <ul>
+            <li>
+              After the merging process, the head of the merged list is returned
+              by accessing <code>dummy.next</code>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Advantages of Using Min-Heap:</h2>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: The priority queue allows for efficient
+          retrieval and insertion of the smallest element, making the merging
+          process faster.
+        </li>
+        <li>
+          <strong>Simple Code</strong>: Using a min-heap simplifies the code and
+          makes it easier to understand.
+        </li>
+        <li>
+          <strong>Optimal Performance</strong>: This approach ensures that each
+          node is processed exactly once, leading to an optimal time complexity
+          of O(N log k), where N is the total number of nodes and k is the
+          number of linked lists.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 function appendPxToValues(obj) {
