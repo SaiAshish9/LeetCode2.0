@@ -3782,6 +3782,127 @@ public class Solution {
       </ul>
     </>
   ),
+  "Segment Trees": (
+    <>
+      <p>
+        Segment trees are used for efficient range queries and updates. Here's
+        an example implementation in Java for range sum queries and updates:
+      </p>
+
+      <h2>Java Code:</h2>
+      <pre>
+        <code class="language-java">
+          {`class SegmentTree {
+    private int[] tree;
+    private int n;
+
+    public SegmentTree(int[] arr) {
+        n = arr.length;
+        tree = new int[2 * n];
+        buildTree(arr);
+    }
+
+    private void buildTree(int[] arr) {
+        for (int i = 0; i < n; i++) {
+            tree[n + i] = arr[i];
+        }
+        for (int i = n - 1; i > 0; i--) {
+            tree[i] = tree[2 * i] + tree[2 * i + 1];
+        }
+    }
+
+    public void update(int index, int value) {
+        index += n;
+        tree[index] = value;
+        while (index > 1) {
+            index /= 2;
+            tree[index] = tree[2 * index] + tree[2 * index + 1];
+        }
+    }
+
+    public int query(int left, int right) {
+        left += n;
+        right += n + 1;
+        int sum = 0;
+        while (left < right) {
+            if (left % 2 == 1) {
+                sum += tree[left];
+                left++;
+            }
+            if (right % 2 == 1) {
+                right--;
+                sum += tree[right];
+            }
+            left /= 2;
+            right /= 2;
+        }
+        return sum;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 7, 9, 11};
+        SegmentTree segmentTree = new SegmentTree(arr);
+        
+        System.out.println(segmentTree.query(1, 3)); // Output: 15
+        segmentTree.update(1, 10);
+        System.out.println(segmentTree.query(1, 3)); // Output: 22
+    }
+}`}
+        </code>
+      </pre>
+
+      <h2>Explanation:</h2>
+      <ul>
+        <li>
+          <strong>SegmentTree Class</strong>:
+          <ul>
+            <li>
+              <code>SegmentTree(int[] arr)</code>: Constructs the segment tree
+              from the given array. Complexity: \(O(n)\).
+            </li>
+            <li>
+              <code>buildTree(int[] arr)</code>: Initializes the leaf nodes and
+              internal nodes of the tree. Complexity: \(O(n)\).
+              <ul>
+                <li>Leaf nodes are initialized directly from the array.</li>
+                <li>
+                  Internal nodes are calculated as the sum of their child nodes.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>update(int index, int value)</code>: Updates the value at
+              the specified index and adjusts the tree accordingly. Complexity:
+              \(O(\log n)\).
+              <ul>
+                <li>Updates the leaf node corresponding to the index.</li>
+                <li>
+                  Propagates the changes up the tree to maintain the correct
+                  sums.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>query(int left, int right)</code>: Returns the sum of
+              elements in the specified range. Complexity: \(O(\log n)\).
+              <ul>
+                <li>
+                  Converts the query range to the corresponding indices in the
+                  tree.
+                </li>
+                <li>
+                  Accumulates the sum by traversing the tree and adjusting the
+                  range as needed.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
