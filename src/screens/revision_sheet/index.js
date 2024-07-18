@@ -84,7 +84,7 @@ const RevisionSheet = () => {
         if (data) {
           const dataLength = Object.keys(data).filter(
             (x) => data[x].length > 0
-          ).length + 1;
+          ).length;
           if (up.length !== dataLength) {
             setUp(Array.from({ length: dataLength }, (_, index) => index));
           } else {
