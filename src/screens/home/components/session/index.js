@@ -85,9 +85,9 @@ const CircleContainer = () => {
         >
           <ProgressCont>
             <AllText>All</AllText>
-            <TotalScoreText>3141</TotalScoreText>
+            <TotalScoreText>3221</TotalScoreText>
             <Divider />
-            <SessionScoreText>3141</SessionScoreText>
+            <SessionScoreText>3221</SessionScoreText>
           </ProgressCont>
         </CircularProgressbarWithChildren>
       </CircularProgressbarWithChildren>
@@ -133,22 +133,22 @@ const SessionCard = () => {
               <TextContainer>
                 <LevelText easy>Easy</LevelText>
                 <ScoreTextContainer>
-                  <ScoreText>791</ScoreText>
-                  <TotalText>/791</TotalText>
+                  <ScoreText>811</ScoreText>
+                  <TotalText>/811</TotalText>
                 </ScoreTextContainer>
               </TextContainer>
               <TextContainer>
                 <LevelText medium>Medium</LevelText>
                 <ScoreTextContainer>
-                  <ScoreText>1650</ScoreText>
-                  <TotalText>/1650</TotalText>
+                  <ScoreText>1692</ScoreText>
+                  <TotalText>/1692</TotalText>
                 </ScoreTextContainer>
               </TextContainer>
               <TextContainer>
                 <LevelText>Hard</LevelText>
                 <ScoreTextContainer>
-                  <ScoreText>700</ScoreText>
-                  <TotalText>/700</TotalText>
+                  <ScoreText>718</ScoreText>
+                  <TotalText>/718</TotalText>
                 </ScoreTextContainer>
               </TextContainer>
             </StatsContent>
