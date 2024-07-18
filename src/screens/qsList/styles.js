@@ -21,6 +21,7 @@ export const Container = styled.div`
 export const Switch = styled.div`
   background-color: #f5f5f5;
   padding-top: 20px;
+  margin-bottom: 21px;
   width: 100%;
   padding-left: 21vw;
   @media only screen and (max-width: ${BREAKPOINTS.x175}) {

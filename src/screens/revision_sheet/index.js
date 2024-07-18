@@ -10,14 +10,22 @@ import {
   ParentContent,
   Spacer,
 } from "./styles";
-import { ContentTextBold, TitleContainer } from "../qsList/styles";
+import {
+  ContentTextBold,
+  Switch,
+  Tab,
+  TabContainer,
+  TitleContainer,
+} from "../qsList/styles";
 import axios from "axios";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { TabText } from "../problem/styles";
 
 const RevisionSheet = () => {
   const [data, setData] = useState(null);
   const [count, setCount] = useState(0);
   const [up, setUp] = useState([]);
+  const [selected, setSelected] = useState(0);
 
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -110,6 +118,28 @@ const RevisionSheet = () => {
         />
         <meta property="og:type" content="website" />
       </Helmet>
+      <Switch>
+        <TabContainer>
+          <Tab
+            onClick={() => {
+              setSelected(0);
+              // navigate("#problems");
+            }}
+            inactive={selected === 1}
+          >
+            <TabText>Problems</TabText>
+          </Tab>
+          <Tab
+            onClick={() => {
+              setSelected(1);
+              // navigate("#description");
+            }}
+            inactive={selected === 0}
+          >
+            <TabText>Description</TabText>
+          </Tab>
+        </TabContainer>
+      </Switch>
       <Content>
         {data && (
           <>
