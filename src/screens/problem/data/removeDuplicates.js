@@ -780,6 +780,56 @@ const obj1 = {
       matrix: "",
     },
   },
+  175: {
+    java: {
+      database: "",
+    },
+  },
+  176: {
+    java: {
+      database: "",
+    },
+  },
+  177: {
+    java: {
+      database: "",
+    },
+  },
+  178: {
+    java: {
+      database: "",
+    },
+  },
+  180: {
+    java: {
+      database: "",
+    },
+  },
+  181: {
+    java: {
+      database: "",
+    },
+  },
+  182: {
+    java: {
+      database: "",
+    },
+  },
+  183: {
+    java: {
+      database: "",
+    },
+  },
+  184: {
+    java: {
+      database: "",
+    },
+  },
+  185: {
+    java: {
+      database: "",
+    },
+  },
   186: {
     java: {
       "two-pointers": "",
@@ -833,6 +883,16 @@ const obj1 = {
   195: {
     java: {
       shell: "#!/bin/bash\nsed '10q;d' file.txt",
+    },
+  },
+  196: {
+    java: {
+      database: "",
+    },
+  },
+  197: {
+    java: {
+      database: "",
     },
   },
   198: {
@@ -1132,6 +1192,11 @@ const obj1 = {
   261: {
     java: {
       "union-find": "",
+    },
+  },
+  262: {
+    java: {
+      database: "",
     },
   },
   264: {
@@ -2257,6 +2322,16 @@ const obj1 = {
       "binary-search-tree": "",
     },
   },
+  511: {
+    java: {
+      database: "",
+    },
+  },
+  512: {
+    java: {
+      database: "",
+    },
+  },
   513: {
     java: {
       tree: "",
@@ -2351,6 +2426,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  534: {
+    java: {
+      database: "",
+    },
+  },
   535: {
     java: {
       "hash-function":
@@ -2410,6 +2490,11 @@ const obj1 = {
   549: {
     java: {
       tree: "",
+    },
+  },
+  550: {
+    java: {
+      database: "",
     },
   },
   552: {
@@ -2481,14 +2566,54 @@ const obj1 = {
       matrix: "",
     },
   },
+  569: {
+    java: {
+      database: "",
+    },
+  },
+  570: {
+    java: {
+      database: "",
+    },
+  },
+  571: {
+    java: {
+      database: "",
+    },
+  },
   572: {
     java: {
       "hash-function": "",
     },
   },
+  574: {
+    java: {
+      database: "",
+    },
+  },
   576: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  577: {
+    java: {
+      database: "",
+    },
+  },
+  578: {
+    java: {
+      database: "",
+    },
+  },
+  579: {
+    java: {
+      database: "",
+    },
+  },
+  580: {
+    java: {
+      database: "",
     },
   },
   581: {
@@ -2505,6 +2630,21 @@ const obj1 = {
   583: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  584: {
+    java: {
+      database: "",
+    },
+  },
+  585: {
+    java: {
+      database: "",
+    },
+  },
+  586: {
+    java: {
+      database: "",
     },
   },
   587: {
@@ -2545,9 +2685,39 @@ const obj1 = {
         "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Solution {\n    public int findLHS(int[] nums) {\n        Map<Integer, Integer> frequencyMap = new HashMap<>();\n        int maxLen = 0;\n        \n        for (int num : nums) {\n            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);\n        }\n        \n        for (int num : frequencyMap.keySet()) {\n            if (frequencyMap.containsKey(num + 1)) {\n                int currentLen = frequencyMap.get(num) + frequencyMap.get(num + 1);\n                maxLen = Math.max(maxLen, currentLen);\n            }\n        }\n        \n        return maxLen;\n    }\n}\n",
     },
   },
+  595: {
+    java: {
+      database: "",
+    },
+  },
+  596: {
+    java: {
+      database: "",
+    },
+  },
+  597: {
+    java: {
+      database: "",
+    },
+  },
   600: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  601: {
+    java: {
+      database: "",
+    },
+  },
+  602: {
+    java: {
+      database: "",
+    },
+  },
+  603: {
+    java: {
+      database: "",
     },
   },
   604: {
@@ -2561,10 +2731,45 @@ const obj1 = {
       tree: "",
     },
   },
+  607: {
+    java: {
+      database: "",
+    },
+  },
+  608: {
+    java: {
+      database: "",
+    },
+  },
+  610: {
+    java: {
+      database: "",
+    },
+  },
   611: {
     java: {
       "two-pointers":
         "import java.util.Arrays;\n\npublic class Solution {\n    public int triangleNumber(int[] nums) {\n        Arrays.sort(nums);\n        int count = 0;\n        for (int i = nums.length - 1; i >= 2; i--) {\n            int left = 0, right = i - 1;\n            while (left < right) {\n                if (nums[left] + nums[right] > nums[i]) {\n                    count += right - left;\n                    right--;\n                } else {\n                    left++;\n                }\n            }\n        }\n        return count;\n    }\n}\n",
+    },
+  },
+  612: {
+    java: {
+      database: "",
+    },
+  },
+  613: {
+    java: {
+      database: "",
+    },
+  },
+  614: {
+    java: {
+      database: "",
+    },
+  },
+  615: {
+    java: {
+      database: "",
     },
   },
   616: {
@@ -2575,6 +2780,21 @@ const obj1 = {
   617: {
     java: {
       tree: "",
+    },
+  },
+  618: {
+    java: {
+      database: "",
+    },
+  },
+  619: {
+    java: {
+      database: "",
+    },
+  },
+  620: {
+    java: {
+      database: "",
     },
   },
   621: {
@@ -2590,6 +2810,16 @@ const obj1 = {
   623: {
     java: {
       tree: "",
+    },
+  },
+  626: {
+    java: {
+      database: "",
+    },
+  },
+  627: {
+    java: {
+      database: "",
     },
   },
   629: {
@@ -4289,6 +4519,11 @@ const obj1 = {
         "class Solution {\n    public String longestDupSubstring(String s) {\n        int kMod = 1_000_000_007;\n        int n = s.length();\n        int[] pows = new int[n];\n        int bestStart = -1;\n        int left = 1;\n        int right = n;\n\n        pows[0] = 1;\n        for (int i = 1; i < n; ++i)\n            pows[i] = (int) ((pows[i - 1] * 26L) % (long) kMod);\n\n        while (left < right) {\n            int mid = (left + right) / 2;\n            int start = getStart(s, mid, pows, kMod);\n            if (start == -1) {\n                right = mid;\n            } else {\n                bestStart = start;\n                left = mid + 1;\n            }\n        }\n\n        if (bestStart == -1)\n            return \"\";\n        if (getStart(s, left, pows, kMod) == -1)\n            return s.substring(bestStart, bestStart + left - 1);\n        return s.substring(bestStart, bestStart + left);\n    }\n\n    private int getStart(String s, int k, int[] pows, int kMod) {\n        Map<Long, List<Integer>> hashToStarts = new HashMap<>();\n        long hash = 0;\n\n        for (int i = 0; i < k; ++i)\n            hash = ((hash * 26) % kMod + val(s.charAt(i))) % kMod;\n        hashToStarts.put(hash, new ArrayList<>());\n        hashToStarts.get(hash).add(0);\n\n        for (int i = k; i < s.length(); ++i) {\n            int startIndex = i - k + 1;\n            hash = ((hash - (long) (pows[k - 1]) * val(s.charAt(i - k))) % kMod + kMod) % kMod;\n            hash = (hash * 26 + val(s.charAt(i))) % kMod;\n            if (hashToStarts.containsKey(hash)) {\n                String currSub = s.substring(startIndex, startIndex + k);\n                for (int start : hashToStarts.get(hash))\n                    if (s.substring(start, start + k).equals(currSub))\n                        return startIndex;\n            }\n            hashToStarts.put(hash, new ArrayList<>());\n            hashToStarts.get(hash).add(startIndex);\n        }\n\n        return -1;\n    }\n\n    private int val(char c) {\n        return c - 'a';\n    }\n}",
     },
   },
+  1045: {
+    java: {
+      database: "",
+    },
+  },
   1046: {
     java: {
       "heap-(priority-queue)": "",
@@ -4307,6 +4542,11 @@ const obj1 = {
   1049: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1050: {
+    java: {
+      database: "",
     },
   },
   1051: {
@@ -4370,6 +4610,21 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1068: {
+    java: {
+      database: "",
+    },
+  },
+  1069: {
+    java: {
+      database: "",
+    },
+  },
+  1070: {
+    java: {
+      database: "",
+    },
+  },
   1072: {
     java: {
       matrix: "",
@@ -4378,6 +4633,21 @@ const obj1 = {
   1074: {
     java: {
       matrix: "",
+    },
+  },
+  1075: {
+    java: {
+      database: "",
+    },
+  },
+  1076: {
+    java: {
+      database: "",
+    },
+  },
+  1077: {
+    java: {
+      database: "",
     },
   },
   1079: {
@@ -4393,6 +4663,21 @@ const obj1 = {
   1081: {
     java: {
       "monotonic-stack": "",
+    },
+  },
+  1082: {
+    java: {
+      database: "",
+    },
+  },
+  1083: {
+    java: {
+      database: "",
+    },
+  },
+  1084: {
+    java: {
+      database: "",
     },
   },
   1086: {
@@ -4452,6 +4737,16 @@ const obj1 = {
       stack: "",
     },
   },
+  1097: {
+    java: {
+      database: "",
+    },
+  },
+  1098: {
+    java: {
+      database: "",
+    },
+  },
   1099: {
     java: {
       "two-pointers":
@@ -4489,6 +4784,11 @@ const obj1 = {
       stack: "",
     },
   },
+  1107: {
+    java: {
+      database: "",
+    },
+  },
   1109: {
     java: {
       "prefix-sum": "",
@@ -4502,6 +4802,16 @@ const obj1 = {
   1111: {
     java: {
       stack: "",
+    },
+  },
+  1112: {
+    java: {
+      database: "",
+    },
+  },
+  1113: {
+    java: {
+      database: "",
     },
   },
   1114: {
@@ -4559,6 +4869,16 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1126: {
+    java: {
+      database: "",
+    },
+  },
+  1127: {
+    java: {
+      database: "",
+    },
+  },
   1128: {
     java: {
       counting: "",
@@ -4573,6 +4893,11 @@ const obj1 = {
     java: {
       "monotonic-stack":
         "class Solution {\n  public int mctFromLeafValues(int[] arr) {\n    int ans = 0;\n    Deque<Integer> stack = new ArrayDeque<>();\n    stack.push(Integer.MAX_VALUE);\n\n    for (int a : arr) {\n      while (stack.peek() <= a) {\n        int mid = stack.pop();\n        ans += Math.min(stack.peek(), a) * mid;\n      }\n      stack.push(a);\n    }\n\n    while (stack.size() > 2)\n      ans += stack.pop() * stack.peek();\n\n    return ans;\n  }\n}",
+    },
+  },
+  1132: {
+    java: {
+      database: "",
     },
   },
   1135: {
@@ -4602,6 +4927,16 @@ const obj1 = {
       "prefix-sum": "",
     },
   },
+  1141: {
+    java: {
+      database: "",
+    },
+  },
+  1142: {
+    java: {
+      database: "",
+    },
+  },
   1143: {
     java: {
       "dynamic-programming": "",
@@ -4620,6 +4955,16 @@ const obj1 = {
   1147: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1148: {
+    java: {
+      database: "",
+    },
+  },
+  1149: {
+    java: {
+      database: "",
     },
   },
   1151: {
@@ -4644,6 +4989,16 @@ const obj1 = {
       design: "",
     },
   },
+  1158: {
+    java: {
+      database: "",
+    },
+  },
+  1159: {
+    java: {
+      database: "",
+    },
+  },
   1161: {
     java: {
       tree: "",
@@ -4657,6 +5012,11 @@ const obj1 = {
   1163: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1164: {
+    java: {
+      database: "",
     },
   },
   1166: {
@@ -4684,6 +5044,16 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  1173: {
+    java: {
+      database: "",
+    },
+  },
+  1174: {
+    java: {
+      database: "",
+    },
+  },
   1176: {
     java: {
       "sliding-window":
@@ -4698,6 +5068,11 @@ const obj1 = {
   1178: {
     java: {
       trie: "",
+    },
+  },
+  1179: {
+    java: {
+      database: "",
     },
   },
   1182: {
@@ -4752,6 +5127,16 @@ const obj1 = {
         "import java.util.*;\n\nclass Solution {\n    List<List<Integer>> graph;\n    int[] low;\n    int[] disc;\n    int time;\n    List<List<Integer>> result;\n    \n    public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {\n        graph = new ArrayList<>();\n        low = new int[n];\n        disc = new int[n];\n        result = new ArrayList<>();\n        time = 0;\n        \n        for (int i = 0; i < n; i++) {\n            graph.add(new ArrayList<>());\n        }\n        \n        for (List<Integer> conn : connections) {\n            int u = conn.get(0);\n            int v = conn.get(1);\n            graph.get(u).add(v);\n            graph.get(v).add(u);\n        }\n        \n        dfs(0, -1);\n        \n        return result;\n    }\n    \n    private void dfs(int u, int parent) {\n        low[u] = disc[u] = ++time;\n        \n        for (int v : graph.get(u)) {\n            if (v == parent) continue;\n            \n            if (disc[v] == 0) { // If v is not visited\n                dfs(v, u);\n                low[u] = Math.min(low[u], low[v]);\n                if (low[v] > disc[u]) {\n                    // (u, v) is a critical connection\n                    result.add(Arrays.asList(u, v));\n                }\n            } else {\n                low[u] = Math.min(low[u], disc[v]);\n            }\n        }\n    }\n}",
     },
   },
+  1193: {
+    java: {
+      database: "",
+    },
+  },
+  1194: {
+    java: {
+      database: "",
+    },
+  },
   1195: {
     java: {
       concurrency:
@@ -4783,6 +5168,16 @@ const obj1 = {
       "topological-sort": "",
     },
   },
+  1204: {
+    java: {
+      database: "",
+    },
+  },
+  1205: {
+    java: {
+      database: "",
+    },
+  },
   1206: {
     java: {
       "linked-list": "",
@@ -4803,6 +5198,16 @@ const obj1 = {
   1210: {
     java: {
       matrix: "",
+    },
+  },
+  1211: {
+    java: {
+      database: "",
+    },
+  },
+  1212: {
+    java: {
+      database: "",
     },
   },
   1213: {
@@ -4853,6 +5258,11 @@ const obj1 = {
   1223: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1225: {
+    java: {
+      database: "",
     },
   },
   1226: {
@@ -4924,6 +5334,11 @@ const obj1 = {
       backtracking: "",
     },
   },
+  1241: {
+    java: {
+      database: "",
+    },
+  },
   1242: {
     java: {
       concurrency:
@@ -4960,6 +5375,11 @@ const obj1 = {
   1250: {
     java: {
       "number-theory": "",
+    },
+  },
+  1251: {
+    java: {
+      database: "",
     },
   },
   1253: {
@@ -5017,6 +5437,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1264: {
+    java: {
+      database: "",
+    },
+  },
   1265: {
     java: {
       "two-pointers": "",
@@ -5040,6 +5465,11 @@ const obj1 = {
   1269: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1270: {
+    java: {
+      database: "",
     },
   },
   1273: {
@@ -5073,9 +5503,19 @@ const obj1 = {
         "class TrafficLight {\n  private int road = 1;\n\n  public TrafficLight() {\n  }\n\n  public synchronized void carArrived(\n      int carId, \n      int roadId,\n      int direction, \n      Runnable turnGreen, \n      Runnable crossCar \n  ) {\n      if (roadId != road) {\n          turnGreen.run();\n          road = roadId;\n      }\n      crossCar.run();\n  }\n}",
     },
   },
+  1280: {
+    java: {
+      database: "",
+    },
+  },
   1284: {
     java: {
       matrix: "",
+    },
+  },
+  1285: {
+    java: {
+      database: "",
     },
   },
   1286: {
@@ -5109,6 +5549,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1294: {
+    java: {
+      database: "",
+    },
+  },
   1297: {
     java: {
       "sliding-window":
@@ -5130,6 +5575,11 @@ const obj1 = {
       tree: "",
     },
   },
+  1303: {
+    java: {
+      database: "",
+    },
+  },
   1305: {
     java: {
       "binary-search-tree": "",
@@ -5138,6 +5588,11 @@ const obj1 = {
   1307: {
     java: {
       backtracking: "",
+    },
+  },
+  1308: {
+    java: {
+      database: "",
     },
   },
   1310: {
@@ -5185,6 +5640,16 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1321: {
+    java: {
+      database: "",
+    },
+  },
+  1322: {
+    java: {
+      database: "",
+    },
+  },
   1325: {
     java: {
       tree: "",
@@ -5193,6 +5658,11 @@ const obj1 = {
   1326: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1327: {
+    java: {
+      database: "",
     },
   },
   1329: {
@@ -5215,6 +5685,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1336: {
+    java: {
+      database: "",
+    },
+  },
   1337: {
     java: {
       matrix:
@@ -5234,6 +5709,11 @@ const obj1 = {
   1340: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1341: {
+    java: {
+      database: "",
     },
   },
   1342: {
@@ -5267,6 +5747,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1350: {
+    java: {
+      database: "",
+    },
+  },
   1351: {
     java: {
       matrix: "",
@@ -5286,6 +5771,11 @@ const obj1 = {
   1354: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  1355: {
+    java: {
+      database: "",
     },
   },
   1356: {
@@ -5319,6 +5809,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1364: {
+    java: {
+      database: "",
+    },
+  },
   1365: {
     java: {
       counting: "",
@@ -5337,6 +5832,11 @@ const obj1 = {
   1368: {
     java: {
       matrix: "",
+    },
+  },
+  1369: {
+    java: {
+      database: "",
     },
   },
   1370: {
@@ -5370,6 +5870,11 @@ const obj1 = {
       tree: "",
     },
   },
+  1378: {
+    java: {
+      database: "",
+    },
+  },
   1379: {
     java: {
       tree: "",
@@ -5394,6 +5899,11 @@ const obj1 = {
   1383: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  1384: {
+    java: {
+      database: "",
     },
   },
   1385: {
@@ -5426,6 +5936,11 @@ const obj1 = {
       "rolling-hash": "",
     },
   },
+  1393: {
+    java: {
+      database: "",
+    },
+  },
   1394: {
     java: {
       counting: "",
@@ -5444,6 +5959,11 @@ const obj1 = {
   1397: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1398: {
+    java: {
+      database: "",
     },
   },
   1400: {
@@ -5476,6 +5996,11 @@ const obj1 = {
       "game-theory": "",
     },
   },
+  1407: {
+    java: {
+      database: "",
+    },
+  },
   1408: {
     java: {
       "string-matching": "",
@@ -5484,6 +6009,11 @@ const obj1 = {
   1411: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1412: {
+    java: {
+      database: "",
     },
   },
   1413: {
@@ -5514,6 +6044,11 @@ const obj1 = {
   1420: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  1421: {
+    java: {
+      database: "",
     },
   },
   1422: {
@@ -5559,6 +6094,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1435: {
+    java: {
+      database: "",
+    },
+  },
   1438: {
     java: {
       "monotonic-queue":
@@ -5569,6 +6109,11 @@ const obj1 = {
     java: {
       matrix:
         "class T {\n    public int i;\n    public int j;\n    public int sum; // nums1[i] + nums2[j]\n\n    public T(int i, int j, int sum) {\n        this.i = i;\n        this.j = j;\n        this.sum = sum;\n    }\n}\n\nclass Solution {\n    public int kthSmallest(int[][] mat, int k) {\n        int[] row = mat[0];\n\n        for (int i = 1; i < mat.length; ++i)\n            row = kSmallestPairSums(row, mat[i], k);\n\n        return row[k - 1];\n    }\n\n    private int[] kSmallestPairSums(int[] nums1, int[] nums2, int k) {\n        List<Integer> ans = new ArrayList<>();\n        Queue<T> minHeap = new PriorityQueue<>((a, b) -> a.sum - b.sum);\n\n        for (int i = 0; i < k && i < nums1.length; ++i)\n            minHeap.offer(new T(i, 0, nums1[i] + nums2[0]));\n\n        while (!minHeap.isEmpty() && ans.size() < k) {\n            int i = minHeap.peek().i;\n            int j = minHeap.poll().j;\n            ans.add(nums1[i] + nums2[j]);\n            if (j + 1 < nums2.length)\n                minHeap.offer(new T(i, j + 1, nums1[i] + nums2[j + 1]));\n        }\n\n        return ans.stream().mapToInt(Integer::intValue).toArray();\n    }\n}",
+    },
+  },
+  1440: {
+    java: {
+      database: "",
     },
   },
   1441: {
@@ -5591,6 +6136,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1445: {
+    java: {
+      database: "",
+    },
+  },
   1447: {
     java: {
       "number-theory": "",
@@ -5609,6 +6159,11 @@ const obj1 = {
   1453: {
     java: {
       geometry: "",
+    },
+  },
+  1454: {
+    java: {
+      database: "",
     },
   },
   1455: {
@@ -5630,6 +6185,11 @@ const obj1 = {
   1458: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1459: {
+    java: {
+      database: "",
     },
   },
   1461: {
@@ -5661,6 +6221,11 @@ const obj1 = {
     java: {
       "probability-and-statistics":
         "enum BoxCase {\n    kEqualBalls, kEqualDistantBalls\n}\n\nclass Solution {\n    public double getProbability(int[] balls) {\n      int n = Arrays.stream(balls).sum() / 2;\n        return cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualDistantBalls) /\n                cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualBalls);\n    }\n\n    private int[] fact = { 1, 1, 2, 6, 24, 120, 720 };\n\n    double cases(int[] balls, int i, int ballsCountA, int ballsCountB, int colorsCountA,\n            int colorsCountB, int n, BoxCase boxCase) {\n        if (ballsCountA > n || ballsCountB > n)\n            return 0;\n        if (i == balls.length)\n            return boxCase == BoxCase.kEqualBalls ? 1 : (colorsCountA == colorsCountB ? 1 : 0);\n\n        double ans = 0;\n\n        for (int ballsTakenA = 0; ballsTakenA <= balls[i]; ++ballsTakenA) {\n          int ballsTakenB = balls[i] - ballsTakenA;\n          int newcolorsCountA = colorsCountA + (ballsTakenA > 0 ? 1 : 0);\n          int newcolorsCountB = colorsCountB + (ballsTakenB > 0 ? 1 : 0);\n            ans += cases(balls, i + 1, ballsCountA + ballsTakenA, ballsCountB + ballsTakenB,\n                    newcolorsCountA, newcolorsCountB, n, boxCase) /\n                    (fact[ballsTakenA] * fact[ballsTakenB]);\n        }\n\n        return ans;\n    }\n}",
+    },
+  },
+  1468: {
+    java: {
+      database: "",
     },
   },
   1469: {
@@ -5710,6 +6275,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1479: {
+    java: {
+      database: "",
+    },
+  },
   1480: {
     java: {
       "prefix-sum": "",
@@ -5723,6 +6293,11 @@ const obj1 = {
   1483: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1484: {
+    java: {
+      database: "",
     },
   },
   1485: {
@@ -5766,6 +6341,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1495: {
+    java: {
+      database: "",
+    },
+  },
   1497: {
     java: {
       counting: "",
@@ -5785,6 +6365,11 @@ const obj1 = {
   1500: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  1501: {
+    java: {
+      database: "",
     },
   },
   1503: {
@@ -5813,6 +6398,11 @@ const obj1 = {
       "game-theory": "",
     },
   },
+  1511: {
+    java: {
+      database: "",
+    },
+  },
   1512: {
     java: {
       counting: "",
@@ -5832,6 +6422,11 @@ const obj1 = {
   1516: {
     java: {
       tree: "",
+    },
+  },
+  1517: {
+    java: {
+      database: "",
     },
   },
   1519: {
@@ -5864,6 +6459,11 @@ const obj1 = {
       "monotonic-stack": "",
     },
   },
+  1527: {
+    java: {
+      database: "",
+    },
+  },
   1530: {
     java: {
       tree: "",
@@ -5872,6 +6472,11 @@ const obj1 = {
   1531: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1532: {
+    java: {
+      database: "",
     },
   },
   1533: {
@@ -5909,6 +6514,11 @@ const obj1 = {
       "bit-manipulation": "",
     },
   },
+  1543: {
+    java: {
+      database: "",
+    },
+  },
   1544: {
     java: {
       stack: "",
@@ -5934,6 +6544,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1549: {
+    java: {
+      database: "",
+    },
+  },
   1553: {
     java: {
       "dynamic-programming": "",
@@ -5942,6 +6557,11 @@ const obj1 = {
   1554: {
     java: {
       "rolling-hash": "",
+    },
+  },
+  1555: {
+    java: {
+      database: "",
     },
   },
   1557: {
@@ -5969,6 +6589,11 @@ const obj1 = {
       "game-theory": "",
     },
   },
+  1565: {
+    java: {
+      database: "",
+    },
+  },
   1566: {
     java: {
       enumeration: "",
@@ -5993,6 +6618,11 @@ const obj1 = {
   1570: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1571: {
+    java: {
+      database: "",
     },
   },
   1572: {
@@ -6026,6 +6656,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  1581: {
+    java: {
+      database: "",
+    },
+  },
   1582: {
     java: {
       matrix: "",
@@ -6040,6 +6675,11 @@ const obj1 = {
     java: {
       iterator:
         "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass BSTIterator {\n    private List<Integer> nums = new ArrayList<>();\n    private int i = -1;\n\n    public BSTIterator(TreeNode root) {\n        dfs(root);\n    }\n\n    public boolean hasNext() {\n        return i < nums.size() - 1;\n    }\n\n    public int next() {\n        return nums.get(++i);\n    }\n\n    public boolean hasPrev() {\n        return i > 0;\n    }\n\n    public int prev() {\n        return nums.get(--i);\n    }\n\n    private void dfs(TreeNode root) {\n        if (root == null) {\n            return;\n        }\n        dfs(root.left);\n        nums.add(root.val);\n        dfs(root.right);\n    }\n}\n\n/**\n * Your BSTIterator object will be instantiated and called as such:\n * BSTIterator obj = new BSTIterator(root);\n * boolean param_1 = obj.hasNext();\n * int param_2 = obj.next();\n * boolean param_3 = obj.hasPrev();\n * int param_4 = obj.prev();\n */",
+    },
+  },
+  1587: {
+    java: {
+      database: "",
     },
   },
   1588: {
@@ -6075,6 +6715,11 @@ const obj1 = {
   1595: {
     java: {
       matrix: "",
+    },
+  },
+  1596: {
+    java: {
+      database: "",
     },
   },
   1597: {
@@ -6117,6 +6762,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  1607: {
+    java: {
+      database: "",
+    },
+  },
   1609: {
     java: {
       tree: "",
@@ -6136,6 +6786,11 @@ const obj1 = {
   1612: {
     java: {
       tree: "",
+    },
+  },
+  1613: {
+    java: {
+      database: "",
     },
   },
   1614: {
@@ -6178,6 +6833,11 @@ const obj1 = {
       design: "",
     },
   },
+  1623: {
+    java: {
+      database: "",
+    },
+  },
   1625: {
     java: {
       enumeration: "",
@@ -6208,9 +6868,19 @@ const obj1 = {
       "union-find": "",
     },
   },
+  1633: {
+    java: {
+      database: "",
+    },
+  },
   1634: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1635: {
+    java: {
+      database: "",
     },
   },
   1638: {
@@ -6243,6 +6913,11 @@ const obj1 = {
       tree: "",
     },
   },
+  1645: {
+    java: {
+      database: "",
+    },
+  },
   1648: {
     java: {
       "heap-(priority-queue)": "",
@@ -6257,6 +6932,11 @@ const obj1 = {
   1650: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1651: {
+    java: {
+      database: "",
     },
   },
   1652: {
@@ -6306,6 +6986,11 @@ const obj1 = {
       tree: "",
     },
   },
+  1661: {
+    java: {
+      database: "",
+    },
+  },
   1664: {
     java: {
       "prefix-sum": "",
@@ -6314,6 +6999,11 @@ const obj1 = {
   1666: {
     java: {
       tree: "",
+    },
+  },
+  1667: {
+    java: {
+      database: "",
     },
   },
   1668: {
@@ -6361,6 +7051,11 @@ const obj1 = {
       tree: "",
     },
   },
+  1677: {
+    java: {
+      database: "",
+    },
+  },
   1679: {
     java: {
       "two-pointers": "",
@@ -6379,6 +7074,11 @@ const obj1 = {
   1682: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1683: {
+    java: {
+      database: "",
     },
   },
   1684: {
@@ -6417,6 +7117,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1693: {
+    java: {
+      database: "",
+    },
+  },
   1695: {
     java: {
       "sliding-window":
@@ -6438,6 +7143,11 @@ const obj1 = {
     java: {
       "suffix-array":
         'import java.util.Arrays;\n\npublic class Solution {\n\n    public int countDistinct(String s) {\n        int n = s.length();\n        int[] suffixArray = buildSuffixArray(s);\n        int[] lcpArray = buildLCPArray(s, suffixArray);\n\n        int count = 0;\n        for (int i = 0; i < n; i++) {\n            int suffixLength = n - suffixArray[i];\n            count += suffixLength - (i > 0 ? lcpArray[i] : 0);\n        }\n\n        return count;\n    }\n\n    private int[] buildSuffixArray(String s) {\n        int n = s.length();\n        Suffix[] suffixes = new Suffix[n];\n\n        for (int i = 0; i < n; i++) {\n            suffixes[i] = new Suffix(i, s.substring(i));\n        }\n\n        Arrays.sort(suffixes);\n\n        int[] suffixArray = new int[n];\n        for (int i = 0; i < n; i++) {\n            suffixArray[i] = suffixes[i].index;\n        }\n\n        return suffixArray;\n    }\n\n    private int[] buildLCPArray(String s, int[] suffixArray) {\n        int n = s.length();\n        int[] rank = new int[n];\n        int[] lcpArray = new int[n];\n\n        for (int i = 0; i < n; i++) {\n            rank[suffixArray[i]] = i;\n        }\n\n        int h = 0;\n        for (int i = 0; i < n; i++) {\n            if (rank[i] > 0) {\n                int j = suffixArray[rank[i] - 1];\n                while (i + h < n && j + h < n && s.charAt(i + h) == s.charAt(j + h)) {\n                    h++;\n                }\n                lcpArray[rank[i]] = h;\n                if (h > 0) {\n                    h--;\n                }\n            }\n        }\n\n        return lcpArray;\n    }\n\n    class Suffix implements Comparable<Suffix> {\n        int index;\n        String suffix;\n\n        Suffix(int index, String suffix) {\n            this.index = index;\n            this.suffix = suffix;\n        }\n\n        @Override\n        public int compareTo(Suffix other) {\n            return this.suffix.compareTo(other.suffix);\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        String s = "aabbaba";\n        int distinctSubstrings = solution.countDistinct(s);\n        System.out.println("Number of distinct substrings: " + distinctSubstrings); // Output: 21\n    }\n}\n',
+    },
+  },
+  1699: {
+    java: {
+      database: "",
     },
   },
   1700: {
@@ -6471,6 +7181,11 @@ const obj1 = {
       trie: "",
     },
   },
+  1709: {
+    java: {
+      database: "",
+    },
+  },
   1712: {
     java: {
       "two-pointers":
@@ -6480,6 +7195,11 @@ const obj1 = {
   1714: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1715: {
+    java: {
+      database: "",
     },
   },
   1717: {
@@ -6537,9 +7257,19 @@ const obj1 = {
       matrix: "",
     },
   },
+  1729: {
+    java: {
+      database: "",
+    },
+  },
   1730: {
     java: {
       matrix: "",
+    },
+  },
+  1731: {
+    java: {
+      database: "",
     },
   },
   1732: {
@@ -6573,6 +7303,11 @@ const obj1 = {
       tree: "",
     },
   },
+  1741: {
+    java: {
+      database: "",
+    },
+  },
   1742: {
     java: {
       counting: "",
@@ -6591,6 +7326,11 @@ const obj1 = {
   1746: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1747: {
+    java: {
+      database: "",
     },
   },
   1748: {
@@ -6633,6 +7373,11 @@ const obj1 = {
       stack: "",
     },
   },
+  1757: {
+    java: {
+      database: "",
+    },
+  },
   1761: {
     java: {
       graph: "",
@@ -6662,6 +7407,11 @@ const obj1 = {
   1766: {
     java: {
       tree: "",
+    },
+  },
+  1767: {
+    java: {
+      database: "",
     },
   },
   1768: {
@@ -6694,6 +7444,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  1777: {
+    java: {
+      database: "",
+    },
+  },
   1778: {
     java: {
       interactive: "",
@@ -6709,6 +7464,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  1783: {
+    java: {
+      database: "",
+    },
+  },
   1786: {
     java: {
       "heap-(priority-queue)": "",
@@ -6722,6 +7482,11 @@ const obj1 = {
   1788: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  1789: {
+    java: {
+      database: "",
     },
   },
   1790: {
@@ -6743,6 +7508,11 @@ const obj1 = {
     java: {
       "two-pointers":
         "class Solution {\n    public int maximumScore(int[] nums, int k) {\n        int ans = 0;\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i <= nums.length; ++i) {\n            while (!stack.isEmpty() && (i == nums.length || nums[stack.peek()] > nums[i])) {\n                int h = nums[stack.pop()];\n                int w = stack.isEmpty() ? i : i - stack.peek() - 1;\n                if ((stack.isEmpty() || stack.peek() + 1 <= k) && i - 1 >= k)\n                    ans = Math.max(ans, h * w);\n            }\n            stack.push(i);\n        }\n\n        return ans;\n    }\n}",
+    },
+  },
+  1795: {
+    java: {
+      database: "",
     },
   },
   1797: {
@@ -6775,9 +7545,19 @@ const obj1 = {
       recursion: "",
     },
   },
+  1809: {
+    java: {
+      database: "",
+    },
+  },
   1810: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  1811: {
+    java: {
+      database: "",
     },
   },
   1813: {
@@ -6808,6 +7588,11 @@ const obj1 = {
   1820: {
     java: {
       matrix: "",
+    },
+  },
+  1821: {
+    java: {
+      database: "",
     },
   },
   1823: {
@@ -6846,6 +7631,11 @@ const obj1 = {
       combinatorics: "",
     },
   },
+  1831: {
+    java: {
+      database: "",
+    },
+  },
   1834: {
     java: {
       "heap-(priority-queue)": "",
@@ -6873,9 +7663,19 @@ const obj1 = {
         "class Solution {\n  public int longestBeautifulSubstring(String word) {\n    int ans = 0;\n    int count = 1;\n\n    for (int left = 0, right = 1; right < word.length(); ++right) {\n    char curr = word.charAt(right);\n    char prev = word.charAt(right - 1);\n      if (curr >= prev) {\n        if (curr > prev)\n          ++count;\n        if (count == 5)\n          ans = Math.max(ans, right - left + 1);\n      } else {\n        count = 1;\n        left = right;\n      }\n    }\n\n    return ans;\n  }\n}",
     },
   },
+  1841: {
+    java: {
+      database: "",
+    },
+  },
   1842: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1843: {
+    java: {
+      database: "",
     },
   },
   1845: {
@@ -6903,6 +7703,11 @@ const obj1 = {
     java: {
       "sliding-window":
         "class Solution {\n    public int[] distinctNumbers(int[] nums, int k) {\n        Map<Integer, Integer> count = new HashMap<>();\n        for (int i = 0; i < k; ++i) {\n            count.merge(nums[i], 1, Integer::sum);\n        }\n        int n = nums.length;\n        int[] ans = new int[n - k + 1];\n        ans[0] = count.size();\n        for (int i = k; i < n; ++i) {\n            count.merge(nums[i], 1, Integer::sum);\n            if (count.merge(nums[i - k], -1, Integer::sum) == 0) {\n                count.remove(nums[i - k]);\n            }\n            ans[i - k + 1] = count.size();\n        }\n        return ans;\n    }\n}",
+    },
+  },
+  1853: {
+    java: {
+      database: "",
     },
   },
   1854: {
@@ -6956,6 +7761,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1867: {
+    java: {
+      database: "",
+    },
+  },
   1868: {
     java: {
       "two-pointers": "",
@@ -6970,6 +7780,16 @@ const obj1 = {
   1872: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  1873: {
+    java: {
+      database: "",
+    },
+  },
+  1875: {
+    java: {
+      database: "",
     },
   },
   1876: {
@@ -7030,6 +7850,16 @@ const obj1 = {
       "prefix-sum": "",
     },
   },
+  1890: {
+    java: {
+      database: "",
+    },
+  },
+  1892: {
+    java: {
+      database: "",
+    },
+  },
   1893: {
     java: {
       "prefix-sum": "",
@@ -7081,6 +7911,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  1907: {
+    java: {
+      database: "",
+    },
+  },
   1908: {
     java: {
       brainteaser:
@@ -7112,10 +7947,20 @@ const obj1 = {
       "topological-sort": "",
     },
   },
+  1917: {
+    java: {
+      database: "",
+    },
+  },
   1918: {
     java: {
       "sliding-window":
         "class Solution {\n    public int kthSmallestSubarraySum(int[] nums, int k) {\n        int min = Integer.MAX_VALUE, sum = 0;\n        for (int num : nums) {\n            min = Math.min(min, num);\n            sum += num;\n        }\n        int low = min, high = sum;\n        while (low < high) {\n            int mid = (high - low) / 2 + low;\n            int count = countSubarrays(nums, mid);\n            if (count < k)\n                low = mid + 1;\n            else\n                high = mid;\n        }\n        return low;\n    }\n\n    public int countSubarrays(int[] nums, int threshold) {\n        int count = 0;\n        int sum = 0;\n        int length = nums.length;\n        int left = 0, right = 0;\n        while (right < length) {\n            sum += nums[right];\n            while (sum > threshold) {\n                sum -= nums[left];\n                left++;\n            }\n            count += right - left + 1;\n            right++;\n        }\n        return count;\n    }\n}",
+    },
+  },
+  1919: {
+    java: {
+      database: "",
     },
   },
   1922: {
@@ -7169,6 +8014,11 @@ const obj1 = {
       tree: "",
     },
   },
+  1934: {
+    java: {
+      database: "",
+    },
+  },
   1937: {
     java: {
       "dynamic-programming": "",
@@ -7177,6 +8027,11 @@ const obj1 = {
   1938: {
     java: {
       trie: "",
+    },
+  },
+  1939: {
+    java: {
+      database: "",
     },
   },
   1940: {
@@ -7215,9 +8070,19 @@ const obj1 = {
       "hash-function": "",
     },
   },
+  1949: {
+    java: {
+      database: "",
+    },
+  },
   1950: {
     java: {
       "monotonic-stack": "",
+    },
+  },
+  1951: {
+    java: {
+      database: "",
     },
   },
   1952: {
@@ -7265,6 +8130,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  1965: {
+    java: {
+      database: "",
+    },
+  },
   1969: {
     java: {
       recursion: "",
@@ -7278,6 +8148,11 @@ const obj1 = {
   1971: {
     java: {
       "union-find": "",
+    },
+  },
+  1972: {
+    java: {
+      database: "",
     },
   },
   1973: {
@@ -7299,6 +8174,11 @@ const obj1 = {
     java: {
       "suffix-array":
         "class Solution {\n    public int numberOfCombinations(String num) {\n        if (num.charAt(0) == '0')\n            return 0;\n\n      int kMod = 1_000_000_007;\n      int n = num.length();\n        // dp[i][k] := the number of possible lists of integers ending in num[i] with\n        // the length of the last number being 1..k\n        long[][] dp = new long[n][n + 1];\n        // lcs[i][j] := the number of the same digits in num[i..n) and num[j..n)\n        int[][] lcs = new int[n + 1][n + 1];\n\n        // Step 1: Compute LCS array\n        for (int i = n - 1; i >= 0; --i)\n            for (int j = i + 1; j < n; ++j)\n                if (num.charAt(i) == num.charAt(j))\n                    lcs[i][j] = lcs[i + 1][j + 1] + 1;\n\n        // Step 2: Dynamic programming to count number of combinations\n        for (int i = 0; i < n; ++i)\n            for (int k = 1; k <= i + 1; ++k) {\n                dp[i][k] += dp[i][k - 1];\n                dp[i][k] %= kMod;\n                // The last number is num[s..i].\n              int s = i - k + 1;\n                if (num.charAt(s) == '0')\n                    // If the number starts with '0', skip it as it's invalid\n                    continue;\n                if (s == 0) {\n                    // If the whole string is considered, increment the count by 1\n                    dp[i][k] += 1;\n                    continue;\n                }\n                if (s < k) {\n                    // If the length k is not enough, add counts from num[0..s - 1]\n                    dp[i][k] += dp[s - 1][s];\n                    continue;\n                }\n              int left = lcs[s - k][s];\n                if (left >= k || num.charAt(s - k + left) <= num.charAt(s + left))\n                    // If num[s - k..s - 1] <= num[s..i], add counts from dp[s - 1][k]\n                    dp[i][k] += dp[s - 1][k];\n                else\n                    // Otherwise, add counts from dp[s - 1][k - 1]\n                    dp[i][k] += dp[s - 1][k - 1];\n                \n                dp[i][k] %= kMod;\n            }\n\n        return (int) dp[n - 1][n] % kMod;\n    }\n}\n",
+    },
+  },
+  1978: {
+    java: {
+      database: "",
     },
   },
   1979: {
@@ -7348,6 +8228,16 @@ const obj1 = {
   1987: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1988: {
+    java: {
+      database: "",
+    },
+  },
+  1990: {
+    java: {
+      database: "",
     },
   },
   1991: {
@@ -7415,6 +8305,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  2004: {
+    java: {
+      database: "",
+    },
+  },
   2005: {
     java: {
       "game-theory": "",
@@ -7434,6 +8329,11 @@ const obj1 = {
     java: {
       "sliding-window":
         "import java.util.Arrays;\nimport java.util.HashSet;\nimport java.util.Set;\n\nclass Solution {\n    public int minOperations(int[] nums) {\n        Set<Integer> set = new HashSet<>();\n        for (int num : nums) {\n            set.add(num);\n        }\n        int[] uniqueNums = new int[set.size()];\n        int index = 0;\n        for (int num : set) {\n            uniqueNums[index++] = num;\n        }\n        Arrays.sort(uniqueNums);\n\n        int maxLength = 0;\n        int left = 0;\n        for (int right = 0; right < uniqueNums.length; ++right) {\n            while (uniqueNums[right] - uniqueNums[left] >= nums.length) {\n                left++;\n            }\n            maxLength = Math.max(maxLength, right - left + 1);\n        }\n\n        return nums.length - maxLength;\n    }\n}\n",
+    },
+  },
+  2010: {
+    java: {
+      database: "",
     },
   },
   2013: {
@@ -7466,6 +8366,11 @@ const obj1 = {
       stack: "",
     },
   },
+  2020: {
+    java: {
+      database: "",
+    },
+  },
   2021: {
     java: {
       "prefix-sum": "",
@@ -7490,6 +8395,11 @@ const obj1 = {
   2025: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  2026: {
+    java: {
+      database: "",
     },
   },
   2029: {
@@ -7543,6 +8453,11 @@ const obj1 = {
       graph: "",
     },
   },
+  2041: {
+    java: {
+      database: "",
+    },
+  },
   2043: {
     java: {
       design: "",
@@ -7576,6 +8491,11 @@ const obj1 = {
   2050: {
     java: {
       "topological-sort": "",
+    },
+  },
+  2051: {
+    java: {
+      database: "",
     },
   },
   2052: {
@@ -7628,6 +8548,11 @@ const obj1 = {
       backtracking: "",
     },
   },
+  2066: {
+    java: {
+      database: "",
+    },
+  },
   2067: {
     java: {
       "prefix-sum": "",
@@ -7647,6 +8572,11 @@ const obj1 = {
     java: {
       "monotonic-queue":
         "import java.util.Arrays;\nimport java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    private int[] tasks;\n    private int[] workers;\n    private int strength;\n    private int pills;\n    private int taskCount;\n    private int workerCount;\n\n    public int maxTaskAssign(int[] tasks, int[] workers, int pills, int strength) {\n        Arrays.sort(tasks);\n        Arrays.sort(workers);\n        this.tasks = tasks;\n        this.workers = workers;\n        this.strength = strength;\n        this.pills = pills;\n        taskCount = tasks.length; \n        workerCount = workers.length; \n\n        int left = 0, right = Math.min(workerCount, taskCount);\n        while (left < right) {\n            int mid = (left + right + 1) / 2; \n            if (check(mid)) {\n                left = mid; \n            } else {\n                right = mid - 1;\n            }\n        }\n\n        return left; \n    }\n\n    private boolean check(int x) {\n        int taskIdx = 0;\n        Deque<Integer> taskQueue = new ArrayDeque<>();\n        int remainingPills = pills;\n\n        for (int workerIdx = workerCount - x; workerIdx < workerCount; ++workerIdx) {\n            while (taskIdx < x && tasks[taskIdx] <= workers[workerIdx] + strength) {\n                taskQueue.offer(tasks[taskIdx++]); \n            }\n            if (taskQueue.isEmpty()) {\n                return false;\n            }\n            if (taskQueue.peekFirst() <= workers[workerIdx]) {\n                taskQueue.pollFirst(); \n            } else if (remainingPills == 0) {\n                return false; \n            } else {\n                --remainingPills; \n                taskQueue.pollLast();\n            }\n        }\n      \n        return true; \n    }\n}",
+    },
+  },
+  2072: {
+    java: {
+      database: "",
     },
   },
   2073: {
@@ -7679,9 +8609,19 @@ const obj1 = {
       enumeration: "",
     },
   },
+  2082: {
+    java: {
+      database: "",
+    },
+  },
   2083: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  2084: {
+    java: {
+      database: "",
     },
   },
   2085: {
@@ -7794,6 +8734,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2112: {
+    java: {
+      database: "",
+    },
+  },
   2115: {
     java: {
       "topological-sort": "",
@@ -7802,6 +8747,11 @@ const obj1 = {
   2116: {
     java: {
       stack: "",
+    },
+  },
+  2118: {
+    java: {
+      database: "",
     },
   },
   2121: {
@@ -7870,6 +8820,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2142: {
+    java: {
+      database: "",
+    },
+  },
   2143: {
     java: {
       "dynamic-programming": "",
@@ -7910,6 +8865,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2153: {
+    java: {
+      database: "",
+    },
+  },
   2156: {
     java: {
       "sliding-window":
@@ -7924,6 +8884,11 @@ const obj1 = {
   2158: {
     java: {
       "ordered-set": "",
+    },
+  },
+  2159: {
+    java: {
+      database: "",
     },
   },
   2161: {
@@ -7971,9 +8936,19 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2173: {
+    java: {
+      database: "",
+    },
+  },
   2174: {
     java: {
       matrix: "",
+    },
+  },
+  2175: {
+    java: {
+      database: "",
     },
   },
   2178: {
@@ -8052,6 +9027,11 @@ const obj1 = {
       stack: "",
     },
   },
+  2199: {
+    java: {
+      database: "",
+    },
+  },
   2200: {
     java: {
       "two-pointers": "",
@@ -8065,6 +9045,11 @@ const obj1 = {
   2204: {
     java: {
       "union-find": "",
+    },
+  },
+  2205: {
+    java: {
+      database: "",
     },
   },
   2206: {
@@ -8148,6 +9133,16 @@ const obj1 = {
       trie: "",
     },
   },
+  2228: {
+    java: {
+      database: "",
+    },
+  },
+  2230: {
+    java: {
+      database: "",
+    },
+  },
   2231: {
     java: {
       "heap-(priority-queue)":
@@ -8178,6 +9173,11 @@ const obj1 = {
   2237: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  2238: {
+    java: {
+      database: "",
     },
   },
   2240: {
@@ -8228,6 +9228,16 @@ const obj1 = {
   2251: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  2252: {
+    java: {
+      database: "",
+    },
+  },
+  2253: {
+    java: {
+      database: "",
     },
   },
   2254: {
@@ -8387,6 +9397,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2292: {
+    java: {
+      database: "",
+    },
+  },
   2296: {
     java: {
       "doubly-linked-list":
@@ -8396,6 +9411,11 @@ const obj1 = {
   2297: {
     java: {
       "monotonic-stack": "",
+    },
+  },
+  2298: {
+    java: {
+      database: "",
     },
   },
   2300: {
@@ -8434,6 +9454,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  2308: {
+    java: {
+      database: "",
+    },
+  },
   2309: {
     java: {
       enumeration: "",
@@ -8457,6 +9482,11 @@ const obj1 = {
   2313: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2314: {
+    java: {
+      database: "",
     },
   },
   2316: {
@@ -8494,6 +9524,11 @@ const obj1 = {
       tree: "",
     },
   },
+  2324: {
+    java: {
+      database: "",
+    },
+  },
   2326: {
     java: {
       matrix: "",
@@ -8507,6 +9542,11 @@ const obj1 = {
   2328: {
     java: {
       matrix: "",
+    },
+  },
+  2329: {
+    java: {
+      database: "",
     },
   },
   2330: {
@@ -8555,6 +9595,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2339: {
+    java: {
+      database: "",
+    },
+  },
   2341: {
     java: {
       counting: "",
@@ -8581,6 +9626,11 @@ const obj1 = {
   2345: {
     java: {
       "monotonic-stack": "",
+    },
+  },
+  2346: {
+    java: {
+      database: "",
     },
   },
   2347: {
@@ -8618,6 +9668,11 @@ const obj1 = {
       "monotonic-stack": "",
     },
   },
+  2356: {
+    java: {
+      database: "",
+    },
+  },
   2357: {
     java: {
       "heap-(priority-queue)": "",
@@ -8636,6 +9691,11 @@ const obj1 = {
   2361: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2362: {
+    java: {
+      database: "",
     },
   },
   2363: {
@@ -8668,6 +9728,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  2372: {
+    java: {
+      database: "",
+    },
+  },
   2373: {
     java: {
       matrix: "",
@@ -8686,6 +9751,11 @@ const obj1 = {
   2376: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2377: {
+    java: {
+      database: "",
     },
   },
   2378: {
@@ -8734,6 +9804,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  2388: {
+    java: {
+      database: "",
+    },
+  },
   2389: {
     java: {
       "prefix-sum": "",
@@ -8758,6 +9833,11 @@ const obj1 = {
   2393: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2394: {
+    java: {
+      database: "",
     },
   },
   2396: {
@@ -9069,6 +10149,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  2474: {
+    java: {
+      database: "",
+    },
+  },
   2476: {
     java: {
       "binary-search-tree":
@@ -9088,6 +10173,11 @@ const obj1 = {
   2479: {
     java: {
       tree: "",
+    },
+  },
+  2480: {
+    java: {
+      database: "",
     },
   },
   2481: {
@@ -9150,6 +10240,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  2494: {
+    java: {
+      database: "",
+    },
+  },
   2495: {
     java: {
       "dynamic-programming": "",
@@ -9183,6 +10278,11 @@ const obj1 = {
   2503: {
     java: {
       "union-find": "",
+    },
+  },
+  2504: {
+    java: {
+      database: "",
     },
   },
   2505: {
@@ -9693,6 +10793,16 @@ const obj1 = {
       matrix: "",
     },
   },
+  2668: {
+    java: {
+      database: "",
+    },
+  },
+  2669: {
+    java: {
+      database: "",
+    },
+  },
   2671: {
     java: {
       design: "",
@@ -9738,6 +10848,21 @@ const obj1 = {
       graph: "",
     },
   },
+  2686: {
+    java: {
+      database: "",
+    },
+  },
+  2687: {
+    java: {
+      database: "",
+    },
+  },
+  2688: {
+    java: {
+      database: "",
+    },
+  },
   2689: {
     java: {
       tree: "",
@@ -9761,6 +10886,11 @@ const obj1 = {
   2699: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  2701: {
+    java: {
+      database: "",
     },
   },
   2707: {
@@ -9803,6 +10933,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2720: {
+    java: {
+      database: "",
+    },
+  },
   2728: {
     java: {
       interactive: "",
@@ -9837,6 +10972,11 @@ const obj1 = {
   2737: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  2738: {
+    java: {
+      database: "",
     },
   },
   2741: {
@@ -9891,6 +11031,11 @@ const obj1 = {
     java: {
       stack:
         "class Robot {\n    public int index;\n    public int position;\n    public int health;\n    public char direction;\n\n    public Robot(int index, int position, int health, char direction) {\n        this.index = index;\n        this.position = position;\n        this.health = health;\n        this.direction = direction;\n    }\n}\n\nclass Solution {\n    public List<Integer> survivedRobotsHealths(int[] positions, int[] healths,\n            String directions) {\n        List<Integer> ans = new ArrayList<>();\n        Robot[] robots = new Robot[positions.length];\n        List<Robot> stack = new ArrayList<>();\n        for (int i = 0; i < positions.length; ++i)\n            robots[i] = new Robot(i, positions[i], healths[i], directions.charAt(i));\n\n        Arrays.sort(robots, (a, b) -> a.position - b.position);\n\n        for (Robot robot : robots) {\n            if (robot.direction == 'R') {\n                stack.add(robot);\n                continue;\n            }\n            while (!stack.isEmpty() && stack.get(stack.size() - 1).direction == 'R'\n                    && robot.health > 0) {\n                if (stack.get(stack.size() - 1).health == robot.health) {\n                    stack.remove(stack.size() - 1);\n                    robot.health = 0;\n                } else if (stack.get(stack.size() - 1).health < robot.health) {\n                    stack.remove(stack.size() - 1);\n                    robot.health -= 1;\n                } else {\n                    stack.get(stack.size() - 1).health -= 1;\n                    robot.health = 0;\n                }\n            }\n            if (robot.health > 0)\n                stack.add(robot);\n        }\n\n        stack.sort((a, b) -> a.index - b.index);\n\n        for (Robot robot : stack)\n            ans.add(robot.health);\n\n        return ans;\n    }\n}",
+    },
+  },
+  2752: {
+    java: {
+      database: "",
     },
   },
   2760: {
@@ -9975,6 +11120,11 @@ const obj1 = {
   2782: {
     java: {
       "union-find": "",
+    },
+  },
+  2783: {
+    java: {
+      database: "",
     },
   },
   2786: {
@@ -10119,6 +11269,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2837: {
+    java: {
+      database: "",
+    },
+  },
   2838: {
     java: {
       "two-pointers": "",
@@ -10174,6 +11329,16 @@ const obj1 = {
   2852: {
     java: {
       "union-find": "",
+    },
+  },
+  2853: {
+    java: {
+      database: "",
+    },
+  },
+  2854: {
+    java: {
+      database: "",
     },
   },
   2856: {
@@ -10264,6 +11429,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2893: {
+    java: {
+      database: "",
+    },
+  },
   2896: {
     java: {
       "dynamic-programming": "",
@@ -10346,6 +11516,11 @@ const obj1 = {
   2920: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2922: {
+    java: {
+      database: "",
     },
   },
   2923: {
@@ -10579,6 +11754,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2978: {
+    java: {
+      database: "",
+    },
+  },
   2979: {
     java: {
       "dynamic-programming": "",
@@ -10606,9 +11786,64 @@ const obj1 = {
       "prefix-sum": "",
     },
   },
+  2984: {
+    java: {
+      database: "",
+    },
+  },
+  2985: {
+    java: {
+      database: "",
+    },
+  },
+  2986: {
+    java: {
+      database: "",
+    },
+  },
+  2987: {
+    java: {
+      database: "",
+    },
+  },
+  2988: {
+    java: {
+      database: "",
+    },
+  },
+  2989: {
+    java: {
+      database: "",
+    },
+  },
+  2990: {
+    java: {
+      database: "",
+    },
+  },
+  2991: {
+    java: {
+      database: "",
+    },
+  },
   2992: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2993: {
+    java: {
+      database: "",
+    },
+  },
+  2994: {
+    java: {
+      database: "",
+    },
+  },
+  2995: {
+    java: {
+      database: "",
     },
   },
   2997: {
@@ -10839,6 +12074,66 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  3050: {
+    java: {
+      database: "",
+    },
+  },
+  3051: {
+    java: {
+      database: "",
+    },
+  },
+  3052: {
+    java: {
+      database: "",
+    },
+  },
+  3053: {
+    java: {
+      database: "",
+    },
+  },
+  3054: {
+    java: {
+      database: "",
+    },
+  },
+  3055: {
+    java: {
+      database: "",
+    },
+  },
+  3056: {
+    java: {
+      database: "",
+    },
+  },
+  3057: {
+    java: {
+      database: "",
+    },
+  },
+  3058: {
+    java: {
+      database: "",
+    },
+  },
+  3059: {
+    java: {
+      database: "",
+    },
+  },
+  3060: {
+    java: {
+      database: "",
+    },
+  },
+  3061: {
+    java: {
+      database: "",
+    },
+  },
   3062: {
     java: {
       "linked-list": "",
@@ -10930,6 +12225,16 @@ const obj1 = {
         "class Solution {\n  public long minimumMoves(int[] nums, int k, int maxChanges) {\n    int kNumOfIndicesWithinOneDistance = 3;\n    long ans = Long.MAX_VALUE;\n    List<Integer> oneIndices = new ArrayList<>(); \n    List<Long> prefix = new ArrayList<>();       \n    prefix.add(0L);\n\n    for (int i = 0; i < nums.length; ++i)\n      if (nums[i] == 1)\n        oneIndices.add(i);\n\n    for (int oneIndex : oneIndices)\n      prefix.add(prefix.get(prefix.size() - 1) + oneIndex);\n\n    int minOnesByTwo = Math.max(0, k - maxChanges);\n    int maxOnesByTwo =\n        Math.min(k, Math.min(minOnesByTwo + kNumOfIndicesWithinOneDistance, oneIndices.size()));\n\n    for (int onesByTwo = minOnesByTwo; onesByTwo <= maxOnesByTwo; ++onesByTwo)\n      for (int left = 0; left + onesByTwo < prefix.size(); ++left) {\n        int right = left + onesByTwo;\n        long cost1 = (k - onesByTwo) * 2;\n        long cost2 = (prefix.get(right) - prefix.get((left + right) / 2)) -\n                           (prefix.get((left + right + 1) / 2) - prefix.get(left));\n        ans = Math.min(ans, cost1 + cost2);\n      }\n\n    return ans;\n  }\n}",
     },
   },
+  3087: {
+    java: {
+      database: "",
+    },
+  },
+  3089: {
+    java: {
+      database: "",
+    },
+  },
   3090: {
     java: {
       "sliding-window":
@@ -10983,6 +12288,11 @@ const obj1 = {
       "ordered-set": "",
     },
   },
+  3103: {
+    java: {
+      database: "",
+    },
+  },
   3104: {
     java: {
       "prefix-sum": "",
@@ -11030,6 +12340,11 @@ const obj1 = {
       queue: "",
     },
   },
+  3118: {
+    java: {
+      database: "",
+    },
+  },
   3122: {
     java: {
       matrix: "",
@@ -11038,6 +12353,16 @@ const obj1 = {
   3123: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  3124: {
+    java: {
+      database: "",
+    },
+  },
+  3126: {
+    java: {
+      database: "",
     },
   },
   3127: {
@@ -11097,6 +12422,11 @@ const obj1 = {
       enumeration: "",
     },
   },
+  3140: {
+    java: {
+      database: "",
+    },
+  },
   3141: {
     java: {
       "bit-manipulation": "",
@@ -11132,6 +12462,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  3150: {
+    java: {
+      database: "",
+    },
+  },
   3152: {
     java: {
       "prefix-sum": "",
@@ -11149,6 +12484,11 @@ const obj1 = {
         'class Solution {\n    HashMap<String, Integer> memoizeMap = new HashMap<>();\n    int K;\n\n    public int waysToReachStair(int k) {\n\n        K = k;\n        int index = 1;\n        int jump = 0;\n        boolean canJumpBack = true;\n\n        return solve(index, jump, canJumpBack);\n    }\n\n    public int solve(int index, int jump, boolean canJumpBack) {\n\n        if (index > K + 1) {\n            return 0;\n        }\n\n        String str = String.valueOf(index) + "_" + String.valueOf(jump) + "_" + String.valueOf(canJumpBack);\n\n        if (memoizeMap.containsKey(str)) {\n\n            return memoizeMap.get(str);\n        }\n\n        int totalWays = 0;\n\n        if (index == K) {\n            totalWays++;\n        }\n\n        if (canJumpBack == true) {\n\n            totalWays += solve(index - 1, jump, false);\n        }\n        totalWays += solve(index + (int) Math.pow(2, jump), jump + 1, true);\n        memoizeMap.put(str, totalWays);\n\n        return totalWays;\n    }\n}',
     },
   },
+  3156: {
+    java: {
+      database: "",
+    },
+  },
   3157: {
     java: {
       tree: "",
@@ -11164,6 +12504,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  3166: {
+    java: {
+      database: "",
+    },
+  },
   3167: {
     java: {
       counting: "",
@@ -11177,6 +12522,11 @@ const obj1 = {
   3171: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  3172: {
+    java: {
+      database: "",
     },
   },
   3173: {
@@ -11209,6 +12559,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  3182: {
+    java: {
+      database: "",
+    },
+  },
   3183: {
     java: {
       "dynamic-programming": "",
@@ -11227,6 +12582,11 @@ const obj1 = {
   3186: {
     java: {
       "two-pointers": "",
+    },
+  },
+  3188: {
+    java: {
+      database: "",
     },
   },
   3191: {
@@ -11266,6 +12626,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  3198: {
+    java: {
+      database: "",
+    },
+  },
   3199: {
     java: {
       "bit-manipulation": "",
@@ -11289,6 +12654,11 @@ const obj1 = {
   3203: {
     java: {
       tree: "",
+    },
+  },
+  3204: {
+    java: {
+      database: "",
     },
   },
   3205: {
@@ -11316,6 +12686,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  3214: {
+    java: {
+      database: "",
+    },
+  },
   3215: {
     java: {
       "bit-manipulation": "",
@@ -11330,1379 +12705,1149 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  175: {
+  100: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  176: {
+  101: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  177: {
+  102: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  178: {
+  103: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  180: {
+  104: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  181: {
+  107: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  182: {
+  111: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  183: {
+  112: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  184: {
+  116: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  185: {
+  117: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  196: {
+  126: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  197: {
+  127: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  262: {
+  130: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  511: {
+  133: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  512: {
+  199: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  534: {
+  200: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  550: {
+  207: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  569: {
+  210: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  570: {
+  226: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  571: {
+  261: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  574: {
+  269: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  577: {
+  279: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  578: {
+  286: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  579: {
+  297: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  580: {
+  301: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  584: {
+  302: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  585: {
+  310: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  586: {
+  314: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  595: {
+  317: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  596: {
+  322: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  597: {
+  323: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  601: {
+  329: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  602: {
+  339: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  603: {
+  364: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  607: {
+  365: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  608: {
+  399: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  610: {
+  404: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  612: {
+  407: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  613: {
+  417: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  614: {
+  428: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  615: {
+  429: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  618: {
+  431: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  619: {
+  433: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  620: {
+  449: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  626: {
+  463: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  627: {
+  488: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1045: {
+  490: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1050: {
+  499: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1068: {
+  505: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1069: {
+  513: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1070: {
+  514: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1075: {
+  515: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1076: {
+  529: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1077: {
+  530: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1082: {
+  542: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1083: {
+  547: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1084: {
+  559: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1097: {
+  582: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1098: {
+  617: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1107: {
+  623: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1112: {
+  637: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1113: {
+  653: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1126: {
+  655: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1127: {
+  662: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1132: {
+  672: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1141: {
+  675: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1142: {
+  684: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1148: {
+  685: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1149: {
+  690: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1158: {
+  694: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1159: {
+  695: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1164: {
+  711: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1173: {
+  721: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1174: {
+  733: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1179: {
+  737: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1193: {
+  742: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1194: {
+  743: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1204: {
+  749: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1205: {
+  752: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1211: {
+  756: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1212: {
+  765: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1225: {
+  773: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1241: {
+  778: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1251: {
+  783: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1264: {
+  785: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1270: {
+  787: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1280: {
+  797: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1285: {
+  802: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1294: {
+  815: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1303: {
+  827: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1308: {
+  839: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1321: {
+  841: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1322: {
+  847: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1327: {
+  854: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1336: {
+  863: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1341: {
+  864: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1350: {
+  865: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1355: {
+  886: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1364: {
+  909: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1369: {
+  919: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1378: {
+  924: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1384: {
+  928: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1393: {
+  934: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1398: {
+  958: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1407: {
+  959: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1412: {
+  965: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1421: {
+  967: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1435: {
+  987: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1440: {
+  993: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1445: {
+  994: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1454: {
+  1020: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1459: {
+  1034: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1468: {
+  1036: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1479: {
+  1042: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1484: {
+  1087: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1495: {
+  1091: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1501: {
+  1096: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1511: {
+  1102: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1517: {
+  1123: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1527: {
+  1129: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1532: {
+  1161: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1543: {
+  1162: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1549: {
+  1197: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1555: {
+  1202: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1565: {
+  1203: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1571: {
+  1210: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1581: {
+  1215: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1587: {
+  1236: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1596: {
+  1242: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1607: {
+  1245: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1613: {
+  1254: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1623: {
+  1257: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1633: {
+  1261: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1635: {
+  1263: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1645: {
+  1267: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1651: {
+  1273: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1661: {
+  1284: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1667: {
+  1293: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1677: {
+  1298: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1683: {
+  1302: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1693: {
+  1306: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1699: {
+  1311: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1709: {
+  1315: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1715: {
+  1319: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1729: {
+  1345: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1731: {
+  1361: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1741: {
+  1367: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1747: {
+  1368: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1757: {
+  1376: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1767: {
+  1377: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1777: {
+  1379: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1783: {
+  1391: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1789: {
+  1430: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1795: {
+  1443: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1809: {
+  1448: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1811: {
+  1457: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1821: {
+  1462: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1831: {
+  1466: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1841: {
+  1469: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1843: {
+  1483: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1853: {
+  1485: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1867: {
+  1490: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1873: {
+  1519: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1875: {
+  1559: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1890: {
+  1568: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1892: {
+  1602: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1907: {
+  1609: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1917: {
+  1625: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1919: {
+  1631: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1934: {
+  1654: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1939: {
+  1660: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1949: {
+  1730: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1951: {
+  1740: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1965: {
+  1765: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1972: {
+  1778: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1978: {
+  1810: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1988: {
+  1905: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  1990: {
+  1926: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2004: {
+  1970: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2010: {
+  1971: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2020: {
+  1992: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2026: {
+  1993: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2041: {
+  2039: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2051: {
+  2045: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2066: {
+  2059: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2072: {
+  2092: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2082: {
+  2101: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2084: {
+  2146: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2112: {
+  2174: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2118: {
+  2192: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2142: {
+  2204: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2153: {
+  2258: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2159: {
+  2277: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2173: {
+  2290: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2175: {
+  2316: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2199: {
+  2328: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2205: {
+  2368: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2228: {
+  2385: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2230: {
+  2415: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2238: {
+  2445: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2252: {
+  2458: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2253: {
+  2467: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2292: {
+  2471: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2298: {
+  2477: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2308: {
+  2492: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2314: {
+  2493: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2324: {
+  2503: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2329: {
+  2556: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2339: {
+  2577: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2346: {
+  2583: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2356: {
+  2596: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2362: {
+  2608: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2372: {
+  2612: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2377: {
+  2617: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2388: {
+  2641: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2394: {
+  2658: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2474: {
+  2685: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2480: {
+  2773: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2494: {
+  2812: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2504: {
+  2814: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2668: {
+  2850: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2669: {
+  2852: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2686: {
+  2858: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2687: {
+  2998: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2688: {
+  3015: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2701: {
+  3123: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2720: {
+  3141: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2738: {
+  3157: {
     java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
-  2752: {
+  3203: {
     java: {
-      database: "",
-    },
-  },
-  2783: {
-    java: {
-      database: "",
-    },
-  },
-  2837: {
-    java: {
-      database: "",
-    },
-  },
-  2853: {
-    java: {
-      database: "",
-    },
-  },
-  2854: {
-    java: {
-      database: "",
-    },
-  },
-  2893: {
-    java: {
-      database: "",
-    },
-  },
-  2922: {
-    java: {
-      database: "",
-    },
-  },
-  2978: {
-    java: {
-      database: "",
-    },
-  },
-  2984: {
-    java: {
-      database: "",
-    },
-  },
-  2985: {
-    java: {
-      database: "",
-    },
-  },
-  2986: {
-    java: {
-      database: "",
-    },
-  },
-  2987: {
-    java: {
-      database: "",
-    },
-  },
-  2988: {
-    java: {
-      database: "",
-    },
-  },
-  2989: {
-    java: {
-      database: "",
-    },
-  },
-  2990: {
-    java: {
-      database: "",
-    },
-  },
-  2991: {
-    java: {
-      database: "",
-    },
-  },
-  2993: {
-    java: {
-      database: "",
-    },
-  },
-  2994: {
-    java: {
-      database: "",
-    },
-  },
-  2995: {
-    java: {
-      database: "",
-    },
-  },
-  3050: {
-    java: {
-      database: "",
-    },
-  },
-  3051: {
-    java: {
-      database: "",
-    },
-  },
-  3052: {
-    java: {
-      database: "",
-    },
-  },
-  3053: {
-    java: {
-      database: "",
-    },
-  },
-  3054: {
-    java: {
-      database: "",
-    },
-  },
-  3055: {
-    java: {
-      database: "",
-    },
-  },
-  3056: {
-    java: {
-      database: "",
-    },
-  },
-  3057: {
-    java: {
-      database: "",
-    },
-  },
-  3058: {
-    java: {
-      database: "",
-    },
-  },
-  3059: {
-    java: {
-      database: "",
-    },
-  },
-  3060: {
-    java: {
-      database: "",
-    },
-  },
-  3061: {
-    java: {
-      database: "",
-    },
-  },
-  3087: {
-    java: {
-      database: "",
-    },
-  },
-  3089: {
-    java: {
-      database: "",
-    },
-  },
-  3103: {
-    java: {
-      database: "",
-    },
-  },
-  3118: {
-    java: {
-      database: "",
-    },
-  },
-  3124: {
-    java: {
-      database: "",
-    },
-  },
-  3126: {
-    java: {
-      database: "",
-    },
-  },
-  3140: {
-    java: {
-      database: "",
-    },
-  },
-  3150: {
-    java: {
-      database: "",
-    },
-  },
-  3156: {
-    java: {
-      database: "",
-    },
-  },
-  3166: {
-    java: {
-      database: "",
-    },
-  },
-  3172: {
-    java: {
-      database: "",
-    },
-  },
-  3182: {
-    java: {
-      database: "",
-    },
-  },
-  3188: {
-    java: {
-      database: "",
-    },
-  },
-  3198: {
-    java: {
-      database: "",
-    },
-  },
-  3204: {
-    java: {
-      database: "",
-    },
-  },
-  3214: {
-    java: {
-      database: "",
+      "breadth-first-search": "",
     },
   },
 };
