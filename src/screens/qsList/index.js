@@ -215,9 +215,7 @@ const QSList = () => {
       );
     } else if (decodeURIComponent(path) === "Divide And Conquer") {
       setTotalQCount(
-        tagsResponse.filter((x) => x.tag === "Divide and Conquer")[0]?.[
-          "count"
-        ]
+        tagsResponse.filter((x) => x.tag === "Divide and Conquer")[0]?.["count"]
       );
     } else {
       setTotalQCount(
