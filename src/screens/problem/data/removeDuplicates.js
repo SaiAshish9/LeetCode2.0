@@ -352,6 +352,11 @@ const obj1 = {
         '/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\n\nclass Solution {\n    public ListNode deleteDuplicates(ListNode head) {\n        if (head == null) return null;\n\n        ListNode dummy = new ListNode(0);\n        dummy.next = head;\n        ListNode prev = dummy;\n        ListNode current = head;\n\n        while (current != null) {\n            while (current.next != null && current.val == current.next.val) {\n                current = current.next;\n            }\n            if (prev.next != current) {\n                prev.next = current.next;\n            } else {\n                prev = prev.next;\n            }\n            current = current.next; \n        }\n\n        return dummy.next;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();        \n        ListNode head = new ListNode(1);\n        head.next = new ListNode(2);\n        head.next.next = new ListNode(3);\n        head.next.next.next = new ListNode(3);\n        head.next.next.next.next = new ListNode(4);\n        head.next.next.next.next.next = new ListNode(4);\n        head.next.next.next.next.next.next = new ListNode(5);\n\n        ListNode result = sol.deleteDuplicates(head);        \n        while (result != null) {\n            System.out.print(result.val + " ");\n            result = result.next;\n        }\n    }\n}\n',
     },
   },
+  83: {
+    java: {
+      "linked-list": "",
+    },
+  },
   84: {
     java: {
       "monotonic-stack":
@@ -393,6 +398,11 @@ const obj1 = {
   91: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  92: {
+    java: {
+      "linked-list": "",
     },
   },
   93: {
@@ -607,6 +617,11 @@ const obj1 = {
       "bit-manipulation": "",
     },
   },
+  138: {
+    java: {
+      "linked-list": "",
+    },
+  },
   139: {
     java: {
       "dynamic-programming": "",
@@ -648,6 +663,11 @@ const obj1 = {
     java: {
       "doubly-linked-list":
         "class LRUCache {\n    class Node {\n        int key;\n        int value;\n        Node prev;\n        Node next;\n        \n        public Node(int key, int value) {\n            this.key = key;\n            this.value = value;\n        }\n    }\n    \n    private int capacity;\n    private Map<Integer, Node> map;\n    private Node head;\n    private Node tail;\n    \n    public LRUCache(int capacity) {\n        this.capacity = capacity;\n        map = new HashMap<>();\n        head = new Node(-1, -1);\n        tail = new Node(-1, -1);\n        head.next = tail;\n        tail.prev = head;\n    }\n    \n    public int get(int key) {\n        if (!map.containsKey(key)) {\n            return -1;\n        }\n        \n        Node node = map.get(key);\n        moveToHead(node);\n        \n        return node.value;\n    }\n    \n    public void put(int key, int value) {\n        if (map.containsKey(key)) {\n            Node node = map.get(key);\n            node.value = value;\n            moveToHead(node);\n        } else {\n            Node newNode = new Node(key, value);\n            map.put(key, newNode);\n            addToHead(newNode);\n            \n            if (map.size() > capacity) {\n                Node removed = removeTail();\n                map.remove(removed.key);\n            }\n        }\n    }\n    \n    private void moveToHead(Node node) {\n        removeNode(node);\n        addToHead(node);\n    }\n    \n    private void removeNode(Node node) {\n        node.prev.next = node.next;\n        node.next.prev = node.prev;\n    }\n    \n    private void addToHead(Node node) {\n        node.next = head.next;\n        node.next.prev = node;\n        head.next = node;\n        node.prev = head;\n    }\n    \n    private Node removeTail() {\n        Node nodeToRemove = tail.prev;\n        removeNode(nodeToRemove);\n        return nodeToRemove;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        LRUCache cache = new LRUCache(2); // Capacity is 2\n        cache.put(1, 1);\n        cache.put(2, 2);\n        System.out.println(cache.get(1)); // Output: 1\n        cache.put(3, 3);\n        System.out.println(cache.get(2)); // Output: -1 (not found)\n        cache.put(4, 4);\n        System.out.println(cache.get(1)); // Output: -1 (not found)\n        System.out.println(cache.get(3)); // Output: 3\n        System.out.println(cache.get(4)); // Output: 4\n    }\n}\n",
+    },
+  },
+  147: {
+    java: {
+      "linked-list": "",
     },
   },
   148: {
@@ -996,6 +1016,11 @@ const obj1 = {
   236: {
     java: {
       tree: "",
+    },
+  },
+  237: {
+    java: {
+      "linked-list": "",
     },
   },
   238: {
@@ -1393,6 +1418,11 @@ const obj1 = {
         "import java.util.*;\n\npublic class Solution {\n    public int countRangeSum(int[] nums, int lower, int upper) {\n        if (nums == null || nums.length == 0) {\n            return 0;\n        }\n\n        int n = nums.length;\n        long[] prefixSums = new long[n + 1];\n        for (int i = 0; i < n; i++) {\n            prefixSums[i + 1] = prefixSums[i] + nums[i];\n        }\n\n        // Create a sorted list of all possible prefix sums.\n        Set<Long> allSums = new TreeSet<>();\n        for (long sum : prefixSums) {\n            allSums.add(sum);\n            allSums.add(sum - lower);\n            allSums.add(sum - upper);\n        }\n\n        // Map each prefix sum to an index for use in the Fenwick Tree.\n        Map<Long, Integer> sumToIndex = new HashMap<>();\n        int index = 0;\n        for (long sum : allSums) {\n            sumToIndex.put(sum, index++);\n        }\n\n        FenwickTree fenwickTree = new FenwickTree(sumToIndex.size());\n        int count = 0;\n        for (long sum : prefixSums) {\n            int left = sumToIndex.get(sum - upper);\n            int right = sumToIndex.get(sum - lower);\n            count += fenwickTree.query(right) - fenwickTree.query(left - 1);\n            fenwickTree.update(sumToIndex.get(sum), 1);\n        }\n\n        return count;\n    }\n\n    class FenwickTree {\n        private int[] tree;\n        \n        public FenwickTree(int size) {\n            tree = new int[size + 1];\n        }\n        \n        public void update(int index, int delta) {\n            index++;\n            while (index < tree.length) {\n                tree[index] += delta;\n                index += index & -index;\n            }\n        }\n        \n        public int query(int index) {\n            index++;\n            int sum = 0;\n            while (index > 0) {\n                sum += tree[index];\n                index -= index & -index;\n            }\n            return sum;\n        }\n    }\n}\n",
     },
   },
+  328: {
+    java: {
+      "linked-list": "",
+    },
+  },
   329: {
     java: {
       matrix: "",
@@ -1575,6 +1605,11 @@ const obj1 = {
   368: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  369: {
+    java: {
+      "linked-list": "",
     },
   },
   370: {
@@ -2871,6 +2906,16 @@ const obj1 = {
       "hash-function": "",
     },
   },
+  707: {
+    java: {
+      "linked-list": "",
+    },
+  },
+  708: {
+    java: {
+      "linked-list": "",
+    },
+  },
   710: {
     java: {
       randomized: "",
@@ -2938,6 +2983,11 @@ const obj1 = {
   724: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  725: {
+    java: {
+      "linked-list": "",
     },
   },
   726: {
@@ -3288,6 +3338,11 @@ const obj1 = {
   816: {
     java: {
       backtracking: "",
+    },
+  },
+  817: {
+    java: {
+      "linked-list": "",
     },
   },
   818: {
@@ -4506,6 +4561,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  1171: {
+    java: {
+      "linked-list": "",
+    },
+  },
   1172: {
     java: {
       "heap-(priority-queue)": "",
@@ -4603,6 +4663,11 @@ const obj1 = {
   1203: {
     java: {
       "topological-sort": "",
+    },
+  },
+  1206: {
+    java: {
+      "linked-list": "",
     },
   },
   1208: {
@@ -4889,6 +4954,11 @@ const obj1 = {
   1289: {
     java: {
       matrix: "",
+    },
+  },
+  1290: {
+    java: {
+      "linked-list": "",
     },
   },
   1291: {
@@ -5419,6 +5489,11 @@ const obj1 = {
   1473: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1474: {
+    java: {
+      "linked-list": "",
     },
   },
   1475: {
@@ -6013,6 +6088,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1669: {
+    java: {
+      "linked-list": "",
+    },
+  },
   1670: {
     java: {
       queue: "",
@@ -6387,6 +6467,11 @@ const obj1 = {
         "class Solution {\n    public int maximumScore(int[] nums, int k) {\n        int ans = 0;\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i <= nums.length; ++i) {\n            while (!stack.isEmpty() && (i == nums.length || nums[stack.peek()] > nums[i])) {\n                int h = nums[stack.pop()];\n                int w = stack.isEmpty() ? i : i - stack.peek() - 1;\n                if ((stack.isEmpty() || stack.peek() + 1 <= k) && i - 1 >= k)\n                    ans = Math.max(ans, h * w);\n            }\n            stack.push(i);\n        }\n\n        return ans;\n    }\n}",
     },
   },
+  1797: {
+    java: {
+      "linked-list": "",
+    },
+  },
   1799: {
     java: {
       "dynamic-programming": "",
@@ -6486,6 +6571,11 @@ const obj1 = {
   1835: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  1836: {
+    java: {
+      "linked-list": "",
     },
   },
   1838: {
@@ -7180,6 +7270,11 @@ const obj1 = {
       backtracking: "",
     },
   },
+  2058: {
+    java: {
+      "linked-list": "",
+    },
+  },
   2060: {
     java: {
       "dynamic-programming": "",
@@ -7214,6 +7309,11 @@ const obj1 = {
   2073: {
     java: {
       queue: "",
+    },
+  },
+  2074: {
+    java: {
+      "linked-list": "",
     },
   },
   2076: {
@@ -7507,6 +7607,11 @@ const obj1 = {
     java: {
       "merge-sort":
         "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public long goodTriplets(int[] nums1, int[] nums2) {\n  int n = nums1.length;\n    long ans = 0;\n    Map<Integer, Integer> numToIndex = new HashMap<>();\n    int[] nums = new int[n];\n    int[] leftSmaller = new int[n];\n    int[] rightLarger = new int[n];\n    FenwickTree tree1 = new FenwickTree(n);\n    FenwickTree tree2 = new FenwickTree(n);\n\n    for (int i = 0; i < n; ++i)\n      numToIndex.put(nums1[i], i);\n    for (int i = 0; i < n; ++i)\n      nums[i] = numToIndex.get(nums2[i]);\n\n    for (int i = 0; i < n; ++i) {\n      leftSmaller[i] = tree1.get(nums[i]);\n      tree1.add(nums[i] + 1, 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      rightLarger[i] = tree2.get(n) - tree2.get(nums[i]);\n      tree2.add(nums[i] + 1, 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      ans += (long) leftSmaller[i] * rightLarger[i];\n\n    return ans;\n  }\n}",
+    },
+  },
+  2181: {
+    java: {
+      "linked-list": "",
     },
   },
   2182: {
@@ -10171,6 +10276,16 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  3062: {
+    java: {
+      "linked-list": "",
+    },
+  },
+  3063: {
+    java: {
+      "linked-list": "",
+    },
+  },
   3064: {
     java: {
       interactive: "",
@@ -10603,393 +10718,683 @@ const obj1 = {
       "bit-manipulation": "",
     },
   },
+  3217: {
+    java: {
+      "linked-list": "",
+    },
+  },
 };
 // existing
 
 const obj2 = {
-  2: {
+  169: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  19: {
+  229: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  21: {
+  299: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  23: {
+  347: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  24: {
+  358: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  25: {
+  383: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  61: {
+  387: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  82: {
+  451: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  83: {
+  594: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  86: {
+  621: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  92: {
+  692: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  109: {
+  767: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  114: {
+  811: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  116: {
+  819: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  117: {
+  869: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  138: {
+  900: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  141: {
+  914: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  142: {
+  923: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  143: {
+  945: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  146: {
+  992: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  147: {
+  1010: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  148: {
+  1054: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  160: {
+  1079: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  203: {
+  1090: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  206: {
+  1121: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  234: {
+  1128: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  237: {
+  1189: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  328: {
+  1198: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  355: {
+  1213: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  369: {
+  1221: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  379: {
+  1267: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  382: {
+  1347: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  426: {
+  1356: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  430: {
+  1365: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  432: {
+  1366: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  445: {
+  1370: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  460: {
+  1394: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  622: {
+  1400: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  641: {
+  1419: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  705: {
+  1481: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  706: {
+  1497: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  707: {
+  1512: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  708: {
+  1519: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  716: {
+  1603: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  725: {
+  1612: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  817: {
+  1657: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  876: {
+  1704: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1019: {
+  1726: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1171: {
+  1737: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1206: {
+  1742: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1265: {
+  1748: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1290: {
+  1775: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1367: {
+  1781: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1472: {
+  1790: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1474: {
+  1814: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1634: {
+  1819: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1669: {
+  1854: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1670: {
+  1857: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1721: {
+  1876: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1797: {
+  1897: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  1836: {
+  1940: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2046: {
+  1941: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2058: {
+  2001: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2074: {
+  2006: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2095: {
+  2013: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2130: {
+  2014: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2181: {
+  2023: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2289: {
+  2025: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2296: {
+  2029: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2326: {
+  2053: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2487: {
+  2067: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2674: {
+  2068: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2807: {
+  2083: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  2816: {
+  2085: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  3062: {
+  2131: {
     java: {
-      "linked-list": "",
+      counting: "",
+    },
+  },
+  2150: {
+    java: {
+      counting: "",
+    },
+  },
+  2168: {
+    java: {
+      counting: "",
+    },
+  },
+  2170: {
+    java: {
+      counting: "",
+    },
+  },
+  2182: {
+    java: {
+      counting: "",
+    },
+  },
+  2186: {
+    java: {
+      counting: "",
+    },
+  },
+  2190: {
+    java: {
+      counting: "",
+    },
+  },
+  2206: {
+    java: {
+      counting: "",
+    },
+  },
+  2225: {
+    java: {
+      counting: "",
+    },
+  },
+  2244: {
+    java: {
+      counting: "",
+    },
+  },
+  2248: {
+    java: {
+      counting: "",
+    },
+  },
+  2268: {
+    java: {
+      counting: "",
+    },
+  },
+  2275: {
+    java: {
+      counting: "",
+    },
+  },
+  2283: {
+    java: {
+      counting: "",
+    },
+  },
+  2284: {
+    java: {
+      counting: "",
+    },
+  },
+  2287: {
+    java: {
+      counting: "",
+    },
+  },
+  2341: {
+    java: {
+      counting: "",
+    },
+  },
+  2347: {
+    java: {
+      counting: "",
+    },
+  },
+  2351: {
+    java: {
+      counting: "",
+    },
+  },
+  2384: {
+    java: {
+      counting: "",
+    },
+  },
+  2404: {
+    java: {
+      counting: "",
+    },
+  },
+  2416: {
+    java: {
+      counting: "",
+    },
+  },
+  2423: {
+    java: {
+      counting: "",
+    },
+  },
+  2453: {
+    java: {
+      counting: "",
+    },
+  },
+  2499: {
+    java: {
+      counting: "",
+    },
+  },
+  2514: {
+    java: {
+      counting: "",
+    },
+  },
+  2526: {
+    java: {
+      counting: "",
+    },
+  },
+  2529: {
+    java: {
+      counting: "",
+    },
+  },
+  2531: {
+    java: {
+      counting: "",
+    },
+  },
+  2539: {
+    java: {
+      counting: "",
+    },
+  },
+  2547: {
+    java: {
+      counting: "",
+    },
+  },
+  2748: {
+    java: {
+      counting: "",
+    },
+  },
+  2782: {
+    java: {
+      counting: "",
+    },
+  },
+  2833: {
+    java: {
+      counting: "",
+    },
+  },
+  2856: {
+    java: {
+      counting: "",
+    },
+  },
+  2870: {
+    java: {
+      counting: "",
+    },
+  },
+  2950: {
+    java: {
+      counting: "",
+    },
+  },
+  2955: {
+    java: {
+      counting: "",
+    },
+  },
+  2981: {
+    java: {
+      counting: "",
+    },
+  },
+  2982: {
+    java: {
+      counting: "",
+    },
+  },
+  3005: {
+    java: {
+      counting: "",
+    },
+  },
+  3016: {
+    java: {
+      counting: "",
+    },
+  },
+  3035: {
+    java: {
+      counting: "",
+    },
+  },
+  3039: {
+    java: {
+      counting: "",
+    },
+  },
+  3044: {
+    java: {
+      counting: "",
+    },
+  },
+  3046: {
+    java: {
+      counting: "",
     },
   },
   3063: {
     java: {
-      "linked-list": "",
+      counting: "",
     },
   },
-  3217: {
+  3071: {
     java: {
-      "linked-list": "",
+      counting: "",
+    },
+  },
+  3081: {
+    java: {
+      counting: "",
+    },
+  },
+  3084: {
+    java: {
+      counting: "",
+    },
+  },
+  3085: {
+    java: {
+      counting: "",
+    },
+  },
+  3128: {
+    java: {
+      counting: "",
+    },
+  },
+  3137: {
+    java: {
+      counting: "",
+    },
+  },
+  3138: {
+    java: {
+      counting: "",
+    },
+  },
+  3144: {
+    java: {
+      counting: "",
+    },
+  },
+  3153: {
+    java: {
+      counting: "",
+    },
+  },
+  3167: {
+    java: {
+      counting: "",
+    },
+  },
+  3184: {
+    java: {
+      counting: "",
+    },
+  },
+  3185: {
+    java: {
+      counting: "",
+    },
+  },
+  3186: {
+    java: {
+      counting: "",
     },
   },
 };

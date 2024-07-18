@@ -4962,6 +4962,149 @@ class UnionFind:
       </ul>
     </>
   ),
+  Counting: (
+    <>
+      <p>
+        When it comes to "counting" in LeetCode, it generally refers to problems
+        where you need to count certain elements or occurrences, such as:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Counting Elements in an Array:</strong>
+          <ul>
+            <li>
+              Frequency Counting: Determine how often each element appears.
+            </li>
+            <li>
+              Subarrays/Subsequences: Count subarrays or subsequences that meet
+              certain criteria.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Counting Specific Patterns:</strong>
+          <ul>
+            <li>
+              Strings and Substrings: Count the number of substrings that match
+              a pattern.
+            </li>
+            <li>
+              Graphs: Count paths, nodes, or edges satisfying specific
+              conditions.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Dynamic Programming:</strong>
+          <ul>
+            <li>
+              Paths and Ways: Count the number of ways to achieve a target
+              (e.g., unique paths in a grid, ways to reach a score).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Mathematical Counting:</strong>
+          <ul>
+            <li>
+              Combinatorial Problems: Count combinations, permutations, or
+              partitions.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Common Techniques:</h2>
+      <ul>
+        <li>
+          <strong>Hash Maps / Dictionaries:</strong>
+          <ul>
+            <li>Useful for counting frequency of elements.</li>
+            <li>
+              Example Problem: <em>Top K Frequent Elements</em>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Two Pointers / Sliding Window:</strong>
+          <ul>
+            <li>Efficiently count subarrays or subsequences.</li>
+            <li>
+              Example Problem: <em>Minimum Size Subarray Sum</em>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Prefix Sums / Suffix Sums:</strong>
+          <ul>
+            <li>Used for cumulative counting within arrays.</li>
+            <li>
+              Example Problem: <em>Subarray Sum Equals K</em>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Dynamic Programming:</strong>
+          <ul>
+            <li>Useful for counting ways to reach a solution.</li>
+            <li>
+              Example Problem: <em>Coin Change II</em>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Combinatorics:</strong>
+          <ul>
+            <li>Calculate combinations or permutations.</li>
+            <li>
+              Example Problem: <em>Combinations</em>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Problems:</h2>
+      <ul>
+        <li>
+          <strong>Number of Islands:</strong> Count the number of disconnected
+          islands in a grid.
+        </li>
+        <li>
+          <strong>Counting Bits:</strong> Count the number of 1s in the binary
+          representation of numbers.
+        </li>
+        <li>
+          <strong>Majority Element:</strong> Find the element that appears more
+          than n/2 times in an array.
+        </li>
+        <li>
+          <strong>Counting Elements:</strong> Count elements that have a
+          specific relation with others.
+        </li>
+      </ul>
+
+      <h2>Tips for Solving Counting Problems:</h2>
+      <ul>
+        <li>
+          <strong>Understand the Requirements:</strong> Clearly understand what
+          needs to be counted and under what conditions.
+        </li>
+        <li>
+          <strong>Choose the Right Data Structure:</strong> Use hash maps,
+          arrays, or other structures suitable for the problem.
+        </li>
+        <li>
+          <strong>Optimize for Efficiency:</strong> Aim for optimal time and
+          space complexity, especially for large inputs.
+        </li>
+        <li>
+          <strong>Edge Cases:</strong> Consider edge cases like empty inputs,
+          single-element arrays, and large numbers.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
