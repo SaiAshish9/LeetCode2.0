@@ -4965,8 +4965,8 @@ class UnionFind:
   Counting: (
     <>
       <p>
-        Counting generally refers to problems
-        where you need to count certain elements or occurrences, such as:
+        Counting generally refers to problems where you need to count certain
+        elements or occurrences, such as:
       </p>
 
       <ul>
@@ -5101,6 +5101,148 @@ class UnionFind:
         <li>
           <strong>Edge Cases:</strong> Consider edge cases like empty inputs,
           single-element arrays, and large numbers.
+        </li>
+      </ul>
+    </>
+  ),
+  Simulation: (
+    <>
+      <p>
+        The "Simulation" tag in LeetCode refers to problems that involve
+        imitating a real-world process or system to solve a problem. Simulation
+        problems often require you to follow a set of rules or steps to achieve
+        a desired outcome. These problems can be diverse and may involve arrays,
+        strings, matrices, or custom data structures.
+      </p>
+
+      <h2>Key Characteristics of Simulation Problems:</h2>
+      <ul>
+        <li>
+          <strong>Step-by-Step Process:</strong>
+          <ul>
+            <li>Follow a sequence of steps or rules to reach the solution.</li>
+            <li>Mimic real-world scenarios or processes.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>State Management:</strong>
+          <ul>
+            <li>Keep track of the state of the system or elements involved.</li>
+            <li>Update the state as the simulation progresses.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Iterative Nature:</strong>
+          <ul>
+            <li>
+              Often involve loops to iterate through the elements or steps.
+            </li>
+            <li>May require multiple passes to achieve the final result.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Handling Edge Cases:</strong>
+          <ul>
+            <li>
+              Consider various edge cases to ensure the simulation works under
+              all conditions.
+            </li>
+            <li>
+              Edge cases might include empty inputs, boundary conditions, and
+              invalid inputs.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Common Techniques for Simulation Problems:</h2>
+      <ul>
+        <li>
+          <strong>Looping Constructs:</strong>
+          <ul>
+            <li>
+              Use loops (for, while) to simulate the process step by step.
+            </li>
+            <li>Example: Simulating a game with multiple moves.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Conditionals:</strong>
+          <ul>
+            <li>
+              Use if-else statements to handle different scenarios and rules.
+            </li>
+            <li>
+              Example: Checking conditions to determine the next state of a cell
+              in a grid.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Data Structures:</strong>
+          <ul>
+            <li>
+              Use appropriate data structures (arrays, lists, queues) to manage
+              the state.
+            </li>
+            <li>
+              Example: Using a queue to simulate a process with multiple stages.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Nested Loops:</strong>
+          <ul>
+            <li>
+              Often involve nested loops to simulate multi-dimensional
+              processes.
+            </li>
+            <li>Example: Simulating the spread of a virus in a grid.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Example Problems:</h2>
+      <ul>
+        <li>
+          <strong>Game of Life:</strong> Simulate the next state of a 2D grid
+          based on specific rules for cell survival, death, and birth.
+        </li>
+        <li>
+          <strong>Robot Bounded in Circle:</strong> Determine if a robot moving
+          on a plane based on given instructions is bounded within a circle.
+        </li>
+        <li>
+          <strong>Spiral Matrix:</strong> Simulate the process of traversing a
+          matrix in a spiral order.
+        </li>
+        <li>
+          <strong>Design Snake Game:</strong> Simulate a snake game where the
+          snake moves and grows based on the player's input.
+        </li>
+      </ul>
+
+      <h2>Tips for Solving Simulation Problems:</h2>
+      <ul>
+        <li>
+          <strong>Understand the Rules:</strong> Carefully read and understand
+          the rules or steps involved in the simulation. Break down the problem
+          into smaller, manageable parts.
+        </li>
+        <li>
+          <strong>Plan the Simulation:</strong> Outline the steps and the order
+          in which they need to be executed. Consider the initial state and how
+          it changes with each step.
+        </li>
+        <li>
+          <strong>Manage State Effectively:</strong> Use appropriate data
+          structures to keep track of the current state. Ensure that the state
+          updates correctly after each step.
+        </li>
+        <li>
+          <strong>Edge Cases:</strong> Think about potential edge cases and
+          handle them in your code. Test your solution with different inputs to
+          ensure it handles all scenarios.
         </li>
       </ul>
     </>
