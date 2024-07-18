@@ -217,6 +217,11 @@ const obj1 = {
         'public class RotateImage {\n\n    public void rotate(int[][] matrix) {\n        if (matrix == null || matrix.length == 0) return;\n        \n        int n = matrix.length;\n        transpose(matrix, n);\n        \n        for (int i = 0; i < n; i++) {\n            reverseRow(matrix[i], n);\n        }\n    }\n    \n    private void transpose(int[][] matrix, int n) {\n        for (int i = 0; i < n; i++) {\n            for (int j = i + 1; j < n; j++) {\n                swap(matrix, i, j, j, i);\n            }\n        }\n    }\n    \n    private void reverseRow(int[] row, int n) {\n        int left = 0, right = n - 1;\n        while (left < right) {\n            int temp = row[left];\n            row[left] = row[right];\n            row[right] = temp;\n            left++;\n            right--;\n        }\n    }\n    \n    private void swap(int[][] matrix, int i, int j, int x, int y) {\n        int temp = matrix[i][j];\n        matrix[i][j] = matrix[x][y];\n        matrix[x][y] = temp;\n    }\n\n    public static void main(String[] args) {\n        RotateImage ri = new RotateImage();\n        int[][] matrix = {\n            {1, 2, 3},\n            {4, 5, 6},\n            {7, 8, 9}\n        };\n        \n        ri.rotate(matrix);\n        \n        for (int i = 0; i < matrix.length; i++) {\n            for (int j = 0; j < matrix[i].length; j++) {\n                System.out.print(matrix[i][j] + " ");\n            }\n            System.out.println();\n        }\n    }\n}\n',
     },
   },
+  49: {
+    java: {
+      sorting: "",
+    },
+  },
   50: {
     java: {
       recursion: "",
@@ -248,6 +253,11 @@ const obj1 = {
   55: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  56: {
+    java: {
+      sorting: "",
     },
   },
   59: {
@@ -1010,6 +1020,11 @@ const obj1 = {
       backtracking: "",
     },
   },
+  217: {
+    java: {
+      sorting: "",
+    },
+  },
   218: {
     java: {
       "line-sweep":
@@ -1137,6 +1152,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  242: {
+    java: {
+      sorting: "",
+    },
+  },
   244: {
     java: {
       "two-pointers": "",
@@ -1166,6 +1186,11 @@ const obj1 = {
     java: {
       iterator:
         "class Vector2D {\n    private int i;\n    private int j;\n    private int[][] vec;\n\n    public Vector2D(int[][] vec) {\n        this.vec = vec;\n    }\n\n    public int next() {\n        forward();\n        return vec[i][j++];\n    }\n\n    public boolean hasNext() {\n        forward();\n        return i < vec.length;\n    }\n\n    private void forward() {\n        while (i < vec.length && j >= vec[i].length) {\n            ++i;\n            j = 0;\n        }\n    }\n}\n\n/**\n * Your Vector2D object will be instantiated and called as such:\n * Vector2D obj = new Vector2D(vec);\n * int param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */",
+    },
+  },
+  252: {
+    java: {
+      sorting: "",
     },
   },
   253: {
@@ -1941,6 +1966,11 @@ const obj1 = {
       "bit-manipulation": "",
     },
   },
+  406: {
+    java: {
+      sorting: "",
+    },
+  },
   407: {
     java: {
       matrix: "",
@@ -1969,6 +1999,11 @@ const obj1 = {
   413: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  414: {
+    java: {
+      sorting: "",
     },
   },
   416: {
@@ -2065,6 +2100,11 @@ const obj1 = {
   435: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  436: {
+    java: {
+      sorting: "",
     },
   },
   437: {
@@ -2168,6 +2208,11 @@ const obj1 = {
   461: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  462: {
+    java: {
+      sorting: "",
     },
   },
   463: {
@@ -2510,6 +2555,11 @@ const obj1 = {
   538: {
     java: {
       "binary-search-tree": "",
+    },
+  },
+  539: {
+    java: {
+      sorting: "",
     },
   },
   541: {
@@ -2910,6 +2960,11 @@ const obj1 = {
   627: {
     java: {
       database: "",
+    },
+  },
+  628: {
+    java: {
+      sorting: "",
     },
   },
   629: {
@@ -3446,6 +3501,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  747: {
+    java: {
+      sorting: "",
+    },
+  },
   749: {
     java: {
       matrix: "",
@@ -3622,6 +3682,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  791: {
+    java: {
+      sorting: "",
+    },
+  },
   792: {
     java: {
       "dynamic-programming": "",
@@ -3791,6 +3856,11 @@ const obj1 = {
   832: {
     java: {
       "two-pointers": "",
+    },
+  },
+  833: {
+    java: {
+      sorting: "",
     },
   },
   834: {
@@ -4031,14 +4101,29 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  888: {
+    java: {
+      sorting: "",
+    },
+  },
   889: {
     java: {
       tree: "",
     },
   },
+  891: {
+    java: {
+      sorting: "",
+    },
+  },
   892: {
     java: {
       matrix: "",
+    },
+  },
+  893: {
+    java: {
+      sorting: "",
     },
   },
   894: {
@@ -4061,6 +4146,11 @@ const obj1 = {
   898: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  899: {
+    java: {
+      sorting: "",
     },
   },
   900: {
@@ -4233,6 +4323,11 @@ const obj1 = {
   936: {
     java: {
       queue: "",
+    },
+  },
+  937: {
+    java: {
+      sorting: "",
     },
   },
   938: {
@@ -5105,6 +5200,11 @@ const obj1 = {
       database: "",
     },
   },
+  1133: {
+    java: {
+      sorting: "",
+    },
+  },
   1135: {
     java: {
       "union-find": "",
@@ -5183,6 +5283,11 @@ const obj1 = {
         "class Solution {\n  public int minSwaps(int[] data) {\n      int sum = 0;\n      for (int v : data) {\n          sum += v;\n      }\n      int sumK = 0;\n      for (int i = 0; i < sum; ++i) {\n          sumK += data[i];\n      }\n      int max = sumK;\n      for (int i = sum; i < data.length; ++i) {\n          sumK += data[i];\n          sumK -= data[i - sum];\n          max = Math.max(max, sumK);\n      }\n      return sum - max;\n  }\n}",
     },
   },
+  1152: {
+    java: {
+      sorting: "",
+    },
+  },
   1155: {
     java: {
       "dynamic-programming": "",
@@ -5244,6 +5349,16 @@ const obj1 = {
       "union-find": "",
     },
   },
+  1169: {
+    java: {
+      sorting: "",
+    },
+  },
+  1170: {
+    java: {
+      sorting: "",
+    },
+  },
   1171: {
     java: {
       "linked-list": "",
@@ -5283,6 +5398,11 @@ const obj1 = {
   1179: {
     java: {
       database: "",
+    },
+  },
+  1181: {
+    java: {
+      sorting: "",
     },
   },
   1182: {
@@ -5371,6 +5491,11 @@ const obj1 = {
   1199: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  1200: {
+    java: {
+      sorting: "",
     },
   },
   1201: {
@@ -5754,6 +5879,11 @@ const obj1 = {
         "class CombinationIterator {\n    private List<String> combinations;\n    private int currentIndex;\n\n    public CombinationIterator(String characters, int combinationLength) {\n        combinations = new ArrayList<>();\n        generateCombinations(characters, combinationLength, 0, new StringBuilder());\n        currentIndex = 0;\n    }\n\n    private void generateCombinations(String characters, int length, int start, StringBuilder sb) {\n        if (sb.length() == length) {\n            combinations.add(sb.toString());\n            return;\n        }\n\n        for (int i = start; i < characters.length(); i++) {\n            sb.append(characters.charAt(i));\n            generateCombinations(characters, length, i + 1, sb);\n            sb.deleteCharAt(sb.length() - 1);\n        }\n    }\n\n    public String next() {\n        return combinations.get(currentIndex++);\n    }\n\n    public boolean hasNext() {\n        return currentIndex < combinations.size();\n    }\n}\n\n/**\n * Your CombinationIterator object will be instantiated and called as such:\n * CombinationIterator obj = new CombinationIterator(characters,\n * combinationLength);\n * String param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */",
     },
   },
+  1288: {
+    java: {
+      sorting: "",
+    },
+  },
   1289: {
     java: {
       matrix: "",
@@ -5798,6 +5928,11 @@ const obj1 = {
   1298: {
     java: {
       graph: "",
+    },
+  },
+  1300: {
+    java: {
+      sorting: "",
     },
   },
   1301: {
@@ -5925,9 +6060,19 @@ const obj1 = {
       greedy: "",
     },
   },
+  1331: {
+    java: {
+      sorting: "",
+    },
+  },
   1332: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1333: {
+    java: {
+      sorting: "",
     },
   },
   1334: {
@@ -6436,6 +6581,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1451: {
+    java: {
+      sorting: "",
+    },
+  },
   1453: {
     java: {
       geometry: "",
@@ -6470,6 +6620,11 @@ const obj1 = {
   1459: {
     java: {
       database: "",
+    },
+  },
+  1460: {
+    java: {
+      sorting: "",
     },
   },
   1461: {
@@ -6610,6 +6765,11 @@ const obj1 = {
       tree: "",
     },
   },
+  1491: {
+    java: {
+      sorting: "",
+    },
+  },
   1492: {
     java: {
       "number-theory": "",
@@ -6655,6 +6815,11 @@ const obj1 = {
   1501: {
     java: {
       database: "",
+    },
+  },
+  1502: {
+    java: {
+      sorting: "",
     },
   },
   1503: {
@@ -6852,6 +7017,11 @@ const obj1 = {
   1549: {
     java: {
       database: "",
+    },
+  },
+  1552: {
+    java: {
+      sorting: "",
     },
   },
   1553: {
@@ -7072,6 +7242,11 @@ const obj1 = {
       counting: "",
     },
   },
+  1604: {
+    java: {
+      sorting: "",
+    },
+  },
   1605: {
     java: {
       matrix: "",
@@ -7085,6 +7260,11 @@ const obj1 = {
   1607: {
     java: {
       database: "",
+    },
+  },
+  1608: {
+    java: {
+      sorting: "",
     },
   },
   1609: {
@@ -7138,6 +7318,11 @@ const obj1 = {
       interactive: "",
     },
   },
+  1619: {
+    java: {
+      sorting: "",
+    },
+  },
   1620: {
     java: {
       enumeration: "",
@@ -7178,6 +7363,11 @@ const obj1 = {
       stack: "",
     },
   },
+  1630: {
+    java: {
+      sorting: "",
+    },
+  },
   1631: {
     java: {
       "union-find": "",
@@ -7201,6 +7391,16 @@ const obj1 = {
   1635: {
     java: {
       database: "",
+    },
+  },
+  1636: {
+    java: {
+      sorting: "",
+    },
+  },
+  1637: {
+    java: {
+      sorting: "",
     },
   },
   1638: {
@@ -7804,6 +8004,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1772: {
+    java: {
+      sorting: "",
+    },
+  },
   1774: {
     java: {
       "dynamic-programming": "",
@@ -8068,6 +8273,11 @@ const obj1 = {
         "class Solution {\n  public int longestBeautifulSubstring(String word) {\n    int ans = 0;\n    int count = 1;\n\n    for (int left = 0, right = 1; right < word.length(); ++right) {\n    char curr = word.charAt(right);\n    char prev = word.charAt(right - 1);\n      if (curr >= prev) {\n        if (curr > prev)\n          ++count;\n        if (count == 5)\n          ans = Math.max(ans, right - left + 1);\n      } else {\n        count = 1;\n        left = right;\n      }\n    }\n\n    return ans;\n  }\n}",
     },
   },
+  1840: {
+    java: {
+      sorting: "",
+    },
+  },
   1841: {
     java: {
       database: "",
@@ -8091,6 +8301,11 @@ const obj1 = {
   1846: {
     java: {
       greedy: "",
+    },
+  },
+  1847: {
+    java: {
+      sorting: "",
     },
   },
   1849: {
@@ -8144,6 +8359,11 @@ const obj1 = {
   1858: {
     java: {
       trie: "",
+    },
+  },
+  1859: {
+    java: {
+      sorting: "",
     },
   },
   1861: {
@@ -8264,6 +8484,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  1887: {
+    java: {
+      sorting: "",
+    },
+  },
   1888: {
     java: {
       "sliding-window":
@@ -8365,6 +8590,11 @@ const obj1 = {
   1912: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  1913: {
+    java: {
+      sorting: "",
     },
   },
   1914: {
@@ -9058,6 +9288,11 @@ const obj1 = {
       design: "",
     },
   },
+  2070: {
+    java: {
+      sorting: "",
+    },
+  },
   2071: {
     java: {
       "monotonic-queue":
@@ -9137,6 +9372,11 @@ const obj1 = {
   2088: {
     java: {
       matrix: "",
+    },
+  },
+  2089: {
+    java: {
+      sorting: "",
     },
   },
   2090: {
@@ -9380,6 +9620,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  2148: {
+    java: {
+      sorting: "",
+    },
+  },
   2149: {
     java: {
       "two-pointers": "",
@@ -9403,6 +9648,11 @@ const obj1 = {
   2153: {
     java: {
       database: "",
+    },
+  },
+  2154: {
+    java: {
+      sorting: "",
     },
   },
   2156: {
@@ -9444,6 +9694,16 @@ const obj1 = {
   2163: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  2164: {
+    java: {
+      sorting: "",
+    },
+  },
+  2165: {
+    java: {
+      sorting: "",
     },
   },
   2166: {
@@ -9545,6 +9805,11 @@ const obj1 = {
   2190: {
     java: {
       counting: "",
+    },
+  },
+  2191: {
+    java: {
+      sorting: "",
     },
   },
   2192: {
@@ -9698,6 +9963,11 @@ const obj1 = {
       database: "",
     },
   },
+  2229: {
+    java: {
+      sorting: "",
+    },
+  },
   2230: {
     java: {
       database: "",
@@ -9783,6 +10053,11 @@ const obj1 = {
   2249: {
     java: {
       geometry: "",
+    },
+  },
+  2250: {
+    java: {
+      sorting: "",
     },
   },
   2251: {
@@ -9885,6 +10160,16 @@ const obj1 = {
   2272: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2273: {
+    java: {
+      sorting: "",
+    },
+  },
+  2274: {
+    java: {
+      sorting: "",
     },
   },
   2275: {
@@ -10539,6 +10824,11 @@ const obj1 = {
       enumeration: "",
     },
   },
+  2418: {
+    java: {
+      sorting: "",
+    },
+  },
   2419: {
     java: {
       brainteaser:
@@ -10777,6 +11067,11 @@ const obj1 = {
   2474: {
     java: {
       database: "",
+    },
+  },
+  2475: {
+    java: {
+      sorting: "",
     },
   },
   2476: {
@@ -11247,6 +11542,11 @@ const obj1 = {
       greedy: "",
     },
   },
+  2580: {
+    java: {
+      sorting: "",
+    },
+  },
   2581: {
     java: {
       "dynamic-programming": "",
@@ -11458,6 +11758,11 @@ const obj1 = {
       "number-theory": "",
     },
   },
+  2655: {
+    java: {
+      sorting: "",
+    },
+  },
   2656: {
     java: {
       greedy: "",
@@ -11598,6 +11903,11 @@ const obj1 = {
       database: "",
     },
   },
+  2706: {
+    java: {
+      sorting: "",
+    },
+  },
   2707: {
     java: {
       "dynamic-programming": "",
@@ -11664,6 +11974,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  2733: {
+    java: {
+      sorting: "",
+    },
+  },
   2734: {
     java: {
       greedy: "",
@@ -11687,6 +12002,11 @@ const obj1 = {
   2738: {
     java: {
       database: "",
+    },
+  },
+  2740: {
+    java: {
+      sorting: "",
     },
   },
   2741: {
@@ -11780,6 +12100,11 @@ const obj1 = {
       enumeration: "",
     },
   },
+  2766: {
+    java: {
+      sorting: "",
+    },
+  },
   2767: {
     java: {
       "dynamic-programming": "",
@@ -11821,6 +12146,11 @@ const obj1 = {
         "class Solution {\n    public int maximumBeauty(int[] nums, int k) {\n        int ans = 0;\n\n        Arrays.sort(nums);\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            while (nums[right] - nums[left] > 2 * k)\n                ++left;\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}",
     },
   },
+  2780: {
+    java: {
+      sorting: "",
+    },
+  },
   2781: {
     java: {
       "sliding-window":
@@ -11835,6 +12165,16 @@ const obj1 = {
   2783: {
     java: {
       database: "",
+    },
+  },
+  2784: {
+    java: {
+      sorting: "",
+    },
+  },
+  2785: {
+    java: {
+      sorting: "",
     },
   },
   2786: {
@@ -12009,6 +12349,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  2840: {
+    java: {
+      sorting: "",
+    },
+  },
   2841: {
     java: {
       "sliding-window":
@@ -12105,6 +12450,11 @@ const obj1 = {
   2862: {
     java: {
       "number-theory": "",
+    },
+  },
+  2863: {
+    java: {
+      sorting: "",
     },
   },
   2864: {
@@ -12329,6 +12679,11 @@ const obj1 = {
         "class TrieNode {\n    public TrieNode[] children = new TrieNode[2];\n    public int min = Integer.MAX_VALUE;\n    public int max = Integer.MIN_VALUE;\n}\n\nclass BitTrie {\n    public BitTrie(int maxBit) {\n        this.maxBit = maxBit;\n    }\n\n    public void insert(int num) {\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (num >> i & 1);\n            if (node.children[bit] == null)\n                node.children[bit] = new TrieNode();\n            node = node.children[bit];\n            node.min = Math.min(node.min, num);\n            node.max = Math.max(node.max, num);\n        }\n    }\n\n    public int getMaxXor(int x) {\n        int maxXor = 0;\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (x >> i & 1);\n            int toggleBit = bit ^ 1;\n            if (node.children[toggleBit] != null && node.children[toggleBit].max > x &&\n                    node.children[toggleBit].min <= 2 * x) {\n                maxXor = maxXor | 1 << i;\n                node = node.children[toggleBit];\n            } else if (node.children[bit] != null) {\n                node = node.children[bit];\n            } else {\n                return 0;\n            }\n        }\n        return maxXor;\n    }\n\n    private int maxBit;\n    private TrieNode root = new TrieNode();\n}\n\nclass Solution {\n    public int maximumStrongPairXor(int[] nums) {\n        int maxNum = Arrays.stream(nums).max().getAsInt();\n        int maxBit = (int) (Math.log(maxNum) / Math.log(2));\n        int ans = 0;\n        BitTrie bitTrie = new BitTrie(maxBit);\n\n        for (int num : nums)\n            bitTrie.insert(num);\n\n        for (int num : nums)\n            ans = Math.max(ans, bitTrie.getMaxXor(num));\n\n        return ans;\n    }\n}",
     },
   },
+  2933: {
+    java: {
+      sorting: "",
+    },
+  },
   2934: {
     java: {
       enumeration: "",
@@ -12363,6 +12718,11 @@ const obj1 = {
   2941: {
     java: {
       "number-theory": "",
+    },
+  },
+  2943: {
+    java: {
+      sorting: "",
     },
   },
   2944: {
@@ -12616,6 +12976,11 @@ const obj1 = {
       database: "",
     },
   },
+  2996: {
+    java: {
+      sorting: "",
+    },
+  },
   2997: {
     java: {
       "bit-manipulation": "",
@@ -12736,6 +13101,11 @@ const obj1 = {
     java: {
       "sliding-window":
         "**\n * Definition for an infinite stream.\n * class InfiniteStream {\n *     public InfiniteStream(int[] bits);\n *     public int next();\n * }\n */\nclass Solution {\n    public int findPattern(InfiniteStream infiniteStream, int[] pattern) {\n        long a = 0, b = 0;\n        int m = pattern.length;\n        int half = m >> 1;\n        long mask1 = (1L << half) - 1;\n        long mask2 = (1L << (m - half)) - 1;\n        for (int i = 0; i < half; ++i) {\n            a |= (long) pattern[i] << (half - 1 - i);\n        }\n        for (int i = half; i < m; ++i) {\n            b |= (long) pattern[i] << (m - 1 - i);\n        }\n        long x = 0, y = 0;\n        for (int i = 1;; ++i) {\n            int v = infiniteStream.next();\n            y = y << 1 | v;\n            v = (int) ((y >> (m - half)) & 1);\n            y &= mask2;\n            x = x << 1 | v;\n            x &= mask1;\n            if (i >= m && a == x && b == y) {\n                return i - m;\n            }\n        }\n    }\n}",
+    },
+  },
+  3024: {
+    java: {
+      sorting: "",
     },
   },
   3025: {
@@ -13257,6 +13627,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  3143: {
+    java: {
+      sorting: "",
+    },
+  },
   3144: {
     java: {
       "dynamic-programming": "",
@@ -13332,6 +13707,11 @@ const obj1 = {
   3167: {
     java: {
       counting: "",
+    },
+  },
+  3169: {
+    java: {
+      sorting: "",
     },
   },
   3170: {
@@ -13550,2044 +13930,2524 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  15: {
+  2: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  16: {
+  7: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  18: {
+  9: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  49: {
+  12: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  56: {
+  13: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  75: {
+  29: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  88: {
+  43: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  147: {
+  48: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  148: {
+  50: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  164: {
+  60: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  169: {
+  62: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  179: {
+  66: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  215: {
+  67: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  217: {
+  69: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  220: {
+  70: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  229: {
+  89: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  242: {
+  96: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  252: {
+  149: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  253: {
+  150: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  259: {
+  166: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  168: {
+    java: {
+      math: "",
+    },
+  },
+  171: {
+    java: {
+      math: "",
+    },
+  },
+  172: {
+    java: {
+      math: "",
+    },
+  },
+  189: {
+    java: {
+      math: "",
+    },
+  },
+  202: {
+    java: {
+      math: "",
+    },
+  },
+  204: {
+    java: {
+      math: "",
+    },
+  },
+  223: {
+    java: {
+      math: "",
+    },
+  },
+  224: {
+    java: {
+      math: "",
+    },
+  },
+  227: {
+    java: {
+      math: "",
+    },
+  },
+  231: {
+    java: {
+      math: "",
+    },
+  },
+  233: {
+    java: {
+      math: "",
+    },
+  },
+  241: {
+    java: {
+      math: "",
+    },
+  },
+  258: {
+    java: {
+      math: "",
+    },
+  },
+  263: {
+    java: {
+      math: "",
+    },
+  },
+  264: {
+    java: {
+      math: "",
     },
   },
   268: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  274: {
+  273: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  280: {
+  279: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  295: {
+  282: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  292: {
+    java: {
+      math: "",
+    },
+  },
+  294: {
+    java: {
+      math: "",
     },
   },
   296: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  314: {
+  313: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  324: {
+  319: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  347: {
+  326: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  349: {
+  335: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  350: {
+  342: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  354: {
+  343: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  358: {
+  356: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  357: {
+    java: {
+      math: "",
     },
   },
   360: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  365: {
+    java: {
+      math: "",
+    },
+  },
+  367: {
+    java: {
+      math: "",
     },
   },
   368: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  378: {
+  369: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  389: {
+  371: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  406: {
+  372: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  414: {
+  375: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  435: {
+  380: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  436: {
+  381: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  451: {
+  382: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  452: {
+  384: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  455: {
+  390: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  396: {
+    java: {
+      math: "",
+    },
+  },
+  398: {
+    java: {
+      math: "",
+    },
+  },
+  400: {
+    java: {
+      math: "",
+    },
+  },
+  405: {
+    java: {
+      math: "",
+    },
+  },
+  412: {
+    java: {
+      math: "",
+    },
+  },
+  415: {
+    java: {
+      math: "",
+    },
+  },
+  423: {
+    java: {
+      math: "",
+    },
+  },
+  441: {
+    java: {
+      math: "",
+    },
+  },
+  445: {
+    java: {
+      math: "",
+    },
+  },
+  447: {
+    java: {
+      math: "",
+    },
+  },
+  453: {
+    java: {
+      math: "",
+    },
+  },
+  458: {
+    java: {
+      math: "",
     },
   },
   462: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  475: {
+  464: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  502: {
+  469: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  506: {
+  470: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  522: {
+  477: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  524: {
+  478: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  527: {
+  479: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  532: {
+  483: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  486: {
+    java: {
+      math: "",
+    },
+  },
+  492: {
+    java: {
+      math: "",
+    },
+  },
+  497: {
+    java: {
+      math: "",
+    },
+  },
+  504: {
+    java: {
+      math: "",
+    },
+  },
+  507: {
+    java: {
+      math: "",
+    },
+  },
+  509: {
+    java: {
+      math: "",
+    },
+  },
+  519: {
+    java: {
+      math: "",
+    },
+  },
+  523: {
+    java: {
+      math: "",
+    },
+  },
+  528: {
+    java: {
+      math: "",
+    },
+  },
+  537: {
+    java: {
+      math: "",
     },
   },
   539: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  561: {
+  553: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  581: {
+  556: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  594: {
+  564: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  611: {
+  573: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  621: {
+  587: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  592: {
+    java: {
+      math: "",
+    },
+  },
+  593: {
+    java: {
+      math: "",
+    },
+  },
+  598: {
+    java: {
+      math: "",
+    },
+  },
+  625: {
+    java: {
+      math: "",
     },
   },
   628: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  630: {
+  633: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  632: {
+  634: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  642: {
+  640: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  645: {
+  650: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  646: {
+  651: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  658: {
+  660: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  692: {
+  667: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  668: {
+    java: {
+      math: "",
+    },
+  },
+  670: {
+    java: {
+      math: "",
+    },
+  },
+  672: {
+    java: {
+      math: "",
+    },
+  },
+  679: {
+    java: {
+      math: "",
     },
   },
   710: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  719: {
+  728: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  720: {
+  738: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  721: {
+  750: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  726: {
+  754: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  747: {
+  762: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  757: {
+  770: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  759: {
+  772: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  767: {
+  775: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  768: {
+  779: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  769: {
+  780: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  786: {
+  781: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  791: {
+  782: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  792: {
+  788: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  823: {
+  789: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  825: {
+  793: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  826: {
+  800: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  833: {
+  805: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  846: {
+  808: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  853: {
+  810: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  857: {
+  812: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  829: {
+    java: {
+      math: "",
+    },
+  },
+  836: {
+    java: {
+      math: "",
+    },
+  },
+  837: {
+    java: {
+      math: "",
+    },
+  },
+  840: {
+    java: {
+      math: "",
+    },
+  },
+  843: {
+    java: {
+      math: "",
+    },
+  },
+  858: {
+    java: {
+      math: "",
+    },
+  },
+  866: {
+    java: {
+      math: "",
     },
   },
   869: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  870: {
+  877: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  881: {
+  878: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  888: {
+  883: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  887: {
+    java: {
+      math: "",
     },
   },
   891: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  893: {
+  892: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
   899: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  905: {
+  902: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  906: {
+    java: {
+      math: "",
+    },
+  },
+  908: {
+    java: {
+      math: "",
     },
   },
   910: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  912: {
+  913: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  922: {
+  914: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  923: {
+  920: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  937: {
+  927: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  932: {
+    java: {
+      math: "",
     },
   },
   939: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  945: {
+  952: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  948: {
+  957: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  950: {
+  963: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  954: {
+  964: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  969: {
+  970: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  972: {
+    java: {
+      math: "",
     },
   },
   973: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
   976: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  977: {
+  989: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  987: {
+  991: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1005: {
+  996: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1029: {
+  1006: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  1012: {
+    java: {
+      math: "",
+    },
+  },
+  1015: {
+    java: {
+      math: "",
+    },
+  },
+  1017: {
+    java: {
+      math: "",
+    },
+  },
+  1025: {
+    java: {
+      math: "",
     },
   },
   1030: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  1033: {
+    java: {
+      math: "",
+    },
+  },
+  1037: {
+    java: {
+      math: "",
     },
   },
   1040: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1048: {
+  1041: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1051: {
+  1056: {
     java: {
-      sorting: "",
-    },
-  },
-  1054: {
-    java: {
-      sorting: "",
-    },
-  },
-  1057: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   1058: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1065: {
+  1067: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1086: {
+  1071: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1090: {
+  1073: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1094: {
+  1085: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1099: {
+  1088: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1101: {
+  1093: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1122: {
+  1103: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1133: {
+  1104: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1152: {
+  1118: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1169: {
+  1131: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1170: {
+  1134: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1181: {
+  1137: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1187: {
+  1140: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1196: {
+  1154: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1200: {
+  1175: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1202: {
+  1180: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1229: {
+  1185: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1235: {
+  1199: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1244: {
+  1201: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1262: {
+  1217: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1268: {
+  1227: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1288: {
+  1228: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1296: {
+  1230: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1300: {
+  1232: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1305: {
+  1237: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1311: {
+  1238: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1329: {
+  1247: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1331: {
+  1248: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1333: {
+  1250: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1337: {
+  1252: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1338: {
+  1256: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1340: {
+  1259: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1346: {
+  1266: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1348: {
+  1271: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1353: {
+  1276: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1356: {
+  1281: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1365: {
+  1290: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1366: {
+  1304: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1383: {
+  1307: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1385: {
+  1317: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1387: {
+  1323: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1402: {
+  1330: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1403: {
+  1342: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1418: {
+  1344: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1424: {
+  1352: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1433: {
+  1359: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1451: {
+  1360: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1460: {
+  1362: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1464: {
+  1390: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1465: {
+  1399: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1471: {
+  1401: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  1406: {
+    java: {
+      math: "",
+    },
+  },
+  1414: {
+    java: {
+      math: "",
+    },
+  },
+  1427: {
+    java: {
+      math: "",
+    },
+  },
+  1432: {
+    java: {
+      math: "",
+    },
+  },
+  1442: {
+    java: {
+      math: "",
+    },
+  },
+  1447: {
+    java: {
+      math: "",
+    },
+  },
+  1453: {
+    java: {
+      math: "",
+    },
+  },
+  1467: {
+    java: {
+      math: "",
     },
   },
   1478: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1481: {
+  1486: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1489: {
+  1492: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1491: {
+  1510: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1498: {
+  1512: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1502: {
+  1513: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1508: {
+  1515: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1509: {
+  1518: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1547: {
+  1523: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1552: {
+  1524: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  1538: {
+    java: {
+      math: "",
+    },
+  },
+  1551: {
+    java: {
+      math: "",
     },
   },
   1561: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1564: {
+  1563: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1580: {
+  1569: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1585: {
+  1573: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1589: {
+  1577: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1604: {
+  1588: {
     java: {
-      sorting: "",
-    },
-  },
-  1608: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   1610: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1619: {
+  1621: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1626: {
+  1622: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1630: {
+  1627: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1632: {
+  1628: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1636: {
+  1634: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1637: {
+  1641: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1647: {
+  1643: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
   1648: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1657: {
+  1680: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1665: {
+  1685: {
     java: {
-      sorting: "",
-    },
-  },
-  1679: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   1686: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1691: {
+  1688: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1697: {
+  1690: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1710: {
+  1716: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1727: {
+  1728: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1738: {
+  1735: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1751: {
+  1739: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1772: {
+  1742: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1782: {
+  1753: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1798: {
+  1759: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1818: {
+  1766: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1833: {
+  1776: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1834: {
+  1780: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1838: {
+  1799: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  1806: {
+    java: {
+      math: "",
+    },
+  },
+  1808: {
+    java: {
+      math: "",
+    },
+  },
+  1812: {
+    java: {
+      math: "",
+    },
+  },
+  1814: {
+    java: {
+      math: "",
+    },
+  },
+  1819: {
+    java: {
+      math: "",
+    },
+  },
+  1822: {
+    java: {
+      math: "",
+    },
+  },
+  1823: {
+    java: {
+      math: "",
+    },
+  },
+  1828: {
+    java: {
+      math: "",
+    },
+  },
+  1830: {
+    java: {
+      math: "",
+    },
+  },
+  1835: {
+    java: {
+      math: "",
+    },
+  },
+  1837: {
+    java: {
+      math: "",
     },
   },
   1840: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1846: {
+  1860: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1847: {
+  1862: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1851: {
+  1863: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1859: {
+  1866: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1874: {
+  1872: {
     java: {
-      sorting: "",
-    },
-  },
-  1877: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   1878: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1885: {
+  1884: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1887: {
+  1896: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1889: {
+  1903: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1913: {
+  1904: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1921: {
+  1908: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1943: {
+  1916: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1968: {
+  1922: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1984: {
+  1924: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1985: {
+  1925: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  1996: {
+  1927: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  1952: {
+    java: {
+      math: "",
+    },
+  },
+  1954: {
+    java: {
+      math: "",
+    },
+  },
+  1956: {
+    java: {
+      math: "",
+    },
+  },
+  1969: {
+    java: {
+      math: "",
+    },
+  },
+  1979: {
+    java: {
+      math: "",
+    },
+  },
+  1994: {
+    java: {
+      math: "",
     },
   },
   1998: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2007: {
+  1999: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2008: {
+  2001: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2015: {
+  2005: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  2019: {
+    java: {
+      math: "",
+    },
+  },
+  2028: {
+    java: {
+      math: "",
+    },
+  },
+  2029: {
+    java: {
+      math: "",
     },
   },
   2033: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2037: {
+  2038: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2046: {
+  2048: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2054: {
+  2063: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2070: {
+  2081: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2071: {
+  2083: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2089: {
+  2101: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2092: {
+  2110: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2094: {
+  2117: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2098: {
+  2119: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2099: {
+  2125: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2122: {
+  2128: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2126: {
+  2139: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2135: {
+  2147: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2136: {
+  2152: {
     java: {
-      sorting: "",
-    },
-  },
-  2141: {
-    java: {
-      sorting: "",
-    },
-  },
-  2144: {
-    java: {
-      sorting: "",
-    },
-  },
-  2146: {
-    java: {
-      sorting: "",
-    },
-  },
-  2148: {
-    java: {
-      sorting: "",
-    },
-  },
-  2154: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   2160: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2164: {
+  2162: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
   2165: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2171: {
+  2169: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2191: {
+  2177: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  2178: {
+    java: {
+      math: "",
+    },
+  },
+  2180: {
+    java: {
+      math: "",
+    },
+  },
+  2183: {
+    java: {
+      math: "",
+    },
+  },
+  2189: {
+    java: {
+      math: "",
     },
   },
   2195: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2225: {
+  2197: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2229: {
+  2198: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2231: {
+  2217: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2234: {
+  2221: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2242: {
+  2235: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2248: {
+  2240: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2250: {
+  2249: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2251: {
+  2266: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2268: {
+  2269: {
     java: {
-      sorting: "",
-    },
-  },
-  2271: {
-    java: {
-      sorting: "",
-    },
-  },
-  2273: {
-    java: {
-      sorting: "",
-    },
-  },
-  2274: {
-    java: {
-      sorting: "",
-    },
-  },
-  2279: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   2280: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2285: {
+  2310: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2294: {
+  2317: {
     java: {
-      sorting: "",
-    },
-  },
-  2300: {
-    java: {
-      sorting: "",
-    },
-  },
-  2323: {
-    java: {
-      sorting: "",
-    },
-  },
-  2332: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   2333: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2335: {
+  2338: {
     java: {
-      sorting: "",
-    },
-  },
-  2342: {
-    java: {
-      sorting: "",
-    },
-  },
-  2343: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   2344: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2345: {
+  2348: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2357: {
+  2358: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2363: {
+  2366: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2371: {
+  2376: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2386: {
+  2393: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2389: {
+  2396: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2402: {
+  2400: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2406: {
+  2409: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2410: {
+  2413: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2412: {
+  2417: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2418: {
+  2427: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2421: {
+  2436: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2441: {
+  2440: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2448: {
+  2442: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2449: {
+  2443: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2454: {
+  2447: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2456: {
+  2450: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2459: {
+  2455: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2463: {
+  2457: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2465: {
+  2464: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2475: {
+  2469: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2491: {
+  2470: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2497: {
+  2481: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2500: {
+  2485: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2501: {
+  2489: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2503: {
+  2495: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2512: {
+  2505: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2517: {
+  2507: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2542: {
+  2513: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2545: {
+  2514: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2548: {
+  2520: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2551: {
+  2521: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2554: {
+  2523: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2557: {
+  2524: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2563: {
+  2525: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2567: {
+  2527: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2576: {
+  2535: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  2539: {
+    java: {
+      math: "",
+    },
+  },
+  2541: {
+    java: {
+      math: "",
+    },
+  },
+  2543: {
+    java: {
+      math: "",
+    },
+  },
+  2544: {
+    java: {
+      math: "",
+    },
+  },
+  2549: {
+    java: {
+      math: "",
+    },
+  },
+  2550: {
+    java: {
+      math: "",
+    },
+  },
+  2566: {
+    java: {
+      math: "",
+    },
+  },
+  2572: {
+    java: {
+      math: "",
+    },
+  },
+  2575: {
+    java: {
+      math: "",
     },
   },
   2578: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2580: {
+  2579: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2583: {
+  2582: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2587: {
+  2584: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2589: {
+  2591: {
     java: {
-      sorting: "",
-    },
-  },
-  2590: {
-    java: {
-      sorting: "",
-    },
-  },
-  2592: {
-    java: {
-      sorting: "",
-    },
-  },
-  2593: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   2597: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2602: {
+  2598: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2604: {
+  2600: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  2601: {
+    java: {
+      math: "",
     },
   },
   2607: {
     java: {
-      sorting: "",
-    },
-  },
-  2611: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   2613: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  2614: {
+    java: {
+      math: "",
     },
   },
   2638: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2655: {
+  2647: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2659: {
+  2651: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2679: {
+  2652: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  2654: {
+    java: {
+      math: "",
     },
   },
   2681: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2706: {
+  2698: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2708: {
+  2709: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2713: {
+  2719: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2731: {
+  2729: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2733: {
+  2739: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2736: {
+  2745: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2740: {
+  2748: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2747: {
+  2750: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2751: {
+  2761: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2766: {
+  2769: {
     java: {
-      sorting: "",
-    },
-  },
-  2779: {
-    java: {
-      sorting: "",
-    },
-  },
-  2780: {
-    java: {
-      sorting: "",
-    },
-  },
-  2784: {
-    java: {
-      sorting: "",
-    },
-  },
-  2785: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   2790: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2809: {
+  2802: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2813: {
+  2806: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2819: {
+  2807: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2824: {
+  2816: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2830: {
+  2818: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2838: {
+  2827: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2840: {
+  2829: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2860: {
+  2834: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2863: {
+  2842: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2895: {
+  2843: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2931: {
+  2844: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2933: {
+  2847: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2943: {
+  2849: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2948: {
+  2851: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2952: {
+  2862: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2966: {
+  2864: {
     java: {
-      sorting: "",
+      math: "",
+    },
+  },
+  2867: {
+    java: {
+      math: "",
+    },
+  },
+  2868: {
+    java: {
+      math: "",
+    },
+  },
+  2894: {
+    java: {
+      math: "",
+    },
+  },
+  2912: {
+    java: {
+      math: "",
+    },
+  },
+  2927: {
+    java: {
+      math: "",
+    },
+  },
+  2928: {
+    java: {
+      math: "",
+    },
+  },
+  2929: {
+    java: {
+      math: "",
+    },
+  },
+  2930: {
+    java: {
+      math: "",
+    },
+  },
+  2939: {
+    java: {
+      math: "",
+    },
+  },
+  2941: {
+    java: {
+      math: "",
+    },
+  },
+  2946: {
+    java: {
+      math: "",
+    },
+  },
+  2947: {
+    java: {
+      math: "",
+    },
+  },
+  2949: {
+    java: {
+      math: "",
+    },
+  },
+  2954: {
+    java: {
+      math: "",
+    },
+  },
+  2961: {
+    java: {
+      math: "",
+    },
+  },
+  2963: {
+    java: {
+      math: "",
+    },
+  },
+  2965: {
+    java: {
+      math: "",
     },
   },
   2967: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2968: {
+  2979: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2971: {
+  2999: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2973: {
+  3009: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2974: {
+  3012: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  2996: {
+  3014: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3010: {
+  3021: {
     java: {
-      sorting: "",
-    },
-  },
-  3011: {
-    java: {
-      sorting: "",
-    },
-  },
-  3016: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   3024: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
   3025: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
   3027: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3035: {
+  3032: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3039: {
+  3044: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3041: {
+  3047: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3068: {
+  3079: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3074: {
+  3084: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3075: {
+  3091: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3080: {
+  3099: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3081: {
+  3100: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3085: {
+  3101: {
     java: {
-      sorting: "",
-    },
-  },
-  3088: {
-    java: {
-      sorting: "",
-    },
-  },
-  3098: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
   3102: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3107: {
+  3115: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3111: {
+  3116: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3119: {
+  3128: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3125: {
+  3153: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3132: {
+  3154: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3143: {
+  3155: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3167: {
+  3178: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3169: {
+  3179: {
     java: {
-      sorting: "",
+      math: "",
     },
   },
-  3186: {
+  3190: {
     java: {
-      sorting: "",
-    },
-  },
-  3189: {
-    java: {
-      sorting: "",
-    },
-  },
-  3194: {
-    java: {
-      sorting: "",
-    },
-  },
-  3218: {
-    java: {
-      sorting: "",
-    },
-  },
-  3219: {
-    java: {
-      sorting: "",
+      math: "",
     },
   },
 };
