@@ -16,10 +16,10 @@ import {
   Tab,
   TabContainer,
   TitleContainer,
+  TabText,
 } from "../qsList/styles";
 import axios from "axios";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { TabText } from "../problem/styles";
 
 const RevisionSheet = () => {
   const [data, setData] = useState(null);
@@ -125,18 +125,36 @@ const RevisionSheet = () => {
               setSelected(0);
               // navigate("#problems");
             }}
-            inactive={selected === 1}
+            active={selected === 0}
           >
-            <TabText>Problems</TabText>
+            <TabText>DSA</TabText>
           </Tab>
           <Tab
             onClick={() => {
               setSelected(1);
               // navigate("#description");
             }}
-            inactive={selected === 0}
+            active={selected === 1}
           >
-            <TabText>Description</TabText>
+            <TabText>CP</TabText>
+          </Tab>
+          <Tab
+            onClick={() => {
+              setSelected(2);
+              // navigate("#description");
+            }}
+            active={selected === 2}
+          >
+            <TabText>Frontend System Design</TabText>
+          </Tab>
+          <Tab
+            onClick={() => {
+              setSelected(3);
+              // navigate("#description");
+            }}
+            active={selected === 3}
+          >
+            <TabText>Backend System Design</TabText>
           </Tab>
         </TabContainer>
       </Switch>

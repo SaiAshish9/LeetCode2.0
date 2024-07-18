@@ -306,7 +306,7 @@ const QSList = () => {
               setSelected(0);
               navigate("#problems");
             }}
-            inactive={selected === 1}
+            active={selected === 0}
           >
             <TabText>Problems</TabText>
           </Tab>
@@ -315,7 +315,7 @@ const QSList = () => {
               setSelected(1);
               navigate("#description");
             }}
-            inactive={selected === 0}
+            active={selected === 1}
           >
             <TabText>Description</TabText>
           </Tab>

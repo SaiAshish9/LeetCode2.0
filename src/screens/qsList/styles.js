@@ -52,15 +52,15 @@ export const TabContainer = styled.div`
 `;
 
 export const Tab = styled.div`
-  padding: 16px 0;
+  padding: 16px 3rem;
   background-color: #fff;
   border-radius: 4px 4px 0 0;
   text-align: center;
-  width: 160px;
+  width: fit-content;
   cursor: pointer;
 
-  ${({ inactive }) =>
-    inactive
+  ${({ active }) =>
+    !active
       ? css`
           color: #78909c;
           background-color: transparent;
