@@ -5114,7 +5114,7 @@ class UnionFind:
         a desired outcome. These problems can be diverse and may involve arrays,
         strings, matrices, or custom data structures.
       </p>
-
+      <br />
       <h2>Key Characteristics of Simulation Problems:</h2>
       <ul>
         <li>
