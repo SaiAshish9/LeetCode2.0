@@ -22,10 +22,15 @@ export const Switch = styled.div`
   background-color: #f5f5f5;
   padding-top: 20px;
   margin-bottom: 21px;
-  width: 100%;
+  overflow-x: scroll;
+  min-width: 100%;
   padding-left: 21vw;
+  white-space: nowrap;
   @media only screen and (max-width: ${BREAKPOINTS.x175}) {
     padding-left: 4.25%;
+  }
+  &::-webkit-scrollbar {
+    display: none;
   }
 `;
 

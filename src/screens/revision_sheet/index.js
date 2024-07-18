@@ -159,7 +159,7 @@ const RevisionSheet = () => {
         </TabContainer>
       </Switch>
       <Content>
-        {data && (
+        {data && selected === 0 && (
           <>
             {" "}
             <ContentText>
@@ -177,6 +177,7 @@ const RevisionSheet = () => {
         )}{" "}
         <Spacer />
         {data &&
+          selected === 0 &&
           Object.keys(data)
             .filter((x) => data[x].length > 0)
             .map((item, key) => (
