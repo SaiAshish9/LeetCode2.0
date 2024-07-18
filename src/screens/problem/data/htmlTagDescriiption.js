@@ -4965,7 +4965,7 @@ class UnionFind:
   Counting: (
     <>
       <p>
-        When it comes to "counting" in LeetCode, it generally refers to problems
+        Counting generally refers to problems
         where you need to count certain elements or occurrences, such as:
       </p>
 
