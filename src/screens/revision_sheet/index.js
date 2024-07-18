@@ -66,7 +66,7 @@ const RevisionSheet = () => {
         for (let key of Object.keys(temp)) {
           temp[key] = temp[key].sort((a, b) => a.qno - b.qno);
         }
-        setData(temp);
+        setData({ ...temp, Additional: [] });
       }
     } catch (e) {
       console.log(e);
@@ -179,19 +179,21 @@ const RevisionSheet = () => {
         {data &&
           selected === 0 &&
           Object.keys(data)
-            .filter((x) => data[x].length > 0)
+            .filter((x) => (x !== "Additional" ? data[x].length > 0 : true))
             .map((item, key) => (
               <ContentItem key={item}>
                 <ContentText>
                   {+key + 1}.&nbsp;
                   <p
                     onClick={() => {
-                      window.open(
-                        "/tag/" +
-                          item.toLowerCase().replace(" ", "_") +
-                          "#description",
-                        "_blank"
-                      );
+                      if (item !== "Additional") {
+                        window.open(
+                          "/tag/" +
+                            item.toLowerCase().replace(" ", "_") +
+                            "#description",
+                          "_blank"
+                        );
+                      }
                     }}
                   >
                     {item}
