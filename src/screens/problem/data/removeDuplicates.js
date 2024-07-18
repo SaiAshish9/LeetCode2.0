@@ -607,6 +607,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  133: {
+    java: {
+      graph: "",
+    },
+  },
   136: {
     java: {
       "bit-manipulation": "",
@@ -3459,6 +3464,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  841: {
+    java: {
+      graph: "",
+    },
+  },
   842: {
     java: {
       backtracking: "",
@@ -4067,6 +4077,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  997: {
+    java: {
+      graph: "",
+    },
+  },
   998: {
     java: {
       tree: "",
@@ -4229,6 +4244,11 @@ const obj1 = {
   1040: {
     java: {
       "two-pointers": "",
+    },
+  },
+  1042: {
+    java: {
+      graph: "",
     },
   },
   1043: {
@@ -4517,6 +4537,11 @@ const obj1 = {
   1128: {
     java: {
       counting: "",
+    },
+  },
+  1129: {
+    java: {
+      graph: "",
     },
   },
   1130: {
@@ -5050,6 +5075,11 @@ const obj1 = {
         "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {\n        int n = s.length();\n        int maxCount = 0;\n        Map<String, Integer> substringCount = new HashMap<>();\n        \n        for (int i = 0; i <= n - minSize; ++i) {\n            String sub = s.substring(i, i + minSize);\n            if (isValid(sub, maxLetters)) {\n                substringCount.put(sub, substringCount.getOrDefault(sub, 0) + 1);\n                maxCount = Math.max(maxCount, substringCount.get(sub));\n            }\n        }\n        \n        return maxCount;\n    }\n    \n    private boolean isValid(String sub, int maxLetters) {\n        int[] count = new int[26];\n        int uniqueLetters = 0;\n        for (char c : sub.toCharArray()) {\n            if (count[c - 'a'] == 0) {\n                uniqueLetters++;\n            }\n            count[c - 'a']++;\n        }\n        return uniqueLetters <= maxLetters;\n    }\n}\n",
     },
   },
+  1298: {
+    java: {
+      graph: "",
+    },
+  },
   1301: {
     java: {
       matrix: "",
@@ -5073,6 +5103,11 @@ const obj1 = {
   1310: {
     java: {
       "prefix-sum": "",
+    },
+  },
+  1311: {
+    java: {
+      graph: "",
     },
   },
   1312: {
@@ -5567,6 +5602,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  1466: {
+    java: {
+      graph: "",
+    },
+  },
   1467: {
     java: {
       "probability-and-statistics":
@@ -5854,6 +5894,11 @@ const obj1 = {
       "rolling-hash": "",
     },
   },
+  1557: {
+    java: {
+      graph: "",
+    },
+  },
   1558: {
     java: {
       "bit-manipulation": "",
@@ -6046,6 +6091,11 @@ const obj1 = {
   1614: {
     java: {
       stack: "",
+    },
+  },
+  1615: {
+    java: {
+      graph: "",
     },
   },
   1616: {
@@ -6528,6 +6578,11 @@ const obj1 = {
       stack: "",
     },
   },
+  1761: {
+    java: {
+      graph: "",
+    },
+  },
   1762: {
     java: {
       "monotonic-stack": "",
@@ -6617,6 +6672,11 @@ const obj1 = {
   1790: {
     java: {
       counting: "",
+    },
+  },
+  1791: {
+    java: {
+      graph: "",
     },
   },
   1792: {
@@ -7418,6 +7478,11 @@ const obj1 = {
       "game-theory": "",
     },
   },
+  2039: {
+    java: {
+      graph: "",
+    },
+  },
   2044: {
     java: {
       backtracking: "",
@@ -7527,6 +7592,11 @@ const obj1 = {
   2076: {
     java: {
       "union-find": "",
+    },
+  },
+  2077: {
+    java: {
+      graph: "",
     },
   },
   2081: {
@@ -8463,6 +8533,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  2359: {
+    java: {
+      graph: "",
+    },
+  },
   2360: {
     java: {
       "topological-sort": "",
@@ -8506,6 +8581,11 @@ const obj1 = {
   2373: {
     java: {
       matrix: "",
+    },
+  },
+  2374: {
+    java: {
+      graph: "",
     },
   },
   2375: {
@@ -9020,6 +9100,11 @@ const obj1 = {
       "number-theory": "",
     },
   },
+  2508: {
+    java: {
+      graph: "",
+    },
+  },
   2509: {
     java: {
       tree: "",
@@ -9387,6 +9472,11 @@ const obj1 = {
       "number-theory": "",
     },
   },
+  2608: {
+    java: {
+      graph: "",
+    },
+  },
   2611: {
     java: {
       "heap-(priority-queue)": "",
@@ -9531,6 +9621,11 @@ const obj1 = {
   2684: {
     java: {
       matrix: "",
+    },
+  },
+  2685: {
+    java: {
+      graph: "",
     },
   },
   2689: {
@@ -10146,6 +10241,11 @@ const obj1 = {
   2923: {
     java: {
       matrix: "",
+    },
+  },
+  2924: {
+    java: {
+      graph: "",
     },
   },
   2925: {
@@ -11120,719 +11220,609 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  133: {
+  146: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  207: {
+  155: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  210: {
+  170: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  261: {
+  173: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  269: {
+  208: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  277: {
+  211: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  310: {
+  225: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  323: {
+  232: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  329: {
+  244: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  332: {
+  251: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  399: {
+  271: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  444: {
+  281: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  499: {
+  284: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  505: {
+  288: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  547: {
+  295: {
     java: {
-      graph: "",
+      design: "",
+    },
+  },
+  297: {
+    java: {
+      design: "",
+    },
+  },
+  303: {
+    java: {
+      design: "",
+    },
+  },
+  304: {
+    java: {
+      design: "",
+    },
+  },
+  307: {
+    java: {
+      design: "",
+    },
+  },
+  308: {
+    java: {
+      design: "",
+    },
+  },
+  341: {
+    java: {
+      design: "",
+    },
+  },
+  346: {
+    java: {
+      design: "",
+    },
+  },
+  348: {
+    java: {
+      design: "",
+    },
+  },
+  352: {
+    java: {
+      design: "",
+    },
+  },
+  353: {
+    java: {
+      design: "",
+    },
+  },
+  355: {
+    java: {
+      design: "",
+    },
+  },
+  359: {
+    java: {
+      design: "",
+    },
+  },
+  362: {
+    java: {
+      design: "",
+    },
+  },
+  379: {
+    java: {
+      design: "",
+    },
+  },
+  380: {
+    java: {
+      design: "",
+    },
+  },
+  381: {
+    java: {
+      design: "",
+    },
+  },
+  431: {
+    java: {
+      design: "",
+    },
+  },
+  432: {
+    java: {
+      design: "",
+    },
+  },
+  449: {
+    java: {
+      design: "",
+    },
+  },
+  460: {
+    java: {
+      design: "",
+    },
+  },
+  535: {
+    java: {
+      design: "",
+    },
+  },
+  588: {
+    java: {
+      design: "",
+    },
+  },
+  604: {
+    java: {
+      design: "",
+    },
+  },
+  622: {
+    java: {
+      design: "",
     },
   },
   631: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  684: {
+  635: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  685: {
+  641: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  743: {
+  642: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  753: {
+  676: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  765: {
+  677: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  785: {
+  703: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  787: {
+  705: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  797: {
+  706: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  802: {
+  707: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  834: {
+  715: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  841: {
+  716: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  847: {
+  729: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  851: {
+  731: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  882: {
+  732: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  886: {
+  745: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  913: {
+  855: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  924: {
+  895: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  928: {
+  900: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  947: {
+  901: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  990: {
+  911: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  997: {
+  919: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1042: {
+  933: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1059: {
+  981: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1129: {
+  1032: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1135: {
+  1146: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1136: {
+  1157: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1168: {
+  1166: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1192: {
+  1172: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1203: {
+  1206: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1245: {
+  1244: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1298: {
+  1261: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1311: {
+  1286: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1319: {
+  1348: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1334: {
+  1352: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1361: {
+  1357: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1368: {
+  1381: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1377: {
+  1396: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1462: {
+  1429: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1466: {
+  1472: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1489: {
+  1476: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1494: {
+  1483: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1514: {
+  1500: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1548: {
+  1570: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1557: {
+  1586: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1579: {
+  1600: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1584: {
+  1603: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1591: {
+  1622: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1615: {
+  1628: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1632: {
+  1656: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1697: {
+  1670: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1719: {
+  1756: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1724: {
+  1797: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1728: {
+  1804: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1761: {
+  1825: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1778: {
+  1845: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1782: {
+  1865: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1786: {
+  1912: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1791: {
+  1993: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1810: {
+  2013: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1857: {
+  2034: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1916: {
+  2043: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1928: {
+  2069: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1971: {
+  2080: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  1976: {
+  2102: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2039: {
+  2166: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2045: {
+  2227: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2050: {
+  2241: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2065: {
+  2254: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2076: {
+  2276: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2077: {
+  2286: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2092: {
+  2296: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2093: {
+  2336: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2097: {
+  2349: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2101: {
+  2353: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2115: {
+  2408: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2123: {
+  2424: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2127: {
+  2502: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2192: {
+  2526: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2203: {
+  2590: {
     java: {
-      graph: "",
-    },
-  },
-  2204: {
-    java: {
-      graph: "",
-    },
-  },
-  2242: {
-    java: {
-      graph: "",
-    },
-  },
-  2246: {
-    java: {
-      graph: "",
-    },
-  },
-  2247: {
-    java: {
-      graph: "",
-    },
-  },
-  2285: {
-    java: {
-      graph: "",
-    },
-  },
-  2290: {
-    java: {
-      graph: "",
-    },
-  },
-  2297: {
-    java: {
-      graph: "",
-    },
-  },
-  2307: {
-    java: {
-      graph: "",
-    },
-  },
-  2316: {
-    java: {
-      graph: "",
-    },
-  },
-  2328: {
-    java: {
-      graph: "",
-    },
-  },
-  2359: {
-    java: {
-      graph: "",
-    },
-  },
-  2360: {
-    java: {
-      graph: "",
-    },
-  },
-  2368: {
-    java: {
-      graph: "",
-    },
-  },
-  2371: {
-    java: {
-      graph: "",
-    },
-  },
-  2374: {
-    java: {
-      graph: "",
-    },
-  },
-  2392: {
-    java: {
-      graph: "",
-    },
-  },
-  2421: {
-    java: {
-      graph: "",
-    },
-  },
-  2467: {
-    java: {
-      graph: "",
-    },
-  },
-  2473: {
-    java: {
-      graph: "",
-    },
-  },
-  2477: {
-    java: {
-      graph: "",
-    },
-  },
-  2479: {
-    java: {
-      graph: "",
-    },
-  },
-  2492: {
-    java: {
-      graph: "",
-    },
-  },
-  2493: {
-    java: {
-      graph: "",
-    },
-  },
-  2497: {
-    java: {
-      graph: "",
-    },
-  },
-  2508: {
-    java: {
-      graph: "",
-    },
-  },
-  2577: {
-    java: {
-      graph: "",
-    },
-  },
-  2603: {
-    java: {
-      graph: "",
-    },
-  },
-  2608: {
-    java: {
-      graph: "",
+      design: "",
     },
   },
   2642: {
     java: {
-      graph: "",
+      design: "",
     },
   },
-  2646: {
+  2671: {
     java: {
-      graph: "",
-    },
-  },
-  2662: {
-    java: {
-      graph: "",
-    },
-  },
-  2685: {
-    java: {
-      graph: "",
-    },
-  },
-  2699: {
-    java: {
-      graph: "",
-    },
-  },
-  2714: {
-    java: {
-      graph: "",
-    },
-  },
-  2737: {
-    java: {
-      graph: "",
-    },
-  },
-  2846: {
-    java: {
-      graph: "",
-    },
-  },
-  2858: {
-    java: {
-      graph: "",
-    },
-  },
-  2876: {
-    java: {
-      graph: "",
-    },
-  },
-  2924: {
-    java: {
-      graph: "",
-    },
-  },
-  2959: {
-    java: {
-      graph: "",
-    },
-  },
-  2976: {
-    java: {
-      graph: "",
-    },
-  },
-  2977: {
-    java: {
-      graph: "",
-    },
-  },
-  3015: {
-    java: {
-      graph: "",
-    },
-  },
-  3017: {
-    java: {
-      graph: "",
-    },
-  },
-  3108: {
-    java: {
-      graph: "",
-    },
-  },
-  3112: {
-    java: {
-      graph: "",
-    },
-  },
-  3123: {
-    java: {
-      graph: "",
-    },
-  },
-  3203: {
-    java: {
-      graph: "",
+      design: "",
     },
   },
 };
