@@ -270,6 +270,8 @@ const QSList = () => {
 
   const navigate = useNavigate();
 
+  // console.log(tableData?.map(x => +x.qno))
+
   return (
     <Container>
       <Helmet>

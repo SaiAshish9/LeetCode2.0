@@ -43,6 +43,16 @@ const obj1 = {
         'class Solution {\n\n    public String longestPalindrome(String s) {\n        if (s == null || s.length() == 0) {\n            return "";\n        }\n        int n = s.length();\n        int start = 0;\n        int maxLen = 1; \n        for (int i = 0; i < n; i++) {\n            int len1 = expandAroundCenter(s, i, i); // odd-length palindromes           \n            int len2 = expandAroundCenter(s, i, i + 1); // even-length palindromes\n            int maxLenCurr = Math.max(len1, len2);\n            if (maxLenCurr > maxLen) {\n                maxLen = maxLenCurr;\n                start = i - (maxLen - 1) / 2;\n            }\n        }\n        \n        return s.substring(start, start + maxLen);\n    }\n    \n    private int expandAroundCenter(String s, int left, int right) {\n        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {\n            left--;\n            right++;\n        }\n        return right - left - 1;\n    }\n}\n',
     },
   },
+  7: {
+    java: {
+      math: "",
+    },
+  },
+  9: {
+    java: {
+      math: "",
+    },
+  },
   10: {
     java: {
       "dynamic-programming": "",
@@ -52,6 +62,16 @@ const obj1 = {
     java: {
       "two-pointers":
         "public class Solution {\n    public int maxArea(int[] height) {\n        int max = 0;\n        int left = 0;\n        int right = height.length - 1;\n\n        while (left < right) {\n            int currentArea = Math.min(height[left], height[right]) * (right - left);\n            max = Math.max(max, currentArea);\n\n            if (height[left] < height[right]) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n\n        return max;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] heights = {1, 2, 1};\n        System.out.println(solution.maxArea(heights)); // Output: 2\n    }\n}\n",
+    },
+  },
+  12: {
+    java: {
+      math: "",
+    },
+  },
+  13: {
+    java: {
+      math: "",
     },
   },
   14: {
@@ -191,6 +211,11 @@ const obj1 = {
         "class Solution {\n    public int trap(int[] height) {\n        if (height == null || height.length == 0) return 0;\n\n        int left = 0, right = height.length - 1;\n        int left_max = 0, right_max = 0;\n        int waterTrapped = 0;\n\n        while (left < right) {\n            if (height[left] < height[right]) {\n                if (height[left] >= left_max) {\n                    left_max = height[left];\n                } else {\n                    waterTrapped += left_max - height[left];\n                }\n                left++;\n            } else {\n                if (height[right] >= right_max) {\n                    right_max = height[right];\n                } else {\n                    waterTrapped += right_max - height[right];\n                }\n                right--;\n            }\n        }\n\n        return waterTrapped;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};\n        System.out.println(sol.trap(height)); // Output: 6\n    }\n}\n",
     },
   },
+  43: {
+    java: {
+      math: "",
+    },
+  },
   44: {
     java: {
       "dynamic-programming": "",
@@ -292,9 +317,19 @@ const obj1 = {
       matrix: "",
     },
   },
+  66: {
+    java: {
+      math: "",
+    },
+  },
   67: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  69: {
+    java: {
+      math: "",
     },
   },
   70: {
@@ -776,10 +811,20 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  166: {
+    java: {
+      math: "",
+    },
+  },
   167: {
     java: {
       "two-pointers":
         "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        int left = 0;\n        int right = numbers.length - 1;\n\n        while (left < right) {\n            int sum = numbers[left] + numbers[right];\n            if (sum == target) {\n                return new int[] { left + 1, right + 1 };\n            } else if (sum < target) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n        \n        return new int[] {};\n    }\n}",
+    },
+  },
+  168: {
+    java: {
+      math: "",
     },
   },
   169: {
@@ -792,6 +837,16 @@ const obj1 = {
   170: {
     java: {
       "two-pointers": "",
+    },
+  },
+  171: {
+    java: {
+      math: "",
+    },
+  },
+  172: {
+    java: {
+      math: "",
     },
   },
   173: {
@@ -1242,6 +1297,11 @@ const obj1 = {
   262: {
     java: {
       database: "",
+    },
+  },
+  263: {
+    java: {
+      math: "",
     },
   },
   264: {
@@ -1719,6 +1779,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  356: {
+    java: {
+      math: "",
+    },
+  },
   357: {
     java: {
       "dynamic-programming": "",
@@ -1768,6 +1833,11 @@ const obj1 = {
   366: {
     java: {
       tree: "",
+    },
+  },
+  367: {
+    java: {
+      math: "",
     },
   },
   368: {
@@ -1940,6 +2010,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  400: {
+    java: {
+      math: "",
+    },
+  },
   401: {
     java: {
       backtracking: "",
@@ -1996,6 +2071,11 @@ const obj1 = {
       backtracking: "",
     },
   },
+  412: {
+    java: {
+      math: "",
+    },
+  },
   413: {
     java: {
       "dynamic-programming": "",
@@ -2004,6 +2084,11 @@ const obj1 = {
   414: {
     java: {
       sorting: "",
+    },
+  },
+  415: {
+    java: {
+      math: "",
     },
   },
   416: {
@@ -2039,6 +2124,11 @@ const obj1 = {
   422: {
     java: {
       matrix: "",
+    },
+  },
+  423: {
+    java: {
+      math: "",
     },
   },
   424: {
@@ -2128,6 +2218,11 @@ const obj1 = {
       trie: "",
     },
   },
+  441: {
+    java: {
+      math: "",
+    },
+  },
   443: {
     java: {
       "two-pointers": "",
@@ -2147,6 +2242,11 @@ const obj1 = {
   446: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  447: {
+    java: {
+      math: "",
     },
   },
   449: {
@@ -2170,6 +2270,11 @@ const obj1 = {
   452: {
     java: {
       greedy: "",
+    },
+  },
+  453: {
+    java: {
+      math: "",
     },
   },
   455: {
@@ -2308,6 +2413,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  483: {
+    java: {
+      math: "",
+    },
+  },
   484: {
     java: {
       stack: "",
@@ -2348,6 +2458,11 @@ const obj1 = {
   491: {
     java: {
       backtracking: "",
+    },
+  },
+  492: {
+    java: {
+      math: "",
     },
   },
   493: {
@@ -2401,6 +2516,11 @@ const obj1 = {
         "class Solution {\n    public int[] nextGreaterElements(int[] nums) {\n        int n = nums.length;\n        int[] result = new int[n];\n        Stack<Integer> stack = new Stack<>();\n\n        for (int i = 2 * n - 1; i >= 0; i--) {\n            while (!stack.isEmpty() && stack.peek() <= nums[i % n]) {\n                stack.pop();\n            }\n            result[i % n] = stack.isEmpty() ? -1 : stack.peek();\n            stack.push(nums[i % n]);\n        }\n\n        return result;\n    }\n}\n",
     },
   },
+  504: {
+    java: {
+      math: "",
+    },
+  },
   505: {
     java: {
       matrix:
@@ -2410,6 +2530,11 @@ const obj1 = {
   506: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  507: {
+    java: {
+      math: "",
     },
   },
   508: {
@@ -2552,6 +2677,11 @@ const obj1 = {
       stack: "",
     },
   },
+  537: {
+    java: {
+      math: "",
+    },
+  },
   538: {
     java: {
       "binary-search-tree": "",
@@ -2669,6 +2799,11 @@ const obj1 = {
       tree: "",
     },
   },
+  564: {
+    java: {
+      math: "",
+    },
+  },
   565: {
     java: {
       "depth-first-search": "",
@@ -2709,6 +2844,11 @@ const obj1 = {
   572: {
     java: {
       "hash-function": "",
+    },
+  },
+  573: {
+    java: {
+      math: "",
     },
   },
   574: {
@@ -2799,6 +2939,11 @@ const obj1 = {
       stack: "",
     },
   },
+  592: {
+    java: {
+      math: "",
+    },
+  },
   593: {
     java: {
       geometry: "",
@@ -2823,6 +2968,11 @@ const obj1 = {
   597: {
     java: {
       database: "",
+    },
+  },
+  598: {
+    java: {
+      math: "",
     },
   },
   600: {
@@ -3024,6 +3174,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  640: {
+    java: {
+      math: "",
+    },
+  },
   641: {
     java: {
       queue: "",
@@ -3117,6 +3272,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  660: {
+    java: {
+      math: "",
+    },
+  },
   661: {
     java: {
       matrix: "",
@@ -3140,6 +3300,16 @@ const obj1 = {
   666: {
     java: {
       tree: "",
+    },
+  },
+  667: {
+    java: {
+      math: "",
+    },
+  },
+  668: {
+    java: {
+      math: "",
     },
   },
   669: {
@@ -3420,6 +3590,11 @@ const obj1 = {
         'class Solution {\n  public String minWindow(String s1, String s2) {\n  int m = s2.length();\n  int n = s1.length();\n    int[][] dp = new int[m + 1][n + 1];\n\n    for (int j = 0; j <= n; ++j)\n      dp[0][j] = j + 1;\n\n    for (int i = 1; i <= m; ++i)\n      for (int j = 1; j <= n; ++j)\n        if (s2.charAt(i - 1) == s1.charAt(j - 1))\n          dp[i][j] = dp[i - 1][j - 1];\n        else\n          dp[i][j] = dp[i][j - 1];\n\n    int bestLeft = 0;\n    int minLength = Integer.MAX_VALUE;\n\n    for (int j = 1; j <= n; ++j)\n      if (dp[m][j] > 0 && j - dp[m][j] + 1 < minLength) {\n        bestLeft = dp[m][j] - 1;\n        minLength = j - dp[m][j] + 1;\n      }\n\n    return minLength == Integer.MAX_VALUE ? "" : s1.substring(bestLeft, bestLeft + minLength);\n  }\n}',
     },
   },
+  728: {
+    java: {
+      math: "",
+    },
+  },
   729: {
     java: {
       "ordered-set": "",
@@ -3532,6 +3707,11 @@ const obj1 = {
         "class Solution {\n\n    public String crackSafe(int n, int k) {\n        if (n == 1) {\n            StringBuilder sb = new StringBuilder();\n            for (int i = 0; i < k; i++) {\n                sb.append(i);\n            }\n            return sb.toString();\n        }\n\n        StringBuilder result = new StringBuilder();\n        Set<String> visited = new HashSet<>();\n        Stack<String> stack = new Stack<>();\n        String start = String.join('', Collections.nCopies(n - 1, '0'));\n        stack.push(start);\n\n        while (!stack.isEmpty()) {\n            String node = stack.peek();\n            boolean hasUnvisitedEdge = false;\n\n            // Try all possible edges from this node by appending each digit from 0 to k-1\n            for (int i = 0; i < k; i++) {\n                String next = node + i;\n                if (!visited.contains(next)) {\n                    visited.add(next);\n                    stack.push(next.substring(1));\n                    hasUnvisitedEdge = true;\n                    break;\n                }\n            }\n\n            // If all edges from this node are visited, backtrack and append the last\n            // character to the result\n            if (!hasUnvisitedEdge) {\n                result.append(stack.pop().charAt(node.length() - 1));\n            }\n        }\n\n        result.append(start.substring(0, start.length() - 1));\n        return result.toString();\n    }\n\n    // public String crackSafe(int n, int k) {\n    // StringBuilder result = new StringBuilder();\n    // Set<String> visited = new HashSet<>();\n    // String start = String.join('', Collections.nCopies(n - 1, '0'));\n    // dfs(start, k, visited, result, n);\n    // result.append(start);\n    // return result.toString();\n    // }\n    // private void dfs(String node, int k, Set<String> visited, StringBuilder\n    // result, int n) {\n    // for (int i = 0; i < k; i++) {\n    // String next = node + i;\n    // if (!visited.contains(next)) {\n    // visited.add(next);\n    // dfs(next.substring(1), k, visited, result, n);\n    // result.append(i);\n    // }\n    // }\n    // }\n\n}",
     },
   },
+  754: {
+    java: {
+      math: "",
+    },
+  },
   756: {
     java: {
       "bit-manipulation": "",
@@ -3614,6 +3794,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  775: {
+    java: {
+      math: "",
+    },
+  },
   776: {
     java: {
       "binary-search-tree":
@@ -3633,6 +3818,11 @@ const obj1 = {
   779: {
     java: {
       recursion: "",
+    },
+  },
+  780: {
+    java: {
+      math: "",
     },
   },
   781: {
@@ -3677,6 +3867,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  789: {
+    java: {
+      math: "",
+    },
+  },
   790: {
     java: {
       "dynamic-programming": "",
@@ -3690,6 +3885,11 @@ const obj1 = {
   792: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  793: {
+    java: {
+      math: "",
     },
   },
   794: {
@@ -4061,6 +4261,11 @@ const obj1 = {
       "game-theory": "",
     },
   },
+  878: {
+    java: {
+      math: "",
+    },
+  },
   879: {
     java: {
       "dynamic-programming": "",
@@ -4197,6 +4402,11 @@ const obj1 = {
         "import java.util.Stack;\n\npublic class Solution {\n    public int sumSubarrayMins(int[] arr) {\n        int MOD = 1_000_000_007;\n        int n = arr.length;\n        \n        Stack<Integer> stack = new Stack<>();        \n        int[] prevLess = new int[n];\n        int[] nextLess = new int[n];\n        \n        for (int i = 0; i < n; i++) {\n            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {\n                stack.pop();\n            }\n            prevLess[i] = stack.isEmpty() ? -1 : stack.peek();\n            stack.push(i);\n        }\n        \n        stack.clear();\n        \n        for (int i = n - 1; i >= 0; i--) {\n            while (!stack.isEmpty() && arr[stack.peek()] > arr[i]) {\n                stack.pop();\n            }\n            nextLess[i] = stack.isEmpty() ? n : stack.peek();\n            stack.push(i);\n        }\n        \n        long result = 0;\n        \n        for (int i = 0; i < n; i++) {\n            int leftCount = i - prevLess[i];\n            int rightCount = nextLess[i] - i;\n            result = (result + (long) arr[i] * leftCount * rightCount) % MOD;\n        }\n        \n        return (int) result;\n    }\n}\n",
     },
   },
+  908: {
+    java: {
+      math: "",
+    },
+  },
   909: {
     java: {
       matrix: "",
@@ -4282,6 +4492,11 @@ const obj1 = {
   926: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  927: {
+    java: {
+      math: "",
     },
   },
   928: {
@@ -4475,6 +4690,11 @@ const obj1 = {
       tree: "",
     },
   },
+  972: {
+    java: {
+      math: "",
+    },
+  },
   973: {
     java: {
       quickselect:
@@ -4553,6 +4773,11 @@ const obj1 = {
   988: {
     java: {
       tree: "",
+    },
+  },
+  989: {
+    java: {
+      math: "",
     },
   },
   990: {
@@ -4667,6 +4892,16 @@ const obj1 = {
   1014: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  1015: {
+    java: {
+      math: "",
+    },
+  },
+  1017: {
+    java: {
+      math: "",
     },
   },
   1018: {
@@ -4786,6 +5021,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  1041: {
+    java: {
+      math: "",
+    },
+  },
   1042: {
     java: {
       graph: "",
@@ -4861,6 +5101,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  1056: {
+    java: {
+      math: "",
+    },
+  },
   1057: {
     java: {
       greedy: "",
@@ -4925,9 +5170,19 @@ const obj1 = {
       database: "",
     },
   },
+  1071: {
+    java: {
+      math: "",
+    },
+  },
   1072: {
     java: {
       matrix: "",
+    },
+  },
+  1073: {
+    java: {
+      math: "",
     },
   },
   1074: {
@@ -4978,6 +5233,11 @@ const obj1 = {
   1084: {
     java: {
       database: "",
+    },
+  },
+  1085: {
+    java: {
+      math: "",
     },
   },
   1086: {
@@ -5069,6 +5329,11 @@ const obj1 = {
       "union-find": "",
     },
   },
+  1103: {
+    java: {
+      math: "",
+    },
+  },
   1104: {
     java: {
       tree: "",
@@ -5138,6 +5403,11 @@ const obj1 = {
         "import java.util.concurrent.Semaphore;\n\nclass H2O {\n    private Semaphore hydrogenSemaphore;\n    private Semaphore oxygenSemaphore;\n    private int hydrogenCount;\n\n    public H2O() {\n        hydrogenSemaphore = new Semaphore(2); // Allow up to 2 hydrogen atoms\n        oxygenSemaphore = new Semaphore(1); // Allow up to 1 oxygen atom\n        hydrogenCount = 0;\n    }\n\n    public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {\n        hydrogenSemaphore.acquire();\n        synchronized (this) {\n            hydrogenCount++;\n            releaseHydrogen.run();\n            if (hydrogenCount == 2) {\n                oxygenSemaphore.release();            }\n        }\n    }\n\n    public void oxygen(Runnable releaseOxygen) throws InterruptedException {\n        oxygenSemaphore.acquire();\n        synchronized (this) {\n            releaseOxygen.run();\n            hydrogenCount = 0;\n            hydrogenSemaphore.release(2);\n        }\n    }\n}\n",
     },
   },
+  1118: {
+    java: {
+      math: "",
+    },
+  },
   1120: {
     java: {
       tree: "",
@@ -5195,6 +5465,11 @@ const obj1 = {
         "class Solution {\n  public int mctFromLeafValues(int[] arr) {\n    int ans = 0;\n    Deque<Integer> stack = new ArrayDeque<>();\n    stack.push(Integer.MAX_VALUE);\n\n    for (int a : arr) {\n      while (stack.peek() <= a) {\n        int mid = stack.pop();\n        ans += Math.min(stack.peek(), a) * mid;\n      }\n      stack.push(a);\n    }\n\n    while (stack.size() > 2)\n      ans += stack.pop() * stack.peek();\n\n    return ans;\n  }\n}",
     },
   },
+  1131: {
+    java: {
+      math: "",
+    },
+  },
   1132: {
     java: {
       database: "",
@@ -5203,6 +5478,11 @@ const obj1 = {
   1133: {
     java: {
       sorting: "",
+    },
+  },
+  1134: {
+    java: {
+      math: "",
     },
   },
   1135: {
@@ -5286,6 +5566,11 @@ const obj1 = {
   1152: {
     java: {
       sorting: "",
+    },
+  },
+  1154: {
+    java: {
+      math: "",
     },
   },
   1155: {
@@ -5379,6 +5664,11 @@ const obj1 = {
       database: "",
     },
   },
+  1175: {
+    java: {
+      math: "",
+    },
+  },
   1176: {
     java: {
       "sliding-window":
@@ -5400,6 +5690,11 @@ const obj1 = {
       database: "",
     },
   },
+  1180: {
+    java: {
+      math: "",
+    },
+  },
   1181: {
     java: {
       sorting: "",
@@ -5413,6 +5708,11 @@ const obj1 = {
   1183: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  1185: {
+    java: {
+      math: "",
     },
   },
   1186: {
@@ -5627,6 +5927,11 @@ const obj1 = {
         "class Solution {\n  public double nthPersonGetsNthSeat(int n) {\n    return n == 1 ? 1 : 0.5;\n  }\n}",
     },
   },
+  1228: {
+    java: {
+      math: "",
+    },
+  },
   1229: {
     java: {
       "two-pointers": "",
@@ -5737,6 +6042,11 @@ const obj1 = {
       database: "",
     },
   },
+  1252: {
+    java: {
+      math: "",
+    },
+  },
   1253: {
     java: {
       matrix: "",
@@ -5827,6 +6137,11 @@ const obj1 = {
       database: "",
     },
   },
+  1271: {
+    java: {
+      math: "",
+    },
+  },
   1273: {
     java: {
       tree: "",
@@ -5840,6 +6155,11 @@ const obj1 = {
   1275: {
     java: {
       matrix: "",
+    },
+  },
+  1276: {
+    java: {
+      math: "",
     },
   },
   1277: {
@@ -5861,6 +6181,11 @@ const obj1 = {
   1280: {
     java: {
       database: "",
+    },
+  },
+  1281: {
+    java: {
+      math: "",
     },
   },
   1284: {
@@ -5950,6 +6275,11 @@ const obj1 = {
       database: "",
     },
   },
+  1304: {
+    java: {
+      math: "",
+    },
+  },
   1305: {
     java: {
       "binary-search-tree": "",
@@ -5998,6 +6328,11 @@ const obj1 = {
   1316: {
     java: {
       "rolling-hash": "",
+    },
+  },
+  1317: {
+    java: {
+      math: "",
     },
   },
   1318: {
@@ -6127,6 +6462,11 @@ const obj1 = {
         "class Solution {\n    public int numOfSubarrays(int[] arr, int k, int threshold) {\n        int count = 0;\n        int windowSum = 0;\n        int n = arr.length;\n        int targetSum = k * threshold;\n\n        for (int i = 0; i < k; i++) {\n            windowSum += arr[i];\n        }\n\n        if (windowSum >= targetSum) {\n            count++;\n        }\n\n        for (int i = k; i < n; i++) {\n            windowSum += arr[i] - arr[i - k];\n            if (windowSum >= targetSum) {\n                count++;\n            }\n        }\n\n        return count;\n    }\n}\n",
     },
   },
+  1344: {
+    java: {
+      math: "",
+    },
+  },
   1345: {
     java: {
       "breadth-first-search": "",
@@ -6204,9 +6544,19 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  1360: {
+    java: {
+      math: "",
+    },
+  },
   1361: {
     java: {
       "union-find": "",
+    },
+  },
+  1362: {
+    java: {
+      math: "",
     },
   },
   1363: {
@@ -6331,6 +6681,11 @@ const obj1 = {
       "heap-(priority-queue)": "",
     },
   },
+  1390: {
+    java: {
+      math: "",
+    },
+  },
   1391: {
     java: {
       "union-find": "",
@@ -6369,6 +6724,11 @@ const obj1 = {
   1398: {
     java: {
       database: "",
+    },
+  },
+  1399: {
+    java: {
+      math: "",
     },
   },
   1400: {
@@ -6486,6 +6846,11 @@ const obj1 = {
     java: {
       "monotonic-queue":
         "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n    public int constrainedSubsetSum(int[] nums, int k) {\n        int n = nums.length;\n        int[] dp = new int[n];\n        Deque<Integer> deque = new LinkedList<>();\n        int maxSum = nums[0];\n\n        for (int i = 0; i < n; i++) {\n            dp[i] = nums[i];\n            if (!deque.isEmpty()) {\n                dp[i] = Math.max(dp[i], nums[i] + dp[deque.peekFirst()]);\n            }\n            maxSum = Math.max(maxSum, dp[i]);\n\n            while (!deque.isEmpty() && dp[i] >= dp[deque.peekLast()]) {\n                deque.pollLast();\n            }\n\n            deque.addLast(i);\n            \n            if (i - deque.peekFirst() >= k) {\n                deque.pollFirst();\n            }\n        }\n\n        return maxSum;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {10, 2, -10, 5, 20};\n        int k = 2;\n        System.out.println(solution.constrainedSubsetSum(nums, k));  // Output: 37\n    }\n}\n",
+    },
+  },
+  1427: {
+    java: {
+      math: "",
     },
   },
   1428: {
@@ -6868,6 +7233,11 @@ const obj1 = {
       counting: "",
     },
   },
+  1513: {
+    java: {
+      math: "",
+    },
+  },
   1514: {
     java: {
       "heap-(priority-queue)": "",
@@ -6889,6 +7259,11 @@ const obj1 = {
       database: "",
     },
   },
+  1518: {
+    java: {
+      math: "",
+    },
+  },
   1519: {
     java: {
       tree: "",
@@ -6907,6 +7282,11 @@ const obj1 = {
   1522: {
     java: {
       tree: "",
+    },
+  },
+  1523: {
+    java: {
+      math: "",
     },
   },
   1524: {
@@ -7019,6 +7399,11 @@ const obj1 = {
       database: "",
     },
   },
+  1551: {
+    java: {
+      math: "",
+    },
+  },
   1552: {
     java: {
       sorting: "",
@@ -7108,6 +7493,11 @@ const obj1 = {
   1572: {
     java: {
       matrix: "",
+    },
+  },
+  1573: {
+    java: {
+      math: "",
     },
   },
   1574: {
@@ -7637,6 +8027,11 @@ const obj1 = {
         "class Solution {\n    public int boxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {\n        int length = boxes.length;\n        int[] ports = new int[length + 1];\n        int[] weights = new int[length + 1];\n        int[] differences = new int[length + 1];\n        long[] prefixWeights = new long[length + 1];\n        for (int i = 1; i <= length; i++) {\n            ports[i] = boxes[i - 1][0];\n            weights[i] = boxes[i - 1][1];\n            if (i > 1)\n                differences[i] = differences[i - 1] + (ports[i - 1] != ports[i] ? 1 : 0);\n            prefixWeights[i] = prefixWeights[i - 1] + weights[i];\n        }\n        Deque<Integer> deque = new LinkedList<Integer>();\n        deque.offerLast(0);\n        int[] dp = new int[length + 1];\n        int[] remain = new int[length + 1];\n        for (int i = 1; i <= length; i++) {\n            while (!deque.isEmpty() && (i - deque.peekFirst() > maxBoxes || prefixWeights[i] - prefixWeights[deque.peekFirst()] > maxWeight))\n                deque.pollFirst();\n            dp[i] = remain[deque.peekFirst()] + differences[i] + 2;\n            if (i != length) {\n                remain[i] = dp[i] - differences[i + 1];\n                while (!deque.isEmpty() && remain[i] <= remain[deque.peekLast()])\n                    deque.pollLast();\n                deque.offerLast(i);\n            }\n        }\n        return dp[length];\n    }\n}",
     },
   },
+  1688: {
+    java: {
+      math: "",
+    },
+  },
   1689: {
     java: {
       greedy: "",
@@ -7760,6 +8155,11 @@ const obj1 = {
   1715: {
     java: {
       database: "",
+    },
+  },
+  1716: {
+    java: {
+      math: "",
     },
   },
   1717: {
@@ -7953,6 +8353,11 @@ const obj1 = {
       database: "",
     },
   },
+  1759: {
+    java: {
+      math: "",
+    },
+  },
   1761: {
     java: {
       graph: "",
@@ -8032,6 +8437,11 @@ const obj1 = {
   1778: {
     java: {
       interactive: "",
+    },
+  },
+  1780: {
+    java: {
+      math: "",
     },
   },
   1781: {
@@ -8140,6 +8550,11 @@ const obj1 = {
       trie: "",
     },
   },
+  1806: {
+    java: {
+      math: "",
+    },
+  },
   1808: {
     java: {
       recursion: "",
@@ -8158,6 +8573,11 @@ const obj1 = {
   1811: {
     java: {
       database: "",
+    },
+  },
+  1812: {
+    java: {
+      math: "",
     },
   },
   1813: {
@@ -8193,6 +8613,11 @@ const obj1 = {
   1821: {
     java: {
       database: "",
+    },
+  },
+  1822: {
+    java: {
+      math: "",
     },
   },
   1823: {
@@ -8259,6 +8684,11 @@ const obj1 = {
   1836: {
     java: {
       "linked-list": "",
+    },
+  },
+  1837: {
+    java: {
+      math: "",
     },
   },
   1838: {
@@ -8364,6 +8794,11 @@ const obj1 = {
   1859: {
     java: {
       sorting: "",
+    },
+  },
+  1860: {
+    java: {
+      math: "",
     },
   },
   1861: {
@@ -8564,6 +8999,11 @@ const obj1 = {
   1903: {
     java: {
       greedy: "",
+    },
+  },
+  1904: {
+    java: {
+      math: "",
     },
   },
   1905: {
@@ -8773,6 +9213,11 @@ const obj1 = {
   1953: {
     java: {
       greedy: "",
+    },
+  },
+  1954: {
+    java: {
+      math: "",
     },
   },
   1955: {
@@ -9110,6 +9555,11 @@ const obj1 = {
   2027: {
     java: {
       greedy: "",
+    },
+  },
+  2028: {
+    java: {
+      math: "",
     },
   },
   2029: {
@@ -9499,9 +9949,19 @@ const obj1 = {
       stack: "",
     },
   },
+  2117: {
+    java: {
+      math: "",
+    },
+  },
   2118: {
     java: {
       database: "",
+    },
+  },
+  2119: {
+    java: {
+      math: "",
     },
   },
   2121: {
@@ -9721,6 +10181,11 @@ const obj1 = {
       "rolling-hash": "",
     },
   },
+  2169: {
+    java: {
+      math: "",
+    },
+  },
   2170: {
     java: {
       counting: "",
@@ -9751,6 +10216,11 @@ const obj1 = {
       database: "",
     },
   },
+  2177: {
+    java: {
+      math: "",
+    },
+  },
   2178: {
     java: {
       backtracking: "",
@@ -9760,6 +10230,11 @@ const obj1 = {
     java: {
       "merge-sort":
         "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public long goodTriplets(int[] nums1, int[] nums2) {\n  int n = nums1.length;\n    long ans = 0;\n    Map<Integer, Integer> numToIndex = new HashMap<>();\n    int[] nums = new int[n];\n    int[] leftSmaller = new int[n];\n    int[] rightLarger = new int[n];\n    FenwickTree tree1 = new FenwickTree(n);\n    FenwickTree tree2 = new FenwickTree(n);\n\n    for (int i = 0; i < n; ++i)\n      numToIndex.put(nums1[i], i);\n    for (int i = 0; i < n; ++i)\n      nums[i] = numToIndex.get(nums2[i]);\n\n    for (int i = 0; i < n; ++i) {\n      leftSmaller[i] = tree1.get(nums[i]);\n      tree1.add(nums[i] + 1, 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      rightLarger[i] = tree2.get(n) - tree2.get(nums[i]);\n      tree2.add(nums[i] + 1, 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      ans += (long) leftSmaller[i] * rightLarger[i];\n\n    return ans;\n  }\n}",
+    },
+  },
+  2180: {
+    java: {
+      math: "",
     },
   },
   2181: {
@@ -9837,6 +10312,11 @@ const obj1 = {
       stack: "",
     },
   },
+  2198: {
+    java: {
+      math: "",
+    },
+  },
   2199: {
     java: {
       database: "",
@@ -9910,6 +10390,11 @@ const obj1 = {
   2216: {
     java: {
       stack: "",
+    },
+  },
+  2217: {
+    java: {
+      math: "",
     },
   },
   2218: {
@@ -9993,6 +10478,11 @@ const obj1 = {
   2234: {
     java: {
       "two-pointers": "",
+    },
+  },
+  2235: {
+    java: {
+      math: "",
     },
   },
   2236: {
@@ -10503,6 +10993,11 @@ const obj1 = {
       counting: "",
     },
   },
+  2348: {
+    java: {
+      math: "",
+    },
+  },
   2349: {
     java: {
       "heap-(priority-queue)": "",
@@ -10788,6 +11283,11 @@ const obj1 = {
       design: "",
     },
   },
+  2409: {
+    java: {
+      math: "",
+    },
+  },
   2410: {
     java: {
       "two-pointers": "",
@@ -10941,6 +11441,11 @@ const obj1 = {
       "two-pointers": "",
     },
   },
+  2442: {
+    java: {
+      math: "",
+    },
+  },
   2443: {
     java: {
       enumeration: "",
@@ -10972,6 +11477,11 @@ const obj1 = {
       greedy: "",
     },
   },
+  2450: {
+    java: {
+      math: "",
+    },
+  },
   2453: {
     java: {
       counting: "",
@@ -10981,6 +11491,11 @@ const obj1 = {
     java: {
       "monotonic-stack":
         "class Solution {\n    public int[] secondGreaterElement(int[] nums) {\n        int[] ans = new int[nums.length];\n        Arrays.fill(ans, -1);\n        // a decreasing stack that stores indices that met the first greater number\n        Deque<Integer> prevStack = new ArrayDeque<>();\n        // a decreasing stack that stores indices\n        Deque<Integer> currStack = new ArrayDeque<>();\n\n        for (int i = 0; i < nums.length; ++i) {\n            while (!prevStack.isEmpty() && nums[prevStack.peek()] < nums[i])\n                ans[prevStack.poll()] = nums[i];\n            Deque<Integer> decreasingIndices = new ArrayDeque<>();\n            while (!currStack.isEmpty() && nums[currStack.peek()] < nums[i])\n                decreasingIndices.push(currStack.poll());\n            while (!decreasingIndices.isEmpty())\n                prevStack.push(decreasingIndices.poll());\n            currStack.push(i);\n        }\n\n        return ans;\n    }\n}",
+    },
+  },
+  2455: {
+    java: {
+      math: "",
     },
   },
   2456: {
@@ -11042,6 +11557,11 @@ const obj1 = {
   2467: {
     java: {
       tree: "",
+    },
+  },
+  2469: {
+    java: {
+      math: "",
     },
   },
   2470: {
@@ -11282,6 +11802,11 @@ const obj1 = {
         "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int kBigIndices(int[] nums, int k) {\n  int n = nums.length;\n    int ans = 0;\n    FenwickTree leftTree = new FenwickTree(n);\n    FenwickTree rightTree = new FenwickTree(n);\n    int[] left = new int[n];\n    int[] right = new int[n];\n\n    for (int i = 0; i < n; ++i) {\n      left[i] = leftTree.get(nums[i] - 1);\n      leftTree.add(nums[i], 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      right[i] = rightTree.get(nums[i] - 1);\n      rightTree.add(nums[i], 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      if (left[i] >= k && right[i] >= k)\n        ++ans;\n\n    return ans;\n  }\n}",
     },
   },
+  2520: {
+    java: {
+      math: "",
+    },
+  },
   2521: {
     java: {
       "number-theory": "",
@@ -11301,6 +11826,11 @@ const obj1 = {
     java: {
       "sliding-window":
         "class Solution {\n    public int maxFrequencyScore(int[] nums, int k) {\n      int mod = (int) 1e9 + 7;\n        Map<Integer, Integer> count = new HashMap<>();\n        for (int i = 0; i < k; ++i) {\n            count.put(nums[i], count.getOrDefault(nums[i], 0) + 1);\n        }\n        long curr = 0;\n        for (var e : count.entrySet()) {\n            curr = (curr + qmi(e.getKey(), e.getValue(), mod)) % mod;\n        }\n        long ans = curr;\n        for (int i = k; i < nums.length; ++i) {\n            int a = nums[i - k];\n            int b = nums[i];\n            if (a != b) {\n                if (count.getOrDefault(b, 0) > 0) {\n                    curr += (b - 1) * qmi(b, count.get(b), mod) % mod;\n                } else {\n                    curr += b;\n                }\n                if (count.getOrDefault(a, 0) > 1) {\n                    curr -= (a - 1) * qmi(a, count.get(a) - 1, mod) % mod;\n                } else {\n                    curr -= a;\n                }\n                curr = (curr + mod) % mod;\n                count.put(b, count.getOrDefault(b, 0) + 1);\n                count.put(a, count.getOrDefault(a, 0) - 1);\n                ans = Math.max(ans, curr);\n            }\n        }\n        return (int) ans;\n    }\n\n    long qmi(long a, long k, long p) {\n        long res = 1;\n        while (k != 0) {\n            if ((k & 1) == 1) {\n                res = res * a % p;\n            }\n            k >>= 1;\n            a = a * a % p;\n        }\n        return res;\n    }\n}",
+    },
+  },
+  2525: {
+    java: {
+      math: "",
     },
   },
   2526: {
@@ -11349,6 +11879,11 @@ const obj1 = {
       queue: "",
     },
   },
+  2535: {
+    java: {
+      math: "",
+    },
+  },
   2536: {
     java: {
       matrix: "",
@@ -11390,6 +11925,11 @@ const obj1 = {
       "number-theory": "",
     },
   },
+  2544: {
+    java: {
+      math: "",
+    },
+  },
   2545: {
     java: {
       matrix: "",
@@ -11408,6 +11948,11 @@ const obj1 = {
   2548: {
     java: {
       greedy: "",
+    },
+  },
+  2549: {
+    java: {
+      math: "",
     },
   },
   2550: {
@@ -11527,6 +12072,11 @@ const obj1 = {
       "prefix-sum": "",
     },
   },
+  2575: {
+    java: {
+      math: "",
+    },
+  },
   2576: {
     java: {
       "two-pointers": "",
@@ -11542,6 +12092,11 @@ const obj1 = {
       greedy: "",
     },
   },
+  2579: {
+    java: {
+      math: "",
+    },
+  },
   2580: {
     java: {
       sorting: "",
@@ -11550,6 +12105,11 @@ const obj1 = {
   2581: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2582: {
+    java: {
+      math: "",
     },
   },
   2583: {
@@ -11745,6 +12305,21 @@ const obj1 = {
   2646: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  2647: {
+    java: {
+      math: "",
+    },
+  },
+  2651: {
+    java: {
+      math: "",
+    },
+  },
+  2652: {
+    java: {
+      math: "",
     },
   },
   2653: {
@@ -11958,6 +12533,11 @@ const obj1 = {
       interactive: "",
     },
   },
+  2729: {
+    java: {
+      math: "",
+    },
+  },
   2730: {
     java: {
       "sliding-window":
@@ -12002,6 +12582,11 @@ const obj1 = {
   2738: {
     java: {
       database: "",
+    },
+  },
+  2739: {
+    java: {
+      math: "",
     },
   },
   2740: {
@@ -12115,6 +12700,11 @@ const obj1 = {
       enumeration: "",
     },
   },
+  2769: {
+    java: {
+      math: "",
+    },
+  },
   2770: {
     java: {
       "dynamic-programming": "",
@@ -12226,6 +12816,11 @@ const obj1 = {
   2802: {
     java: {
       "bit-manipulation": "",
+    },
+  },
+  2806: {
+    java: {
+      math: "",
     },
   },
   2807: {
@@ -12396,6 +12991,11 @@ const obj1 = {
       "prefix-sum": "",
     },
   },
+  2849: {
+    java: {
+      math: "",
+    },
+  },
   2850: {
     java: {
       matrix: "",
@@ -12522,6 +13122,11 @@ const obj1 = {
   2893: {
     java: {
       database: "",
+    },
+  },
+  2894: {
+    java: {
+      math: "",
     },
   },
   2895: {
@@ -12802,6 +13407,11 @@ const obj1 = {
   2959: {
     java: {
       "heap-(priority-queue)": "",
+    },
+  },
+  2961: {
+    java: {
+      math: "",
     },
   },
   2962: {
@@ -13092,6 +13702,11 @@ const obj1 = {
       enumeration: "",
     },
   },
+  3021: {
+    java: {
+      math: "",
+    },
+  },
   3022: {
     java: {
       "bit-manipulation": "",
@@ -13354,6 +13969,11 @@ const obj1 = {
       matrix: "",
     },
   },
+  3079: {
+    java: {
+      math: "",
+    },
+  },
   3080: {
     java: {
       "heap-(priority-queue)": "",
@@ -13446,6 +14066,21 @@ const obj1 = {
   3098: {
     java: {
       "dynamic-programming": "",
+    },
+  },
+  3099: {
+    java: {
+      math: "",
+    },
+  },
+  3100: {
+    java: {
+      math: "",
+    },
+  },
+  3101: {
+    java: {
+      math: "",
     },
   },
   3102: {
@@ -13679,6 +14314,11 @@ const obj1 = {
         'class Solution {\n    HashMap<String, Integer> memoizeMap = new HashMap<>();\n    int K;\n\n    public int waysToReachStair(int k) {\n\n        K = k;\n        int index = 1;\n        int jump = 0;\n        boolean canJumpBack = true;\n\n        return solve(index, jump, canJumpBack);\n    }\n\n    public int solve(int index, int jump, boolean canJumpBack) {\n\n        if (index > K + 1) {\n            return 0;\n        }\n\n        String str = String.valueOf(index) + "_" + String.valueOf(jump) + "_" + String.valueOf(canJumpBack);\n\n        if (memoizeMap.containsKey(str)) {\n\n            return memoizeMap.get(str);\n        }\n\n        int totalWays = 0;\n\n        if (index == K) {\n            totalWays++;\n        }\n\n        if (canJumpBack == true) {\n\n            totalWays += solve(index - 1, jump, false);\n        }\n        totalWays += solve(index + (int) Math.pow(2, jump), jump + 1, true);\n        memoizeMap.put(str, totalWays);\n\n        return totalWays;\n    }\n}',
     },
   },
+  3155: {
+    java: {
+      math: "",
+    },
+  },
   3156: {
     java: {
       database: "",
@@ -13744,6 +14384,11 @@ const obj1 = {
       "dynamic-programming": "",
     },
   },
+  3178: {
+    java: {
+      math: "",
+    },
+  },
   3179: {
     java: {
       "prefix-sum": "",
@@ -13792,6 +14437,11 @@ const obj1 = {
   3189: {
     java: {
       greedy: "",
+    },
+  },
+  3190: {
+    java: {
+      math: "",
     },
   },
   3191: {
@@ -13930,2524 +14580,3084 @@ const obj1 = {
 // existing
 
 const obj2 = {
-  2: {
+  1: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  7: {
+  3: {
     java: {
-      math: "",
-    },
-  },
-  9: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   12: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   13: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  29: {
+  17: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  43: {
+  30: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  48: {
+  36: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  50: {
+  37: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  60: {
+  41: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  62: {
+  49: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  66: {
+  73: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  67: {
+  76: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  69: {
+  105: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  70: {
+  106: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  89: {
+  126: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  96: {
+  127: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  128: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  133: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  138: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  139: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  140: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  141: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  142: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  146: {
+    java: {
+      "hash-table": "",
     },
   },
   149: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  150: {
+  159: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  160: {
+    java: {
+      "hash-table": "",
     },
   },
   166: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  168: {
+  169: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  171: {
+  170: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  172: {
+  187: {
     java: {
-      math: "",
-    },
-  },
-  189: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   202: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  204: {
+  205: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  223: {
+  208: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  224: {
+  217: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  227: {
+  219: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  231: {
+  229: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  233: {
+  242: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  241: {
+  244: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  258: {
+  246: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  263: {
+  249: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   264: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  266: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  267: {
+    java: {
+      "hash-table": "",
     },
   },
   268: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  273: {
+  288: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  279: {
+  290: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  282: {
+  291: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  292: {
+  299: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  294: {
+  305: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  296: {
+  311: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  313: {
+  314: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  319: {
+  325: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  326: {
+  336: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  335: {
+  340: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  342: {
+  347: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  343: {
+  348: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  349: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  350: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  353: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  355: {
+    java: {
+      "hash-table": "",
     },
   },
   356: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  357: {
+  358: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  360: {
+  359: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  365: {
+  379: {
     java: {
-      math: "",
-    },
-  },
-  367: {
-    java: {
-      math: "",
-    },
-  },
-  368: {
-    java: {
-      math: "",
-    },
-  },
-  369: {
-    java: {
-      math: "",
-    },
-  },
-  371: {
-    java: {
-      math: "",
-    },
-  },
-  372: {
-    java: {
-      math: "",
-    },
-  },
-  375: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   380: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   381: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  382: {
+  383: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  384: {
+  387: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  390: {
+  389: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  396: {
+  395: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   398: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  400: {
+  409: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  405: {
+  421: {
     java: {
-      math: "",
-    },
-  },
-  412: {
-    java: {
-      math: "",
-    },
-  },
-  415: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   423: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  441: {
+  424: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  445: {
+  432: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  433: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  438: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  442: {
+    java: {
+      "hash-table": "",
     },
   },
   447: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  453: {
+  448: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  458: {
+  451: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  462: {
+  454: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  464: {
+  457: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  469: {
+  460: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  470: {
+  480: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  477: {
+  491: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  478: {
+  496: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  479: {
+  500: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  483: {
+  508: {
     java: {
-      math: "",
-    },
-  },
-  486: {
-    java: {
-      math: "",
-    },
-  },
-  492: {
-    java: {
-      math: "",
-    },
-  },
-  497: {
-    java: {
-      math: "",
-    },
-  },
-  504: {
-    java: {
-      math: "",
-    },
-  },
-  507: {
-    java: {
-      math: "",
-    },
-  },
-  509: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   519: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  522: {
+    java: {
+      "hash-table": "",
     },
   },
   523: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  528: {
+  525: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  537: {
+  531: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  539: {
+  532: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  553: {
+  533: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  556: {
+  535: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  564: {
+  548: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  573: {
+  554: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  587: {
+  560: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  592: {
+  567: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  593: {
+  575: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  598: {
+  582: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  625: {
+  588: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  628: {
+  594: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  633: {
+  599: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  634: {
+  609: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  640: {
+  616: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  650: {
+  621: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  651: {
+  632: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  660: {
+  635: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  667: {
+  645: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  668: {
+  648: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  670: {
+  652: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  672: {
+  653: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  679: {
+  659: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  666: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  676: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  677: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  681: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  690: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  692: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  694: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  697: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  705: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  706: {
+    java: {
+      "hash-table": "",
     },
   },
   710: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  728: {
+  711: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  738: {
+  720: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  750: {
+  721: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  754: {
+  726: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  762: {
+  734: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  736: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  737: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  740: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  745: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  748: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  752: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  758: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  760: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  763: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  767: {
+    java: {
+      "hash-table": "",
     },
   },
   770: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  772: {
+  771: {
     java: {
-      math: "",
-    },
-  },
-  775: {
-    java: {
-      math: "",
-    },
-  },
-  779: {
-    java: {
-      math: "",
-    },
-  },
-  780: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   781: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  782: {
+  791: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  788: {
+  792: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  789: {
+  804: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  793: {
+  811: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  800: {
+  815: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  805: {
+  817: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  808: {
+  819: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  810: {
+  820: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  812: {
+  822: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  829: {
+  823: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  836: {
+  828: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  837: {
+  839: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   840: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  843: {
+  846: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  858: {
+  859: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  866: {
+  863: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  865: {
+    java: {
+      "hash-table": "",
     },
   },
   869: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  877: {
+  873: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  878: {
+  874: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  883: {
+  884: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  887: {
+  888: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  891: {
+  889: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  892: {
+  890: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  899: {
+  893: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  902: {
+  895: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  906: {
+  904: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  908: {
+  911: {
     java: {
-      math: "",
-    },
-  },
-  910: {
-    java: {
-      math: "",
-    },
-  },
-  913: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   914: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  920: {
+  916: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  927: {
+  923: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  932: {
+  924: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  928: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  929: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  930: {
+    java: {
+      "hash-table": "",
     },
   },
   939: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  947: {
+    java: {
+      "hash-table": "",
     },
   },
   952: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  953: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  954: {
+    java: {
+      "hash-table": "",
     },
   },
   957: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  963: {
+  959: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  964: {
+  961: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  966: {
+    java: {
+      "hash-table": "",
     },
   },
   970: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  972: {
+  974: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  973: {
+  981: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  976: {
+  982: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  989: {
+  987: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  991: {
+  992: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   996: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1006: {
+  997: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1012: {
+  1001: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  1002: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1010: {
+    java: {
+      "hash-table": "",
     },
   },
   1015: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1017: {
+  1027: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1025: {
+  1036: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1030: {
+  1048: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1033: {
+  1054: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1037: {
+  1072: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1040: {
+  1074: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1041: {
+  1079: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1056: {
+  1086: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1058: {
+  1090: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1067: {
+  1100: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1071: {
+  1110: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1073: {
+  1122: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1085: {
+  1123: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1088: {
+  1124: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1093: {
+  1128: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1103: {
+  1133: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1104: {
+  1138: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1118: {
+  1146: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1131: {
+  1152: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1134: {
+  1153: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1137: {
+  1156: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1140: {
+  1160: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1154: {
+  1165: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1175: {
+  1166: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1180: {
+  1169: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1185: {
+  1170: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1199: {
+  1171: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1201: {
+  1172: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1217: {
+  1177: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1227: {
+  1178: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1228: {
+  1181: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1230: {
+  1189: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1232: {
+  1198: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1237: {
+  1202: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1238: {
+  1207: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1247: {
+  1213: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  1218: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1224: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1244: {
+    java: {
+      "hash-table": "",
     },
   },
   1248: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1250: {
+  1257: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1252: {
+  1258: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1256: {
+  1261: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1259: {
+  1275: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1266: {
+  1282: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1271: {
+  1284: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1276: {
+  1296: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1281: {
+  1297: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1290: {
+  1311: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1304: {
+  1331: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1307: {
+  1338: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1317: {
+  1345: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1323: {
+  1346: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1330: {
+  1347: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1342: {
+  1348: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1344: {
+  1357: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1352: {
+  1358: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1359: {
+  1365: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1360: {
+  1366: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1362: {
+  1370: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1390: {
+  1371: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  1386: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1394: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1396: {
+    java: {
+      "hash-table": "",
     },
   },
   1399: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1401: {
+  1400: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1406: {
+  1410: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1414: {
+  1418: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1427: {
+  1426: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1432: {
+  1429: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  1436: {
+    java: {
+      "hash-table": "",
     },
   },
   1442: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1447: {
+  1443: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1453: {
+  1452: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1467: {
+  1460: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1478: {
+  1461: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1486: {
+  1477: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1492: {
+  1481: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1510: {
+  1485: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  1487: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1488: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1490: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1496: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1497: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1500: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1506: {
+    java: {
+      "hash-table": "",
     },
   },
   1512: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1513: {
+  1519: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1515: {
+  1525: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1518: {
+  1540: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1523: {
+  1542: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1524: {
+  1546: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1538: {
+  1554: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1551: {
+  1570: {
     java: {
-      math: "",
-    },
-  },
-  1561: {
-    java: {
-      math: "",
-    },
-  },
-  1563: {
-    java: {
-      math: "",
-    },
-  },
-  1569: {
-    java: {
-      math: "",
-    },
-  },
-  1573: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   1577: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1588: {
+  1590: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1610: {
+  1593: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1621: {
+  1600: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1622: {
+  1604: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1627: {
+  1612: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1628: {
+  1624: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1634: {
+  1630: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1641: {
+  1636: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1643: {
+  1638: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1648: {
+  1640: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1680: {
+  1647: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1685: {
+  1650: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1686: {
+  1656: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1688: {
+  1657: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1690: {
+  1658: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1716: {
+  1660: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1728: {
+  1674: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1735: {
+  1676: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1739: {
+  1679: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  1684: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1695: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1711: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1713: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1726: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1733: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1737: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1740: {
+    java: {
+      "hash-table": "",
     },
   },
   1742: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1753: {
+  1743: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1759: {
+  1748: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1766: {
+  1756: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1776: {
+  1763: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1780: {
+  1772: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1799: {
+  1775: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1806: {
+  1781: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1808: {
+  1788: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1812: {
+  1790: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  1794: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1796: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1797: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1804: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1805: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  1807: {
+    java: {
+      "hash-table": "",
     },
   },
   1814: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1819: {
+  1817: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1822: {
+  1832: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1823: {
+  1836: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1828: {
+  1852: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1830: {
+  1857: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1835: {
+  1865: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1837: {
+  1876: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1840: {
+  1893: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1860: {
+  1897: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1862: {
+  1906: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1863: {
+  1912: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1866: {
+  1915: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1872: {
+  1930: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1878: {
+  1932: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1884: {
+  1935: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1896: {
+  1938: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1903: {
+  1940: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1904: {
+  1941: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1908: {
+  1942: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1916: {
+  1943: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1922: {
+  1948: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1924: {
+  1980: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1925: {
+  1983: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1927: {
+  1993: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  1952: {
+  1995: {
     java: {
-      math: "",
-    },
-  },
-  1954: {
-    java: {
-      math: "",
-    },
-  },
-  1956: {
-    java: {
-      math: "",
-    },
-  },
-  1969: {
-    java: {
-      math: "",
-    },
-  },
-  1979: {
-    java: {
-      math: "",
-    },
-  },
-  1994: {
-    java: {
-      math: "",
-    },
-  },
-  1998: {
-    java: {
-      math: "",
-    },
-  },
-  1999: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2001: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2005: {
+  2006: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2019: {
+  2007: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2028: {
+  2008: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2029: {
+  2009: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2033: {
+  2013: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2038: {
+  2023: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2048: {
+  2025: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2063: {
+  2032: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2081: {
+  2034: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2043: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2053: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2062: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2068: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2080: {
+    java: {
+      "hash-table": "",
     },
   },
   2083: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2101: {
+  2085: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2110: {
+  2094: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2117: {
+  2099: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2119: {
+  2103: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2125: {
+  2107: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2128: {
+  2115: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2139: {
+  2121: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2147: {
+  2122: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2131: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2133: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2135: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2150: {
+    java: {
+      "hash-table": "",
     },
   },
   2152: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2160: {
+  2154: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2162: {
+  2166: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2165: {
+  2168: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2169: {
+  2170: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2177: {
+  2182: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2178: {
+  2186: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2180: {
+  2190: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2183: {
+  2196: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2189: {
+  2201: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2195: {
+  2206: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2197: {
+  2215: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2198: {
+  2225: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2217: {
+  2227: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2221: {
+  2229: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2235: {
+  2244: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2240: {
+  2248: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2249: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2251: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2254: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2260: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2261: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2262: {
+    java: {
+      "hash-table": "",
     },
   },
   2266: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2269: {
+  2268: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2280: {
+  2273: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2310: {
+  2275: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2317: {
+  2283: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2333: {
+  2284: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2338: {
+  2287: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2344: {
+  2295: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2348: {
+  2301: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2358: {
+  2306: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2366: {
+  2309: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2376: {
+  2325: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2393: {
+  2336: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2396: {
+  2341: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2400: {
+  2342: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2409: {
+  2347: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2413: {
+  2349: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2417: {
+  2350: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2427: {
+  2351: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2436: {
+  2352: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2440: {
+  2353: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2354: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2357: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2363: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2364: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2365: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2367: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2368: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2370: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2374: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2384: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2385: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2395: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2399: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2402: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2404: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2405: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2408: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2418: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2421: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2423: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2434: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2441: {
+    java: {
+      "hash-table": "",
     },
   },
   2442: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2443: {
+  2451: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2447: {
+  2453: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2450: {
+  2456: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2455: {
+  2461: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2457: {
+  2465: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2464: {
+  2475: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2469: {
+  2488: {
     java: {
-      math: "",
-    },
-  },
-  2470: {
-    java: {
-      math: "",
-    },
-  },
-  2481: {
-    java: {
-      math: "",
-    },
-  },
-  2485: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2489: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2495: {
+  2491: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2505: {
+  2499: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2507: {
+  2501: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2513: {
+  2502: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2506: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2508: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2512: {
+    java: {
+      "hash-table": "",
     },
   },
   2514: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2520: {
+  2516: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2521: {
     java: {
-      math: "",
-    },
-  },
-  2523: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2524: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2525: {
+  2526: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2527: {
+  2531: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2535: {
+  2537: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2539: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2541: {
+  2540: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2543: {
+  2547: {
     java: {
-      math: "",
-    },
-  },
-  2544: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2549: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2550: {
+  2554: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2566: {
+  2561: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2572: {
+  2564: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2575: {
+  2570: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2578: {
+  2581: {
     java: {
-      math: "",
-    },
-  },
-  2579: {
-    java: {
-      math: "",
-    },
-  },
-  2582: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2584: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2591: {
+  2588: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2590: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2593: {
+    java: {
+      "hash-table": "",
     },
   },
   2597: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2598: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2600: {
+  2605: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2601: {
+  2606: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2607: {
+  2610: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2613: {
+  2615: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2614: {
+  2641: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2638: {
+  2653: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2647: {
+  2657: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2651: {
+  2661: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2652: {
+  2670: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2654: {
+  2671: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2681: {
+  2682: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2698: {
+  2707: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2709: {
+  2711: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2719: {
+  2713: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2716: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2718: {
+    java: {
+      "hash-table": "",
     },
   },
   2729: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2739: {
+  2732: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2745: {
+  2743: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2744: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2747: {
+    java: {
+      "hash-table": "",
     },
   },
   2748: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2750: {
+  2763: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2761: {
+  2766: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2769: {
+  2767: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2790: {
+  2768: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2802: {
+  2780: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2806: {
+  2781: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2807: {
+  2784: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2816: {
+  2799: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2818: {
+  2808: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2827: {
+  2813: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2829: {
+  2815: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2834: {
+  2830: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2831: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2840: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2841: {
+    java: {
+      "hash-table": "",
     },
   },
   2842: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2843: {
+  2845: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2844: {
+  2848: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2847: {
+  2852: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2849: {
+  2856: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2851: {
+  2857: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2862: {
+  2863: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2864: {
+  2869: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2867: {
+  2870: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2868: {
+  2875: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2894: {
+  2897: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2912: {
+  2898: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2927: {
+  2902: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2928: {
+  2910: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2929: {
+  2913: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2930: {
+  2932: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2939: {
+  2933: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2941: {
+  2935: {
     java: {
-      math: "",
-    },
-  },
-  2946: {
-    java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2947: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
   2949: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2954: {
+  2950: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2961: {
+  2953: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2955: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2956: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  2958: {
+    java: {
+      "hash-table": "",
     },
   },
   2963: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  2964: {
+    java: {
+      "hash-table": "",
     },
   },
   2965: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2967: {
+  2975: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2979: {
+  2981: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  2999: {
+  2982: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3009: {
+  2983: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3012: {
+  2996: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3014: {
+  3002: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3021: {
+  3005: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3024: {
+  3013: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3025: {
+  3016: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3027: {
+  3020: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  3026: {
+    java: {
+      "hash-table": "",
     },
   },
   3032: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  3035: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3039: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3043: {
+    java: {
+      "hash-table": "",
     },
   },
   3044: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3047: {
+  3046: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3079: {
+  3063: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3084: {
+  3071: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3091: {
+  3076: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3099: {
+  3078: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3100: {
+  3080: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3101: {
+  3081: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3102: {
+  3083: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3115: {
+  3085: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3116: {
+  3090: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  3092: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3104: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3120: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3121: {
+    java: {
+      "hash-table": "",
     },
   },
   3128: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  3134: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3137: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3138: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3143: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3144: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3146: {
+    java: {
+      "hash-table": "",
     },
   },
   3153: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3154: {
+  3158: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3155: {
+  3159: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3178: {
+  3160: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3179: {
+  3162: {
     java: {
-      math: "",
+      "hash-table": "",
     },
   },
-  3190: {
+  3164: {
     java: {
-      math: "",
+      "hash-table": "",
+    },
+  },
+  3167: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3170: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3174: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3176: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3177: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3184: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3185: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3186: {
+    java: {
+      "hash-table": "",
+    },
+  },
+  3217: {
+    java: {
+      "hash-table": "",
     },
   },
 };
@@ -16456,3 +17666,113 @@ console.log(combinedObj);
 
 // 1462
 // https://algo.monster/liteproblems/1462
+
+const arr1 = [
+  1, 3, 12, 13, 17, 30, 36, 37, 41, 49, 73, 76, 105, 106, 126, 127, 128, 133,
+  138, 139, 140, 141, 142, 146, 149, 159, 160, 166, 169, 170, 187, 202, 205,
+  208, 217, 219, 229, 242, 244, 246, 249, 264, 266, 267, 268, 288, 290, 291,
+  299, 305, 311, 314, 325, 336, 340, 347, 348, 349, 350, 353, 355, 356, 358,
+  359, 379, 380, 381, 383, 387, 389, 395, 398, 409, 421, 423, 424, 432, 433,
+  438, 442, 447, 448, 451, 454, 457, 460, 480, 491, 496, 500, 508, 1983, 522,
+  523, 525, 531, 532, 533, 535, 548, 554, 560, 567, 575, 582, 588, 594, 599,
+  609, 616, 621, 632, 635, 645, 648, 652, 653, 659, 666, 676, 677, 681, 690,
+  692, 694, 697, 711, 720, 721, 726, 734, 736, 737, 740, 745, 748, 752, 758,
+  760, 763, 767, 770, 771, 781, 791, 792, 705, 706, 804, 811, 815, 817, 819,
+  820, 822, 823, 828, 839, 840, 846, 859, 863, 710, 865, 869, 873, 874, 519,
+  884, 888, 889, 890, 893, 895, 904, 911, 914, 916, 923, 924, 928, 929, 930,
+  939, 947, 952, 953, 954, 957, 959, 961, 966, 970, 974, 981, 982, 987, 992,
+  996, 997, 1001, 1002, 1010, 1015, 1086, 1100, 1027, 1133, 1036, 1152, 1160,
+  1165, 1153, 1166, 1048, 1181, 1054, 1198, 1074, 1072, 1213, 1079, 1090, 1244,
+  1257, 1258, 1110, 1122, 1123, 1124, 1128, 1138, 1146, 1331, 1156, 1935, 1171,
+  1172, 1169, 1170, 1177, 1178, 2080, 1189, 1202, 2201, 1207, 1218, 1224, 2273,
+  2225, 2309, 1726, 1429, 1248, 1261, 1426, 2215, 1275, 1282, 1284, 2229, 1296,
+  1297, 2227, 1311, 1345, 1357, 1358, 1338, 1346, 1347, 1348, 1370, 1371, 1365,
+  1366, 1386, 1399, 1400, 1394, 1396, 1410, 1418, 1436, 1442, 1443, 1460, 1461,
+  1452, 1477, 1481, 1487, 1488, 1496, 1497, 1485, 1525, 1490, 1512, 1500, 1519,
+  1540, 1546, 1506, 1542, 1590, 1554, 1577, 1604, 1570, 1593, 1600, 1636, 1638,
+  1624, 1612, 1630, 1640, 1647, 1656, 1658, 1657, 1684, 1650, 1674, 1660, 1679,
+  1695, 1676, 1711, 1713, 1733, 1742, 1748, 1737, 1743, 1763, 1740, 1781, 1775,
+  1756, 1796, 1797, 1790, 1772, 1814, 1805, 1807, 1788, 1794, 1817, 1804, 1832,
+  1836, 1857, 1876, 1865, 1852, 1893, 1912, 1897, 1906, 1915, 1941, 1942, 1943,
+  1930, 1932, 1938, 1940, 1948, 1993, 1980, 2006, 2007, 2008, 2009, 1995, 2001,
+  2023, 2025, 2013, 2032, 2034, 2053, 2043, 2068, 2062, 2085, 2099, 2094, 2115,
+  2083, 2103, 2131, 2121, 2122, 2107, 2133, 2135, 2150, 2154, 2166, 2152, 2170,
+  2186, 2182, 2168, 2196, 2206, 2190, 2248, 2249, 2251, 2260, 2261, 2262, 2266,
+  2275, 2244, 2287, 2283, 2284, 2295, 2306, 2301, 2254, 2268, 2325, 2336, 2341,
+  2351, 2352, 2353, 2354, 2347, 2349, 2350, 2357, 2367, 2370, 2368, 2363, 2364,
+  2374, 2385, 2342, 2384, 2399, 2402, 2395, 2365, 2404, 2405, 2418, 2421, 2434,
+  2441, 2442, 2423, 2456, 2451, 2453, 2461, 2408, 2465, 2475, 2488, 2491, 2501,
+  2502, 2499, 2506, 2508, 2516, 2512, 2514, 2521, 2531, 2526, 2537, 2489, 2547,
+  2540, 2554, 2584, 2581, 2588, 2598, 2524, 2605, 2606, 2641, 2549, 2539, 2661,
+  2590, 2561, 2593, 2597, 2564, 2570, 2615, 2610, 2653, 2707, 2657, 2670, 2671,
+  2682, 2711, 2713, 2729, 2716, 2732, 2748, 2831, 2747, 2766, 2718, 2744, 2763,
+  2799, 2767, 2781, 2780, 2768, 2743, 2784, 2813, 2815, 2845, 2808, 2857, 2841,
+  2840, 2830, 2848, 2869, 2842, 2856, 2902, 2870, 2875, 2852, 2897, 2863, 2913,
+  2910, 2898, 2932, 2935, 2933, 2983, 2956, 2949, 2947, 2963, 2953, 2958, 2965,
+  3002, 2996, 2950, 3005, 2955, 2975, 2964, 3013, 3026, 2982, 2981, 3016, 3020,
+  3080, 3039, 3044, 3035, 3046, 3043, 3071, 3032, 3090, 3083, 3081, 3076, 3063,
+  3085, 3134, 3092, 3137, 3078, 3128, 3138, 3144, 3121, 3120, 3104, 3146, 3153,
+  3185, 3143, 3159, 3184, 3158, 3160, 3186, 3164, 3170, 3162, 3174, 3177, 3176,
+  3167, 3217,
+];
+
+const arr2 = [
+  1, 3, 12, 13, 17, 30, 36, 37, 41, 49, 73, 76, 105, 106, 126, 127, 128, 133,
+  138, 139, 140, 141, 142, 146, 149, 159, 160, 166, 169, 170, 187, 202, 205,
+  208, 217, 219, 229, 242, 244, 246, 249, 264, 266, 267, 268, 288, 290, 291,
+  299, 305, 311, 314, 325, 336, 340, 347, 348, 349, 350, 353, 355, 356, 358,
+  359, 379, 380, 381, 383, 387, 389, 395, 398, 409, 421, 423, 424, 432, 433,
+  438, 442, 447, 448, 451, 454, 457, 460, 480, 491, 496, 500, 508, 519, 522,
+  523, 525, 531, 532, 533, 535, 548, 554, 560, 567, 575, 582, 588, 594, 599,
+  609, 616, 621, 632, 635, 645, 648, 652, 653, 659, 666, 676, 677, 681, 690,
+  694, 697, 705, 706, 710, 711, 720, 721, 726, 734, 736, 737, 740, 745, 748,
+  752, 758, 760, 763, 767, 770, 771, 781, 791, 792, 804, 811, 815, 817, 819,
+  820, 822, 823, 828, 839, 840, 846, 859, 863, 865, 869, 873, 874, 884, 888,
+  889, 890, 893, 895, 904, 911, 914, 916, 923, 924, 928, 929, 930, 939, 947,
+  952, 953, 954, 957, 959, 961, 966, 970, 974, 981, 982, 987, 992, 996, 997,
+  1001, 1002, 1010, 1015, 1027, 1036, 1048, 1054, 1072, 1074, 1079, 1086, 1090,
+  1100, 1110, 1122, 1123, 1124, 1128, 1133, 1138, 1146, 1152, 1153, 1156, 1160,
+  1165, 1166, 1169, 1170, 1171, 1172, 1177, 1178, 1181, 1189, 1198, 1202, 1207,
+  1213, 1218, 1224, 1244, 1248, 1257, 1258, 1261, 1275, 1282, 1284, 1296, 1297,
+  1311, 1331, 1338, 1345, 1346, 1347, 1348, 1357, 1358, 1365, 1366, 1370, 1371,
+  1386, 1394, 1396, 1399, 1400, 1410, 1418, 1426, 1429, 1436, 1442, 1443, 1452,
+  1460, 1461, 1477, 1481, 1485, 1487, 1488, 1490, 1496, 1497, 1500, 1506, 1512,
+  1519, 1525, 1540, 1542, 1546, 1554, 1570, 1577, 1590, 1593, 1600, 1604, 1612,
+  1624, 1630, 1636, 1638, 1640, 1647, 1650, 1656, 1657, 1658, 1660, 1674, 1676,
+  1679, 1684, 1695, 1711, 1713, 1726, 1733, 1737, 1740, 1742, 1743, 1748, 1756,
+  1763, 1772, 1775, 1781, 1790, 1794, 1796, 1797, 1804, 1805, 1807, 1814, 1817,
+  1832, 1836, 1852, 1857, 1865, 1876, 1893, 1897, 1906, 1912, 1915, 1930, 1932,
+  1935, 1938, 1940, 1941, 1942, 1943, 1948, 1980, 1983, 1993, 1995, 2001, 2006,
+  2007, 2008, 2009, 2013, 2023, 2025, 2032, 2034, 2043, 2053, 2062, 2068, 2080,
+  2083, 2085, 2094, 2099, 2103, 2107, 2115, 2121, 2122, 2131, 2133, 2135, 2150,
+  2152, 2154, 2166, 2168, 2170, 2182, 2186, 2190, 2196, 2201, 2206, 2215, 2225,
+  2227, 2229, 2244, 2248, 2249, 2251, 2254, 2260, 2261, 2262, 2266, 2268, 2273,
+  2275, 2283, 2284, 2287, 2295, 2301, 2306, 2309, 2325, 2336, 2341, 2342, 2347,
+  2349, 2350, 2351, 2352, 2353, 2354, 2357, 2363, 2364, 2365, 2367, 2368, 2370,
+  2374, 2384, 2385, 2395, 2399, 2402, 2404, 2405, 2408, 2418, 2421, 2423, 2434,
+  2441, 2442, 2451, 2453, 2456, 2461, 2465, 2475, 2488, 2489, 2491, 2499, 2501,
+  2502, 2506, 2508, 2512, 2514, 2516, 2521, 2524, 2526, 2531, 2537, 2539, 2540,
+  2547, 2549, 2554, 2561, 2564, 2570, 2581, 2584, 2588, 2590, 2593, 2598, 2605,
+  2606, 2610, 2615, 2641, 2653, 2657, 2661, 2670, 2671, 2682, 2707, 2711, 2713,
+  2716, 2718, 2729, 2732, 2743, 2744, 2747, 2748, 2763, 2766, 2767, 2768, 2780,
+  2781, 2784, 2799, 2808, 2813, 2815, 2830, 2831, 2840, 2841, 2842, 2845, 2848,
+  2852, 2856, 2857, 2863, 2869, 2870, 2875, 2897, 2898, 2902, 2910, 2913, 2932,
+  2933, 2935, 2947, 2949, 2950, 2953, 2955, 2956, 2958, 2963, 2964, 2965, 2975,
+  2981, 2982, 2983, 2996, 3002, 3005, 3013, 3016, 3020, 3026, 3032, 3035, 3039,
+  3043, 3044, 3046, 3063, 3071, 3076, 3078, 3080, 3081, 3083, 3085, 3090, 3092,
+  3104, 3120, 3121, 3128, 3134, 3137, 3138, 3143, 3144, 3146, 3153, 3158, 3159,
+  3160, 3162, 3164, 3167, 3170, 3174, 3176, 3177, 3184, 3185, 3186, 3217,
+];
+
+function findMissingElement(arr, expectedArray) {
+  const set = new Set(arr);
+  const res = []
+  for (let num of expectedArray) {
+    if (!set.has(num)) {
+      res.add(num);
+    }
+  }
+  return res; // All elements are present
+}
+
+console.log(arr1.filter(x => !arr2.includes(x))); // Output: 3
