@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { BREAKPOINTS } from "../constants";
 
 export const Container = styled.div`
-  padding-top: calc(50px + 1rem);
+  padding-top: calc(50px);
   width: 100%;
   text-align: start;
   padding-bottom: 4rem;
