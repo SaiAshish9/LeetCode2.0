@@ -20,7 +20,7 @@ const DATA_BSD = [
   },
   {
     title:
-      "Design an system based on internal app of Swiggy/Zomato to notify all drivers when rating of one the driver changes. Millions of drivers can receive notification.",
+      "Observer Pattern: Design an system based on internal app of Swiggy/Zomato to notify all drivers when rating of one the driver changes. Millions of drivers can receive notification.",
   },
   {
     title: "How HashMap Works Internally?",
