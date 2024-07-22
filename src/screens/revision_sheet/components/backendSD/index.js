@@ -22,7 +22,7 @@ const DATA_BSD = [
     title: "How HashMap Works Internally?",
   },
   {
-    title: "gRPC vs REST",
+    title: "gRPC vs REST: Why gRPC is 8 times faster than REST?",
   },
   {
     title: "Parallelism and Concurrency models of JavaScript and Go",
