@@ -79,6 +79,12 @@ const DATA_BSD = [
   {
     title: "Forward vs reverse proxy?",
   },
+  {
+    title: "Mutextes And Semaphores"
+  },
+  {
+    title: "Idempotency in REST"
+  }
 ];
 
 const BackendSD = () => {
