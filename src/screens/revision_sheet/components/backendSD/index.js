@@ -29,7 +29,7 @@ const DATA_BSD = [
     title: "gRPC vs REST: Why gRPC is 8 times faster than REST?",
   },
   {
-    title: "Parallelism and Concurrency models of JavaScript and Go",
+    title: "Parallelism and Concurrency models of JavaScript and Go in terms of hardware kernel and threads",
   },
   {
     title: "What happens when you type www.google.com into a web browser?",
