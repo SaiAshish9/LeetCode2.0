@@ -10029,12 +10029,12 @@ const SOLUTIONING = {
           <strong>Initialize Pointers:</strong>
           <ul>
             <li>
-              Create a <code>left</code> pointer initialized to 0. This pointer
+              Create a <code>slow</code> pointer initialized to 0. This pointer
               keeps track of the position to place the next element that is not
               equal to the specified value.
             </li>
             <li>
-              Iterate through the array with a <code>right</code> pointer
+              Iterate through the array with a <code>fast</code> pointer
               starting from index 0.
             </li>
           </ul>
@@ -10049,8 +10049,8 @@ const SOLUTIONING = {
             </li>
             <li>
               If the current element is not equal to <code>val</code>, place the
-              element at the position indicated by the <code>left</code> pointer
-              and increment the <code>left</code> pointer.
+              element at the position indicated by the <code>slow</code> pointer
+              and increment the <code>slow</code> pointer.
             </li>
           </ul>
         </li>
@@ -10059,7 +10059,7 @@ const SOLUTIONING = {
           <strong>Return the Length:</strong>
           <ul>
             <li>
-              After the loop, the <code>left</code> pointer will indicate the
+              After the loop, the <code>slow</code> pointer will indicate the
               length of the array without the specified value.
             </li>
           </ul>
