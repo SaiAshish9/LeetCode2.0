@@ -148,14 +148,6 @@ const RevisionSheet = () => {
     };
   }, [data, up]);
 
-  console.log(
-    hashParam,
-    decodeURIComponent(pathname.split("/revision_sheet/")[1]),
-    SD_SOLUTIONING[hashParam][
-      decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
-    ]
-  );
-
   return (
     <Container>
       <Helmet>
@@ -304,8 +296,7 @@ const RevisionSheet = () => {
           hashParam &&
           pathname &&
           pathname.split("/revision_sheet/")?.[1] &&
-          SD_SOLUTIONING?.[hashParam] &&
-          SD_SOLUTIONING[hashParam]?.[
+          SD_SOLUTIONING?.[hashParam]?.[
             decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
           ]}
       </Content>
