@@ -151,7 +151,9 @@ const RevisionSheet = () => {
   console.log(
     hashParam,
     decodeURIComponent(pathname.split("/revision_sheet/")[1]),
-    SD_SOLUTIONING[hashParam][decodeURIComponent(pathname.split("/revision_sheet/")?.[1])]
+    SD_SOLUTIONING[hashParam][
+      decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
+    ]
   );
 
   return (
@@ -176,7 +178,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(0);
-              navigate("#dsa");
+              navigate("/revision_sheet#dsa");
             }}
             active={selected === 0}
           >
@@ -185,7 +187,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(1);
-              navigate("#cp");
+              navigate("/revision_sheet#cp");
             }}
             active={selected === 1}
           >
@@ -194,7 +196,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(2);
-              navigate("#frontend_system_design");
+              navigate("/revision_sheet#frontend_system_design");
             }}
             active={selected === 2}
           >
@@ -203,7 +205,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(3);
-              navigate("#backend_system_design");
+              navigate("/revision_sheet#backend_system_design");
             }}
             active={selected === 3}
           >
@@ -302,8 +304,9 @@ const RevisionSheet = () => {
           hashParam &&
           pathname &&
           pathname.split("/revision_sheet/")?.[1] &&
-          SD_SOLUTIONING[hashParam][
-            decodeURIComponent(pathname.split("/revision_sheet/")[1])
+          SD_SOLUTIONING?.[hashParam] &&
+          SD_SOLUTIONING[hashParam]?.[
+            decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
           ]}
       </Content>
     </Container>
