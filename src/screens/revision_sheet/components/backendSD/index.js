@@ -15,6 +15,12 @@ const DATA_BSD = [
       "How SQL Aggregations Work Internally to Efficiently Process Millions of Rows?",
   },
   {
+    title: "Different Metrics Of A Backend MicroService.",
+  },
+  {
+    title: "Capacity Estimation.",
+  },
+  {
     title:
       "Designing an leaderboard for an internal app used by Swiggy or Zomato to rate their delivery drivers after each delivery. Millions of driver ratings can be updated at once.",
   },
@@ -91,6 +97,9 @@ const DATA_BSD = [
   },
   {
     title: "Kubernetes Architecture",
+  },
+  {
+    title: "TCP Vs IP",
   },
 ];
 
