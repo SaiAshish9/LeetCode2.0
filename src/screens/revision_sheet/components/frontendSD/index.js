@@ -5,8 +5,37 @@ import { useNavigate } from "react-router-dom";
 
 const DATA_FSD = [
   {
-    title: "How Do Indexes Speed Up Database Reads?",
+    title:
+      "How can we print a message when a promise is fulfilled within a Promise.all chain? Additionally, what are the different states and methods of promises that support parallel execution?How can we determine the status of a promise, and how do promises differ from async/await?",
   },
+  {
+    title: "How Push Notifications works internally at Web, Android & iOS?",
+  },
+  {
+    title:
+      "Parallelism and Concurrency models of JavaScript and Go in terms of hardware kernel and threads",
+  },
+  {
+    title: "Event Loop Architecture And Examples",
+  },
+  {
+    title: "How Critical Rendering Path (CRP) works internally?",
+  },
+  {
+    title: "GraphQL Caching",
+  },
+  {
+    title: "How do cookies work in browsers?",
+  },
+  {
+    title: "How Caching Works in Google Chrome Browser and React.js?"
+  },
+  {
+    title: "Internal working of Currying in JavaScript Using Memory and Lexical Environment."
+  },
+  {
+    title: "Google Lighthouse Metrics"
+  }
 ];
 
 const FrontendSD = () => {
