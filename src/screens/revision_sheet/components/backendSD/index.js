@@ -29,7 +29,8 @@ const DATA_BSD = [
     title: "gRPC vs REST: Why gRPC is 8 times faster than REST?",
   },
   {
-    title: "Parallelism and Concurrency models of JavaScript and Go in terms of hardware kernel and threads",
+    title:
+      "Parallelism and Concurrency models of JavaScript and Go in terms of hardware kernel and threads",
   },
   {
     title: "What happens when you type www.google.com into a web browser?",
@@ -80,11 +81,17 @@ const DATA_BSD = [
     title: "Forward vs reverse proxy?",
   },
   {
-    title: "Mutextes And Semaphores"
+    title: "Mutextes And Semaphores",
   },
   {
-    title: "Idempotency in REST"
-  }
+    title: "Idempotency in REST",
+  },
+  {
+    title: "Docker Architecture",
+  },
+  {
+    title: "Kubernetes Architecture",
+  },
 ];
 
 const BackendSD = () => {
@@ -112,6 +119,14 @@ const BackendSD = () => {
           </TitleContainer>
         </ParentContent>
       ))}
+      <iframe
+        src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7222523775513153537"
+        height="1907"
+        width="504"
+        frameborder="0"
+        allowfullscreen=""
+        title="Embedded post"
+      ></iframe>
     </div>
   );
 };

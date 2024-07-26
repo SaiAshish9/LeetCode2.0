@@ -21,12 +21,14 @@ import {
 import axios from "axios";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { BackendSD } from "./components";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const RevisionSheet = () => {
   const [data, setData] = useState(null);
   const [count, setCount] = useState(0);
   const [up, setUp] = useState([]);
   const [selected, setSelected] = useState(0);
+  const navigate = useNavigate();
 
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -124,7 +126,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(0);
-              // navigate("#problems");
+              navigate("#dsa");
             }}
             active={selected === 0}
           >
@@ -133,7 +135,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(1);
-              // navigate("#description");
+              navigate("#cp");
             }}
             active={selected === 1}
           >
@@ -142,7 +144,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(2);
-              // navigate("#description");
+              navigate("#frontend_system_design");
             }}
             active={selected === 2}
           >
@@ -151,7 +153,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(3);
-              // navigate("#description");
+              navigate("#backend_system_design");
             }}
             active={selected === 3}
           >
