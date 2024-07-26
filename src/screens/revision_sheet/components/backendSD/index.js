@@ -60,7 +60,7 @@ const DATA_BSD = [
     title: "How Garbage Collection works in java?",
   },
   {
-    title: "What is a rate limiter?",
+    title: "Explain and design a rate limiter?",
   },
   {
     title: "Offset-based pagination vs Cursor based pagination",
