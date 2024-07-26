@@ -141,13 +141,6 @@ const BackendSD = () => {
           <TitleContainer
             notMaxW1
             onClick={() => {
-              // window.open(
-              //   "/problems/" +
-              //     value.title.toLowerCase().split(" ").join("_") +
-              //     "?tag=" +
-              //     item,
-              //   "_blank"
-              // );
               navigate(encodeURIComponent(value.title) + "#" + hashParam);
             }}
           >
