@@ -88,7 +88,10 @@ const DATA_BSD = [
     title: "Kubernetes Architecture",
   },
   {
-    title: "Centralized Logging Using Kubernetes"
+    title: "Centralized Logging Using Kubernetes",
+  },
+  {
+    title: "SNS vs SQS",
   },
   {
     title: "What is service discovery?",
