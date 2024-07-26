@@ -305,12 +305,16 @@ const RevisionSheet = () => {
                 Back
               </p>
               <br />
-              <Suspense fallback={<>Loading...</>}>
-                {
-                  SD_SOLUTIONING?.[hashParam]?.[
-                    decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
-                  ]
-                }
+              <Suspense fallback={() => <>Loading...</>}>
+                <>
+                  {
+                    SD_SOLUTIONING?.[hashParam]?.[
+                      decodeURIComponent(
+                        pathname.split("/revision_sheet/")?.[1]
+                      )
+                    ]
+                  }
+                </>
               </Suspense>
             </>
           )}
