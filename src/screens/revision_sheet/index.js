@@ -22,6 +22,7 @@ import axios from "axios";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { BackendSD } from "./components";
 import { useLocation, useNavigate } from "react-router-dom";
+import SD_SOLUTIONING from "./data/solutioning";
 
 const RevisionSheet = () => {
   const [data, setData] = useState(null);
@@ -291,6 +292,11 @@ const RevisionSheet = () => {
               </ContentItem>
             ))}
         {selected === 3 && !isDescriptionSet && <BackendSD />}
+        {selected === 3 &&
+          hashParam &&
+          pathname &&
+          pathname.split("/revision_sheet/")?.[1] &&
+          SD_SOLUTIONING[hashParam][pathname]}
       </Content>
     </Container>
   );

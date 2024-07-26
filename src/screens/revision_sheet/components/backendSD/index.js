@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ParentContent } from "../../styles";
 import { TitleContainer } from "../../../qsList/styles";
+import { useNavigate } from "react-router-dom";
 
 const DATA_BSD = [
   {
@@ -111,6 +112,27 @@ const DATA_BSD = [
 
 const BackendSD = () => {
   const [data, setData] = useState(DATA_BSD);
+  const navigate = useNavigate();
+
+  const [hashParam, setHashParam] = useState("");
+
+  useEffect(() => {
+    const extractHashParam = () => {
+      const hash = window.location.hash;
+      if (hash && hash.length > 1) {
+        setHashParam(hash.substring(1));
+      } else {
+        setHashParam("");
+      }
+    };
+
+    extractHashParam();
+
+    window.addEventListener("hashchange", extractHashParam);
+    return () => {
+      window.removeEventListener("hashchange", extractHashParam);
+    };
+  }, []);
 
   return (
     <div>
@@ -126,6 +148,7 @@ const BackendSD = () => {
               //     item,
               //   "_blank"
               // );
+              navigate(value.title + "#" + hashParam);
             }}
           >
             <p>
