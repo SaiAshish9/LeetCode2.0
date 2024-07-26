@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import {
   Container,
@@ -297,13 +297,21 @@ const RevisionSheet = () => {
           pathname &&
           pathname.split("/revision_sheet/")?.[1] && (
             <>
-              <p>Back</p>
+              <p
+                onClick={() => {
+                  navigate(-1);
+                }}
+              >
+                Back
+              </p>
               <br />
-              {
-                SD_SOLUTIONING?.[hashParam]?.[
-                  decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
-                ]
-              }
+              <Suspense fallback={<>Loading...</>}>
+                {
+                  SD_SOLUTIONING?.[hashParam]?.[
+                    decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
+                  ]
+                }
+              </Suspense>
             </>
           )}
       </Content>
