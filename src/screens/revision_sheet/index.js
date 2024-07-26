@@ -30,6 +30,38 @@ const RevisionSheet = () => {
   const [selected, setSelected] = useState(0);
   const navigate = useNavigate();
 
+  const [hashParam, setHashParam] = useState("");
+
+  useEffect(() => {
+    const extractHashParam = () => {
+      const hash = window.location.hash;
+      if (hash && hash.length > 1) {
+        setHashParam(hash.substring(1));
+      } else {
+        setHashParam("");
+      }
+    };
+
+    extractHashParam();
+
+    window.addEventListener("hashchange", extractHashParam);
+    return () => {
+      window.removeEventListener("hashchange", extractHashParam);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (hashParam === "dsa" || hashParam === "") {
+      setSelected(0);
+    } else if (hashParam === "cp") {
+      setSelected(1);
+    } else if (hashParam === "frontend_system_design") {
+      setSelected(2);
+    } else if (hashParam === "backend_system_design") {
+      setSelected(3);
+    }
+  }, [hashParam]);
+
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
 
