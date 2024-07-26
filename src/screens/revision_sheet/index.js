@@ -297,7 +297,7 @@ const RevisionSheet = () => {
             ))}
         {selected === 2 && !isDescriptionSet && <FrontendSD />}
         {selected === 3 && !isDescriptionSet && <BackendSD />}
-        {selected === 3 &&
+        {(selected === 3 || selected === 2) &&
           hashParam &&
           pathname &&
           pathname.split("/revision_sheet/")?.[1] && (
