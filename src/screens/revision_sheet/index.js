@@ -29,10 +29,23 @@ const RevisionSheet = () => {
   const [up, setUp] = useState([]);
   const [selected, setSelected] = useState(0);
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  const [isDescriptionSet, setIsDescriptionSet] = useState(false);
 
   const [hashParam, setHashParam] = useState("");
 
   useEffect(() => {
+    if (pathname && pathname.split("/revision_sheet/")[0]) {
+      setIsDescriptionSet(true);
+    } else {
+      setIsDescriptionSet(false);
+    }
+  }, [pathname]);
+
+  useEffect(() => {
+    console.log({ pathname });
+
     const extractHashParam = () => {
       const hash = window.location.hash;
       if (hash && hash.length > 1) {
