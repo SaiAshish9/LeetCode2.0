@@ -11,7 +11,7 @@ const DATA_FSD = [
     title: "How Caching Works in Google Chrome Browser and React.js?",
   },
   {
-    title: "Reconcilation and diffing algorithm."
+    title: "Reconcilation and diffing algorithm.",
   },
   {
     title:
@@ -56,7 +56,62 @@ const DATA_FSD = [
   },
   {
     title: "Internationalization (i18n)",
-  }
+  },
+  {
+    title: "CSR and SSR",
+  },
+  {
+    title: "Code Splitting",
+  },
+  {
+    title: "pre-render",
+  },
+  {
+    title: "Web Workers Vs Service Workers",
+  },
+  {
+    title: "Static Site Generation (SSR) with and without data",
+  },
+  {
+    title: "Demulsification",
+  },
+  {
+    title: "Proxy objects",
+  },
+  {
+    title: "Incremental Site Generation (ISG)",
+  },
+  {
+    title: "Load JS Asynchronously",
+  },
+  {
+    title: "Lazy Loading",
+  },
+  {
+    title: "Preload, Prefetch and PreConnect",
+  },
+  {
+    title: "Progressive Images",
+  },
+  {
+    title: "Responsive Images",
+  },
+  {
+    title: "SetTimeOut Vs Promises",
+  },
+  {
+    title: "Polyfills",
+  },
+  {
+    title: "WebPack",
+  },
+  {
+    title: "Infinite Scrolling",
+  },
+  {
+    title:
+      "How can we create a new React project from scratch by manually configuring Webpack and Babel, bypassing the use of create-react-app. how create-react-app sets up the configuration for Webpack and the Webpack Dev Server?",
+  },
 ];
 
 const FrontendSD = () => {
