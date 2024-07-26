@@ -24,6 +24,16 @@ export const Content = styled.div`
   }
 `;
 
+export const BackBtn = styled.p`
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+`;
+
 export const ContentText = styled.p`
   font-size: 14px;
   color: rgba(0, 0, 0, 0.65);

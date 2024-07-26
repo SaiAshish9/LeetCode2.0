@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState, Suspense } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Helmet } from "react-helmet";
 import {
   Container,
@@ -9,6 +9,7 @@ import {
   IconCont,
   ParentContent,
   Spacer,
+  BackBtn,
 } from "./styles";
 import {
   ContentTextBold,
@@ -22,7 +23,9 @@ import axios from "axios";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { BackendSD } from "./components";
 import { useLocation, useNavigate } from "react-router-dom";
-import SD_SOLUTIONING from "./data/solutioning";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+
+const Description = lazy(() => import("./components/detail"));
 
 const RevisionSheet = () => {
   const [data, setData] = useState(null);
@@ -297,23 +300,18 @@ const RevisionSheet = () => {
           pathname &&
           pathname.split("/revision_sheet/")?.[1] && (
             <>
-              <p
+              <BackBtn
                 onClick={() => {
                   navigate(-1);
                 }}
               >
-                Back
-              </p>
+                <MdOutlineKeyboardArrowLeft size={24} />
+                <span>Back</span>
+              </BackBtn>
               <br />
-              <Suspense fallback={() => <>Loading...</>}>
+              <Suspense fallback={<div>Loading...</div>}>
                 <>
-                  {
-                    SD_SOLUTIONING?.[hashParam]?.[
-                      decodeURIComponent(
-                        pathname.split("/revision_sheet/")?.[1]
-                      )
-                    ]
-                  }
+                  <Description hashParam={hashParam} pathname={pathname} />
                 </>
               </Suspense>
             </>
