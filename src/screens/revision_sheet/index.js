@@ -292,7 +292,7 @@ const RevisionSheet = () => {
                   )}
               </ContentItem>
             ))}
-        {selected === 3 && <BackendSD />}
+        {selected === 3 && !isDescriptionSet && <BackendSD />}
       </Content>
     </Container>
   );
