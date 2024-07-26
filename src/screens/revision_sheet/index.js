@@ -36,7 +36,7 @@ const RevisionSheet = () => {
   const [hashParam, setHashParam] = useState("");
 
   useEffect(() => {
-    if (pathname && pathname.split("/revision_sheet/")[0]) {
+    if (pathname && pathname.split("/revision_sheet/")?.[1]) {
       setIsDescriptionSet(true);
     } else {
       setIsDescriptionSet(false);
@@ -44,8 +44,6 @@ const RevisionSheet = () => {
   }, [pathname]);
 
   useEffect(() => {
-    console.log({ pathname });
-
     const extractHashParam = () => {
       const hash = window.location.hash;
       if (hash && hash.length > 1) {
