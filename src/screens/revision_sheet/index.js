@@ -295,10 +295,17 @@ const RevisionSheet = () => {
         {selected === 3 &&
           hashParam &&
           pathname &&
-          pathname.split("/revision_sheet/")?.[1] &&
-          SD_SOLUTIONING?.[hashParam]?.[
-            decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
-          ]}
+          pathname.split("/revision_sheet/")?.[1] && (
+            <>
+              <p>Back</p>
+              <br />
+              {
+                SD_SOLUTIONING?.[hashParam]?.[
+                  decodeURIComponent(pathname.split("/revision_sheet/")?.[1])
+                ]
+              }
+            </>
+          )}
       </Content>
     </Container>
   );
