@@ -148,7 +148,7 @@ const BackendSD = () => {
               //     item,
               //   "_blank"
               // );
-              navigate(value.title + "#" + hashParam);
+              navigate(encodeURIComponent(value.title) + "#" + hashParam);
             }}
           >
             <p>
