@@ -134,14 +134,6 @@ const BackendSD = () => {
           </TitleContainer>
         </ParentContent>
       ))}
-      <iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7222523775513153537"
-        height="1907"
-        width="504"
-        frameborder="0"
-        allowfullscreen=""
-        title="Embedded post"
-      ></iframe>
     </div>
   );
 };
