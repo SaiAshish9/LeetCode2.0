@@ -112,6 +112,12 @@ const DATA_FSD = [
     title:
       "How can we create a new React project from scratch by manually configuring Webpack and Babel, bypassing the use of create-react-app. how create-react-app sets up the configuration for Webpack and the Webpack Dev Server?",
   },
+  {
+    title: "Webhooks"
+  },
+  {
+    title: "Polling"
+  }
 ];
 
 const FrontendSD = () => {
