@@ -24,6 +24,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { BackendSD } from "./components";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import FrontendSD from "./components/frontendSD";
 
 const Description = lazy(() => import("./components/detail"));
 
@@ -294,6 +295,7 @@ const RevisionSheet = () => {
                   )}
               </ContentItem>
             ))}
+        {selected === 2 && !isDescriptionSet && <FrontendSD />}
         {selected === 3 && !isDescriptionSet && <BackendSD />}
         {selected === 3 &&
           hashParam &&
