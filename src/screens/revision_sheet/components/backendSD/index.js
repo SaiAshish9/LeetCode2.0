@@ -70,6 +70,12 @@ const DATA_BSD = [
     title: "Define CAP theorem",
   },
   {
+    title: "Consistent Hashing"
+  },
+  {
+    title: "Polling Internal Working."
+  },
+  {
     title: "SQL vs NoSQL",
   },
   {
