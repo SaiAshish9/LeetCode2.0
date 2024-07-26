@@ -28,7 +28,7 @@ const DATA_FSD = [
   },
   {
     title:
-      "How can we print a message when a promise is fulfilled within a Promise.all chain? Additionally, what are the different states and methods of promises that support parallel execution?How can we determine the status of a promise, and how do promises differ from async/await?",
+      "How can we print a message when a promise is fulfilled within a Promise.all chain? Additionally, what are the different states and methods of promises that support parallel execution? How can we determine the status of a promise, and how do promises differ from async/await?",
   },
   {
     title: "How Push Notifications works internally at Web, Android & iOS?",
@@ -110,7 +110,7 @@ const DATA_FSD = [
   },
   {
     title:
-      "How can we create a new React project from scratch by manually configuring Webpack and Babel, bypassing the use of create-react-app. how create-react-app sets up the configuration for Webpack and the Webpack Dev Server?",
+      "How can we create a new React project from scratch by manually configuring Webpack and Babel, bypassing the use of create-react-app. How create-react-app sets up the configuration for Webpack and the Webpack Dev Server?",
   },
   {
     title: "Webhooks"
