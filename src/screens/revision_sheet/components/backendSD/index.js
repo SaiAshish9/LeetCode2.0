@@ -85,6 +85,9 @@ const DATA_BSD = [
     title: "NgInx Architecture",
   },
   {
+    title: "Docker Container vs Kubernetes Pod",
+  },
+  {
     title: "Centralized Logging Using Kubernetes",
   },
   {
