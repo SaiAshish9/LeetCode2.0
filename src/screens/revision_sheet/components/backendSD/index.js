@@ -126,6 +126,12 @@ const DATA_BSD = [
   {
     title: "How Push Notifications works internally at Web, Android & iOS?",
   },
+  {
+    title: "Servless Architecture?"
+  },
+  {
+    title: "Why AWS Lambda is serverless?"
+  }
 ];
 
 const BackendSD = () => {
