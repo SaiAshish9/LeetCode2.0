@@ -94,6 +94,9 @@ const DATA_BSD = [
     title: "SNS vs SQS",
   },
   {
+    title: "What is a node in docker swarm architecture?"
+  },
+  {
     title: "What is service discovery?",
   },
   {
