@@ -19003,6 +19003,7 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
     <>
       {" "}
       <h2>Explanation of Find the Duplicate Number Solution</h2>
+      <p>Floyd's Tortoise and Hare algorithm</p>
       <ul>
         <li>
           <code>public int findDuplicate(int[] nums)</code>: This method finds
