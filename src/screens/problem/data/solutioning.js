@@ -10195,6 +10195,19 @@ const SOLUTIONING = {
   31: (
     <>
       {" "}
+      <h2>Logic:</h2>
+      <ul>
+        <li>Initial array: [1, 2, 3] </li>
+        <li>
+          First decreasing element from the end is at index 1 (nums[1] = 2).
+        </li>
+        <li>Element just larger than nums[1] is nums[2] = 3.</li>
+        <li>Swap nums[1] and nums[2] to get [1, 3, 2].</li>
+        <li>
+          Reverse the elements after index 1 (which doesn't change the array in
+          this case).
+        </li>
+      </ul>
       <h2>Steps:</h2>
       <ul>
         <li>
