@@ -183,6 +183,8 @@ export const TitleContainer = styled.div`
     color: #1890ff;
     width: fit-content;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
     ${({ notMaxW1 }) =>
       !notMaxW1 &&
       css`

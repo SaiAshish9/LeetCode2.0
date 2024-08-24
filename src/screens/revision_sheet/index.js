@@ -25,6 +25,8 @@ import { BackendSD } from "./components";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import FrontendSD from "./components/frontendSD";
+import { FaStar } from "react-icons/fa";
+import STAR from "./data/star";
 
 const Description = lazy(() => import("./components/detail"));
 
@@ -287,6 +289,15 @@ const RevisionSheet = () => {
                             }}
                           >
                             <p>
+                              {STAR.includes(+value.qno) && (
+                                <FaStar
+                                  style={{
+                                    position: "relative",
+                                    bottom: 2,
+                                    marginRight: 5,
+                                  }}
+                                />
+                              )}
                               {value.qno}. {value.title}{" "}
                             </p>
                           </TitleContainer>
