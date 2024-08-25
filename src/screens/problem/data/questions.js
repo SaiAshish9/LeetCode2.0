@@ -26045,7 +26045,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <br />
         <strong>Output</strong>
         <br />
-        [null, 4, 5, 5, 8, 8]
+        [null, 4, 5, 5, 8, 8] <br />
         <strong>Explanation</strong>
         <br />
         KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]);
