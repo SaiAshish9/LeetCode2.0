@@ -31235,6 +31235,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         [[],[-2],[0],[-3],[],[],[],[]] <br />
         <strong>Output</strong> <br />
         [null,null,null,null,-3,null,0,-2]
+        <br />
         <strong>Explanation</strong> <br />
         MinStack minStack = new MinStack(); <br />
         minStack.push(-2); <br />
