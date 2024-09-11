@@ -217,7 +217,8 @@ const RevisionSheet = () => {
             {" "}
             <ContentText>
               Existing Total Count: <ContentTextBold>{count} </ContentTextBold>
-              problems.
+              problems. (<ContentTextBold>{STAR.length}{" "}</ContentTextBold>{" "}
+              starred)
             </ContentText>
             <ContentText sm>
               *Note: Click on the tag name highlighted in a different color to
