@@ -36,7 +36,7 @@ const HomeScreen = () => {
       </Helmet>
       <Content>
         <TopLeftContainer>
-          <Banner />
+          {/* <Banner /> */}
           <Tags />
           <Options />
           <DropdownCont />
