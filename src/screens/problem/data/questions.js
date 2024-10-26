@@ -32602,7 +32602,8 @@ for (int i = 0; i &lt; actualLength; i++) {
         You must do it{" "}
         <a
           href="https://en.wikipedia.org/wiki/In-place_algorithm"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           in place
         </a>
@@ -32619,7 +32620,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         style={{ width: 450, height: 169 }}
       />
       <pre>
-        <strong>Input:</strong> matrix = [[1,1,1],[1,0,1],[1,1,1]] <br/>
+        <strong>Input:</strong> matrix = [[1,1,1],[1,0,1],[1,1,1]] <br />
         <strong>Output:</strong> [[1,0,1],[0,0,0],[1,0,1]]
       </pre>
 
@@ -32632,7 +32633,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         style={{ width: 450, height: 137 }}
       />
       <pre>
-        <strong>Input:</strong> matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]] <br/>
+        <strong>Input:</strong> matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]] <br />
         <strong>Output:</strong> [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
       </pre>
 
@@ -32673,6 +32674,83 @@ for (int i = 0; i &lt; actualLength; i++) {
           the best solution.
         </li>
         <li>Could you devise a constant space solution?</li>
+      </ul>
+    </div>
+  ),
+  74: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an <code>m x n</code> integer matrix <code>matrix</code>{" "}
+        with the following two properties:
+      </p>
+
+      <ul>
+        <li>Each row is sorted in non-decreasing order.</li>
+        <li>
+          The first integer of each row is greater than the last integer of the
+          previous row.
+        </li>
+      </ul>
+
+      <p>
+        Given an integer <code>target</code>, return <code>true</code>{" "}
+        <em>if</em> <code>target</code> <em>is in</em> <code>matrix</code>{" "}
+        <em>or</em> <code>false</code> <em>otherwise</em>.
+      </p>
+
+      <p>
+        You must write a solution in <code>O(log(m * n))</code> time complexity.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/10/05/mat.jpg"
+        style={{ width: 322, height: 242 }}
+      />
+      <pre>
+        <strong>Input:</strong> matrix =
+        [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3 <br />
+        <strong>Output:</strong> true
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/10/05/mat2.jpg"
+        style={{ width: 322, height: 242 }}
+      />
+      <pre>
+        <strong>Input:</strong> matrix =
+        [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13 <br />
+        <strong>Output:</strong> false
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>m == matrix.length</code>
+        </li>
+        <li>
+          <code>n == matrix[i].length</code>
+        </li>
+        <li>
+          <code>1 &lt;= m, n &lt;= 100</code>
+        </li>
+        <li>
+          <code>
+            -10<sup>4</sup> &lt;= matrix[i][j], target &lt;= 10<sup>4</sup>
+          </code>
+        </li>
       </ul>
     </div>
   ),
