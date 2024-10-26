@@ -217,7 +217,7 @@ const RevisionSheet = () => {
             {" "}
             <ContentText>
               Existing Total Count: <ContentTextBold>{count} </ContentTextBold>
-              problems. (<ContentTextBold>{STAR.length}{" "}</ContentTextBold>{" "}
+              problems. (<ContentTextBold>{STAR.length} </ContentTextBold>{" "}
               starred)
             </ContentText>
             <ContentText sm>
@@ -270,41 +270,89 @@ const RevisionSheet = () => {
                   </IconCont>
                 </ContentText>
                 {up.includes(key) &&
-                  data[item].map(
-                    (value, _) =>
-                      value.title && (
-                        <ParentContent key={value.title}>
-                          <TitleContainer
-                            notMaxW1
-                            onClick={() => {
-                              window.open(
-                                "/problems/" +
-                                  value.title
-                                    .toLowerCase()
-                                    .split(" ")
-                                    .join("_") +
-                                  "?tag=" +
-                                  item,
-                                "_blank"
-                              );
-                            }}
-                          >
-                            <p>
-                              {STAR.includes(+value.qno) && (
-                                <FaStar
-                                  style={{
-                                    position: "relative",
-                                    bottom: 2,
-                                    marginRight: 5,
-                                  }}
-                                />
-                              )}
-                              {value.qno}. {value.title}{" "}
-                            </p>
-                          </TitleContainer>
-                        </ParentContent>
-                      )
-                  )}
+                  data[item]
+                    .filter((x) => STAR.includes(+x.qno))
+                    .map(
+                      (value, key) =>
+                        value.title && (
+                          <ParentContent key={value.title}>
+                            <TitleContainer
+                              notMaxW1
+                              onClick={() => {
+                                window.open(
+                                  "/problems/" +
+                                    value.title
+                                      .toLowerCase()
+                                      .split(" ")
+                                      .join("_") +
+                                    "?tag=" +
+                                    item,
+                                  "_blank"
+                                );
+                              }}
+                            >
+                              <p>
+                                {STAR.includes(+value.qno) && (
+                                  <>
+                                    <FaStar
+                                      style={{
+                                        position: "relative",
+                                        bottom: 2,
+                                        marginRight: 5,
+                                      }}
+                                    />
+                                    {+key + 1}
+                                    {"  "}
+                                  </>
+                                )}
+                                {value.qno}. {value.title}{" "}
+                              </p>
+                            </TitleContainer>
+                          </ParentContent>
+                        )
+                    )}
+                {up.includes(key) &&
+                  data[item]
+                    .filter((x) => !STAR.includes(+x.qno))
+                    .map(
+                      (value, key) =>
+                        value.title && (
+                          <ParentContent key={value.title}>
+                            <TitleContainer
+                              notMaxW1
+                              onClick={() => {
+                                window.open(
+                                  "/problems/" +
+                                    value.title
+                                      .toLowerCase()
+                                      .split(" ")
+                                      .join("_") +
+                                    "?tag=" +
+                                    item,
+                                  "_blank"
+                                );
+                              }}
+                            >
+                              <p>
+                                {STAR.includes(+value.qno) && (
+                                  <>
+                                    <FaStar
+                                      style={{
+                                        position: "relative",
+                                        bottom: 2,
+                                        marginRight: 5,
+                                      }}
+                                    />
+                                    {+key + 1}
+                                    {"  "}
+                                  </>
+                                )}
+                                {value.qno}. {value.title}{" "}
+                              </p>
+                            </TitleContainer>
+                          </ParentContent>
+                        )
+                    )}
               </ContentItem>
             ))}
         {selected === 2 && !isDescriptionSet && <FrontendSD />}
