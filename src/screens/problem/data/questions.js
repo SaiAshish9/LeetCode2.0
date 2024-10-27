@@ -32970,7 +32970,8 @@ for (int i = 0; i &lt; actualLength; i++) {
           alt=""
           src="https://assets.leetcode.com/uploads/2021/02/19/xogrid.jpg"
           style={{ width: 367, height: 158 }}
-        />
+        />{" "}
+        <br />
         <p>
           In the above diagram, the bottom region is not captured because it is
           on the edge of the board and cannot be surrounded.
