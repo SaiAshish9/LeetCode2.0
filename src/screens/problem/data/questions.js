@@ -33295,8 +33295,8 @@ for (int i = 0; i &lt; actualLength; i++) {
       />{" "}
       <br />
       <pre>
-        <strong>Input:</strong> matrix = [[9,9,4],[6,6,8],[2,1,1]]
-        <strong>Output:</strong> 4<strong>Explanation:</strong> The longest
+        <strong>Input:</strong> matrix = [[9,9,4],[6,6,8],[2,1,1]] <br/>
+        <strong>Output:</strong> 4<br/><strong>Explanation:</strong> The longest
         increasing path is <code>[1, 2, 6, 9]</code>.
       </pre>
       <p>
