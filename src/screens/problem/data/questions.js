@@ -34502,7 +34502,7 @@ for (int i = 0; i &lt; actualLength; i++) {
             <img
               alt=""
               src="https://assets.leetcode.com/uploads/2019/10/25/untitled-diagram-6.jpg"
-              style="width: 161px; height: 121px;"
+              style={{ width: 161, height: 121 }}
             />
           </strong>
         </p>
