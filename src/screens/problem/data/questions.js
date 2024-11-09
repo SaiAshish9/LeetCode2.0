@@ -34643,7 +34643,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <b>Example 1:</b>
       </p>
       <pre>
-        <b>Input:</b>
+        <p>Input:</p>
         {`[
   "abcd",
   "bnrt",
@@ -34651,10 +34651,10 @@ for (int i = 0; i &lt; actualLength; i++) {
   "dtye"
 ]`}
         <br />
-        <b>Output:</b>
+        <p>Output:</p>
         true
         <br />
-        <b>Explanation:</b>
+        <p>Explanation:</p>
         <br />
         The first row and first column both read "abcd".
         <br />
@@ -34672,7 +34672,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <b>Example 2:</b>
       </p>
       <pre>
-        <b>Input:</b>
+        <p>Input:</p>
         <br />
         {`[
   "abcd",
@@ -34681,10 +34681,10 @@ for (int i = 0; i &lt; actualLength; i++) {
   "dt"
 ]`}
         <br />
-        <b>Output:</b>
+        <p>Output:</p>
         true
         <br />
-        <b>Explanation:</b>
+        <p>Explanation:</p>
         <br />
         The first row and first column both read "abcd".
         <br />
@@ -34703,13 +34703,13 @@ for (int i = 0; i &lt; actualLength; i++) {
         <b>Example 3:</b>
       </p>
       <pre>
-        <b>Input:</b>
+        <p>Input:</p>
         [ "ball", "area", "read", "lady" ]
         <br />
-        <b>Output:</b>
+        <p>Output:</p>
         false
         <br />
-        <b>Explanation:</b>
+        <p>Explanation:</p>
         <br />
         The third row reads "read" while the third column reads "lead".
         <br />
