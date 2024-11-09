@@ -33725,6 +33725,7 @@ for (int i = 0; i &lt; actualLength; i++) {
       Given a 01 matrix <b>M</b>, find the longest line of consecutive one in
       the matrix. The line could be horizontal, vertical, diagonal or
       anti-diagonal.
+      <br /> <br />
       <p>
         <b>Example:</b>
         <br />
