@@ -35186,6 +35186,92 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  766: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an <code>m x n</code> <code>matrix</code>, return&nbsp;
+        <em>
+          <code>true</code>&nbsp;if the matrix is Toeplitz. Otherwise, return{" "}
+          <code>false</code>.
+        </em>
+      </p>
+
+      <p>
+        A matrix is <strong>Toeplitz</strong> if every diagonal from top-left to
+        bottom-right has the same elements.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/11/04/ex1.jpg"
+        style={{ width: 322, height: 242 }}
+      />
+      <pre>
+        <strong>Input:</strong> matrix = [[1,2,3,4],[5,1,2,3],[9,5,1,2]] <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong> <br />
+        In the above grid, the&nbsp;diagonals are: <br />
+        "[9]", "[5, 5]", "[1, 1, 1]", "[2, 2, 2]", "[3, 3]", "[4]". <br />
+        In each diagonal all elements are the same, so the answer is True.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/11/04/ex2.jpg"
+        style={{ width: 162, height: 162 }}
+      />
+      <pre>
+        <strong>Input:</strong> matrix = [[1,2],[2,2]] <br />
+        <strong>Output:</strong> false <br />
+        <strong>Explanation:</strong> <br />
+        The diagonal "[1, 2]" has different elements.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>m == matrix.length</code>
+        </li>
+        <li>
+          <code>n == matrix[i].length</code>
+        </li>
+        <li>
+          <code>1 &lt;= m, n &lt;= 20</code>
+        </li>
+        <li>
+          <code>0 &lt;= matrix[i][j] &lt;= 99</code>
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Follow up:</strong>
+      </p>
+
+      <ul>
+        <li>
+          What if the <code>matrix</code> is stored on disk, and the memory is
+          limited such that you can only load at most one row of the matrix into
+          the memory at once?
+        </li>
+        <li>
+          What if the <code>matrix</code> is so large that you can only load up
+          a partial row into the memory at once?
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
