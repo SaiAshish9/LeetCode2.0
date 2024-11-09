@@ -34906,7 +34906,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         :
       </p>
 
-      <ol>
+      <ul>
         <li>
           If a mine <code>'M'</code> is revealed, then the game is over. You
           should change it to <code>'X'</code>.
@@ -34922,7 +34922,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           <code>'8'</code>) representing the number of adjacent mines.
         </li>
         <li>Return the board when no more squares will be revealed.</li>
-      </ol>
+      </ul>
 
       <p>&nbsp;</p>
       <p>
