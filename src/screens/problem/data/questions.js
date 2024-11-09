@@ -34761,8 +34761,9 @@ for (int i = 0; i &lt; actualLength; i++) {
       <pre>
         <strong>Input:</strong> maze =
         [[0,0,1,0,0],[0,0,0,0,0],[0,0,0,1,0],[1,1,0,1,1],[0,0,0,0,0]], start =
-        [0,4], destination = [4,4]
+        [0,4], destination = [4,4] <br />
         <strong>Output:</strong> true
+        <br />
         <strong>Explanation:</strong> One possible way is : left -&gt; down
         -&gt; left -&gt; down -&gt; right -&gt; down -&gt; right.
       </pre>
