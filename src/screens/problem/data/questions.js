@@ -34068,6 +34068,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         [[1,1,1,1,1,1,1,0],[1,0,0,0,0,1,1,0],[1,0,1,0,1,1,1,0],
         <br />
         [1,0,0,0,0,1,0,1],[1,1,1,1,1,1,1,0]]
+        <br />
         <strong>Output:</strong> 2 <br />
         <strong>Explanation:</strong> <br />
         Islands in gray are closed because they are completely surrounded by
