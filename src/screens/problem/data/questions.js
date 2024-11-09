@@ -34650,10 +34650,10 @@ for (int i = 0; i &lt; actualLength; i++) {
   "crmy",
   "dtye"
 ]`}
-        <br />
+        <br /> <br />
         <p>Output:</p>
         true
-        <br />
+        <br /> <br />
         <p>Explanation:</p>
         <br />
         The first row and first column both read "abcd".
@@ -34673,17 +34673,17 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
       <pre>
         <p>Input:</p>
-        <br />
+        <br /> <br />
         {`[
   "abcd",
   "bnrt",
   "crm",
   "dt"
 ]`}
-        <br />
+        <br /> <br />
         <p>Output:</p>
         true
-        <br />
+        <br /> <br />
         <p>Explanation:</p>
         <br />
         The first row and first column both read "abcd".
@@ -34705,10 +34705,10 @@ for (int i = 0; i &lt; actualLength; i++) {
       <pre>
         <p>Input:</p>
         [ "ball", "area", "read", "lady" ]
-        <br />
+        <br /> <br />
         <p>Output:</p>
         false
-        <br />
+        <br /> <br />
         <p>Explanation:</p>
         <br />
         The third row reads "read" while the third column reads "lead".
