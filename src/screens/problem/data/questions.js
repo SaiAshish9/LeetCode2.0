@@ -33720,6 +33720,26 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  562: (
+    <div class="markdown-body div-width">
+      Given a 01 matrix <b>M</b>, find the longest line of consecutive one in
+      the matrix. The line could be horizontal, vertical, diagonal or
+      anti-diagonal.
+      <p>
+        <b>Example:</b>
+        <br />
+      </p>
+      <pre>
+        <b>Input:</b>
+        <br />
+        {`[[0,1,1,0],
+ [0,1,1,0],
+ [0,0,0,1]]`}
+        <br />
+        <b>Output:</b> 3
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
