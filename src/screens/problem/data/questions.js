@@ -34508,7 +34508,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         </p>
 
         <pre>
-          <strong>Input:</strong> mat = [[0,0,0,1],[0,0,1,1],[0,1,1,1]]
+          <strong>Input:</strong> mat = [[0,0,0,1],[0,0,1,1],[0,1,1,1]] <br />
           <strong>Output:</strong> 1
         </pre>
 
