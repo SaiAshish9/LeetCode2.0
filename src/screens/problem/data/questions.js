@@ -35819,7 +35819,11 @@ for (int i = 0; i &lt; actualLength; i++) {
           n<sup>2</sup>
         </code>{" "}
         in a{" "}
-        <a href="https://en.wikipedia.org/wiki/Boustrophedon" target="_blank" rel="noreferrer">
+        <a
+          href="https://en.wikipedia.org/wiki/Boustrophedon"
+          target="_blank"
+          rel="noreferrer"
+        >
           <strong>Boustrophedon style</strong>
         </a>{" "}
         starting from the bottom left of the board (i.e.{" "}
@@ -35960,6 +35964,123 @@ for (int i = 0; i &lt; actualLength; i++) {
           </code>{" "}
           are not the starting points of any snake or ladder.
         </li>
+      </ul>
+    </div>
+  ),
+  980: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an <code>m x n</code> integer array <code>grid</code>{" "}
+        where <code>grid[i][j]</code> could be:
+      </p>
+
+      <ul>
+        <li>
+          <code>1</code> representing the starting square. There is exactly one
+          starting square.
+        </li>
+        <li>
+          <code>2</code> representing the ending square. There is exactly one
+          ending square.
+        </li>
+        <li>
+          <code>0</code> representing empty squares we can walk over.
+        </li>
+        <li>
+          <code>-1</code> representing obstacles that we cannot walk over.
+        </li>
+      </ul>
+
+      <p>
+        Return{" "}
+        <em>
+          the number of 4-directional walks from the starting square to the
+          ending square, that walk over every non-obstacle square exactly once
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/08/02/lc-unique1.jpg"
+        style={{ width: 324, height: 245 }}
+      />
+      <pre>
+        <strong>Input:</strong> grid = [[1,0,0,0],[0,0,0,0],[0,0,2,-1]] <br />
+        <strong>Output:</strong> 2 <br />
+        <strong>Explanation:</strong> We have the following two paths: <br />
+        1. (0,0),(0,1),(0,2),(0,3),(1,3),(1,2),(1,1),(1,0),(2,0),(2,1),(2,2){" "}
+        <br />
+        2. (0,0),(1,0),(2,0),(2,1),(1,1),(0,1),(0,2),(0,3),(1,3),(1,2),(2,2)
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/08/02/lc-unique2.jpg"
+        style={{ width: 324, height: 245 }}
+      />
+      <pre>
+        <strong>Input:</strong> grid = [[1,0,0,0],[0,0,0,0],[0,0,0,2]] <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> We have the following four paths: <br />
+        1.
+        (0,0),(0,1),(0,2),(0,3),(1,3),(1,2),(1,1),(1,0),(2,0),(2,1),(2,2),(2,3){" "}
+        <br />
+        2.
+        (0,0),(0,1),(1,1),(1,0),(2,0),(2,1),(2,2),(1,2),(0,2),(0,3),(1,3),(2,3){" "}
+        <br />
+        3.
+        (0,0),(1,0),(2,0),(2,1),(2,2),(1,2),(1,1),(0,1),(0,2),(0,3),(1,3),(2,3){" "}
+        <br />
+        4.
+        (0,0),(1,0),(2,0),(2,1),(1,1),(0,1),(0,2),(0,3),(1,3),(1,2),(2,2),(2,3)
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/08/02/lc-unique3-.jpg"
+        style={{ width: 164, height: 165 }}
+      />
+      <pre>
+        <strong>Input:</strong> grid = [[0,1],[2,0]] <br />
+        <strong>Output:</strong> 0 <br />
+        <strong>Explanation:</strong> There is no path that walks over every
+        empty square exactly once. <br />
+        Note that the starting and ending square can be anywhere in the grid.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>m == grid.length</code>
+        </li>
+        <li>
+          <code>n == grid[i].length</code>
+        </li>
+        <li>
+          <code>1 &lt;= m, n &lt;= 20</code>
+        </li>
+        <li>
+          <code>1 &lt;= m * n &lt;= 20</code>
+        </li>
+        <li>
+          <code>-1 &lt;= grid[i][j] &lt;= 2</code>
+        </li>
+        <li>There is exactly one starting cell and one ending cell.</li>
       </ul>
     </div>
   ),
