@@ -36469,7 +36469,7 @@ for (int i = 0; i &lt; actualLength; i++) {
       [1,1,0]
     ]`}{" "}
         <br />
-        <strong>Output:</strong> 7 <br />
+        <strong>Output:</strong> 7
         <strong>
           {" "}
           <br />
