@@ -36448,7 +36448,8 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <pre>
         <strong>Input:</strong> matrix = [ &nbsp; [0,1,1,1], &nbsp; [1,1,1,1],
-        &nbsp; [0,1,1,1] ]<strong>Output:</strong> 15 <br />
+        &nbsp; [0,1,1,1] ] <br />
+        <strong>Output:</strong> 15 <br />
         <strong>Explanation:</strong> <br />
         There are <strong>10</strong> squares of side 1. <br />
         There are <strong>4</strong> squares of side 2. <br />
@@ -36466,8 +36467,9 @@ for (int i = 0; i &lt; actualLength; i++) {
       [1,0,1],
       [1,1,0],
       [1,1,0]
-    ]`}
-        <strong>Output:</strong> 7
+    ]`}{" "}
+        <br />
+        <strong>Output:</strong> 7 <br />
         <strong>
           {" "}
           <br />
