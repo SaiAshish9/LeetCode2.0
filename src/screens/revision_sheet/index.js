@@ -301,7 +301,7 @@ const RevisionSheet = () => {
                                         marginRight: 5,
                                       }}
                                     />
-                                    {+key + 1}
+                                    {+key + 1}, 
                                     {"  "}
                                   </>
                                 )}
@@ -334,20 +334,7 @@ const RevisionSheet = () => {
                               }}
                             >
                               <p>
-                                {STAR.includes(+value.qno) && (
-                                  <>
-                                    <FaStar
-                                      style={{
-                                        position: "relative",
-                                        bottom: 2,
-                                        marginRight: 5,
-                                      }}
-                                    />
-                                    {+key + 1}
-                                    {"  "}
-                                  </>
-                                )}
-                                {value.qno}. {value.title}{" "}
+                                {+key + 1}, {value.qno}. {value.title}{" "}
                               </p>
                             </TitleContainer>
                           </ParentContent>

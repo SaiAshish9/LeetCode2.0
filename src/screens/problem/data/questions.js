@@ -36661,6 +36661,120 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  1301: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a square <code>board</code>&nbsp;of characters. You can
+        move on the board starting at the bottom right square marked with the
+        character&nbsp;<code>'S'</code>.
+      </p>
+      <p>
+        You need&nbsp;to reach the top left square marked with the character{" "}
+        <code>'E'</code>. The rest of the squares are labeled either with a
+        numeric character&nbsp;<code>1, 2, ..., 9</code> or with an obstacle{" "}
+        <code>'X'</code>. In one move you can go up, left or up-left
+        (diagonally) only if there is no obstacle there.
+      </p>
+      <p>
+        Return a list of two integers: the first integer is the maximum sum of
+        numeric characters you can collect, and the second is the number of such
+        paths that you can take to get that maximum sum,{" "}
+        <strong>
+          taken modulo <code>10^9 + 7</code>
+        </strong>
+        .
+      </p>
+      <p>
+        In case there is no path, return&nbsp;<code>[0, 0]</code>.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>{" "}
+      <pre>
+        <strong>Input:</strong> board = ["E23","2X2","12S"]
+        <br />
+        <strong>Output:</strong> [7,1]
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> board = ["E12","1X1","21S"]
+        <br />
+        <strong>Output:</strong> [4,2]
+        <br />
+      </pre>
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> board = ["E11","XXX","11S"]
+        <br />
+        <strong>Output:</strong> [0,0]
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>2 &lt;= board.length == board[i].length &lt;= 100</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  1351: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a <code>m x n</code> matrix <code>grid</code> which is sorted in
+        non-increasing order both row-wise and column-wise, return{" "}
+        <em>
+          the number of <strong>negative</strong> numbers in
+        </em>{" "}
+        <code>grid</code>.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> grid =
+        [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]] <br />
+        <strong>Output:</strong> 8 <br />
+        <strong>Explanation:</strong> There are 8 negatives number in the
+        matrix.
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> grid = [[3,2],[1,0]] <br />
+        <strong>Output:</strong> 0
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>m == grid.length</code>
+        </li>
+        <li>
+          <code>n == grid[i].length</code>
+        </li>
+        <li>
+          <code>1 &lt;= m, n &lt;= 100</code>
+        </li>
+        <li>
+          <code>-100 &lt;= grid[i][j] &lt;= 100</code>
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+      <strong>Follow up:</strong> Could you find an <code>O(n + m)</code>{" "}
+      solution?
+    </div>
+  ),
 };
 
 export default QUESTIONS;
