@@ -37139,6 +37139,215 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  1605: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given two arrays <code>rowSum</code> and <code>colSum</code> of
+        non-negative integers where <code>rowSum[i]</code> is the sum of the
+        elements in the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        row and <code>colSum[j]</code> is the sum of the elements of the{" "}
+        <code>
+          j<sup>th</sup>
+        </code>{" "}
+        column of a 2D matrix. In other words, you do not know the elements of
+        the matrix, but you do know the sums of each row and column.
+      </p>
+
+      <p>
+        Find any matrix of <strong>non-negative</strong> integers of size{" "}
+        <code>rowSum.length x colSum.length</code> that satisfies the{" "}
+        <code>rowSum</code> and <code>colSum</code> requirements.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          a 2D array representing <strong>any</strong> matrix that fulfills the
+          requirements
+        </em>
+        . It's guaranteed that <strong>at least one </strong>matrix that
+        fulfills the requirements exists.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> rowSum = [3,8], colSum = [4,7] <br />
+        <strong>Output:</strong> [[3,0], <br />
+        [1,7]] <br />
+        <strong>Explanation:</strong> <br />0<sup>th</sup> row: 3 + 0 = 3 ==
+        rowSum[0] <br />1<sup>st</sup> row: 1 + 7 = 8 == rowSum[1] <br />0
+        <sup>th</sup> column: 3 + 1 = 4 == colSum[0] <br />1<sup>st</sup>{" "}
+        column: 0 + 7 = 7 == colSum[1] <br />
+        The row and column sums match, and all matrix elements are non-negative.{" "}
+        <br />
+        Another possible matrix is: [[1,2], [3,5]]
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> rowSum = [5,7,10], colSum = [8,6,8] <br />
+        <strong>Output:</strong> [[0,5,0], <br />
+        [6,1,0], <br />
+        [2,0,8]] <br />
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= rowSum.length, colSum.length &lt;= 500</code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= rowSum[i], colSum[i] &lt;= 10<sup>8</sup>
+          </code>
+        </li>
+        <li>
+          <code>sum(rowSum) == sum(colSum)</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  1632: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an <code>m x n</code> <code>matrix</code>, return{" "}
+        <em>a new matrix </em>
+        <code>answer</code>
+        <em> where </em>
+        <code>answer[row][col]</code>
+        <em> is the </em>
+        <em>
+          <strong>rank</strong> of{" "}
+        </em>
+        <code>matrix[row][col]</code>.
+      </p>
+      <p>
+        The <strong>rank</strong> is an <strong>integer</strong> that represents
+        how large an element is compared to other elements. It is calculated
+        using the following rules:
+      </p>
+      <ul>
+        <li>
+          The rank is an integer starting from <code>1</code>.
+        </li>
+        <li>
+          If two elements <code>p</code> and <code>q</code> are in the{" "}
+          <strong>same row or column</strong>, then:
+          <ul>
+            <li>
+              If <code>p &lt; q</code> then <code>rank(p) &lt; rank(q)</code>
+            </li>
+            <li>
+              If <code>p == q</code> then <code>rank(p) == rank(q)</code>
+            </li>
+            <li>
+              If <code>p &gt; q</code> then <code>rank(p) &gt; rank(q)</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          The <strong>rank</strong> should be as <strong>small</strong> as
+          possible.
+        </li>
+      </ul>
+      <p>
+        The test cases are generated so that <code>answer</code> is unique under
+        the given rules.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/10/18/rank1.jpg"
+        style={{ width: 442, height: 162 }}
+      />{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> matrix = [[1,2],[3,4]]
+        <br />
+        <strong>Output:</strong> [[1,2],[2,3]]
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        The rank of matrix[0][0] is 1 because it is the smallest integer in its
+        row and column.
+        <br />
+        The rank of matrix[0][1] is 2 because matrix[0][1] &gt; matrix[0][0] and
+        matrix[0][0] is rank 1.
+        <br />
+        The rank of matrix[1][0] is 2 because matrix[1][0] &gt; matrix[0][0] and
+        matrix[0][0] is rank 1.
+        <br />
+        The rank of matrix[1][1] is 3 because matrix[1][1] &gt; matrix[0][1],
+        matrix[1][1] &gt; matrix[1][0], and both matrix[0][1] and matrix[1][0]
+        are rank 2.
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/10/18/rank2.jpg"
+        style={{ width: 442, height: 162 }}
+      />{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> matrix = [[7,7],[7,7]]
+        <strong>Output:</strong> [[1,1],[1,1]]
+      </pre>
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/10/18/rank3.jpg"
+        style={{ width: 442, height: 162 }}
+      />{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> matrix =
+        [[20,-21,14],[-19,4,19],[22,-47,24],[-19,4,19]]
+        <br />
+        <strong>Output:</strong> [[4,2,3],[1,3,4],[5,1,6],[1,3,4]]
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>m == matrix.length</code>
+        </li>
+        <li>
+          <code>n == matrix[i].length</code>
+        </li>
+        <li>
+          <code>1 &lt;= m, n &lt;= 500</code>
+        </li>
+        <li>
+          <code>
+            -10<sup>9</sup> &lt;= matrix[row][col] &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
