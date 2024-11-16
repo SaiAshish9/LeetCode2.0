@@ -38569,6 +38569,196 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </article>
   ),
+  2482: (
+    <article role="main" class="blog-post">
+      <p>
+        You are given a <strong>0-indexed</strong>{" "}
+        <code class="language-plaintext highlighter-rouge">m x n</code> binary
+        matrix <code class="language-plaintext highlighter-rouge">grid</code>.
+      </p>
+
+      <p>
+        A <strong>0-indexed</strong>{" "}
+        <code class="language-plaintext highlighter-rouge">m x n</code>{" "}
+        difference matrix{" "}
+        <code class="language-plaintext highlighter-rouge">diff</code> is
+        created with the following procedure:
+      </p>
+
+      <ul>
+        <li>
+          <p>
+            Let the number of ones in the{" "}
+            <code class="language-plaintext highlighter-rouge">ith</code> row be{" "}
+            <code class="language-plaintext highlighter-rouge">onesRowi</code>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let the number of ones in the{" "}
+            <code class="language-plaintext highlighter-rouge">jth</code> column
+            be{" "}
+            <code class="language-plaintext highlighter-rouge">onesColj</code>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let the number of zeros in the{" "}
+            <code class="language-plaintext highlighter-rouge">ith</code> row be{" "}
+            <code class="language-plaintext highlighter-rouge">zerosRowi</code>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let the number of zeros in the{" "}
+            <code class="language-plaintext highlighter-rouge">jth</code> column
+            be{" "}
+            <code class="language-plaintext highlighter-rouge">zerosColj</code>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <code class="language-plaintext highlighter-rouge">
+              diff[i][j] = onesRowi + onesColj - zerosRowi - zerosColj
+            </code>
+          </p>
+        </li>
+      </ul>
+
+      <p>
+        Return <strong>the difference matrix</strong>{" "}
+        <code class="language-plaintext highlighter-rouge">diff</code>.
+      </p>
+
+      <p>
+        &nbsp;
+        <strong>Example 1:</strong>
+      </p>
+
+      <p>
+        <img
+          src="https://assets.leetcode.com/uploads/2022/11/06/image-20221106171729-5.png"
+          alt=""
+        />
+      </p>
+
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>
+              Input: grid = [[0,1,1],[1,0,1],[0,0,1]] Output:
+              [[0,0,4],[0,0,4],[-2,-2,2]] <br />
+              Explanation: <br />
+              - diff[0][0] = onesRow0 + onesCol0 - zerosRow0 - zerosCol0 = 2 + 1
+              - 1 - 2 = 0 <br />
+              - diff[0][1] = onesRow0 + onesCol1 - zerosRow0 - zerosCol1 = 2 + 1
+              - 1 - 2 = 0 <br />
+              - diff[0][2] = onesRow0 + onesCol2 - zerosRow0 - zerosCol2 = 2 + 3
+              - 1 - 0 = 4 <br />
+              - diff[1][0] = onesRow1 + onesCol0 - zerosRow1 - zerosCol0 = 2 + 1
+              - 1 - 2 = 0 <br />
+              - diff[1][1] = onesRow1 + onesCol1 - zerosRow1 - zerosCol1 = 2 + 1
+              - 1 - 2 = 0 <br />
+              - diff[1][2] = onesRow1 + onesCol2 - zerosRow1 - zerosCol2 = 2 + 3
+              - 1 - 0 = 4 <br />
+              - diff[2][0] = onesRow2 + onesCol0 - zerosRow2 - zerosCol0 = 1 + 1
+              - 2 - 2 = -2 <br />
+              - diff[2][1] = onesRow2 + onesCol1 - zerosRow2 - zerosCol1 = 1 + 1
+              - 2 - 2 = -2 <br />- diff[2][2] = onesRow2 + onesCol2 - zerosRow2
+              - zerosCol2 = 1 + 3 - 2 - 0 = 2
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <p>
+        <img
+          src="https://assets.leetcode.com/uploads/2022/11/06/image-20221106171747-6.png"
+          alt=""
+        />
+      </p>
+
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>
+              Input: grid = [[1,1,1],[1,1,1]] <br />
+              Output: [[5,5,5],[5,5,5]] <br />
+              Explanation: <br />
+              - diff[0][0] = onesRow0 + onesCol0 - zerosRow0 - zerosCol0 = 3 + 2
+              - 0 - 0 = 5 <br />
+              - diff[0][1] = onesRow0 + onesCol1 - zerosRow0 - zerosCol1 = 3 + 2
+              - 0 - 0 = 5 <br />
+              - diff[0][2] = onesRow0 + onesCol2 - zerosRow0 - zerosCol2 = 3 + 2
+              - 0 - 0 = 5 <br />
+              - diff[1][0] = onesRow1 + onesCol0 - zerosRow1 - zerosCol0 = 3 + 2
+              - 0 - 0 = 5 <br />
+              - diff[1][1] = onesRow1 + onesCol1 - zerosRow1 - zerosCol1 = 3 + 2
+              - 0 - 0 = 5 <br />- diff[1][2] = onesRow1 + onesCol2 - zerosRow1 -
+              zerosCol2 = 3 + 2 - 0 - 0 = 5
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <p>
+        &nbsp;
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <p>
+            <code class="language-plaintext highlighter-rouge">
+              m == grid.length
+            </code>
+          </p>
+        </li>
+        <li>
+          <p>
+            <code class="language-plaintext highlighter-rouge">
+              n == grid[i].length
+            </code>
+          </p>
+        </li>
+        <li>
+          <p>
+            <code class="language-plaintext highlighter-rouge">
+              1 &lt;= m, n &lt;= 105
+            </code>
+          </p>
+        </li>
+        <li>
+          <p>
+            <code class="language-plaintext highlighter-rouge">
+              1 &lt;= m * n &lt;= 105
+            </code>
+          </p>
+        </li>
+        <li>
+          <p>
+            <code class="language-plaintext highlighter-rouge">grid[i][j]</code>{" "}
+            is either{" "}
+            <code class="language-plaintext highlighter-rouge">0</code> or{" "}
+            <code class="language-plaintext highlighter-rouge">1</code>.
+          </p>
+        </li>
+      </ul>
+
+      <p>
+        <strong>Complexity:</strong>
+      </p>
+
+      <ul>
+        <li>Time complexity : O(n).</li>
+        <li>Space complexity : O(1).</li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
