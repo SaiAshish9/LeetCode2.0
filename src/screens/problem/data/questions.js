@@ -39232,6 +39232,90 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  2510: (
+    <article role="main" class="blog-post">
+      <p>
+        You are given a <strong>0-indexed</strong> <code>m x n</code>{" "}
+        <strong>binary</strong> matrix <code>grid</code>. You can move from a
+        cell <code>(row, col)</code> to any of the cells{" "}
+        <code>(row + 1, col)</code> or <code>(row, col + 1)</code>.
+      </p>
+
+      <p>
+        Return <code>true</code>
+        <em> if there is a path from </em>
+        <code>(0, 0)</code>
+        <em> to </em>
+        <code>(m - 1, n - 1)</code>
+        <em>
+          {" "}
+          that visits an <strong>equal</strong> number of{" "}
+        </em>
+        <code>0</code>
+        <em>'s and </em>
+        <code>1</code>
+        <em>'s</em>. Otherwise return <code>false</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <p>
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2510.Check%20if%20There%20is%20a%20Path%20With%20Equal%20Number%20of%200%27s%20And%201%27s/images/yetgriddrawio-4.png"
+        />
+      </p>
+      <pre>
+        <strong>Input:</strong> grid = [[0,1,0,0],[0,1,0,0],[1,0,1,0]] <br />
+        <strong>Output:</strong> true
+        <br />
+        <strong>Explanation:</strong> The path colored in blue in the above
+        diagram is a valid path because we have 3 cells with a value of 1 and 3
+        with a value of 0. Since there is a valid path, we return true.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <p>
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2510.Check%20if%20There%20is%20a%20Path%20With%20Equal%20Number%20of%200%27s%20And%201%27s/images/yetgrid2drawio-1.png"
+          style={{ width: 151, height: 151 }}
+        />
+      </p>
+      <pre>
+        <strong>Input:</strong> grid = [[1,1,0],[0,0,1],[1,0,0]]
+        <br />
+        <strong>Output:</strong> false
+        <br />
+        <strong>Explanation:</strong> There is no path in this grid with an
+        equal number of 0's and 1's.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>m == grid.length</code>
+        </li>
+        <li>
+          <code>n == grid[i].length</code>
+        </li>
+        <li>
+          <code>2 &lt;= m, n &lt;= 100</code>
+        </li>
+        <li>
+          <code>grid[i][j]</code> is either <code>0</code> or <code>1</code>.
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
