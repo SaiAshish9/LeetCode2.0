@@ -39316,6 +39316,502 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </article>
   ),
+  3212: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a 2D character matrix <code>grid</code>, where{" "}
+        <code>grid[i][j]</code> is either <code>'X'</code>, <code>'Y'</code>, or{" "}
+        <code>'.'</code>, return the number of{" "}
+        <span
+          data-keyword="submatrix"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:r1i:"
+              >
+                <div>submatrices</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        that contain:
+      </p>
+
+      <ul>
+        <li>
+          <code>grid[0][0]</code>
+        </li>
+        <li>
+          an <strong>equal</strong> frequency of <code>'X'</code> and{" "}
+          <code>'Y'</code>.
+        </li>
+        <li>
+          <strong>at least</strong> one <code>'X'</code>.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong> <br />
+          <span class="example-io">grid = [["X","Y","."],["Y",".","."]]</span>
+        </p>
+
+        <p>
+          <strong>Output:</strong> <span class="example-io">3</span>
+        </p>
+
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+
+        <p>
+          <strong>
+            <img
+              alt=""
+              src="https://assets.leetcode.com/uploads/2024/06/07/examplems.png"
+              style={{
+                padding: 10,
+                background: "rgb(255, 255, 255)",
+                borderRadius: "0.5",
+                width: 17,
+                height: 35,
+              }}
+            />
+          </strong>
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">grid = [["X","X"],["X","Y"]]</span>
+        </p>
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">0</span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+
+        <p>
+          No submatrix has an equal frequency of <code>'X'</code> and{" "}
+          <code>'Y'</code>.
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">grid = [[".","."],[".","."]]</span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Output:</strong> <span class="example-io">0</span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+
+        <p>
+          No submatrix has at least one <code>'X'</code>.
+        </p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= grid.length, grid[i].length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>grid[i][j]</code> is either <code>'X'</code>, <code>'Y'</code>,
+          or <code>'.'</code>.
+        </li>
+      </ul>
+    </div>
+  ),
+  3127: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a 2D matrix <code>grid</code> of size <code>3 x 3</code>{" "}
+        consisting only of characters <code>'B'</code> and <code>'W'</code>.
+        Character <code>'W'</code> represents the white color, and character{" "}
+        <code>'B'</code> represents the black color.
+      </p>
+
+      <p>
+        Your task is to change the color of <strong>at most one</strong> cell so
+        that the matrix has a <code>2 x 2</code> square where all cells are of
+        the same color.
+      </p>
+
+      <p>
+        Return <code>true</code> if it is possible to create a{" "}
+        <code>2 x 2</code> square of the same color, otherwise, return{" "}
+        <code>false</code>.
+      </p>
+
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">
+            grid = [["B","W","B"],["B","W","W"],["B","W","B"]]
+          </span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">true</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>
+          It can be done by changing the color of the <code>grid[0][2]</code>.
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">
+            grid = [["B","W","B"],["W","B","W"],["B","W","B"]]
+          </span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">false</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>It cannot be done by changing at most one cell.</p>
+      </div>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">
+            grid = [["B","W","B"],["B","W","W"],["B","W","W"]]
+          </span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">true</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>
+          The <code>grid</code> already contains a <code>2 x 2</code> square of
+          the same color.
+        </p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>grid.length == 3</code>
+        </li>
+        <li>
+          <code>grid[i].length == 3</code>
+        </li>
+        <li>
+          <code>grid[i][j]</code> is either <code>'W'</code> or <code>'B'</code>
+          .
+        </li>
+      </ul>
+    </div>
+  ),
+  3195: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a 2D <strong>binary</strong> array <code>grid</code>. Find
+        a rectangle with horizontal and vertical sides with the
+        <strong> smallest</strong> area, such that all the 1's in{" "}
+        <code>grid</code> lie inside this rectangle.
+      </p>
+
+      <p>
+        Return the <strong>minimum</strong> possible area of the rectangle.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">grid = [[0,1,0],[1,0,1]]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">6</span>
+        </p>
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <p>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2024/05/08/examplerect0.png"
+            style={{
+              padding: 10,
+              background: "rgb(255, 255, 255)",
+              borderRadius: "0.5rem",
+              width: 279,
+              height: 198,
+            }}
+          />
+        </p>
+        <p>
+          The smallest rectangle has a height of 2 and a width of 3, so it has
+          an area of <code>2 * 3 = 6</code>.
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">grid = [[1,0],[0,0]]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">1</span>
+        </p>
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+        <p>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2024/05/08/examplerect1.png"
+            style={{
+              padding: 10,
+              background: "rgb(255, 255, 255)",
+              borderRadius: "0.5rem",
+              width: 204,
+              height: 201,
+            }}
+          />
+        </p>
+        <p>
+          The smallest rectangle has both height and width 1, so its area is{" "}
+          <code>1 * 1 = 1</code>.
+        </p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= grid.length, grid[i].length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>grid[i][j]</code> is either 0 or 1.
+        </li>
+        <li>
+          The input is generated such that there is at least one 1 in{" "}
+          <code>grid</code>.
+        </li>
+      </ul>
+    </div>
+  ),
+  3197: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a 2D <strong>binary</strong> array <code>grid</code>. You
+        need to find 3 <strong>non-overlapping</strong> rectangles having{" "}
+        <strong>non-zero</strong> areas with horizontal and vertical sides such
+        that all the 1's in <code>grid</code> lie inside these rectangles.
+      </p>
+
+      <p>
+        Return the <strong>minimum</strong> possible sum of the area of these
+        rectangles.
+      </p>
+
+      <p>
+        <strong>Note</strong> that the rectangles are allowed to touch.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">grid = [[1,0,1],[1,1,1]]</span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Output:</strong> <span class="example-io">5</span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+
+        <p>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2024/05/14/example0rect21.png"
+            style={{
+              padding: 10,
+              background: "rgb(255, 255, 255)",
+              borderRadius: "0.5rem",
+              width: 280,
+              height: 198,
+            }}
+          />
+        </p>
+
+        <ul>
+          <li>
+            The 1's at <code>(0, 0)</code> and <code>(1, 0)</code> are covered
+            by a rectangle of area 2.
+          </li>
+          <li>
+            The 1's at <code>(0, 2)</code> and <code>(1, 2)</code> are covered
+            by a rectangle of area 2.
+          </li>
+          <li>
+            The 1 at <code>(1, 1)</code> is covered by a rectangle of area 1.
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">grid = [[1,0,1,0],[0,1,0,1]]</span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Output:</strong> <span class="example-io">5</span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+
+        <p>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2024/05/14/example1rect2.png"
+            style={{
+              padding: 10,
+              background: "rgb(255, 255, 255)",
+              borderRadius: "0.5rem",
+              width: 356,
+              height: 198,
+            }}
+          />
+        </p>
+
+        <ul>
+          <li>
+            The 1's at <code>(0, 0)</code> and <code>(0, 2)</code> are covered
+            by a rectangle of area 3.
+          </li>
+          <li>
+            The 1 at <code>(1, 1)</code> is covered by a rectangle of area 1.
+          </li>
+          <li>
+            The 1 at <code>(1, 3)</code> is covered by a rectangle of area 1.
+          </li>
+        </ul>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= grid.length, grid[i].length &lt;= 30</code>
+        </li>
+        <li>
+          <code>grid[i][j]</code> is either 0 or 1.
+        </li>
+        <li>
+          The input is generated such that there are at least three 1's in{" "}
+          <code>grid</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
