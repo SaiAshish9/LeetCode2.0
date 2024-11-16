@@ -37706,6 +37706,258 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  1981: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an <code>m x n</code> integer matrix <code>mat</code> and
+        an integer <code>target</code>.
+      </p>
+
+      <p>
+        Choose one integer from <strong>each row</strong> in the matrix such
+        that the <strong>absolute difference</strong> between{" "}
+        <code>target</code> and the <strong>sum</strong> of the chosen elements
+        is <strong>minimized</strong>.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the <strong>minimum absolute difference</strong>
+        </em>
+        .
+      </p>
+
+      <p>
+        The <strong>absolute difference</strong> between two numbers{" "}
+        <code>a</code> and <code>b</code> is the absolute value of{" "}
+        <code>a - b</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/08/03/matrix1.png"
+        style={{ width: 181, height: 181 }}
+      />
+      <pre>
+        <strong>Input:</strong> mat = [[1,2,3],[4,5,6],[7,8,9]], target = 13{" "}
+        <br />
+        <strong>Output:</strong> 0<br />
+        <strong>Explanation:</strong> One possible choice is to:
+        <br />
+        - Choose 1 from the first row.
+        <br />
+        - Choose 5 from the second row.
+        <br />
+        - Choose 7 from the third row.
+        <br />
+        The sum of the chosen elements is 13, which equals the target, so the
+        absolute difference is 0.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/08/03/matrix1-1.png"
+        style={{ width: 61, height: 181 }}
+      />
+      <pre>
+        <strong>Input:</strong> mat = [[1],[2],[3]], target = 100
+        <br />
+        <strong>Output:</strong> 94
+        <br />
+        <strong>Explanation:</strong> The best possible choice is to:
+        <br />
+        - Choose 1 from the first row.
+        <br />
+        - Choose 2 from the second row.
+        <br />
+        - Choose 3 from the third row.
+        <br />
+        The sum of the chosen elements is 6, and the absolute difference is 94.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/08/03/matrix1-3.png"
+        style={{ width: 301, height: 61 }}
+      />
+      <pre>
+        <strong>Input:</strong> mat = [[1,2,9,8,7]], target = 6<br />
+        <strong>Output:</strong> 1<br />
+        <strong>Explanation:</strong> The best choice is to choose 7 from the
+        first row.
+        <br />
+        The absolute difference is 1.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>m == mat.length</code>
+        </li>
+        <li>
+          <code>n == mat[i].length</code>
+        </li>
+        <li>
+          <code>1 &lt;= m, n &lt;= 70</code>
+        </li>
+        <li>
+          <code>1 &lt;= mat[i][j] &lt;= 70</code>
+        </li>
+        <li>
+          <code>1 &lt;= target &lt;= 800</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  1992: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> <code>m x n</code> binary
+        matrix <code>land</code> where a <code>0</code> represents a hectare of
+        forested land and a <code>1</code> represents a hectare of farmland.
+      </p>
+
+      <p>
+        To keep the land organized, there are designated rectangular areas of
+        hectares that consist <strong>entirely</strong> of farmland. These
+        rectangular areas are called <strong>groups</strong>. No two groups are
+        adjacent, meaning farmland in one group is <strong>not</strong>{" "}
+        four-directionally adjacent to another farmland in a different group.
+      </p>
+
+      <p>
+        <code>land</code> can be represented by a coordinate system where the
+        top left corner of <code>land</code> is <code>(0, 0)</code> and the
+        bottom right corner of <code>land</code> is <code>(m-1, n-1)</code>.
+        Find the coordinates of the top left and bottom right corner of each{" "}
+        <strong>group</strong> of farmland. A <strong>group</strong> of farmland
+        with a top left corner at{" "}
+        <code>
+          (r<sub>1</sub>, c<sub>1</sub>)
+        </code>{" "}
+        and a bottom right corner at{" "}
+        <code>
+          (r<sub>2</sub>, c<sub>2</sub>)
+        </code>{" "}
+        is represented by the 4-length array{" "}
+        <code>
+          [r<sub>1</sub>, c<sub>1</sub>, r<sub>2</sub>, c<sub>2</sub>].
+        </code>
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          a 2D array containing the 4-length arrays described above for each{" "}
+          <strong>group</strong> of farmland in{" "}
+        </em>
+        <code>land</code>
+        <em>
+          . If there are no groups of farmland, return an empty array. You may
+          return the answer in <strong>any order</strong>
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/07/27/screenshot-2021-07-27-at-12-23-15-copy-of-diagram-drawio-diagrams-net.png"
+        style={{ width: 300, height: 300 }}
+      />
+      <pre>
+        <strong>Input:</strong> land = [[1,0,0],[0,1,1],[0,1,1]] <br />
+        <strong>Output:</strong> [[0,0,0,0],[1,1,2,2]]
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        The first group has a top left corner at land[0][0] and a bottom right
+        corner at land[0][0].
+        <br />
+        The second group has a top left corner at land[1][1] and a bottom right
+        corner at land[2][2].
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/07/27/screenshot-2021-07-27-at-12-30-26-copy-of-diagram-drawio-diagrams-net.png"
+        style={{ width: 200, height: 200 }}
+      />
+      <pre>
+        <strong>Input:</strong> land = [[1,1],[1,1]]
+        <br />
+        <strong>Output:</strong> [[0,0,1,1]]
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        The first group has a top left corner at land[0][0] and a bottom right
+        corner at land[1][1].
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/07/27/screenshot-2021-07-27-at-12-32-24-copy-of-diagram-drawio-diagrams-net.png"
+        style={{ width: 100, height: 100 }}
+      />
+      <pre>
+        <strong>Input:</strong> land = [[0]]
+        <br />
+        <strong>Output:</strong> []
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        There are no groups of farmland.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>m == land.length</code>
+        </li>
+        <li>
+          <code>n == land[i].length</code>
+        </li>
+        <li>
+          <code>1 &lt;= m, n &lt;= 300</code>
+        </li>
+        <li>
+          <code>land</code> consists of only <code>0</code>'s and <code>1</code>
+          's.
+        </li>
+        <li>
+          Groups of farmland are <strong>rectangular</strong> in shape.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
