@@ -118,7 +118,7 @@ const Navbar = () => {
               );
             }}
             alt="pic"
-            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1726099200&v=beta&t=EQ8pnkIbAEz_gdLEobys_8sXAbsPRUzJWhfPqXz4up4"
+            src={ProfileImg}
           />
           <NavIcon noMR>
             <PremiumButton>
