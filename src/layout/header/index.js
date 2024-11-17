@@ -25,9 +25,9 @@ import {
 import BellSvg from "../../assets/bell.svg";
 import FireSvg from "../../assets/fire.svg";
 import LogoDark from "../../assets/logo_dark.svg";
+import ProfileImg from "../../assets/l_profile.jpeg";
 
 import { useNavigate, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet";
 
 const options = [
   {
@@ -164,10 +164,7 @@ const Navbar = () => {
             );
           }}
         >
-          <ProfileAvatar
-            alt="pic"
-            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1726099200&v=beta&t=EQ8pnkIbAEz_gdLEobys_8sXAbsPRUzJWhfPqXz4up4"
-          />
+          <ProfileAvatar alt="pic" src={ProfileImg} />
           <NavItem1 isHome={!isDark}>Sai</NavItem1>
         </StyledDrawerIconContainer>
       </StyledDrawer>
