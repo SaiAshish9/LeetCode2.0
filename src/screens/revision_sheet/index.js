@@ -22,7 +22,7 @@ import {
 import axios from "axios";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { BackendSD } from "./components";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import FrontendSD from "./components/frontendSD";
 import { FaStar } from "react-icons/fa";
@@ -37,6 +37,7 @@ const RevisionSheet = () => {
   const [selected, setSelected] = useState(0);
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const [searchParams] = useSearchParams();
 
   const [isDescriptionSet, setIsDescriptionSet] = useState(false);
 
@@ -129,6 +130,24 @@ const RevisionSheet = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    let tag = searchParams.get("tag");
+    if (tag && data) {
+      tag = tag.split("_").join(" ");
+      const key = Array.from(
+        Object.keys(data).map((x) => x.toLowerCase())
+      ).findIndex((x) => x === tag);
+      console.log({ key, tag });
+      setUp([...up, +key]);
+      const element = document.getElementById(`Tag-${tag}`);
+      const rect = element.getBoundingClientRect();
+      window.scrollTo({
+        top: rect.top + window.scrollY - 60,
+        behavior: "smooth",
+      });
+    }
+  }, [data]);
 
   useEffect(() => {
     const handleKeydown = (event) => {
@@ -239,6 +258,7 @@ const RevisionSheet = () => {
                 <ContentText>
                   {+key + 1}.&nbsp;
                   <p
+                    id={`Tag-${item.toLowerCase().split(" ").join("_")}`}
                     onClick={() => {
                       if (item !== "Additional") {
                         window.open(
@@ -301,8 +321,7 @@ const RevisionSheet = () => {
                                         marginRight: 5,
                                       }}
                                     />
-                                    {+key + 1}, 
-                                    {"  "}
+                                    {+key + 1},{"  "}
                                   </>
                                 )}
                                 {value.qno}. {value.title}{" "}
