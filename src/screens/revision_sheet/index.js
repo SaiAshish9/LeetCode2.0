@@ -138,9 +138,10 @@ const RevisionSheet = () => {
       const key = Array.from(
         Object.keys(data).map((x) => x.toLowerCase())
       ).findIndex((x) => x === tag);
-      console.log({ key, tag });
       setUp([...up, +key]);
-      const element = document.getElementById(`Tag-${tag}`);
+      const element = document.getElementById(
+        `Tag-${tag.split(" ").join("_")}`
+      );
       const rect = element.getBoundingClientRect();
       window.scrollTo({
         top: rect.top + window.scrollY - 60,
@@ -277,6 +278,12 @@ const RevisionSheet = () => {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
+                      navigate(
+                        `/revision_sheet?tag=${item
+                          .toLowerCase()
+                          .split(" ")
+                          .join("_")}`
+                      );
                       if (!up.includes(key)) {
                         setUp([...up, +key]);
                       } else {
