@@ -185,17 +185,20 @@ export const TitleContainer = styled.div`
     margin-right: 10px;
     display: flex;
     align-items: center;
+    max-width: 100%;
     ${({ notMaxW1 }) =>
       !notMaxW1 &&
       css`
         max-width: 87%;
       `};
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   display: flex;
   width: fit-content;
   align-items: center;
   justify-content: space-between;
-  max-width: 100%;
   ${({ maxW }) =>
     maxW &&
     css`
