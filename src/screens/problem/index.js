@@ -69,7 +69,9 @@ import Bell1Svg from "../../assets/lock1.svg";
 import ArrowDownSvg from "../../assets/arrowDown.svg";
 import TickSvg1 from "../../assets/tick1.svg";
 import InfoSvg from "../../assets/info.svg";
-import { useLocation, useNavigate } from "react-router-dom";
+import ProfileImg from "../../assets/l_profile.jpeg";
+
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { QUESTIONS, SOLUTIONING } from "./data";
 import { MdContentCopy } from "react-icons/md";
 import axios from "axios";
@@ -79,9 +81,12 @@ const Problem = () => {
 
   const [selected, setSelected] = useState(0);
   const [hovered, setHovered] = useState(-1);
+  const [revisionData, setRevisionData] = useState(null);
 
   const [solution, setSolution] = useState(null);
   const [qInfo, setQInfo] = useState(null);
+  const [qInfoData, setQInfoData] = useState(null);
+  const [searchParams] = useSearchParams();
 
   const [copied, setCopied] = useState(false);
 
@@ -111,6 +116,7 @@ const Problem = () => {
           // },
         })
       ).data;
+      setQInfoData(qInfoData);
       const solutionsData = (await axios.get(BASE_URL + "solutions.json", {}))
         .data;
       const Q = decodeURIComponent(
@@ -227,6 +233,32 @@ const Problem = () => {
     }
   };
 
+  async function fetchRevisionData() {
+    if (!revisionData?.length) {
+      const data = (await axios.get(BASE_URL + "revision.json", {})).data;
+      const tag = searchParams.get("tag");
+      const result = [];
+      const entries = Object.entries(qInfoData);
+      if (tag in data) {
+        const keys = data[tag].sort((a, b) => a - b);
+        for (const key of keys) {
+          for (const entry of entries) {
+            if (+entry[1].qno === key) {
+              result.push(entry[0]);
+            }
+          }
+        }
+      }
+      setRevisionData(result);
+    }
+  }
+
+  useEffect(() => {
+    if (qInfoData) {
+      fetchRevisionData();
+    }
+  }, [qInfoData]);
+
   return (
     <Container>
       <Header>
@@ -257,12 +289,38 @@ const Problem = () => {
                 style={{ height: "16px" }}
                 alt="img"
                 src={ArrowLeft}
+                onClick={() => {
+                  const tag = searchParams.get("tag");
+                  const Q = decodeURIComponent(
+                    location?.pathname?.split("/problems/")?.[1]
+                  );
+                  const index = revisionData.indexOf(Q);
+                  navigate(
+                    `/problems/${
+                      revisionData[
+                        index - 1 >= 0 ? index - 1 : revisionData.length - 1
+                      ]
+                    }?tag=${tag}`
+                  );
+                }}
               />
             </NavIcon>
             <NavIcon>
               <StyledImage
                 style={{ height: "16px" }}
                 alt="img"
+                onClick={() => {
+                  const tag = searchParams.get("tag");
+                  const Q = decodeURIComponent(
+                    location?.pathname?.split("/problems/")?.[1]
+                  );
+                  const index = revisionData.indexOf(Q);
+                  navigate(
+                    `/problems/${
+                      revisionData[(index + 1) % revisionData.length]
+                    }?tag=${tag}`
+                  );
+                }}
                 src={ArrowRight}
               />
             </NavIcon>
@@ -293,10 +351,7 @@ const Problem = () => {
             <StyledImage style={{ height: "20px" }} alt="img" src={FireSvg} />
             <ScoreText>0</ScoreText>
           </NavIcon>
-          <CircularAvatar
-            alt="pic"
-            src="https://media.licdn.com/dms/image/D5603AQEhLMd3-TOQQQ/profile-displayphoto-shrink_400_400/0/1681547463721?e=1720656000&v=beta&t=STL35y3eyP6AIE96k00KBK4Pokjgf4pK9Jl9U4Xqquw"
-          />
+          <CircularAvatar alt="pic" src={ProfileImg} />
           <NavIcon noMR>
             <PremiumButton>
               <PremiumText>Premium</PremiumText>
