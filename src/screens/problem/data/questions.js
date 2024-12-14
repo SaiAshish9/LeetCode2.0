@@ -40214,6 +40214,51 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  548: (
+    <div class="markdown-body div-width">
+      <p>
+        Given an array with n integers, you need to find if there are triplets
+        (i, j, k) which satisfies following conditions:
+      </p>
+      <ul>
+        <li> 0 &lt; i, i + 1 &lt; j, j + 1 &lt; k &lt; n - 1</li>
+        <li>
+          {" "}
+          Sum of subarrays (0, i - 1), (i + 1, j - 1), (j + 1, k - 1) and (k +
+          1, n - 1) should be equal.
+        </li>
+      </ul>
+      where we define that subarray (L, R) represents a slice of the original
+      array starting from the element indexed L to the element indexed R.
+      <p></p>
+      <p>
+        <b>Example:</b>
+        <br /> <br />
+      </p>
+      <pre>
+        <b>Input:</b> [1,2,1,2,1,2,1]
+        <br />
+        <b>Output:</b> True
+        <b>Explanation:</b>
+        <br />
+        i = 1, j = 3, k = 5.
+        <br />
+        sum(0, i - 1) = sum(0, 0) = 1<br />
+        sum(i + 1, j - 1) = sum(2, 2) = 1<br />
+        sum(j + 1, k - 1) = sum(4, 4) = 1<br />
+        sum(k + 1, n - 1) = sum(6, 6) = 1
+      </pre>
+      <p></p>
+      <b>Note:</b>
+      <ol>
+        <li> 1 &lt;= n &lt;= 2000.</li>
+        <li>
+          {" "}
+          Elements in the given array will be in range [-1,000,000, 1,000,000].
+        </li>
+      </ol>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
