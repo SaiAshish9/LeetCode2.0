@@ -40236,10 +40236,10 @@ for (int i = 0; i &lt; actualLength; i++) {
         <br /> <br />
       </p>
       <pre>
-        <b>Input:</b> [1,2,1,2,1,2,1]
+        <strong>Input:</strong> [1,2,1,2,1,2,1]
         <br />
-        <b>Output:</b> True
-        <b>Explanation:</b>
+        <strong>Output:</strong> True <br />
+        <strong>Explanation:</strong>
         <br />
         i = 1, j = 3, k = 5.
         <br />
