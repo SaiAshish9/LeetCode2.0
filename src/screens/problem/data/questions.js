@@ -41047,6 +41047,48 @@ for (int i = 0; i &lt; actualLength; i++) {
       </ul>
     </div>
   ),
+  644: (
+    <div class="markdown-body div-width">
+      <p>
+        Given an array consisting of <code>n</code> integers, find the
+        contiguous subarray whose <b>length is greater than or equal to</b>{" "}
+        <code>k</code> that has the maximum average value. And you need to
+        output the maximum average value.
+      </p>
+
+      <p>
+        <b>Example 1:</b>
+        <br />
+      </p>
+      <pre>
+        <b>Input:</b> [1,12,-5,-6,50,3], k = 4<br />
+        <b>Output:</b> 12.75
+        <br />
+        <b>Explanation:</b>
+        <br />
+        when length is 5, maximum average value is 10.8,
+        <br />
+        when length is 6, maximum average value is 9.16667.
+        <br />
+        Thus return 12.75.
+      </pre>
+
+      <p>
+        <b>Note:</b>
+        <br />
+      </p>
+      <ul>
+        <li>
+          1 &lt;= <code>k</code> &lt;= <code>n</code> &lt;= 10,000.
+        </li>
+        <li>Elements of the given array will be in range [-10,000, 10,000].</li>
+        <li>
+          The answer with the calculation error less than 10<sup>-5</sup> will
+          be accepted.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
