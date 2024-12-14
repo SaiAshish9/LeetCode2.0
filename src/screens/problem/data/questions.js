@@ -40250,13 +40250,13 @@ for (int i = 0; i &lt; actualLength; i++) {
       </pre>
       <p></p>
       <b>Note:</b>
-      <ol>
+      <ul>
         <li> 1 &lt;= n &lt;= 2000.</li>
         <li>
           {" "}
           Elements in the given array will be in range [-1,000,000, 1,000,000].
         </li>
-      </ol>
+      </ul>
     </div>
   ),
 };
