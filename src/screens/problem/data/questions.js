@@ -25832,6 +25832,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <a
           href="https://leetcode.com/problems/minimum-distance-between-bst-nodes/"
           target="_blank"
+          rel="noreferrer"
         >
           https://leetcode.com/problems/minimum-distance-between-bst-nodes/
         </a>
@@ -27980,7 +27981,11 @@ for (int i = 0; i &lt; actualLength; i++) {
         <li>
           Could you solve the problem in <code>O(n)</code> time complexity? The
           solution may be too advanced for an interview but you may find reading{" "}
-          <a href="http://www.cse.yorku.ca/~andy/pubs/X+Y.pdf" target="_blank">
+          <a
+            href="http://www.cse.yorku.ca/~andy/pubs/X+Y.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
             this paper
           </a>{" "}
           fun.
@@ -33369,6 +33374,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <a
           href="https://en.wikipedia.org/wiki/Moore_neighborhood"
           target="_blank"
+          rel="noreferrer"
         >
           eight neighbors
         </a>{" "}
@@ -33518,7 +33524,11 @@ for (int i = 0; i &lt; actualLength; i++) {
     <article role="main" class="blog-post">
       <p>
         Given two{" "}
-        <a href="https://en.wikipedia.org/wiki/Sparse_matrix" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/Sparse_matrix"
+          target="_blank"
+          rel="noreferrer"
+        >
           sparse matrices
         </a>{" "}
         <code>mat1</code> of size <code>m x k</code> and <code>mat2</code> of
@@ -40306,6 +40316,112 @@ for (int i = 0; i &lt; actualLength; i++) {
           </code>
         </li>
       </ul>
+    </div>
+  ),
+  724: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an array of integers <code>nums</code>, calculate the{" "}
+        <strong>pivot index</strong> of this array.
+      </p>
+
+      <p>
+        The <strong>pivot index</strong> is the index where the sum of all the
+        numbers <strong>strictly</strong> to the left of the index is equal to
+        the sum of all the numbers <strong>strictly</strong> to the index's
+        right.
+      </p>
+
+      <p>
+        If the index is on the left edge of the array, then the left sum is{" "}
+        <code>0</code> because there are no elements to the left. This also
+        applies to the right edge of the array.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the <strong>leftmost pivot index</strong>
+        </em>
+        . If no such index exists, return <code>-1</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,7,3,6,5,6]
+        <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong>
+        <br />
+        The pivot index is 3.
+        <br />
+        Left sum = nums[0] + nums[1] + nums[2] = 1 + 7 + 3 = 11
+        <br />
+        Right sum = nums[4] + nums[5] = 5 + 6 = 11
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3]
+        <br />
+        <strong>Output:</strong> -1
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        There is no index that satisfies the conditions in the problem
+        statement.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [2,1,-1] <br />
+        <strong>Output:</strong> 0<br />
+        <strong>Explanation:</strong>
+        <br />
+        The pivot index is 0.
+        <br />
+        Left sum = 0 (no elements to the left of index 0)
+        <br />
+        Right sum = nums[1] + nums[2] = 1 + -1 = 0
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>-1000 &lt;= nums[i] &lt;= 1000</code>
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Note:</strong> This question is the same as&nbsp;1991:&nbsp;
+        <a
+          href="https://leetcode.com/problems/find-the-middle-index-in-array/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          https://leetcode.com/problems/find-the-middle-index-in-array/
+        </a>
+      </p>
     </div>
   ),
 };
