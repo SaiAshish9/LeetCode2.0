@@ -261,8 +261,12 @@ const RevisionSheet = () => {
             {" "}
             <ContentText>
               Existing Total Count: <ContentTextBold>{count} </ContentTextBold>
-              problems. (<ContentTextBold>{leftOverCount}</ContentTextBold> unsolved) (
-              <ContentTextBold>{STAR.length}</ContentTextBold> starred)
+              problems. (<ContentTextBold>
+                {leftOverCount}{" "}
+              </ContentTextBold>{" "}
+              unsolved) (
+              <ContentTextBold>{count - leftOverCount}</ContentTextBold> solved)
+              (<ContentTextBold>{STAR.length}</ContentTextBold> starred)
             </ContentText>
             <ContentText sm>
               *Note: Click on the tag name highlighted in a different color to
