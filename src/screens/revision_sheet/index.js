@@ -38,6 +38,7 @@ const RevisionSheet = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [searchParams] = useSearchParams();
+  const [leftOverCount, setLeftOverCount] = useState(0);
 
   const [isDescriptionSet, setIsDescriptionSet] = useState(false);
 
@@ -80,6 +81,29 @@ const RevisionSheet = () => {
       setSelected(3);
     }
   }, [hashParam]);
+
+  async function fetchSolutions(params) {
+    const solutions = (await axios.get(BASE_URL + "solutions.json", {})).data;
+    const revision = (await axios.get(BASE_URL + "revision.json", {})).data;
+    let count = 0;
+
+    const qnos = Array.from(new Set(Object.values(revision).flat()));
+
+    for (let qno of qnos) {
+      const values = Object.values(solutions[qno]?.["java"])?.filter(
+        (val) => val?.length > 0
+      );
+      if (values?.length > 0) {
+        count++;
+      }
+    }
+
+    setLeftOverCount(qnos.length - count);
+  }
+
+  useEffect(() => {
+    fetchSolutions();
+  }, []);
 
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -237,8 +261,8 @@ const RevisionSheet = () => {
             {" "}
             <ContentText>
               Existing Total Count: <ContentTextBold>{count} </ContentTextBold>
-              problems. (<ContentTextBold>{STAR.length} </ContentTextBold>{" "}
-              starred)
+              problems. (<ContentTextBold>{leftOverCount}</ContentTextBold> unsolved) (
+              <ContentTextBold>{STAR.length}</ContentTextBold> starred)
             </ContentText>
             <ContentText sm>
               *Note: Click on the tag name highlighted in a different color to
