@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits.h>
 #include <cmath>
-#include <bits/stdc++.h>
+#include <map>
 
 using namespace std;
 
@@ -35,8 +35,10 @@ int main()
     cout << u << endl
          << s << endl;
     map<int, char> m = {{1, 'A'}, {2, 'B'}, {3, 'C'}, {4, 'D'}, {5, 'E'}};
-    for (auto [k, v] : m)
+    for (const auto c : m)
     {
-        cout << k << ": " << v << endl;
+        cout << c.first << ": " << c.second << endl;
     }
 }
+
+// clang++ -std=c++17 src/test.cpp -o test && ./test
