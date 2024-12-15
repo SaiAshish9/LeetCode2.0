@@ -90,10 +90,17 @@ const RevisionSheet = () => {
     const qnos = Array.from(new Set(Object.values(revision).flat()));
 
     for (let qno of qnos) {
-      const values = Object.values(solutions[qno]?.["java"])?.filter(
-        (val) => val?.length > 0
-      );
-      if (values?.length > 0) {
+      const values = Object.values(solutions[qno]?.["java"])
+        ? Object.values(solutions[qno]?.["java"])?.filter(
+            (val) => val?.length > 0
+          )
+        : [];
+      const values1 = solutions[qno]?.["c++"]
+        ? Object.values(solutions[qno]?.["c++"])?.filter(
+            (val) => val?.length > 0
+          )
+        : [];
+      if (values?.length > 0 || values1?.length > 0) {
         count++;
       }
     }
