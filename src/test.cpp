@@ -98,7 +98,7 @@ inline void operation ::division()
 class box
 {
 public:
-    int length;
+    int *length;
     int breadth;
     int height;
     int *p;
@@ -108,7 +108,7 @@ public:
     void set_dimensions(int length1, int breadth1,
                         int height1, int x)
     {
-        length = length1;
+        *length = length1;
         breadth = breadth1;
         height = height1;
         p = new int;
@@ -119,7 +119,7 @@ public:
     // of the Box object
     void show_data()
     {
-        cout << " Length = " << length
+        cout << " Length = " << *length
              << "\n Breadth = " << breadth
              << "\n Height = " << height
              << "\n P int pointing to = " << p
@@ -141,7 +141,8 @@ int main()
     // then copy is made through
     // COPY CONSTRUCTOR
     box B2 = B1;
-    B1.length = 10;
+    int x = 10;
+    B1.length = &x;
 
     // When copying the data of object
     // after initialization then the
