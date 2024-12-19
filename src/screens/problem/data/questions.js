@@ -41399,7 +41399,7 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>{" "}
       <br />
       <pre>
-        <strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 0
+        <strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 0 <br />
         <strong>Output:</strong> 4
       </pre>
       <p>
@@ -41407,7 +41407,7 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>{" "}
       <br />
       <pre>
-        <strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 3
+        <strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 3 <br />
         <strong>Output:</strong> -1
       </pre>
       <p>
@@ -41415,7 +41415,12 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
       <br />
       <pre>
-        <strong>Input:</strong> nums = [1], target = 0<strong>Output:</strong>{" "}
+        <strong>Input:</strong> nums = [1], target = 0
+        <strong>
+          {" "}
+          <br />
+          Output:
+        </strong>{" "}
         -1
       </pre>
       <p>&nbsp;</p>
