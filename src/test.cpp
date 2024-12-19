@@ -2,6 +2,8 @@
 #include <limits.h>
 #include <cmath>
 #include <map>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -128,32 +130,42 @@ public:
 };
 
 // Driver Code
-int main()
-{
-    // Object of class Box
-    box B1, B3, B2;
+// int main()
+// {
+//     // Object of class Box
+//     box B1, B3, B2;
 
-    // Set dimensions of Box B1
-    B1.set_dimensions(14, 12, 16, 100);
+//     // Set dimensions of Box B1
+//     B1.set_dimensions(14, 12, 16, 100);
 
-    // When copying the data of object
-    // at the time of initialization
-    // then copy is made through
-    // COPY CONSTRUCTOR
-    B2 = B1;
-    int x = 10;
-    B1.length = &x;
+//     // When copying the data of object
+//     // at the time of initialization
+//     // then copy is made through
+//     // COPY CONSTRUCTOR
+//     B2 = B1;
+//     int x = 10;
+//     B1.length = &x;
 
-    // When copying the data of object
-    // after initialization then the
-    // copy is done through DEFAULT
-    // ASSIGNMENT OPERATOR
-    B3 = B1;
-    B1.show_data();
-    B2.show_data();
-    B3.show_data();
+//     // When copying the data of object
+//     // after initialization then the
+//     // copy is done through DEFAULT
+//     // ASSIGNMENT OPERATOR
+//     B3 = B1;
+//     B1.show_data();
+//     B2.show_data();
+//     B3.show_data();
 
-    return 0;
-}
+//     return 0;
+// }
 
 // clang++ -std=c++17 src/test.cpp -o test && ./test
+
+int main()
+{
+    int arr[] = {1, 2, 3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    vector<int> v(arr, arr + n);
+    int x = binary_search(v.begin(), v.end(), 2);
+    v.erase(find(v.begin(),v.end(),1));
+    cout << v.at(1) << endl;
+}
