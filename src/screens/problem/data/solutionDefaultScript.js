@@ -8,7 +8,7 @@ const title = document
   .join("-");
 for (let i = 0; i < id.length; i++) {
   res[id[i]] = {};
-  res[id[i]]["java"] = {};
-  res[id[i]]["java"][title] = "";
+  res[id[i]]["solution"] = {};
+  res[id[i]]["solution"][title] = "";
 }
 console.log(res);

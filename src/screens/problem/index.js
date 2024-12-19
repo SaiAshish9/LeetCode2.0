@@ -82,7 +82,7 @@ const Problem = () => {
   const [selected, setSelected] = useState(0);
   const [hovered, setHovered] = useState(-1);
   const [revisionData, setRevisionData] = useState(null);
-  const [language, setLanguage] = useState("java");
+  const [language, setLanguage] = useState("solution");
 
   const [solution, setSolution] = useState(null);
   const [qInfo, setQInfo] = useState(null);
@@ -138,15 +138,15 @@ const Problem = () => {
 
         const solutionKey = search ?? defaultTag;
 
-        if (
-          solutionKey.toLowerCase().split(" ").join("-") in
-            solutionsData?.[qno]?.["c++"] &&
-          Object.values(solutionsData?.[qno]?.["c++"])?.find(
-            (x) => x?.length > 0
-          )
-        ) {
-          setLanguage("c++");
-        }
+        // if (
+        //   solutionKey.toLowerCase().split(" ").join("-") in
+        //     solutionsData?.[qno]?.["c++"] &&
+        //   Object.values(solutionsData?.[qno]?.["c++"])?.find(
+        //     (x) => x?.length > 0
+        //   )
+        // ) {
+        //   setLanguage("c++");
+        // }
 
         if (
           search &&

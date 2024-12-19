@@ -183,16 +183,16 @@ const QSList = () => {
     const qnos = tData?.map((x) => x.qno);
     const temp = [];
     for (let key of Object.keys(res)) {
-      if (x in res[key]?.["java"] && res[key]?.["java"]?.[x]?.length > 0) {
+      if (x in res[key]?.["solution"] && res[key]?.["solution"]?.[x]?.length > 0) {
         count++;
         temp.push(key);
         continue;
       }
       let flag = 0;
       if (qnos.map((x) => "" + x)?.includes(key)) {
-        if (Object.keys(res[key]["java"]).length > 0) {
-          for (let k of Object.keys(res[key]?.["java"])) {
-            if (res[key]["java"][k]?.length > 0) {
+        if (Object.keys(res[key]["solution"]).length > 0) {
+          for (let k of Object.keys(res[key]?.["solution"])) {
+            if (res[key]["solution"][k]?.length > 0) {
               flag = 1;
               break;
             }
