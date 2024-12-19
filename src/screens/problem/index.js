@@ -82,6 +82,7 @@ const Problem = () => {
   const [selected, setSelected] = useState(0);
   const [hovered, setHovered] = useState(-1);
   const [revisionData, setRevisionData] = useState(null);
+  const [language, setLanguage] = useState("java");
 
   const [solution, setSolution] = useState(null);
   const [qInfo, setQInfo] = useState(null);
@@ -138,19 +139,27 @@ const Problem = () => {
         const solutionKey = search ?? defaultTag;
 
         if (
+          Object.values(solutionsData?.[qno]?.["c++"])?.find(
+            (x) => x?.length > 0
+          )
+        ) {
+          setLanguage("c++");
+        }
+
+        if (
           search &&
-          solutionsData?.[qno]?.["java"] &&
+          solutionsData?.[qno]?.[language] &&
           solutionKey.toLowerCase().split(" ").join("-") in
-            solutionsData?.[qno]?.["java"]
+            solutionsData?.[qno]?.[language]
         ) {
           setSolution(
-            solutionsData?.[qno]?.["java"]?.[
+            solutionsData?.[qno]?.[language]?.[
               solutionKey.toLowerCase().split(" ").join("-")
             ]
           );
         } else {
           setSolution(
-            solutionsData?.[qno]?.["java"]?.[
+            solutionsData?.[qno]?.[language]?.[
               defaultTag.toLowerCase().split(" ").join("-")
             ]
           );
@@ -258,6 +267,8 @@ const Problem = () => {
       fetchRevisionData();
     }
   }, [qInfoData]);
+
+  console.log({ language });
 
   return (
     <Container>
@@ -567,7 +578,7 @@ const Problem = () => {
                       width="100%"
                       height="54vh"
                       theme="vs-dark"
-                      defaultLanguage="java"
+                      defaultLanguage={language}
                       defaultValue={solution ?? ""}
                       value={solution ?? ""}
                       options={{ readOnly: true, domReadOnly: true }}
@@ -708,7 +719,7 @@ const Problem = () => {
                       width="100%"
                       height="85vh"
                       theme="vs-dark"
-                      defaultLanguage="java"
+                      defaultLanguage={language}
                       userSelect={false}
                       defaultValue={solution ?? ""}
                       value={solution ?? ""}
