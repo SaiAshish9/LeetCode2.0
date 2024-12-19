@@ -154,17 +154,41 @@ const Problem = () => {
           solutionKey.toLowerCase().split(" ").join("-") in
             solutionsData?.[qno]?.[language]
         ) {
-          setSolution(
+          if (
             solutionsData?.[qno]?.[language]?.[
               solutionKey.toLowerCase().split(" ").join("-")
-            ]
-          );
-        } else {
+            ]?.length > 0
+          ) {
+            setSolution(
+              solutionsData?.[qno]?.[language]?.[
+                solutionKey.toLowerCase().split(" ").join("-")
+              ]
+            );
+          }
+        } else if (
+          solutionsData?.[qno]?.[language]?.[
+            defaultTag.toLowerCase().split(" ").join("-")
+          ]?.length > 0
+        ) {
           setSolution(
             solutionsData?.[qno]?.[language]?.[
               defaultTag.toLowerCase().split(" ").join("-")
             ]
           );
+        } else {
+          for (let tag of qInfo.tags) {
+            if (
+              solutionsData?.[qno]?.[language]?.[
+                tag?.toLowerCase()?.split(" ")?.join("-")
+              ]?.length > 0
+            ) {
+              setSolution(
+                solutionsData?.[qno]?.[language]?.[
+                  tag.toLowerCase().split(" ").join("-")
+                ]
+              );
+            }
+          }
         }
 
         if (dropdownItemSelected === -1) {
