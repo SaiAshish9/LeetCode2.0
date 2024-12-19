@@ -139,6 +139,8 @@ const Problem = () => {
         const solutionKey = search ?? defaultTag;
 
         if (
+          solutionKey.toLowerCase().split(" ").join("-") in
+            solutionsData?.[qno]?.["c++"] &&
           Object.values(solutionsData?.[qno]?.["c++"])?.find(
             (x) => x?.length > 0
           )
@@ -267,8 +269,6 @@ const Problem = () => {
       fetchRevisionData();
     }
   }, [qInfoData]);
-
-  console.log({ language });
 
   return (
     <Container>
@@ -578,7 +578,7 @@ const Problem = () => {
                       width="100%"
                       height="54vh"
                       theme="vs-dark"
-                      defaultLanguage={language}
+                      defaultLanguage={"java"}
                       defaultValue={solution ?? ""}
                       value={solution ?? ""}
                       options={{ readOnly: true, domReadOnly: true }}
@@ -719,7 +719,7 @@ const Problem = () => {
                       width="100%"
                       height="85vh"
                       theme="vs-dark"
-                      defaultLanguage={language}
+                      defaultLanguage={"java"}
                       userSelect={false}
                       defaultValue={solution ?? ""}
                       value={solution ?? ""}
