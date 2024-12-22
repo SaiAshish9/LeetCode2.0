@@ -148,6 +148,8 @@ const Problem = () => {
         //   setLanguage("c++");
         // }
 
+        setSolution("");
+
         if (
           search &&
           solutionsData?.[qno]?.[language] &&
