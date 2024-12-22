@@ -42107,7 +42107,6 @@ for (int i = 0; i &lt; actualLength; i++) {
         <p>
           <strong>Input:</strong> <span class="example-io">arr = [0,1,0]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">1</span>
         </p>
@@ -42122,7 +42121,6 @@ for (int i = 0; i &lt; actualLength; i++) {
           <strong>Input:</strong>{" "}
           <span class="example-io">arr = [0,2,1,0]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">1</span>
         </p>
@@ -42137,7 +42135,6 @@ for (int i = 0; i &lt; actualLength; i++) {
           <strong>Input:</strong>{" "}
           <span class="example-io">arr = [0,10,5,2]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">1</span>
         </p>
