@@ -42103,7 +42103,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong> <span class="example-io">arr = [0,1,0]</span>
         </p>{" "}
@@ -42111,13 +42111,13 @@ for (int i = 0; i &lt; actualLength; i++) {
         <p>
           <strong>Output:</strong> <span class="example-io">1</span>
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">arr = [0,2,1,0]</span>
@@ -42126,13 +42126,13 @@ for (int i = 0; i &lt; actualLength; i++) {
         <p>
           <strong>Output:</strong> <span class="example-io">1</span>
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">arr = [0,10,5,2]</span>
@@ -42141,7 +42141,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <p>
           <strong>Output:</strong> <span class="example-io">1</span>
         </p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
