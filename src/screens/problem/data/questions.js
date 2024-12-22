@@ -42534,16 +42534,14 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <pre>
-        <strong>Input:</strong> time = [1,2,3], totalTrips = 5
-        <strong>Output:</strong> 3<strong>Explanation:</strong> <br />
-        - At time t = 1, the number of trips completed by each bus are [1,0,0].{" "}
-        <br />
-        The total number of trips completed is 1 + 0 + 0 = 1. <br />
-        - At time t = 2, the number of trips completed by each bus are [2,1,0].{" "}
-        <br />
-        The total number of trips completed is 2 + 1 + 0 = 3. <br />
-        - At time t = 3, the number of trips completed by each bus are [3,1,1].{" "}
-        <br />
+        <strong>Input:</strong> time = [1,2,3], totalTrips = 5 <br />
+        <strong>Output:</strong> 3<br />
+        <strong>Explanation:</strong> <br />- At time t = 1, the number of trips
+        completed by each bus are [1,0,0]. <br />
+        The total number of trips completed is 1 + 0 + 0 = 1. <br />- At time t
+        = 2, the number of trips completed by each bus are [2,1,0]. <br />
+        The total number of trips completed is 2 + 1 + 0 = 3. <br />- At time t
+        = 3, the number of trips completed by each bus are [3,1,1]. <br />
         The total number of trips completed is 3 + 1 + 1 = 5. <br />
         So the minimum time needed for all buses to complete at least 5 trips is
         3.
