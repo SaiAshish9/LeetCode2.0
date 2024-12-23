@@ -43100,9 +43100,9 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <pre>
         <strong>Input:</strong> n = 2, k = 3, budget = 10, composition =
-        [[2,1],[1,2],[1,1]], stock = [1,1], cost = [5,5]
-        <strong>Output:</strong> 2<strong>Explanation:</strong> It is optimal to
-        use the 3<sup>rd</sup> machine to create alloys. <br />
+        [[2,1],[1,2],[1,1]], stock = [1,1], cost = [5,5] <br />
+        <strong>Output:</strong> <br />2<strong>Explanation:</strong> It is
+        optimal to use the 3<sup>rd</sup> machine to create alloys. <br />
         To create 2 alloys we need to buy the: <br />- 1 unit of metal of the 1
         <sup>st</sup> type. <br />- 1 unit of metal of the 2<sup>nd</sup> type.{" "}
         <br />
