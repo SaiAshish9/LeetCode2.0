@@ -43202,7 +43202,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         [[[1, 3, 5]], [0, 2], [1, 2], [0, 2]] <br />
         <strong>Output</strong>
         <br />
-        [null, 9, null, 8]
+        [null, 9, null, 8] <br />
         <strong>Explanation</strong>
         <br />
         NumArray numArray = new NumArray([1, 3, 5]);
