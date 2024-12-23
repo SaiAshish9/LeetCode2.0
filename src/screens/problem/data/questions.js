@@ -43415,6 +43415,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <br />
         <strong>Output:</strong> 2<br />
         <strong>Explanation:</strong>
+        <br />
         From starting index i = 0, we can make our 1st jump to i = 2 (since
         arr[2] is the smallest among arr[1], arr[2], arr[3], arr[4] that is
         greater or equal to arr[0]), then we cannot jump any more. From starting
