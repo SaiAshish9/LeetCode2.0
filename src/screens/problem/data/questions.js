@@ -43085,7 +43085,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         <strong>Input:</strong> n = 3, k = 2, budget = 15, composition =
         [[1,1,1],[1,1,10]], stock = [0,0,100], cost = [1,2,3] <br />
         <strong>Output:</strong> 5 <br />
-        <strong> Explanation:</strong> It is optimal to use the 2<sup>nd</sup>{" "}
+        <strong>Explanation:</strong> It is optimal to use the 2<sup>nd</sup>{" "}
         machine to create alloys. <br />
         To create 5 alloys we need to buy: <br />- 5 units of metal of the 1
         <sup>st</sup> type. <br />- 5 units of metal of the 2<sup>nd</sup> type.{" "}
