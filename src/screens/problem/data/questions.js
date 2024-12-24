@@ -43513,7 +43513,7 @@ for (int i = 0; i &lt; actualLength; i++) {
         means that a meeting will be held during the{" "}
         <strong>half-closed</strong> time interval{" "}
         <code>
-          [start<sub>i</sub>, end<sub>i</sub>)
+          {"[start<sub>i</sub>, end<sub>i</sub>)"}
         </code>
         . All the values of{" "}
         <code>
@@ -43524,7 +43524,7 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <p>Meetings are allocated to rooms in the following manner:</p>
 
-      <ol>
+      <ul>
         <li>
           Each meeting will take place in the unused room with the{" "}
           <strong>lowest</strong> number.
@@ -43538,7 +43538,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           When a room becomes unused, meetings that have an earlier original{" "}
           <strong>start</strong> time should be given the room.
         </li>
-      </ol>
+      </ul>
 
       <p>
         Return
