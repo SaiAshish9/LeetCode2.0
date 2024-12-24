@@ -22,6 +22,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { Helmet } from "react-helmet";
 
 const HomeScreen = () => {
+
   return (
     <HomeComponent>
       <Helmet>

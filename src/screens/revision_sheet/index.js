@@ -39,6 +39,8 @@ const RevisionSheet = () => {
   const { pathname } = useLocation();
   const [searchParams] = useSearchParams();
   const [leftOverCount, setLeftOverCount] = useState(0);
+  const [solvedQs, setSolvedQs] = useState([]);
+  const [solvedTags, setSolvedTags] = useState([]);
 
   const [isDescriptionSet, setIsDescriptionSet] = useState(false);
 
@@ -105,6 +107,16 @@ const RevisionSheet = () => {
       }
     }
 
+    const solvedQuestions = Object.entries(solutions)
+      .filter(([_, value]) => {
+        return Object.values(value["solution"]).some(
+          (solution) => solution.length > 0
+        );
+      })
+      .map(([key]) => +key);
+
+    setSolvedQs(solvedQuestions);
+
     setLeftOverCount(qnos.length - count);
   }
 
@@ -151,7 +163,10 @@ const RevisionSheet = () => {
         for (let key of Object.keys(temp)) {
           temp[key] = temp[key].sort((a, b) => a.qno - b.qno);
         }
-        setData({ ...temp, Additional: [] });
+        setData({
+          ...temp,
+          // Additional: []
+        });
       }
     } catch (e) {
       console.log(e);
@@ -273,7 +288,17 @@ const RevisionSheet = () => {
               </ContentTextBold>{" "}
               unsolved) (
               <ContentTextBold>{count - leftOverCount}</ContentTextBold> solved)
-              (<ContentTextBold>{STAR.length}</ContentTextBold> starred)
+              (<ContentTextBold>{STAR.length}</ContentTextBold> starred) (
+              <ContentTextBold>
+                {
+                  Object.values(data).filter((x) =>
+                    x.map((y) => +y.qno).every((z) => solvedQs.includes(z))
+                  ).length
+                }
+                {"/"}
+                {Object.values(data).length}{" "}
+              </ContentTextBold>{" "}
+              tags solved)
             </ContentText>
             <ContentText sm>
               *Note: Click on the tag name highlighted in a different color to
@@ -306,7 +331,12 @@ const RevisionSheet = () => {
                       }
                     }}
                   >
-                    {item}
+                    {item}{" "}
+                    {data[item]
+                      .map((i) => +i.qno)
+                      .every((e) => solvedQs.includes(e))
+                      ? "✅"
+                      : ""}
                   </p>
                   &nbsp;({data[item].length})
                   <IconCont
@@ -367,6 +397,7 @@ const RevisionSheet = () => {
                                   </>
                                 )}
                                 {value.qno}. {value.title}{" "}
+                                {!solvedQs.includes(+value.qno) ? "🎯" : ""}
                               </p>
                             </TitleContainer>
                           </ParentContent>
@@ -396,6 +427,7 @@ const RevisionSheet = () => {
                             >
                               <p>
                                 {+key + 1}, {value.qno}. {value.title}{" "}
+                                {!solvedQs.includes(+value.qno) ? "🎯" : ""}
                               </p>
                             </TitleContainer>
                           </ParentContent>

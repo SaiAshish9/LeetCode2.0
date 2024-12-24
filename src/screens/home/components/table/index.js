@@ -30,7 +30,7 @@ const columns = [
               ></path>
             </svg>
           </>
-        ) : (
+        ) : status === "done" ? (
           <>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +47,8 @@ const columns = [
               ></path>
             </svg>
           </>
+        ) : (
+          <></>
         )}
       </>
     ),
@@ -164,6 +166,50 @@ const TableContainer = () => {
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [isAcceptanceLoaded, setIsAcceptanceLoaded] = useState(false);
   const [isDifficultyLoaded, setIsDifficultyLoaded] = useState(false);
+  const [isSolvedQsLoaded, setIsSolvedQsLoaded] = useState(false);
+
+  async function fetchSolutions() {
+    try {
+      const response = await fetch(
+        "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/solutions.json"
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const res = await response.json();
+
+      const solvedQuestions = Object.entries(res)
+        .filter(([_, value]) => {
+          return Object.values(value["solution"]).some(
+            (solution) => solution.length > 0
+          );
+        })
+        .map(([key]) => +key);
+
+      setTableData((tableData) =>
+        tableData.map((item, key) => {
+          return {
+            ...item,
+            status: solvedQuestions.includes(+item.title?.split(".")[0])
+              ? "done"
+              : "incomplete",
+          };
+        })
+      );
+
+      // console.log({
+      //   leftOverQs: 100 - solvedQuestions.slice().filter((x) => x <= 100).length,
+      // });
+      setIsSolvedQsLoaded(true);
+
+      return solvedQuestions;
+    } catch (err) {
+      console.error("Failed to fetch solutions:", err);
+      return [];
+    }
+  }
 
   async function fetchData() {
     fetch(
@@ -176,13 +222,15 @@ const TableContainer = () => {
             return {
               key: "" + key,
               title: item,
-              status: "done",
               solution: "tick",
             };
           })
         );
+
         await fetchAcceptance();
         await fetchDifficulty();
+        await fetchSolutions();
+
         setIsDataLoaded(true);
       })
       .catch((err) => console.log(err));
@@ -231,13 +279,15 @@ const TableContainer = () => {
       !tableData?.length > 0 &&
       !isDataLoaded &&
       !isAcceptanceLoaded &&
-      !isDifficultyLoaded
+      !isDifficultyLoaded &&
+      !isSolvedQsLoaded
     )
       fetchData();
   }, [
     fetchData,
     isAcceptanceLoaded,
     isDifficultyLoaded,
+    isSolvedQsLoaded,
     isDataLoaded,
     tableData?.length,
   ]);
@@ -247,6 +297,7 @@ const TableContainer = () => {
       {tableData?.length > 0 &&
       tableData[0]?.acceptance &&
       tableData[0]?.difficulty &&
+      tableData[0]?.status &&
       isDataLoaded &&
       isAcceptanceLoaded &&
       isDifficultyLoaded ? (
