@@ -44807,7 +44807,7 @@ for (int i = 0; i &lt; actualLength; i++) {
       </p>
 
       <p>You may assume the following rules:</p>
-      <ol>
+      <ul>
         <li>
           A move is guaranteed to be valid and is placed on an empty block.
         </li>
@@ -44816,7 +44816,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           A player who succeeds in placing <i>n</i> of their marks in a
           horizontal, vertical, or diagonal row wins the game.
         </li>
-      </ol>
+      </ul>
       <p></p>
 
       <p>
