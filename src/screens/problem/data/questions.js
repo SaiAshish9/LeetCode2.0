@@ -44083,7 +44083,7 @@ for (int i = 0; i &lt; actualLength; i++) {
           of this triplet would be <code>5 - 6 + 9 = 8</code>.
         </p>
       </div>
-
+      <br />
       <p>
         <strong class="example">Example 2: </strong>
       </p>
