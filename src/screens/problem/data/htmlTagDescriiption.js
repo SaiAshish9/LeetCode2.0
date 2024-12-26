@@ -4001,6 +4001,10 @@ public class Main {
   ),
   Bitmask: (
     <>
+      <a target="_blank" href="https://leetcode.com/discuss/study-guide/4228622/BITMASK/" rel="noreferrer">
+        https://leetcode.com/discuss/study-guide/4228622/BITMASK/
+      </a>
+
       <ul>
         <li>
           <h3>What is a Bitmask?</h3> <br />
