@@ -45687,6 +45687,142 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  3149: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an array <code>nums</code> which is a{" "}
+        <span
+          data-keyword="permutation"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rt:"
+              >
+                <div>permutation</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        of <code>[0, 1, 2, ..., n - 1]</code>. The <strong>score</strong> of any
+        permutation of <code>[0, 1, 2, ..., n - 1]</code> named{" "}
+        <code>perm</code> is defined as:
+      </p>
+
+      <p>
+        <code>
+          score(perm) = |perm[0] - nums[perm[1]]| + |perm[1] - nums[perm[2]]| +
+          ... + |perm[n - 1] - nums[perm[0]]|
+        </code>
+      </p>
+
+      <p>
+        Return the permutation <code>perm</code> which has the{" "}
+        <strong>minimum</strong> possible score. If <em>multiple</em>{" "}
+        permutations exist with this score, return the one that is{" "}
+        <span
+          data-keyword="lexicographically-smaller-array"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rv:"
+              >
+                <div>lexicographically smallest</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        among them.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong> <span class="example-io">nums = [1,0,2]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[0,1,2]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <p>
+          <strong>
+            <img
+              alt=""
+              src="https://assets.leetcode.com/uploads/2024/04/04/example0gif.gif"
+              style={{ width: 235, height: 235 }}
+            />
+          </strong>
+        </p>
+        <p>
+          The lexicographically smallest permutation with minimum cost is{" "}
+          <code>[0,1,2]</code>. The cost of this permutation is{" "}
+          <code>|0 - 0| + |1 - 2| + |2 - 1| = 2</code>.
+        </p>
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong> <span class="example-io">nums = [0,2,1]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[0,2,1]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <p>
+          <strong>
+            <img
+              alt=""
+              src="https://assets.leetcode.com/uploads/2024/04/04/example1gif.gif"
+              style={{ width: 235, height: 235 }}
+            />
+          </strong>
+        </p>
+        <p>
+          The lexicographically smallest permutation with minimum cost is{" "}
+          <code>[0,2,1]</code>. The cost of this permutation is{" "}
+          <code>|0 - 1| + |2 - 2| + |1 - 0| = 2</code>.
+        </p>
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>2 &lt;= n == nums.length &lt;= 14</code>
+        </li>
+        <li>
+          <code>nums</code> is a permutation of{" "}
+          <code>[0, 1, 2, ..., n - 1]</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
