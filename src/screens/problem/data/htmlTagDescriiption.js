@@ -4001,10 +4001,194 @@ public class Main {
   ),
   Bitmask: (
     <>
-      <a target="_blank" href="https://leetcode.com/discuss/study-guide/4228622/BITMASK/" rel="noreferrer">
+      <a
+        target="_blank"
+        href="https://leetcode.com/discuss/study-guide/4228622/BITMASK/"
+        rel="noreferrer"
+      >
         https://leetcode.com/discuss/study-guide/4228622/BITMASK/
       </a>
 
+      <br />
+
+      <div class="discuss-markdown-container">
+        <p>𝙎𝙤𝙢𝙚 𝙐𝙨𝙚𝙛𝙪𝙡 𝘽𝙞𝙩𝙈𝙖𝙨𝙩:</p>
+        <p></p>
+        <p>
+          <strong>1. To Multiply/divide an integer by 2:</strong>
+        </p>
+        <p></p>
+        <p>
+          n*2 = (n&lt;&lt;1)
+          <br />
+          n/2 = (n&gt;&gt;1);
+        </p>
+        <p></p>
+        <p>
+          <strong>2. To set/turn on the i-th bit</strong>
+        </p>
+        <p></p>
+        <p>
+          <code>n |= (1&lt;&lt;i)</code>
+        </p>
+        <p></p>
+        <p>
+          <strong>3. To check i-th bit is set or not</strong>
+        </p>
+        <p></p>
+        <pre>
+          <code>
+            If (n &amp; (<span class="hljs-number">1</span>&lt;&lt;i) =={" "}
+            <span class="hljs-number">0</span>) =&gt;{" "}
+            <span class="hljs-built_in">set</span>
+            <span class="hljs-keyword">else</span>{" "}
+            <span class="hljs-keyword">not</span>{" "}
+            <span class="hljs-built_in">set</span>
+          </code>
+        </pre>
+        <p></p>
+        <p>**4. To clear/turn off the i-th bit **</p>
+        <p></p>
+        <p>
+          <code>n &amp;= ~(1&lt;&lt;i)</code>
+        </p>
+        <p></p>
+        <p>
+          <strong>5. To toggle/flip the i-th bit</strong>
+        </p>
+        <p></p>
+        <p>
+          <code>n ^= (1&lt;&lt;i)</code>
+        </p>
+        <p></p>
+        <p>
+          <strong>6. To turn on all bits in a set of size sz</strong>
+        </p>
+        <p></p>
+        <p>
+          <code>n = (1&lt;&lt;sz) - 1</code>
+        </p>
+        <p></p>
+        <p>
+          <code>eg, if sz=3 then n = 7 (base 10) = 111 (base 2</code>)
+        </p>
+        <p></p>
+        <p>
+          <strong>7. To check n is odd/even</strong>
+        </p>
+        <p></p>
+        <p>
+          <code>n &amp; 1 == 1 // odd</code>
+        </p>
+        <p></p>
+        <p>
+          <code>n &amp; 1 == 0 // even</code>
+        </p>
+        <p></p>
+        <p>
+          <strong>8. To check if n if divisible by power of 2</strong>
+        </p>
+        <p></p>
+        <p>
+          <code>
+            n &amp; ((1&lt;&lt;k) - 1) == 0 // n is divisible by 2^k (=
+            (1&lt;&lt;k)
+          </code>
+          ).
+        </p>
+        <p></p>
+        <p>
+          <strong>9. To check if n is a power of 2</strong>
+        </p>
+        <p></p>
+        <p>
+          <code>n &amp;&amp; !(n &amp; (n - 1)) == 1</code>
+        </p>
+        <p></p>
+        <p>
+          **10. To get the value of the least significant bit of n that is on **
+        </p>
+        <p></p>
+        <p>
+          <code>lsb = n &amp; (-n)</code>
+        </p>
+        <p></p>
+        <p>eg, n = 10 = 1010 (base 2)</p>
+        <p></p>
+        <p>lsb = 2 = 0010 (base 2) = pow(2,j), where j=1</p>
+        <p></p>
+        <p>
+          To get the actual j-th index use <code>__builtin_ctz(lsb)</code>
+        </p>
+        <p></p>
+        <p>
+          <strong>11. Some built-in bit manipulation functions:</strong>
+        </p>
+        <p></p>
+        <p>
+          <code>__builtin_popcount(n) // return count of set bit in n</code>
+        </p>
+        <p></p>
+        <pre>
+          <code>
+            __builtin_ctz(n){" "}
+            <span class="hljs-comment">
+              {"// return the count of tailing zero"}
+            </span>
+            eg, n = <span class="hljs-number">8</span> ={" "}
+            <span class="hljs-number">1000</span> (
+            <span class="hljs-keyword">base</span>{" "}
+            <span class="hljs-number">2</span>). Here tailing zero ={" "}
+            <span class="hljs-number">3</span>
+          </code>
+        </pre>
+        <p></p>
+        <p>
+          <strong>Some Important Problems:</strong>
+        </p>
+        <p></p>
+        <ol>
+          <li>
+            Missing Number:{" "}
+            <a href="https://leetcode.com/problems/missing-number/">
+              https://leetcode.com/problems/missing-number/
+            </a>
+          </li>
+          <li>
+            Bitwise ORs of Subarrays:{" "}
+            <a href="https://leetcode.com/problems/bitwise-ors-of-subarrays/">
+              https://leetcode.com/problems/bitwise-ors-of-subarrays/
+            </a>
+          </li>
+        </ol>
+        <p></p>
+        <p>
+          3.XOR Queries of a Subarray:{" "}
+          <a href="https://leetcode.com/problems/xor-queries-of-a-subarray/">
+            https://leetcode.com/problems/xor-queries-of-a-subarray/
+          </a>
+          <br />
+          4.Minimum Flips to Make a OR b Equal to c:{" "}
+          <a href="https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/">
+            https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/
+          </a>
+          <br />
+          5. Count Triplets That Can Form Two Arrays of Equal XOR:{" "}
+          <a href="https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/">
+            https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/
+          </a>
+          <br />
+          6. Bitwise AND of Numbers Range:{" "}
+          <a href="https://leetcode.com/problems/bitwise-and-of-numbers-range/">
+            https://leetcode.com/problems/bitwise-and-of-numbers-range/
+          </a>
+          <br />
+          7. Decode XORed Permutation:{" "}
+          <a href="https://leetcode.com/problems/decode-xored-permutation/">
+            https://leetcode.com/problems/decode-xored-permutation/
+          </a>
+        </p>
+      </div>
       <ul>
         <li>
           <h3>What is a Bitmask?</h3> <br />
