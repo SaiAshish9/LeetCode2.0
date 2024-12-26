@@ -45535,6 +45535,88 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  464: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        In the "100 game" two players take turns adding, to a running total, any
+        integer from <code>1</code> to <code>10</code>. The player who first
+        causes the running total to <strong>reach or exceed</strong> 100 wins.
+      </p>
+
+      <p>
+        What if we change the game so that players <strong>cannot</strong>{" "}
+        re-use integers?
+      </p>
+
+      <p>
+        For example, two players might take turns drawing from a common pool of
+        numbers from 1 to 15 without replacement until they reach a total &gt;=
+        100.
+      </p>
+
+      <p>
+        Given two integers <code>maxChoosableInteger</code> and{" "}
+        <code>desiredTotal</code>, return <code>true</code> if the first player
+        to move can force a win, otherwise, return <code>false</code>. Assume
+        both players play <strong>optimally</strong>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> maxChoosableInteger = 10, desiredTotal = 11{" "}
+        <br />
+        <strong>Output:</strong> false <br />
+        <strong>Explanation:</strong> <br />
+        No matter which integer the first player choose, the first player will
+        lose. <br />
+        The first player can choose an integer from 1 up to 10. <br />
+        If the first player choose 1, the second player can only choose integers
+        from 2 up to 10. <br />
+        The second player will win by choosing 10 and get a total = 11, which is
+        &gt;= desiredTotal. <br />
+        Same with other integers chosen by the first player, the second player
+        will always win.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> maxChoosableInteger = 10, desiredTotal = 0{" "}
+        <br />
+        <strong>Output:</strong> true
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> maxChoosableInteger = 10, desiredTotal = 1{" "}
+        <br />
+        <strong>Output:</strong> true
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= maxChoosableInteger &lt;= 20</code>
+        </li>
+        <li>
+          <code>0 &lt;= desiredTotal &lt;= 300</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
