@@ -46514,7 +46514,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong> <span class="example-io">k = 0</span>
         </p>{" "}
@@ -46556,13 +46556,13 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
             </ul>
           </li>
         </ul>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong> <span class="example-io">k = 1</span>
         </p>{" "}
@@ -46630,7 +46630,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
             </ul>
           </li>
         </ul>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
