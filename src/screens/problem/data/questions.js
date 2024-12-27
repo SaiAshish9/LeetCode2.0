@@ -46518,15 +46518,12 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <p>
           <strong>Input:</strong> <span class="example-io">k = 0</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">2</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>The 2 possible ways of reaching stair 0 are:</p>
         <ul>
           <li>
@@ -46566,15 +46563,12 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <p>
           <strong>Input:</strong> <span class="example-io">k = 1</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">4</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>The 4 possible ways of reaching stair 1 are:</p>
         <ul>
           <li>Alice starts at stair 1. Alice is at stair 1.</li>
