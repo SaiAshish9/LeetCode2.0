@@ -49722,6 +49722,94 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  1455: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a <code>sentence</code> that consists of some words separated by a{" "}
+        <strong>single space</strong>, and a <code>searchWord</code>, check if{" "}
+        <code>searchWord</code> is a prefix of any word in <code>sentence</code>
+        .
+      </p>
+
+      <p>
+        Return <em>the index of the word in </em>
+        <code>sentence</code>
+        <em>
+          {" "}
+          (<strong>1-indexed</strong>) where{" "}
+        </em>
+        <code>searchWord</code>
+        <em> is a prefix of this word</em>. If <code>searchWord</code> is a
+        prefix of more than one word, return the index of the first word{" "}
+        <strong>(minimum index)</strong>. If there is no such word return{" "}
+        <code>-1</code>.
+      </p>
+
+      <p>
+        A <strong>prefix</strong> of a string <code>s</code> is any leading
+        contiguous substring of <code>s</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> sentence = "i love eating burger", searchWord =
+        "burg" <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> "burg" is prefix of "burger" which is the
+        4th word in the sentence.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> sentence = "this problem is an easy problem",
+        searchWord = "pro" <br />
+        <strong>Output:</strong> 2 <br />
+        <strong>Explanation:</strong> "pro" is prefix of "problem" which is the
+        2nd and the 6th word in the sentence, but we return 2 as it's the
+        minimal index.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> sentence = "i am tired", searchWord = "you"{" "}
+        <br />
+        <strong>Output:</strong> -1 <br />
+        <strong>Explanation:</strong> "you" is not a prefix of any word in the
+        sentence.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= sentence.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>1 &lt;= searchWord.length &lt;= 10</code>
+        </li>
+        <li>
+          <code>sentence</code> consists of lowercase English letters and
+          spaces.
+        </li>
+        <li>
+          <code>searchWord</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
