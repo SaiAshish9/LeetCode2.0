@@ -47344,7 +47344,8 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
           <code class="language-plaintext highlighter-rouge">""</code>
         </em>
         .
-      </p>
+      </p>{" "}
+      <br />
       <p>
         <strong>Example 1:</strong>
       </p>
@@ -47357,11 +47358,11 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       <p>
         <strong>Explanation:</strong> “kiran” has prefixes “kira”, “kir”, “ki”,
         and “k”, and all of them appear in words.
-      </p>
+      </p>{" "}
+      <br />
       <p>
         <strong>Example 2:</strong>
       </p>{" "}
-      <br />
       <p>
         <strong>Input:</strong> words = [“a”, “banana”, “app”, “appl”, “ap”,
         “apply”, “apple”]
@@ -47373,7 +47374,8 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <strong>Explanation:</strong> Both “apple” and “apply” have all their
         prefixes in words. However, “apple” is lexicographically smaller, so we
         return that.
-      </p>
+      </p>{" "}
+      <br />
       <p>
         <strong>Example 3:</strong>
       </p>
