@@ -50165,6 +50165,111 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  1506: (
+    <div class="markdown-body div-width">
+      <div class="content__u3I1 question-content__JfgR">
+        <div>
+          <p>
+            Given all the nodes of an&nbsp;
+            <a
+              aria-describedby="sk-tooltip-12056"
+              data-sk="tooltip_parent"
+              data-stringify-link="https://leetcode.com/articles/introduction-to-n-ary-trees"
+              delay="150"
+              href="https://slack-redir.net/link?url=https%3A%2F%2Fleetcode.com%2Farticles%2Fintroduction-to-n-ary-trees"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              N-ary tree
+            </a>
+            &nbsp;as an array &nbsp;<code>Node[] tree</code>&nbsp;where
+            each&nbsp;node has a&nbsp;<strong>unique value</strong>.
+          </p>
+
+          <p>
+            Find and return the <strong>root</strong> of the N-ary tree.
+          </p>
+
+          <p>
+            <em>
+              Nary-Tree input serialization&nbsp;is represented in their level
+              order traversal, each group of children is separated by the null
+              value (See examples).
+            </em>
+          </p>
+
+          <p>
+            <strong>Follow up:</strong> Can you find the root of the tree with
+            O(1) additional memory space?
+          </p>
+
+          <p>
+            <strong>Notes:</strong>
+          </p>
+
+          <ol>
+            <li>The following input is only given to testing purposes.</li>
+            <li>
+              You will receive as input a list of all nodes of the n-ary tree in
+              any order.
+            </li>
+          </ol>
+
+          <p>&nbsp;</p>
+          <p>
+            <strong>Example 1:</strong>
+          </p>
+
+          <p>
+            <img
+              alt=""
+              src="https://assets.leetcode.com/uploads/2018/10/12/narytreeexample.png"
+              style={{ width: "100%", maxWidth: 300 }}
+            />
+          </p>
+
+          <pre>
+            <strong>Input:</strong> [1,null,3,2,4,null,5,6]
+            <br />
+            <strong>Output:</strong> [1,null,3,2,4,null,5,6]
+          </pre>
+
+          <p>
+            <strong>Example 2:</strong>
+          </p>
+
+          <p>
+            <img
+              alt=""
+              src="https://assets.leetcode.com/uploads/2019/11/08/sample_4_964.png"
+              style={{ width: 296, height: 241 }}
+            />
+          </p>
+
+          <pre>
+            <strong>Input:</strong>{" "}
+            [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]{" "}
+            <br />
+            <strong>Output:</strong>{" "}
+            [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+          </pre>
+
+          <p>&nbsp;</p>
+          <p>
+            <strong>Constraints:</strong>
+          </p>
+
+          <ul>
+            <li>
+              The total number of nodes is between <code>[1,&nbsp;5*10^4]</code>
+              .
+            </li>
+            <li>Each&nbsp;node has a unique value.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
