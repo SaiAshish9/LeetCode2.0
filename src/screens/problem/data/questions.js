@@ -47068,6 +47068,182 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  208: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        A{" "}
+        <a
+          href="https://en.wikipedia.org/wiki/Trie"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <strong>trie</strong>
+        </a>{" "}
+        (pronounced as "try") or <strong>prefix tree</strong> is a tree data
+        structure used to efficiently store and retrieve keys in a dataset of
+        strings. There are various applications of this data structure, such as
+        autocomplete and spellchecker.
+      </p>
+
+      <p>Implement the Trie class:</p>
+
+      <ul>
+        <li>
+          <code>Trie()</code> Initializes the trie object.
+        </li>
+        <li>
+          <code>void insert(String word)</code> Inserts the string{" "}
+          <code>word</code> into the trie.
+        </li>
+        <li>
+          <code>boolean search(String word)</code> Returns <code>true</code> if
+          the string <code>word</code> is in the trie (i.e., was inserted
+          before), and <code>false</code> otherwise.
+        </li>
+        <li>
+          <code>boolean startsWith(String prefix)</code> Returns{" "}
+          <code>true</code> if there is a previously inserted string{" "}
+          <code>word</code> that has the prefix <code>prefix</code>, and{" "}
+          <code>false</code> otherwise.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]{" "}
+        <br />
+        [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+        <strong>Output</strong> <br />
+        [null, null, true, false, true, null, true]
+        <strong>Explanation</strong> <br />
+        Trie trie = new Trie(); <br />
+        trie.insert("apple"); <br />
+        trie.search("apple"); // return True <br />
+        trie.search("app"); // return False <br />
+        trie.startsWith("app"); // return True <br />
+        trie.insert("app"); <br />
+        trie.search("app"); // return True
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= word.length, prefix.length &lt;= 2000</code>
+        </li>
+        <li>
+          <code>word</code> and <code>prefix</code> consist only of lowercase
+          English letters.
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            3 * 10<sup>4</sup>
+          </code>{" "}
+          calls <strong>in total</strong> will be made to <code>insert</code>,{" "}
+          <code>search</code>, and <code>startsWith</code>.
+        </li>
+      </ul>
+    </div>
+  ),
+  211: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Design a data structure that supports adding new words and finding if a
+        string matches any previously added string.
+      </p>
+
+      <p>
+        Implement the <code>WordDictionary</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>WordDictionary()</code>&nbsp;Initializes the object.
+        </li>
+        <li>
+          <code>void addWord(word)</code> Adds <code>word</code> to the data
+          structure, it can be matched later.
+        </li>
+        <li>
+          <code>bool search(word)</code>&nbsp;Returns <code>true</code> if there
+          is any string in the data structure that matches <code>word</code>
+          &nbsp;or <code>false</code> otherwise. <code>word</code> may contain
+          dots <code>'.'</code> where dots can be matched with any letter.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong>
+        ["WordDictionary","addWord","addWord","addWord","search","search","search","search"]{" "}
+        <br />
+        [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]] <br />
+        <strong>Output</strong>
+        <br />
+        [null,null,null,null,false,true,true,true]
+        <strong>Explanation</strong>
+        <br />
+        WordDictionary wordDictionary = new WordDictionary();
+        <br />
+        wordDictionary.addWord("bad");
+        <br />
+        wordDictionary.addWord("dad");
+        <br />
+        wordDictionary.addWord("mad");
+        <br />
+        wordDictionary.search("pad"); // return False
+        <br />
+        wordDictionary.search("bad"); // return True
+        <br />
+        wordDictionary.search(".ad"); // return True
+        <br />
+        wordDictionary.search("b.."); // return True
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= word.length &lt;= 25</code>
+        </li>
+        <li>
+          <code>word</code> in <code>addWord</code> consists of lowercase
+          English letters.
+        </li>
+        <li>
+          <code>word</code> in <code>search</code> consist of <code>'.'</code>{" "}
+          or lowercase English letters.
+        </li>
+        <li>
+          There will be at most <code>2</code> dots in <code>word</code> for{" "}
+          <code>search</code> queries.
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            10<sup>4</sup>
+          </code>{" "}
+          calls will be made to <code>addWord</code> and <code>search</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
