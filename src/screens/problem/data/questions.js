@@ -49891,6 +49891,59 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  428: (
+    <div class="markdown-body div-width">
+      <p>
+        Serialization is the process of converting a data structure or object
+        into a sequence of bits so that it can be stored in a file or memory
+        buffer, or transmitted across a network connection link to be
+        reconstructed later in the same or another computer environment.
+      </p>
+
+      <p>
+        Design an algorithm to serialize and deserialize an N-ary tree. An N-ary
+        tree is a rooted tree in which each node has no more than N children.
+        There is no restriction on how your serialization/deserialization
+        algorithm should work. You just need to ensure that an N-ary tree can be
+        serialized to a string and this string can be deserialized to the
+        original tree structure.
+      </p>
+
+      <p>
+        For example, you may serialize the following <code>3-ary</code> tree
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <img alt="" src="img/428.png" style={{ width: 100, maxWidth: 300 }} />
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        as <code>[1 [3[5 6] 2 4]]</code>. You do not necessarily need to follow
+        this format, so please be creative and come up with different approaches
+        yourself.
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <strong>Note:</strong>
+      </p>
+
+      <ol>
+        <li>
+          <code>N</code> is in the range of <code> [1, 1000]</code>
+        </li>
+        <li>
+          Do not use class member/global/static variables to store states. Your
+          serialize and deserialize algorithms should be stateless.
+        </li>
+      </ol>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
