@@ -47311,6 +47311,100 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  1858: (
+    <article role="main" class="blog-post">
+      <p>
+        Given an array of strings{" "}
+        <code class="language-plaintext highlighter-rouge">words</code>, find
+        the <strong>longest</strong> string in{" "}
+        <code class="language-plaintext highlighter-rouge">words</code> such
+        that <strong>every prefix</strong> of it is also in{" "}
+        <code class="language-plaintext highlighter-rouge">words</code>.
+      </p>
+      <ul>
+        <li>
+          For example, let{" "}
+          <code class="language-plaintext highlighter-rouge">
+            words = ["a", "app", "ap"]
+          </code>
+          . The string{" "}
+          <code class="language-plaintext highlighter-rouge">"app"</code> has
+          prefixes{" "}
+          <code class="language-plaintext highlighter-rouge">"ap"</code> and{" "}
+          <code class="language-plaintext highlighter-rouge">"a"</code>, all of
+          which are in words.
+        </li>
+      </ul>
+      <p>
+        Return{" "}
+        <em>
+          the string described above. If there is more than one string with the
+          same length, return the <strong>lexicographically smallest</strong>{" "}
+          one, and if no string exists, return{" "}
+          <code class="language-plaintext highlighter-rouge">""</code>
+        </em>
+        .
+      </p>
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+      <p>
+        <strong>Input:</strong> words = [“k”,”ki”,”kir”,”kira”, “kiran”]
+      </p>{" "}
+      <p>
+        <strong>Output:</strong> “kiran”
+      </p>{" "}
+      <p>
+        <strong>Explanation:</strong> “kiran” has prefixes “kira”, “kir”, “ki”,
+        and “k”, and all of them appear in words.
+      </p>
+      <p>
+        <strong>Example 2:</strong>
+      </p>{" "}
+      <br />
+      <p>
+        <strong>Input:</strong> words = [“a”, “banana”, “app”, “appl”, “ap”,
+        “apply”, “apple”]
+      </p>{" "}
+      <p>
+        <strong>Output:</strong> “apple”
+      </p>{" "}
+      <p>
+        <strong>Explanation:</strong> Both “apple” and “apply” have all their
+        prefixes in words. However, “apple” is lexicographically smaller, so we
+        return that.
+      </p>
+      <p>
+        <strong>Example 3:</strong>
+      </p>
+      <p>
+        <strong>Input:</strong> words = [“abc”, “bc”, “ab”, “qwe”]
+      </p>
+      <p>
+        <strong>Output:</strong> “”
+      </p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= words.length &lt;= 10^5
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= words[i].length &lt;= 10^5
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= sum(words[i].length) &lt;= 10^5
+          </code>
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
