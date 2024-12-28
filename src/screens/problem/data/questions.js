@@ -49916,7 +49916,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       <p>&nbsp;</p>
 
       <p>
-        <img alt="" src="https://leetcode.ca/all/img/428.png" style={{ width: 100, maxWidth: 300 }} />
+        <img alt="" src="https://leetcode.ca/all/img/428.png" style={{ width: 400 }} />
       </p>
 
       <p>&nbsp;</p>
