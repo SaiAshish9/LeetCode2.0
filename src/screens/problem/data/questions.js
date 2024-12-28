@@ -49810,7 +49810,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
-  1688: (
+  1668: (
     <div class="elfjS" data-track-load="description_content">
       <p>
         For a string <code>sequence</code>, a string <code>word</code> is{" "}
