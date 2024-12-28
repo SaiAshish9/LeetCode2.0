@@ -47244,6 +47244,73 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  1065: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a <code>text</code>&nbsp;string and <code>words</code> (a list of
+        strings), return all index pairs <code>[i, j]</code> so that the
+        substring <code>text[i]...text[j]</code>&nbsp;is in the list of{" "}
+        <code>words</code>.
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input: </strong>text ={" "}
+        <span id="example-input-1-1">"thestoryofleetcodeandme"</span>, words ={" "}
+        <span id="example-input-1-2">["story","fleet","leetcode"]</span> <br />
+        <strong>Output: </strong>
+        <span id="example-output-1">[[3,7],[9,13],[10,17]]</span>
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input: </strong>text ={" "}
+        <span id="example-input-2-1">"ababa"</span>, words ={" "}
+        <span id="example-input-2-2">["aba","ab"]</span> <br />
+        <strong>Output: </strong>
+        <span id="example-output-2">[[0,1],[0,2],[2,3],[2,4]]</span>
+        <br />
+        <strong>Explanation: </strong>
+        <br />
+        Notice that matches can overlap, see "aba" is found in [0,2] and [2,4].
+      </pre>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <strong>Note:</strong>
+      </p>
+
+      <ul>
+        <li>All strings contains only lowercase English letters.</li>
+        <li>
+          It's guaranteed that all strings in <code>words</code> are different.
+        </li>
+        <li>
+          <code>1 &lt;= text.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>1 &lt;= words.length &lt;= 20</code>
+        </li>
+        <li>
+          <code>1 &lt;= words[i].length &lt;= 50</code>
+        </li>
+        <li>
+          Return the pairs <code>[i,j]</code> in sorted order (i.e. sort them by
+          their first coordinate in case of ties sort them by their second
+          coordinate).
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
