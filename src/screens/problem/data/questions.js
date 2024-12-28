@@ -48770,6 +48770,80 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  1232: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an array&nbsp;<code>coordinates</code>,{" "}
+        <code>coordinates[i] = [x, y]</code>, where <code>[x, y]</code>{" "}
+        represents the coordinate of a point. Check if these points&nbsp;make a
+        straight line in the XY plane.
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <p>
+        <img
+          alt=""
+          src="https://assets.leetcode.com/uploads/2019/10/15/untitled-diagram-2.jpg"
+          style={{ width: 336, height: 336 }}
+        />
+      </p>
+
+      <pre>
+        <strong>Input:</strong> coordinates =
+        [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]] <br />
+        <strong>Output:</strong> true
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <p>
+        <strong>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2019/10/09/untitled-diagram-1.jpg"
+            style={{ width: 348, height: 336 }}
+          />
+        </strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> coordinates =
+        [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]] <br />
+        <strong>Output:</strong> false
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>2 &lt;=&nbsp;coordinates.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>coordinates[i].length == 2</code>
+        </li>
+        <li>
+          <code>
+            -10^4 &lt;=&nbsp;coordinates[i][0],&nbsp;coordinates[i][1] &lt;=
+            10^4
+          </code>
+        </li>
+        <li>
+          <code>coordinates</code>&nbsp;contains no duplicate point.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
