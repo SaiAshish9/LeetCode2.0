@@ -49916,7 +49916,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       <p>&nbsp;</p>
 
       <p>
-        <img alt="" src="img/428.png" style={{ width: 100, maxWidth: 300 }} />
+        <img alt="" src="https://leetcode.ca/all/img/428.png" style={{ width: 100, maxWidth: 300 }} />
       </p>
 
       <p>&nbsp;</p>
@@ -49933,7 +49933,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <strong>Note:</strong>
       </p>
 
-      <ol>
+      <ul>
         <li>
           <code>N</code> is in the range of <code> [1, 1000]</code>
         </li>
@@ -49941,7 +49941,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
           Do not use class member/global/static variables to store states. Your
           serialize and deserialize algorithms should be stateless.
         </li>
-      </ol>
+      </ul>
     </div>
   ),
 };
