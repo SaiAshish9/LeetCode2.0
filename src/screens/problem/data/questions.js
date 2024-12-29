@@ -51112,6 +51112,90 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  444: (
+    <div class="markdown-body div-width">
+      <p>
+        Check whether the original sequence <code>org</code> can be uniquely
+        reconstructed from the sequences in <code>seqs</code>. The{" "}
+        <code>org</code> sequence is a permutation of the integers from 1 to n,
+        with 1 ≤ n ≤ 10<sup>4</sup>. Reconstruction means building a shortest
+        common supersequence of the sequences in <code>seqs</code> (i.e., a
+        shortest sequence so that all sequences in <code>seqs</code> are
+        subsequences of it). Determine whether there is only one sequence that
+        can be reconstructed from <code>seqs</code> and it is the{" "}
+        <code>org</code> sequence.
+      </p>
+
+      <p>
+        <b>Example 1:</b>
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        org: [1,2,3], seqs: [[1,2],[1,3]]
+        <br />
+        <b>Output:</b> <br />
+        false
+        <br />
+        <b>Explanation:</b> <br />
+        [1,2,3] is not the only one sequence that can be reconstructed, because
+        [1,3,2] is also a valid sequence that can be reconstructed.
+      </pre>
+      <p></p>
+      <br />
+      <p>
+        <b>Example 2:</b> <br />
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        org: [1,2,3], seqs: [[1,2]]
+        <br />
+        <b>Output:</b> <br />
+        false
+        <br />
+        <b>Explanation:</b> <br />
+        The reconstructed sequence can only be [1,2].
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 3:</b> <br />
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        org: [1,2,3], seqs: [[1,2],[1,3],[2,3]]
+        <br />
+        <b>Output:</b> <br />
+        true <br />
+        <b>Explanation:</b> <br />
+        The sequences [1,2], [1,3], and [2,3] can uniquely reconstruct the
+        original sequence [1,2,3]. <br />
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 4:</b>
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        org: [4,1,5,2,6,3], seqs: [[5,2,6,3],[4,1,5,2]]
+        <br />
+        <b>Output:</b> <br />
+        true <br />
+      </pre>
+      <p></p>
+
+      <p>
+        <b>
+          <font color="red">UPDATE (2017/1/8):</font>
+        </b>
+        <br /> <br />
+        The <i>seqs</i> parameter had been changed to a list of list of strings
+        (instead of a 2d <br />
+        array of strings). Please reload the code definition to get the latest
+        changes.
+      </p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
