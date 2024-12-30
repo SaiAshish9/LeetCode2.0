@@ -54931,7 +54931,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       <pre>
         <strong>Input: </strong>
         <code>n = 5</code> and <code>edges = [[0, 1], [1, 2], [3, 4]]</code>
-        {`0          3
+{`0          3
      |          |
      1 --- 2    4`}
         <br />
@@ -54946,7 +54946,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <strong>Input: </strong>
         <code>n = 5</code> and{" "}
         <code>edges = [[0, 1], [1, 2], [2, 3], [3, 4]]</code>
-        {`0           4
+{`0           4
      |           |
      1 --- 2 --- 3`}
         <br />
