@@ -53512,6 +53512,52 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </pre>
     </div>
   ),
+  273: (
+    <div class="markdown-body div-width">
+      <p>
+        Convert a non-negative integer to its english words representation.
+        Given input is guaranteed to be less than 2<sup>31</sup> - 1.
+      </p>
+
+      <p>
+        <b>Example 1:</b>
+      </p>
+
+      <pre>
+        <b>Input:</b> 123 <br />
+        <b>Output:</b> "One Hundred Twenty Three"
+      </pre>
+
+      <p>
+        <b>Example 2:</b>
+      </p>
+
+      <pre>
+        <b>Input:</b> 12345 <br />
+        <b>Output:</b> "Twelve Thousand Three Hundred Forty Five"
+      </pre>
+
+      <p>
+        <b>Example 3:</b>
+      </p>
+
+      <pre>
+        <b>Input:</b> 1234567 <br />
+        <b>Output:</b> "One Million Two Hundred Thirty Four Thousand Five
+        Hundred Sixty Seven"
+      </pre>
+
+      <p>
+        <b>Example 4:</b>
+      </p>
+
+      <pre>
+        <b>Input:</b> 1234567891 <br />
+        <b>Output:</b> "One Billion Two Hundred Thirty Four Million Five Hundred
+        Sixty Seven Thousand Eight Hundred Ninety One"
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
