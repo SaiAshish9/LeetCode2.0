@@ -52495,7 +52495,6 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
                   <em>palindrome</em>
                 </div>
               </div>
-              <div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(434px, 183px);"></div>
             </div>
           </div>
         </span>
