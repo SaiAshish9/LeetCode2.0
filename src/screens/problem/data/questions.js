@@ -54828,11 +54828,9 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [4,2,9,5,3]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">3</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong> <code>nums[1]</code>,{" "}
           <code>nums[3]</code>, and <code>nums[4]</code> are prime. So the
@@ -54849,11 +54847,9 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [4,8,2,8]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">0</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong> <code>nums[2]</code> is prime. Because
           there is just one prime number, the answer is <code>|2 - 2| = 0</code>
