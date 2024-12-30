@@ -54932,6 +54932,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <strong>Input: </strong>
         <code>n = 5</code> and <code>edges = [[0, 1], [1, 2], [3, 4]]</code>{" "}
         <br />
+        <br />
         <img
           alt=""
           src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0323.Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph/images/conn1-graph.jpg"
@@ -54948,7 +54949,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       <pre>
         <strong>Input: </strong>
         <code>n = 5</code> and{" "}
-        <code>edges = [[0, 1], [1, 2], [2, 3], [3, 4]]</code> <br />
+        <code>edges = [[0, 1], [1, 2], [2, 3], [3, 4]]</code> <br /> <br />
         <img
           alt=""
           src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0323.Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph/images/conn2-graph.jpg"
