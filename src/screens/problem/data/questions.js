@@ -52019,6 +52019,99 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  24: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a&nbsp;linked list, swap every two adjacent nodes and return its
+        head. You must solve the problem without&nbsp;modifying the values in
+        the list's nodes (i.e., only nodes themselves may be changed.)
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">head = [1,2,3,4]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[2,1,4,3]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <p>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg"
+            style={{ width: 422, height: 222 }}
+          />
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong> <span class="example-io">head = []</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[]</span>
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong> <span class="example-io">head = [1]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[1]</span>
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 4:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong> <span class="example-io">head = [1,2,3]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[2,1,3]</span>
+        </p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the&nbsp;list&nbsp;is in the range{" "}
+          <code>[0, 100]</code>.
+        </li>
+        <li>
+          <code>0 &lt;= Node.val &lt;= 100</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
