@@ -53933,6 +53933,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         src="https://assets.leetcode.com/uploads/2023/01/22/hexagon.jpg"
         style={{ width: 300, height: 293 }}
       />
+      <br />
       <p>
         Simultaneously, each monkey moves to a neighboring vertex. A{" "}
         <strong>collision</strong> happens if at least two monkeys reside on the
