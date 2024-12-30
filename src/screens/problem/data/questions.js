@@ -53954,7 +53954,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong> <span class="example-io">n = 3</span>
         </p>{" "}
@@ -53984,13 +53984,13 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
             Monkeys 1 and 3 collide.
           </li>
         </ul>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong> <span class="example-io">n = 4</span>
         </p>
@@ -53998,7 +53998,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <p>
           <strong>Output:</strong> <span class="example-io">14</span>
         </p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
