@@ -54624,15 +54624,12 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [8,7,3,5,7,2,4,9]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">16</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>
-        <br />
         <p>
           We select elements at indices 2 and 8 and <code>2 * 8</code> is a
           perfect square.
@@ -54648,15 +54645,12 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [8,10,3,8,1,13,7,9,4]</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">20</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>
           We select elements at indices 1, 4, and 9. <code>1 * 4</code>,{" "}
           <code>1 * 9</code>, <code>4 * 9</code> are perfect squares.
