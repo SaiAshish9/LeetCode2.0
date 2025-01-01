@@ -56781,6 +56781,158 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  1236: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a url <code>startUrl</code> and an interface{" "}
+        <code>HtmlParser</code>, implement a web crawler to crawl all links that
+        are under the&nbsp;<strong>same hostname</strong> as&nbsp;
+        <code>startUrl</code>.&nbsp;
+      </p>
+
+      <p>Returns all urls obtained by your web crawler in any order. </p>
+
+      <p>Your crawler should:</p>
+
+      <ul>
+        <li>
+          Start from the page: <code>startUrl</code>
+        </li>
+        <li>
+          Call <code>HtmlParser.getUrls(url)</code> to get all urls from a
+          webpage of given url.
+        </li>
+        <li>Do not crawl the same link twice.</li>
+        <li>
+          Only the links that are under the <strong>same hostname</strong> as
+          startUrl&nbsp;should be explored by the crawler
+        </li>
+      </ul>
+
+      <p>
+        <img alt="" src="img/1236_1.png" />
+      </p>
+
+      <p>
+        As shown in the example url above, the hostname is{" "}
+        <code>example.org</code>. For simplicity sake, you may assume
+        all&nbsp;urls use <strong>http protocol</strong> without any&nbsp;
+        <strong>port</strong> specified.
+      </p>
+
+      <p>The function interface is defined like this:&nbsp;</p>
+
+      <p>
+        <code>{`interface HtmlParser {
+        public:
+        &nbsp; // Returns a list of urls contained in <em>url</em> .
+        &nbsp; public List&lt;String&gt; getUrls(String url);
+        }`}</code>
+      </p>
+
+      <p>
+        Below there are two examples explaining the functionality of the
+        problem, for custom testing purposes you'll have 3 variables&nbsp;
+        <code data-stringify-type="code">urls</code>,&nbsp;
+        <code data-stringify-type="code">edges</code>&nbsp;and&nbsp;
+        <code data-stringify-type="code">startUrl</code>. Notice that you will
+        only have access to&nbsp;
+        <code data-stringify-type="code">startUrl</code>, while&nbsp;
+        <code data-stringify-type="code">urls</code>&nbsp;and&nbsp;
+        <code data-stringify-type="code">edges</code>&nbsp;are secret to you on
+        the rest of the testcases.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <p>
+        <img alt="" src="https://leetcode.ca/all/img/1236_1.png" />
+      </p>
+
+      <pre>
+        <strong>Input:</strong>urls = [ <br />
+        &nbsp; "http://news.yahoo.com", <br />
+        &nbsp; "http://news.yahoo.com/news", <br />
+        &nbsp; "http://news.yahoo.com/news/topics/", <br />
+        &nbsp; "http://news.google.com", <br />
+        &nbsp; "http://news.yahoo.com/us" <br />
+        ] <br />
+        edges = [[2,0],[2,1],[3,2],[3,1],[0,4]] <br />
+        startUrl = "http://news.yahoo.com/news/topics/" <br />
+        <strong>Output:</strong> [ <br />
+        &nbsp; "http://news.yahoo.com", <br />
+        &nbsp; "http://news.yahoo.com/news", <br />
+        &nbsp; "http://news.yahoo.com/news/topics/", <br />
+        &nbsp; "http://news.yahoo.com/us" <br />]
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <p>
+        <strong>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2019/10/23/sample_3_1497.png"
+            style={{ width: 540, height: 270 }}
+          />
+        </strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong>
+        urls = [ <br />
+        &nbsp; "http://news.yahoo.com", <br />
+        &nbsp; "http://news.yahoo.com/news", <br />
+        &nbsp; "http://news.yahoo.com/news/topics/", <br />
+        &nbsp; "http://news.google.com" <br />
+        ] <br />
+        edges = [[0,2],[2,1],[3,2],[3,1],[3,0]] <br />
+        startUrl = "http://news.google.com" <br />
+        <strong>Output:</strong> ["http://news.google.com"] <br />
+        <strong>Explanation: </strong>The startUrl links to all other pages that
+        do not share the same hostname.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= urls.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>1 &lt;= urls[i].length &lt;= 300</code>
+        </li>
+        <li>
+          <code>startUrl</code>&nbsp;is one of the <code>urls</code>.
+        </li>
+        <li>
+          Hostname label must be from 1 to 63 characters long, including the
+          dots, may contain only the ASCII letters from 'a' to&nbsp;'z',
+          digits&nbsp; from '0' to '9' and the&nbsp;hyphen-minus&nbsp;character
+          ('-').
+        </li>
+        <li>
+          The hostname may not start or end with&nbsp;the hyphen-minus character
+          ('-').&nbsp;
+        </li>
+        <li>
+          See:&nbsp;&nbsp;
+          <a href="https://en.wikipedia.org/wiki/Hostname#Restrictions_on_valid_hostnames">
+            https://en.wikipedia.org/wiki/Hostname#Restrictions_on_valid_hostnames
+          </a>
+        </li>
+        <li>You may assume there're&nbsp;no duplicates in url library.</li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
