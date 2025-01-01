@@ -57387,7 +57387,6 @@ INF  -1 INF  -1
           <img
             alt=""
             src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/3100-3199/3157.Find%20the%20Level%20of%20Tree%20with%20Minimum%20Sum/images/image_2024-05-19_19-07-20.png"
-            style="padding: 10px; background: rgb(255, 255, 255); border-radius: 0.5rem; width: 170px; height: 135px;"
           />
         </p>
       </div>
