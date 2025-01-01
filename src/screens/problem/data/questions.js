@@ -56933,6 +56933,119 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  1609: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        A binary tree is named <strong>Even-Odd</strong> if it meets the
+        following conditions:
+      </p>
+
+      <ul>
+        <li>
+          The root of the binary tree is at level index <code>0</code>, its
+          children are at level index <code>1</code>, their children are at
+          level index <code>2</code>, etc.
+        </li>
+        <li>
+          For every <strong>even-indexed</strong> level, all nodes at the level
+          have <strong>odd</strong> integer values in{" "}
+          <strong>strictly increasing</strong> order (from left to right).
+        </li>
+        <li>
+          For every <b>odd-indexed</b> level, all nodes at the level have{" "}
+          <b>even</b> integer values in <strong>strictly decreasing</strong>{" "}
+          order (from left to right).
+        </li>
+      </ul>
+
+      <p>
+        Given the <code>root</code> of a binary tree, <em>return </em>
+        <code>true</code>
+        <em>
+          {" "}
+          if the binary tree is <strong>Even-Odd</strong>, otherwise return{" "}
+        </em>
+        <code>false</code>
+        <em>.</em>
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/09/15/sample_1_1966.png"
+        style={{ width: 362, height: 229 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [1,10,4,3,null,7,9,12,8,6,null,null,2]{" "}
+        <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong> The node values on each level are: <br />
+        Level 0: [1] <br />
+        Level 1: [10,4] <br />
+        Level 2: [3,7,9] <br />
+        Level 3: [12,8,6,2] <br />
+        Since levels 0 and 2 are all odd and increasing and levels 1 and 3 are
+        all even and decreasing, the tree is Even-Odd.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/09/15/sample_2_1966.png"
+        style={{ width: 363, height: 167 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [5,4,2,3,3,7] <br />
+        <strong>Output:</strong> false <br />
+        <strong>Explanation:</strong> The node values on each level are: <br />
+        Level 0: [5] <br />
+        Level 1: [4,2] <br />
+        Level 2: [3,3,7] <br />
+        Node values in level 2 must be in strictly increasing order, so the tree
+        is not Even-Odd.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/09/22/sample_1_333_1966.png"
+        style={{ width: 363, height: 167 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [5,9,1,3,5,7] <br />
+        <strong>Output:</strong> false <br />
+        <strong>Explanation:</strong> Node values in the level 1 should be even
+        integers.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the tree is in the range{" "}
+          <code>
+            [1, 10<sup>5</sup>]
+          </code>
+          .
+        </li>
+        <li>
+          <code>
+            1 &lt;= Node.val &lt;= 10<sup>6</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
