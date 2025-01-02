@@ -58402,6 +58402,106 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  2029: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Alice and Bob continue their games with stones. There is a row of n
+        stones, and each stone has an associated value. You are given an integer
+        array <code>stones</code>, where <code>stones[i]</code> is the{" "}
+        <strong>value</strong> of the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        stone.
+      </p>
+
+      <p>
+        Alice and Bob take turns, with <strong>Alice</strong> starting first. On
+        each turn, the player may remove any stone from <code>stones</code>. The
+        player who removes a stone <strong>loses</strong> if the{" "}
+        <strong>sum</strong> of the values of{" "}
+        <strong>all removed stones</strong> is divisible by <code>3</code>. Bob
+        will win automatically if there are no remaining stones (even if it is
+        Alice's turn).
+      </p>
+
+      <p>
+        Assuming both players play <strong>optimally</strong>, return{" "}
+        <code>true</code> <em>if Alice wins and</em> <code>false</code>{" "}
+        <em>if Bob wins</em>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> stones = [2,1] <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong>&nbsp;The game will be played as follows:{" "}
+        <br />
+        - Turn 1: Alice can remove either stone. <br />
+        - Turn 2: Bob removes the remaining stone. <br />
+        The sum of the removed stones is 1 + 2 = 3 and is divisible by 3.
+        Therefore, Bob loses and Alice wins the game.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> stones = [2] <br />
+        <strong>Output:</strong> false <br />
+        <strong>Explanation:</strong>&nbsp;Alice will remove the only stone, and
+        the sum of the values on the removed stones is 2.
+        <br /> Since all the stones are removed and the sum of values is not
+        divisible by 3, Bob wins the game.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> stones = [5,1,2,4,3] <br />
+        <strong>Output:</strong> false <br />
+        <strong>Explanation:</strong> Bob will always win. One possible way for
+        Bob to win is shown below: <br />
+        - Turn 1: Alice can remove the second stone with value 1. Sum of removed
+        stones = 1. <br />
+        - Turn 2: Bob removes the fifth stone with value 3. Sum of removed
+        stones = 1 + 3 = 4. <br />
+        - Turn 3: Alices removes the fourth stone with value 4. Sum of removed
+        stones = 1 + 3 + 4 = 8. <br />
+        - Turn 4: Bob removes the third stone with value 2. Sum of removed
+        stones = 1 + 3 + 4 + 2 = 10. <br />
+        - Turn 5: Alice removes the first stone with value 5. Sum of removed
+        stones = 1 + 3 + 4 + 2 + 5 = 15. <br />
+        Alice loses the game because the sum of the removed stones (15) is
+        divisible by 3. Bob wins the game.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= stones.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= stones[i] &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
