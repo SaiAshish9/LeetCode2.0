@@ -58284,7 +58284,7 @@ INF  -1 INF  -1
         will do the following:
       </p>
 
-      <ol>
+      <ul>
         <li>
           Choose an integer <code>x &gt; 1</code>, and <strong>remove</strong>{" "}
           the leftmost <code>x</code> stones from the row.
@@ -58297,7 +58297,7 @@ INF  -1 INF  -1
           Place a <strong>new stone</strong>, whose value is equal to that sum,
           on the left side of the row.
         </li>
-      </ol>
+      </ul>
 
       <p>
         The game stops when <strong>only</strong> <strong>one</strong> stone is
