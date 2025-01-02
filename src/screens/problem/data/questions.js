@@ -57549,7 +57549,7 @@ INF  -1 INF  -1
     <div class="elfjS" data-track-load="description_content">
       <p>We are playing the Guessing Game. The game will work as follows:</p>
 
-      <ol>
+      <ul>
         <li>
           I pick a number between&nbsp;<code>1</code>&nbsp;and&nbsp;
           <code>n</code>.
@@ -57568,7 +57568,7 @@ INF  -1 INF  -1
           pay&nbsp;<code>x</code>&nbsp;dollars. If you run out of money,{" "}
           <strong>you lose the game</strong>.
         </li>
-      </ol>
+      </ul>
 
       <p>
         Given a particular&nbsp;<code>n</code>, return&nbsp;
