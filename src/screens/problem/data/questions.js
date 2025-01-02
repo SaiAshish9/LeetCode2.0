@@ -57545,6 +57545,134 @@ INF  -1 INF  -1
       </pre>
     </div>
   ),
+  375: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>We are playing the Guessing Game. The game will work as follows:</p>
+
+      <ol>
+        <li>
+          I pick a number between&nbsp;<code>1</code>&nbsp;and&nbsp;
+          <code>n</code>.
+        </li>
+        <li>You guess a number.</li>
+        <li>
+          If you guess the right number, <strong>you win the game</strong>.
+        </li>
+        <li>
+          If you guess the wrong number, then I will tell you whether the number
+          I picked is <strong>higher or lower</strong>, and you will continue
+          guessing.
+        </li>
+        <li>
+          Every time you guess a wrong number&nbsp;<code>x</code>, you will
+          pay&nbsp;<code>x</code>&nbsp;dollars. If you run out of money,{" "}
+          <strong>you lose the game</strong>.
+        </li>
+      </ol>
+
+      <p>
+        Given a particular&nbsp;<code>n</code>, return&nbsp;
+        <em>
+          the minimum amount of money you need to&nbsp;
+          <strong>guarantee a win regardless of what number I pick</strong>
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/09/10/graph.png"
+        style={{ width: 505, height: 388 }}
+      />
+      <pre>
+        <strong>Input:</strong> n = 10 <br />
+        <strong>Output:</strong> 16 <br />
+        <strong>Explanation:</strong> The winning strategy is as follows: <br />
+        - The range is [1,10]. Guess 7. <br />
+        &nbsp; - If this is my number, your total is $0. Otherwise, you pay $7.{" "}
+        <br />
+        &nbsp; - If my number is higher, the range is [8,10]. Guess 9. <br />
+        &nbsp; - If this is my number, your total is $7. Otherwise, you pay $9.{" "}
+        <br />
+        &nbsp; - If my number is higher, it must be 10. Guess 10. Your total is
+        $7 + $9 = $16. <br />
+        &nbsp; - If my number is lower, it must be 8. Guess 8. Your total is $7
+        + $9 = $16.
+        <br />
+        &nbsp; - If my number is lower, the range is [1,6]. Guess 3.
+        <br />
+        &nbsp; - If this is my number, your total is $7. Otherwise, you pay $3.
+        <br />
+        &nbsp; - If my number is higher, the range is [4,6]. Guess 5.
+        <br />
+        &nbsp; - If this is my number, your total is $7 + $3 = $10. Otherwise,
+        you pay $5.
+        <br />
+        &nbsp; - If my number is higher, it must be 6. Guess 6. Your total is $7
+        + $3 + $5 = $15.
+        <br />
+        &nbsp; - If my number is lower, it must be 4. Guess 4. Your total is $7
+        + $3 + $5 = $15.
+        <br />
+        &nbsp; - If my number is lower, the range is [1,2]. Guess 1.
+        <br />
+        &nbsp; - If this is my number, your total is $7 + $3 = $10. Otherwise,
+        you pay $1.
+        <br />
+        &nbsp; - If my number is higher, it must be 2. Guess 2. Your total is $7
+        + $3 + $1 = $11.
+        <br />
+        The worst case in all these scenarios is that you pay $16. Hence, you
+        only need $16 to guarantee a win.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 1<br />
+        <strong>Output:</strong> 0<br />
+        <strong>Explanation:</strong>&nbsp;There is only one possible number, so
+        you can guess 1 and not have to pay anything.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 2<br />
+        <strong>Output:</strong> 1<br />
+        <strong>Explanation:</strong>&nbsp;There are two possible numbers, 1 and
+        2.
+        <br />
+        - Guess 1.
+        <br />
+        &nbsp; - If this is my number, your total is $0. Otherwise, you pay $1.
+        <br />
+        &nbsp; - If my number is higher, it must be 2. Guess 2. Your total is
+        $1.
+        <br />
+        The worst case is that you pay $1.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= n &lt;= 200</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
