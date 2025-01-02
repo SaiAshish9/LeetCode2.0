@@ -57517,6 +57517,34 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  294: (
+    <div class="markdown-body div-width">
+      <p>
+        You are playing the following Flip Game with your friend: Given a string
+        that contains only these two characters: <code>+</code> and{" "}
+        <code>-</code>, you and your friend take turns to flip two{" "}
+        <b>consecutive</b> <code>"++"</code> into <code>"--"</code>. The game
+        ends when a person can no longer make a move and therefore the other
+        person will be the winner.
+      </p>
+
+      <p>
+        Write a function to determine if the starting player can guarantee a
+        win.
+      </p>
+
+      <p>
+        <strong>Example:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <code>s = "++++"</code> <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation: </strong>The starting player can guarantee a win by
+        flipping the middle <code>"++"</code> to become <code>"+--+"</code>.
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
