@@ -59387,15 +59387,12 @@ INF  -1 INF  -1
         <strong>Input:</strong> word1 = "abcdeef", word2 = "abaaacc" <br />
         <strong>Output:</strong> true <br />
         <strong>Explanation:</strong> The differences between the frequencies of
-        each letter in word1 and word2 are at most 3: <br />
-        - 'a' appears 1 time in word1 and 4 times in word2. The difference is 3.{" "}
-        <br />
-        - 'b' appears 1 time in word1 and 1 time in word2. The difference is 0.{" "}
-        <br />
-        - 'c' appears 1 time in word1 and 2 times in word2. The difference is 1.{" "}
-        <br />
-        - 'd' appears 1 time in word1 and 0 times in word2. The difference is 1.{" "}
-        <br />
+        each letter in word1 and word2 are at most 3: <br />- 'a' appears 1 time
+        in word1 and 4 times in word2. The difference is 3. <br />- 'b' appears
+        1 time in word1 and 1 time in word2. The difference is 0. <br />- 'c'
+        appears 1 time in word1 and 2 times in word2. The difference is 1.{" "}
+        <br />- 'd' appears 1 time in word1 and 0 times in word2. The difference
+        is 1. <br />
         - 'e' appears 2 times in word1 and 0 times in word2. The difference is
         2. <br />- 'f' appears 1 time in word1 and 0 times in word2. The
         difference is 1.
@@ -59434,6 +59431,106 @@ INF  -1 INF  -1
         <li>
           <code>word1</code> and <code>word2</code> consist only of lowercase
           English letters.
+        </li>
+      </ul>
+    </div>
+  ),
+  2248: (
+    <div class="elfjS" data-track-load="description_content">
+      Given a 2D integer array <code>nums</code> where <code>nums[i]</code> is a
+      non-empty array of <strong>distinct</strong> positive integers, return{" "}
+      <em>
+        the list of integers that are present in <strong>each array</strong> of
+      </em>{" "}
+      <code>nums</code>
+      <em>
+        {" "}
+        sorted in <strong>ascending order</strong>
+      </em>
+      .<p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> nums = [[
+        <u>
+          <strong>3</strong>
+        </u>
+        ,1,2,
+        <u>
+          <strong>4</strong>
+        </u>
+        ,5],[1,2,
+        <u>
+          <strong>3</strong>
+        </u>
+        ,
+        <u>
+          <strong>4</strong>
+        </u>
+        ],[
+        <u>
+          <strong>3</strong>
+        </u>
+        ,
+        <u>
+          <strong>4</strong>
+        </u>
+        ,5,6]]
+        <br /> <strong>Output:</strong> [3,4] <br />
+        <strong>Explanation:</strong> <br />
+        The only integers present in each of nums[0] = [
+        <u>
+          <strong>3</strong>
+        </u>
+        ,1,2,
+        <u>
+          <strong>4</strong>
+        </u>
+        ,5], nums[1] = [1,2,
+        <u>
+          <strong>3</strong>
+        </u>
+        ,
+        <u>
+          <strong>4</strong>
+        </u>
+        ], and nums[2] = [
+        <u>
+          <strong>3</strong>
+        </u>
+        ,
+        <u>
+          <strong>4</strong>
+        </u>
+        ,5,6] are 3 and 4, so we return [3,4].
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> nums = [[1,2,3],[4,5,6]] <br />
+        <strong>Output:</strong> [] <br />
+        <strong>Explanation:</strong> <br />
+        There does not exist any integer present both in nums[0] and nums[1], so
+        we return an empty list [].
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>1 &lt;= nums.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>1 &lt;= sum(nums[i].length) &lt;= 1000</code>
+        </li>
+        <li>
+          <code>1 &lt;= nums[i][j] &lt;= 1000</code>
+        </li>
+        <li>
+          All the values of <code>nums[i]</code> are <strong>unique</strong>.
         </li>
       </ul>
     </div>
