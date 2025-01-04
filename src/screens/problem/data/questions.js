@@ -59748,6 +59748,7 @@ INF  -1 INF  -1
         <p>Hence, in the resulting string, it should have a size of 10.</p>
       </div>
 
+      <br />
       <p>
         <strong class="example">Example 2:</strong>
       </p>
@@ -59762,6 +59763,7 @@ INF  -1 INF  -1
           <span class="example-io">&quot;a1b3c2&quot;</span>
         </p>
       </div>
+      <br />
 
       <p>
         <strong class="example">Example 3:</strong>
