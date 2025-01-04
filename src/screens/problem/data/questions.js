@@ -59154,6 +59154,104 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  1940: (
+    <article role="main" class="blog-post">
+      <p>
+        Given an array of integer arrays{" "}
+        <code class="language-plaintext highlighter-rouge">arrays</code> where
+        each <code class="language-plaintext highlighter-rouge">arrays[i]</code>{" "}
+        is sorted in <strong>strictly increasing</strong> order, return{" "}
+        <em>
+          an integer array representing the{" "}
+          <strong>longest common subsequence</strong> between{" "}
+          <strong>all</strong> the arrays
+        </em>
+        .
+      </p>
+
+      <p>
+        A <strong>subsequence</strong> is a sequence that can be derived from
+        another sequence by deleting some elements (possibly none) without
+        changing the order of the remaining elements.
+      </p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>
+              Input: arrays = [[1,3,4], [1,4,7,9]]
+              <br />
+              Output: [1,4] <br />
+              Explanation: The longest common subsequence in the two arrays is
+              [1,4].
+            </code>
+          </pre>
+        </div>
+      </div>
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>
+              Input: arrays = [[2,3,6,8], [1,2,3,5,6,7,10], [2,3,4,6,9]]
+              <br />
+              Output: [2,3,6] <br />
+              Explanation: The longest common subsequence in all three arrays is
+              [2,3,6].
+            </code>
+          </pre>
+        </div>
+      </div>
+      <p>
+        <strong>Example 3:</strong>
+      </p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>
+              Input: arrays = [[1,2,3,4,5], [6,7,8]]
+              <br />
+              Output: []
+              <br />
+              Explanation: There is no common subsequence between the two
+              arrays.
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            2 &lt;= arrays.length &lt;= 100
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= arrays[i].length &lt;= 100
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">
+            1 &lt;= arrays[i][j] &lt;= 100
+          </code>
+        </li>
+        <li>
+          <code class="language-plaintext highlighter-rouge">arrays[i]</code> is
+          sorted in strictly increasing order.
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
