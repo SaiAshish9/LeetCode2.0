@@ -59733,22 +59733,18 @@ INF  -1 INF  -1
           <strong>Input:</strong>{" "}
           <span class="example-io">compressed = &quot;a3c9b2c1&quot;</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong>{" "}
           <span class="example-io">&quot;a3b2c10&quot;</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>
-        <br />
         <p>
           Characters &quot;a&quot; and &quot;b&quot; appear only once in the
           input, but &quot;c&quot; appears twice, once with a size of 9 and once
           with a size of 1.
         </p>
-        <br />
         <p>Hence, in the resulting string, it should have a size of 10.</p>
       </div>
 
@@ -59761,7 +59757,6 @@ INF  -1 INF  -1
           <strong>Input:</strong>{" "}
           <span class="example-io">compressed = &quot;c2b3a1&quot;</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong>{" "}
           <span class="example-io">&quot;a1b3c2&quot;</span>
@@ -59777,7 +59772,6 @@ INF  -1 INF  -1
           <strong>Input:</strong>{" "}
           <span class="example-io">compressed = &quot;a2b4c1&quot;</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong>{" "}
           <span class="example-io">&quot;a2b4c1&quot;</span>
