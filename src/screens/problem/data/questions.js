@@ -61503,9 +61503,8 @@ INF  -1 INF  -1
         [1,3,5]
         <strong>Output:</strong> 9 <br />
         <strong>Explanation:</strong> To convert "abcdefgh" to "acdeeghh", do
-        the following operations: <br />
-        - Change substring source[1..3] from "bcd" to "cde" at a cost of 1.{" "}
-        <br />
+        the following operations: <br />- Change substring source[1..3] from
+        "bcd" to "cde" at a cost of 1. <br />
         - Change substring source[5..7] from "fgh" to "thh" at a cost of 3. We
         can do this operation because indices [5,7] are disjoint with indices
         picked in the first operation. <br />
@@ -61571,6 +61570,211 @@ INF  -1 INF  -1
         <li>
           <code>
             1 &lt;= cost[i] &lt;= 10<sup>6</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
+  3112: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        There is an undirected graph of <code>n</code> nodes. You are given a 2D
+        array <code>edges</code>, where{" "}
+        <code>
+          edges[i] = [u<sub>i</sub>, v<sub>i</sub>, length<sub>i</sub>]
+        </code>{" "}
+        describes an edge between node{" "}
+        <code>
+          u<sub>i</sub>
+        </code>{" "}
+        and node{" "}
+        <code>
+          v<sub>i</sub>
+        </code>{" "}
+        with a traversal time of{" "}
+        <code>
+          length<sub>i</sub>
+        </code>{" "}
+        units.
+      </p>
+
+      <p>
+        Additionally, you are given an array <code>disappear</code>, where{" "}
+        <code>disappear[i]</code> denotes the time when the node <code>i</code>{" "}
+        disappears from the graph and you won't be able to visit it.
+      </p>
+
+      <p>
+        <strong>Note</strong>&nbsp;that the graph might be <em>disconnected</em>{" "}
+        and might contain <em>multiple edges</em>.
+      </p>
+
+      <p>
+        Return the array <code>answer</code>, with <code>answer[i]</code>{" "}
+        denoting the <strong>minimum</strong> units of time required to reach
+        node <code>i</code> from node 0. If node <code>i</code> is{" "}
+        <strong>unreachable</strong> from node 0 then <code>answer[i]</code> is{" "}
+        <code>-1</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">
+            n = 3, edges = [[0,1,2],[1,2,1],[0,2,4]], disappear = [1,1,5]
+          </span>
+        </p>
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[0,-1,4]</span>
+        </p>
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+        <p>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2024/08/11/output-onlinepngtools.png"
+            style={{ width: 350, height: 210 }}
+          />
+        </p>
+        <br />
+        <p>
+          We are starting our journey from node 0, and our goal is to find the
+          minimum time required to reach each node before it disappears.
+        </p>
+        <br />
+        <ul>
+          <li>
+            For node 0, we don't need any time as it is our starting point.
+          </li>
+          <li>
+            For node 1, we need at least 2 units of time to traverse{" "}
+            <code>edges[0]</code>. Unfortunately, it disappears at that moment,
+            so we won't be able to visit it.
+          </li>
+          <li>
+            For node 2, we need at least 4 units of time to traverse{" "}
+            <code>edges[2]</code>.
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">
+            n = 3, edges = [[0,1,2],[1,2,1],[0,2,4]], disappear = [1,3,5]
+          </span>
+        </p>
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[0,2,3]</span>
+        </p>
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+        <p>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2024/08/11/output-onlinepngtools-1.png"
+            style={{ width: 350, height: 210 }}
+          />
+        </p>
+        <br />
+        <p>
+          We are starting our journey from node 0, and our goal is to find the
+          minimum time required to reach each node before it disappears.
+        </p>
+
+        <ul>
+          <li>
+            For node 0, we don't need any time as it is the starting point.
+          </li>
+          <li>
+            For node 1, we need at least 2 units of time to traverse{" "}
+            <code>edges[0]</code>.
+          </li>
+          <li>
+            For node 2, we need at least 3 units of time to traverse{" "}
+            <code>edges[0]</code> and <code>edges[1]</code>.
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">
+            n = 2, edges = [[0,1,1]], disappear = [1,1]
+          </span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">[0,-1]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>Exactly when we reach node 1, it disappears.</p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= n &lt;= 5 * 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= edges.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            edges[i] == [u<sub>i</sub>, v<sub>i</sub>, length<sub>i</sub>]
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= u<sub>i</sub>, v<sub>i</sub> &lt;= n - 1
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= length<sub>i</sub> &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>disappear.length == n</code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= disappear[i] &lt;= 10<sup>5</sup>
           </code>
         </li>
       </ul>
