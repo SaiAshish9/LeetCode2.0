@@ -59704,7 +59704,7 @@ INF  -1 INF  -1
         conditions:
       </p>
 
-      <ol>
+      <ul>
         <li>
           Each character should appear <strong>only once</strong> in the
           compressed version.
@@ -59712,7 +59712,7 @@ INF  -1 INF  -1
         <li>
           The characters should be in <strong>alphabetical order</strong>.
         </li>
-      </ol>
+      </ul>
 
       <p>
         Return the <em>better compression</em> of <code>compressed</code>.
