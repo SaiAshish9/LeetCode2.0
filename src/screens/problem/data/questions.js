@@ -59252,6 +59252,95 @@ INF  -1 INF  -1
       </ul>
     </article>
   ),
+  2053: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        A <strong>distinct string</strong> is a string that is present only{" "}
+        <strong>once</strong> in an array.
+      </p>
+
+      <p>
+        Given an array of strings <code>arr</code>, and an integer{" "}
+        <code>k</code>, return <em>the </em>
+        <code>
+          k<sup>th</sup>
+        </code>
+        <em>
+          {" "}
+          <strong>distinct string</strong> present in{" "}
+        </em>
+        <code>arr</code>. If there are <strong>fewer</strong> than{" "}
+        <code>k</code> distinct strings, return{" "}
+        <em>
+          an <strong>empty string </strong>
+        </em>
+        <code>""</code>.
+      </p>
+
+      <p>
+        Note that the strings are considered in the{" "}
+        <strong>order in which they appear</strong> in the array.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = ["d","b","c","b","c","a"], k = 2 <br />
+        <strong>Output:</strong> "a" <br />
+        <strong>Explanation:</strong> <br />
+        The only distinct strings in arr are "d" and "a". <br />
+        "d" appears 1<sup>st</sup>, so it is the 1<sup>st</sup> distinct string.{" "}
+        <br />
+        "a" appears 2<sup>nd</sup>, so it is the 2<sup>nd</sup> distinct string.{" "}
+        <br />
+        Since k == 2, "a" is returned.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = ["aaa","aa","a"], k = 1 <br />
+        <strong>Output:</strong> "aaa" <br />
+        <strong>Explanation:</strong> <br />
+        All strings in arr are distinct, so the 1<sup>st</sup> string "aaa" is
+        returned.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = ["a","b","a"], k = 3 <br />
+        <strong>Output:</strong> "" <br />
+        <strong>Explanation:</strong> <br />
+        The only distinct string is "b". Since there are fewer than 3 distinct
+        strings, we return an empty string "".
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= k &lt;= arr.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>1 &lt;= arr[i].length &lt;= 5</code>
+        </li>
+        <li>
+          <code>arr[i]</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
