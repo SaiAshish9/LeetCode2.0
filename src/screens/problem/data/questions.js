@@ -62573,6 +62573,70 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  899: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a string <code>s</code> and an integer <code>k</code>. You
+        can choose one of the first <code>k</code> letters of <code>s</code> and
+        append it at the end of the string.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the lexicographically smallest string you could have after applying
+          the mentioned step any number of moves
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "cba", k = 1<br />
+        <strong>Output:</strong> "acb"
+        <br />
+        <strong>Explanation:</strong> <br />
+        In the first move, we move the 1<sup>st</sup> character 'c' to the end,
+        obtaining the string "bac".
+        <br />
+        In the second move, we move the 1<sup>st</sup> character 'b' to the end,
+        obtaining the final result "acb".
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "baaca", k = 3 <br />
+        <strong>Output:</strong> "aaabc" <br />
+        <strong>Explanation:</strong> <br />
+        In the first move, we move the 1<sup>st</sup> character 'b' to the end,
+        obtaining the string "aacab".
+        <br />
+        In the second move, we move the 3<sup>rd</sup> character 'c' to the end,
+        obtaining the final result "aaabc".
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= k &lt;= s.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>s</code> consist of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
