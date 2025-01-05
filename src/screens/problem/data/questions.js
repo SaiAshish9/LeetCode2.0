@@ -63272,8 +63272,9 @@ INF  -1 INF  -1
       <p>
         A string <code>x</code>&nbsp;can break&nbsp;string <code>y</code>
         &nbsp;(both of size <code>n</code>) if <code>x[i] &gt;= y[i]</code>
-        &nbsp;(in alphabetical order)&nbsp;for all <code>i</code>&nbsp;between{" "}
-        <code>0</code> and <code>n-1</code>.
+        &nbsp;(in alphabetical order)&nbsp;for all <code>
+          i
+        </code>&nbsp;between <code>0</code> and <code>n-1</code>.
       </p>
 
       <p>&nbsp;</p>
@@ -63328,6 +63329,83 @@ INF  -1 INF  -1
           <code>1 &lt;= n &lt;= 10^5</code>
         </li>
         <li>All strings consist of lowercase English letters.</li>
+      </ul>
+    </div>
+  ),
+  1451: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a sentence&nbsp;<code>text</code> (A&nbsp;<em>sentence</em>
+        &nbsp;is a string of space-separated words) in the following format:
+      </p>
+
+      <ul>
+        <li>First letter is in upper case.</li>
+        <li>
+          Each word in <code>text</code> are separated by a single space.
+        </li>
+      </ul>
+
+      <p>
+        Your task is to rearrange the words in text such that&nbsp;all words are
+        rearranged in an increasing order of their lengths. If two words have
+        the same length, arrange them in their original order.
+      </p>
+
+      <p>Return the new text&nbsp;following the format shown above.</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> text = "Leetcode is cool" <br />
+        <strong>Output:</strong> "Is cool leetcode" <br />
+        <strong>Explanation: </strong>There are 3 words, "Leetcode" of length 8,
+        "is" of length 2 and "cool" of length 4. <br />
+        Output is ordered by length and the new first word starts with capital
+        letter.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> text = "Keep calm and code on" <br />
+        <strong>Output:</strong> "On and keep calm code" <br />
+        <strong>Explanation: </strong>Output is ordered as follows: <br />
+        "On" 2 letters. <br />
+        "and" 3 letters. <br />
+        "keep" 4 letters in case of tie order by position in original text.{" "}
+        <br />
+        "calm" 4 letters. <br />
+        "code" 4 letters.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> text = "To be or not to be" <br />
+        <strong>Output:</strong> "To be or to be not"
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>text</code> begins with a capital letter and then contains
+          lowercase letters and single space between words.
+        </li>
+        <li>
+          <code>1 &lt;= text.length &lt;= 10^5</code>
+        </li>
       </ul>
     </div>
   ),
