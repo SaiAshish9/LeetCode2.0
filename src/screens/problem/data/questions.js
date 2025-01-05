@@ -62378,7 +62378,7 @@ INF  -1 INF  -1
         replacement operation:
       </p>
 
-      <ol>
+      <ul>
         <li>
           Check if the <strong>substring</strong> <code>sources[i]</code> occurs
           at index <code>indices[i]</code> in the{" "}
@@ -62391,7 +62391,7 @@ INF  -1 INF  -1
           Otherwise if it does occur, <strong>replace</strong> that substring
           with <code>targets[i]</code>.
         </li>
-      </ol>
+      </ul>
 
       <p>
         For example, if{" "}
