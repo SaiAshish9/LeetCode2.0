@@ -174,8 +174,23 @@ const TableContainer = () => {
 
   async function fetchSolutions() {
     try {
-      let res = (await axios.get(BASE_URL + "solutions.json", {})).data;
-      res = JSON.parse(res);
+      let res = (
+        await axios.get(`${BASE_URL}solutions.json`, {
+          headers: {
+            "Content-Length": 0,
+            "Content-Type": "text/plain",
+          },
+          responseType: "text",
+        })
+      ).data;
+
+      if (typeof res === "string") {
+        try {
+          res = JSON.parse(res.replace(/,(\s*})/g, "$1"));
+        } catch (error) {
+          console.error("Error parsing JSON:", error);
+        }
+      }
 
       const solvedQuestions = Object.entries(res)
         .filter(([_, value]) => {
