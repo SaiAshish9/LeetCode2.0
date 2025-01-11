@@ -6,6 +6,7 @@ import {
   FrequencyCont,
   SpanCont,
 } from "./styles";
+import axios from "axios";
 
 const columns = [
   {
@@ -168,17 +169,13 @@ const TableContainer = () => {
   const [isDifficultyLoaded, setIsDifficultyLoaded] = useState(false);
   const [isSolvedQsLoaded, setIsSolvedQsLoaded] = useState(false);
 
+  const BASE_URL =
+    "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
+
   async function fetchSolutions() {
     try {
-      const response = await fetch(
-        "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/solutions.json"
-      );
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const res = await response.json();
+      let res = (await axios.get(BASE_URL + "solutions.json", {})).data;
+      res = JSON.parse(res);
 
       const solvedQuestions = Object.entries(res)
         .filter(([_, value]) => {
@@ -200,9 +197,12 @@ const TableContainer = () => {
       );
 
       console.log({
-        leftOverQs: 100 - solvedQuestions.slice().filter((x) => x <= 100).length,
-        leftOverQs400: 400 - solvedQuestions.slice().filter((x) => x <= 400).length,
-        leftOverQs450: 450 - solvedQuestions.slice().filter((x) => x <= 450).length,
+        leftOverQs:
+          100 - solvedQuestions.slice().filter((x) => x <= 100).length,
+        leftOverQs400:
+          400 - solvedQuestions.slice().filter((x) => x <= 400).length,
+        leftOverQs450:
+          450 - solvedQuestions.slice().filter((x) => x <= 450).length,
       });
       setIsSolvedQsLoaded(true);
 

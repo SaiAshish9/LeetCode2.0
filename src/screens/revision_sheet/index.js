@@ -85,8 +85,8 @@ const RevisionSheet = () => {
   }, [hashParam]);
 
   async function fetchSolutions(params) {
-    const solutions = (await axios.get(BASE_URL + "solutions.json", {})).data;
-    const revision = (await axios.get(BASE_URL + "revision.json", {})).data;
+    const solutions = (await axios.get(BASE_URL + "solutions.json", {}))?.data;
+    const revision = (await axios.get(BASE_URL + "revision.json", {}))?.data;
     let count = 0;
 
     const qnos = Array.from(new Set(Object.values(revision).flat()));
@@ -97,12 +97,8 @@ const RevisionSheet = () => {
             (val) => val?.length > 0
           )
         : [];
-      const values1 = solutions[qno]?.["c++"]
-        ? Object.values(solutions[qno]?.["c++"])?.filter(
-            (val) => val?.length > 0
-          )
-        : [];
-      if (values?.length > 0 || values1?.length > 0) {
+
+      if (values?.length > 0) {
         count++;
       }
     }
