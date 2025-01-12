@@ -174,17 +174,7 @@ const TableContainer = () => {
 
   async function fetchSolutions() {
     try {
-      let res = (
-        await axios.get(`${BASE_URL}solutions.json`, {
-          headers: {
-            "Content-Length": 0,
-            "Content-Type": "text/plain",
-          },
-          responseType: "text",
-        })
-      ).data;
-
-      debugger;
+      let res = (await axios.get(`${BASE_URL}solutions.json`)).data;
 
       if (typeof res === "string") {
         try {
