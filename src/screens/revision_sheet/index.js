@@ -92,14 +92,14 @@ const RevisionSheet = () => {
     const qnos = Array.from(new Set(Object.values(revision).flat()));
 
     for (let qno of qnos) {
-      const values = Object.values(solutions[qno]?.["solution"])
-        ? Object.values(solutions[qno]?.["solution"])?.filter(
-            (val) => val?.length > 0
-          )
-        : [];
-
-      if (values?.length > 0) {
-        count++;
+      if (solutions[qno]?.["solution"]) {
+        const values = Object.values(solutions[qno]["solution"])?.filter(
+          (val) => val?.length > 0
+        );
+    
+        if (values?.length > 0) {
+          count++;
+        }
       }
     }
 
