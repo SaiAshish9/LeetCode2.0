@@ -96,7 +96,7 @@ const RevisionSheet = () => {
         const values = Object.values(solutions[qno]["solution"])?.filter(
           (val) => val?.length > 0
         );
-    
+
         if (values?.length > 0) {
           count++;
         }
