@@ -184,6 +184,8 @@ const TableContainer = () => {
         })
       ).data;
 
+      debugger;
+
       if (typeof res === "string") {
         try {
           res = JSON.parse(res.replace(/,(\s*})/g, "$1"));
