@@ -65466,7 +65466,6 @@ INF  -1 INF  -1
                   >
                     <div>strictly increasing</div>
                   </div>
-                  <div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(356px, 236px);"></div>
                 </div>
               </div>
             </span>
