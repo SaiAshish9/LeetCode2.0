@@ -64975,7 +64975,7 @@ INF  -1 INF  -1
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">
@@ -65022,13 +65022,13 @@ INF  -1 INF  -1
           <code>divisors[3]</code> have the same divisibility score, we return
           the smaller one which is <code>divisors[3]</code>.
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [4,7,9,3,9], divisors = [5,2,3]</span>
@@ -65062,13 +65062,13 @@ INF  -1 INF  -1
           <code>nums[2]</code>, <code>nums[3]</code> and <code>nums[4]</code>{" "}
           are divisible by 3.
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">
@@ -65103,7 +65103,7 @@ INF  -1 INF  -1
           The divisibility score of <code>divisors[2]</code> is 1 since{" "}
           <code>nums[0]</code> is divisible by 20.
         </p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
