@@ -66383,17 +66383,14 @@ INF  -1 INF  -1
             days = 10, meetings = [[5,7],[1,3],[9,10]]
           </span>
         </p>
-        <br />
 
         <p>
           <strong>Output:</strong> <span class="example-io">2</span>
         </p>
-        <br />
 
         <p>
           <strong>Explanation:</strong>
         </p>
-        <br />
 
         <p>
           There is no meeting scheduled on the 4<sup>th</sup> and 8<sup>th</sup>{" "}
@@ -66410,17 +66407,14 @@ INF  -1 INF  -1
           <strong>Input:</strong>{" "}
           <span class="example-io">days = 5, meetings = [[2,4],[1,3]]</span>
         </p>
-        <br />
 
         <p>
           <strong>Output:</strong> <span class="example-io">1</span>
         </p>
-        <br />
 
         <p>
           <strong>Explanation:</strong>
         </p>
-        <br />
 
         <p>
           There is no meeting scheduled on the 5<sup>th </sup>day.
@@ -66436,16 +66430,13 @@ INF  -1 INF  -1
           <strong>Input:</strong>{" "}
           <span class="example-io">days = 6, meetings = [[1,6]]</span>
         </p>
-        <br />
         <p>
           <strong>Output:</strong> 0
         </p>
-        <br />
 
         <p>
           <strong>Explanation:</strong>
         </p>
-        <br />
 
         <p>Meetings are scheduled for all working days.</p>
       </pre>
