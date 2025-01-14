@@ -64982,34 +64982,28 @@ INF  -1 INF  -1
             nums = [2,9,15,50], divisors = [5,3,7,2]
           </span>
         </p>
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">2</span>
         </p>
-        <br />
 
         <p>
           <strong>Explanation:</strong>
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[0]</code> is 2 since{" "}
           <code>nums[2]</code> and <code>nums[3]</code> are divisible by 5.
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[1]</code> is 2 since{" "}
           <code>nums[1]</code> and <code>nums[2]</code> are divisible by 3.
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[2]</code> is 0 since none of
           the numbers in <code>nums</code> is divisible by 7.
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[3]</code> is 2 since{" "}
@@ -65033,29 +65027,24 @@ INF  -1 INF  -1
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [4,7,9,3,9], divisors = [5,2,3]</span>
         </p>
-        <br />
 
         <p>
           <strong>Output:</strong> <span class="example-io">3</span>
         </p>
-        <br />
 
         <p>
           <strong>Explanation:</strong>
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[0]</code> is 0 since none of
           numbers in <code>nums</code> is divisible by 5.
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[1]</code> is 1 since only{" "}
           <code>nums[0]</code> is divisible by 2.
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[2]</code> is 3 since{" "}
@@ -65075,29 +65064,24 @@ INF  -1 INF  -1
             nums = [20,14,21,10], divisors = [10,16,20]
           </span>
         </p>
-        <br />
 
         <p>
           <strong>Output:</strong> <span class="example-io">10</span>
         </p>
-        <br />
 
         <p>
           <strong>Explanation:</strong>
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[0]</code> is 2 since{" "}
           <code>nums[0]</code> and <code>nums[3]</code> are divisible by 10.
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[1]</code> is 0 since none of
           the numbers in <code>nums</code> is divisible by 16.
         </p>
-        <br />
 
         <p>
           The divisibility score of <code>divisors[2]</code> is 1 since{" "}
