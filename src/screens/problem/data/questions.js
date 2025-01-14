@@ -64443,6 +64443,68 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  1299: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an array <code>arr</code>,&nbsp;replace every element in that
+        array with the greatest element among the elements to its&nbsp;right,
+        and replace the last element with <code>-1</code>.
+      </p>
+
+      <p>After doing so, return the array.</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = [17,18,5,4,6,1] <br />
+        <strong>Output:</strong> [18,6,6,6,1,-1] <br />
+        <strong>Explanation:</strong> <br />
+        - index 0 --&gt; the greatest element to the right of index 0 is index 1
+        (18). <br />
+        - index 1 --&gt; the greatest element to the right of index 1 is index 4
+        (6). <br />
+        - index 2 --&gt; the greatest element to the right of index 2 is index 4
+        (6). <br />
+        - index 3 --&gt; the greatest element to the right of index 3 is index 4
+        (6). <br />
+        - index 4 --&gt; the greatest element to the right of index 4 is index 5
+        (1). <br />- index 5 --&gt; there are no elements to the right of index
+        5, so we put -1.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = [400] <br />
+        <strong>Output:</strong> [-1] <br />
+        <strong>Explanation:</strong> There are no elements to the right of
+        index 0.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= arr.length &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= arr[i] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
