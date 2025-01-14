@@ -65506,12 +65506,9 @@ INF  -1 INF  -1
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [1,4,3,3,2]</span>
         </p>
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">2</span>
         </p>
-        <br />
-
         <p>
           <strong>Explanation:</strong>
         </p>
@@ -65545,13 +65542,9 @@ INF  -1 INF  -1
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [3,3,3,3]</span>
         </p>
-        <br />
-
         <p>
           <strong>Output:</strong> <span class="example-io">1</span>
         </p>
-        <br />
-
         <p>
           <strong>Explanation:</strong>
         </p>
@@ -65584,13 +65577,9 @@ INF  -1 INF  -1
         <p>
           <strong>Input:</strong> <span class="example-io">nums = [3,2,1]</span>
         </p>
-        <br />
-
         <p>
           <strong>Output:</strong> <span class="example-io">3</span>
         </p>
-        <br />
-
         <p>
           <strong>Explanation:</strong>
         </p>
