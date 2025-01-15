@@ -68926,6 +68926,46 @@ P     I`}
       </p>
     </div>
   ),
+  246: (
+    <div class="markdown-body div-width">
+      <p>
+        A strobogrammatic number is a number that looks the same when rotated
+        180 degrees (looked at upside down).
+      </p>
+
+      <p>
+        Write a function to determine if a number is strobogrammatic. The number
+        is represented as a string.
+      </p>
+
+      <p>
+        <b>Example 1:</b>
+      </p>
+
+      <pre>
+        <b>Input:</b> "69" <br />
+        <b>Output:</b> true
+      </pre>
+
+      <p>
+        <b>Example 2:</b>
+      </p>
+
+      <pre>
+        <b>Input:</b> "88" <br />
+        <b>Output:</b> true
+      </pre>
+
+      <p>
+        <b>Example 3:</b>
+      </p>
+
+      <pre>
+        <b>Input:</b> "962" <br />
+        <b>Output:</b> false
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
