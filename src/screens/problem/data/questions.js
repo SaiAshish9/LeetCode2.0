@@ -68538,6 +68538,88 @@ P     I`}
       <strong>Follow up:</strong> Could you solve it iteratively?
     </div>
   ),
+  58: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code> consisting of words and spaces, return{" "}
+        <em>
+          the length of the <strong>last</strong> word in the string.
+        </em>
+      </p>
+
+      <p>
+        A <strong>word</strong> is a maximal{" "}
+        <span
+          data-keyword="substring-nonempty"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:r2tu:"
+              >
+                <div>substring</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        consisting of non-space characters only.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "Hello World" <br />
+        <strong>Output:</strong> 5 <br />
+        <strong>Explanation:</strong> The last word is "World" with length 5.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = " fly me to the moon " <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> The last word is "moon" with length 4.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "luffy is still joyboy" <br />
+        <strong>Output:</strong> 6 <br />
+        <strong>Explanation:</strong> The last word is "joyboy" with length 6.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= s.length &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>s</code> consists of only English letters and spaces{" "}
+          <code>' '</code>.
+        </li>
+        <li>
+          There will be at least one word in <code>s</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
