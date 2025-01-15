@@ -67164,6 +67164,33 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  267: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a string <code>s</code>, return all the palindromic permutations
+        (without duplicates) of it. Return an empty list if no palindromic
+        permutation could be form.
+      </p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <code>"aabb"</code> <br />
+        <strong>Output:</strong> <code>["abba", "baab"]</code>
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <code>"abc"</code> <br />
+        <strong>Output:</strong> <code>[]</code>
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
