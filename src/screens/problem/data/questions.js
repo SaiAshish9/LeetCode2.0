@@ -66808,6 +66808,79 @@ INF  -1 INF  -1
       </ul>
     </div>
   ),
+  131: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code>, partition <code>s</code> such that every{" "}
+        <span
+          data-keyword="substring-nonempty"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rcn:"
+              >
+                <div>substring</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        of the partition is a{" "}
+        <span
+          data-keyword="palindrome-string"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rcp:"
+              >
+                <div>
+                  <strong>palindrome</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+        . Return <em>all possible palindrome partitioning of </em>
+        <code>s</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> s = "aab" <br />
+        <strong>Output:</strong> [["a","a","b"],["aa","b"]]
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> s = "a" <br />
+        <strong>Output:</strong> [["a"]]
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= s.length &lt;= 16</code>
+        </li>
+        <li>
+          <code>s</code> contains only lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
