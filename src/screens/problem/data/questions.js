@@ -69479,6 +69479,65 @@ P     I`}
       </ul>
     </div>
   ),
+  680: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code>, return <code>true</code> <em>if the </em>
+        <code>s</code>
+        <em>
+          {" "}
+          can be palindrome after deleting <strong>at most one</strong>{" "}
+          character from it
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "aba" <br />
+        <strong>Output:</strong> true
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "abca" <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong> You could delete the character 'c'.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "abc" <br />
+        <strong>Output:</strong> false
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= s.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>s</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
