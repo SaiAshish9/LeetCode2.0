@@ -70072,6 +70072,106 @@ P     I`}
       </ul>
     </div>
   ),
+  2788: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an array of strings <code>words</code> and a character{" "}
+        <code>separator</code>, <strong>split</strong> each string in{" "}
+        <code>words</code> by <code>separator</code>.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          an array of strings containing the new strings formed after the
+          splits, <strong>excluding empty strings</strong>.
+        </em>
+      </p>
+
+      <p>
+        <strong>Notes</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>separator</code> is used to determine where the split should
+          occur, but it is not included as part of the resulting strings.
+        </li>
+        <li>A split may result in more than two strings.</li>
+        <li>
+          The resulting strings must maintain the same order as they were
+          initially given.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words = ["one.two.three","four.five","six"],
+        separator = "." <br />
+        <strong>Output:</strong> ["one","two","three","four","five","six"]{" "}
+        <br />
+        <strong>Explanation: </strong>In this example we split as follows:{" "}
+        <br />
+        "one.two.three" splits into "one", "two", "three" <br />
+        "four.five" splits into "four", "five" <br />
+        "six" splits into "six" <br />
+        Hence, the resulting array is ["one","two","three","four","five","six"].
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words = ["$easy$","$problem$"], separator = "$"{" "}
+        <br />
+        <strong>Output:</strong> ["easy","problem"] <br />
+        <strong>Explanation:</strong> In this example we split as follows:{" "}
+        <br />
+        "$easy$" splits into "easy" (excluding empty strings) <br />
+        "$problem$" splits into "problem" (excluding empty strings) <br />
+        Hence, the resulting array is ["easy","problem"].
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words = ["|||"], separator = "|" <br />
+        <strong>Output:</strong> [] <br />
+        <strong>Explanation:</strong> In this example the resulting split of
+        "|||" will contain only empty strings, so we return an empty array [].{" "}
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= words.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>1 &lt;= words[i].length &lt;= 20</code>
+        </li>
+        <li>
+          characters in <code>words[i]</code> are either lowercase English
+          letters or characters from the string <code>".,|$#@"</code> (excluding
+          the quotes)
+        </li>
+        <li>
+          <code>separator</code> is a character from the string{" "}
+          <code>".,|$#@"</code> (excluding the quotes)
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
