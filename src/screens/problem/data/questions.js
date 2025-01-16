@@ -69652,6 +69652,73 @@ P     I`}
       </ul>
     </div>
   ),
+  1309: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a string <code>s</code> formed by digits and{" "}
+        <code>'#'</code>. We want to map <code>s</code> to English lowercase
+        characters as follows:
+      </p>
+
+      <ul>
+        <li>
+          Characters (<code>'a'</code> to <code>'i'</code>) are represented by (
+          <code>'1'</code> to <code>'9'</code>) respectively.
+        </li>
+        <li>
+          Characters (<code>'j'</code> to <code>'z'</code>) are represented by (
+          <code>'10#'</code> to <code>'26#'</code>) respectively.
+        </li>
+      </ul>
+
+      <p>
+        Return <em>the string formed after mapping</em>.
+      </p>
+
+      <p>
+        The test cases are generated so that a unique mapping will always exist.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "10#11#12" <br />
+        <strong>Output:</strong> "jkab" <br />
+        <strong>Explanation:</strong> "j" -&gt; "10#" , "k" -&gt; "11#" , "a"
+        -&gt; "1" , "b" -&gt; "2".
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "1326#" <br />
+        <strong>Output:</strong> "acz"
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= s.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>s</code> consists of digits and the <code>'#'</code> letter.
+        </li>
+        <li>
+          <code>s</code> will be a valid string such that mapping is always
+          possible.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
