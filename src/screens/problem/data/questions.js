@@ -69733,12 +69733,11 @@ P     I`}
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">s = "(1+(2*3)+((8)/4))+1"</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">3</span>
         </p>{" "}
@@ -69746,45 +69745,40 @@ P     I`}
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>Digit 8 is inside of 3 nested parentheses in the string.</p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">s = "(1)+((2))+(((3)))"</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">3</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>Digit 3 is inside of 3 nested parentheses in the string.</p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">s = "()(())((()()))"</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">3</span>
         </p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
