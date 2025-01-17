@@ -72859,7 +72859,7 @@ P     I`}
       </p>
 
       <pre>
-        <strong>Input:</strong>
+        <strong>Input:</strong> <br/>
         {`Employee table:
     +----+--------+
     | id | salary |
@@ -72869,7 +72869,7 @@ P     I`}
     | 3  | 300    |
     +----+--------+`}{" "}
         <br />
-        <strong>Output:</strong>
+        <strong>Output:</strong> <br/>
         {`+---------------------+
     | SecondHighestSalary |
     +---------------------+
@@ -72882,7 +72882,7 @@ P     I`}
       </p>
 
       <pre>
-        <strong>Input:</strong>
+        <strong>Input:</strong> <br/>
         {`Employee table:
     +----+--------+
     | id | salary |
@@ -72890,7 +72890,7 @@ P     I`}
     | 1  | 100    |
     +----+--------+`}{" "}
         <br />
-        <strong>Output:</strong>
+        <strong>Output:</strong> <br/>
         {`+---------------------+
     | SecondHighestSalary |
     +---------------------+
