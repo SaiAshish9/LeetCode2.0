@@ -73130,7 +73130,8 @@ P     I`}
     +-------------+---------+
     | id          | int     |
     | email       | varchar |
-    +-------------+---------+`} <br />
+    +-------------+---------+`}{" "}
+        <br />
         id is the primary key (column with unique values) for this table. <br />
         Each row of this table contains an email. The emails will not contain
         uppercase letters.
@@ -73172,6 +73173,92 @@ P     I`}
     +---------+`}{" "}
         <br />
         <strong>Explanation:</strong> a@b.com is repeated two times.
+      </pre>
+    </div>
+  ),
+  184: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Table: <code>Employee</code>
+      </p>{" "}
+      <br />
+      <pre>
+        {`+--------------+---------+
+    | Column Name  | Type    |
+    +--------------+---------+
+    | id           | int     |
+    | name         | varchar |
+    | salary       | int     |
+    | departmentId | int     |
+    +--------------+---------+`}{" "}
+        <br />
+        id is the primary key (column with unique values) for this table. <br />
+        departmentId is a foreign key (reference columns) of the ID from the{" "}
+        <code>Department </code>table. <br />
+        Each row of this table indicates the ID, name, and salary of an
+        employee. It also contains the ID of their department.
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        Table: <code>Department</code>
+      </p>{" "}
+      <br />
+      <pre>
+        {`+-------------+---------+
+    | Column Name | Type    |
+    +-------------+---------+
+    | id          | int     |
+    | name        | varchar |
+    +-------------+---------+`}
+        id is the primary key (column with unique values) for this table. It is
+        guaranteed that department name is not <code>NULL.</code>
+        Each row of this table indicates the ID of a department and its name.
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        Write a solution to find employees who have the highest salary in each
+        of the departments.
+      </p>
+      <p>
+        Return the result table in <strong>any order</strong>.
+      </p>
+      <p>The result format is in the following example.</p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> <br />
+        Employee table: <br />
+        {`+----+-------+--------+--------------+
+    | id | name  | salary | departmentId |
+    +----+-------+--------+--------------+
+    | 1  | Joe   | 70000  | 1            |
+    | 2  | Jim   | 90000  | 1            |
+    | 3  | Henry | 80000  | 2            |
+    | 4  | Sam   | 60000  | 2            |
+    | 5  | Max   | 90000  | 1            |
+    +----+-------+--------+--------------+`}
+        Department table: <br />
+        {`+----+-------+
+    | id | name  |
+    +----+-------+
+    | 1  | IT    |
+    | 2  | Sales |
+    +----+-------+`}{" "}
+        <br />
+        <strong>Output:</strong> <br />
+        {`+------------+----------+--------+
+    | Department | Employee | Salary |
+    +------------+----------+--------+
+    | IT         | Jim      | 90000  |
+    | Sales      | Henry    | 80000  |
+    | IT         | Max      | 90000  |
+    +------------+----------+--------+`}{" "}
+        <br />
+        <strong>Explanation:</strong> Max and Jim both have the highest salary
+        in the IT department and Henry has the highest salary in the Sales
+        department.
       </pre>
     </div>
   ),
