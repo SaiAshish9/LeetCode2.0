@@ -72859,7 +72859,7 @@ P     I`}
       </p>
 
       <pre>
-        <strong>Input:</strong> <br/>
+        <strong>Input:</strong> <br />
         {`Employee table:
     +----+--------+
     | id | salary |
@@ -72869,7 +72869,7 @@ P     I`}
     | 3  | 300    |
     +----+--------+`}{" "}
         <br />
-        <strong>Output:</strong> <br/>
+        <strong>Output:</strong> <br />
         {`+---------------------+
     | SecondHighestSalary |
     +---------------------+
@@ -72882,7 +72882,7 @@ P     I`}
       </p>
 
       <pre>
-        <strong>Input:</strong> <br/>
+        <strong>Input:</strong> <br />
         {`Employee table:
     +----+--------+
     | id | salary |
@@ -72890,12 +72890,92 @@ P     I`}
     | 1  | 100    |
     +----+--------+`}{" "}
         <br />
-        <strong>Output:</strong> <br/>
+        <strong>Output:</strong> <br />
         {`+---------------------+
     | SecondHighestSalary |
     +---------------------+
     | null                |
     +---------------------+`}
+      </pre>
+    </div>
+  ),
+  177: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Table: <code>Employee</code>
+      </p>
+
+      <pre>
+        {`+-------------+------+
+    | Column Name | Type |
+    +-------------+------+
+    | id          | int  |
+    | salary      | int  |
+    +-------------+------+`}{" "}
+        <br />
+        id is the primary key (column with unique values) for this table. Each
+        row of this table contains information about the salary of an employee.
+      </pre>
+
+      <p>&nbsp;</p>
+
+      <p>
+        Write a solution to find the{" "}
+        <code>
+          n<sup>th</sup>
+        </code>{" "}
+        highest salary from the <code>Employee</code> table. If there is no{" "}
+        <code>
+          n<sup>th</sup>
+        </code>{" "}
+        highest salary, return&nbsp;<code>null</code>.
+      </p>
+
+      <p>The result format is in the following example.</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <br />
+        Employee table:
+        {`+----+--------+
+    | id | salary |
+    +----+--------+
+    | 1  | 100    |
+    | 2  | 200    |
+    | 3  | 300    |
+    +----+--------+`}{" "}
+        <br />n = 2<strong>Output:</strong> <br />
+        {`+------------------------+
+    | getNthHighestSalary(2) |
+    +------------------------+
+    | 200                    |
+    +------------------------+`}
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <br />
+        Employee table: <br />
+        {`+----+--------+
+    | id | salary |
+    +----+--------+
+    | 1  | 100    |
+    +----+--------+`}{" "}
+        <br />
+        n = 2 <br />
+        <strong>Output:</strong> <br />
+        {`+------------------------+
+    | getNthHighestSalary(2) |
+    +------------------------+
+    | null                   |
+    +------------------------+`}
       </pre>
     </div>
   ),
