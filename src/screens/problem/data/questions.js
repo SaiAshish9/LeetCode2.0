@@ -73042,7 +73042,8 @@ P     I`}
     | 4  | 3.85  |
     | 5  | 4.00  |
     | 6  | 3.65  |
-    +----+-------+`} <br />
+    +----+-------+`}{" "}
+        <br />
         <strong>Output:</strong> <br />
         {`+-------+------+
     | score | rank |
@@ -73057,32 +73058,43 @@ P     I`}
       </pre>
     </div>
   ),
-  180: (<div class="elfjS" data-track-load="description_content"><p>Table: <code>Logs</code></p>
+  180: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Table: <code>Logs</code>
+      </p>
 
-    <pre>+-------------+---------+
+      <pre>
+        {`+-------------+---------+
     | Column Name | Type    |
     +-------------+---------+
     | id          | int     |
     | num         | varchar |
-    +-------------+---------+
-    In SQL, id is the primary key for this table.
-    id is an autoincrement column starting from 1.
-    </pre>
-    
-    <p>&nbsp;</p>
-    
-    <p>Find all numbers that appear at least three times consecutively.</p>
-    
-    <p>Return the result table in <strong>any order</strong>.</p>
-    
-    <p>The&nbsp;result format is in the following example.</p>
-    
-    <p>&nbsp;</p>
-    <p><strong class="example">Example 1:</strong></p>
-    
-    <pre><strong>Input:</strong> 
-    Logs table:
-    +----+-----+
+    +-------------+---------+`}{" "}
+        <br />
+        In SQL, id is the primary key for this table. id is an autoincrement
+        column starting from 1.
+      </pre>
+
+      <p>&nbsp;</p>
+
+      <p>Find all numbers that appear at least three times consecutively.</p>
+
+      <p>
+        Return the result table in <strong>any order</strong>.
+      </p>
+
+      <p>The&nbsp;result format is in the following example.</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong>
+        Logs table:
+        {`+----+-----+
     | id | num |
     +----+-----+
     | 1  | 1   |
@@ -73092,16 +73104,20 @@ P     I`}
     | 5  | 1   |
     | 6  | 2   |
     | 7  | 2   |
-    +----+-----+
-    <strong>Output:</strong> 
-    +-----------------+
+    +----+-----+`}{" "}
+        <br />
+        <strong>Output:</strong>
+        {`+-----------------+
     | ConsecutiveNums |
     +-----------------+
     | 1               |
-    +-----------------+
-    <strong>Explanation:</strong> 1 is the only number that appears consecutively for at least three times.
-    </pre>
-    </div>)
+    +-----------------+`}{" "}
+        <br />
+        <strong>Explanation:</strong> 1 is the only number that appears
+        consecutively for at least three times.
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
