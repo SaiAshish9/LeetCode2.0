@@ -72940,7 +72940,7 @@ P     I`}
 
       <pre>
         <strong>Input:</strong> <br />
-        Employee table:
+        Employee table: <br />
         {`+----+--------+
     | id | salary |
     +----+--------+
@@ -72948,7 +72948,8 @@ P     I`}
     | 2  | 200    |
     | 3  | 300    |
     +----+--------+`}{" "}
-        <br />n = 2<strong>Output:</strong> <br />
+        <br />n = 2 <br />
+        <strong>Output:</strong> <br />
         {`+------------------------+
     | getNthHighestSalary(2) |
     +------------------------+
