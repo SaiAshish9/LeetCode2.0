@@ -372,7 +372,8 @@ const RevisionSheet = () => {
                                     value.title
                                       .toLowerCase()
                                       .split(" ")
-                                      .join("_") +
+                                      .join("_")
+                                      .replaceAll("?", "%3F") +
                                     "?tag=" +
                                     item,
                                   "_blank"
