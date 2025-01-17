@@ -73093,7 +73093,7 @@ P     I`}
 
       <pre>
         <strong>Input:</strong> <br />
-        Logs table:
+        Logs table: <br />
         {`+----+-----+
     | id | num |
     +----+-----+
