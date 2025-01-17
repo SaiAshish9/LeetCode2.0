@@ -73092,7 +73092,7 @@ P     I`}
       </p>
 
       <pre>
-        <strong>Input:</strong>
+        <strong>Input:</strong> <br />
         Logs table:
         {`+----+-----+
     | id | num |
@@ -73106,14 +73106,14 @@ P     I`}
     | 7  | 2   |
     +----+-----+`}{" "}
         <br />
-        <strong>Output:</strong>
+        <strong>Output:</strong> <br />
         {`+-----------------+
     | ConsecutiveNums |
     +-----------------+
     | 1               |
     +-----------------+`}{" "}
         <br />
-        <strong>Explanation:</strong> 1 is the only number that appears
+        <strong>Explanation:</strong> <br /> 1 is the only number that appears
         consecutively for at least three times.
       </pre>
     </div>
