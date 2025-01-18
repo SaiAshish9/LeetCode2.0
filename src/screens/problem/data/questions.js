@@ -77653,6 +77653,108 @@ retrieve("2016:01:01:01:01:01","2017:01:01:23:00:00","Hour"); // return [1,2], b
       <p></p>
     </div>
   ),
+  641: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Design your implementation of the circular double-ended queue (deque).
+      </p>
+
+      <p>
+        Implement the <code>MyCircularDeque</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>MyCircularDeque(int k)</code> Initializes the deque with a
+          maximum size of <code>k</code>.
+        </li>
+        <li>
+          <code>boolean insertFront()</code> Adds an item at the front of Deque.
+          Returns <code>true</code> if the operation is successful, or{" "}
+          <code>false</code> otherwise.
+        </li>
+        <li>
+          <code>boolean insertLast()</code> Adds an item at the rear of Deque.
+          Returns <code>true</code> if the operation is successful, or{" "}
+          <code>false</code> otherwise.
+        </li>
+        <li>
+          <code>boolean deleteFront()</code> Deletes an item from the front of
+          Deque. Returns <code>true</code> if the operation is successful, or{" "}
+          <code>false</code> otherwise.
+        </li>
+        <li>
+          <code>boolean deleteLast()</code> Deletes an item from the rear of
+          Deque. Returns <code>true</code> if the operation is successful, or{" "}
+          <code>false</code> otherwise.
+        </li>
+        <li>
+          <code>int getFront()</code> Returns the front item from the Deque.
+          Returns <code>-1</code> if the deque is empty.
+        </li>
+        <li>
+          <code>int getRear()</code> Returns the last item from Deque. Returns{" "}
+          <code>-1</code> if the deque is empty.
+        </li>
+        <li>
+          <code>boolean isEmpty()</code> Returns <code>true</code> if the deque
+          is empty, or <code>false</code> otherwise.
+        </li>
+        <li>
+          <code>boolean isFull()</code> Returns <code>true</code> if the deque
+          is full, or <code>false</code> otherwise.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        ["MyCircularDeque", "insertLast", "insertLast", "insertFront",
+        "insertFront", "getRear", "isFull", "deleteLast", "insertFront",
+        "getFront"]
+        <br /> [[3], [1], [2], [3], [4], [], [], [], [4], []] <br />
+        <strong>Output</strong> <br />
+        [null, true, true, true, false, 2, true, true, true, 4]
+        <strong>Explanation</strong> <br />
+        MyCircularDeque myCircularDeque = new MyCircularDeque(3); <br />
+        myCircularDeque.insertLast(1); // return True <br />
+        myCircularDeque.insertLast(2); // return True <br />
+        myCircularDeque.insertFront(3); // return True <br />
+        myCircularDeque.insertFront(4); // return False, the queue is full.{" "}
+        <br />
+        myCircularDeque.getRear(); // return 2 <br />
+        myCircularDeque.isFull(); // return True <br />
+        myCircularDeque.deleteLast(); // return True <br />
+        myCircularDeque.insertFront(4); // return True <br />
+        myCircularDeque.getFront(); // return 4
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= k &lt;= 1000</code>
+        </li>
+        <li>
+          <code>0 &lt;= value &lt;= 1000</code>
+        </li>
+        <li>
+          At most <code>2000</code> calls will be made to{" "}
+          <code>insertFront</code>, <code>insertLast</code>,{" "}
+          <code>deleteFront</code>, <code>deleteLast</code>,{" "}
+          <code>getFront</code>, <code>getRear</code>, <code>isEmpty</code>,{" "}
+          <code>isFull</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
