@@ -75934,6 +75934,84 @@ P     I`}
       </p>
     </div>
   ),
+  2351: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code> consisting of lowercase English letters,
+        return{" "}
+        <em>
+          the first letter to appear <strong>twice</strong>
+        </em>
+        .
+      </p>
+
+      <p>
+        <strong>Note</strong>:
+      </p>
+
+      <ul>
+        <li>
+          A letter <code>a</code> appears twice before another letter{" "}
+          <code>b</code> if the <strong>second</strong> occurrence of{" "}
+          <code>a</code> is before the <strong>second</strong> occurrence of{" "}
+          <code>b</code>.
+        </li>
+        <li>
+          <code>s</code> will contain at least one letter that appears twice.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "abccbaacz" <br />
+        <strong>Output:</strong> "c" <br />
+        <strong>Explanation:</strong> <br />
+        The letter 'a' appears on the indexes 0, 5 and 6. <br />
+        The letter 'b' appears on the indexes 1 and 4. <br />
+        The letter 'c' appears on the indexes 2, 3 and 7.
+        <br />
+        The letter 'z' appears on the index 8.
+        <br />
+        The letter 'c' is the first letter to appear twice, because out of all
+        the letters the index of its second occurrence is the smallest.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "abcdd"
+        <br />
+        <strong>Output:</strong> "d"
+        <br />
+        <strong>Explanation:</strong>
+        <br />
+        The only letter that appears twice is 'd' so we return 'd'.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>2 &lt;= s.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>s</code> consists of lowercase English letters.
+        </li>
+        <li>
+          <code>s</code> has at least one repeated letter.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
