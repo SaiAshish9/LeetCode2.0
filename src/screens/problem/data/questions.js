@@ -76553,6 +76553,158 @@ P     I`}
       </ul>
     </div>
   ),
+  3209: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an array of integers <code>nums</code> and an integer{" "}
+        <code>k</code>, return the number of{" "}
+        <span
+          data-keyword="subarray-nonempty"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:r18t:"
+              >
+                <div>subarrays</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        of <code>nums</code> where the bitwise <code>AND</code> of the elements
+        of the subarray equals <code>k</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [1,1,1], k = 1</span>
+        </p>
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">6</span>
+        </p>
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+        <p>All subarrays contain only 1's.</p>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [1,1,2], k = 1</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">3</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+        <p>
+          Subarrays having an <code>AND</code> value of 1 are:{" "}
+          <code>
+            [
+            <u>
+              <strong>1</strong>
+            </u>
+            ,1,2]
+          </code>
+          ,{" "}
+          <code>
+            [1,
+            <u>
+              <strong>1</strong>
+            </u>
+            ,2]
+          </code>
+          ,{" "}
+          <code>
+            [
+            <u>
+              <strong>1,1</strong>
+            </u>
+            ,2]
+          </code>
+          .
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [1,2,3], k = 2</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">2</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>
+          Subarrays having an <code>AND</code> value of 2 are:{" "}
+          <code>
+            [1,
+            <b>
+              <u>2</u>
+            </b>
+            ,3]
+          </code>
+          ,{" "}
+          <code>
+            [1,
+            <u>
+              <strong>2,3</strong>
+            </u>
+            ]
+          </code>
+          .
+        </p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= nums[i], k &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
