@@ -75498,6 +75498,98 @@ P     I`}
       </p>
     </div>
   ),
+  762: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two integers <code>left</code> and <code>right</code>, return{" "}
+        <em>
+          the <strong>count</strong> of numbers in the{" "}
+          <strong>inclusive</strong> range{" "}
+        </em>
+        <code>[left, right]</code>
+        <em>
+          {" "}
+          having a <strong>prime number of set bits</strong> in their binary
+          representation
+        </em>
+        .
+      </p>
+
+      <p>
+        Recall that the <strong>number of set bits</strong> an integer has is
+        the number of <code>1</code>'s present when written in binary.
+      </p>
+
+      <ul>
+        <li>
+          For example, <code>21</code> written in binary is <code>10101</code>,
+          which has <code>3</code> set bits.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> left = 6, right = 10 <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> <br />
+        6 -&gt; 110 (2 set bits, 2 is prime) <br />
+        7 -&gt; 111 (3 set bits, 3 is prime)
+        <br />
+        8 -&gt; 1000 (1 set bit, 1 is not prime)
+        <br />
+        9 -&gt; 1001 (2 set bits, 2 is prime)
+        <br />
+        10 -&gt; 1010 (2 set bits, 2 is prime)
+        <br />4 numbers have a prime number of set bits.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> left = 10, right = 15
+        <br />
+        <strong>Output:</strong> 5<br />
+        <strong>Explanation:</strong>
+        <br />
+        10 -&gt; 1010 (2 set bits, 2 is prime)
+        <br />
+        11 -&gt; 1011 (3 set bits, 3 is prime)
+        <br />
+        12 -&gt; 1100 (2 set bits, 2 is prime)
+        <br />
+        13 -&gt; 1101 (3 set bits, 3 is prime)
+        <br />
+        14 -&gt; 1110 (3 set bits, 3 is prime)
+        <br />
+        15 -&gt; 1111 (4 set bits, 4 is not prime)
+        <br />5 numbers have a prime number of set bits.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= left &lt;= right &lt;= 10<sup>6</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= right - left &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
