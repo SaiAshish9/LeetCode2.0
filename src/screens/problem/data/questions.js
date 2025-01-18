@@ -73387,6 +73387,65 @@ P     I`}
       </ul>
     </div>
   ),
+  197: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Table: <code>Weather</code>
+      </p>
+
+      <pre>
+        {`+---------------+---------+
+    | Column Name   | Type    |
+    +---------------+---------+
+    | id            | int     |
+    | recordDate    | date    |
+    | temperature   | int     |
+    +---------------+---------+`}
+        id is the column with unique values for this table. <br />
+        There are no different rows with the same recordDate. <br />
+        This table contains information about the temperature on a certain day.
+      </pre>
+
+      <p>&nbsp;</p>
+
+      <p>
+        Write a solution to find all dates' <code>id</code> with higher
+        temperatures compared to its previous dates (yesterday).
+      </p>
+
+      <p>
+        Return the result table in <strong>any order</strong>.
+      </p>
+
+      <p>The result format is in the following example.</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong>
+        Weather table:
+        {`+----+------------+-------------+
+    | id | recordDate | temperature |
+    +----+------------+-------------+
+    | 1  | 2015-01-01 | 10          |
+    | 2  | 2015-01-02 | 25          |
+    | 3  | 2015-01-03 | 20          |
+    | 4  | 2015-01-04 | 30          |
+    +----+------------+-------------+`}{" "}
+        <br />
+        <strong>Output:</strong> <br />
+        +----+ | id | +----+ | 2 | | 4 | +----+ <br />
+        <strong>Explanation:</strong> <br />
+        In 2015-01-02, the temperature was higher than the previous day (10
+        -&gt; 25). <br />
+        In 2015-01-04, the temperature was higher than the previous day (20
+        -&gt; 30).
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
