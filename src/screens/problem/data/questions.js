@@ -75295,7 +75295,7 @@ P     I`}
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong> <span class="example-io">nums = [3,0,1]</span>
         </p>{" "}
@@ -75313,13 +75313,13 @@ P     I`}
           the range <code>[0,3]</code>. 2 is the missing number in the range
           since it does not appear in <code>nums</code>.
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong> <span class="example-io">nums = [0,1]</span>
         </p>{" "}
@@ -75337,13 +75337,13 @@ P     I`}
           the range <code>[0,2]</code>. 2 is the missing number in the range
           since it does not appear in <code>nums</code>.
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">nums = [9,6,4,2,3,5,7,0,1]</span>
@@ -75362,7 +75362,7 @@ P     I`}
           the range <code>[0,9]</code>. 8 is the missing number in the range
           since it does not appear in <code>nums</code>.
         </p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
