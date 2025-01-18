@@ -76789,9 +76789,7 @@ P     I`}
     </article>
   ),
   3094: (
-    <div
-      class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 "
-    >
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
       <p>
         There is a number <code>n</code> between <code>0</code> and{" "}
         <code>
@@ -76900,6 +76898,99 @@ P     I`}
         <li>
           If you ask for some <code>num</code> out of the given range, the
           output wouldn't be reliable.
+        </li>
+      </ul>
+    </div>
+  ),
+  3199: (
+    <div>
+      Given three integer arrays <code>a</code>, <code>b</code>, and{" "}
+      <code>c</code>, return the number of triplets{" "}
+      <code>(a[i], b[j], c[k])</code>, such that the bitwise <code>XOR</code> of
+      the elements of each triplet has an <strong>even</strong> number of{" "}
+      <span data-keyword="set-bit">set bits</span>.<p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">a = [1], b = [2], c = [3]</span>
+        </p>
+
+        <p>
+          <strong>Output:</strong> <span class="example-io">1</span>
+        </p>
+
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+
+        <p>
+          The only triplet is <code>(a[0], b[0], c[0])</code> and their{" "}
+          <code>XOR</code> is:{" "}
+          <code>
+            1 XOR 2 XOR 3 = 00<sub>2</sub>
+          </code>
+          .
+        </p>
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">a = [1,1], b = [2,3], c = [1,5]</span>
+        </p>
+
+        <p>
+          <strong>Output:</strong> <span class="example-io">4</span>
+        </p>
+
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+
+        <p>Consider these four triplets:</p>
+
+        <ul>
+          <li>
+            <code>(a[0], b[1], c[0])</code>:{" "}
+            <code>
+              1 XOR 3 XOR 1 = 011<sub>2</sub>
+            </code>
+          </li>
+          <li>
+            <code>(a[1], b[1], c[0])</code>:{" "}
+            <code>
+              1 XOR 3 XOR 1 = 011<sub>2</sub>
+            </code>
+          </li>
+          <li>
+            <code>(a[0], b[0], c[1])</code>:{" "}
+            <code>
+              1 XOR 2 XOR 5 = 110<sub>2</sub>
+            </code>
+          </li>
+          <li>
+            <code>(a[1], b[0], c[1])</code>:{" "}
+            <code>
+              1 XOR 2 XOR 5 = 110<sub>2</sub>
+            </code>
+          </li>
+        </ul>
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>1 &lt;= a.length, b.length, c.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>0 &lt;= a[i], b[i], c[i] &lt;= 100</code>
         </li>
       </ul>
     </div>
