@@ -77894,6 +77894,77 @@ retrieve("2016:01:01:01:01:01","2017:01:01:23:00:00","Hour"); // return [1,2], b
       <p>&nbsp;</p>
     </div>
   ),
+  705: (
+    <div>
+      <p>Design a HashSet without using any built-in hash table libraries.</p>
+
+      <p>
+        Implement <code>MyHashSet</code> class:
+      </p>
+
+      <ul>
+        <li>
+          <code>void add(key)</code> Inserts the value <code>key</code> into the
+          HashSet.
+        </li>
+        <li>
+          <code>bool contains(key)</code> Returns whether the value{" "}
+          <code>key</code> exists in the HashSet or not.
+        </li>
+        <li>
+          <code>void remove(key)</code> Removes the value <code>key</code> in
+          the HashSet. If <code>key</code> does not exist in the HashSet, do
+          nothing.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input</strong> <br />
+        [&quot;MyHashSet&quot;, &quot;add&quot;, &quot;add&quot;,
+        &quot;contains&quot;, &quot;contains&quot;, &quot;add&quot;,
+        &quot;contains&quot;, &quot;remove&quot;, &quot;contains&quot;]
+        <br /> [[], [1], [2], [1], [3], [2], [2], [2], [2]] <br />
+        <strong>Output</strong> <br />
+        [null, null, null, true, false, null, true, null, false] <br/>
+        <strong>Explanation</strong> <br />
+        {`MyHashSet myHashSet = new MyHashSet();
+myHashSet.add(1);      // set = [1]
+myHashSet.add(2);      // set = [1, 2]
+myHashSet.contains(1); // return True
+myHashSet.contains(3); // return False, (not found)
+myHashSet.add(2);      // set = [1, 2]
+myHashSet.contains(2); // return True
+myHashSet.remove(2);   // set = [1]
+myHashSet.contains(2); // return False, (already removed)`}
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            0 &lt;= key &lt;= 10<sup>6</sup>
+          </code>
+        </li>
+        <li>
+          At most{" "}
+          <code>
+            10<sup>4</sup>
+          </code>{" "}
+          calls will be made to <code>add</code>, <code>remove</code>, and{" "}
+          <code>contains</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
