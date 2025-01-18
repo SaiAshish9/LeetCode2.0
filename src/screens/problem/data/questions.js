@@ -74380,6 +74380,103 @@ P     I`}
       </div>
     </div>
   ),
+  2991: (
+    <article role="main" class="blog-post">
+      <p>
+        Table: <code>Wineries</code>
+      </p>
+
+      <pre>
+        {`+-------------+----------+
+| Column Name | Type     |
++-------------+----------+
+| id          | int      |
+| country     | varchar  |
+| points      | int      |
+| winery      | varchar  |
++-------------+----------+`}
+        id is column of unique values for this table. <br />
+        This table contains id, country, points, and winery.
+      </pre>
+
+      <p>
+        Write a solution to find the <strong>top three wineries</strong> in{" "}
+        <strong>each</strong> <strong>country</strong> based on their{" "}
+        <strong>total points</strong>. If <strong>multiple wineries</strong>{" "}
+        have the <strong>same</strong> total points, order them by{" "}
+        <code>winery</code> name in <strong>ascending</strong> order. If there's{" "}
+        <strong>no second winery</strong>, output 'No Second Winery,' and if
+        there's <strong>no third winery</strong>, output 'No Third Winery.'
+      </p>
+
+      <p>
+        Return <em>the result table ordered by </em>
+        <code>country</code>
+        <em>
+          {" "}
+          in <strong>ascending</strong> order
+        </em>
+        <em>.</em>
+      </p>
+
+      <p>The result format is in the following example.</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <br />
+        Sessions table: <br />
+        {`+-----+-----------+--------+-----------------+
+| id  | country   | points | winery          | 
++-----+-----------+--------+-----------------+
+| 103 | Australia | 84     | WhisperingPines | 
+| 737 | Australia | 85     | GrapesGalore    |    
+| 848 | Australia | 100    | HarmonyHill     | 
+| 222 | Hungary   | 60     | MoonlitCellars  | 
+| 116 | USA       | 47     | RoyalVines      | 
+| 124 | USA       | 45     | Eagle'sNest     | 
+| 648 | India     | 69     | SunsetVines     | 
+| 894 | USA       | 39     | RoyalVines      |  
+| 677 | USA       | 9      | PacificCrest    |  
++-----+-----------+--------+-----------------+`}
+        <strong>Output:</strong> <br />
+        {`+-----------+---------------------+-------------------+----------------------+
+| country   | top_winery          | second_winery     | third_winery         |
++-----------+---------------------+-------------------+----------------------+
+| Australia | HarmonyHill (100)   | GrapesGalore (85) | WhisperingPines (84) |
+| Hungary   | MoonlitCellars (60) | No second winery  | No third winery      | 
+| India     | SunsetVines (69)    | No second winery  | No third winery      |  
+| USA       | RoyalVines (86)     | Eagle'sNest (45)  | PacificCrest (9)     | 
++-----------+---------------------+-------------------+----------------------+`}{" "}
+        <br />
+        <strong>Explanation</strong> <br />
+        For Australia <br />
+        - HarmonyHill Winery accumulates the highest score of 100 points in
+        Australia. <br />
+        - GrapesGalore Winery has a total of 85 points, securing the
+        second-highest position in Australia. <br />
+        - WhisperingPines Winery has a total of 80 points, ranking as the
+        third-highest. <br />
+        For Hungary <br />
+        - MoonlitCellars is the sole winery, accruing 60 points, automatically
+        making it the highest. There is no second or third winery. <br />
+        For India <br />
+        - SunsetVines is the sole winery, earning 69 points, making it the top
+        winery. There is no second or third winery. <br />
+        For the USA <br />
+        - RoyalVines Wines accumulates a total of 47 + 39 = 86 points, claiming
+        the highest position in the USA. <br />
+        - Eagle'sNest has a total of 45 points, securing the second-highest
+        position in the USA. <br />
+        - PacificCrest accumulates 9 points, ranking as the third-highest winery
+        in the USA <br />
+        Output table is ordered by country in ascending order.
+      </pre>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
