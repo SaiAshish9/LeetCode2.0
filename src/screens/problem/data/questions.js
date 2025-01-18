@@ -73262,6 +73262,131 @@ P     I`}
       </pre>
     </div>
   ),
+  185: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Table: <code>Employee</code>
+      </p>
+
+      <pre>
+        {`+--------------+---------+
+    | Column Name  | Type    |
+    +--------------+---------+
+    | id           | int     |
+    | name         | varchar |
+    | salary       | int     |
+    | departmentId | int     |
+    +--------------+---------+`}{" "}
+        <br />
+        id is the primary key (column with unique values) for this table. <br />
+        departmentId is a foreign key (reference column) of the ID from the{" "}
+        <code>Department </code>table. <br />
+        Each row of this table indicates the ID, name, and salary of an
+        employee. It also contains the ID of their department.
+      </pre>
+
+      <p>&nbsp;</p>
+
+      <p>
+        Table: <code>Department</code>
+      </p>
+
+      <pre>
+        {`+-------------+---------+
+    | Column Name | Type    |
+    +-------------+---------+
+    | id          | int     |
+    | name        | varchar |
+    +-------------+---------+`}{" "}
+        <br />
+        id is the primary key (column with unique values) for this table. <br />
+        Each row of this table indicates the ID of a department and its name.
+      </pre>
+
+      <p>&nbsp;</p>
+
+      <p>
+        A company's executives are interested in seeing who earns the most money
+        in each of the company's departments. A <strong>high earner</strong> in
+        a department is an employee who has a salary in the{" "}
+        <strong>top three unique</strong> salaries for that department.
+      </p>
+
+      <p>
+        Write a solution to find the employees who are{" "}
+        <strong>high earners</strong> in each of the departments.
+      </p>
+
+      <p>
+        Return the result table <strong>in any order</strong>.
+      </p>
+
+      <p>The&nbsp;result format is in the following example.</p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong>
+        Employee table:
+        {`+----+-------+--------+--------------+
+    | id | name  | salary | departmentId |
+    +----+-------+--------+--------------+
+    | 1  | Joe   | 85000  | 1            |
+    | 2  | Henry | 80000  | 2            |
+    | 3  | Sam   | 60000  | 2            |
+    | 4  | Max   | 90000  | 1            |
+    | 5  | Janet | 69000  | 1            |
+    | 6  | Randy | 85000  | 1            |
+    | 7  | Will  | 70000  | 1            |
+    +----+-------+--------+--------------+`}{" "}
+        <br />
+        Department table: <br />
+        {`+----+-------+
+    | id | name  |
+    +----+-------+
+    | 1  | IT    |
+    | 2  | Sales |
+    +----+-------+`}{" "}
+        <br />
+        <strong>Output:</strong> <br />
+        {`+------------+----------+--------+
+    | Department | Employee | Salary |
+    +------------+----------+--------+
+    | IT         | Max      | 90000  |
+    | IT         | Joe      | 85000  |
+    | IT         | Randy    | 85000  |
+    | IT         | Will     | 70000  |
+    | Sales      | Henry    | 80000  |
+    | Sales      | Sam      | 60000  |
+    +------------+----------+--------+`}{" "}
+        <br />
+        <strong>Explanation:</strong> <br />
+        In the IT department: <br />
+        - Max earns the highest unique salary <br />
+        - Both Randy and Joe earn the second-highest unique salary <br />
+        - Will earns the third-highest unique salary <br />
+        In the Sales department: <br />
+        - Henry earns the highest salary <br />
+        - Sam earns the second-highest salary <br />- There is no third-highest
+        salary as there are only two employees
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          There are no employees with the <strong>exact</strong> same name,
+          salary <em>and</em> department.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
