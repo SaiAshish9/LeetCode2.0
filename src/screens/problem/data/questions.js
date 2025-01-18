@@ -77253,7 +77253,7 @@ P     I`}
         [[], [1, "foo"], [2, "bar"], [3, "foo"], [8, "bar"], [10, "foo"], [11,
         "foo"]] <br />
         <strong>Output</strong> <br />
-        [null, true, true, false, false, false, true]
+        [null, true, true, false, false, false, true] <br />
         <strong>Explanation</strong> <br />
         Logger logger = new Logger(); <br />
         logger.shouldPrintMessage(1, "foo"); // return true, next allowed
