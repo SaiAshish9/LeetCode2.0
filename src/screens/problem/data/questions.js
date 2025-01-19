@@ -79631,7 +79631,7 @@ videoSharingPlatform.getViews(0);            // There is no video associated wit
         <br /> [[10], [1, 1], [1, 2], [1, 3], [2], [3, 4], [1, 1], [1, 1], [1],
         [10, 2], [7]] <br />
         <strong>Output</strong> <br />
-        [null, 0, 1, 2, 1, 3, 1, 6, 3, -1, 0]
+        [null, 0, 1, 2, 1, 3, 1, 6, 3, -1, 0] <br />
         <strong>Explanation</strong> <br />
         {`Allocator loc = new Allocator(10); // Initialize a memory array of size 10. All memory units are initially free.
     loc.allocate(1, 1); // The leftmost block's first index is 0. The memory array becomes [<strong>1</strong>,_,_,_,_,_,_,_,_,_]. We return 0.
