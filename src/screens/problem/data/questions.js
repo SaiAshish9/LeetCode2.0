@@ -79492,7 +79492,7 @@ videoSharingPlatform.getViews(0);            // There is no video associated wit
         1], ["two", 2, 2]]
         <br />
         <strong>Output</strong> <br />
-        [null, null, "third", null, null, "fifth"]
+        [null, null, "third", null, null, "fifth"] <br />
         <strong>Explanation</strong> <br />
         SQL sql = new SQL(["one", "two", "three"], [2, 3, 1]); // creates three
         tables. <br />
