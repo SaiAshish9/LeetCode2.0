@@ -79348,7 +79348,7 @@ videoSharingPlatform.getViews(0);            // There is no video associated wit
         ["japanese"], ["ramen", 16], ["japanese"]]
         <br /> <strong>Output</strong>
         <br />
-        [null, "kimchi", "ramen", null, "sushi", null, "ramen"]
+        [null, "kimchi", "ramen", null, "sushi", null, "ramen"] <br />
         <strong>Explanation</strong> <br />
         {`FoodRatings foodRatings = new FoodRatings(["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"], ["korean", "japanese", "japanese", "greek", "japanese", "korean"], [9, 12, 8, 15, 14, 7]);
     foodRatings.highestRated("korean"); // return "kimchi"
