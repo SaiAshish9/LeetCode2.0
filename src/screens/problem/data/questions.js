@@ -79929,7 +79929,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         ["FrequencyTracker", "add", "add", "hasFrequency"] <br />
         [[], [3], [3], [2]] <br />
         <strong>Output</strong> <br />
-        [null, null, null, true]
+        [null, null, null, true] <br />
         <strong>Explanation</strong> <br />
         {`FrequencyTracker frequencyTracker = new FrequencyTracker();
     frequencyTracker.add(3); // The data structure now contains [3]
@@ -79946,7 +79946,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         ["FrequencyTracker", "add", "deleteOne", "hasFrequency"] <br />
         [[], [1], [1], [1]] <br />
         <strong>Output</strong> <br />
-        [null, null, null, false]
+        [null, null, null, false] <br />
         <strong>Explanation</strong> <br />
         {`FrequencyTracker frequencyTracker = new FrequencyTracker();
     frequencyTracker.add(1); // The data structure now contains [1]
@@ -79965,7 +79965,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <br />
         <strong>Output</strong>
         <br />
-        [null, false, null, true]
+        [null, false, null, true] <br />
         <strong>Explanation</strong> <br />
         {`FrequencyTracker frequencyTracker = new FrequencyTracker();
     frequencyTracker.hasFrequency(2); // Returns false, because the data structure is empty
