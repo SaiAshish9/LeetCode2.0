@@ -81634,6 +81634,69 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  2404: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array <code>nums</code>, return{" "}
+        <em>the most frequent even element</em>.
+      </p>
+
+      <p>
+        If there is a tie, return the <strong>smallest</strong> one. If there is
+        no such element, return <code>-1</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [0,1,2,2,4,4,1] <br />
+        <strong>Output:</strong> 2 <br />
+        <strong>Explanation:</strong> <br />
+        The even elements are 0, 2, and 4. Of these, 2 and 4 appear the most.{" "}
+        <br />
+        We return the smallest one, which is 2.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [4,4,4,9,2,4] <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> 4 is the even element appears the most.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [29,47,21,41,13,37,25,7] <br />
+        <strong>Output:</strong> -1 <br />
+        <strong>Explanation:</strong> There is no even element.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= nums.length &lt;= 2000</code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= nums[i] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
