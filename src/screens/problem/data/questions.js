@@ -79236,7 +79236,7 @@ videoSharingPlatform.getViews(0);            // There is no video associated wit
         "popSmallest", "addBack", "popSmallest", "popSmallest", "popSmallest"]
         <br /> [[], [2], [], [], [], [1], [], [], []] <br />
         <strong>Output</strong> <br />
-        [null, null, 1, 2, 3, null, 1, 4, 5]
+        [null, null, 1, 2, 3, null, 1, 4, 5] <br />
         <strong>Explanation</strong> <br />
         {`SmallestInfiniteSet smallestInfiniteSet = new SmallestInfiniteSet();
     smallestInfiniteSet.addBack(2);    // 2 is already in the set, so no change is made.
