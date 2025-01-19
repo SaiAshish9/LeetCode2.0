@@ -79726,7 +79726,7 @@ videoSharingPlatform.getViews(0);            // There is no video associated wit
         "Task3", 30, ["P1"]], [1, "P1"], [5, 1], [1, 2], [1, "P1"], [1]] <br />
         <strong>Output</strong> <br />
         [null, 1, 2, ["Task1", "Task2"], [], 3, ["Task3", "Task2"], null, null,
-        ["Task3"], ["Task3", "Task1"]]
+        ["Task3"], ["Task3", "Task1"]] <br />
         <strong>Explanation</strong> <br />
         {`TodoList todoList = new TodoList();
 todoList.addTask(1, "Task1", 50, []); // return 1. This adds a new task for the user with id 1.
