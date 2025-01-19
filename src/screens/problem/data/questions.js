@@ -80276,7 +80276,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">s = "egg", t = "add"</span>
@@ -80302,13 +80302,13 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
             Mapping <code>'g'</code> to <code>'d'</code>.
           </li>
         </ul>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">s = "foo", t = "bar"</span>
@@ -80327,13 +80327,13 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
           identical as <code>'o'</code> needs to be mapped to both{" "}
           <code>'a'</code> and <code>'r'</code>.
         </p>
-      </div>
+      </pre>
 
       <p>
         <strong class="example">Example 3:</strong>
       </p>
 
-      <div class="example-block">
+      <pre class="example-block">
         <p>
           <strong>Input:</strong>{" "}
           <span class="example-io">s = "paper", t = "title"</span>
@@ -80342,7 +80342,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <p>
           <strong>Output:</strong> <span class="example-io">true</span>
         </p>
-      </div>
+      </pre>
 
       <p>&nbsp;</p>
       <p>
