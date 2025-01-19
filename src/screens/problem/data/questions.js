@@ -80281,15 +80281,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
           <strong>Input:</strong>{" "}
           <span class="example-io">s = "egg", t = "add"</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">true</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>
           The strings <code>s</code> and <code>t</code> can be made identical
           by:
@@ -80313,15 +80310,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
           <strong>Input:</strong>{" "}
           <span class="example-io">s = "foo", t = "bar"</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">false</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>
           The strings <code>s</code> and <code>t</code> can not be made
           identical as <code>'o'</code> needs to be mapped to both{" "}
