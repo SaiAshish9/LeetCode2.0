@@ -78056,8 +78056,8 @@ linkedList.get(1);&nbsp;&nbsp;&nbsp;         // returns 3`}
       <p>
         The event can be represented as a pair of integers{" "}
         <code>startTime</code> and <code>endTime</code> that represents a
-        booking on the half-open interval <code>{`[startTime, endTime)`}</code>, the
-        range of real numbers <code>x</code> such that{" "}
+        booking on the half-open interval <code>{`[startTime, endTime)`}</code>,
+        the range of real numbers <code>x</code> such that{" "}
         <code>startTime &lt;= x &lt; endTime</code>.
       </p>
 
@@ -78088,7 +78088,7 @@ linkedList.get(1);&nbsp;&nbsp;&nbsp;         // returns 3`}
         ["MyCalendar", "book", "book", "book"] <br />
         [[], [10, 20], [15, 25], [20, 30]] <br />
         <strong>Output</strong> <br />
-        [null, true, false, true]
+        [null, true, false, true] <br />
         <strong>Explanation</strong> <br />
         MyCalendar myCalendar = new MyCalendar(); <br />
         myCalendar.book(10, 20); // return True <br />
