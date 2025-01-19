@@ -79571,7 +79571,7 @@ videoSharingPlatform.getViews(0);            // There is no video associated wit
 
       <p>You have a memory allocator with the following functionalities:</p>
 
-      <ol>
+      <ul>
         <li>
           <strong>Allocate </strong>a block of <code>size</code> consecutive
           free memory units and assign it the id <code>mID</code>.
@@ -79580,7 +79580,7 @@ videoSharingPlatform.getViews(0);            // There is no video associated wit
           <strong>Free</strong> all memory units with the given id{" "}
           <code>mID</code>.
         </li>
-      </ol>
+      </ul>
 
       <p>
         <strong>Note</strong> that:
