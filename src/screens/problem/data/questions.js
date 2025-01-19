@@ -81320,6 +81320,80 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1339: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given the <code>root</code> of a binary tree, split the binary tree into
+        two subtrees by removing one edge such that the product of the sums of
+        the subtrees is maximized.
+      </p>
+
+      <p>
+        Return <em>the maximum product of the sums of the two subtrees</em>.
+        Since the answer may be too large, return it <strong>modulo</strong>{" "}
+        <code>
+          10<sup>9</sup> + 7
+        </code>
+        .
+      </p>
+
+      <p>
+        <strong>Note</strong> that you need to maximize the answer before taking
+        the mod and not after taking it.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/01/21/sample_1_1699.png"
+        style={{ width: 500, height: 167 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [1,2,3,4,5,6] <br />
+        <strong>Output:</strong> 110 <br />
+        <strong>Explanation:</strong> Remove the red edge and get 2 binary trees
+        with sum 11 and 10. Their product is 110 (11*10)
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/01/21/sample_2_1699.png"
+        style={{ width: 500, height: 211 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [1,null,2,3,4,null,null,5,6] <br />
+        <strong>Output:</strong> 90 <br />
+        <strong>Explanation:</strong> Remove the red edge and get 2 binary trees
+        with sum 15 and 6.Their product is 90 (15*6)
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the tree is in the range{" "}
+          <code>
+            [2, 5 * 10<sup>4</sup>]
+          </code>
+          .
+        </li>
+        <li>
+          <code>
+            1 &lt;= Node.val &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
