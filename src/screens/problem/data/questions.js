@@ -78893,7 +78893,7 @@ fileSharing.join([]);        // A user who doesn't have any chunks joined the sy
             ["MRUQueue", "fetch", "fetch", "fetch", "fetch"] <br />
             [[8], [3], [5], [2], [8]] <br />
             <strong>Output:</strong> <br />
-            [null, 3, 6, 2, 2]
+            [null, 3, 6, 2, 2] <br />
             <strong>Explanation:</strong> <br />
             {`MRUQueue mRUQueue = new MRUQueue(8); // Initializes the queue to [1,2,3,4,5,6,7,8].
     mRUQueue.fetch(3); // Moves the 3<sup>rd</sup> element (3) to the end of the queue to become [1,2,4,5,6,7,8,3] and returns it.
