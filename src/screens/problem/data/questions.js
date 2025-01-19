@@ -80516,6 +80516,38 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  356: (
+    <div class="markdown-body div-width">
+      <p>
+        Given n points on a 2D plane, find if there is such a line parallel to
+        y-axis that reflect the given points.
+      </p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input: </strong>
+        <span id="example-input-1-1">[[1,1],[-1,1]]</span> <br />
+        <strong>Output: </strong>
+        <span id="example-output-1">true</span>
+      </pre>
+
+      <div>
+        <p>
+          <strong>Example 2:</strong>
+        </p>
+
+        <pre>
+          <strong>Input: </strong>
+          <span id="example-input-2-1">[[1,1],[-1,-1]]</span> <br />
+          <strong>Output: </strong>
+          <span id="example-output-2">false</span>
+        </pre>
+      </div>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
