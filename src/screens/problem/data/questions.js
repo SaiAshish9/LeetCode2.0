@@ -78971,7 +78971,7 @@ fileSharing.join([]);        // A user who doesn't have any chunks joined the sy
         <br /> [[], ["apple"], ["apple"], ["apple"], ["app"], ["apple"],
         ["apple"], ["app"], ["apple"], ["app"]] <br />
         <strong>Output</strong> <br />
-        [null, null, null, 2, 2, null, 1, 1, null, 0]
+        [null, null, null, 2, 2, null, 1, 1, null, 0] <br />
         <strong>Explanation</strong> <br />
         {`Trie trie = new Trie();
     trie.insert("apple");               // Inserts "apple".
