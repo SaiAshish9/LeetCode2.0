@@ -78056,7 +78056,7 @@ linkedList.get(1);&nbsp;&nbsp;&nbsp;         // returns 3`}
       <p>
         The event can be represented as a pair of integers{" "}
         <code>startTime</code> and <code>endTime</code> that represents a
-        booking on the half-open interval <code>[startTime, endTime)</code>, the
+        booking on the half-open interval <code>{`[startTime, endTime)`}</code>, the
         range of real numbers <code>x</code> such that{" "}
         <code>startTime &lt;= x &lt; endTime</code>.
       </p>
