@@ -80359,6 +80359,38 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  249: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a string, we can "shift" each of its letter to its successive
+        letter, for example: <code>"abc" -&gt; "bcd"</code>. We can keep
+        "shifting" which forms the sequence:
+      </p>
+
+      <pre>"abc" -&gt; "bcd" -&gt; ... -&gt; "xyz"</pre>
+
+      <p>
+        Given a list of strings which contains only lowercase alphabets, group
+        all strings that belong to the same shifting sequence.
+      </p>
+
+      <p>
+        <b>Example:</b>
+      </p>
+
+      <pre>
+        <b>Input:</b>{" "}
+        <code>["abc", "bcd", "acef", "xyz", "az", "ba", "a", "z"],</code> <br />
+        <b>Output:</b> <br />
+        {`[
+  ["abc","bcd","xyz"],
+  ["az","ba"],
+  ["acef"],
+  ["a","z"]
+]`}
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
