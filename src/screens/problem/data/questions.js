@@ -82941,6 +82941,48 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  67: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two binary strings <code>a</code> and <code>b</code>, return{" "}
+        <em>their sum as a binary string</em>.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> a = "11", b = "1" <br />
+        <strong>Output:</strong> "100" <br />
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> a = "1010", b = "1011" <br />
+        <strong>Output:</strong> "10101"
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>
+            1 &lt;= a.length, b.length &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>a</code> and <code>b</code> consist&nbsp;only of{" "}
+          <code>'0'</code> or <code>'1'</code> characters.
+        </li>
+        <li>
+          Each string does not contain leading zeros except for the zero itself.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
