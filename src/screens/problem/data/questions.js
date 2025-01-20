@@ -83467,6 +83467,68 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  453: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array <code>nums</code> of size <code>n</code>, return{" "}
+        <em>
+          the minimum number of moves required to make all array elements equal
+        </em>
+        .
+      </p>
+
+      <p>
+        In one move, you can increment <code>n - 1</code> elements of the array
+        by <code>1</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3] <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> Only three moves are needed (remember each
+        move increments two elements): <br />
+        [1,2,3] =&gt; [2,3,3] =&gt; [3,4,3] =&gt; [4,4,4]
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,1,1] <br />
+        <strong>Output:</strong> 0
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>n == nums.length</code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            -10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+        <li>
+          The answer is guaranteed to fit in a <strong>32-bit</strong> integer.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
