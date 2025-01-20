@@ -331,11 +331,12 @@ const Problem = () => {
                   const Q = decodeURIComponent(
                     location?.pathname?.split("/problems/")?.[1]
                   );
-                  const index = revisionData.indexOf(Q);
+                  const data = Array.from(new Set(revisionData))
+                  const index = data.indexOf(Q);
                   navigate(
                     `/problems/${
-                      revisionData[
-                        index - 1 >= 0 ? index - 1 : revisionData.length - 1
+                      data[
+                        index - 1 >= 0 ? index - 1 : data.length - 1
                       ]
                     }?tag=${tag}`
                   );
@@ -351,10 +352,11 @@ const Problem = () => {
                   const Q = decodeURIComponent(
                     location?.pathname?.split("/problems/")?.[1]
                   );
-                  const index = revisionData.indexOf(Q);
+                  const data = Array.from(new Set(revisionData))
+                  const index = data.indexOf(Q);
                   navigate(
                     `/problems/${
-                      revisionData[(index + 1) % revisionData.length]
+                      data[(index + 1) % data.length]
                     }?tag=${tag}`
                   );
                 }}
