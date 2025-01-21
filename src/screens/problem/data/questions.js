@@ -83834,6 +83834,37 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  660: (
+    <div class="markdown-body div-width">
+      <p>
+        Start from integer 1, remove any integer that contains 9 such as 9, 19,
+        29...{" "}
+      </p>
+
+      <p>
+        So now, you will have a new integer sequence: 1, 2, 3, 4, 5, 6, 7, 8,
+        10, 11, ...
+      </p>
+
+      <p>
+        Given a positive integer <code>n</code>, you need to return the n-th
+        integer after removing. Note that 1 will be the first integer.
+      </p>
+
+      <p>
+        <b>Example 1:</b>
+        <br />
+      </p>
+      <pre>
+        <b>Input:</b> 9 <br />
+        <b>Output:</b> 10
+      </pre>
+
+      <p>
+        <b> Hint</b>: n will not exceed <code>9 x 10^8</code>.
+      </p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
