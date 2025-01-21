@@ -84725,6 +84725,48 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1281: (
+    <div class="elfjS" data-track-load="description_content">
+      Given an integer number <code>n</code>, return the difference between the
+      product of its digits and the sum of its digits.
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> n = 234 <br />
+        <strong>Output:</strong> 15 <br />
+        <b>Explanation:</b> <br />
+        Product of digits = 2 * 3 * 4 = 24 <br />
+        Sum of digits = 2 + 3 + 4 = 9 <br />
+        Result = 24 - 9 = 15
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> n = 4421 <br />
+        <strong>Output:</strong> 21 <br />
+        <b>
+          Explanation: <br />
+        </b>
+        Product of digits = 4 * 4 * 2 * 1 = 32 <br />
+        Sum of digits = 4 + 4 + 2 + 1 = 11 <br />
+        Result = 32 - 11 = 21
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>1 &lt;= n &lt;= 10^5</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
