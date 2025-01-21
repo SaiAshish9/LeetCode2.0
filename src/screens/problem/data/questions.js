@@ -85428,6 +85428,76 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1903: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a string <code>num</code>, representing a large integer.
+        Return{" "}
+        <em>
+          the <strong>largest-valued odd</strong> integer (as a string) that is
+          a <strong>non-empty substring</strong> of{" "}
+        </em>
+        <code>num</code>
+        <em>, or an empty string </em>
+        <code>""</code>
+        <em> if no odd integer exists</em>.
+      </p>
+
+      <p>
+        A <strong>substring</strong> is a contiguous sequence of characters
+        within a string.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> num = "52" <br />
+        <strong>Output:</strong> "5" <br />
+        <strong>Explanation:</strong> The only non-empty substrings are "5",
+        "2", and "52". "5" is the only odd number.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> num = "4206" <br />
+        <strong>Output:</strong> "" <br />
+        <strong>Explanation:</strong> There are no odd numbers in "4206".
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> num = "35427" <br />
+        <strong>Output:</strong> "35427" <br />
+        <strong>Explanation:</strong> "35427" is already an odd number.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= num.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>num</code> only consists of digits and does not contain any
+          leading zeros.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
