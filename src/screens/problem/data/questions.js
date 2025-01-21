@@ -86400,6 +86400,124 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  3101: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a{" "}
+        <span
+          data-keyword="binary-array"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:r85:"
+              >
+                <div>binary array</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        <code>nums</code>.
+      </p>
+
+      <p>
+        We call a{" "}
+        <span
+          data-keyword="subarray-nonempty"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:r87:"
+              >
+                <div>subarray</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        <strong>alternating</strong> if <strong>no</strong> two{" "}
+        <strong>adjacent</strong> elements in the subarray have the{" "}
+        <strong>same</strong> value.
+      </p>
+
+      <p>
+        Return <em>the number of alternating subarrays in </em>
+        <code>nums</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [0,1,1,1]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">5</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>
+          The following subarrays are alternating: <code>[0]</code>,{" "}
+          <code>[1]</code>, <code>[1]</code>, <code>[1]</code>, and{" "}
+          <code>[0,1]</code>.
+        </p>
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [1,0,1,0]</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">10</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>
+          Every subarray of the array is alternating. There are 10 possible
+          subarrays that we can choose.
+        </p>
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>nums[i]</code> is either <code>0</code> or <code>1</code>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
