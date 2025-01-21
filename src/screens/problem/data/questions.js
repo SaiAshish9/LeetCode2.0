@@ -86330,6 +86330,82 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  3099: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        An integer divisible by the <strong>sum</strong> of its digits is said
+        to be a <strong>Harshad</strong> number. You are given an integer{" "}
+        <code>x</code>. Return<em> the sum of the digits </em>of<em> </em>
+        <code>x</code>
+        <em> </em>if<em> </em>
+        <code>x</code>
+        <em> </em>is a <strong>Harshad</strong> number, otherwise, return
+        <em> </em>
+        <code>-1</code>
+        <em>.</em>
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong> <span class="example-io">x = 18</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">9</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>
+          The sum of digits of <code>x</code> is <code>9</code>. <code>18</code>{" "}
+          is divisible by <code>9</code>. So <code>18</code> is a Harshad number
+          and the answer is <code>9</code>.
+        </p>
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre class="example-block">
+        <p>
+          <strong>Input:</strong> <span class="example-io">x = 23</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">-1</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>{" "}
+        <br />
+        <p>
+          The sum of digits of <code>x</code> is <code>5</code>. <code>23</code>{" "}
+          is not divisible by <code>5</code>. So <code>23</code> is not a
+          Harshad number and the answer is <code>-1</code>.
+        </p>
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= x &lt;= 100</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
