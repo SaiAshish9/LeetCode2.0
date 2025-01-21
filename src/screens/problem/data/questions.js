@@ -85880,6 +85880,155 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  2514: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a string <code>s</code> containing one or more words.
+        Every consecutive pair of words is separated by a single space{" "}
+        <code>' '</code>.
+      </p>
+
+      <p>
+        A string <code>t</code> is an <strong>anagram</strong> of string{" "}
+        <code>s</code> if the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        word of <code>t</code> is a <strong>permutation</strong> of the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        word of <code>s</code>.
+      </p>
+
+      <ul>
+        <li>
+          For example, <code>"acb dfe"</code> is an anagram of{" "}
+          <code>"abc def"</code>, but <code>"def cab"</code>&nbsp;and{" "}
+          <code>"adc bef"</code> are not.
+        </li>
+      </ul>
+
+      <p>
+        Return{" "}
+        <em>
+          the number of <strong>distinct anagrams</strong> of{" "}
+        </em>
+        <code>s</code>. Since the answer may be very large, return it{" "}
+        <strong>modulo</strong>{" "}
+        <code>
+          10<sup>9</sup> + 7
+        </code>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "too hot" <br />
+        <strong>Output:</strong> 18 <br />
+        <strong>Explanation:</strong> Some of the anagrams of the given string
+        are "too hot", "oot hot", "oto toh", "too toh", and "too oht".
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "aa" <br />
+        <strong>Output:</strong> 1 <br />
+        <strong>Explanation:</strong> There is only one anagram possible for the
+        given string.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= s.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>s</code> consists of lowercase English letters and spaces{" "}
+          <code>' '</code>.
+        </li>
+        <li>There is single space between consecutive words.</li>
+      </ul>
+    </div>
+  ),
+  2544: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a positive integer <code>n</code>. Each digit of{" "}
+        <code>n</code> has a sign according to the following rules:
+      </p>
+
+      <ul>
+        <li>
+          The <strong>most significant digit</strong> is assigned a{" "}
+          <strong>positive</strong> sign.
+        </li>
+        <li>Each other digit has an opposite sign to its adjacent digits.</li>
+      </ul>
+
+      <p>
+        Return <em>the sum of all digits with their corresponding sign</em>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 521 <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> (+5) + (-2) + (+1) = 4.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 111 <br />
+        <strong>Output:</strong> 1 <br />
+        <strong>Explanation:</strong> (+1) + (-1) + (+1) = 1.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 886996 <br />
+        <strong>Output:</strong> 0 <br />
+        <strong>Explanation:</strong> (+8) + (-8) + (+6) + (-9) + (+9) + (-6) =
+        0.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= n &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
