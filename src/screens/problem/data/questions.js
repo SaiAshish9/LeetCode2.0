@@ -86354,15 +86354,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <p>
           <strong>Input:</strong> <span class="example-io">x = 18</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">9</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>
           The sum of digits of <code>x</code> is <code>9</code>. <code>18</code>{" "}
           is divisible by <code>9</code>. So <code>18</code> is a Harshad number
@@ -86378,15 +86375,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <p>
           <strong>Input:</strong> <span class="example-io">x = 23</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">-1</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>
           The sum of digits of <code>x</code> is <code>5</code>. <code>23</code>{" "}
           is not divisible by <code>5</code>. So <code>23</code> is not a
