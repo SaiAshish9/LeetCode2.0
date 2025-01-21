@@ -84412,7 +84412,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
     </div>
   ),
   1118: (
-    <div class="markdown-body div-width" style="margin-top: 20px">
+    <div class="markdown-body div-width">
       <p>
         Given a year <code>Y</code> and a month <code>M</code>, return how many
         days there are in that month.
