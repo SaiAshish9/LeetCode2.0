@@ -85287,6 +85287,70 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1780: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer <code>n</code>, return <code>true</code>{" "}
+        <em>if it is possible to represent </em>
+        <code>n</code>
+        <em> as the sum of distinct powers of three.</em> Otherwise, return{" "}
+        <code>false</code>.
+      </p>
+
+      <p>
+        An integer <code>y</code> is a power of three if there exists an integer{" "}
+        <code>x</code> such that{" "}
+        <code>
+          y == 3<sup>x</sup>
+        </code>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 12 <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong> 12 = 3<sup>1</sup> + 3<sup>2</sup>
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 91 <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong> 91 = 3<sup>0</sup> + 3<sup>2</sup> + 3
+        <sup>4</sup>
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 21 <br />
+        <strong>Output:</strong> false
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= n &lt;= 10<sup>7</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
