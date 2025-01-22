@@ -88778,6 +88778,89 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1053: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an array of positive integers <code>arr</code> (not necessarily
+        distinct), return <em>the </em>
+        <span
+          data-keyword="lexicographically-smaller-array"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rih:"
+              >
+                <div>
+                  <em>lexicographically</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+        <em> largest permutation that is smaller than</em> <code>arr</code>,
+        that can be <strong>made with exactly one swap</strong>. If it cannot be
+        done, then return the same array.
+      </p>
+
+      <p>
+        <strong>Note</strong> that a <em>swap</em> exchanges the positions of
+        two numbers <code>arr[i]</code> and <code>arr[j]</code>
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = [3,2,1] <br />
+        <strong>Output:</strong> [3,1,2] <br />
+        <strong>Explanation:</strong> Swapping 2 and 1.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = [1,1,5] <br />
+        <strong>Output:</strong> [1,1,5] <br />
+        <strong>Explanation:</strong> This is already the smallest permutation.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> arr = [1,9,4,6,7] <br />
+        <strong>Output:</strong> [1,7,4,6,9] <br />
+        <strong>Explanation:</strong> Swapping 9 and 7.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= arr.length &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= arr[i] &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
