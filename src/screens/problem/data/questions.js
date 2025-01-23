@@ -89887,6 +89887,111 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1974: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        There is a special typewriter with lowercase English letters{" "}
+        <code>'a'</code> to <code>'z'</code> arranged in a{" "}
+        <strong>circle</strong> with a <strong>pointer</strong>. A character can{" "}
+        <strong>only</strong> be typed if the pointer is pointing to that
+        character. The pointer is <strong>initially</strong> pointing to the
+        character <code>'a'</code>.
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/07/31/chart.jpg"
+        style={{ width: 530, height: 410 }}
+      />
+      <p>Each second, you may perform one of the following operations:</p>
+
+      <ul>
+        <li>
+          Move the pointer one character <strong>counterclockwise</strong> or{" "}
+          <strong>clockwise</strong>.
+        </li>
+        <li>
+          Type the character the pointer is <strong>currently</strong> on.
+        </li>
+      </ul>
+
+      <p>
+        Given a string <code>word</code>, return the<strong> minimum</strong>{" "}
+        number of seconds to type out the characters in <code>word</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> word = "abc" <br />
+        <strong>Output:</strong> 5 <br />
+        <strong>
+          Explanation: <br />
+        </strong>
+        The characters are printed as follows: <br />
+        - Type the character 'a' in 1 second since the pointer is initially on
+        'a'. <br />
+        - Move the pointer clockwise to 'b' in 1 second. <br />
+        - Type the character 'b' in 1 second. <br />
+        - Move the pointer clockwise to 'c' in 1 second. <br />- Type the
+        character 'c' in 1 second.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> word = "bza" <br />
+        <strong>Output:</strong> 7 <br />
+        <strong>
+          Explanation: <br />
+        </strong>
+        The characters are printed as follows: <br />
+        - Move the pointer clockwise to 'b' in 1 second. <br />
+        - Type the character 'b' in 1 second. <br />
+        - Move the pointer counterclockwise to 'z' in 2 seconds. <br />
+        - Type the character 'z' in 1 second. <br />
+        - Move the pointer clockwise to 'a' in 1 second. <br />- Type the
+        character 'a' in 1 second.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> word = "zjpc" <br />
+        <strong>Output:</strong> 34 <br />
+        <strong>Explanation:</strong> <br />
+        The characters are printed as follows: <br />
+        - Move the pointer counterclockwise to 'z' in 1 second. <br />
+        - Type the character 'z' in 1 second. <br />
+        - Move the pointer clockwise to 'j' in 10 seconds. <br />
+        - Type the character 'j' in 1 second. <br />
+        - Move the pointer clockwise to 'p' in 6 seconds. <br />
+        - Type the character 'p' in 1 second. <br />
+        - Move the pointer counterclockwise to 'c' in 13 seconds. <br />- Type
+        the character 'c' in 1 second.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= word.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>word</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
