@@ -89015,11 +89015,11 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       <pre>
         <strong>Input:</strong> arr = [3,3,3,3,5,5,5,2,2,7] <br />
         <strong>Output:</strong> 2 <br />
-        <strong>Explanation:</strong> Choosing {(3, 7)} will make the new array
+        <strong>Explanation:</strong> Choosing {`{(3, 7)}`} will make the new array
         [5,5,5,2,2] which has size 5 (i.e equal to half of the size of the old
         array).
-        <br /> Possible sets of size 2 are {(3, 5)},{(3, 2)},{(5, 2)}.
-        <br /> Choosing set {(2, 7)} is not possible as it will make the new
+        <br /> Possible sets of size 2 are {`{(3, 5)},{(3, 2)},{(5, 2)}`}.
+        <br /> Choosing set {`{(2, 7)}`} is not possible as it will make the new
         array [3,3,3,3,5,5,5] which has a size greater than half of the size of
         the old array.
       </pre>
