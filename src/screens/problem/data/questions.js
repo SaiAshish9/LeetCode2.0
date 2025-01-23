@@ -89145,6 +89145,119 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1578: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Alice has <code>n</code> balloons arranged on a rope. You are given a{" "}
+        <strong>0-indexed</strong> string <code>colors</code> where{" "}
+        <code>colors[i]</code> is the color of the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        balloon.
+      </p>
+
+      <p>
+        Alice wants the rope to be <strong>colorful</strong>. She does not want{" "}
+        <strong>two consecutive balloons</strong> to be of the same color, so
+        she asks Bob for help. Bob can remove some balloons from the rope to
+        make it <strong>colorful</strong>. You are given a{" "}
+        <strong>0-indexed</strong> integer array <code>neededTime</code> where{" "}
+        <code>neededTime[i]</code> is the time (in seconds) that Bob needs to
+        remove the{" "}
+        <code>
+          i<sup>th</sup>
+        </code>{" "}
+        balloon from the rope.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the <strong>minimum time</strong> Bob needs to make the rope{" "}
+          <strong>colorful</strong>
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/12/13/ballon1.jpg"
+        style={{ width: 404, height: 243 }}
+      />
+      <pre>
+        <strong>Input:</strong> colors = "abaac", neededTime = [1,2,3,4,5]{" "}
+        <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> In the above image, 'a' is blue, 'b' is
+        red, and 'c' is green. <br />
+        Bob can remove the blue balloon at index 2. This takes 3 seconds. <br />
+        There are no longer two consecutive balloons of the same color. Total
+        time = 3.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/12/13/balloon2.jpg"
+        style={{ width: 244, height: 243 }}
+      />
+      <pre>
+        <strong>Input:</strong> colors = "abc", neededTime = [1,2,3] <br />
+        <strong>Output:</strong> 0 <br />
+        <strong>Explanation:</strong> The rope is already colorful. Bob does not
+        need to remove any balloons from the rope.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/12/13/balloon3.jpg"
+        style={{ width: 404, height: 243 }}
+      />
+      <pre>
+        <strong>Input:</strong> colors = "aabaa", neededTime = [1,2,3,4,1]{" "}
+        <br />
+        <strong>Output:</strong> 2 <br />
+        <strong>Explanation:</strong> Bob will remove the balloons at indices 0
+        and 4. Each balloons takes 1 second to remove.
+        <br /> There are no longer two consecutive balloons of the same color.
+        Total time = 1 + 1 = 2.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>n == colors.length == neededTime.length</code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= n &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= neededTime[i] &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>colors</code> contains only lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
