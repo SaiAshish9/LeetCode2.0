@@ -89015,9 +89015,9 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       <pre>
         <strong>Input:</strong> arr = [3,3,3,3,5,5,5,2,2,7] <br />
         <strong>Output:</strong> 2 <br />
-        <strong>Explanation:</strong> Choosing {`{(3, 7)}`} will make the new array
-        [5,5,5,2,2] which has size 5 (i.e equal to half of the size of the old
-        array).
+        <strong>Explanation:</strong> Choosing {`{(3, 7)}`} will make the new
+        array [5,5,5,2,2] which has size 5 (i.e equal to half of the size of the
+        old array).
         <br /> Possible sets of size 2 are {`{(3, 5)},{(3, 2)},{(5, 2)}`}.
         <br /> Choosing set {`{(2, 7)}`} is not possible as it will make the new
         array [3,3,3,3,5,5,5] which has a size greater than half of the size of
@@ -89053,6 +89053,94 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
           <code>
             1 &lt;= arr[i] &lt;= 10<sup>5</sup>
           </code>
+        </li>
+      </ul>
+    </div>
+  ),
+  1520: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code> of lowercase letters, you need to find the
+        maximum number of <strong>non-empty</strong> substrings of{" "}
+        <code>s</code> that meet the following conditions:
+      </p>
+
+      <ul>
+        <li>
+          The substrings do not overlap, that is for any two substrings{" "}
+          <code>s[i..j]</code> and <code>s[x..y]</code>, either{" "}
+          <code>j &lt; x</code> or <code>i &gt; y</code> is true.
+        </li>
+        <li>
+          A substring that contains a certain character <code>c</code> must also
+          contain all occurrences of <code>c</code>.
+        </li>
+      </ul>
+
+      <p>
+        Find{" "}
+        <em>the maximum number of substrings that meet the above conditions</em>
+        . If there are multiple solutions with the same number of substrings,{" "}
+        <em>return the one with minimum total length. </em>It can be shown that
+        there exists a unique solution of minimum total length.
+      </p>
+
+      <p>
+        Notice that you can return the substrings in <strong>any</strong> order.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "adefaddaccc" <br />
+        <strong>Output:</strong> ["e","f","ccc"] <br />
+        <b>Explanation:</b>&nbsp;The following are all the possible substrings
+        that meet the conditions: <br />
+        {`[
+    &nbsp; "adefaddaccc"
+    &nbsp; "adefadda",
+    &nbsp; "ef",
+    &nbsp; "e",
+      "f",
+    &nbsp; "ccc",
+    ]`}{" "}
+        <br />
+        If we choose the first string, we cannot choose anything else and we'd
+        get only 1. If we choose "adefadda", we are left with "ccc" which is the
+        only one that doesn't overlap, thus obtaining 2 substrings. Notice also,
+        that it's not optimal to choose "ef" since it can be split into two.
+        Therefore, the optimal way is to choose ["e","f","ccc"] which gives us 3
+        substrings. No other solution of the same number of substrings exist.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "abbaccd" <br />
+        <strong>Output:</strong> ["d","bb","cc"] <br />
+        <b>Explanation: </b>Notice that while the set of substrings
+        ["d","abba","cc"] also has length 3, it's considered incorrect since it
+        has larger total length.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= s.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>s</code> contains only lowercase English letters.
         </li>
       </ul>
     </div>
