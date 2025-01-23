@@ -89808,6 +89808,85 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1968: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> array <code>nums</code> of{" "}
+        <strong>distinct</strong> integers. You want to rearrange the elements
+        in the array such that every element in the rearranged array is{" "}
+        <strong>not</strong> equal to the <strong>average</strong> of its
+        neighbors.
+      </p>
+
+      <p>
+        More formally, the rearranged array should have the property such that
+        for every <code>i</code> in the range{" "}
+        <code>1 &lt;= i &lt; nums.length - 1</code>,{" "}
+        <code>(nums[i-1] + nums[i+1]) / 2</code> is <strong>not</strong> equal
+        to <code>nums[i]</code>.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          <strong>any</strong> rearrangement of{" "}
+        </em>
+        <code>nums</code>
+        <em> that meets the requirements</em>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3,4,5] <br />
+        <strong>Output:</strong> [1,2,4,5,3] <br />
+        <strong>Explanation:</strong> <br />
+        When i=1, nums[i] = 2, and the average of its neighbors is (1+4) / 2 =
+        2.5. <br />
+        When i=2, nums[i] = 4, and the average of its neighbors is (2+5) / 2 =
+        3.5. <br />
+        When i=3, nums[i] = 5, and the average of its neighbors is (4+3) / 2 =
+        3.5.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [6,2,0,9,7] <br />
+        <strong>Output:</strong> [9,7,6,2,0] <br />
+        <strong>Explanation:</strong> <br />
+        When i=1, nums[i] = 7, and the average of its neighbors is (9+6) / 2 =
+        7.5. <br />
+        When i=2, nums[i] = 6, and the average of its neighbors is (7+2) / 2 =
+        4.5. <br />
+        When i=3, nums[i] = 2, and the average of its neighbors is (6+0) / 2 =
+        3.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            3 &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= nums[i] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
