@@ -92342,7 +92342,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <code>3-4-5</code>
         <span>, so return </span>
         <code>3</code>
-        <span style='font-family: sans-serif, Arial, Verdana, "Trebuchet MS";'>
+        <span>
           .
         </span>
       </pre>
@@ -92372,11 +92372,11 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         Longest consecutive sequence path is <code>2-3</code>
         <span>, not </span>
         <code>3-2-1</code>
-        <span style='font-family: sans-serif, Arial, Verdana, "Trebuchet MS";'>
+        <span>
           , so return{" "}
         </span>
         <code>2</code>
-        <span style='font-family: sans-serif, Arial, Verdana, "Trebuchet MS";'>
+        <span>
           .
         </span>
       </pre>
