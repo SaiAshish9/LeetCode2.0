@@ -92495,6 +92495,61 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  513: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given the <code>root</code> of a binary tree, return the leftmost value
+        in the last row of the tree.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/12/14/tree1.jpg"
+        style={{ width: 302, height: 182 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [2,1,3] <br />
+        <strong>Output:</strong> 1
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/12/14/tree2.jpg"
+        style={{ width: 432, height: 421 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [1,2,3,4,null,5,6,null,null,7] <br />
+        <strong>Output:</strong> 7
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the tree is in the range{" "}
+          <code>
+            [1, 10<sup>4</sup>]
+          </code>
+          .
+        </li>
+        <li>
+          <code>
+            -2<sup>31</sup> &lt;= Node.val &lt;= 2<sup>31</sup> - 1
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
