@@ -91470,6 +91470,81 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  113: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given the <code>root</code> of a binary tree and an integer{" "}
+        <code>targetSum</code>, return{" "}
+        <em>
+          all <strong>root-to-leaf</strong> paths where the sum of the node
+          values in the path equals{" "}
+        </em>
+        <code>targetSum</code>
+        <em>
+          . Each path should be returned as a list of the node{" "}
+          <strong>values</strong>, not node references
+        </em>
+        .
+      </p>
+      <p>
+        A <strong>root-to-leaf</strong> path is a path starting from the root
+        and ending at any leaf node. A <strong>leaf</strong> is a node with no
+        children.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/01/18/pathsumii1.jpg"
+        style={{ width: 500, height: 356 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [5,4,8,11,null,13,4,7,2,null,null,5,1],
+        targetSum = 22 <br />
+        <strong>Output:</strong> [[5,4,11,2],[5,8,4,5]] <br />
+        <strong>Explanation:</strong> There are two paths whose sum equals
+        targetSum: 5 + 4 + 11 + 2 = 22 5 + 8 + 4 + 5 = 22
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/01/18/pathsum2.jpg"
+        style={{ width: 212, height: 181 }}
+      />{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> root = [1,2,3], targetSum = 5 <br />
+        <strong>Output:</strong> []
+      </pre>
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> root = [1,2], targetSum = 0 <br />
+        <strong>Output:</strong> []
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          The number of nodes in the tree is in the range <code>[0, 5000]</code>
+          .
+        </li>
+        <li>
+          <code>-1000 &lt;= Node.val &lt;= 1000</code>
+        </li>
+        <li>
+          <code>-1000 &lt;= targetSum &lt;= 1000</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
