@@ -92308,6 +92308,80 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  298: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a binary tree, find the length of the longest consecutive sequence
+        path.
+      </p>
+      <br />
+      <p>
+        The path refers to any sequence of nodes from some starting node to any
+        node in the tree along the parent-child connections. The longest
+        consecutive path need to be from parent to child (cannot be the
+        reverse).
+      </p>
+      <br />
+      <p>
+        <strong>Example 1:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong>
+        {`1
+    \
+     3
+    / \
+   2   4
+        \
+         5`}
+        <br />
+        <strong>Output:</strong> <code>3</code>
+        <br />
+        <strong>Explanation: </strong>Longest consecutive sequence path is{" "}
+        <code>3-4-5</code>
+        <span>, so return </span>
+        <code>3</code>
+        <span style='font-family: sans-serif, Arial, Verdana, "Trebuchet MS";'>
+          .
+        </span>
+      </pre>
+      <br />
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+      <br />
+      <pre>
+        <strong>
+          Input:
+          <br />
+        </strong>
+        {`   2
+    \
+     3
+    /
+   2
+  /
+ 1`}
+        <br />
+        <strong>
+          Output: 2
+          <br />
+          Explanation:{" "}
+        </strong>
+        Longest consecutive sequence path is <code>2-3</code>
+        <span>, not </span>
+        <code>3-2-1</code>
+        <span style='font-family: sans-serif, Arial, Verdana, "Trebuchet MS";'>
+          , so return{" "}
+        </span>
+        <code>2</code>
+        <span style='font-family: sans-serif, Arial, Verdana, "Trebuchet MS";'>
+          .
+        </span>
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
