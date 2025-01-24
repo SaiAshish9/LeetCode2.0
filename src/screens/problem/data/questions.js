@@ -92227,6 +92227,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
           alt=""
           href="https://en.wikipedia.org/wiki/Lowest_common_ancestor"
           target="_blank"
+          rel="noreferrer"
         >
           definition of LCA on Wikipedia
         </a>
