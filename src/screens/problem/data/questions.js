@@ -92430,6 +92430,71 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  437: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given the <code>root</code> of a binary tree and an integer{" "}
+        <code>targetSum</code>, return{" "}
+        <em>
+          the number of paths where the sum of the values&nbsp;along the path
+          equals
+        </em>
+        &nbsp;<code>targetSum</code>.
+      </p>
+
+      <p>
+        The path does not need to start or end at the root or a leaf, but it
+        must go downwards (i.e., traveling only from parent nodes to child
+        nodes).
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2021/04/09/pathsum3-1-tree.jpg"
+        style={{ width: 450, height: 386 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [10,5,-3,3,2,null,11,3,-2,null,1],
+        targetSum = 8 <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> The paths that sum to 8 are shown.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> root = [5,4,8,11,null,13,4,7,2,null,null,5,1],
+        targetSum = 22 <br />
+        <strong>Output:</strong> 3
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the tree is in the range <code>[0, 1000]</code>
+          .
+        </li>
+        <li>
+          <code>
+            -10<sup>9</sup> &lt;= Node.val &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+        <li>
+          <code>-1000 &lt;= targetSum &lt;= 1000</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
