@@ -93350,14 +93350,14 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <strong>Note:</strong>
       </p>
 
-      <ol>
+      <ul>
         <li>
           <code>1 &lt;= R, C&nbsp;&lt;= 100</code>
         </li>
         <li>
           <code>0 &lt;= A[i][j] &lt;= 10^9</code>
         </li>
-      </ol>
+      </ul>
     </div>
   ),
 };
