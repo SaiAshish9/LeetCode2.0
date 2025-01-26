@@ -95348,6 +95348,131 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  545: (
+    <article role="main" class="blog-post">
+      <p>
+        The <strong>boundary</strong> of a binary tree is the concatenation of
+        the <strong>root</strong>, the <strong>left boundary</strong>, the{" "}
+        <strong>leaves</strong> ordered from left-to-right, and the{" "}
+        <strong>reverse order</strong> of the <strong>right boundary</strong>.
+      </p>
+
+      <p>
+        The <strong>left boundary</strong> is the set of nodes defined by the
+        following:
+      </p>
+
+      <ul>
+        <li>
+          The root node's left child is in the left boundary. If the root does
+          not have a left child, then the left boundary is{" "}
+          <strong>empty</strong>.
+        </li>
+        <li>
+          If a node in the left boundary and has a left child, then the left
+          child is in the left boundary.
+        </li>
+        <li>
+          If a node is in the left boundary, has <strong>no</strong> left child,
+          but has a right child, then the right child is in the left boundary.
+        </li>
+        <li>
+          The leftmost leaf is <strong>not</strong> in the left boundary.
+        </li>
+      </ul>
+
+      <p>
+        The <strong>right boundary</strong> is similar to the{" "}
+        <strong>left boundary</strong>, except it is the right side of the
+        root's right subtree. Again, the leaf is <strong>not</strong> part of
+        the <strong>right boundary</strong>, and the{" "}
+        <strong>right boundary</strong> is empty if the root does not have a
+        right child.
+      </p>
+
+      <p>
+        The <strong>leaves</strong> are nodes that do not have any children. For
+        this problem, the root is <strong>not</strong> a leaf.
+      </p>
+
+      <p>
+        Given the <code>root</code> of a binary tree, return{" "}
+        <em>
+          the values of its <strong>boundary</strong>
+        </em>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <p>
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0545.Boundary%20of%20Binary%20Tree/images/boundary1.jpg"
+          style={{ width: 299, height: 290 }}
+        />
+      </p>
+      <pre>
+        <strong>Input:</strong> root = [1,null,2,3,4] <br />
+        <strong>Output:</strong> [1,3,4,2] <br />
+        <b>Explanation:</b> <br />
+        - The left boundary is empty because the root does not have a left
+        child. <br />
+        - The right boundary follows the path starting from the root's right
+        child 2 -&gt; 4. <br />
+        4 is a leaf, so the right boundary is [2]. <br />
+        - The leaves from left to right are [3,4]. <br />
+        Concatenating everything results in [1] + [] + [3,4] + [2] = [1,3,4,2].
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <p>
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0545.Boundary%20of%20Binary%20Tree/images/boundary2.jpg"
+          style={{ width: 599, height: 411 }}
+        />
+      </p>
+      <pre>
+        <strong>Input:</strong> root = [1,2,3,4,5,6,null,null,null,7,8,9,10]{" "}
+        <br />
+        <strong>Output:</strong> [1,2,4,7,8,9,10,6,3] <br />
+        <b>Explanation:</b> <br />
+        - The left boundary follows the path starting from the root's left child
+        2 -&gt; 4. <br />
+        4 is a leaf, so the left boundary is [2]. <br />
+        - The right boundary follows the path starting from the root's right
+        child 3 -&gt; 6 -&gt; 10. <br />
+        10 is a leaf, so the right boundary is [3,6], and in reverse order is
+        [6,3]. <br />
+        - The leaves from left to right are [4,7,8,9,10]. <br />
+        Concatenating everything results in [1] + [2] + [4,7,8,9,10] + [6,3] =
+        [1,2,4,7,8,9,10,6,3].
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the tree is in the range{" "}
+          <code>
+            [1, 10<sup>4</sup>]
+          </code>
+          .
+        </li>
+        <li>
+          <code>-1000 &lt;= Node.val &lt;= 1000</code>
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
