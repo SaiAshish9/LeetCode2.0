@@ -99417,6 +99417,70 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  72: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two strings <code>word1</code> and <code>word2</code>, return{" "}
+        <em>
+          the minimum number of operations required to convert{" "}
+          <code>word1</code> to <code>word2</code>
+        </em>
+        .
+      </p>
+
+      <p>You have the following three operations permitted on a word:</p>
+
+      <ul>
+        <li>Insert a character</li>
+        <li>Delete a character</li>
+        <li>Replace a character</li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> word1 = "horse", word2 = "ros" <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> <br />
+        horse -&gt; rorse (replace 'h' with 'r') <br />
+        rorse -&gt; rose (remove 'r') <br />
+        rose -&gt; ros (remove 'e')
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> word1 = "intention", word2 = "execution" <br />
+        <strong>Output:</strong> 5 <br />
+        <strong>Explanation:</strong> <br />
+        intention -&gt; inention (remove 't') <br />
+        inention -&gt; enention (replace 'i' with 'e') <br />
+        enention -&gt; exention (replace 'n' with 'x') <br />
+        exention -&gt; exection (replace 'n' with 'c') <br />
+        exection -&gt; execution (insert 'u')
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>0 &lt;= word1.length, word2.length &lt;= 500</code>
+        </li>
+        <li>
+          <code>word1</code> and <code>word2</code> consist of lowercase English
+          letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
