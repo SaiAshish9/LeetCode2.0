@@ -97018,6 +97018,64 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1120: (
+    <div class="markdown-body div-width">
+      <p>
+        Given the <code>root</code> of a binary tree, find the maximum average
+        value of any subtree of that tree.
+      </p>
+
+      <p>
+        (A subtree of a tree is any node of that tree plus all its descendants.
+        The average value of a tree is the sum of its values, divided by the
+        number of nodes.)
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <p>
+        <img src="img/1120.png" alt="" />
+      </p>
+
+      <pre>
+        <strong>Input: </strong>
+        <span id="example-input-1-1">[5,6,1]</span> <br />
+        <strong>Output: </strong>
+        <span id="example-output-1">6.00000</span> <br />
+        <strong>Explanation: </strong> <br />
+        For the node with value = 5 we have an average of (5 + 6 + 1) / 3 = 4.{" "}
+        <br />
+        For the node with value = 6 we have an average of 6 / 1 = 6. <br />
+        For the node with value = 1 we have an average of 1 / 1 = 1. <br />
+        So the answer is 6 which is the maximum.
+      </pre>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <strong>Note:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the tree is between <code>1</code> and{" "}
+          <code>5000</code>.
+        </li>
+        <li>
+          Each node will have a value between <code>0</code> and{" "}
+          <code>100000</code>.
+        </li>
+        <li>
+          Answers will be accepted as correct if they are within{" "}
+          <code>10^-5</code> of the correct answer.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
