@@ -94605,6 +94605,76 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </article>
   ),
+  100: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given the roots of two binary trees <code>p</code> and <code>q</code>,
+        write a function to check if they are the same or not.
+      </p>
+
+      <p>
+        Two binary trees are considered the same if they are structurally
+        identical, and the nodes have the same value.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/12/20/ex1.jpg"
+        style={{ width: 622, height: 182 }}
+      />
+      <pre>
+        <strong>Input:</strong> p = [1,2,3], q = [1,2,3] <br />
+        <strong>Output:</strong> true <br />
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/12/20/ex2.jpg"
+        style={{ width: 382, height: 182 }}
+      />
+      <pre>
+        <strong>Input:</strong> p = [1,2], q = [1,null,2] <br />
+        <strong>Output:</strong> false
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://assets.leetcode.com/uploads/2020/12/20/ex3.jpg"
+        style={{ width: 622, height: 182 }}
+      />
+      <pre>
+        <strong>Input:</strong> p = [1,2,1], q = [1,1,2] <br />
+        <strong>Output:</strong> false
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in both trees is in the range{" "}
+          <code>[0, 100]</code>.
+        </li>
+        <li>
+          <code>
+            -10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
