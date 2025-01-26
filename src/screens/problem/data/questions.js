@@ -96229,6 +96229,70 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </article>
   ),
+  863: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given the <code>root</code> of a binary tree, the value of a target node{" "}
+        <code>target</code>, and an integer <code>k</code>, return{" "}
+        <em>an array of the values of all nodes that have a distance </em>
+        <code>k</code>
+        <em> from the target node.</em>
+      </p>
+
+      <p>
+        You can return the answer in <strong>any order</strong>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <img
+        alt=""
+        src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/06/28/sketch0.png"
+        style={{ width: 500, height: 429 }}
+      />
+      <pre>
+        <strong>Input:</strong> root = [3,5,1,6,2,0,8,null,null,7,4], target =
+        5, k = 2 <br />
+        <strong>Output:</strong> [7,4,1] <br />
+        Explanation: The nodes that are a distance 2 from the target node (with
+        value 5) have values 7, 4, and 1.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> root = [1], target = 1, k = 3 <br />
+        <strong>Output:</strong> []
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the tree is in the range <code>[1, 500]</code>.
+        </li>
+        <li>
+          <code>0 &lt;= Node.val &lt;= 500</code>
+        </li>
+        <li>
+          All the values <code>Node.val</code> are <strong>unique</strong>.
+        </li>
+        <li>
+          <code>target</code> is the value of one of the nodes in the tree.
+        </li>
+        <li>
+          <code>0 &lt;= k &lt;= 1000</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
