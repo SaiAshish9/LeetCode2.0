@@ -95098,7 +95098,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <img
           alt=""
           src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/images/image2.png"
-          style="width: 350px; height: 342px;"
+          style={{width: 350, height: 342}}
         />
         <br />
         <strong>Output:</strong>
