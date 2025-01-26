@@ -98733,7 +98733,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
           <code>
             [1, 10<sup>4</sup>]
           </code>
-          .<span style="display: none;">&nbsp;</span>
+          .
         </li>
         <li>
           <code>
