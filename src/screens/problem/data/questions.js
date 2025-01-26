@@ -100797,6 +100797,48 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  233: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer <code>n</code>, count{" "}
+        <em>the total number of digit </em>
+        <code>1</code>
+        <em>
+          {" "}
+          appearing in all non-negative integers less than or equal to
+        </em>{" "}
+        <code>n</code>.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> n = 13 <br />
+        <strong>Output:</strong> 6
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> n = 0 <br />
+        <strong>Output:</strong> 0
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>
+            0 &lt;= n &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
