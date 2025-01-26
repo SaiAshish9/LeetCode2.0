@@ -100933,7 +100933,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
     </div>
   ),
   265: (
-    <div class="markdown-body div-width" style="margin-top: 20px">
+    <div class="markdown-body div-width">
       <p>
         There are a row of <i>n</i> houses, each house can be painted with one
         of the <i>k</i>
