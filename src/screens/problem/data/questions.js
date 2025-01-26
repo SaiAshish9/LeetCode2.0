@@ -95098,7 +95098,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <img
           alt=""
           src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/images/image2.png"
-          style={{width: 350, height: 342}}
+          style={{ width: 350, height: 342 }}
         />
         <br />
         <strong>Output:</strong>
@@ -95111,6 +95111,63 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
 ]`}
       </pre>
     </div>
+  ),
+  366: (
+    <article role="main" class="blog-post">
+      <p>
+        Given the <code>root</code> of a binary tree, collect a tree's nodes as
+        if you were doing this:
+      </p>
+
+      <ul>
+        <li>Collect all the leaf nodes.</li>
+        <li>Remove all the leaf&nbsp;nodes.</li>
+        <li>Repeat until the tree is empty.</li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <p>
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0366.Find%20Leaves%20of%20Binary%20Tree/images/remleaves-tree.jpg"
+          style={{ width: 500, height: 215 }}
+        />
+      </p>
+      <pre>
+        <strong>Input:</strong> root = [1,2,3,4,5] <br />
+        <strong>Output:</strong> [[4,5,3],[2],[1]] <br />
+        Explanation: <br />
+        [[3,5,4],[2],[1]] and [[3,4,5],[2],[1]] are also considered correct
+        answers since per each level it does not matter the order on which
+        elements are returned.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> root = [1] <br />
+        <strong>Output:</strong> [[1]]
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          The number of nodes in the tree is in the range <code>[1, 100]</code>.
+        </li>
+        <li>
+          <code>-100 &lt;= Node.val &lt;= 100</code>
+        </li>
+      </ul>
+    </article>
   ),
 };
 
