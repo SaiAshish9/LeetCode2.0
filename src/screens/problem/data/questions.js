@@ -100456,6 +100456,78 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  152: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array <code>nums</code>, find a{" "}
+        <span
+          data-keyword="subarray-nonempty"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:r1rl:"
+              >
+                <div>subarray</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        that has the largest product, and return <em>the product</em>.
+      </p>
+
+      <p>
+        The test cases are generated so that the answer will fit in a{" "}
+        <strong>32-bit</strong> integer.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [2,3,-2,4] <br />
+        <strong>Output:</strong> 6 <br />
+        <strong>Explanation:</strong> [2,3] has the largest product 6.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [-2,0,-1] <br />
+        <strong>Output:</strong> 0 <br />
+        <strong>Explanation:</strong> The result cannot be 2, because [-2,-1] is
+        not a subarray.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>-10 &lt;= nums[i] &lt;= 10</code>
+        </li>
+        <li>
+          The product of any subarray of <code>nums</code> is{" "}
+          <strong>guaranteed</strong> to fit in a <strong>32-bit</strong>{" "}
+          integer.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
