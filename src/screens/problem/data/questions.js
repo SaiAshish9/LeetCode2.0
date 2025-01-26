@@ -98268,6 +98268,143 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </article>
   ),
+  2764: (
+    <article class="md-content__inner md-typeset">
+      <p>
+        Given a <strong>0-indexed</strong> integer <strong>2D array</strong>{" "}
+        <code>nodes</code>, your task is to determine if the given array
+        represents the <strong>preorder</strong> traversal of some{" "}
+        <strong>binary</strong> tree.
+      </p>
+
+      <p>
+        For each index <code>i</code>, <code>nodes[i] = [id, parentId]</code>,
+        where <code>id</code> is the id of the node at the index <code>i</code>{" "}
+        and <code>parentId</code> is the id of its parent in the tree (if the
+        node has no parent, then <code>parentId == -1</code>).
+      </p>
+
+      <p>
+        Return <code>true</code> <em>if the given array </em>
+        <em>represents the preorder traversal of some tree, and</em>{" "}
+        <code>false</code> <em>otherwise.</em>
+      </p>
+
+      <p>
+        <strong>Note:</strong> the <strong>preorder</strong> traversal of a tree
+        is a recursive way to traverse a tree in which we first visit the
+        current node, then we do the preorder traversal for the left child, and
+        finally, we do it for the right child.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nodes = [[0,-1],[1,0],[2,0],[3,2],[4,2]] <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong> The given nodes make the tree in the
+        picture below. <br />
+        We can show that this is the preorder traversal of the tree, first we
+        visit node 0, then we do the preorder traversal of the right child which
+        is [1], then we do the preorder traversal of the left child which is
+        [2,3,4].
+      </pre>
+
+      <p>
+        <a
+          class="glightbox"
+          href="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2700-2799/2764.Is%20Array%20a%20Preorder%20of%20Some%20%E2%80%8CBinary%20Tree/images/1.png"
+          data-type="image"
+          data-width="auto"
+          data-height="auto"
+          data-desc-position="bottom"
+        >
+          <img
+            alt=""
+            src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2700-2799/2764.Is%20Array%20a%20Preorder%20of%20Some%20%E2%80%8CBinary%20Tree/images/1.png"
+            style={{
+              padding: 10,
+              background: "#fff",
+              borderRadius: "0.5rem",
+              width: 250,
+              height: 251,
+            }}
+          />
+        </a>
+      </p>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nodes = [[0,-1],[1,0],[2,0],[3,1],[4,1]] <br />
+        <strong>Output:</strong> false <br />
+        <strong>Explanation:</strong> The given nodes make the tree in the
+        picture below. <br />
+        For the preorder traversal, first we visit node 0, then we do the
+        preorder traversal of the right child which is [1,3,4], but we can see
+        that in the given order, 2 comes between 1 and 3, so, it's not the
+        preorder traversal of the tree.
+      </pre>
+
+      <p>
+        <a
+          class="glightbox"
+          href="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2700-2799/2764.Is%20Array%20a%20Preorder%20of%20Some%20%E2%80%8CBinary%20Tree/images/2.png"
+          data-type="image"
+          data-width="auto"
+          data-height="auto"
+          data-desc-position="bottom"
+        >
+          <img
+            alt=""
+            src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2700-2799/2764.Is%20Array%20a%20Preorder%20of%20Some%20%E2%80%8CBinary%20Tree/images/2.png"
+            style={{
+              padding: 10,
+              background: "#fff",
+              borderRadius: "0.5rem",
+              width: 250,
+              height: 251,
+            }}
+          />
+        </a>
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nodes.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>nodes[i].length == 2</code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= nodes[i][0] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            -1 &lt;= nodes[i][1] &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          The input is generated such that <code>nodes</code> make a binary
+          tree.
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
