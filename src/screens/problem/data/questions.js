@@ -97570,6 +97570,99 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </div>
     </div>
   ),
+  1666: (
+    <div class="markdown-body div-width">
+      <div class="content__u3I1 question-content__JfgR">
+        <div>
+          <p>
+            Given the <code>root</code> of a binary tree and a <code>leaf</code>{" "}
+            node, reroot the tree so that the <code>leaf</code> is the new root.
+          </p>
+
+          <p>
+            You can reroot the tree with the following steps for each node{" "}
+            <code>cur</code> on the path <strong>starting from the </strong>
+            <code>leaf</code> up to the
+            <code>root</code>​​​ <strong>excluding the root</strong>:
+          </p>
+
+          <ul>
+            <li>
+              If <code>cur</code> has a left child, then that child becomes{" "}
+              <code>cur</code>'s right child. Note that it is guaranteed that{" "}
+              <code>cur</code> will have at most one child.
+            </li>
+            <li>
+              <code>cur</code>'s original parent becomes <code>cur</code>'s left
+              child.
+            </li>
+          </ul>
+
+          <p>
+            Return <em>the new root </em>
+            <em>of the rerooted tree.</em>
+          </p>
+
+          <p>
+            <strong>Note:</strong> Ensure that your solution sets the{" "}
+            <code>Node.parent</code>
+            pointers correctly after rerooting or you will receive "Wrong
+            Answer".
+          </p>
+
+          <p>&nbsp;</p>
+          <p>
+            <strong>Example 1:</strong>
+          </p>
+          <img
+            alt=""
+            src="https://assets.leetcode.com/uploads/2020/11/24/fliptree.png"
+            style={{ width: 400, height: 298 }}
+          />
+          <pre>
+            <strong>Input:</strong> root = [3,5,1,6,2,0,8,null,null,7,4], leaf =
+            7 <br />
+            <strong>Output:</strong>{" "}
+            [7,2,null,5,4,3,6,null,null,null,1,null,null,0,8]
+          </pre>
+
+          <p>
+            <strong>Example 2:</strong>
+          </p>
+
+          <pre>
+            <strong>Input:</strong> root = [3,5,1,6,2,0,8,null,null,7,4], leaf =
+            0 <br />
+            <strong>Output:</strong>{" "}
+            [0,1,null,3,8,5,null,null,null,6,2,null,null,7,4]
+          </pre>
+
+          <p>&nbsp;</p>
+          <p>
+            <strong>Constraints:</strong>
+          </p>
+
+          <ul>
+            <li>
+              The number of nodes in the tree is in the range{" "}
+              <code>[2, 100]</code>.
+            </li>
+            <li>
+              <code>
+                -10<sup>9</sup> &lt;= Node.val &lt;= 10<sup>9</sup>
+              </code>
+            </li>
+            <li>
+              All <code>Node.val</code> are <strong>unique</strong>.
+            </li>
+            <li>
+              <code>leaf</code> exist in the tree.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
