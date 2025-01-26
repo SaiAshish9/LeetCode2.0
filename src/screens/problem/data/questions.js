@@ -99658,15 +99658,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <p>
           <strong>Input:</strong> <span class="example-io">s = "12"</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">2</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>"12" could be decoded as "AB" (1 2) or "L" (12).</p>
       </pre>
 
@@ -99678,15 +99675,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <p>
           <strong>Input:</strong> <span class="example-io">s = "226"</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">3</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>
           "226" could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
         </p>
@@ -99700,15 +99694,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <p>
           <strong>Input:</strong> <span class="example-io">s = "06"</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Output:</strong> <span class="example-io">0</span>
         </p>{" "}
-        <br />
         <p>
           <strong>Explanation:</strong>
         </p>{" "}
-        <br />
         <p>
           "06" cannot be mapped to "F" because of the leading zero ("6" is
           different from "06"). In this case, the string is not a valid
