@@ -95047,13 +95047,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <code>
           [3,9,20,null,null,15,7] <br />
         </code>
-        {`3
-  /\
- /  \
- 9  20
-    /\
-   /  \
-  15   7`}
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/images/image1.png"
+          style={{ width: 400, height: 273 }}
+        />
+        <br />
         <strong>Output:</strong> <br />
         {`[
   [9],
@@ -95072,13 +95071,12 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <code>
           [3,9,8,4,0,1,7] <br />
         </code>{" "}
-        {`3
-    /\
-   /  \
-   9   8
-  /\  /\
- /  \/  \
- 4  01   7`}
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/images/image3.png"
+          style={{ width: 450, height: 285 }}
+        />{" "}
+        <br />
         <strong>Output:</strong> <br />
         {`[
   [4],
@@ -95097,16 +95095,11 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <strong>Input:</strong> <code>[3,9,8,4,0,1,7,null,null,null,2,5]</code>{" "}
         (0's right child is 2 and 1's left child is 5)
         <br />
-        {`3
-    /\
-   /  \
-   9   8
-  /\  /\
- /  \/  \
- 4  01   7
-    /\
-   /  \
-   5   2`}{" "}
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/images/image2.png"
+          style="width: 350px; height: 342px;"
+        />
         <br />
         <strong>Output:</strong>
         {`[
