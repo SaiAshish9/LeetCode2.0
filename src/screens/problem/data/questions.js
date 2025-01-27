@@ -105417,14 +105417,10 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <strong class="example">Example 1:</strong>
       </p>
 
-      <div
-        class="example-block"
-      >
+      <div class="example-block">
         <p>
           <strong>Input: </strong>
-          <span
-            class="example-io"
-          >
+          <span class="example-io">
             words = ["bab","dab","cab"], groups = [1,2,2]
           </span>
         </p>
@@ -105432,11 +105428,7 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
 
         <p>
           <strong>Output: </strong>
-          <span
-            class="example-io"
-          >
-            ["bab","cab"]
-          </span>
+          <span class="example-io">["bab","cab"]</span>
         </p>
         <br />
 
@@ -105495,25 +105487,17 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         <strong class="example">Example 2:</strong>
       </p>
 
-      <div
-        class="example-block"
-      >
+      <div class="example-block">
         <p>
           <strong>Input: </strong>
-          <span
-            class="example-io"
-          >
+          <span class="example-io">
             words = ["a","b","c","d"], groups = [1,2,3,4]
           </span>
         </p>
         <br />
         <p>
           <strong>Output: </strong>
-          <span
-            class="example-io"
-          >
-            ["a","b","c","d"]
-          </span>
+          <span class="example-io">["a","b","c","d"]</span>
         </p>
         <br />
 
@@ -105562,6 +105546,82 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
         </li>
         <li>
           <code>words[i]</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
+  2915: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> array of integers{" "}
+        <code>nums</code>, and an integer <code>target</code>.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the <strong>length of the longest subsequence</strong> of
+        </em>{" "}
+        <code>nums</code> <em>that sums up to</em> <code>target</code>.{" "}
+        <em>If no such subsequence exists, return</em> <code>-1</code>.
+      </p>
+
+      <p>
+        A <strong>subsequence</strong> is an array that can be derived from
+        another array by deleting some or no elements without changing the order
+        of the remaining elements.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3,4,5], target = 9 <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> There are 3 subsequences with a sum equal
+        to 9: [4,5], [1,3,5], and [2,3,4]. The longest subsequences are [1,3,5],
+        and [2,3,4]. Hence, the answer is 3.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [4,1,3,2,1,5], target = 7 <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> There are 5 subsequences with a sum equal
+        to 7: [4,3], [4,1,2], [4,2,1], [1,1,5], and [1,3,2,1]. The longest
+        subsequence is [1,3,2,1]. Hence, the answer is 4.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,1,5,4,5], target = 3 <br />
+        <strong>Output:</strong> -1 <br />
+        <strong>Explanation:</strong> It can be shown that nums has no
+        subsequence that sums up to 3.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= nums.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>1 &lt;= nums[i] &lt;= 1000</code>
+        </li>
+        <li>
+          <code>1 &lt;= target &lt;= 1000</code>
         </li>
       </ul>
     </div>
