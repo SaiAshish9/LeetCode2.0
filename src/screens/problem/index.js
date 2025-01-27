@@ -83,6 +83,7 @@ const Problem = () => {
   const [hovered, setHovered] = useState(-1);
   const [revisionData, setRevisionData] = useState(null);
   const [language, setLanguage] = useState("solution");
+  const [solutionKeys, setSolutionKeys] = useState([]);
 
   const [solution, setSolution] = useState(null);
   const [qInfo, setQInfo] = useState(null);
@@ -120,6 +121,10 @@ const Problem = () => {
       setQInfoData(qInfoData);
       const solutionsData = (await axios.get(BASE_URL + "solutions.json", {}))
         .data;
+      const qEntries = Object.entries(qInfoData).sort(
+        (a, b) => +a[1].qno - +b[1].qno
+      );
+      setSolutionKeys(qEntries.map((a) => a[0]));
       const Q = decodeURIComponent(
         location?.pathname?.split("/problems/")?.[1]
       );
@@ -331,15 +336,19 @@ const Problem = () => {
                   const Q = decodeURIComponent(
                     location?.pathname?.split("/problems/")?.[1]
                   );
-                  const data = Array.from(new Set(revisionData))
-                  const index = data.indexOf(Q);
-                  navigate(
-                    `/problems/${
-                      data[
-                        index - 1 >= 0 ? index - 1 : data.length - 1
-                      ]
-                    }?tag=${tag}`
-                  );
+                  if (tag) {
+                    const data = Array.from(new Set(revisionData));
+                    const index = data.indexOf(Q);
+                    navigate(
+                      `/problems/${
+                        data[index - 1 >= 0 ? index - 1 : data.length - 1]
+                      }?tag=${tag}`
+                    );
+                  } else {
+                    const data = Array.from(new Set(solutionKeys));
+                    const index = data.indexOf(Q);
+                    navigate(`/problems/${data[(index + 1) % data.length]}`);
+                  }
                 }}
               />
             </NavIcon>
@@ -352,13 +361,17 @@ const Problem = () => {
                   const Q = decodeURIComponent(
                     location?.pathname?.split("/problems/")?.[1]
                   );
-                  const data = Array.from(new Set(revisionData))
-                  const index = data.indexOf(Q);
-                  navigate(
-                    `/problems/${
-                      data[(index + 1) % data.length]
-                    }?tag=${tag}`
-                  );
+                  if (tag) {
+                    const data = Array.from(new Set(revisionData));
+                    const index = data.indexOf(Q);
+                    navigate(
+                      `/problems/${data[(index + 1) % data.length]}?tag=${tag}`
+                    );
+                  } else {
+                    const data = Array.from(new Set(solutionKeys));
+                    const index = data.indexOf(Q);
+                    navigate(`/problems/${data[(index + 1) % data.length]}`);
+                  }
                 }}
                 src={ArrowRight}
               />
