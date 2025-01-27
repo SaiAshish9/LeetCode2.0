@@ -104701,6 +104701,76 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  2393: (
+    <article role="main" class="blog-post">
+      <p>
+        You are given an array <code>nums</code> consisting of{" "}
+        <strong>positive</strong> integers.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the number of <strong>subarrays</strong> of{" "}
+        </em>
+        <code>nums</code>
+        <em>
+          {" "}
+          that are in <strong>strictly increasing</strong> order.
+        </em>
+      </p>
+
+      <p>
+        A <strong>subarray</strong> is a <strong>contiguous</strong> part of an
+        array.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,3,5,4,4,6] <br />
+        <strong>Output:</strong> 10 <br />
+        <strong>Explanation:</strong> The strictly increasing subarrays are the
+        following: <br />
+        - Subarrays of length 1: [1], [3], [5], [4], [4], [6]. <br />
+        - Subarrays of length 2: [1,3], [3,5], [4,6]. <br />
+        - Subarrays of length 3: [1,3,5]. <br />
+        The total number of subarrays is 6 + 3 + 1 = 10.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3,4,5] <br />
+        <strong>Output:</strong> 15 <br />
+        <strong>Explanation:</strong> Every subarray is strictly increasing.
+        There are 15 possible subarrays that we can take.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= nums[i] &lt;= 10<sup>6</sup>
+          </code>
+        </li>
+      </ul>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
