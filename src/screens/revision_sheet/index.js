@@ -40,7 +40,6 @@ const RevisionSheet = () => {
   const [searchParams] = useSearchParams();
   const [leftOverCount, setLeftOverCount] = useState(0);
   const [solvedQs, setSolvedQs] = useState([]);
-  const [solvedTags, setSolvedTags] = useState([]);
 
   const [isDescriptionSet, setIsDescriptionSet] = useState(false);
 
@@ -91,6 +90,8 @@ const RevisionSheet = () => {
 
     const qnos = Array.from(new Set(Object.values(revision).flat()));
 
+    const temp = [];
+
     for (let qno of qnos) {
       if (solutions[qno]?.["solution"]) {
         const values = Object.values(solutions[qno]["solution"])?.filter(
@@ -99,9 +100,13 @@ const RevisionSheet = () => {
 
         if (values?.length > 0) {
           count++;
+          temp.push(qno);
         }
       }
     }
+
+    console.log(qnos.filter((item) => !temp.includes(item)));
+    console.log({ qnos });
 
     const solvedQuestions = Object.entries(solutions)
       .filter(([_, value]) => {
@@ -279,12 +284,14 @@ const RevisionSheet = () => {
             {" "}
             <ContentText>
               Existing Total Count: <ContentTextBold>{count} </ContentTextBold>
-              problems. (<ContentTextBold>
+              problems.
+              {/* (<ContentTextBold>
                 {leftOverCount}{" "}
               </ContentTextBold>{" "}
-              unsolved) (
-              <ContentTextBold>{count - leftOverCount}</ContentTextBold> solved)
-              (<ContentTextBold>{STAR.length}</ContentTextBold> starred) (
+              unsolved)  */}
+              (<ContentTextBold>{count - leftOverCount}</ContentTextBold>{" "}
+              solved) (<ContentTextBold>{STAR.length}</ContentTextBold> starred)
+              (
               <ContentTextBold>
                 {
                   Object.values(data).filter((x) =>
