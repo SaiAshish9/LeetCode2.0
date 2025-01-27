@@ -101871,6 +101871,66 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  650: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        There is only one character <code>'A'</code> on the screen of a notepad.
+        You can perform one of two operations on this notepad for each step:
+      </p>
+
+      <ul>
+        <li>
+          Copy All: You can copy all the characters present on the screen (a
+          partial copy is not allowed).
+        </li>
+        <li>Paste: You can paste the characters which are copied last time.</li>
+      </ul>
+
+      <p>
+        Given an integer <code>n</code>, return{" "}
+        <em>the minimum number of operations to get the character</em>{" "}
+        <code>'A'</code> <em>exactly</em> <code>n</code>{" "}
+        <em>times on the screen</em>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 3 <br />
+        <strong>Output:</strong> 3 <br />
+        <strong>Explanation:</strong> Initially, we have one character 'A'.{" "}
+        <br />
+        In step 1, we use Copy All operation.
+        <br />
+        In step 2, we use Paste operation to get 'AA'.
+        <br />
+        In step 3, we use Paste operation to get 'AAA'.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 1 <br />
+        <strong>Output:</strong> 0
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= n &lt;= 1000</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
