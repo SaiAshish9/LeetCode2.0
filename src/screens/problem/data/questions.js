@@ -105978,6 +105978,115 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  3176: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given an integer array <code>nums</code> and a{" "}
+        <strong>non-negative</strong> integer <code>k</code>. A sequence of
+        integers <code>seq</code> is called <strong>good</strong> if there are{" "}
+        <strong>at most</strong> <code>k</code> indices <code>i</code> in the
+        range <code>[0, seq.length - 2]</code> such that{" "}
+        <code>seq[i] != seq[i + 1]</code>.
+      </p>
+
+      <p>
+        Return the <strong>maximum</strong> possible length of a{" "}
+        <strong>good</strong>{" "}
+        <span
+          data-keyword="subsequence-array"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:r186:"
+              >
+                <div>subsequence</div>
+              </div>
+              <div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(381px, 315px);"></div>
+            </div>
+          </div>
+        </span>{" "}
+        of <code>nums</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [1,2,1,1,3], k = 2</span>
+        </p>
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">4</span>
+        </p>
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+        <p>
+          The maximum length subsequence is{" "}
+          <code>
+            [<u>1</u>,<u>2</u>,<u>1</u>,<u>1</u>,3]
+          </code>
+          .
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">nums = [1,2,3,4,5,1], k = 0</span>
+        </p>
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">2</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <br />
+        <p>
+          The maximum length subsequence is{" "}
+          <code>
+            [<u>1</u>,2,3,4,5,<u>1</u>]
+          </code>
+          .
+        </p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= nums.length &lt;= 500</code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= nums[i] &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+        <li>
+          <code>0 &lt;= k &lt;= min(nums.length, 25)</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
