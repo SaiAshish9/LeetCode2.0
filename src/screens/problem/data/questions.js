@@ -105194,6 +105194,147 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  2900: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a string array <code>words</code> and a{" "}
+        <strong>binary</strong> array <code>groups</code> both of length{" "}
+        <code>n</code>, where <code>words[i]</code> is associated with{" "}
+        <code>groups[i]</code>.
+      </p>
+
+      <p>
+        Your task is to select the <strong>longest alternating</strong>{" "}
+        <span
+          data-keyword="subsequence-array"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <div class="popover-wrapper inline-block" data-headlessui-state="">
+            <div>
+              <div
+                aria-expanded="false"
+                data-headlessui-state=""
+                id="headlessui-popover-button-:rs9:"
+              >
+                <div>subsequence</div>
+              </div>
+            </div>
+          </div>
+        </span>{" "}
+        from <code>words</code>. A subsequence of <code>words</code> is
+        alternating if for any two consecutive strings in the sequence, their
+        corresponding elements in the binary array <code>groups</code> differ.
+        Essentially, you are to choose strings such that adjacent elements have
+        non-matching corresponding bits in the <code>groups</code> array.
+      </p>
+
+      <p>
+        Formally, you need to find the longest subsequence of an array of
+        indices <code>[0, 1, ..., n - 1]</code> denoted as{" "}
+        <code>
+          [i<sub>0</sub>, i<sub>1</sub>, ..., i<sub>k-1</sub>]
+        </code>
+        , such that{" "}
+        <code>
+          groups[i<sub>j</sub>] != groups[i<sub>j+1</sub>]
+        </code>{" "}
+        for each <code>0 &lt;= j &lt; k - 1</code> and then find the words
+        corresponding to these indices.
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the selected subsequence. If there are multiple answers, return{" "}
+          <strong>any</strong> of them.
+        </em>
+      </p>
+
+      <p>
+        <strong>Note:</strong> The elements in <code>words</code> are distinct.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">
+            words = ["e","a","b"], groups = [0,0,1]
+          </span>
+        </p>
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">["e","b"]</span>
+        </p>
+        <br />
+        <p>
+          <strong>Explanation:</strong> A subsequence that can be selected is{" "}
+          <code>["e","b"]</code> because <code>groups[0] != groups[2]</code>.
+          Another subsequence that can be selected is <code>["a","b"]</code>{" "}
+          because <code>groups[1] != groups[2]</code>. It can be demonstrated
+          that the length of the longest subsequence of indices that satisfies
+          the condition is <code>2</code>.
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">
+            words = ["a","b","c","d"], groups = [1,0,1,1]
+          </span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Output:</strong> <span class="example-io">["a","b","c"]</span>
+        </p>
+        <br />
+
+        <p>
+          <strong>Explanation:</strong> A subsequence that can be selected is{" "}
+          <code>["a","b","c"]</code> because <code>groups[0] != groups[1]</code>{" "}
+          and <code>groups[1] != groups[2]</code>. Another subsequence that can
+          be selected is <code>["a","b","d"]</code> because{" "}
+          <code>groups[0] != groups[1]</code> and{" "}
+          <code>groups[1] != groups[3]</code>. It can be shown that the length
+          of the longest subsequence of indices that satisfies the condition is{" "}
+          <code>3</code>.
+        </p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= n == words.length == groups.length &lt;= 100</code>
+        </li>
+        <li>
+          <code>1 &lt;= words[i].length &lt;= 10</code>
+        </li>
+        <li>
+          <code>groups[i]</code> is either <code>0</code> or <code>1.</code>
+        </li>
+        <li>
+          <code>words</code> consists of <strong>distinct</strong> strings.
+        </li>
+        <li>
+          <code>words[i]</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
