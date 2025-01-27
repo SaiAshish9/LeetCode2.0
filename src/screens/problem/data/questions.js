@@ -101992,6 +101992,60 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       <p></p>
     </div>
   ),
+  673: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array&nbsp;<code>nums</code>, return{" "}
+        <em>the number of longest increasing subsequences.</em>
+      </p>
+
+      <p>
+        <strong>Notice</strong> that the sequence has to be{" "}
+        <strong>strictly</strong> increasing.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [1,3,5,4,7] <br />
+        <strong>Output:</strong> 2 <br />
+        <strong>Explanation:</strong> The two longest increasing subsequences
+        are [1, 3, 4, 7] and [1, 3, 5, 7].
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [2,2,2,2,2] <br />
+        <strong>Output:</strong> 5 <br />
+        <strong>Explanation:</strong> The length of the longest increasing
+        subsequence is 1, and there are 5 increasing subsequences of length 1,
+        so output 5.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= nums.length &lt;= 2000</code>
+        </li>
+        <li>
+          <code>
+            -10<sup>6</sup> &lt;= nums[i] &lt;= 10<sup>6</sup>
+          </code>
+        </li>
+        <li>The answer is guaranteed to fit inside a 32-bit integer.</li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
