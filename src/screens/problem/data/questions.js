@@ -101931,6 +101931,67 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  651: (
+    <div class="markdown-body div-width">
+      <p>Imagine you have a special keyboard with the following keys: </p>
+      <p>
+        <code>Key 1: (A)</code>: Print one 'A' on screen.
+      </p>
+      <p>
+        <code>Key 2: (Ctrl-A)</code>: Select the whole screen.
+      </p>
+      <p>
+        <code>Key 3: (Ctrl-C)</code>: Copy selection to buffer.
+      </p>
+      <p>
+        <code>Key 4: (Ctrl-V)</code>: Print buffer on screen appending it after
+        what has already been printed.{" "}
+      </p>
+
+      <p>
+        Now, you can only press the keyboard for <b>N</b> times (with the above
+        four keys), find out the maximum numbers of 'A' you can print on screen.
+      </p>
+
+      <p>
+        <b>Example 1:</b>
+        <br />
+      </p>
+      <pre>
+        <b>Input:</b> N = 3 <br />
+        <b>Output:</b> 3 <br />
+        <b>Explanation:</b> <br />
+        We can at most get 3 A's on screen by pressing following key sequence:{" "}
+        <br />
+        A, A, A
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 2:</b>
+        <br />
+      </p>
+      <pre>
+        <b>Input:</b> N = 7 <br />
+        <b>Output:</b> 9 <br />
+        <b>Explanation:</b> <br />
+        We can at most get 9 A's on screen by pressing following key sequence:{" "}
+        <br />
+        A, A, A, Ctrl A, Ctrl C, Ctrl V, Ctrl V
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Note:</b>
+        <br />
+      </p>
+      <ul>
+        <li>1 &lt;= N &lt;= 50</li>
+        <li>Answers will be in the range of 32-bit signed integer.</li>
+      </ul>
+      <p></p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
