@@ -102834,6 +102834,70 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  1092: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two strings <code>str1</code> and <code>str2</code>, return{" "}
+        <em>the shortest string that has both </em>
+        <code>str1</code>
+        <em> and </em>
+        <code>str2</code>
+        <em>
+          {" "}
+          as <strong>subsequences</strong>
+        </em>
+        . If there are multiple valid strings, return <strong>any</strong> of
+        them.
+      </p>
+
+      <p>
+        A string <code>s</code> is a <strong>subsequence</strong> of string{" "}
+        <code>t</code> if deleting some number of characters from <code>t</code>{" "}
+        (possibly <code>0</code>) results in the string <code>s</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> str1 = "abac", str2 = "cab" <br />
+        <strong>Output:</strong> "cabac" <br />
+        <strong>Explanation:</strong> <br />
+        str1 = "abac" is a subsequence of "cabac" because we can delete the
+        first "c". <br />
+        str2 = "cab" is a subsequence of "cabac" because we can delete the last
+        "ac". <br />
+        The answer provided is the shortest such string that satisfies these
+        properties.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> str1 = "aaaaaaaa", str2 = "aaaaaaaa" <br />
+        <strong>Output:</strong> "aaaaaaaa"
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= str1.length, str2.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>str1</code> and <code>str2</code> consist of lowercase English
+          letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
