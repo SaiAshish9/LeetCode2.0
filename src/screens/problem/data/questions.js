@@ -101626,6 +101626,11 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       <div>
         <pre>
           <strong>Input: </strong>
+          <img
+            alt=""
+            src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0361.Bomb%20Enemy/images/bomb1-grid.jpg"
+            style={{ width: 600, height: 187 }}
+          />
           <span id="example-input-1-1">
             [["0","E","0","0"],["E","0","W","E"],["0","E","0","0"]]
           </span>{" "}
