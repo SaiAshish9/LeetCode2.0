@@ -105363,7 +105363,6 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
               >
                 <div>subsequence</div>
               </div>
-              <div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(273px, 352px);"></div>
             </div>
           </div>
         </span>{" "}
@@ -105420,13 +105419,11 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
 
       <div
         class="example-block"
-        style="border-color: var(--border-tertiary); border-left-width: 2px; color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 1rem; margin-top: 1rem; overflow: visible; padding-left: 1rem;"
       >
         <p>
           <strong>Input: </strong>
           <span
             class="example-io"
-            style="font-family: Menlo, sans-serif; font-size: 0.85rem;"
           >
             words = ["bab","dab","cab"], groups = [1,2,2]
           </span>
@@ -105437,7 +105434,6 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
           <strong>Output: </strong>
           <span
             class="example-io"
-            style="font-family: Menlo, sans-serif; font-size: 0.85rem;"
           >
             ["bab","cab"]
           </span>
@@ -105501,13 +105497,11 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
 
       <div
         class="example-block"
-        style="border-color: var(--border-tertiary); border-left-width: 2px; color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 1rem; margin-top: 1rem; overflow: visible; padding-left: 1rem;"
       >
         <p>
           <strong>Input: </strong>
           <span
             class="example-io"
-            style="font-family: Menlo, sans-serif; font-size: 0.85rem;"
           >
             words = ["a","b","c","d"], groups = [1,2,3,4]
           </span>
@@ -105517,7 +105511,6 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
           <strong>Output: </strong>
           <span
             class="example-io"
-            style="font-family: Menlo, sans-serif; font-size: 0.85rem;"
           >
             ["a","b","c","d"]
           </span>
