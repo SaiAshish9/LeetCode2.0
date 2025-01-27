@@ -347,7 +347,13 @@ const Problem = () => {
                   } else {
                     const data = Array.from(new Set(solutionKeys));
                     const index = data.indexOf(Q);
-                    navigate(`/problems/${data[(index + 1) % data.length]}`);
+                    navigate(
+                      `/problems/${
+                        index > 1
+                          ? data[(index - 1) % data.length]
+                          : data[data.length - 1]
+                      }`
+                    );
                   }
                 }}
               />
