@@ -206,7 +206,6 @@ export const TitleContainer = styled.div`
     `};
   @media only screen and (max-width: ${BREAKPOINTS.sm}) {
     p {
-      max-width: 60%;
       text-overflow: ellipsis;
     }
   }
