@@ -204,6 +204,12 @@ export const TitleContainer = styled.div`
     css`
       width: 200px;
     `};
+  @media only screen and (max-width: ${BREAKPOINTS.sm}) {
+    p {
+      max-width: 60%;
+      text-overflow: ellipsis;
+    }
+  }
 `;
 
 export const DifficultyTag = styled.p`
