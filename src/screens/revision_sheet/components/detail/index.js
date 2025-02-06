@@ -2,6 +2,8 @@ import React from "react";
 import SD_SOLUTIONING from "../../data/solutioning";
 
 const Description = ({ hashParam, pathname }) => {
+  console.log({ hashParam });
+
   return (
     <>
       {" "}
