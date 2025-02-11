@@ -19302,78 +19302,74 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       <h2>Explanation of Circular Array Loop Solution</h2>
       <ul>
         <li>
-          <code>public boolean circularArrayLoop(int[] nums)</code>: This method
-          checks if there exists a circular loop in the given array{" "}
-          <code>nums</code>.
-        </li>
-        <li>
-          <strong>Initialization:</strong>
-          <ul>
-            <li>
-              Checks if the length of <code>nums</code> is less than 2; if so,
-              returns <code>false</code> immediately.
-            </li>
-            <li>
-              Iterates through each element in <code>nums</code>.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Main Loop:</strong>
-          <ul>
-            <li>
-              For each element <code>nums[i]</code>, skips if it's already
-              visited (marked as 0).
-            </li>
-            <li>
-              Initializes <code>slow</code> pointer to <code>i</code> and{" "}
-              <code>fast</code> pointer to the next index using the{" "}
-              <code>advance</code> method.
-            </li>
-            <li>Uses two conditions to detect a cycle:</li>
-            <ul>
-              <li>
-                <code>nums[i] * nums[fast] &gt; 0</code> and{" "}
-                <code>nums[i] * nums[advance(nums, fast)] &gt; 0</code>: Ensures
-                all elements in the loop have the same direction.
-              </li>
-              <li>
-                If conditions are met and <code>slow</code> meets{" "}
-                <code>fast</code>, checks for a valid cycle (excluding
-                self-loops).
-              </li>
-            </ul>
-          </ul>
-        </li>
-        <li>
-          <strong>Marking Visited Nodes:</strong>
-          <ul>
-            <li>
-              Resets the loop starting from <code>i</code>, marking all nodes
-              involved in the cycle as visited by setting them to 0.
-            </li>
-          </ul>
-        </li>
-        <li>
           <strong>
-            Helper Method <code>advance(int[] nums, int i)</code>:
+            Step 1: Iterate through each element as a potential starting point
           </strong>
           <ul>
             <li>
-              Calculates the next index using the formula:{" "}
-              <code>(i + nums[i]) % n</code>.
+              Loop over each index <code>i</code>.
             </li>
             <li>
-              Handles negative indices by adding <code>n</code> if necessary.
+              If <code>nums[i] == 0</code>, it means this index has already been
+              visited and processed, so we skip it.
             </li>
           </ul>
         </li>
+
         <li>
-          <strong>Return Result:</strong>
+          <strong>Step 2: Detect Cycle using Slow and Fast Pointers</strong>
           <ul>
             <li>
-              Returns <code>true</code> if a valid circular loop is found;
-              otherwise, returns <code>false</code>.
+              Initialize two pointers:
+              <ul>
+                <li>
+                  <code>slow = i</code>
+                </li>
+                <li>
+                  <code>fast = next(i)</code> (moves one step ahead)
+                </li>
+              </ul>
+            </li>
+            <li>
+              Move slow by one step and fast by two steps:
+              <ul>
+                <li>
+                  <code>slow = next(slow)</code>
+                </li>
+                <li>
+                  <code>fast = next(next(fast))</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Cycle detection condition:
+              <ul>
+                <li>
+                  If <code>slow == fast</code>, a cycle is detected.
+                </li>
+                <li>
+                  Check that the cycle is not a single-element loop (
+                  <code>slow != next(slow)</code>).
+                </li>
+                <li>
+                  If a valid cycle is found, return <code>true</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>
+            Step 3: Mark visited elements to avoid redundant checks
+          </strong>
+          <ul>
+            <li>
+              If no cycle is found, mark the entire path as visited by setting
+              all involved elements to <code>0</code>.
+            </li>
+            <li>
+              This ensures we do not reprocess paths that do not contain cycles.
             </li>
           </ul>
         </li>
