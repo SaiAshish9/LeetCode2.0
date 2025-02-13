@@ -23456,8 +23456,9 @@ for (int i = 0; i &lt; actualLength; i++) {
       <pre>
         <strong>Input:</strong> s = "aaa"
         <br />
-        <strong>Output:</strong> 6<strong>Explanation:</strong> Six palindromic
-        strings: "a", "a", "a", "aa", "aa", "aaa".
+        <strong>Output:</strong> 6 <br />
+        <strong>Explanation:</strong> Six palindromic strings: "a", "a", "a",
+        "aa", "aa", "aaa".
       </pre>
 
       <p>&nbsp;</p>
