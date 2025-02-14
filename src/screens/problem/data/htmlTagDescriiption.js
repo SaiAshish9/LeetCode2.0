@@ -500,6 +500,30 @@ class Prim {
         <li>✅ Finding cycles (Linked list problems)</li>
         <li>✅ String processing (Palindromes, Substrings)</li>
       </ul>
+
+      <ul>
+        <li>
+          ✅ <strong>When to Use Two Pointers in Unsorted Arrays</strong>
+          <ul>
+            <li>
+              ✔ Sorting first if order doesn't matter (Two Sum, Three Sum,
+              etc.).
+            </li>
+            <li>
+              ✔ Using a HashSet if sorting isn’t ideal (Two Sum without index
+              loss).
+            </li>
+            <li>
+              ✔ Fast & Slow pointers for cycle detection (Linked List, Tortoise
+              & Hare).
+            </li>
+            <li>
+              ✔ Partitioning problems (Sorting Colors, Move Zeroes, Dutch
+              National Flag).
+            </li>
+          </ul>
+        </li>
+      </ul>
     </>
   ),
   "Sliding Window": (
