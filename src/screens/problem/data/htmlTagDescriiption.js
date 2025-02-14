@@ -447,7 +447,7 @@ class Prim {
         Typically O(N), since each pointer moves in a linear fashion, avoiding
         nested loops.
       </p>
-
+      <br />
       <h2>🔥 Example Problems</h2>
       <ul>
         <li>
