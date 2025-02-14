@@ -1006,6 +1006,132 @@ class Prim {
 }
 `}</code>
       </pre>
+      <h2>Kadane’s Algorithm – Maximum Subarray Sum 🚀</h2>
+      <p>
+        Kadane’s Algorithm is a dynamic programming approach used to find the
+        maximum sum of a contiguous subarray in an array of integers.
+      </p>
+      <h3>🔹 Problem Statement</h3>
+      <p>
+        Given an array <code>nums</code> of size <code>N</code>, find the
+        maximum sum that can be obtained by summing a contiguous subarray.
+      </p>
+      <h3>📌 Example:</h3>
+      <pre>
+        <code>
+          Input: nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4] Output: 6 Explanation:
+          The subarray [4, -1, 2, 1] has the maximum sum = 6.
+        </code>
+      </pre>
+      <h3>🔹 Approach (Kadane’s Algorithm)</h3>
+      <ul>
+        <li>We maintain two variables:</li>
+        <ul>
+          <li>
+            <code>currentSum</code> → Tracks the sum of the current subarray.
+          </li>
+          <li>
+            <code>maxSum</code> → Stores the maximum sum found so far.
+          </li>
+        </ul>
+        <li>
+          If <code>currentSum</code> becomes negative, reset it to 0 because a
+          negative sum will only reduce the potential maximum sum.
+        </li>
+        <li>
+          Keep updating <code>maxSum</code> as we iterate.
+        </li>
+      </ul>
+      <h3>🔹 Code Implementation (C++)</h3>
+      <pre>
+        <code>{`int maxSubArray(vector<int>& nums) {
+    int maxSum = INT_MIN, currentSum = 0;
+    
+    for (int num : nums) {
+        currentSum += num;
+        maxSum = max(maxSum, currentSum);
+        if (currentSum < 0) currentSum = 0;  // Reset if negative
+    }
+    
+    return maxSum;
+}`}</code>
+      </pre>
+      <p>
+        ⏳ Time Complexity: <code>O(N)</code>
+      </p>
+      <p>
+        💾 Space Complexity: <code>O(1)</code>
+      </p>
+      <h3>🔹 Code Implementation (Python)</h3>
+      <pre>
+        <code>{`def maxSubArray(nums):
+    max_sum = float('-inf')
+    current_sum = 0
+    
+    for num in nums:
+        current_sum += num
+        max_sum = max(max_sum, current_sum)
+        if current_sum < 0:
+            current_sum = 0
+    
+    return max_sum`}</code>
+      </pre>
+      <h3>🔹 Code Implementation (JavaScript)</h3>
+      <pre>
+        <code>{`function maxSubArray(nums) {
+    let maxSum = -Infinity, currentSum = 0;
+    
+    for (let num of nums) {
+        currentSum += num;
+        maxSum = Math.max(maxSum, currentSum);
+        if (currentSum < 0) currentSum = 0;
+    }
+    
+    return maxSum;
+}`}</code>
+      </pre>
+      <h3>🔹 Edge Cases</h3>
+      <ul>
+        <li>✔ All negative numbers → Return the least negative number.</li>
+        <li>✔ Single element array → Return that element.</li>
+        <li>
+          ✔ Array with all positive numbers → Return the sum of the entire
+          array.
+        </li>
+      </ul>
+      <h3>🔹 Finding the Subarray (Not Just Sum)</h3>
+      <p>To get the actual subarray, track the start and end indices:</p>
+      <pre>
+        <code>{`vector<int> maxSubArrayWithIndices(vector<int>& nums) {
+    int maxSum = INT_MIN, currentSum = 0;
+    int start = 0, tempStart = 0, end = 0;
+    
+    for (int i = 0; i < nums.size(); i++) {
+        currentSum += nums[i];
+        
+        if (currentSum > maxSum) {
+            maxSum = currentSum;
+            start = tempStart;
+            end = i;
+        }
+        
+        if (currentSum < 0) {
+            currentSum = 0;
+            tempStart = i + 1;
+        }
+    }
+    
+    return vector<int>(nums.begin() + start, nums.begin() + end + 1);
+}`}</code>
+      </pre>
+      <h3>🔹 When to Use Kadane’s Algorithm?</h3>
+      <ul>
+        <li>✔ Finding maximum sum subarray</li>
+        <li>
+          ✔ Optimizing brute force <code>O(N²)</code> approach
+        </li>
+        <li>✔ 1D DP problems related to subarrays</li>
+      </ul>
     </div>
   ),
   "Binary Search Tree": (
