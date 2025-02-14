@@ -402,7 +402,6 @@ class Prim {
   ),
   "Two Pointers": (
     <>
-      <h1>The Two Pointers Technique</h1>
       <p>
         The Two Pointers technique is an efficient approach used to solve
         problems that involve searching, sorting, or optimizing within arrays or
