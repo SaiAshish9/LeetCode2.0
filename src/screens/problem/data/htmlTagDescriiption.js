@@ -400,6 +400,108 @@ class Prim {
       <img style={{ width: "60%" }} src={PImg} alt="img" />
     </>
   ),
+  "Two Pointers": (
+    <>
+      <h1>The Two Pointers Technique</h1>
+      <p>
+        The Two Pointers technique is an efficient approach used to solve
+        problems that involve searching, sorting, or optimizing within arrays or
+        strings.
+      </p>
+
+      <h2>🛠️ Common Approaches</h2>
+      <ul>
+        <li>
+          <strong>Opposite Ends (Left & Right Pointers)</strong>
+          <ul>
+            <li>Used when dealing with sorted arrays or palindromes.</li>
+            <li>
+              Example: Finding a pair that sums to a target in a sorted array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Same Direction (Fast & Slow Pointers)</strong>
+          <ul>
+            <li>Used in linked lists or cyclic detection problems.</li>
+            <li>
+              Example: Detecting a cycle in a linked list (Floyd’s Cycle
+              Detection).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Different Start Points</strong>
+          <ul>
+            <li>
+              Used when solving problems related to intervals or merging sorted
+              lists.
+            </li>
+            <li>Example: Merging two sorted arrays.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>⏳ Time Complexity</h2>
+      <p>
+        Typically O(N), since each pointer moves in a linear fashion, avoiding
+        nested loops.
+      </p>
+
+      <h2>🔥 Example Problems</h2>
+      <ul>
+        <li>
+          <strong>Two Sum (Sorted Array)</strong>
+          <ul>
+            <li>
+              Problem: Given a sorted array and a target sum, find two numbers
+              that add up to the target.
+            </li>
+            <li>Approach: Use left and right pointers:</li>
+            <ul>
+              <li>
+                If nums[left] + nums[right] {">"} target, move the right pointer
+                left.
+              </li>
+              <li>
+                If nums[left] + nums[right] {"<"} target, move the left pointer
+                right.
+              </li>
+            </ul>
+          </ul>
+        </li>
+        <li>
+          <strong>Removing Duplicates from Sorted Array</strong>
+          <ul>
+            <li>Problem: Remove duplicates in-place from a sorted array.</li>
+            <li>Approach: Use slow and fast pointers:</li>
+            <ul>
+              <li>slow pointer tracks unique elements.</li>
+              <li>fast pointer iterates over the array.</li>
+            </ul>
+          </ul>
+        </li>
+        <li>
+          <strong>Valid Palindrome</strong>
+          <ul>
+            <li>Problem: Check if a given string is a palindrome.</li>
+            <li>
+              Approach: Use two pointers, one starting from the left and one
+              from the right.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>🎯 When to Use Two Pointers?</h2>
+      <ul>
+        <li>✅ Sorted arrays (Binary Search-like problems)</li>
+        <li>✅ Optimized searching (Two Sum, Three Sum)</li>
+        <li>✅ Finding cycles (Linked list problems)</li>
+        <li>✅ String processing (Palindromes, Substrings)</li>
+      </ul>
+    </>
+  ),
   "Sliding Window": (
     <div class="text">
       <p dir="ltr">
