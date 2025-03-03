@@ -5690,11 +5690,55 @@ class UnionFind:
   "Heap (Priority Queue)": (
     <>
       <h2>Priority Queue (Min-Heap) Example</h2>
-      <input type="number" id="numberInput" placeholder="Enter a number" />
-      <button onclick="insert()">Insert</button>
-      <button onclick="removeMin()">Remove Min</button>
 
-      <div id="heapDisplay">Heap: []</div>
+      <ul>
+        <li>
+          A heap (priority queue) is a special tree-based data structure that
+          satisfies the heap property:
+          <ul>
+            <li>
+              <strong>Max-Heap:</strong> The parent node is always greater than
+              or equal to its child nodes.
+            </li>
+            <li>
+              <strong>Min-Heap:</strong> The parent node is always smaller than
+              or equal to its child nodes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Operations in a Heap:</strong>
+          <ul>
+            <li>
+              <strong>Insertion (O(log n))</strong>
+              <ul>
+                <li>Add the new element at the end (last index).</li>
+                <li>Restore the heap property by bubbling up (heapify up).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Deletion (O(log n))</strong>
+              <ul>
+                <li>Remove the root (max in a max-heap, min in a min-heap).</li>
+                <li>Replace it with the last element.</li>
+                <li>Restore heap property by bubbling down (heapify down).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Peek (O(1))</strong>
+              <ul>
+                <li>Returns the root element (max/min) without removal.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Heapify (O(n))</strong>
+              <ul>
+                <li>Convert an unsorted array into a heap.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
       <pre>
         {`
