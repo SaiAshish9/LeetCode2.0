@@ -5687,6 +5687,98 @@ class UnionFind:
       </ul>
     </>
   ),
+  "Heap (Priority Queue)": (
+    <>
+      <h2>Priority Queue (Min-Heap) Example</h2>
+      <input type="number" id="numberInput" placeholder="Enter a number" />
+      <button onclick="insert()">Insert</button>
+      <button onclick="removeMin()">Remove Min</button>
+
+      <div id="heapDisplay">Heap: []</div>
+
+      <pre>
+        {`
+        class MinHeap {
+            constructor() {
+                this.heap = [];
+            }
+
+            getParentIndex(i) { return Math.floor((i - 1) / 2); }
+            getLeftChildIndex(i) { return 2 * i + 1; }
+            getRightChildIndex(i) { return 2 * i + 2; }
+
+            swap(i, j) {
+                [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
+            }
+
+            insert(value) {
+                this.heap.push(value);
+                this.heapifyUp();
+            }
+
+            heapifyUp() {
+                let index = this.heap.length - 1;
+                while (index > 0 && this.heap[this.getParentIndex(index)] > this.heap[index]) {
+                    this.swap(index, this.getParentIndex(index));
+                    index = this.getParentIndex(index);
+                }
+            }
+
+            removeMin() {
+                if (this.heap.length === 0) return null;
+                if (this.heap.length === 1) return this.heap.pop();
+
+                let min = this.heap[0];
+                this.heap[0] = this.heap.pop();
+                this.heapifyDown(0);
+                return min;
+            }
+
+            heapifyDown(index) {
+                let smallest = index;
+                let left = this.getLeftChildIndex(index);
+                let right = this.getRightChildIndex(index);
+
+                if (left < this.heap.length && this.heap[left] < this.heap[smallest]) {
+                    smallest = left;
+                }
+                if (right < this.heap.length && this.heap[right] < this.heap[smallest]) {
+                    smallest = right;
+                }
+                if (smallest !== index) {
+                    this.swap(index, smallest);
+                    this.heapifyDown(smallest);
+                }
+            }
+
+            getHeap() {
+                return this.heap;
+            }
+        }
+
+        const heap = new MinHeap();
+
+        function insert() {
+            const input = document.getElementById("numberInput");
+            const value = parseInt(input.value);
+            if (!isNaN(value)) {
+                heap.insert(value);
+                updateHeapDisplay();
+                input.value = "";
+            }
+        }
+
+        function removeMin() {
+            heap.removeMin();
+            updateHeapDisplay();
+        }
+
+        function updateHeapDisplay() {
+            document.getElementById("heapDisplay").innerText = Heap: [{"$\{heap.getHeap().join(", ")}"}];
+        }`}
+      </pre>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
