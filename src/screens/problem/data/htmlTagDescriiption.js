@@ -5857,6 +5857,57 @@ class UnionFind:
       insertion and deletion using heaps).
     </>
   ),
+  Stack: (
+    <>
+      {" "}
+      <h3>Basic Operations</h3>
+      <ul>
+        <li>
+          <b>Push:</b> O(1) - Insert an element at the top.
+        </li>
+        <li>
+          <b>Pop:</b> O(1) - Remove the top element.
+        </li>
+        <li>
+          <b>Peek:</b> O(1) - Access the top element.
+        </li>
+        <li>
+          <b>isEmpty:</b> O(1) - Check if the stack is empty.
+        </li>
+      </ul>
+      <h3>Stack-Based Algorithms</h3>
+      <ul>
+        <li>
+          <b>Iterating over a stack:</b> O(n) - Each element is visited once.
+        </li>
+        <li>
+          <b>Next Greater Element:</b> O(n) - Uses a monotonic stack.
+        </li>
+        <li>
+          <b>Largest Rectangle in Histogram:</b> O(n) - Uses a stack to
+          calculate max area.
+        </li>
+        <li>
+          <b>Trapping Rain Water:</b> O(n) - Uses a stack or two-pointer
+          approach.
+        </li>
+      </ul>
+      <h3>Space Complexity</h3>
+      <ul>
+        <li>
+          <b>Stack Operations:</b> O(1) - Uses only a few variables.
+        </li>
+        <li>
+          <b>Using Stack in Recursion:</b> O(n) - Worst case if recursion depth
+          is `n`.
+        </li>
+        <li>
+          <b>Monotonic Stack:</b> O(n) - In the worst case, all elements are
+          stored in the stack.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
