@@ -5823,6 +5823,40 @@ class UnionFind:
       </pre>
     </>
   ),
+  Queue: (
+    <>
+      A queue is a linear data structure that follows the FIFO (First In, First
+      Out) principle. This means elements are inserted at the rear and removed
+      from the front of the queue.
+      <br />
+      Basic Operations & Time Complexity
+      <br />
+      Operation Description Time Complexity
+      <br />
+      Enqueue (push) Inserts an element at the rear of the queue O(1)
+      <br />
+      Dequeue (pop) Removes and returns the front element O(1)
+      <br />
+      Front (peek) Returns the front element without removing it O(1)
+      <br />
+      Rear (back) Returns the last element without removing it O(1)
+      <br />
+      isEmpty Checks if the queue is empty O(1)
+      <br />
+      Types of Queues
+      <br />
+      Simple Queue – Basic FIFO queue.
+      <br />
+      Circular Queue – The last position connects to the first to optimize
+      space.
+      <br />
+      Deque (Double-ended Queue) – Insert & delete from both ends (O(1)
+      operations).
+      <br />
+      Priority Queue – Elements are removed based on priority (O(log N) for
+      insertion and deletion using heaps).
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
