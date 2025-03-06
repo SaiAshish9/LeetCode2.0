@@ -6105,7 +6105,7 @@ class UnionFind:
               (Balanced), \( O(n) \) (Unbalanced)
             </li>
             <li>
-              <strong>Jump Search (on Sorted List):</strong> \( O(\sqrt{n}) \)
+              <strong>Jump Search (on Sorted List):</strong> \( O(\sqrt{"{n}"}) \)
             </li>
           </ul>
         </li>
