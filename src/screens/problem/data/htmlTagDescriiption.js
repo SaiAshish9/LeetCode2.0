@@ -6105,7 +6105,8 @@ class UnionFind:
               (Balanced), \( O(n) \) (Unbalanced)
             </li>
             <li>
-              <strong>Jump Search (on Sorted List):</strong> \( O(\sqrt{"{n}"}) \)
+              <strong>Jump Search (on Sorted List):</strong> \( O(\sqrt{"{n}"})
+              \)
             </li>
           </ul>
         </li>
@@ -6135,6 +6136,82 @@ class UnionFind:
             </li>
           </ul>
         </li>
+
+        <h2>Next Greater & Next Smaller Element using Binary Search</h2>
+
+        <ul>
+          <li>
+            <strong>Next Greater Element (NGE):</strong>
+            <ul>
+              <li>
+                Find the <strong>smallest element greater than</strong> the
+                target in a <strong>sorted array</strong>.
+              </li>
+              <li>
+                This is equivalent to <strong>finding the upper bound</strong>.
+              </li>
+              <li>
+                <strong>Binary Search Steps:</strong>
+                <ul>
+                  <li>
+                    Initialize <code>left = 0</code> and{" "}
+                    <code>right = n - 1</code>.
+                  </li>
+                  <li>
+                    If <code>arr[mid] {">"} target</code>, store{" "}
+                    <code>arr[mid]</code> as a potential answer and search on
+                    the <strong>left half</strong>.
+                  </li>
+                  <li>
+                    Else, move <code>left = mid + 1</code> to search for a
+                    greater value.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Next Smaller Element (NSE):</strong>
+            <ul>
+              <li>
+                Find the <strong>largest element smaller than</strong> the
+                target in a <strong>sorted array</strong>.
+              </li>
+              <li>
+                This is equivalent to{" "}
+                <strong>finding the lower bound - 1</strong>.
+              </li>
+              <li>
+                <strong>Binary Search Steps:</strong>
+                <ul>
+                  <li>
+                    Initialize <code>left = 0</code> and{" "}
+                    <code>right = n - 1</code>.
+                  </li>
+                  <li>
+                    If <code>arr[mid] {"<"} target</code>, store{" "}
+                    <code>arr[mid]</code> as a potential answer and search on
+                    the <strong>right half</strong>.
+                  </li>
+                  <li>
+                    Else, move <code>right = mid - 1</code> to find a smaller
+                    value.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Time Complexity:</strong> <code>O(log n)</code> for both
+            functions.
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> <code>O(1)</code> (Constant extra
+            space).
+          </li>
+        </ul>
       </ul>
     </>
   ),
