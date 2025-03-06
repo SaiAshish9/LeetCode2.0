@@ -6171,6 +6171,25 @@ class UnionFind:
             </ul>
           </li>
 
+          <pre>{`int nextGreaterElement(vector<int>& arr, int target) {
+    int left = 0, right = arr.size() - 1;
+    int ans = -1; // Default if no greater element exists
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] > target) {
+            ans = arr[mid];  // Potential answer
+            right = mid - 1; // Search for a smaller greater element
+        } else {
+            left = mid + 1;  // Move right
+        }
+    }
+
+    return ans; // -1 if no greater element found
+}
+`}</pre>
+
           <li>
             <strong>Next Smaller Element (NSE):</strong>
             <ul>
@@ -6202,6 +6221,27 @@ class UnionFind:
               </li>
             </ul>
           </li>
+
+          <pre>
+            {`int nextSmallerElement(vector<int>& arr, int target) {
+    int left = 0, right = arr.size() - 1;
+    int ans = -1; // Default if no smaller element exists
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] < target) {
+            ans = arr[mid];  // Potential answer
+            left = mid + 1;  // Search for a larger smaller element
+        } else {
+            right = mid - 1; // Move left
+        }
+    }
+
+    return ans; // -1 if no smaller element found
+}
+`}
+          </pre>
 
           <li>
             <strong>Time Complexity:</strong> <code>O(log n)</code> for both
