@@ -5923,7 +5923,8 @@ class UnionFind:
           <strong>
             <a
               href="https://leetcode.com/problems/binary-search/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               704. Binary Search
             </a>
@@ -5947,7 +5948,8 @@ class UnionFind:
           <strong>
             <a
               href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               34. Find First and Last Position of Element
             </a>
@@ -5981,7 +5983,8 @@ class UnionFind:
           <strong>
             <a
               href="https://leetcode.com/problems/search-in-rotated-sorted-array/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               33. Search in Rotated Sorted Array
             </a>
@@ -6011,7 +6014,8 @@ class UnionFind:
           <strong>
             <a
               href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               153. Find Minimum in Rotated Sorted Array
             </a>
@@ -6033,7 +6037,8 @@ class UnionFind:
           <strong>
             <a
               href="https://leetcode.com/problems/find-peak-element/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               162. Find Peak Element
             </a>
@@ -6049,6 +6054,86 @@ class UnionFind:
             left = mid + 1
     return left`}
           </pre>
+        </li>
+      </ul>
+      <h2>Binary Search Complexities</h2>
+      <ul>
+        <li>
+          <strong>Time Complexity:</strong>
+          <ul>
+            <li>
+              <strong>Best Case:</strong> \( O(1) \) - When the target is found
+              at the middle index initially.
+            </li>
+            <li>
+              <strong>Average Case:</strong> \( O(\log n) \) - Since we halve
+              the search space in each step.
+            </li>
+            <li>
+              <strong>Worst Case:</strong> \( O(\log n) \) - When the target is
+              at the last possible position or not found.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Space Complexity:</strong>
+          <ul>
+            <li>
+              <strong>Iterative Binary Search:</strong> \( O(1) \) - Uses a few
+              variables.
+            </li>
+            <li>
+              <strong>Recursive Binary Search:</strong> \( O(\log n) \) - Due to
+              recursive stack calls.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Binary Search on Different Data Structures:</strong>
+          <ul>
+            <li>
+              <strong>Sorted Array:</strong> \( O(\log n) \)
+            </li>
+            <li>
+              <strong>Sorted Linked List:</strong> \( O(n) \) (Inefficient, as
+              accessing mid requires traversal)
+            </li>
+            <li>
+              <strong>Binary Search Tree (BST):</strong> \( O(\log n) \)
+              (Balanced), \( O(n) \) (Unbalanced)
+            </li>
+            <li>
+              <strong>Jump Search (on Sorted List):</strong> \( O(\sqrt{n}) \)
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Variants of Binary Search:</strong>
+          <ul>
+            <li>
+              <strong>Standard Binary Search:</strong> \( O(\log n) \) - Find a
+              specific element.
+            </li>
+            <li>
+              <strong>Lower Bound (First Occurrence):</strong> \( O(\log n) \) -
+              Finds the first occurrence of an element.
+            </li>
+            <li>
+              <strong>Upper Bound (Last Occurrence):</strong> \( O(\log n) \) -
+              Finds the last occurrence of an element.
+            </li>
+            <li>
+              <strong>Binary Search on Answer:</strong> \( O(\log M \cdot f(n))
+              \) - Used for problems like **"Kth Smallest Element"**.
+            </li>
+            <li>
+              <strong>Exponential Search:</strong> \( O(\log n) \) - When the
+              array length is unknown.
+            </li>
+          </ul>
         </li>
       </ul>
     </>
