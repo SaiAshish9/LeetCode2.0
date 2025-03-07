@@ -6252,6 +6252,35 @@ class UnionFind:
             space).
           </li>
         </ul>
+
+        <p>Lower and upper bound</p>
+
+        <pre>
+          {`int lowerBound(vector<int>& arr, int X) {
+    int left = 0, right = arr.size();
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] < X) 
+            left = mid + 1;
+        else 
+            right = mid;
+    }
+    return left;  // First position where arr[i] >= X
+}
+
+int upperBound(vector<int>& arr, int X) {
+    int left = 0, right = arr.size();
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] <= X) 
+            left = mid + 1;
+        else 
+            right = mid;
+    }
+    return left;  // First position where arr[i] > X
+}
+`}
+        </pre>
       </ul>
     </>
   ),
