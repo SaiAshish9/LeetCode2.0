@@ -6284,6 +6284,121 @@ int upperBound(vector<int>& arr, int X) {
       </ul>
     </>
   ),
+  "Ordered Set": (
+    <div class="container">
+      <h2>1. Binary Search to Find the Position</h2>
+      <p>
+        <strong>left = 0</strong> and <strong>right = nums.size()</strong>: We
+        set up binary search over the array indices.
+      </p>
+      <p>
+        <strong>Condition: nums[mid] - mid - 1 {">="} k</strong>
+      </p>
+      <ul>
+        <li>
+          This checks if the missing count at index <code>mid</code> is already
+          at least <code>k</code>.
+        </li>
+        <li>
+          If true → Move <code>right = mid</code> (reduce search space).
+        </li>
+        <li>
+          If false → Move <code>left = mid + 1</code> (search further right).
+        </li>
+      </ul>
+
+      <h2>2. Computing the k-th Missing Number</h2>
+      <p>Once the loop ends:</p>
+      <ul>
+        <li>
+          The first position (<code>left</code>) where missing &ge;{" "}
+          <code>k</code> is found.
+        </li>
+        <li>
+          The <strong>k-th missing number</strong> is then given by:
+        </li>
+      </ul>
+      <p class="code">k-th missing = left + k</p>
+      <p>
+        This is derived from the idea that the first <code>left</code> numbers
+        exist, so we need to add <code>k</code> missing numbers beyond it.
+      </p>
+
+      <h2>
+        3. Ordered Set (Using Balanced BST or Policy-Based Data Structures)
+      </h2>
+      <p>
+        An <strong>Ordered Set</strong> maintains elements in{" "}
+        <strong>sorted order</strong> and supports efficient operations.
+      </p>
+
+      <h3>
+        Standard <code>std::set</code> (RB Tree Implementation)
+      </h3>
+      <ul>
+        <li>
+          <strong>
+            Insert (<code>insert(x)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+        <li>
+          <strong>
+            Erase (<code>erase(x)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+        <li>
+          <strong>
+            Search (<code>find(x)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+        <li>
+          <strong>
+            Lower Bound (<code>lower_bound(x)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+        <li>
+          <strong>
+            Upper Bound (<code>upper_bound(x)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+      </ul>
+
+      <h3>
+        Policy-Based Ordered Set (<code>__gnu_pbds::tree</code>)
+      </h3>
+      <ul>
+        <li>
+          <strong>
+            Insert (<code>insert(x)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+        <li>
+          <strong>
+            Erase (<code>erase(x)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+        <li>
+          <strong>
+            Find k-th Element (<code>find_by_order(k)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+        <li>
+          <strong>
+            Order of Key (<code>order_of_key(x)</code>)
+          </strong>
+          : <code>O(log n)</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default TAG_DESCRIPTION;
