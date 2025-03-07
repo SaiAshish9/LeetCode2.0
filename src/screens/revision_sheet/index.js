@@ -291,7 +291,7 @@ const RevisionSheet = () => {
               unsolved)  */}
               (<ContentTextBold>{count - leftOverCount} </ContentTextBold>{" "}
               solved){" "}
-              {/* (<ContentTextBold>{STAR.length}</ContentTextBold> starred) */}
+              (<ContentTextBold>{STAR.length}</ContentTextBold> starred)
               (
               <ContentTextBold>
                 {
