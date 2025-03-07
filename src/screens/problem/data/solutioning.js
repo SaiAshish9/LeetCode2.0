@@ -27727,6 +27727,47 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
       </ul>
     </>
   ),
+  1539: (
+    <div class="container">
+      <h2>1. Binary Search to Find the Position</h2>
+      <p>
+        <strong>left = 0</strong> and <strong>right = nums.size()</strong>: We
+        set up binary search over the array indices.
+      </p>
+      <p>
+        <strong>Condition: nums[mid] - mid - 1 {">="} k</strong>
+      </p>
+      <ul>
+        <li>
+          This checks if the missing count at index <code>mid</code> is already
+          at least <code>k</code>.
+        </li>
+        <li>
+          If true → Move <code>right = mid</code> (reduce search space).
+        </li>
+        <li>
+          If false → Move <code>left = mid + 1</code> (search further right).
+        </li>
+      </ul>
+
+      <h2>2. Computing the k-th Missing Number</h2>
+      <p>Once the loop ends:</p>
+      <ul>
+        <li>
+          The first position (<code>left</code>) where missing &ge;{" "}
+          <code>k</code> is found.
+        </li>
+        <li>
+          The <strong>k-th missing number</strong> is then given by:
+        </li>
+      </ul>
+      <p class="code">k-th missing = left + k</p>
+      <p>
+        This is derived from the idea that the first <code>left</code> numbers
+        exist, so we need to add <code>k</code> missing numbers beyond it.
+      </p>
+    </div>
+  ),
 };
 
 function appendPxToValues(obj) {
