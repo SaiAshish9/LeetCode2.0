@@ -6289,6 +6289,14 @@ int upperBound(vector<int>& arr, int X) {
       <h2>
         3. Ordered Set (Using Balanced BST or Policy-Based Data Structures)
       </h2>
+
+      <p>
+        An Ordered Set is a data structure that maintains elements in sorted
+        order and supports efficient insertions, deletions, and order-based
+        queries like finding the k-th smallest element or finding the rank of an
+        element.
+      </p>
+
       <p>
         An <strong>Ordered Set</strong> maintains elements in{" "}
         <strong>sorted order</strong> and supports efficient operations.
