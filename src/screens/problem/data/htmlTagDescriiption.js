@@ -6371,7 +6371,6 @@ int upperBound(vector<int>& arr, int X) {
   ),
   "Dynamic Programming": (
     <>
-      <h1>Dynamic Programming (DP)</h1>
       <p>
         Dynamic Programming (DP) is one of the most important topics in LeetCode
         and coding interviews, commonly used for optimization problems. It
@@ -6379,6 +6378,7 @@ int upperBound(vector<int>& arr, int X) {
         them using recursion with memoization (top-down) or tabulation
         (bottom-up).
       </p>
+      <br />
 
       <h2>Popular Dynamic Programming Problem Categories</h2>
       <ul>
