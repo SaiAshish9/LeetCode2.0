@@ -6369,6 +6369,140 @@ int upperBound(vector<int>& arr, int X) {
       </ul>
     </div>
   ),
+  "Dynamic Programming": (
+    <>
+      <h1>Dynamic Programming (DP)</h1>
+      <p>
+        Dynamic Programming (DP) is one of the most important topics in LeetCode
+        and coding interviews, commonly used for optimization problems. It
+        involves breaking down problems into overlapping subproblems and solving
+        them using recursion with memoization (top-down) or tabulation
+        (bottom-up).
+      </p>
+
+      <h2>Popular Dynamic Programming Problem Categories</h2>
+      <ul>
+        <li>
+          <strong>1D DP (Linear Problems)</strong>
+          <ul>
+            <li>Climbing Stairs (LC 70) - dp[i] = dp[i-1] + dp[i-2]</li>
+            <li>
+              House Robber (LC 198) - dp[i] = max(dp[i-1], nums[i] + dp[i-2])
+            </li>
+            <li>Fibonacci Number (LC 509) - dp[i] = dp[i-1] + dp[i-2]</li>
+            <li>Jump Game (LC 55, 45) - Greedy + DP variations</li>
+          </ul>
+        </li>
+        <li>
+          <strong>2D DP (Grid-based Problems)</strong>
+          <ul>
+            <li>Unique Paths (LC 62) - dp[i][j] = dp[i-1][j] + dp[i][j-1]</li>
+            <li>
+              Minimum Path Sum (LC 64) - dp[i][j] = grid[i][j] + min(dp[i-1][j],
+              dp[i][j-1])
+            </li>
+            <li>Coin Change 2 (LC 518) - Knapsack-style</li>
+          </ul>
+        </li>
+        <li>
+          <strong>DP on Subsequences</strong>
+          <ul>
+            <li>
+              Longest Common Subsequence (LC 1143) - dp[i][j] = max(dp[i-1][j],
+              dp[i][j-1])
+            </li>
+            <li>Longest Palindromic Subsequence (LC 516)</li>
+            <li>Partition Equal Subset Sum (LC 416) - 0/1 Knapsack</li>
+          </ul>
+        </li>
+        <li>
+          <strong>DP on Strings</strong>
+          <ul>
+            <li>
+              Edit Distance (LC 72) - dp[i][j] = min(insert, delete, replace)
+            </li>
+            <li>Interleaving String (LC 97)</li>
+            <li>Distinct Subsequences (LC 115)</li>
+          </ul>
+        </li>
+        <li>
+          <strong>DP on Trees</strong>
+          <ul>
+            <li>Binary Tree Maximum Path Sum (LC 124)</li>
+            <li>House Robber III (LC 337) - Tree DP</li>
+          </ul>
+        </li>
+        <li>
+          <strong>DP on Bitmasking</strong>
+          <ul>
+            <li>Partition to K Equal Sum Subsets (LC 698)</li>
+            <li>Minimum XOR Sum of Two Arrays (LC 1879)</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Common DP Techniques</h2>
+      <ul>
+        <li>
+          <strong>Recursion + Memoization (Top-Down)</strong>
+          <p>Solve subproblems recursively and store results in a cache.</p>
+          <pre>
+            <code>{`public int fib(int n, int[] memo) {
+  if (n <= 1) return n;
+  if (memo[n] != -1) return memo[n];
+  return memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+}</code></pre>
+      </li>
+      <li><strong>Tabulation (Bottom-Up)</strong>
+          <p>Build a DP table iteratively from the base cases.</p>
+          <pre><code>public int fib(int n) {
+  if (n <= 1) return n;
+  int[] dp = new int[n + 1];
+  dp[0] = 0; dp[1] = 1;
+  for (int i = 2; i <= n; i++) {
+      dp[i] = dp[i - 1] + dp[i - 2];
+  }
+  return dp[n];
+}`}</code>
+          </pre>
+        </li>
+        <li>
+          <strong>Space Optimization</strong>
+          <p>
+            Instead of maintaining a full DP table, only store the last few
+            values.
+          </p>
+          <pre>
+            <code>{`public int fib(int n) {
+  if (n <= 1) return n;
+  int a = 0, b = 1;
+  for (int i = 2; i <= n; i++) {
+      int temp = a + b;
+      a = b;
+      b = temp;
+  }
+  return b;
+}`}</code>
+          </pre>
+        </li>
+      </ul>
+
+      <h2>How to Approach DP Problems?</h2>
+      <ul>
+        <li>
+          Identify overlapping subproblems – Can you break the problem into
+          smaller problems?
+        </li>
+        <li>
+          Decide State Representation (dp[i] or dp[i][j]) – What should the DP
+          array store?
+        </li>
+        <li>Write the Recurrence Relation – How do subproblems relate?</li>
+        <li>Implement with Memoization (Top-Down) or Tabulation (Bottom-Up)</li>
+        <li>Optimize (Space, Time Complexity, Special Cases)</li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
