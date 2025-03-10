@@ -106899,6 +106899,98 @@ todoList.getAllTasks(1); // return ["Task3", "Task1"]. User 1 now has 2 uncomple
       </ul>
     </div>
   ),
+  132: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string <code>s</code>, partition <code>s</code> such that every{" "}
+        <span
+          data-keyword="substring-nonempty"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <button
+            type="button"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-controls="radix-:r4v:"
+            data-state="closed"
+            class=""
+          >
+            substring
+          </button>
+        </span>{" "}
+        of the partition is a{" "}
+        <span
+          data-keyword="palindrome-string"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <button
+            type="button"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-controls="radix-:r50:"
+            data-state="closed"
+            class=""
+          >
+            palindrome
+          </button>
+        </span>
+        .
+      </p>
+
+      <p>
+        Return{" "}
+        <em>
+          the <strong>minimum</strong> cuts needed for a palindrome partitioning
+          of
+        </em>{" "}
+        <code>s</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "aab" <br />
+        <strong>Output:</strong> 1 <br />
+        <strong>Explanation:</strong> The palindrome partitioning ["aa","b"]
+        could be produced using 1 cut.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "a" <br />
+        <strong>Output:</strong> 0
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> s = "ab" <br />
+        <strong>Output:</strong> 1
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= s.length &lt;= 2000</code>
+        </li>
+        <li>
+          <code>s</code> consists of lowercase English letters only.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
