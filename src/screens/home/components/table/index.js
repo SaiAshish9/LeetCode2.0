@@ -7,6 +7,7 @@ import {
   SpanCont,
 } from "./styles";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const columns = [
   {
@@ -168,6 +169,7 @@ const TableContainer = () => {
   const [isAcceptanceLoaded, setIsAcceptanceLoaded] = useState(false);
   const [isDifficultyLoaded, setIsDifficultyLoaded] = useState(false);
   const [isSolvedQsLoaded, setIsSolvedQsLoaded] = useState(false);
+  const navigate = useNavigate();
 
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -206,6 +208,8 @@ const TableContainer = () => {
       console.log({
         leftOverQs300:
           300 - solvedQuestions.slice().filter((x) => x <= 300).length,
+        leftOverQs350:
+          350 - solvedQuestions.slice().filter((x) => x <= 350).length,
         leftOverQs400:
           400 - solvedQuestions.slice().filter((x) => x <= 400).length,
         leftOverQs450:
@@ -323,6 +327,9 @@ const TableContainer = () => {
             defaultPageSize: 100,
             showSizeChanger: true,
             pageSizeOptions: ["20", "50", "100"],
+            onChange: (page, pageSize) => {
+              navigate(`/?page=${page}`);
+            },
           }}
         />
       ) : (
