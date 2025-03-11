@@ -51199,6 +51199,11 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
   "0100"
 ]`}
         and{" "}
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0302.Smallest%20Rectangle%20Enclosing%20Black%20Pixels/images/pixel-grid.jpg"
+          style={{ width: 333, height: 253 }}
+        />
         <code>
           x = 0<font face="sans-serif, Arial, Verdana, Trebuchet MS">, </font>
         </code>
