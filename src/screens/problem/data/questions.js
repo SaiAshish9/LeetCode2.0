@@ -51405,6 +51405,67 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </p>
     </div>
   ),
+  318: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a string array <code>words</code>, return{" "}
+        <em>the maximum value of</em>{" "}
+        <code>length(word[i]) * length(word[j])</code>{" "}
+        <em>where the two words do not share common letters</em>. If no such two
+        words exist, return <code>0</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words =
+        ["abcw","baz","foo","bar","xtfn","abcdef"] <br />
+        <strong>Output:</strong> 16 <br />
+        <strong>Explanation:</strong> The two words can be "abcw", "xtfn".
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words = ["a","ab","abc","d","cd","bcd","abcd"]{" "}
+        <br />
+        <strong>Output:</strong> 4 <br />
+        <strong>Explanation:</strong> The two words can be "ab", "cd".
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words = ["a","aa","aaa","aaaa"] <br />
+        <strong>Output:</strong> 0 <br />
+        <strong>Explanation:</strong> No such pair of words.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>2 &lt;= words.length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>1 &lt;= words[i].length &lt;= 1000</code>
+        </li>
+        <li>
+          <code>words[i]</code> consists only of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
