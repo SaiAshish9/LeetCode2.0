@@ -50626,7 +50626,7 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       <br />
       <pre>
         <b>Input:</b> root = [5,1,5,5,5,null,5] <br />
-        {`              5
+        {`    5
              / \
             1   5
            / \   \
