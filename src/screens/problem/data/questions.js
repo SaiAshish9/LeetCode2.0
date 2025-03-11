@@ -51825,6 +51825,110 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  336: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        You are given a <strong>0-indexed</strong> array of{" "}
+        <strong>unique</strong> strings <code>words</code>.
+      </p>
+
+      <p>
+        A <strong>palindrome pair</strong> is a pair of integers{" "}
+        <code>(i, j)</code> such that:
+      </p>
+
+      <ul>
+        <li>
+          <code>0 &lt;= i, j &lt; words.length</code>,
+        </li>
+        <li>
+          <code>i != j</code>, and
+        </li>
+        <li>
+          <code>words[i] + words[j]</code> (the concatenation of the two
+          strings) is a{" "}
+          <span
+            data-keyword="palindrome-string"
+            class=" cursor-pointer relative text-dark-blue-s text-sm"
+          >
+            <button
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="radix-:rau:"
+              data-state="closed"
+              class=""
+            >
+              palindrome
+            </button>
+          </span>
+          .
+        </li>
+      </ul>
+
+      <p>
+        Return{" "}
+        <em>
+          an array of all the <strong>palindrome pairs</strong> of{" "}
+        </em>
+        <code>words</code>.
+      </p>
+
+      <p>
+        You must write an algorithm with&nbsp;
+        <code>O(sum of words[i].length)</code>&nbsp;runtime complexity.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words = ["abcd","dcba","lls","s","sssll"] <br />
+        <strong>Output:</strong> [[0,1],[1,0],[3,2],[2,4]] <br />
+        <strong>Explanation:</strong> The palindromes are
+        ["abcddcba","dcbaabcd","slls","llssssll"]
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words = ["bat","tab","cat"] <br />
+        <strong>Output:</strong> [[0,1],[1,0]] <br />
+        <strong>Explanation:</strong> The palindromes are ["battab","tabbat"]
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> words = ["a",""] <br />
+        <strong>Output:</strong> [[0,1],[1,0]] <br />
+        <strong>Explanation:</strong> The palindromes are ["a","a"]
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>1 &lt;= words.length &lt;= 5000</code>
+        </li>
+        <li>
+          <code>0 &lt;= words[i].length &lt;= 300</code>
+        </li>
+        <li>
+          <code>words[i]</code> consists of lowercase English letters.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
