@@ -51497,7 +51497,8 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
 |   |   |   |   |
 0 - 0 - 0 - 0 - 0
 |   |   |   |   |
-0 - 0 - 1 - 0 - 0`}
+0 - 0 - 1 - 0 - 0`}{" "}
+        <br />
         <strong>Output:</strong> 7
         <br />
         <strong>Explanation:</strong> Given three buildings at{" "}
