@@ -51174,6 +51174,40 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </p>
     </div>
   ),
+  302: (
+    <div class="markdown-body div-width">
+      <p>
+        An image is represented by a binary matrix with <code>0</code> as a
+        white pixel and
+        <code>1</code> as a black pixel. The black pixels are connected, i.e.,
+        there is only one black region. Pixels are connected horizontally and
+        vertically. Given the location <code>(x, y)</code> of one of the black
+        pixels, return the area of the smallest (axis-aligned) rectangle that
+        encloses all black pixels.
+      </p>
+
+      <p>
+        <strong>Example:</strong>
+      </p>
+      <br />
+
+      <pre>
+        <strong>Input:</strong>
+        {`[
+  "0010",
+  "0110",
+  "0100"
+]`}
+        and{" "}
+        <code>
+          x = 0<font face="sans-serif, Arial, Verdana, Trebuchet MS">, </font>
+        </code>
+        <code>y = 2</code>
+        <br />
+        <strong>Output:</strong> 6
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
