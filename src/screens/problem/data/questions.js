@@ -50670,6 +50670,46 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </p>
     </div>
   ),
+  266: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a string, determine if a permutation of the string could form a
+        palindrome.
+      </p>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <code>"code"</code> <br />
+        <strong>Output:</strong> false
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <code>"aab"</code> <br />
+        <strong>Output:</strong> true
+      </pre>
+
+      <p>
+        <strong>Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <code>"carerac"</code> <br />
+        <strong>Output:</strong> true
+      </pre>
+
+      <div>
+        <h3>Difficulty:</h3>
+        <span class="label label-success">Easy</span>
+      </div>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
