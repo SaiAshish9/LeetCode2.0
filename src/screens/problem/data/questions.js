@@ -108373,7 +108373,7 @@ sol.read(buf, 1); // We have reached the end of file, no more characters can be 
       </p>
 
       <pre>
-        <strong>Input:</strong>
+        <strong>Input:</strong> <br />
         Person table:
         {`+----------+----------+-----------+
     | personId | lastName | firstName |
