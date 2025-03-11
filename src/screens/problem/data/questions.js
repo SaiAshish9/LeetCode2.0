@@ -51516,6 +51516,29 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </p>
     </div>
   ),
+  320: (
+    <div class="markdown-body div-width">
+      <p>
+        Write a function to generate the generalized abbreviations of a
+        word.&nbsp;
+      </p>
+
+      <p>
+        <strong>Note:&nbsp;</strong>The order of the output does not matter.
+      </p>
+
+      <p>
+        <b>Example:</b>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> <code>"word"</code> <br />
+        <strong>Output:</strong> <br />
+        ["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d",
+        "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
