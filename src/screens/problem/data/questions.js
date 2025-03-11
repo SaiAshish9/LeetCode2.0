@@ -108185,6 +108185,78 @@ sol.read(buf, 1); // We have reached the end of file, no more characters can be 
       </ul>
     </div>
   ),
+  166: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two integers representing the <code>numerator</code> and{" "}
+        <code>denominator</code> of a fraction, return{" "}
+        <em>the fraction in string format</em>.
+      </p>
+
+      <p>
+        If the fractional part is repeating, enclose the repeating part in
+        parentheses.
+      </p>
+
+      <p>
+        If multiple answers are possible, return <strong>any of them</strong>.
+      </p>
+
+      <p>
+        It is <strong>guaranteed</strong> that the length of the answer string
+        is less than{" "}
+        <code>
+          10<sup>4</sup>
+        </code>{" "}
+        for all the given inputs.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> numerator = 1, denominator = 2 <br />
+        <strong>Output:</strong> "0.5"
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> numerator = 2, denominator = 1 <br />
+        <strong>Output:</strong> "2"
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> numerator = 4, denominator = 333 <br />
+        <strong>Output:</strong> "0.(012)"
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            -2<sup>31</sup> &lt;=&nbsp;numerator, denominator &lt;= 2
+            <sup>31</sup> - 1
+          </code>
+        </li>
+        <li>
+          <code>denominator != 0</code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
