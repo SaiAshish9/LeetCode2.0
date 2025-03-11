@@ -7,7 +7,7 @@ import {
   SpanCont,
 } from "./styles";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const columns = [
   {
@@ -170,6 +170,7 @@ const TableContainer = () => {
   const [isDifficultyLoaded, setIsDifficultyLoaded] = useState(false);
   const [isSolvedQsLoaded, setIsSolvedQsLoaded] = useState(false);
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
   const BASE_URL =
     "https://raw.githubusercontent.com/SaiAshish9/LeetCode2.0_Assets/main/";
@@ -325,6 +326,7 @@ const TableContainer = () => {
           dataSource={tableData}
           pagination={{
             defaultPageSize: 100,
+            current: Number(searchParams.get("page")) || 1,
             showSizeChanger: true,
             pageSizeOptions: ["20", "50", "100"],
             onChange: (page, pageSize) => {
