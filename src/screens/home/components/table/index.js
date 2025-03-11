@@ -207,8 +207,6 @@ const TableContainer = () => {
       );
 
       console.log({
-        leftOverQs300:
-          300 - solvedQuestions.slice().filter((x) => x <= 300).length,
         leftOverQs350:
           350 - solvedQuestions.slice().filter((x) => x <= 350).length,
         leftOverQs400:
