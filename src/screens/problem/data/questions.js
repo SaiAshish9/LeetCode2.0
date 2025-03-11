@@ -107845,6 +107845,202 @@ sol.read(buf, 1); // We have reached the end of file, no more characters can be 
       </ul>
     </div>
   ),
+  161: (
+    <div class="markdown-body div-width">
+      <p>
+        Given two strings{" "}
+        <b>
+          <i>s</i>
+        </b>
+        &nbsp;and{" "}
+        <b>
+          <i>t</i>
+        </b>
+        , determine if they are both one edit distance apart.
+      </p>
+
+      <p>
+        <strong>Note:</strong>&nbsp;
+      </p>
+
+      <p>There are 3 possiblities to satisify one edit distance apart:</p>
+
+      <ul>
+        <li>
+          Insert a&nbsp;character into{" "}
+          <strong>
+            <em>s</em>
+          </strong>
+          &nbsp;to get&nbsp;
+          <strong>
+            <em>t</em>
+          </strong>
+        </li>
+        <li>
+          Delete a&nbsp;character from&nbsp;
+          <strong>
+            <em>s</em>
+          </strong>
+          &nbsp;to get&nbsp;
+          <strong>
+            <em>t</em>
+          </strong>
+        </li>
+        <li>
+          Replace a character of&nbsp;
+          <strong>
+            <em>s</em>
+          </strong>
+          &nbsp;to get&nbsp;
+          <strong>
+            <em>t</em>
+          </strong>
+        </li>
+      </ul>
+
+      <p>
+        <strong>Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong>{" "}
+        <strong>
+          <em>s</em>
+        </strong>{" "}
+        = "ab",{" "}
+        <strong>
+          <em>t</em>
+        </strong>{" "}
+        = "acb" <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong> We can insert 'c' into{" "}
+        <strong>
+          <em>s</em>
+        </strong>
+        &nbsp;to get&nbsp;
+        <strong>
+          <em>t.</em>
+        </strong>
+      </pre>
+
+      <p>
+        <strong>Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong>{" "}
+        <strong>
+          <em>s</em>
+        </strong>{" "}
+        = "cab",{" "}
+        <strong>
+          <em>t</em>
+        </strong>{" "}
+        = "ad" <br />
+        <strong>Output:</strong> false <br />
+        <strong>Explanation:</strong> We cannot get{" "}
+        <strong>
+          <em>t </em>
+        </strong>
+        from{" "}
+        <strong>
+          <em>s </em>
+        </strong>
+        by only one step.
+      </pre>
+
+      <p>
+        <strong>Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong>{" "}
+        <strong>
+          <em>s</em>
+        </strong>{" "}
+        = "1203",{" "}
+        <strong>
+          <em>t</em>
+        </strong>{" "}
+        = "1213" <br />
+        <strong>Output:</strong> true <br />
+        <strong>Explanation:</strong> We can replace '0' with '1' to get&nbsp;
+        <strong>
+          <em>t.</em>
+        </strong>
+      </pre>
+
+      <div>
+        <h3>Difficulty:</h3>
+        <span class="label label-warning">Medium</span>
+      </div>
+
+      <div>
+        <h3>Lock:</h3>
+        <span class="label label-info">Prime</span>
+      </div>
+
+      <div>
+        <h3>Company:</h3>
+        <span class="label label-default">
+          <a
+            style={{ color: "#ffffff", marginBottom: 15 }}
+            href="https://leetcode.ca/tags/#Amazon"
+          >
+            Amazon
+          </a>
+        </span>
+        <span class="label label-default">
+          <a
+            style={{ color: "#ffffff", marginBottom: 15 }}
+            href="https://leetcode.ca/tags/#Facebook"
+          >
+            Facebook
+          </a>
+        </span>
+        <span class="label label-default">
+          <a
+            style={{ color: "#ffffff", marginBottom: 15 }}
+            href="https://leetcode.ca/tags/#Google"
+          >
+            Google
+          </a>
+        </span>
+        <span class="label label-default">
+          <a
+            style={{ color: "#ffffff", marginBottom: 15 }}
+            href="https://leetcode.ca/tags/#Microsoft"
+          >
+            Microsoft
+          </a>
+        </span>
+        <span class="label label-default">
+          <a
+            style={{ color: "#ffffff", marginBottom: 15 }}
+            href="https://leetcode.ca/tags/#Snapchat"
+          >
+            Snapchat
+          </a>
+        </span>
+        <span class="label label-default">
+          <a
+            style={{ color: "#ffffff", marginBottom: 15 }}
+            href="https://leetcode.ca/tags/#Twitter"
+          >
+            Twitter
+          </a>
+        </span>
+        <span class="label label-default">
+          <a
+            style={{ color: "#ffffff", marginBottom: 15 }}
+            href="https://leetcode.ca/tags/#Uber"
+          >
+            Uber
+          </a>
+        </span>
+      </div>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
