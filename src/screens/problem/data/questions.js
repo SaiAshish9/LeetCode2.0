@@ -50535,6 +50535,84 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </ul>
     </div>
   ),
+  242: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two strings <code>s</code> and <code>t</code>, return{" "}
+        <code>true</code> if <code>t</code> is an{" "}
+        <span
+          data-keyword="anagram"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <button
+            type="button"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-controls="radix-:r6m:"
+            data-state="closed"
+            class=""
+          >
+            anagram
+          </button>
+        </span>{" "}
+        of <code>s</code>, and <code>false</code> otherwise.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">s = "anagram", t = "nagaram"</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">true</span>
+        </p>
+      </div>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <div class="example-block">
+        <p>
+          <strong>Input:</strong>{" "}
+          <span class="example-io">s = "rat", t = "car"</span>
+        </p>{" "}
+        <br />
+        <p>
+          <strong>Output:</strong> <span class="example-io">false</span>
+        </p>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= s.length, t.length &lt;= 5 * 10<sup>4</sup>
+          </code>
+        </li>
+        <li>
+          <code>s</code> and <code>t</code> consist of lowercase English
+          letters.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Follow up:</strong> What if the inputs contain Unicode
+        characters? How would you adapt your solution to such a case?
+      </p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
