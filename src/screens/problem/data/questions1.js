@@ -58692,14 +58692,15 @@ const QUESTIONS = {
 
       <div>
         <pre>
-          <strong>Input: </strong>s ={" "}
-          <span id="example-input-1-1">"aabbcc"</span>, k ={" "}
-          <span id="example-input-1-2">3</span>
-          <strong>Output: </strong>
+          <strong>Input: </strong>s = <br />
+          <span id="example-input-1-1">"aabbcc"</span>, k = <br />
+          <span id="example-input-1-2">3</span> <br />
+          <strong>Output: </strong> <br />
           <span id="example-output-1">
-            "abcabc"
+            "abcabc" <br />
             <strong>Explanation: </strong>
-          </span>
+          </span>{" "}
+          <br />
           The same letters are at least distance 3 from each other.
         </pre>
 
@@ -58709,13 +58710,13 @@ const QUESTIONS = {
           </p>
 
           <pre>
-            <strong>Input: </strong>s ={" "}
-            <span id="example-input-2-1">"aaabc"</span>, k ={" "}
-            <span id="example-input-2-2">3</span>
-            <strong>Output: </strong>
+            <strong>Input: </strong>s = <br />
+            <span id="example-input-2-1">"aaabc"</span>, k = <br />
+            <span id="example-input-2-2">3</span> <br />
+            <strong>Output: </strong> <br />
             <span id="example-output-2">
-              ""
-              <strong>Explanation:</strong>{" "}
+              "" <br />
+              <strong>Explanation:</strong> <br />
             </span>
             It is not possible to rearrange the string.
           </pre>
@@ -58726,14 +58727,17 @@ const QUESTIONS = {
             </p>
 
             <pre>
-              <strong>Input: </strong>s ={" "}
-              <span id="example-input-3-1">"aaadbbcc"</span>, k ={" "}
-              <span id="example-input-3-2">2</span>
-              <strong>Output: </strong>
-              <span id="example-output-3">"abacabcd"</span>
+              <strong>Input: </strong>s = <br />
+              <span id="example-input-3-1">"aaadbbcc"</span>, k = <br />
+              <span id="example-input-3-2">2</span> <br />
+              <strong>Output: </strong> <br />
+              <span id="example-output-3">"abacabcd"</span> <br />
               <span id="example-output-2">
-                <strong>Explanation:</strong>{" "}
-              </span>
+                {" "}
+                <br />
+                <strong>Explanation:</strong> <br />
+              </span>{" "}
+              <br />
               The same letters are at least distance 2 from each other.
             </pre>
           </div>
