@@ -63335,6 +63335,73 @@ l a d y`}
       </ul>
     </div>
   ),
+  411: (
+    <article role="main" class="blog-post">
+      <p>
+        A string such as{" "}
+        <code class="language-plaintext highlighter-rouge">"word"</code>{" "}
+        contains the following abbreviations:
+      </p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>
+              ["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2",
+              "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]
+            </code>
+          </pre>
+        </div>
+      </div>
+      <p>
+        Given a target string and a set of strings in a dictionary, find an
+        abbreviation of this target string with the{" "}
+        <strong>
+          <em>smallest possible</em>
+        </strong>{" "}
+        length such that it does not conflict with abbreviations of the strings
+        in the dictionary.
+      </p>
+
+      <p>
+        Each <strong>number</strong> or letter in the abbreviation is considered
+        length = 1. For example, the abbreviation “a32bc” has length = 4.
+      </p>
+
+      <p>
+        <strong>Note:</strong>
+      </p>
+      <ul>
+        <li>
+          In the case of multiple answers as shown in the second example below,
+          you may return any one of them.
+        </li>
+        <li>
+          Assume length of target string = <strong>m</strong>, and dictionary
+          size = <strong>n</strong>. You may assume that <strong>m ≤ 21</strong>
+          , <strong>n ≤ 1000</strong>, and{" "}
+          <strong>
+            log<sub>2</sub>(n) + m ≤ 20
+          </strong>
+          .
+        </li>
+      </ul>
+
+      <p>
+        <strong>Examples:</strong>
+      </p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>
+              "apple", ["blade"] -&gt; "a4" (because "5" or "4e" conflicts with
+              "blade") "apple", ["plain", "amber", "blade"] -&gt; "1p3" (other
+              valid answers include "ap3", "a3e", "2p2", "3le", "3l1").
+            </code>
+          </pre>
+        </div>
+      </div>
+    </article>
+  ),
 };
 
 export default QUESTIONS;
