@@ -61331,6 +61331,87 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  465: (
+    <div class="markdown-body div-width">
+      <p>
+        A group of friends went on holiday and sometimes lent each other money.
+        For example, Alice paid for Bill's lunch for $10. Then later Chris gave
+        Alice $5 for a taxi ride. We can model each transaction as a tuple (x,
+        y, z) which means person x gave person y $z. Assuming Alice, Bill, and
+        Chris are person 0, 1, and 2 respectively (0, 1, 2 are the person's ID),
+        the transactions can be represented as{" "}
+        <code>[[0, 1, 10], [2, 0, 5]]</code>.
+      </p>
+
+      <p>
+        Given a list of transactions between a group of people, return the
+        minimum number of transactions required to settle the debt.
+      </p>
+
+      <p>
+        <b>Note:</b>
+      </p>
+      <ul>
+        <li>
+          A transaction will be given as a tuple (x, y, z). Note that{" "}
+          <code>x ≠ y</code> and
+          <code>z &gt; 0</code>.
+        </li>{" "}
+        <br />
+        <li>
+          Person's IDs may not be linear, e.g. we could have the persons 0, 1, 2
+          or we could also have the persons 0, 2, 6.
+        </li>
+      </ul>
+      <p></p>
+
+      <p>
+        <b>Example 1:</b> <br />
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        [[0,1,10], [2,0,5]] <br />
+        <b>Output:</b>
+        <br />
+        2<br />
+        <b>Explanation:</b>
+        <br />
+        Person #0 gave person #1 $10.
+        <br />
+        Person #2 gave person #0 $5.
+        <br />
+        Two transactions are needed. One way to settle the debt is person #1
+        pays person #0 and #2 $5 each.
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 2:</b>
+      </p>
+      <pre>
+        <b>Input:</b>
+        <br />
+        [[0,1,10], [1,0,1], [1,2,5], [2,0,5]]
+        <br />
+        <b>Output:</b>
+        <br />
+        1<br />
+        <b>Explanation:</b>
+        <br />
+        Person #0 gave person #1 $10.
+        <br />
+        Person #1 gave person #0 $1.
+        <br />
+        Person #1 gave person #2 $5.
+        <br />
+        Person #2 gave person #0 $5.
+        <br />
+        Therefore, person #1 only need to give person #0 $4, and all debt is
+        settled.
+      </pre>
+      <p></p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
