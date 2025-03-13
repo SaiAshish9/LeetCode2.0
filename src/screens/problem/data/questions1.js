@@ -62010,6 +62010,73 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  442: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array <code>nums</code> of length <code>n</code> where
+        all the integers of <code>nums</code> are in the range{" "}
+        <code>[1, n]</code> and each integer appears <strong>at most</strong>{" "}
+        <strong>twice</strong>, return{" "}
+        <em>
+          an array of all the integers that appears <strong>twice</strong>
+        </em>
+        .
+      </p>
+      <p>
+        You must write an algorithm that runs in <code>O(n)</code> time and uses
+        only <em>constant</em> auxiliary space, excluding the space needed to
+        store the output
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> nums = [4,3,2,7,8,2,3,1] <br />
+        <strong>Output:</strong> [2,3] <br />
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> nums = [1,1,2]
+        <br />
+        <strong>Output:</strong> [1]
+        <br />
+      </pre>
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <br />
+      <pre>
+        <strong>Input:</strong> nums = [1]
+        <br />
+        <strong>Output:</strong> []
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>n == nums.length</code>
+        </li>
+        <li>
+          <code>
+            1 &lt;= n &lt;= 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>1 &lt;= nums[i] &lt;= n</code>
+        </li>
+        <li>
+          Each element in <code>nums</code> appears <strong>once</strong> or{" "}
+          <strong>twice</strong>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
