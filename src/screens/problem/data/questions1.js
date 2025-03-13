@@ -59027,7 +59027,7 @@ const QUESTIONS = {
 
         <pre>
           <strong>Input: </strong>
-          <span id="example-input-1-1">[1,2,3]</span>
+          <span id="example-input-1-1">[1,2,3]</span> <br />
           <strong>Output: </strong>
           <span id="example-output-1">[1,2,4]</span>
         </pre>
