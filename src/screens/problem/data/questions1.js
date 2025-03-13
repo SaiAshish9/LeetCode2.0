@@ -63918,7 +63918,7 @@ l a d y`}
       </p>{" "}
       <br />
       <pre>
-        <strong>Input:</strong> password = "a" <br/>
+        <strong>Input:</strong> password = "a" <br />
         <strong>Output:</strong> 5
       </pre>
       <p>
@@ -63948,6 +63948,55 @@ l a d y`}
         <li>
           <code>password</code> consists of letters, digits, dot&nbsp;
           <code>'.'</code> or exclamation mark <code>'!'</code>.
+        </li>
+      </ul>
+    </div>
+  ),
+  421: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer array <code>nums</code>, return{" "}
+        <em>the maximum result of </em>
+        <code>nums[i] XOR nums[j]</code>, where{" "}
+        <code>0 &lt;= i &lt;= j &lt; n</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [3,10,5,25,2,8] <br />
+        <strong>Output:</strong> 28 <br />
+        <strong>Explanation:</strong> The maximum result is 5 XOR 25 = 28.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> nums = [14,70,53,83,49,91,36,80,92,51,66,70]{" "}
+        <br />
+        <strong>Output:</strong> 127
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= nums.length &lt;= 2 * 10<sup>5</sup>
+          </code>
+        </li>
+        <li>
+          <code>
+            0 &lt;= nums[i] &lt;= 2<sup>31</sup> - 1
+          </code>
         </li>
       </ul>
     </div>
