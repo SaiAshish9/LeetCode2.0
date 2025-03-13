@@ -62530,6 +62530,59 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  431: (
+    <div class="markdown-body div-width">
+      <p>
+        Design an algorithm to encode an N-ary tree into a binary tree and
+        decode the binary tree to get the original N-ary tree. An N-ary tree is
+        a rooted tree in which each node has no more than N children. Similarly,
+        a binary tree is a rooted tree in which each node has no more than 2
+        children. There is no restriction on how your encode/decode algorithm
+        should work. You just need to ensure that an N-ary tree can be encoded
+        to a binary tree and this binary tree can be decoded to the original
+        N-nary tree structure.
+      </p>
+
+      <p>
+        For example, you may encode the following <code>3-ary</code> tree to a
+        binary tree in this way:
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <img
+          alt=""
+          src="https://camo.githubusercontent.com/ba05442fcd9747f3efed0f3c6777b83d7363affa22b3e246f3d68df3be37df61/68747470733a2f2f6173736574732e6c656574636f64652e636f6d2f75706c6f6164732f323031382f31302f31322f6e6172797472656562696e617279747265656578616d706c652e706e67"
+          style={{ width: "100%", maxWidth: 640 }}
+        />
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        Note that the above is just an example which <em>might or might not</em>{" "}
+        work. You do not necessarily need to follow this format, so please be
+        creative and come up with different approaches yourself.
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <strong>Note:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>N</code> is in the range of <code> [1, 1000]</code>
+        </li>
+        <li>
+          Do not use class member/global/static variables to store states. Your
+          encode and decode algorithms should be stateless.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
