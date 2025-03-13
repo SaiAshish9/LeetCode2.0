@@ -61127,6 +61127,75 @@ const QUESTIONS = {
       <p>&nbsp;</p>
     </div>
   ),
+  469: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a list of points that form a polygon when joined sequentially,
+        find if this polygon is convex{" "}
+        <a href="https://en.wikipedia.org/wiki/Convex_polygon" target="_blank">
+          (Convex polygon definition)
+        </a>
+        .
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <b>Note:</b>
+      </p>
+
+      <ul>
+        <li>There are at least 3 and at most 10,000 points.</li>
+        <li>Coordinates are in the range -10,000 to 10,000.</li>
+        <li>
+          You may assume the polygon formed by given points is always a simple
+          polygon
+          <a
+            href="https://en.wikipedia.org/wiki/Simple_polygon"
+            target="_blank"
+            alt=""
+          >
+            {" "}
+            (Simple polygon definition)
+          </a>
+          . In other words, we ensure that exactly two edges intersect at each
+          vertex, and that edges otherwise <b>don't intersect each other</b>.
+        </li>
+      </ul>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <b>Example 1:</b>
+      </p>
+
+      <pre>
+        [[0,0],[0,1],[1,1],[1,0]] <br />
+        Answer: True <br />
+        Explanation:
+        <img
+          alt=""
+          src="https://assets.leetcode.com/uploads/2018/10/13/polygon_convex.png"
+          style={{ width: 100, height: 100 }}
+        />
+      </pre>
+
+      <p>
+        <b>Example 2:</b>
+      </p>
+
+      <pre>
+        [[0,0],[0,10],[10,10],[10,0],[5,5]] <br />
+        Answer: False <br />
+        Explanation:
+        <img
+          alt=""
+          src="https://assets.leetcode.com/uploads/2018/10/13/polygon_not_convex.png"
+          style={{ width: 100, height: 100 }}
+        />
+      </pre>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
