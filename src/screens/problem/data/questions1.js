@@ -63706,6 +63706,84 @@ l a d y`}
       </ul>
     </div>
   ),
+  418: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a <code>rows x cols</code> screen and a sentence represented by a
+        list of
+        <b>non-empty</b> words, find <b>how many times</b> the given sentence
+        can be fitted on the screen.
+      </p>
+
+      <p>
+        <b>Note:</b>
+      </p>
+      <ul>
+        <li>A word cannot be split into two lines.</li>
+        <li>The order of words in the sentence must remain unchanged.</li>
+        <li>
+          Two consecutive words <b>in a line</b> must be separated by a single
+          space.
+        </li>
+        <li>Total words in the sentence won't exceed 100.</li>
+        <li>Length of each word is greater than 0 and won't exceed 10.</li>
+        <li>1 ≤ rows, cols ≤ 20,000.</li>
+      </ul>
+      <p></p>
+
+      <p>
+        <b>Example 1:</b>
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        rows = 2, cols = 8, sentence = ["hello", "world"] <br />
+        <b>Output:</b> <br />
+        1 <br />
+        <b>Explanation:</b> <br />
+        hello---
+        <br />
+        world---
+        <br />
+        The character '-' signifies an empty space on the screen.
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 2:</b>
+        <br />
+      </p>
+      <pre>
+        <b>Input:</b>
+        <br />
+        rows = 3, cols = 6, sentence = ["a", "bcd", "e"]
+        <br />
+        <b>Output:</b>
+        <br />2<b>Explanation:</b>
+        <br />
+        a-bcd-
+        <br />
+        e-a---
+        <br />
+        bcd-e- The character '-' signifies an empty space on the screen.
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 3:</b>
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        rows = 4, cols = 5, sentence = ["I", "had", "apple", "pie"]
+        <b>Output:</b> <br />1<b>Explanation:</b> <br />
+        I-had <br />
+        apple <br />
+        pie-I <br />
+        had-- <br />
+        The character '-' signifies an empty space on the screen.
+      </pre>
+      <p></p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
