@@ -63918,7 +63918,7 @@ l a d y`}
       </p>{" "}
       <br />
       <pre>
-        <strong>Input:</strong> password = "a"
+        <strong>Input:</strong> password = "a" <br/>
         <strong>Output:</strong> 5
       </pre>
       <p>
