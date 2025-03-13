@@ -62190,6 +62190,77 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  439: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a string representing arbitrarily nested ternary expressions,
+        calculate the result of the expression. You can always assume that the
+        given expression is valid and only consists of digits <code>0-9</code>,{" "}
+        <code>?</code>, <code>:</code>, <code>T</code> and
+        <code>F</code> (<code>T</code> and <code>F</code> represent True and
+        False respectively).
+      </p>
+      <p>
+        <b>Note:</b>
+      </p>
+      <ul>
+        <li>The length of the given string is ≤ 10000.</li>
+        <li>Each number will contain only one digit.</li>
+        <li>
+          The conditional expressions group right-to-left (as usual in most
+          languages).
+        </li>
+        <li>
+          The condition will always be either <code>T</code> or <code>F</code>.
+          That is, the condition will never be a digit.
+        </li>
+        <li>
+          The result of the expression will always evaluate to either a digit{" "}
+          <code>0-9</code>,<code>T</code> or <code>F</code>.
+        </li>
+      </ul>
+      <p></p>
+
+      <p>
+        <b>Example 1:</b>
+      </p>
+      <pre>
+        <b>Input:</b> "T?2:3" <br />
+        <b>Output:</b> "2" <br />
+        <b>Explanation:</b> If true, then result is 2; otherwise result is 3.
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 2:</b>
+      </p>
+      <pre>
+        <b>Input:</b> "F?1:T?4:5" <br />
+        <b>Output:</b> "4" <br />
+        <b>Explanation:</b> The conditional expressions group right-to-left.
+        Using parenthesis, it is read/evaluated as: "(F ? 1 : (T ? 4 : 5))"{" "}
+        <br /> "(F ? 1 : (T ? 4 : 5))" <br />
+        -&gt; "(F ? 1 : 4)" or -&gt; <br />
+        "(T ? 4 : 5)" -&gt; "4" -&gt; "4"
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 3:</b>
+      </p>
+      <pre>
+        <b>Input:</b> "T?T?F:5:3" <br />
+        <b>Output:</b> "F" <br />
+        <b>Explanation:</b> The conditional expressions group right-to-left.
+        Using parenthesis, it is read/evaluated as: <br /> "(T ? (T ? F : 5) :
+        3)" <br />
+        "(T ? (T ? F : 5) : 3)" <br />
+        -&gt; "(T ? F : 3)" or <br />
+        -&gt; "(T ? F : 5)" -&gt; "F" -&gt; "F"
+      </pre>
+      <p></p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
