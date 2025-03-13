@@ -60175,7 +60175,7 @@ const QUESTIONS = {
       </p>
       <pre>
         <strong>Input:</strong> turnedOn = 1 <br />
-        <strong>Output:</strong>{" "} <br/>
+        <strong>Output:</strong> <br />
         ["0:01","0:02","0:04","0:08","0:16","0:32","1:00","2:00","4:00","8:00"]{" "}
         <br />
       </pre>
@@ -60194,6 +60194,58 @@ const QUESTIONS = {
       <ul>
         <li>
           <code>0 &lt;= turnedOn &lt;= 10</code>
+        </li>
+      </ul>
+    </div>
+  ),
+  405: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given a 32-bit integer <code>num</code>, return{" "}
+        <em>a string representing its hexadecimal representation</em>. For
+        negative integers,{" "}
+        <a
+          href="https://en.wikipedia.org/wiki/Two%27s_complement"
+          target="_blank" rel="noreferrer"
+        >
+          two’s complement
+        </a>{" "}
+        method is used.
+      </p>
+      <p>
+        All the letters in the answer string should be lowercase characters, and
+        there should not be any leading zeros in the answer except for the zero
+        itself.
+      </p>
+      <p>
+        <strong>Note:&nbsp;</strong>You are not allowed to use any built-in
+        library method to directly solve this problem.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+      <pre>
+        <strong>Input:</strong> num = 26 <br />
+        <strong>Output:</strong> "1a" <br />
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> num = -1 <br />
+        <strong>Output:</strong> "ffffffff"
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>
+            -2<sup>31</sup> &lt;= num &lt;= 2<sup>31</sup> - 1
+          </code>
         </li>
       </ul>
     </div>
