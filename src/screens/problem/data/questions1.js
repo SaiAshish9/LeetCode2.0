@@ -60511,6 +60511,11 @@ const QUESTIONS = {
 
       <pre>
         <strong>Input:</strong>
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0400-0499/0489.Robot%20Room%20Cleaner/images/lc-grid.jpg"
+          style={{ width: 500, height: 314 }}
+        />
         {`room = [
   [1,1,1,1,1,0,1,1],
   [1,1,1,1,1,0,1,1],
