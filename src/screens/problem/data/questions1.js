@@ -62143,6 +62143,53 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  440: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given two integers <code>n</code> and <code>k</code>, return{" "}
+        <em>the</em>{" "}
+        <code>
+          k<sup>th</sup>
+        </code>{" "}
+        <em>lexicographically smallest integer in the range</em>{" "}
+        <code>[1, n]</code>.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 13, k = 2 <br />
+        <strong>Output:</strong> 10 <br />
+        <strong>Explanation:</strong> The lexicographical order is [1, 10, 11,
+        12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = 1, k = 1 <br />
+        <strong>Output:</strong> 1
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>
+            1 &lt;= k &lt;= n &lt;= 10<sup>9</sup>
+          </code>
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
