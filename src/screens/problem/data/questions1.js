@@ -58775,6 +58775,11 @@ const QUESTIONS = {
         <pre>
           <strong>Input: </strong>
           <span id="example-input-1-1">[[1,1],2,[1,1]]</span> <br />
+          <img
+            alt=""
+            src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0364.Nested%20List%20Weight%20Sum%20II/images/nestedlistweightsumiiex1.png"
+            style={{ width: 426, height: 181 }}
+          />
           <strong>Output: </strong>
           <span id="example-output-1">
             8 <br />
@@ -58791,6 +58796,11 @@ const QUESTIONS = {
           <pre>
             <strong>Input: </strong>
             <span id="example-input-2-1">[1,[4,[6]]]</span> <br />
+            <img
+              alt=""
+              src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0364.Nested%20List%20Weight%20Sum%20II/images/nestedlistweightsumiiex2.png"
+              style={{ width: 349, height: 192 }}
+            />
             <strong>Output: </strong>
             <span id="example-output-2">
               17 <br />
