@@ -62755,6 +62755,104 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  425: (
+    <div class="markdown-body div-width">
+      <p>
+        Given a set of words <b>(without duplicates)</b>, find all{" "}
+        <a
+          href="https://en.wikipedia.org/wiki/Word_square"
+          target="_blank"
+          rel="noreferrer"
+        >
+          word squares
+        </a>{" "}
+        you can build from them.
+      </p>
+
+      <p>
+        A sequence of words forms a valid word square if the <i>k</i>
+        <sup>th</sup> row and column read the exact same string, where 0 ≤{" "}
+        <i>k</i> &lt; max(numRows, numColumns).
+      </p>
+
+      <p>
+        For example, the word sequence{" "}
+        <code>["ball","area","lead","lady"]</code> forms a word square because
+        each word reads the same both horizontally and vertically.
+      </p>
+
+      <pre>
+        {`b a l l
+a r e a
+l e a d
+l a d y`}
+      </pre>
+
+      <p>
+        <b>Note:</b>
+        <br />
+      </p>
+      <ul>
+        <li>There are at least 1 and at most 1000 words.</li>
+        <li>All words will have the exact same length.</li>
+        <li>Word length is at least 1 and at most 5.</li>
+        <li>
+          Each word contains only lowercase English alphabet <code>a-z</code>.
+        </li>
+      </ul>
+      <p></p>
+
+      <p>
+        <b>Example 1:</b>
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        ["area","lead","wall","lady","ball"] <br />
+        <b>Output:</b> <br />
+        {`[
+  [ "wall",
+    "area",
+    "lead",
+    "lady"
+  ],
+  [ "ball",
+    "area",
+    "lead",
+    "lady"
+  ]
+]`}
+        <b>Explanation:</b>
+        The output consists of two word squares. The order of output does not
+        matter (just the order of words in each word square matters).
+      </pre>
+      <p></p>
+
+      <p>
+        <b>Example 2:</b>
+      </p>
+      <pre>
+        <b>Input:</b> <br />
+        ["abat","baba","atan","atal"] <br />
+        <b>Output:</b> <br />
+        {`[
+  [ "baba",
+    "abat",
+    "baba",
+    "atan"
+  ],
+  [ "baba",
+    "abat",
+    "baba",
+    "atal"
+  ]
+]`}
+        <b>Explanation:</b>
+        The output consists of two word squares. The order of output does not
+        matter (just the order of words in each word square matters).
+      </pre>
+      <p></p>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
