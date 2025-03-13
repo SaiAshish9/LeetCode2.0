@@ -60676,6 +60676,73 @@ const QUESTIONS = {
       </ul>
     </div>
   ),
+  483: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an integer <code>n</code> represented as a string, return{" "}
+        <em>
+          the smallest <strong>good base</strong> of
+        </em>{" "}
+        <code>n</code>.
+      </p>
+
+      <p>
+        We call <code>k &gt;= 2</code> a <strong>good base</strong> of{" "}
+        <code>n</code>, if all digits of <code>n</code> base <code>k</code> are{" "}
+        <code>1</code>'s.
+      </p>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = "13" <br />
+        <strong>Output:</strong> "3" <br />
+        <strong>Explanation:</strong> 13 base 3 is 111.
+      </pre>
+
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = "4681" <br />
+        <strong>Output:</strong> "8" <br />
+        <strong>Explanation:</strong> 4681 base 8 is 11111.
+      </pre>
+
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+
+      <pre>
+        <strong>Input:</strong> n = "1000000000000000000" <br />
+        <strong>Output:</strong> "999999999999999999" <br />
+        <strong>Explanation:</strong> 1000000000000000000 base
+        999999999999999999 is 11.
+      </pre>
+
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+
+      <ul>
+        <li>
+          <code>n</code> is an integer in the range{" "}
+          <code>
+            [3, 10<sup>18</sup>]
+          </code>
+          .
+        </li>
+        <li>
+          <code>n</code> does not contain any leading zeros.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
