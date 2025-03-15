@@ -6501,6 +6501,121 @@ int upperBound(vector<int>& arr, int X) {
         <li>Implement with Memoization (Top-Down) or Tabulation (Bottom-Up)</li>
         <li>Optimize (Space, Time Complexity, Special Cases)</li>
       </ul>
+
+      <h1>Conditions for Using Dynamic Programming (DP)</h1>
+
+      <ul>
+        <li>
+          <strong>Optimal Substructure</strong>
+          <ul>
+            <li>
+              A problem has optimal substructure if its solution can be built
+              using the solutions of its subproblems.
+            </li>
+            <li>
+              <strong>Example: Fibonacci Numbers</strong>
+              <ul>
+                <li>Fib(n) = Fib(n-1) + Fib(n-2)</li>
+                <li>
+                  The solution to Fib(n) depends on smaller Fibonacci values.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Example: Combination Sum IV</strong>
+              <ul>
+                <li>dp[i] = dp[i - num1] + dp[i - num2] + ...</li>
+                <li>
+                  The number of ways to sum to i depends on the ways to sum to i
+                  - num.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Overlapping Subproblems</strong>
+          <ul>
+            <li>
+              A problem has overlapping subproblems if the same subproblem is
+              solved multiple times.
+            </li>
+            <li>
+              <strong>Example: Fibonacci Numbers</strong>
+              <ul>
+                <li>Fib(5) = Fib(4) + Fib(3)</li>
+                <li>Fib(4) = Fib(3) + Fib(2)</li>
+                <li>Fib(3) = Fib(2) + Fib(1)</li>
+                <li>Using DP avoids recomputation by storing results.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Example: Combination Sum IV</strong>
+              <ul>
+                <li>
+                  dp[i] stores solutions for each i so that subproblems are not
+                  recomputed.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>State Definition</strong>
+          <ul>
+            <li>Clearly define what dp[i] represents.</li>
+            <li>
+              <strong>Example:</strong>
+              <ul>
+                <li>
+                  In Combination Sum IV: dp[i] = number of ways to sum to i
+                  using elements from nums.
+                </li>
+                <li>
+                  In Knapsack Problem: dp[i][w] = maximum value achievable using
+                  first i items with weight limit w.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Transition (Recurrence) Relation</strong>
+          <ul>
+            <li>
+              There should be a relation that allows us to build the solution
+              from previous results.
+            </li>
+            <li>
+              <strong>Example:</strong>
+              <ul>
+                <li>In Combination Sum IV: dp[i] = sum(dp[i - num])</li>
+                <li>{`In LIS (Longest Increasing Subsequence): dp[i] = max(dp[j] + 1) for j < i and nums[j] < nums[i]`}</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Base Case</strong>
+          <ul>
+            <li>A well-defined starting condition.</li>
+            <li>
+              <strong>Example:</strong>
+              <ul>
+                <li>
+                  In Combination Sum IV: dp[0] = 1 (One way to sum to 0: pick
+                  nothing)
+                </li>
+                <li>In Fibonacci: Fib(0) = 0, Fib(1) = 1</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </>
   ),
 };
