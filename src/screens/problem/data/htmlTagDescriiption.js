@@ -6380,6 +6380,52 @@ int upperBound(vector<int>& arr, int X) {
       </p>
       <br />
 
+      <h2>Comparison: DP vs Recursion vs Memoization</h2>
+      <ul>
+        <li>
+          <strong>Recursion:</strong>
+          <ul>
+            <li>
+              Breaks a problem into smaller subproblems and solves them
+              independently.
+            </li>
+            <li>
+              Leads to overlapping subproblems in some cases, causing redundant
+              calculations.
+            </li>
+            <li>Example: Fibonacci sequence using naive recursion.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Memoization (Top-Down DP):</strong>
+          <ul>
+            <li>
+              A technique to optimize recursion by storing already computed
+              results.
+            </li>
+            <li>Prevents recomputation, reducing time complexity.</li>
+            <li>Implemented using a hashmap or an array.</li>
+            <li>
+              Example: Fibonacci sequence using recursion with memoization.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Dynamic Programming (Bottom-Up DP):</strong>
+          <ul>
+            <li>
+              Solves problems by building up solutions from the smallest
+              subproblems.
+            </li>
+            <li>Uses a table (array) to store computed values iteratively.</li>
+            <li>
+              Efficient in terms of time complexity but may require extra space.
+            </li>
+            <li>Example: Fibonacci sequence using an iterative DP approach.</li>
+          </ul>
+        </li>
+      </ul>
+
       <h2>Popular Dynamic Programming Problem Categories</h2>
       <ul>
         <li>
