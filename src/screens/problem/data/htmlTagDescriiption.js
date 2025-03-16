@@ -6666,6 +6666,122 @@ int upperBound(vector<int>& arr, int X) {
   ),
   "Binary Tree": (
     <>
+      <h2>Binary Tree and Its Various Operations</h2>
+      <p>
+        A Binary Tree is a hierarchical data structure in which each node has at
+        most two children—a left child and a right child.
+      </p>
+
+      <h3>Basic Terminologies</h3>
+      <ul>
+        <li>
+          <strong>Root:</strong> The topmost node in the tree.
+        </li>
+        <li>
+          <strong>Parent & Child:</strong> A node connected directly below
+          another is a child; the one above is the parent.
+        </li>
+        <li>
+          <strong>Leaf Node:</strong> A node with no children.
+        </li>
+        <li>
+          <strong>Depth:</strong> The number of edges from the root to a node.
+        </li>
+        <li>
+          <strong>Height:</strong> The number of edges in the longest path from
+          a node to a leaf.
+        </li>
+        <li>
+          <strong>Subtree:</strong> A tree formed from any node along with its
+          descendants.
+        </li>
+      </ul>
+
+      <h3>Basic Operations on a Binary Tree</h3>
+      <ul>
+        <li>
+          <strong>Traversals</strong>
+          <ul>
+            <li>
+              <strong>Inorder (Left → Root → Right):</strong> Produces a sorted
+              order in a Binary Search Tree (BST).
+            </li>
+            <li>
+              <strong>Preorder (Root → Left → Right):</strong> Used for copying
+              a tree or prefix notation in expressions.
+            </li>
+            <li>
+              <strong>Postorder (Left → Right → Root):</strong> Used for
+              deleting nodes or postfix notation in expressions.
+            </li>
+            <li>
+              <strong>Level Order Traversal (BFS approach):</strong> Traverses
+              each level one by one using a queue.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Insertion in a Binary Tree:</strong> Insert a node at the
+          first available position in level order (typically in a complete
+          binary tree).
+        </li>
+        <li>
+          <strong>Deletion in a Binary Tree:</strong> In level order, replace
+          the target node with the deepest node, then delete the deepest node.
+        </li>
+        <li>
+          <strong>Searching in a Binary Tree:</strong> Recursive or Iterative
+          traversal to find a value.
+        </li>
+        <li>
+          <strong>Finding Height of a Binary Tree:</strong> height = 1 +
+          max(height(left_subtree), height(right_subtree))
+        </li>
+        <li>
+          <strong>Finding the Number of Nodes:</strong> Recursive formula: count
+          = 1 + count(left) + count(right)
+        </li>
+      </ul>
+
+      <h3>Advanced Operations</h3>
+      <ul>
+        <li>
+          <strong>Binary Search Tree (BST) Operations</strong>
+          <ul>
+            <li>
+              <strong>Insert:</strong> Similar to binary search, insert at the
+              appropriate position.
+            </li>
+            <li>
+              <strong>Delete:</strong> Replace the node with either its largest
+              left subtree node or smallest right subtree node.
+            </li>
+            <li>
+              <strong>Search:</strong> Similar to binary search on a sorted
+              array.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Tree Transformations</strong>
+          <ul>
+            <li>
+              <strong>Balanced Tree:</strong> AVL Tree, Red-Black Tree.
+            </li>
+            <li>
+              <strong>Binary Heap:</strong> Min-Heap, Max-Heap used in priority
+              queues.
+            </li>
+            <li>
+              <strong>Expression Tree:</strong> Used in compilers for evaluating
+              expressions.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <br />
+
       <h2>Complexities of Various Operations in a Binary Tree</h2>
 
       <h3>1. General Binary Tree Complexities</h3>
