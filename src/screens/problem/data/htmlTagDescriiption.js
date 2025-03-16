@@ -6667,6 +6667,7 @@ int upperBound(vector<int>& arr, int X) {
   "Binary Tree": (
     <>
       <h2>Binary Tree and Its Various Operations</h2>
+      <br />
       <p>
         A Binary Tree is a hierarchical data structure in which each node has at
         most two children—a left child and a right child.
@@ -6783,6 +6784,7 @@ int upperBound(vector<int>& arr, int X) {
       <br />
 
       <h2>Complexities of Various Operations in a Binary Tree</h2>
+      <br />
 
       <h3>1. General Binary Tree Complexities</h3>
       <ul>
