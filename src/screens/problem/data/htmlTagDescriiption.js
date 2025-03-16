@@ -6664,6 +6664,110 @@ int upperBound(vector<int>& arr, int X) {
       </ul>
     </>
   ),
+  "Binary Tree": (
+    <>
+      <h2>Complexities of Various Operations in a Binary Tree</h2>
+
+      <h3>1. General Binary Tree Complexities</h3>
+      <ul>
+        <li>
+          <strong>Traversal (Inorder, Preorder, Postorder):</strong> O(n) time,
+          O(h) space
+        </li>
+        <li>
+          <strong>Insertion (Level Order):</strong> O(n) time, O(1) space
+        </li>
+        <li>
+          <strong>Deletion (Deepest Node Replacement):</strong> O(n) time, O(1)
+          space
+        </li>
+        <li>
+          <strong>Searching:</strong> O(n) time, O(1) space
+        </li>
+      </ul>
+
+      <h3>2. Binary Search Tree (BST) Complexities</h3>
+      <ul>
+        <li>
+          <strong>Best Case (Balanced BST) - O(log n)</strong>
+        </li>
+        <li>
+          <strong>Worst Case (Skewed BST) - O(n)</strong>
+        </li>
+        <ul>
+          <li>
+            <strong>Search:</strong> O(log n) best, O(n) worst
+          </li>
+          <li>
+            <strong>Insertion:</strong> O(log n) best, O(n) worst
+          </li>
+          <li>
+            <strong>Deletion:</strong> O(log n) best, O(n) worst
+          </li>
+          <li>
+            <strong>Traversal:</strong> O(n) time
+          </li>
+        </ul>
+      </ul>
+
+      <h3>3. Balanced Binary Search Tree (AVL Tree, Red-Black Tree)</h3>
+      <ul>
+        <li>
+          <strong>Search:</strong> O(log n)
+        </li>
+        <li>
+          <strong>Insertion:</strong> O(log n)
+        </li>
+        <li>
+          <strong>Deletion:</strong> O(log n)
+        </li>
+      </ul>
+
+      <h3>4. Complete Binary Tree (Binary Heap)</h3>
+      <ul>
+        <li>
+          <strong>Insertion:</strong> O(log n)
+        </li>
+        <li>
+          <strong>Delete (Heapify):</strong> O(log n)
+        </li>
+        <li>
+          <strong>Search:</strong> O(n) (No ordering like BST)
+        </li>
+      </ul>
+
+      <h3>5. Space Complexities</h3>
+      <ul>
+        <li>
+          <strong>Recursive Traversal:</strong> O(h) (h = tree height)
+        </li>
+        <li>
+          <strong>Iterative Traversal (Using Stack/Queue):</strong> O(n)
+        </li>
+        <li>
+          <strong>Balanced BST Storage:</strong> O(n)
+        </li>
+      </ul>
+
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>
+          <strong>BST is better than a general binary tree</strong> due to
+          faster search, insert, and delete (O(log n)).
+        </li>
+        <li>
+          <strong>
+            Balanced BST (AVL, Red-Black Tree) ensures O(log n) operations,
+          </strong>{" "}
+          avoiding worst-case skewed tree issues.
+        </li>
+        <li>
+          <strong>Binary Heaps are great for priority queues</strong> but lack
+          fast searches.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
