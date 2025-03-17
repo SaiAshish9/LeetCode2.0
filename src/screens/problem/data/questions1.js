@@ -42149,19 +42149,14 @@ const QUESTIONS = {
       </p>
       <pre>
         <strong>Input: </strong>[1,2,3,4,5] <br />
-        {`1
-       / \
-      2   3
-     / \
-    4   5`}{" "}
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0156.Binary%20Tree%20Upside%20Down/images/updown.jpg"
+          style={{ width: 800, height: 161 }}
+        />
         <br />
         <strong>Output:</strong> return the root of the binary tree
         [4,5,2,#,#,3,1] <br />
-        {`4
-      / \
-     5   2
-        / \
-       3   1`}
       </pre>
       <br />
       <p>
@@ -42180,14 +42175,13 @@ const QUESTIONS = {
       </p>
       <p>Here's an example:</p> <br />
       <pre>
-        {" "}
-        {`1
-      / \
-     2   3
-        /
-       4
-        \
-         5`}
+        {`    1
+   / \\
+  2   3
+     /
+    4
+     \\
+      5`}
       </pre>{" "}
       <br />
       <p>

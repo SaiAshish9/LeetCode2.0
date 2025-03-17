@@ -4,32 +4,23 @@
 // #include <map>
 // #include <algorithm>
 // #include <vector>
-
 // using namespace std;
-
 // typedef unsigned int UINT;
-
 // class Node
 // {
 // public:
 //     int data;
 //     Node *next;
 // };
-
 // int a = 10;
-
 // string s = "asd";
-
 // // C++ Program to demonstrate inline functions and classes
 // #include <iostream>
-
 // using namespace std;
-
 // class operation
 // {
 //     int a, b, add, sub, mul;
 //     float div;
-
 // public:
 //     void get();
 //     void sum();
@@ -44,31 +35,26 @@
 //     cout << "Enter second value:";
 //     cin >> b;
 // }
-
 // inline void operation ::sum()
 // {
 //     add = a + b;
 //     cout << "Addition of two numbers: " << a + b << "\n";
 // }
-
 // inline void operation ::difference()
 // {
 //     sub = a - b;
 //     cout << "Difference of two numbers: " << a - b << "\n";
 // }
-
 // inline void operation ::product()
 // {
 //     mul = a * b;
 //     cout << "Product of two numbers: " << a * b << "\n";
 // }
-
 // inline void operation ::division()
 // {
 //     div = a / b;
 //     cout << "Division of two numbers: " << a / b << "\n";
 // }
-
 // // int main(){
 // //     Node n;
 // //     UINT u = 30;
@@ -104,7 +90,6 @@
 //     int breadth;
 //     int height;
 //     int *p;
-
 // public:
 //     // Function that sets the dimensions
 //     void set_dimensions(int length1, int breadth1,
@@ -116,7 +101,6 @@
 //         p = new int;
 //         *p = x;
 //     }
-
 //     // Function to display the dimensions
 //     // of the Box object
 //     void show_data()
@@ -128,16 +112,13 @@
 //              << endl;
 //     }
 // };
-
 // // Driver Code
 // // int main()
 // // {
 // //     // Object of class Box
 // //     box B1, B3, B2;
-
 // //     // Set dimensions of Box B1
 // //     B1.set_dimensions(14, 12, 16, 100);
-
 // //     // When copying the data of object
 // //     // at the time of initialization
 // //     // then copy is made through
@@ -145,7 +126,6 @@
 // //     B2 = B1;
 // //     int x = 10;
 // //     B1.length = &x;
-
 // //     // When copying the data of object
 // //     // after initialization then the
 // //     // copy is done through DEFAULT
@@ -154,12 +134,9 @@
 // //     B1.show_data();
 // //     B2.show_data();
 // //     B3.show_data();
-
 // //     return 0;
 // // }
-
 // // clang++ -std=c++17 src/test.cpp -o test && ./test
-
 // int main()
 // {
 //     int arr[] = {1, 2, 3};
@@ -169,45 +146,108 @@
 //     v.erase(find(v.begin(),v.end(),1));
 //     cout << v.at(1) << endl;
 // }
+// #include <iostream>
+// using namespace std;
+// int expandAroundCenter(const string &s, int left, int right)
+// {
+//     while (left >= 0 && right < s.length() && s[left] == s[right])
+//     {
+//         left--;
+//         right++;
+//     }
+//     return right - left - 1;
+// }
+// int main()
+// {
+//     string s = "1235";
+//     if (s.empty())
+//     {
+//         cout << "" << endl;
+//         return 0;
+//     }
+//     int start = 0, maxLen = 1;
+//     for (size_t i = 0; i < s.length(); i++)
+//     {
+//         int len1 = expandAroundCenter(s, i, i);
+//         int len2 = expandAroundCenter(s, i, i + 1);
+//         int maxLenCurr = max(len1, len2);
+//         if (maxLenCurr > maxLen)
+//         {
+//             maxLen = maxLenCurr;
+//             start = i - (maxLen - 1) / 2;
+//         }
+//     }
+//     cout << "Longest Palindromic Substring: " << s.substr(start, maxLen) << endl;
+//     return 0;
+// }
 
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
-int expandAroundCenter(const string &s, int left, int right)
+struct TreeNode
 {
-    while (left >= 0 && right < s.length() && s[left] == s[right])
+    int data;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : data(0), left(nullptr), right(nullptr) {}
+    TreeNode(int val) : data(val), left(nullptr), right(nullptr) {}
+    TreeNode(int val, TreeNode *prev, TreeNode *next) : data(val), left(prev), right(next) {}
+};
+
+vector<vector<int>> bfs(TreeNode *root)
+{
+    vector<vector<int>> result;
+    if (!root)
+        return result;
+
+    queue<TreeNode *> q;
+    q.push(root);
+
+    while (!q.empty())
     {
-        left--;
-        right++;
+        int size = q.size();
+        vector<int> currentLevel;
+
+        for (int i = 0; i < size; ++i)
+        {
+            TreeNode *currentNode = q.front();
+            q.pop();
+            currentLevel.push_back(currentNode->data);
+
+            if (currentNode->left)
+                q.push(currentNode->left);
+            if (currentNode->right)
+                q.push(currentNode->right);
+        }
+
+        result.push_back(currentLevel);
     }
-    return right - left - 1;
+
+    return result;
+}
+
+void printBFS(const vector<vector<int>> &data)
+{
+    for (const auto &level : data)
+    {
+        cout << "[ ";
+        for (int val : level)
+        {
+            cout << val << " ";
+        }
+        cout << "]" << endl;
+    }
 }
 
 int main()
 {
-    string s = "1235";
-    if (s.empty())
-    {
-        cout << "" << endl;
-        return 0;
-    }
+    TreeNode *q = new TreeNode(2);
+    q->left = new TreeNode(1);
+    q->right = new TreeNode(3);
 
-    int start = 0, maxLen = 1;
-
-    for (size_t i = 0; i < s.length(); i++)
-    {
-        int len1 = expandAroundCenter(s, i, i);
-        int len2 = expandAroundCenter(s, i, i + 1);
-        int maxLenCurr = max(len1, len2);
-
-        if (maxLenCurr > maxLen)
-        {
-            maxLen = maxLenCurr;
-            start = i - (maxLen - 1) / 2;
-        }
-    }
-
-    cout << "Longest Palindromic Substring: " << s.substr(start, maxLen) << endl;
+    vector<vector<int>> data = bfs(q);
+    printBFS(data);
     return 0;
 }
