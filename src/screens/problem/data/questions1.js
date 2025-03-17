@@ -42303,13 +42303,11 @@ const QUESTIONS = {
       <br />
       <pre>
         <strong>Input:</strong>
-        {`1
-        \
-         3
-        / \
-       2   4
-            \
-             5`}
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0298.Binary%20Tree%20Longest%20Consecutive%20Sequence/images/consec1-1-tree.jpg"
+          style={{ width: 306, height: 400 }}
+        />
         <br />
         <strong>Output:</strong> <code>3</code>
         <br />
@@ -42329,13 +42327,11 @@ const QUESTIONS = {
           Input:
           <br />
         </strong>
-        {`   2
-        \
-         3
-        /
-       2
-      /
-     1`}
+        <img
+          alt=""
+          src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0298.Binary%20Tree%20Longest%20Consecutive%20Sequence/images/consec1-2-tree.jpg"
+          style={{ width: 249, height: 400 }}
+        />
         <br />
         <strong>
           Output: 2
