@@ -42148,7 +42148,7 @@ const QUESTIONS = {
         <strong>Example:</strong>
       </p>
       <pre>
-        <strong>Input: </strong>[1,2,3,4,5] <br />
+        <strong>Input: </strong>[1,2,3,4,5] <br /> <br />
         <img
           alt=""
           src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0156.Binary%20Tree%20Upside%20Down/images/updown.jpg"
