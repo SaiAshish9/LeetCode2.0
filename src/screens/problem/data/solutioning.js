@@ -21840,6 +21840,7 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
   333: (
     <>
       <h2>Explanation</h2>
+      <p>{`If left subtree max value < root.val < right subtree min value, then the current subtree is a valid BST.`}</p>
       <ul>
         <li>
           <strong>TreeNode Definition:</strong>
