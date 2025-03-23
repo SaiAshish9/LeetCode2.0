@@ -21493,6 +21493,14 @@ console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))`}
           </ul>
         </li>
       </ul>
+      <ul>
+        Why Not Preorder or Postorder? <br />
+        Preorder (Root → Left → Right): Visits nodes before fully exploring the
+        left subtree, which does not guarantee sorted order.
+        <br />
+        Postorder (Left → Right → Root): Visits nodes too late, meaning we would
+        need extra storage and sorting.
+      </ul>
     </>
   ),
   235: (
