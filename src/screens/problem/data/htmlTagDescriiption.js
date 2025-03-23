@@ -1136,6 +1136,35 @@ class Prim {
   ),
   "Binary Search Tree": (
     <>
+      <h2>Binary Search Tree (BST) Traversals</h2>
+      <ul>
+        <li>
+          <strong>Preorder Traversal (Root → Left → Right)</strong>
+          <ul>
+            <li>Used for constructing BSTs from a given sequence.</li>
+            <li>Helps in serialization/deserialization of a BST.</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Inorder Traversal (Left → Root → Right)</strong>
+          <ul>
+            <li>Retrieves elements in sorted order.</li>
+            <li>Used for finding the k-th smallest/largest element.</li>
+            <li>Helps in validating if a tree is a BST.</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Postorder Traversal (Left → Right → Root)</strong>
+          <ul>
+            <li>
+              Used for deleting nodes (ensuring children are deleted first).
+            </li>
+            <li>Helps in evaluating expressions in an expression tree.</li>
+          </ul>
+        </li>
+      </ul>
       <p>
         A <strong>binary search tree</strong> is a binary tree where each node
         has at most two children, referred to as the left child and the right
