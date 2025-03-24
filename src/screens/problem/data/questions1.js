@@ -187,13 +187,13 @@ const QUESTIONS = {
             <strong>Notes:</strong>
           </p>
 
-          <ol>
+          <ul>
             <li>The following input is only given to testing purposes.</li>
             <li>
               You will receive as input a list of all nodes of the n-ary tree in
               any order.
             </li>
-          </ol>
+          </ul>
 
           <p>&nbsp;</p>
           <p>
