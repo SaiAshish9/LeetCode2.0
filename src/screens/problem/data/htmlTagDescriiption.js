@@ -3851,6 +3851,41 @@ public class Solution {
           </ul>
         </li>
       </ul>
+      <h2>
+        Understanding <code>i & -i</code>
+      </h2>
+      <ul>
+        <li>
+          <strong>Definition:</strong> Extracts the lowest set bit of{" "}
+          <code>i</code>.
+        </li>
+        <li>
+          <strong>Formula:</strong> <code>i & -i</code> isolates the rightmost{" "}
+          <code>1</code> in the binary representation.
+        </li>
+        <li>
+          <strong>Example (i = 6):</strong>
+        </li>
+        <ul>
+          <li>
+            Binary of 6: <code>110</code>
+          </li>
+          <li>
+            Binary of -6: <code>...1010</code> (Two’s complement)
+          </li>
+          <li>
+            Result: <code>10</code> (Decimal 2)
+          </li>
+        </ul>
+        <li>
+          <strong>Common Uses:</strong>
+        </li>
+        <ul>
+          <li>Checking if a number is a power of 2</li>
+          <li>Finding the lowest set bit</li>
+          <li>Binary Indexed Tree (Fenwick Tree) operations</li>
+        </ul>
+      </ul>
       <h2>Example Problems:</h2>
       <ul>
         <li>
