@@ -7140,6 +7140,89 @@ int upperBound(vector<int>& arr, int X) {
       </li>
     </ul>
   ),
+  Graph: (
+    <>
+      <h2>Graph Algorithms</h2>
+      <ul>
+        <li>
+          <strong>Graph Representations</strong>
+          <ul>
+            <li>Adjacency Matrix - O(V²) space</li>
+            <li>Adjacency List - O(V + E) space</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Graph Traversal</strong>
+          <ul>
+            <li>BFS (Breadth-First Search) - O(V + E)</li>
+            <li>DFS (Depth-First Search) - O(V + E)</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Shortest Path Algorithms</strong>
+          <ul>
+            <li>Dijkstra’s Algorithm - O((V + E) log V)</li>
+            <li>Bellman-Ford Algorithm - O(VE)</li>
+            <li>Floyd-Warshall Algorithm - O(V³)</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Minimum Spanning Tree (MST) Algorithms</strong>
+          <ul>
+            <li>Kruskal’s Algorithm - O(E log E)</li>
+            <li>Prim’s Algorithm - O((V + E) log V)</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Cycle Detection</strong>
+          <ul>
+            <li>DFS-Based Cycle Detection - O(V + E)</li>
+            <li>Union-Find (Disjoint Set) - O(α(V))</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Topological Sorting</strong>
+          <ul>
+            <li>Kahn’s Algorithm (BFS) - O(V + E)</li>
+            <li>DFS-Based Topological Sort - O(V + E)</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Strongly Connected Components (SCC)</strong>
+          <ul>
+            <li>Kosaraju’s Algorithm - O(V + E)</li>
+            <li>Tarjan’s Algorithm - O(V + E)</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Network Flow Algorithms</strong>
+          <ul>
+            <li>Ford-Fulkerson Algorithm - O(E × max flow)</li>
+            <li>Edmonds-Karp Algorithm - O(VE²)</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Bipartite Graph Check</strong> - O(V + E)
+        </li>
+
+        <li>
+          <strong>Eulerian & Hamiltonian Paths</strong>
+          <ul>
+            <li>Eulerian Path - Fleury’s Algorithm - O(V + E)</li>
+            <li>Hamiltonian Path - Backtracking - O(2^V * V)</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
