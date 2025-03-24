@@ -6915,6 +6915,196 @@ int upperBound(vector<int>& arr, int X) {
       </ul>
     </>
   ),
+  Tree: (
+    <ul>
+      <li>
+        <strong>Basic Trees (Unconstrained Trees)</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> A generic hierarchical structure where
+            each node can have multiple children.
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>Insertion: O(1) (if inserting at a known location)</li>
+              <li>Traversal: O(N) (DFS/BFS)</li>
+              <li>Searching: O(N)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(N)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Binary Tree</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> A tree where each node has at most two
+            children (left and right).
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>Insertion: O(N) (worst-case skewed), O(log N) (balanced)</li>
+              <li>Traversal: O(N)</li>
+              <li>Searching: O(N) (worst case), O(log N) (balanced)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(N)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Binary Search Tree (BST)</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> A binary tree where left children
+            contain values smaller than the parent, and right children contain
+            larger values.
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>
+                Insertion/Search/Deletion: O(log N) (balanced), O(N) (worst-case
+                skewed)
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(N)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Balanced Search Trees (AVL, Red-Black)</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> Self-balancing BSTs that maintain a
+            logarithmic height.
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>Insertion/Deletion/Search: O(log N)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(N)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>N-ary Tree</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> A tree where each node can have up to
+            N children.
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>Insertion: O(1) (if parent is known)</li>
+              <li>Traversal: O(N)</li>
+              <li>Searching: O(N)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(N)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Heap (Binary Heap, Fibonacci Heap)</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> A complete binary tree that follows
+            the heap property (Min-Heap or Max-Heap).
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>Insertion: O(log N)</li>
+              <li>Heapify: O(log N)</li>
+              <li>Extract Min/Max: O(log N)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(N)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Trie (Prefix Tree)</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> An N-ary tree where each node
+            represents a character, used for efficient string searching.
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>Insertion: O(M) (M = length of string)</li>
+              <li>Search: O(M)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(N × M)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Segment Tree</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> A tree used for range queries (sum,
+            min, max, etc.).
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>Build: O(N)</li>
+              <li>Query: O(log N)</li>
+              <li>Update: O(log N)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(4N)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Fenwick Tree (Binary Indexed Tree - BIT)</strong>
+        <ul>
+          <li>
+            <strong>Description:</strong> A data structure for efficient prefix
+            sum and update queries.
+          </li>
+          <li>
+            <strong>Time Complexity:</strong>
+            <ul>
+              <li>Update: O(log N)</li>
+              <li>Query: O(log N)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Space Complexity:</strong> O(N)
+          </li>
+        </ul>
+      </li>
+    </ul>
+  ),
 };
 
 export default TAG_DESCRIPTION;
