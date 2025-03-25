@@ -7221,7 +7221,6 @@ int upperBound(vector<int>& arr, int X) {
           </ul>
         </li>
 
-
         <li>
           <strong>Traveling Salesman Problem (TSP)</strong>
           <ul>
@@ -7229,6 +7228,165 @@ int upperBound(vector<int>& arr, int X) {
             <li>Dynamic Programming (Held-Karp Algorithm) - O(2^V * V²)</li>
             <li>Approximation (Christofides Algorithm) - O(V³)</li>
           </ul>
+        </li>
+      </ul>
+    </>
+  ),
+  "Topological Sorting": (
+    <>
+      <h2>Topological Sorting</h2>
+
+      <ul>
+        <li>
+          <strong>Definition:</strong> A linear ordering of vertices in a
+          Directed Acyclic Graph (DAG) such that for every directed edge (U →
+          V), U appears before V.
+        </li>
+        <li>
+          <strong>Applications:</strong>
+          <ul>
+            <li>Task Scheduling</li>
+            <li>Course Prerequisites</li>
+            <li>Build Systems</li>
+            <li>Compiler Dependency Resolution</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Algorithms:</strong>
+          <ul>
+            <li>
+              Kahn’s Algorithm (BFS-Based) - O(V + E)
+              <ul>
+                <li>Uses in-degree tracking</li>
+                <li>Processes nodes with zero in-degree first</li>
+                <li>Maintains a queue for order</li>
+              </ul>
+            </li>
+            <li>
+              DFS-Based Topological Sort - O(V + E)
+              <ul>
+                <li>Uses recursive DFS traversal</li>
+                <li>Pushes nodes onto a stack in reverse order</li>
+                <li>Extracts topological order by popping stack</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Comparison:</strong>
+          <ul>
+            <li>
+              <strong>Kahn’s Algorithm:</strong> Better for real-time processing
+            </li>
+            <li>
+              <strong>DFS-Based Approach:</strong> More memory efficient, good
+              for batch processing
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Code Implementations:</strong>
+          <ul>
+            <li>
+              <strong>1. Kahn’s Algorithm (BFS-Based):</strong>
+            </li>
+          </ul>
+          <pre>{`
+import java.util.*;
+
+class TopologicalSortBFS {
+    public static List<Integer> topologicalSort(int vertices, int[][] edges) {
+        List<Integer> result = new ArrayList<>();
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        int[] inDegree = new int[vertices];
+
+        // Build graph
+        for (int[] edge : edges) {
+            graph.putIfAbsent(edge[0], new ArrayList<>());
+            graph.get(edge[0]).add(edge[1]);
+            inDegree[edge[1]]++;
+        }
+
+        // Start with nodes having 0 in-degree
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < vertices; i++) {
+            if (inDegree[i] == 0) queue.offer(i);
+        }
+
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            result.add(node);
+            if (graph.containsKey(node)) {
+                for (int neighbor : graph.get(node)) {
+                    if (--inDegree[neighbor] == 0) {
+                        queue.offer(neighbor);
+                    }
+                }
+            }
+        }
+
+        return result.size() == vertices ? result : new ArrayList<>(); // Return empty if cycle exists
+    }
+
+    public static void main(String[] args) {
+        int[][] edges = { {5, 2}, {5, 0}, {4, 0}, {4, 1}, {2, 3}, {3, 1} };
+        System.out.println(topologicalSort(6, edges));
+    }
+}
+            `}</pre>
+
+          <ul>
+            <li>
+              <strong>2. DFS-Based Topological Sorting:</strong>
+            </li>
+          </ul>
+          <pre>
+            {`
+import java.util.*;
+
+class TopologicalSortDFS {
+    public static void topologicalSort(int node, Map<Integer, List<Integer>> graph, 
+                                       Set<Integer> visited, Stack<Integer> stack) {
+        visited.add(node);
+        if (graph.containsKey(node)) {
+            for (int neighbor : graph.get(node)) {
+                if (!visited.contains(neighbor)) {
+                    topologicalSort(neighbor, graph, visited, stack);
+                }
+            }
+        }
+        stack.push(node);
+    }
+
+    public static List<Integer> topologicalSortDFS(int vertices, int[][] edges) {
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        for (int[] edge : edges) {
+            graph.putIfAbsent(edge[0], new ArrayList<>());
+            graph.get(edge[0]).add(edge[1]);
+        }
+
+        Set<Integer> visited = new HashSet<>();
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < vertices; i++) {
+            if (!visited.contains(i)) {
+                topologicalSort(i, graph, visited, stack);
+            }
+        }
+
+        List<Integer> result = new ArrayList<>();
+        while (!stack.isEmpty()) {
+            result.add(stack.pop());
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[][] edges = { {5, 2}, {5, 0}, {4, 0}, {4, 1}, {2, 3}, {3, 1} };
+        System.out.println(topologicalSortDFS(6, edges));
+    }
+}
+           `}{" "}
+          </pre>
         </li>
       </ul>
     </>
