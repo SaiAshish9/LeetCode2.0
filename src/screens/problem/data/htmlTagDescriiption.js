@@ -7243,6 +7243,11 @@ int upperBound(vector<int>& arr, int X) {
           V), U appears before V.
         </li>
         <li>
+          A directed acyclic graph (DAG) is a graph where nodes (vertices) are
+          connected by directed edges (arrows) that do not form cycles, meaning
+          you can't follow the arrows to return to the starting node.
+        </li>
+        <li>
           <strong>Applications:</strong>
           <ul>
             <li>Task Scheduling</li>
