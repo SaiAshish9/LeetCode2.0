@@ -7232,7 +7232,7 @@ int upperBound(vector<int>& arr, int X) {
       </ul>
     </>
   ),
-  "Topological Sorting": (
+  "Topological Sort": (
     <>
       <h2>Topological Sorting</h2>
 
