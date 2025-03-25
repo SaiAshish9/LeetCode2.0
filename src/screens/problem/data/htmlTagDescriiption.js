@@ -7220,6 +7220,16 @@ int upperBound(vector<int>& arr, int X) {
             <li>Hamiltonian Path - Backtracking - O(2^V * V)</li>
           </ul>
         </li>
+
+
+        <li>
+          <strong>Traveling Salesman Problem (TSP)</strong>
+          <ul>
+            <li>Brute Force (Backtracking) - O(V!)</li>
+            <li>Dynamic Programming (Held-Karp Algorithm) - O(2^V * V²)</li>
+            <li>Approximation (Christofides Algorithm) - O(V³)</li>
+          </ul>
+        </li>
       </ul>
     </>
   ),
