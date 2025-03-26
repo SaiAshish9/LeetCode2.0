@@ -8310,6 +8310,82 @@ void functionB(int n) {
       </ul>
     </>
   ),
+  Database: (
+    <>
+      <h2>📌 Database in LeetCode</h2>
+      <p>
+        The <strong>Database</strong> tag on LeetCode consists of problems that
+        require writing SQL queries to retrieve, manipulate, or analyze data
+        stored in relational databases.
+      </p>
+
+      <h3>1️⃣ Basic Queries</h3>
+      <pre>
+        <code>SELECT name, salary FROM Employees WHERE salary &gt; 50000;</code>
+      </pre>
+
+      <h3>2️⃣ Aggregations and GROUP BY</h3>
+      <pre>
+        <code>
+          SELECT department, COUNT(*) AS employee_count FROM Employees GROUP BY
+          department;
+        </code>
+      </pre>
+
+      <h3>3️⃣ JOINs</h3>
+      <pre>
+        <code>
+          SELECT e.name, d.department_name FROM Employees e JOIN Departments d
+          ON e.department_id = d.id;
+        </code>
+      </pre>
+
+      <h3>4️⃣ Subqueries</h3>
+      <pre>
+        <code>
+          SELECT name, salary FROM Employees e1 WHERE salary &gt; (SELECT
+          AVG(salary) FROM Employees e2 WHERE e1.department_id =
+          e2.department_id);
+        </code>
+      </pre>
+
+      <h3>5️⃣ Ranking and Window Functions</h3>
+      <pre>
+        <code>
+          SELECT name, department_id, salary, RANK() OVER(PARTITION BY
+          department_id ORDER BY salary DESC) AS rank FROM Employees;
+        </code>
+      </pre>
+
+      <h3>6️⃣ Case Handling</h3>
+      <pre>
+        <code>
+          SELECT name, salary, CASE WHEN salary &gt; 70000 THEN 'High' WHEN
+          salary BETWEEN 50000 AND 70000 THEN 'Medium' ELSE 'Low' END AS
+          salary_category FROM Employees;
+        </code>
+      </pre>
+
+      <h3>7️⃣ Self-JOINs</h3>
+      <pre>
+        <code>
+          SELECT e1.name AS Employee, e2.name AS Manager FROM Employees e1 JOIN
+          Employees e2 ON e1.manager_id = e2.id;
+        </code>
+      </pre>
+
+      <h2>🚀 How to Approach SQL Problems?</h2>
+      <ul>
+        <li>✔ Understand the table schema carefully.</li>
+        <li>✔ Identify required columns and filtering conditions.</li>
+        <li>
+          ✔ Choose the right SQL operations (JOIN, GROUP BY, HAVING, etc.).
+        </li>
+        <li>✔ Optimize using indexes where needed.</li>
+        <li>✔ Test with edge cases (NULL values, empty tables, duplicates).</li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
