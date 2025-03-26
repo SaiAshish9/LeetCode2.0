@@ -4458,9 +4458,9 @@ public class Main {
         </p>
         <p></p>
         <p>
-          n*2 = (n&lt;&lt;1)
+          n*2 = (n{`<<`}1)
           <br />
-          n/2 = (n&gt;&gt;1);
+          n/2 = (n{`>>`}1);
         </p>
         <p></p>
         <p>
@@ -4468,7 +4468,7 @@ public class Main {
         </p>
         <p></p>
         <p>
-          <code>n |= (1&lt;&lt;i)</code>
+          <code>n |= (1{`<<`}i)</code>
         </p>
         <p></p>
         <p>
@@ -4477,7 +4477,7 @@ public class Main {
         <p></p>
         <pre>
           <code>
-            If (n &amp; (<span class="hljs-number">1</span>&lt;&lt;i) =={" "}
+            If (n &amp; (<span class="hljs-number">1</span>{`<<`}i) =={" "}
             <span class="hljs-number">0</span>) =&gt;{" "}
             <span class="hljs-built_in">set</span>
             <span class="hljs-keyword">else</span>{" "}
@@ -4489,7 +4489,7 @@ public class Main {
         <p>**4. To clear/turn off the i-th bit **</p>
         <p></p>
         <p>
-          <code>n &amp;= ~(1&lt;&lt;i)</code>
+          <code>n &amp;= ~(1{`<<`}i)</code>
         </p>
         <p></p>
         <p>
@@ -4497,7 +4497,7 @@ public class Main {
         </p>
         <p></p>
         <p>
-          <code>n ^= (1&lt;&lt;i)</code>
+          <code>n ^= (1{`<<`}i)</code>
         </p>
         <p></p>
         <p>
@@ -4505,7 +4505,7 @@ public class Main {
         </p>
         <p></p>
         <p>
-          <code>n = (1&lt;&lt;sz) - 1</code>
+          <code>n = (1{`<<`}sz) - 1</code>
         </p>
         <p></p>
         <p>
@@ -4530,8 +4530,8 @@ public class Main {
         <p></p>
         <p>
           <code>
-            n &amp; ((1&lt;&lt;k) - 1) == 0 // n is divisible by 2^k (=
-            (1&lt;&lt;k)
+            n &amp; ((1{`<<`}k) - 1) == 0 // n is divisible by 2^k (=
+            (1{`<<`}k)
           </code>
           ).
         </p>
@@ -4642,7 +4642,7 @@ public class Main {
             Binary Representation: Bitmasks use binary digits (bits) to
             represent subsets of elements or states. <br />
             Binary Operations: They leverage bitwise operations like AND (&), OR
-            (|), XOR (^), and shifting (&lt;&lt;, &gt;&gt;) to manipulate and
+            (|), XOR (^), and shifting ({`<<`}, {`>>`}) to manipulate and
             check subsets efficiently.
           </p>
           <ul>
@@ -4653,8 +4653,8 @@ public class Main {
             <li>
               <strong>Binary Operations:</strong> They leverage bitwise
               operations like AND (<code>&</code>), OR (<code>|</code>), XOR (
-              <code>^</code>), and shifting (<code>&lt;&lt;</code>,{" "}
-              <code>&gt;&gt;</code>) to manipulate and check subsets
+              <code>^</code>), and shifting (<code>{`<<`}</code>,{" "}
+              <code>{`>>`}</code>) to manipulate and check subsets
               efficiently.
             </li>
           </ul>
@@ -4741,7 +4741,7 @@ public class Main {
         let subset = [];
         
         for (let j = 0; j &lt; n; j++) {
-            if (i & (1 &lt;&lt; j)) {
+            if (i & (1 {`<<`} j)) {
                 subsetSum += nums[j];
                 subset.push(nums[j]);
             }
@@ -4762,11 +4762,11 @@ public class Main {
           </p>
           <ul>
             <li>
-              <code>1 &lt;&lt; n</code> generates all possible subsets using
+              <code>1 {`<<`} n</code> generates all possible subsets using
               bitmasking (from 0 to \( 2^n - 1 \)).
             </li>
             <li>
-              <code>i & (1 &lt;&lt; j)</code> checks if the j-th element is
+              <code>i & (1 {`<<`} j)</code> checks if the j-th element is
               included in the current subset (<code>i</code>).
             </li>
             <li>
@@ -4801,7 +4801,7 @@ public class Main {
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
-              <code>bitmask |= (1 &lt;&lt; pos)</code>
+              <code>bitmask |= (1 {`<<`} pos)</code>
             </li>
             <li>
               <strong>Effect:</strong> Sets the bit at position <code>pos</code>{" "}
@@ -4818,7 +4818,7 @@ public class Main {
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
-              <code>bitmask &= ~(1 &lt;&lt; pos)</code>
+              <code>bitmask &= ~(1 {`<<`} pos)</code>
             </li>
             <li>
               <strong>Effect:</strong> Clears the bit at position{" "}
@@ -4835,7 +4835,7 @@ public class Main {
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
-              <code>bitmask ^= (1 &lt;&lt; pos)</code>
+              <code>bitmask ^= (1 {`<<`} pos)</code>
             </li>
             <li>
               <strong>Effect:</strong> Toggles (flips) the bit at position{" "}
@@ -4852,7 +4852,7 @@ public class Main {
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
-              <code>(bitmask & (1 &lt;&lt; pos)) != 0</code>
+              <code>(bitmask & (1 {`<<`} pos)) != 0</code>
             </li>
             <li>
               <strong>Effect:</strong> Checks if the bit at position{" "}
@@ -4869,7 +4869,7 @@ public class Main {
           <ul>
             <li>
               <strong>Operation:</strong> Iterate from <code>0</code> to{" "}
-              <code>(1 &lt;&lt; n) - 1</code>, where <code>n</code> is the
+              <code>(1 {`<<`} n) - 1</code>, where <code>n</code> is the
               number of elements.
             </li>
             <li>
@@ -4891,8 +4891,8 @@ public class Main {
       <ul>
         <li>
           <strong>Time Complexity:</strong> Operations involving bitmasking (
-          <code>|</code>, <code>&</code>, <code>&lt;&lt;</code>,{" "}
-          <code>&gt;&gt;</code>, <code>~</code>) are generally <code>O(1)</code>{" "}
+          <code>|</code>, <code>&</code>, <code>{`<<`}</code>,{" "}
+          <code>{`>>`}</code>, <code>~</code>) are generally <code>O(1)</code>{" "}
           because they are executed in constant time relative to the size of the
           bitmask (typically 32 or 64 bits).
         </li>
@@ -4923,8 +4923,8 @@ public class Main {
         <li>
           <strong>Bitwise Operations:</strong> It uses operations like AND (
           <code>&amp;</code>), OR (<code>|</code>), XOR (<code>^</code>), NOT (
-          <code>~</code>), and bit shifts (<code>&lt;&lt;</code>,{" "}
-          <code>&gt;&gt;</code>) to manipulate bits.
+          <code>~</code>), and bit shifts (<code>{`<<`}</code>,{" "}
+          <code>{`>>`}</code>) to manipulate bits.
         </li>
       </ul>
       <h3>Typical Uses in LeetCode Problems</h3>
@@ -5010,7 +5010,7 @@ public class Main {
           <h4>Setting a Bit:</h4>
           <ul>
             <li>
-              <strong>Operation:</strong> <code>num |= (1 &lt;&lt; pos)</code>
+              <strong>Operation:</strong> <code>num |= (1 {`<<`} pos)</code>
             </li>
             <li>
               <strong>Effect:</strong> Sets the bit at position <code>pos</code>{" "}
@@ -5027,7 +5027,7 @@ public class Main {
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
-              <code>num &amp;= ~(1 &lt;&lt; pos)</code>
+              <code>num &amp;= ~(1 {`<<`} pos)</code>
             </li>
             <li>
               <strong>Effect:</strong> Clears the bit at position{" "}
@@ -5043,7 +5043,7 @@ public class Main {
           <h4>Toggling a Bit:</h4>
           <ul>
             <li>
-              <strong>Operation:</strong> <code>num ^= (1 &lt;&lt; pos)</code>
+              <strong>Operation:</strong> <code>num ^= (1 {`<<`} pos)</code>
             </li>
             <li>
               <strong>Effect:</strong> Toggles the bit at position{" "}
@@ -5060,7 +5060,7 @@ public class Main {
           <ul>
             <li>
               <strong>Operation:</strong>{" "}
-              <code>(num &amp; (1 &lt;&lt; pos)) != 0</code>
+              <code>(num &amp; (1 {`<<`} pos)) != 0</code>
             </li>
             <li>
               <strong>Effect:</strong> Checks if the bit at position{" "}
@@ -5095,7 +5095,7 @@ public class Main {
         <li>
           <strong>Time Complexity:</strong> Operations involving bit
           manipulation (<code>|</code>, <code>&amp;</code>,{" "}
-          <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>~</code>) are
+          <code>{`<<`}</code>, <code>{`>>`}</code>, <code>~</code>) are
           generally <code>O(1)</code> because they are executed in constant time
           relative to the size of the bitmask (typically 32 or 64 bits).
         </li>
