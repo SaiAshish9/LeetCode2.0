@@ -7590,6 +7590,49 @@ class MedianFinder {
       </ul>
     </>
   ),
+  Interactive: (
+    <>
+      <p>
+        In LeetCode, an interactive tag typically refers to problems that
+        involve interaction between the user (or solution) and a system, often
+        requiring communication through a pre-defined API or interactive
+        input/output handling.
+      </p>
+      <br />
+      <p>🔍 Characteristics of Interactive Problems:</p>
+      <br />
+
+      <p>
+        Simulated Environment: The problem interacts with a hidden system, and
+        your solution must make function calls to retrieve information.
+      </p>
+      <br />
+
+      <p>
+        Predefined API Calls: You may need to call functions like guess(),
+        pick(), or query() to gather data.
+      </p>
+      <br />
+
+      <p>
+        Limited Attempts: Some problems restrict the number of queries, making
+        efficiency crucial.
+      </p>
+      <br />
+
+      <p>
+        Binary Search or Heuristic Approach: Many interactive problems involve
+        binary search or adaptive strategies to minimize queries.
+      </p>
+
+      <ul>
+        <li>🏆 Examples of Interactive LeetCode Problems: </li>
+        <li>1️⃣ Guess Number Higher or Lower (#374) </li>
+        <li>💡 Concept: Use binary search to guess the hidden number. </li>
+        <li>📌 Interaction: Call guess(num) API, which returns:</li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
