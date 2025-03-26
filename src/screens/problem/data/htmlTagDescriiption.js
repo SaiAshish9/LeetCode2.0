@@ -8081,6 +8081,95 @@ public boolean canJump(int[] nums) {
       </ul>
     </>
   ),
+  Enumeration: (
+    <>
+      {" "}
+      <h2>Enumeration Tag on LeetCode</h2>
+      <p>
+        The <strong>Enumeration</strong> tag on LeetCode includes problems that
+        require generating and checking all possible solutions or subsets within
+        a feasible limit. This technique is often combined with pruning
+        strategies to optimize performance.
+      </p>
+      <h3>🔹 Key Concepts in Enumeration:</h3>
+      <ul>
+        <li>
+          <strong>Brute Force</strong>
+          <ul>
+            <li>Checking all possible solutions to find the best one.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Backtracking</strong>
+          <ul>
+            <li>Generating combinations and pruning invalid solutions.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Bitmasking</strong>
+          <ul>
+            <li>Using binary representation to iterate through subsets.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Permutation & Combination</strong>
+          <ul>
+            <li>Generating all valid permutations or subsets.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>🏆 Popular Enumeration Problems on LeetCode:</h3>
+      <ul>
+        <li>
+          <strong>Subsets (#78)</strong>
+          <p>
+            💡 <em>Concept:</em> Use backtracking or bitmasking to generate all
+            subsets.
+          </p>
+          <pre>
+            <code>
+              {`
+public List<List<Integer>> subsets(int[] nums) {
+    List<List<Integer>> res = new ArrayList<>();
+    backtrack(res, new ArrayList<>(), nums, 0);
+    return res;
+}
+
+private void backtrack(List<List<Integer>> res, List<Integer> temp, int[] nums, int start) {
+    res.add(new ArrayList<>(temp));
+    for (int i = start; i < nums.length; i++) {
+        temp.add(nums[i]);
+        backtrack(res, temp, nums, i + 1);
+        temp.remove(temp.size() - 1);
+    }
+}`}
+            </code>
+          </pre>
+        </li>
+        <li>
+          <strong>Permutations (#46)</strong>
+          <p>
+            💡 <em>Concept:</em> Use backtracking to generate all possible
+            orderings of elements.
+          </p>
+        </li>
+        <li>
+          <strong>Beautiful Arrangements (#526)</strong>
+          <p>
+            💡 <em>Concept:</em> Use backtracking to generate valid arrangements
+            based on divisibility conditions.
+          </p>
+        </li>
+      </ul>
+      <h3>🚀 How to Approach Enumeration Problems?</h3>
+      <ul>
+        <li>✔ Identify if all possible cases need to be checked.</li>
+        <li>✔ Optimize using backtracking, pruning, or bitmasking.</li>
+        <li>✔ Consider sorting the input for better efficiency.</li>
+        <li>✔ Use memoization to avoid recomputation if needed.</li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
