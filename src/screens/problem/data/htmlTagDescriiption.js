@@ -8606,6 +8606,89 @@ for choice in choices:
       </div>
     </>
   ),
+  "Breadth First Search": (
+    <>
+      {" "}
+      <h2>Breadth-First Search (BFS) - LeetCode Problems</h2>
+      <p>
+        The <strong>Breadth-First Search (BFS)</strong> tag on LeetCode includes
+        problems that require exploring all neighboring nodes before moving to
+        the next depth level. BFS is often used for:
+      </p>
+      <ul>
+        <li>✅ Graph traversal (shortest paths, connectivity)</li>
+        <li>✅ Tree level-order traversal (exploring nodes level by level)</li>
+        <li>✅ Pathfinding in grids (like shortest paths in a maze)</li>
+        <li>✅ Connected component problems (like number of islands)</li>
+        <li>✅ State-space search (like word ladder problems)</li>
+      </ul>
+      <h3>🔥 Common BFS Problems:</h3>
+      <ul>
+        <li>
+          <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">
+            Binary Tree Level Order Traversal → LeetCode #102
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/word-ladder/">
+            Word Ladder → LeetCode #127
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/number-of-islands/">
+            Number of Islands → LeetCode #200
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/rotting-oranges/">
+            Rotting Oranges → LeetCode #994
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/">
+            Shortest Path in Binary Matrix → LeetCode #1091
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/clone-graph/">
+            Clone Graph → LeetCode #133
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/course-schedule/">
+            Course Schedule → LeetCode #207
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/problems/jump-game-iii/">
+            Jump Game III → LeetCode #1306
+          </a>
+        </li>
+      </ul>
+      <h3>🔄 BFS Template:</h3>
+      <pre>
+        <code>
+          {`from collections import deque
+
+def bfs(start):
+  queue = deque([start])  # Initialize queue with the starting node
+  visited = set([start])  # Track visited nodes
+  
+  while queue:
+      node = queue.popleft()  # Process the front node
+      for neighbor in get_neighbors(node):
+          if neighbor not in visited:
+              visited.add(neighbor)
+              queue.append(neighbor)  # Add neighbors to queue`}
+        </code>
+      </pre>
+      <p>
+        BFS ensures the <strong>shortest path in unweighted graphs</strong> and
+        is typically implemented using <code>deque</code> in Python for
+        efficiency.
+      </p>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
