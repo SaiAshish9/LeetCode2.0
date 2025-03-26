@@ -8487,6 +8487,108 @@ void functionB(int n) {
       </ul>
     </>
   ),
+  Backtracking: (
+    <>
+      <div>
+        <p>
+          The Backtracking tag on LeetCode includes problems that require
+          exploring all possible solutions recursively and pruning paths that do
+          not satisfy constraints. It's often used for problems involving:
+        </p>
+        <ul>
+          <li>
+            <strong>Combinations</strong> (choosing subsets)
+          </li>
+          <li>
+            <strong>Permutations</strong> (rearranging elements)
+          </li>
+          <li>
+            <strong>Subsets</strong> (power sets)
+          </li>
+          <li>
+            <strong>Sudoku solving</strong> (constraint satisfaction problems)
+          </li>
+          <li>
+            <strong>Word search</strong> (pathfinding in grids)
+          </li>
+          <li>
+            <strong>N-Queens</strong> (placing objects with constraints)
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <h3>🔥 Common Backtracking Problems:</h3>
+        <ul>
+          <li>
+            <a href="https://leetcode.com/problems/subsets/">
+              Subsets → LeetCode #78
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/subsets-ii/">
+              Subsets II (with duplicates) → LeetCode #90
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/permutations/">
+              Permutations → LeetCode #46
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/permutations-ii/">
+              Permutations II (with duplicates) → LeetCode #47
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/combination-sum/">
+              Combination Sum → LeetCode #39
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/combination-sum-ii/">
+              Combination Sum II → LeetCode #40
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/palindrome-partitioning/">
+              Palindrome Partitioning → LeetCode #131
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">
+              Letter Combinations of a Phone Number → LeetCode #17
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/word-search/">
+              Word Search → LeetCode #79
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/problems/n-queens/">
+              N-Queens → LeetCode #51
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <h3>🔄 Backtracking Template:</h3>
+        <pre>
+          {`def backtrack(path, choices):
+if goal_reached(path):  # Base condition
+    result.append(path[:])  # Make a deep copy
+    return
+for choice in choices:
+    if is_valid(choice):  # Prune invalid choices
+        path.append(choice)
+        backtrack(path, new_choices)  # Recursive call
+        path.pop()  # Undo the choice (backtrack)`}
+        </pre>
+      </div>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
