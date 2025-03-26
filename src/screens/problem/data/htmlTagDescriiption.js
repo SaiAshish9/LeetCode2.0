@@ -7982,6 +7982,105 @@ class LRUCache {
       </ul>
     </>
   ),
+  Greedy: (
+    <>
+      <p>
+        The <strong>Greedy</strong> tag on LeetCode includes problems that
+        require making locally optimal choices at each step with the hope of
+        reaching a globally optimal solution. These problems often involve
+        sorting, heap-based optimizations, and interval scheduling.
+      </p>
+
+      <h3>🔹 Key Concepts in Greedy Algorithms:</h3>
+      <ul>
+        <li>
+          <strong>Greedy Choice Property</strong>
+          <ul>
+            <li>
+              Choosing the best possible option at each step without revisiting
+              previous choices.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Optimal Substructure</strong>
+          <ul>
+            <li>
+              Solving subproblems optimally leads to an overall optimal
+              solution.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sorting & Interval Problems</strong>
+          <ul>
+            <li>Activity selection, meeting room scheduling.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Heap-Based Optimization</strong>
+          <ul>
+            <li>
+              Using priority queues for job scheduling and Huffman coding.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>🏆 Popular Greedy Problems on LeetCode:</h3>
+      <ul>
+        <li>
+          <strong>Jump Game (#55)</strong>
+          <p>
+            💡 <em>Concept:</em> Traverse from left to right, keeping track of
+            the farthest reachable index.
+          </p>
+          <pre>
+            <code>
+              {`
+public boolean canJump(int[] nums) {
+    int maxReach = 0;
+    for (int i = 0; i < nums.length; i++) {
+        if (i > maxReach) return false;
+        maxReach = Math.max(maxReach, i + nums[i]);
+    }
+    return true;
+}`}
+            </code>
+          </pre>
+        </li>
+        <li>
+          <strong>Assign Cookies (#455)</strong>
+          <p>
+            💡 <em>Concept:</em> Sort both arrays and assign cookies greedily to
+            maximize satisfaction.
+          </p>
+        </li>
+        <li>
+          <strong>Task Scheduler (#621)</strong>
+          <p>
+            💡 <em>Concept:</em> Use a priority queue to schedule tasks based on
+            frequency.
+          </p>
+        </li>
+      </ul>
+
+      <h3>🚀 How to Approach Greedy Problems?</h3>
+      <ul>
+        <li>
+          ✔ Identify if the problem has the{" "}
+          <strong>Greedy Choice Property</strong>.
+        </li>
+        <li>
+          ✔ Check if the problem exhibits <strong>Optimal Substructure</strong>.
+        </li>
+        <li>
+          ✔ Consider sorting or using a heap (priority queue) for optimization.
+        </li>
+        <li>✔ Verify correctness by analyzing edge cases.</li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
