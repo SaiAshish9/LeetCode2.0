@@ -8606,7 +8606,7 @@ for choice in choices:
       </div>
     </>
   ),
-  "Breadth First Search": (
+  "Breadth-First Search": (
     <>
       {" "}
       <h2>Breadth-First Search (BFS) - LeetCode Problems</h2>
@@ -8687,6 +8687,48 @@ def bfs(start):
         is typically implemented using <code>deque</code> in Python for
         efficiency.
       </p>
+    </>
+  ),
+  "Depth-First Search": (
+    <>
+      <p>
+        DFS is a fundamental graph traversal algorithm that explores as far as
+        possible along each branch before backtracking. It can be implemented
+        using recursion or a stack.
+      </p>
+
+      <h2>🔥 Common DFS Problems:</h2>
+      <ul>
+        <li>Number of Islands → LeetCode #200</li>
+        <li>Surrounded Regions → LeetCode #130</li>
+        <li>Word Search → LeetCode #79</li>
+        <li>Course Schedule → LeetCode #207</li>
+        <li>Longest Increasing Path in a Matrix → LeetCode #329</li>
+        <li>Graph Valid Tree → LeetCode #261</li>
+        <li>Pacific Atlantic Water Flow → LeetCode #417</li>
+        <li>Max Area of Island → LeetCode #695</li>
+        <li>Accounts Merge → LeetCode #721</li>
+      </ul>
+
+      <h2>🔄 DFS Recursive Template:</h2>
+      <code>
+        def dfs(node, visited): if node in visited: return visited.add(node) for
+        neighbor in graph[node]: dfs(neighbor, visited)
+      </code>
+
+      <h2>🔄 DFS Iterative Template (Using Stack):</h2>
+      <code>
+        {`
+        def dfs_iterative(start):
+            stack = [start]
+            visited = set()
+            while stack:
+                node = stack.pop()
+                if node not in visited:
+                    visited.add(node)
+                    for neighbor in graph[node]:
+                        stack.append(neighbor)`}
+      </code>
     </>
   ),
 };
