@@ -7519,6 +7519,77 @@ class TopologicalSortDFS {
       </ul>
     </>
   ),
+  "Data Stream": (
+    <>
+      <h2>Key Concepts of Data Streams</h2>
+      <ul>
+        <li>Continuous flow of data that is processed sequentially.</li>
+        <li>Efficient processing without storing entire data in memory.</li>
+        <li>
+          Common techniques:
+          <ul>
+            <li>
+              <strong>Heap/Priority Queue:</strong> Used for median, top-K
+              elements.
+            </li>
+            <li>
+              <strong>Sliding Window:</strong> Efficient for real-time
+              analytics.
+            </li>
+            <li>
+              <strong>HashMap:</strong> Frequency tracking in streams.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Example: Finding the median in a stream using a priority queue.
+          <pre>
+            {`
+import java.util.*;
+
+class MedianFinder {
+    private PriorityQueue<Integer> left; // max heap
+    private PriorityQueue<Integer> right; // min heap
+
+    public MedianFinder() {
+        left = new PriorityQueue<>(Collections.reverseOrder());
+        right = new PriorityQueue<>();
+    }
+
+    public void addNum(int num) {
+        if (left.isEmpty() || num <= left.peek()) {
+            left.offer(num);
+        } else {
+            right.offer(num);
+        }
+        if (left.size() > right.size() + 1) {
+            right.offer(left.poll());
+        } else if (right.size() > left.size()) {
+            left.offer(right.poll());
+        }
+    }
+
+    public double findMedian() {
+        if (left.size() == right.size()) {
+            return (left.peek() + right.peek()) / 2.0;
+        }
+        return left.peek();
+    }
+}`}
+          </pre>
+        </li>
+        <li>
+          Applications:
+          <ul>
+            <li>Stock price monitoring.</li>
+            <li>Real-time fraud detection.</li>
+            <li>Live log processing.</li>
+            <li>Social media trend analysis.</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
