@@ -8386,6 +8386,107 @@ void functionB(int n) {
       </ul>
     </>
   ),
+  Sorting: (
+    <>
+      <h1>Sorting Tag on LeetCode</h1>
+      <p>
+        The Sorting tag on LeetCode includes problems that require sorting
+        elements using different algorithms, optimizing comparisons, or
+        leveraging specialized sorting techniques.
+      </p>
+
+      <h2>🔹 Common Sorting Algorithms</h2>
+      <ul>
+        <li>
+          <strong>1️⃣ Comparison-Based Sorting Algorithms</strong>
+          <ul>
+            <li>
+              <strong>Bubble Sort (O(n²))</strong>: Repeatedly swaps adjacent
+              elements if they are in the wrong order.
+            </li>
+            <li>
+              <strong>Selection Sort (O(n²))</strong>: Finds the smallest
+              element and places it at the correct position.
+            </li>
+            <li>
+              <strong>Insertion Sort (O(n²), best-case O(n))</strong>: Builds a
+              sorted array by inserting elements at the right position.
+            </li>
+            <li>
+              <strong>Merge Sort (O(n log n))</strong>: Uses divide and conquer
+              to split the array and merge sorted halves.
+            </li>
+            <li>
+              <strong>QuickSort (O(n log n), worst-case O(n²))</strong>: Uses a
+              pivot to partition elements and sort recursively.
+            </li>
+            <li>
+              <strong>Heap Sort (O(n log n))</strong>: Uses a Max Heap or Min
+              Heap to extract the largest/smallest elements.
+            </li>
+            <li>
+              <strong>Tim Sort (O(n log n))</strong>: Hybrid of Merge Sort &
+              Insertion Sort, used in Python's <code>sorted()</code> and Java's{" "}
+              <code>Arrays.sort()</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>2️⃣ Non-Comparison-Based Sorting Algorithms</strong>
+          <ul>
+            <li>
+              <strong>Counting Sort (O(n + k))</strong>: Works for small integer
+              ranges.
+            </li>
+            <li>
+              <strong>Radix Sort (O(nk))</strong>: Works for numbers with
+              limited digit size.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>🚀 Sorting-Related Problems on LeetCode</h2>
+      <ul>
+        <li>
+          <strong>Sort Colors</strong> - Medium (Dutch National Flag Algorithm)
+        </li>
+        <li>
+          <strong>Kth Largest Element in an Array</strong> - Medium
+          (QuickSelect, Heap)
+        </li>
+        <li>
+          <strong>Merge Intervals</strong> - Medium (Sorting, Greedy)
+        </li>
+        <li>
+          <strong>Top K Frequent Elements</strong> - Medium (Heap, Bucket Sort)
+        </li>
+        <li>
+          <strong>Largest Number</strong> - Medium (Custom Comparator)
+        </li>
+      </ul>
+
+      <h2>🎯 How to Approach Sorting Problems?</h2>
+      <ul>
+        <li>
+          Use <strong>O(n log n)</strong> sorting (MergeSort, QuickSort,
+          HeapSort) for general cases.
+        </li>
+        <li>
+          Use <strong>O(n)</strong> sorting (Counting Sort, Radix Sort) for
+          small number ranges.
+        </li>
+        <li>
+          Consider stability: MergeSort, Counting Sort, and Bubble Sort are
+          stable.
+        </li>
+        <li>
+          Use built-in sorting functions like{" "}
+          <code>sort(arr.begin(), arr.end())</code> in C++.
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
