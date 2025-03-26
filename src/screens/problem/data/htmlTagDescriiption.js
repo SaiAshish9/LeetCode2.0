@@ -2762,6 +2762,129 @@ public class Solution {
   Combinatorics: (
     <>
       {" "}
+      <h2>🔢 LeetCode Combinatorics</h2>
+      <p>
+        The <strong>Combinatorics</strong> tag on LeetCode includes problems
+        that involve counting, permutations, combinations, and mathematical
+        techniques to solve counting-related challenges efficiently.
+      </p>
+      <h3>🔢 Key Concepts in Combinatorics</h3>
+      <ul>
+        <li>
+          <strong>Factorials & Permutations</strong>
+          <ul class="problem-list">
+            <li>Counting arrangements of objects.</li>
+            <li class="formula">P(n, r) = n! / (n - r)!</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Combinations</strong>
+          <ul class="problem-list">
+            <li>Selecting items without considering order.</li>
+            <li class="formula">C(n, r) = n! / (r! * (n - r)!)</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Binomial Coefficients</strong>
+          <ul class="problem-list">
+            <li>Used in Pascal's Triangle.</li>
+            <li>Applied in probability and counting problems.</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Catalan Numbers</strong>
+          <ul class="problem-list">
+            <li>
+              Used in problems like valid parentheses, BST counting, and polygon
+              triangulation.
+            </li>
+            <li class="formula">C(n) = (2n)! / ((n + 1)! * n!)</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Inclusion-Exclusion Principle</strong>
+          <ul class="problem-list">
+            <li>Helps in counting overlapping sets.</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Generating Functions & Recurrence Relations</strong>
+          <ul class="problem-list">
+            <li>Used in counting paths and sequences.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>📌 Popular Combinatorics Problems</h3>
+      <ul class="problem-list">
+        <li>Unique Paths (#62)</li>
+        <li>Combinations (#77)</li>
+        <li>Permutation Sequence (#60)</li>
+        <li>Count Vowel Strings (#1641)</li>
+        <li>Number of Ways to Rearrange Sticks (#1866)</li>
+      </ul>
+      <h3>📌 Techniques Used</h3>
+      <ul class="problem-list">
+        <li>Backtracking</li>
+        <li>Dynamic Programming</li>
+        <li>Mathematical Formulas</li>
+        <li>Bit Manipulation</li>
+      </ul>
+      <h3>💻 Code Examples</h3>
+      <ul class="problem-list">
+        <li>
+          <strong>Combinations (LeetCode #77)</strong>
+          <pre>
+            {`
+def combine(n, k):
+result = []
+def backtrack(start, path):
+    if len(path) == k:
+        result.append(path[:])
+        return
+    for i in range(start, n + 1):
+        path.append(i)
+        backtrack(i + 1, path)
+        path.pop()
+backtrack(1, [])
+return result`}
+          </pre>
+        </li>
+
+        <li>
+          <strong>Unique Paths (LeetCode #62)</strong>
+          <pre>
+            {`
+def uniquePaths(m, n):
+dp = [[1] * n for _ in range(m)]
+for i in range(1, m):
+    for j in range(1, n):
+        dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+return dp[-1][-1]`}
+          </pre>
+        </li>
+
+        <li>
+          <strong>Permutation Sequence (LeetCode #60)</strong>
+          <pre>
+            {`
+def getPermutation(n, k):
+import math
+nums = list(range(1, n + 1))
+k -= 1
+result = []
+for i in range(n, 0, -1):
+    index = k // math.factorial(i - 1)
+    result.append(str(nums.pop(index)))
+    k %= math.factorial(i - 1)
+return ''.join(result)`}
+          </pre>
+        </li>
+      </ul>
       <p>
         The "Combinatorics" tag on LeetCode categorizes problems that involve
         counting, arranging, or selecting elements in specific ways using
@@ -4477,8 +4600,8 @@ public class Main {
         <p></p>
         <pre>
           <code>
-            If (n &amp; (<span class="hljs-number">1</span>{`<<`}i) =={" "}
-            <span class="hljs-number">0</span>) =&gt;{" "}
+            If (n &amp; (<span class="hljs-number">1</span>
+            {`<<`}i) == <span class="hljs-number">0</span>) =&gt;{" "}
             <span class="hljs-built_in">set</span>
             <span class="hljs-keyword">else</span>{" "}
             <span class="hljs-keyword">not</span>{" "}
@@ -4530,8 +4653,7 @@ public class Main {
         <p></p>
         <p>
           <code>
-            n &amp; ((1{`<<`}k) - 1) == 0 // n is divisible by 2^k (=
-            (1{`<<`}k)
+            n &amp; ((1{`<<`}k) - 1) == 0 // n is divisible by 2^k (= (1{`<<`}k)
           </code>
           ).
         </p>
@@ -4642,8 +4764,8 @@ public class Main {
             Binary Representation: Bitmasks use binary digits (bits) to
             represent subsets of elements or states. <br />
             Binary Operations: They leverage bitwise operations like AND (&), OR
-            (|), XOR (^), and shifting ({`<<`}, {`>>`}) to manipulate and
-            check subsets efficiently.
+            (|), XOR (^), and shifting ({`<<`}, {`>>`}) to manipulate and check
+            subsets efficiently.
           </p>
           <ul>
             <li>
@@ -4654,8 +4776,7 @@ public class Main {
               <strong>Binary Operations:</strong> They leverage bitwise
               operations like AND (<code>&</code>), OR (<code>|</code>), XOR (
               <code>^</code>), and shifting (<code>{`<<`}</code>,{" "}
-              <code>{`>>`}</code>) to manipulate and check subsets
-              efficiently.
+              <code>{`>>`}</code>) to manipulate and check subsets efficiently.
             </li>
           </ul>
         </li>
@@ -4741,7 +4862,8 @@ public class Main {
         let subset = [];
         
         for (let j = 0; j &lt; n; j++) {
-            if (i & (1 {`<<`} j)) {
+            if (i & (1 {` <<
+                `} j)) {
                 subsetSum += nums[j];
                 subset.push(nums[j]);
             }
@@ -4800,8 +4922,7 @@ public class Main {
           <h3>Setting a Bit:</h3>
           <ul>
             <li>
-              <strong>Operation:</strong>{" "}
-              <code>bitmask |= (1 {`<<`} pos)</code>
+              <strong>Operation:</strong> <code>bitmask |= (1 {`<<`} pos)</code>
             </li>
             <li>
               <strong>Effect:</strong> Sets the bit at position <code>pos</code>{" "}
@@ -4834,8 +4955,7 @@ public class Main {
           <h3>Toggling a Bit:</h3>
           <ul>
             <li>
-              <strong>Operation:</strong>{" "}
-              <code>bitmask ^= (1 {`<<`} pos)</code>
+              <strong>Operation:</strong> <code>bitmask ^= (1 {`<<`} pos)</code>
             </li>
             <li>
               <strong>Effect:</strong> Toggles (flips) the bit at position{" "}
@@ -4869,8 +4989,8 @@ public class Main {
           <ul>
             <li>
               <strong>Operation:</strong> Iterate from <code>0</code> to{" "}
-              <code>(1 {`<<`} n) - 1</code>, where <code>n</code> is the
-              number of elements.
+              <code>(1 {`<<`} n) - 1</code>, where <code>n</code> is the number
+              of elements.
             </li>
             <li>
               <strong>Effect:</strong> Generates all possible subsets using
@@ -5094,10 +5214,10 @@ public class Main {
       <ul>
         <li>
           <strong>Time Complexity:</strong> Operations involving bit
-          manipulation (<code>|</code>, <code>&amp;</code>,{" "}
-          <code>{`<<`}</code>, <code>{`>>`}</code>, <code>~</code>) are
-          generally <code>O(1)</code> because they are executed in constant time
-          relative to the size of the bitmask (typically 32 or 64 bits).
+          manipulation (<code>|</code>, <code>&amp;</code>, <code>{`<<`}</code>,{" "}
+          <code>{`>>`}</code>, <code>~</code>) are generally <code>O(1)</code>{" "}
+          because they are executed in constant time relative to the size of the
+          bitmask (typically 32 or 64 bits).
         </li>
         <li>
           <strong>Space Complexity:</strong> The space complexity is{" "}
