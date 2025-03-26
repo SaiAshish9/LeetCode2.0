@@ -8170,6 +8170,146 @@ private void backtrack(List<List<Integer>> res, List<Integer> temp, int[] nums, 
       </ul>
     </>
   ),
+  Recursion: (
+    <>
+      <p>
+        The <strong>Recursion</strong> tag on LeetCode consists of problems that
+        involve solving a problem by breaking it down into smaller subproblems
+        and solving them recursively. These problems often include{" "}
+        <strong>
+          divide and conquer, backtracking, dynamic programming, and
+          mathematical reasoning
+        </strong>
+        .
+      </p>
+
+      <h2>🔹 Types of Recursion Problems</h2>
+
+      <h3>1️⃣ Direct and Indirect Recursion</h3>
+      <h4>✅ Direct Recursion</h4>
+      <p>A function calls itself directly.</p>
+      <pre>
+        <code>{`int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}`}</code>
+      </pre>
+
+      <h4>✅ Indirect Recursion</h4>
+      <p>
+        A function calls another function, which then calls the first function
+        again.
+      </p>
+      <pre>
+        <code>{`void functionA(int n) {
+    if (n > 0) {
+        printf("%d ", n);
+        functionB(n - 1);
+    }
+}
+
+void functionB(int n) {
+    if (n > 1) {
+        printf("%d ", n);
+        functionA(n / 2);
+    }
+}`}</code>
+      </pre>
+
+      <h3>2️⃣ Head and Tail Recursion</h3>
+      <h4>✅ Head Recursion</h4>
+      <p>
+        The recursive call is made before processing the current function logic.
+      </p>
+      <pre>
+        <code>{`void headRecursion(int n) {
+    if (n == 0) return;
+    headRecursion(n - 1);
+    printf("%d ", n);
+}`}</code>
+      </pre>
+
+      <h4>✅ Tail Recursion</h4>
+      <p>The recursive call is the last operation before returning.</p>
+      <pre>
+        <code>{`void tailRecursion(int n) {
+    if (n == 0) return;
+    printf("%d ", n);
+    tailRecursion(n - 1);
+}`}</code>
+      </pre>
+
+      <h3>3️⃣ Nested Recursion</h3>
+      <p>A function calls itself within its own recursive call.</p>
+      <pre>
+        <code>{`int nestedRecursion(int n) {
+    if (n > 100) return n - 10;
+    return nestedRecursion(nestedRecursion(n + 11));
+}`}</code>
+      </pre>
+
+      <h3>4️⃣ Backtracking (Recursive Search)</h3>
+      <p>Used in combinations, permutations, and pathfinding problems.</p>
+      <pre>
+        <code>
+          {`void backtrack(vector<vector<int>>& res, vector<int>& temp, vector<int>& nums, int start) {
+    res.push_back(temp);
+    for (int i = start; i < nums.size(); i++) {
+        temp.push_back(nums[i]);
+        backtrack(res, temp, nums, i + 1);
+        temp.pop_back();
+    }
+}`}
+        </code>
+      </pre>
+
+      <h3>5️⃣ Divide and Conquer</h3>
+      <p>
+        The problem is broken into smaller independent subproblems, solved
+        recursively, and merged.
+      </p>
+      <pre>
+        <code>{`void mergeSort(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
+}`}</code>
+      </pre>
+
+      <h3>6️⃣ Dynamic Programming with Recursion (Memoization)</h3>
+      <p>Stores previously computed results to avoid redundant calculations.</p>
+      <pre>
+        <code>{`int climbStairs(int n, vector<int>& memo) {
+    if (n <= 2) return n;
+    if (memo[n] > 0) return memo[n];
+    return memo[n] = climbStairs(n - 1, memo) + climbStairs(n - 2, memo);
+}`}</code>
+      </pre>
+
+      <h3>7️⃣ Tree Recursion</h3>
+      <p>Each recursive call branches into multiple recursive calls.</p>
+      <pre>
+        <code>{`void preorder(TreeNode* root) {
+    if (!root) return;
+    printf("%d ", root->val);
+    preorder(root->left);
+    preorder(root->right);
+}`}</code>
+      </pre>
+
+      <h2>🚀 How to Approach Recursion Problems?</h2>
+      <ul>
+        <li>✔ Identify base cases to stop recursion.</li>
+        <li>✔ Ensure recursion moves towards termination.</li>
+        <li>✔ Use memoization to optimize redundant calculations.</li>
+        <li>✔ Consider tail recursion for optimized performance.</li>
+        <li>✔ Break the problem into subproblems for divide and conquer.</li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
