@@ -7753,6 +7753,132 @@ class MedianFinder {
       </ul>
     </>
   ),
+  Math: (
+    <>
+      <h2>The Math Tag on LeetCode</h2>
+      <p>
+        The Math tag on LeetCode includes problems that require mathematical
+        reasoning, number theory, algebra, and combinatorics to solve
+        efficiently.
+      </p>
+
+      <h3>🔢 Key Topics in Math Problems:</h3>
+      <ul>
+        <li>
+          <strong>1️⃣ Number Theory</strong>
+          <ul>
+            <li>Prime Numbers</li>
+            <li>Greatest Common Divisor (GCD) & Least Common Multiple (LCM)</li>
+            <li>Modular Arithmetic</li>
+          </ul>
+        </li>
+        <li>
+          <strong>2️⃣ Bit Manipulation</strong>
+          <ul>
+            <li>XOR operations</li>
+            <li>Counting set bits</li>
+          </ul>
+        </li>
+        <li>
+          <strong>3️⃣ Combinatorics & Probability</strong>
+          <ul>
+            <li>Factorials, Permutations, and Combinations</li>
+            <li>Pascal’s Triangle & Binomial Coefficients</li>
+            <li>Inclusion-Exclusion Principle</li>
+          </ul>
+        </li>
+        <li>
+          <strong>4️⃣ Algebra & Geometry</strong>
+          <ul>
+            <li>Matrix operations</li>
+            <li>Coordinate Geometry</li>
+            <li>Pythagorean Theorem</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>🏆 Popular Math Problems on LeetCode:</h3>
+      <ul>
+        <li>
+          <strong>1️⃣ Pow(x, n) (#50)</strong>
+          <p>
+            💡 <strong>Concept:</strong> Implement fast exponentiation using
+            recursion and modular arithmetic.
+          </p>
+          <pre>
+            <code>
+              {`
+public double myPow(double x, int n) {
+    if (n == 0) return 1;
+    double half = myPow(x, n / 2);
+    return (n % 2 == 0) ? half * half : half * half * x;
+}`}
+            </code>
+          </pre>
+        </li>
+        <li>
+          <strong>2️⃣ Greatest Common Divisor of Strings (#1071)</strong>
+          <p>
+            💡 <strong>Concept:</strong> Use GCD to find the largest common
+            repeating pattern in two strings.
+          </p>
+          <pre>
+            <code>
+              {`
+public String gcdOfStrings(String str1, String str2) {
+    return (str1 + str2).equals(str2 + str1) ? 
+           str1.substring(0, gcd(str1.length(), str2.length())) : "";
+}
+
+private int gcd(int a, int b) {
+    return b == 0 ? a : gcd(b, a % b);
+}`}
+            </code>
+          </pre>
+        </li>
+        <li>
+          <strong>3️⃣ Happy Number (#202)</strong>
+          <p>
+            💡 <strong>Concept:</strong> Use a set to detect cycles in the sum
+            of squares of digits.
+          </p>
+          <pre>
+            <code>
+              {`
+public boolean isHappy(int n) {
+    Set<Integer> seen = new HashSet<>();
+    while (n != 1 && !seen.contains(n)) {
+        seen.add(n);
+        n = sumOfSquares(n);
+    }
+    return n == 1;
+}
+
+private int sumOfSquares(int n) {
+    int sum = 0;
+    while (n > 0) {
+        int digit = n % 10;
+        sum += digit * digit;
+        n /= 10;
+    }
+    return sum;
+}`}
+            </code>
+          </pre>
+        </li>
+      </ul>
+
+      <h3>🚀 How to Approach Math Problems?</h3>
+      <ul>
+        <li>✔ Break down the problem into mathematical formulas</li>
+        <li>✔ Use properties like modular arithmetic and bitwise operations</li>
+        <li>
+          ✔ Optimize using mathematical shortcuts (e.g., GCD, binary
+          exponentiation)
+        </li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
