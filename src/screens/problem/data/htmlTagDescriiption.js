@@ -7879,6 +7879,109 @@ private int sumOfSquares(int n) {
       </ul>
     </>
   ),
+  Design: (
+    <>
+      {" "}
+      <p>
+        The <strong>Design</strong> tag on LeetCode includes problems that
+        require designing data structures, caching systems, and object-oriented
+        solutions. These problems test understanding of design principles,
+        patterns, and efficient storage/retrieval mechanisms.
+      </p>
+      <h3>🔹 Key Topics in Design Problems:</h3>
+      <ul>
+        <li>
+          <strong>Data Structures Design</strong>
+          <ul>
+            <li>
+              Implementing custom data structures (e.g., LRU Cache, Trie,
+              HashMap)
+            </li>
+            <li>Optimizing insert, search, and delete operations</li>
+          </ul>
+        </li>
+        <li>
+          <strong>System Design Fundamentals</strong>
+          <ul>
+            <li>Scalability, consistency, and fault tolerance</li>
+            <li>Rate limiting, load balancing, and distributed caching</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Concurrency & Multithreading</strong>
+          <ul>
+            <li>Thread-safe operations</li>
+            <li>Design of concurrent systems</li>
+          </ul>
+        </li>
+        <li>
+          <strong>OOD (Object-Oriented Design)</strong>
+          <ul>
+            <li>Applying SOLID principles</li>
+            <li>Designing classes with encapsulation and modularity</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>🏆 Popular Design Problems on LeetCode:</h3>
+      <ul>
+        <li>
+          <strong>LRU Cache (#146)</strong>
+          <p>
+            💡 <em>Concept:</em> Use a HashMap & Doubly Linked List for O(1)
+            operations.
+          </p>
+          <pre>
+            <code>
+              {`
+class LRUCache {
+   private final int capacity;
+   private final Map<Integer, Integer> map;
+
+   public LRUCache(int capacity) {
+       this.capacity = capacity;
+       this.map = new LinkedHashMap<>(capacity, 0.75f, true);
+   }
+
+   public int get(int key) {
+       return map.getOrDefault(key, -1);
+   }
+
+   public void put(int key, int value) {
+       if (map.size() >= capacity) {
+           map.remove(map.keySet().iterator().next());
+       }
+       map.put(key, value);
+   }
+}`}
+            </code>
+          </pre>
+        </li>
+        <li>
+          <strong>Design Twitter (#355)</strong>
+          <p>
+            💡 <em>Concept:</em> Use HashMaps and Priority Queues to manage
+            tweets & followers.
+          </p>
+        </li>
+        <li>
+          <strong>Design Hit Counter (#362)</strong>
+          <p>
+            💡 <em>Concept:</em> Use a sliding window approach for efficient hit
+            tracking.
+          </p>
+        </li>
+      </ul>
+      <h3>🚀 How to Approach Design Problems?</h3>
+      <ul>
+        <li>✔ Identify key operations and constraints</li>
+        <li>
+          ✔ Choose the right data structure (e.g., HashMap, Trie, Linked List)
+        </li>
+        <li>✔ Optimize for time & space complexity</li>
+        <li>✔ Consider edge cases and concurrency requirements</li>
+      </ul>
+    </>
+  ),
 };
 
 export default TAG_DESCRIPTION;
