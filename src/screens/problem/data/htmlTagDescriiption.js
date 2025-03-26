@@ -8586,6 +8586,23 @@ for choice in choices:
         backtrack(path, new_choices)  # Recursive call
         path.pop()  # Undo the choice (backtrack)`}
         </pre>
+        <ul>
+          <li>
+            {" "}
+            Use recursion when breaking a problem into subproblems without
+            multiple choices.
+          </li>
+
+          <li>
+            Use backtracking when you need to explore all possibilities but can
+            discard invalid ones.
+          </li>
+
+          <li>
+            Use branch and bound when you need to find the optimal solution
+            while pruning unnecessary paths.
+          </li>
+        </ul>
       </div>
     </>
   ),
