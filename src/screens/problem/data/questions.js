@@ -40193,8 +40193,13 @@ for (int i = 0; i &lt; actualLength; i++) {
 
       <pre>
         <strong>Input:</strong> nums = [0,1] <br />
-        <strong>Output:</strong> 2<strong>Explanation:</strong> [0, 1] is the
-        longest contiguous subarray with an equal number of 0 and 1.
+        <strong>Output:</strong> 2
+        <strong>
+          <br />
+          Explanation:
+        </strong>{" "}
+        [0, 1] is the longest contiguous subarray with an equal number of 0 and
+        1.
       </pre>
 
       <p>
