@@ -47193,14 +47193,14 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
       </p>
 
       <pre>
-        <strong>Input</strong>
+        <strong>Input:</strong> <br />
         ["WordDictionary","addWord","addWord","addWord","search","search","search","search"]{" "}
         <br />
         [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]] <br />
-        <strong>Output</strong>
+        <strong>Output:</strong>
         <br />
-        [null,null,null,null,false,true,true,true]
-        <strong>Explanation</strong>
+        [null,null,null,null,false,true,true,true] <br />
+        <strong>Explanation:</strong>
         <br />
         WordDictionary wordDictionary = new WordDictionary();
         <br />
