@@ -47123,9 +47123,9 @@ snake.move("U"); -&gt; Returns -1 (Game over because snake collides with border)
         <strong>Input</strong> <br />
         ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]{" "}
         <br />
-        [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+        [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]] <br />
         <strong>Output</strong> <br />
-        [null, null, true, false, true, null, true]
+        [null, null, true, false, true, null, true] <br />
         <strong>Explanation</strong> <br />
         Trie trie = new Trie(); <br />
         trie.insert("apple"); <br />
