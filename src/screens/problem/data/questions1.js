@@ -64237,6 +64237,74 @@ l a d y`}
       </ul>
     </div>
   ),
+  46: (
+    <div class="elfjS" data-track-load="description_content">
+      <p>
+        Given an array <code>nums</code> of distinct integers, return all the
+        possible{" "}
+        <span
+          data-keyword="permutation-array"
+          class=" cursor-pointer relative text-dark-blue-s text-sm"
+        >
+          <button
+            type="button"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-controls="radix-:rp:"
+            data-state="closed"
+            class=""
+          >
+            permutations
+          </button>
+        </span>
+        . You can return the answer in <strong>any order</strong>.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <strong class="example">Example 1:</strong>
+      </p>{" "}
+      <br />
+      <pre>
+        <strong>Input:</strong> nums = [1,2,3] <br />
+        <strong>Output:</strong>{" "}
+        [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]] <br />
+      </pre>
+      <p>
+        <strong class="example">Example 2:</strong>
+      </p>
+      <br />
+      <pre>
+        <strong>Input:</strong> nums = [0,1]
+        <br />
+        <strong>Output:</strong> [[0,1],[1,0]]
+        <br />
+      </pre>
+      <p>
+        <strong class="example">Example 3:</strong>
+      </p>
+      <br />
+      <pre>
+        <strong>Input:</strong> nums = [1]
+        <br />
+        <strong>Output:</strong> [[1]]
+      </pre>
+      <p>&nbsp;</p>
+      <p>
+        <strong>Constraints:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>1 &lt;= nums.length &lt;= 6</code>
+        </li>
+        <li>
+          <code>-10 &lt;= nums[i] &lt;= 10</code>
+        </li>
+        <li>
+          All the integers of <code>nums</code> are <strong>unique</strong>.
+        </li>
+      </ul>
+    </div>
+  ),
 };
 
 export default QUESTIONS;
