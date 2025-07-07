@@ -60,18 +60,21 @@ const columns = [
     dataIndex: "title",
     key: "title",
     sorter: (a, b) => a.title - b.title,
-    render: (_, { title }) => (
+    render: (_, { title, status }) => (
       <p
         onClick={() => {
-          window.open(
-            "/problems/" +
-              title
-                ?.split(".")?.[1]
-                ?.trim()
-                ?.toLowerCase()
-                .replaceAll(" ", "_"),
-            "_blank"
-          );
+          console.log({ status });
+          if (status !== "incomplete") {
+            window.open(
+              "/problems/" +
+                title
+                  ?.split(".")?.[1]
+                  ?.trim()
+                  ?.toLowerCase()
+                  .replaceAll(" ", "_"),
+              "_blank"
+            );
+          }
         }}
       >
         {title}
@@ -322,9 +325,7 @@ const TableContainer = () => {
             showSizeChanger: true,
             pageSizeOptions: ["20", "50", "100"],
             onChange: (page, pageSize) => {
-              if (tableData[0]?.status !== "done") {
-                navigate(`/?page=${page}`);
-              }
+              navigate(`/?page=${page}`);
             },
           }}
         />
