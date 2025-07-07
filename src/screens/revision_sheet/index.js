@@ -249,7 +249,7 @@ const RevisionSheet = () => {
           >
             <TabText>DSA</TabText>
           </Tab>
-          <Tab
+          {/* <Tab
             onClick={() => {
               setSelected(1);
               navigate("/revision_sheet#cp");
@@ -257,24 +257,24 @@ const RevisionSheet = () => {
             active={selected === 1}
           >
             <TabText>CP</TabText>
-          </Tab>
+          </Tab> */}
           <Tab
             onClick={() => {
               setSelected(2);
-              navigate("/revision_sheet#frontend_system_design");
+              // navigate("/revision_sheet#frontend_system_design");
             }}
             active={selected === 2}
           >
-            <TabText>Frontend System Design</TabText>
+            <TabText>Frontend System Design (In Progress)</TabText>
           </Tab>
           <Tab
             onClick={() => {
               setSelected(3);
-              navigate("/revision_sheet#backend_system_design");
+              // navigate("/revision_sheet#backend_system_design");
             }}
             active={selected === 3}
           >
-            <TabText>Backend System Design</TabText>
+            <TabText>Backend System Design (In Progress)</TabText>
           </Tab>
         </TabContainer>
       </Switch>
