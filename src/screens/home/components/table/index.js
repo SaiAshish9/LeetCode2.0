@@ -322,7 +322,7 @@ const TableContainer = () => {
             showSizeChanger: true,
             pageSizeOptions: ["20", "50", "100"],
             onChange: (page, pageSize) => {
-              if (tableData[0]?.status == "done") {
+              if (tableData[0]?.status !== "done") {
                 navigate(`/?page=${page}`);
               }
             },
