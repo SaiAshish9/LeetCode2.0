@@ -34,26 +34,26 @@ const options = [
     text: "Problems",
     route: "/",
   },
-  {
-    text: "Design Principles",
-    route: "/design_principles",
-  },
-  {
-    text: "Design Patterns",
-    route: "/design_patterns",
-  },
-  {
-    text: "LLD",
-    route: "/lld",
-  },
-  {
-    text: "HLD",
-    route: "/hld",
-  },
-  {
-    text: "CN & OS",
-    route: "/cn_and_os",
-  },
+  // {
+  //   text: "Design Principles",
+  //   route: "/design_principles",
+  // },
+  // {
+  //   text: "Design Patterns",
+  //   route: "/design_patterns",
+  // },
+  // {
+  //   text: "LLD",
+  //   route: "/lld",
+  // },
+  // {
+  //   text: "HLD",
+  //   route: "/hld",
+  // },
+  // {
+  //   text: "CN & OS",
+  //   route: "/cn_and_os",
+  // },
   {
     text: "Revision Sheet",
     route: "/revision_sheet",
