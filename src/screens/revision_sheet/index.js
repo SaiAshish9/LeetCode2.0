@@ -261,7 +261,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(2);
-              // navigate("/revision_sheet#frontend_system_design");
+              navigate("/revision_sheet#frontend_system_design");
             }}
             active={selected === 2}
           >
@@ -270,7 +270,7 @@ const RevisionSheet = () => {
           <Tab
             onClick={() => {
               setSelected(3);
-              // navigate("/revision_sheet#backend_system_design");
+              navigate("/revision_sheet#backend_system_design");
             }}
             active={selected === 3}
           >
