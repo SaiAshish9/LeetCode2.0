@@ -17,6 +17,14 @@ function App() {
         : "#0f0f0f";
   }, [pathname]);
 
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error("Adsense error", e);
+    }
+  }, []);
+
   return (
     <Container isHome={pathname === "/" ? 1 : 0}>
       {!["problems"].includes(pathname?.split("/")?.[1]) && <Header />}
@@ -27,6 +35,15 @@ function App() {
         <Route path="revision_sheet/*" element={<RevisionSheet />} />
         <Route path="pdf/*" element={<PDFs />} />
       </Routes>
+
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-client="ca-pub-1410205709248902"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </Container>
   );
 }
