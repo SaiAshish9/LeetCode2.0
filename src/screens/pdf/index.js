@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { Content, HomeComponent, TopLeftContainer } from "../home/styles";
 import { Options } from "../home/components";
+import { StyledText } from "../home/components/options/styles";
 
 const data = [
   { text: "DSA Patterns" },
@@ -33,7 +34,7 @@ const PDFs = () => {
     <HomeComponent>
       <Content>
         <TopLeftContainer>
-          <p>Select the PDF:</p>
+          <StyledText>Select the PDF:</StyledText>
           <Options data={data} onClick={handleClick} />
         </TopLeftContainer>
       </Content>

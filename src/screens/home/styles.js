@@ -73,8 +73,6 @@ export const Content = styled.div`
 
 export const TopLeftContainer = styled.div`
   width: 75%;
-  color: #eff1f6bf;
-  font-size: 0.9rem;
   text-align: start;
 
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {

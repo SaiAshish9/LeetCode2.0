@@ -46,3 +46,11 @@ export const StyledIcon = styled.img`
   height: 18px;
   width: 18px;
 `;
+
+export const StyledText = styled.p`
+  color: #eff1f6bf;
+  font-size: 0.9rem;
+  @media only screen and (max-width: ${BREAKPOINTS.lg}) {
+    padding: 0 2%;
+  }
+`;
