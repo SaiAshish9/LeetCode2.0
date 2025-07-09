@@ -332,6 +332,7 @@ const TableContainer = () => {
       ) : (
         <>
           <br />
+          <p>Loading...</p>
           <br />
         </>
       )}

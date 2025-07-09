@@ -8,7 +8,9 @@ const Options = ({ data, onClick = null }) => {
         <Button
           highlighted={i.text !== "All Topics"}
           key={i.text}
-          onClick={onClick}
+          onClick={() => {
+            onClick(i.text);
+          }}
         >
           {i.icon && <StyledIcon src={i.icon} alt="img" />}
           {i.text}
