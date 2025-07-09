@@ -31,6 +31,9 @@ import ProfileImg from "../../assets/l_profile.jpeg";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import { Counter } from "counterapi";
+// import { Analytics } from "@upstash/analytics";
+
+// const analytics = new Analytics({ token: "9b686896-39b9-45d4-aa42-78d0d060997c" });
 
 const options = [
   {
@@ -84,14 +87,15 @@ const Navbar = () => {
     async function trackEvent() {
       try {
         const result = await counter.up("leetcode");
-        const stats = await counter.stats("leetcode");
-        console.log({ stats });
         setUpCount(result.data.up_count);
+
+        // const res = await analytics.track("page-visit");
+        // setVisitors(res.uniques);
       } catch (error) {
         console.error("Failed to track event:", error.message);
       }
     }
-
+    
     trackEvent();
   }, []);
 
@@ -133,12 +137,14 @@ const Navbar = () => {
               </ScoreText>
             </NavIcon>
           )}
-
-          <NavIcon>
-            <ScoreText>
-              Unique Users: <ScoreTextSpan>0</ScoreTextSpan>
-            </ScoreText>
-          </NavIcon>
+{/* 
+          {visitors && (
+            <NavIcon>
+              <ScoreText>
+                Unique Users: <ScoreTextSpan>{visitors}</ScoreTextSpan>
+              </ScoreText>
+            </NavIcon>
+          )} */}
           <NavIcon>
             <StyledImage style={{ height: "20px" }} alt="img" src={BellSvg} />
           </NavIcon>
