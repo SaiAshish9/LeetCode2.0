@@ -30,6 +30,8 @@ import ProfileImg from "../../assets/l_profile.jpeg";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
+import { Counter } from "counterapi";
+
 const API_KEY = "ut_FUeqtMHLYoWbwD6pixSmqHhqYuzPyFYey5yjkHxF";
 
 const options = [
@@ -77,26 +79,20 @@ const Navbar = () => {
     navigate(route);
   };
 
-  useEffect(() => {
-    const track = async () => {
-      try {
-        const res = await fetch(
-          "https://counterapi.dev/api/leetcode/unique-visitors?unique=true"
-        );
+  // Create a counter client
+  const counter = new Counter({ workspace: "leetcode" });
 
-        if (!res.ok) {
-          throw new Error(`Fetch failed with status: ${res.status}`);
-        }
+  // Track an event
+  async function trackEvent() {
+    try {
+      const result = await counter.up("leetcode");
+      console.log(`Total API calls: ${result.value}`);
+    } catch (error) {
+      console.error("Failed to track event:", error.message);
+    }
+  }
 
-        const data = await res.json();
-        console.log("Unique user count:", data.count);
-      } catch (err) {
-        console.error("Tracking error:", err);
-      }
-    };
-
-    track();
-  }, []);
+  trackEvent();
 
   const isDark =
     ["tag", "revision_sheet"].filter((x) => pathname?.includes(x)).length > 0;
