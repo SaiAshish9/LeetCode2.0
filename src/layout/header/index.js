@@ -58,6 +58,10 @@ const options = [
     text: "Revision Sheet",
     route: "/revision_sheet",
   },
+  {
+    text: "PDFs",
+    route: "/pdf",
+  },
 ];
 
 const Navbar = () => {
