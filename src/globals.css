@@ -10,8 +10,7 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
+  font-variation-settings: "slnt" 0;
 }
 
 /* body {
@@ -28,11 +27,11 @@ a {
 }
 .CircularProgressbar-trail {
   stroke-width: 3px;
-} 
+}
 
 .slick-prev,
 .slick-next {
-    display: none !important;
+  display: none !important;
 }
 
 .app1 {
@@ -43,3 +42,6 @@ a {
   justify-content: center;
 }
 
+.rpv-default-layout__footer {
+  display: none !important;
+}

@@ -3,6 +3,7 @@ import { Header } from "./layout";
 import { Home, Problem, QSList, RevisionSheet } from "./screens";
 import { Container } from "./styles";
 import { useEffect } from "react";
+import PDFs from "./screens/pdf";
 
 function App() {
   const { pathname } = useLocation();
@@ -24,6 +25,7 @@ function App() {
         <Route path="tag/*" element={<QSList />} />
         <Route path="problems/*" element={<Problem />} />
         <Route path="revision_sheet/*" element={<RevisionSheet />} />
+        <Route path="pdf/*" element={<PDFs />} />
       </Routes>
     </Container>
   );

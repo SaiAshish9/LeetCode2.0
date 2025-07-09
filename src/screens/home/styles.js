@@ -7,6 +7,13 @@ export const HomeComponent = styled.div`
   background-color: rgb(26 26 26);
   color: #fff;
   min-height: 100vh;
+  ._rp-page-input_1y9vo_6 {
+    margin: 1px 0rem !important;
+    width: 1.3em !important;
+  }
+  .rpv-default-layout__footer {
+    display: none !important;
+  }
 `;
 
 // padding: 0 10vw;

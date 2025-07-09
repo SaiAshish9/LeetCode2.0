@@ -34,6 +34,11 @@ export const Button = styled.div`
           background: rgb(40 40 40);
         `
       : css``};
+
+  &:hover {
+    color: rgb(38 38 38);
+    background: #fff;
+  }
 `;
 
 export const StyledIcon = styled.img`
