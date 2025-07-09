@@ -3582,6 +3582,15 @@ axios@^1.7.2:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
+axios@^1.9.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.10.0.tgz#af320aee8632eaf2a400b6a1979fa75856f38d54"
+  integrity sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 axobject-query@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-3.2.1.tgz#39c378a6e3b06ca679f29138151e45b2b32da62a"
@@ -4223,6 +4232,13 @@ cosmiconfig@^7.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.10.0"
+
+counterapi@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/counterapi/-/counterapi-2.1.2.tgz#0d1dcb6dd6c9e848a0d5fc8c7db145ef89bb88b7"
+  integrity sha512-KPxii+pFTnKh1QnggMFzBa3hzRqjGZZ9JJQF32bOvM5N+l9Z2nTqvd7R9ZXKFtIRa6sefzhVJXXkweBb5FDQtg==
+  dependencies:
+    axios "^1.9.0"
 
 cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
