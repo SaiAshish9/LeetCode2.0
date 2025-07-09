@@ -32,8 +32,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import { Counter } from "counterapi";
 
-const API_KEY = "ut_FUeqtMHLYoWbwD6pixSmqHhqYuzPyFYey5yjkHxF";
-
 const options = [
   {
     text: "Problems",
@@ -73,26 +71,29 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
+  const [upCount, setUpCount] = useState(null);
 
   const handleClick = (e, route) => {
     e.preventDefault();
     navigate(route);
   };
 
-  // Create a counter client
-  const counter = new Counter({ workspace: "leetcode" });
+  useEffect(() => {
+    const counter = new Counter({ workspace: "leetcode" });
 
-  // Track an event
-  async function trackEvent() {
-    try {
-      const result = await counter.up("leetcode");
-      console.log(`Total API calls: ${result.value}`);
-    } catch (error) {
-      console.error("Failed to track event:", error.message);
+    async function trackEvent() {
+      try {
+        const result = await counter.up("leetcode");
+        const stats = await counter.stats("leetcode");
+        console.log({ stats });
+        setUpCount(result.data.up_count);
+      } catch (error) {
+        console.error("Failed to track event:", error.message);
+      }
     }
-  }
 
-  trackEvent();
+    trackEvent();
+  }, []);
 
   const isDark =
     ["tag", "revision_sheet"].filter((x) => pathname?.includes(x)).length > 0;
@@ -125,11 +126,14 @@ const Navbar = () => {
           </OptionsContainer>
         </NavItemContainer>
         <CircularContainer>
-          <NavIcon>
-            <ScoreText>
-              Page Views: <ScoreTextSpan>0</ScoreTextSpan>
-            </ScoreText>
-          </NavIcon>
+          {upCount && (
+            <NavIcon>
+              <ScoreText>
+                Page Views: <ScoreTextSpan>{upCount}</ScoreTextSpan>
+              </ScoreText>
+            </NavIcon>
+          )}
+
           <NavIcon>
             <ScoreText>
               Unique Users: <ScoreTextSpan>0</ScoreTextSpan>
