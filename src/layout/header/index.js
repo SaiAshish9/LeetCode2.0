@@ -30,6 +30,8 @@ import ProfileImg from "../../assets/l_profile.jpeg";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
+const API_KEY = "ut_FUeqtMHLYoWbwD6pixSmqHhqYuzPyFYey5yjkHxF";
+
 const options = [
   {
     text: "Problems",
@@ -75,7 +77,14 @@ const Navbar = () => {
     navigate(route);
   };
 
-  useEffect(() => {}, [pathname]);
+  useEffect(() => {
+    fetch("https://counterapi.dev/api/LeetCode/ut_FUeqtMHLYoWbwD6pixSmqHhqYuzPyFYey5yjkHxF/unique-users?unique=true")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Unique user count:", data.count);
+      })
+      .catch((err) => console.error("Tracking error:", err));
+  }, []);
 
   const isDark =
     ["tag", "revision_sheet"].filter((x) => pathname?.includes(x)).length > 0;
