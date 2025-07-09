@@ -247,6 +247,10 @@ export const ScoreText = styled.p`
   }
 `;
 
+export const ScoreTextSpan = styled.span`
+  color: #fff;
+`;
+
 export const PremiumButton = styled.div`
   border-radius: 8px;
   color: rgb(255 161 22);

@@ -20,6 +20,7 @@ import {
   StyledDrawerIconContainer,
   ProfileAvatar,
   NavItem1,
+  ScoreTextSpan,
 } from "./styles";
 
 import BellSvg from "../../assets/bell.svg";
@@ -107,6 +108,16 @@ const Navbar = () => {
           </OptionsContainer>
         </NavItemContainer>
         <CircularContainer>
+          <NavIcon>
+            <ScoreText>
+              Page Views: <ScoreTextSpan>0</ScoreTextSpan>
+            </ScoreText>
+          </NavIcon>
+          <NavIcon>
+            <ScoreText>
+              Unique Users: <ScoreTextSpan>0</ScoreTextSpan>
+            </ScoreText>
+          </NavIcon>
           <NavIcon>
             <StyledImage style={{ height: "20px" }} alt="img" src={BellSvg} />
           </NavIcon>
