@@ -49,7 +49,8 @@ export const StyledIcon = styled.img`
 
 export const StyledText = styled.p`
   color: #eff1f6bf;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  margin-bottom: -0.5rem;
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     padding: 0 2%;
   }

@@ -8,6 +8,7 @@ import {
 } from "./styles";
 import axios from "axios";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { ContentText } from "../../../revision_sheet/styles";
 
 const columns = [
   {
@@ -332,7 +333,7 @@ const TableContainer = () => {
       ) : (
         <>
           <br />
-          <p>Loading...</p>
+          <ContentText style={{ color: "#eff2f699" }}>Loading...</ContentText>
           <br />
         </>
       )}

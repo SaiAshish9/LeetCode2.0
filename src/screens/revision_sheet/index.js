@@ -279,167 +279,181 @@ const RevisionSheet = () => {
         </TabContainer>
       </Switch>
       <Content>
-        {data && selected === 0 && (
+        {data ? (
           <>
             {" "}
-            <ContentText>
-              Existing Total Count: <ContentTextBold>{count} </ContentTextBold>
-              problems.
-              {/* (<ContentTextBold>
+            {data && selected === 0 && (
+              <>
+                {" "}
+                <ContentText>
+                  Existing Total Count:{" "}
+                  <ContentTextBold>{count} </ContentTextBold>
+                  problems.
+                  {/* (<ContentTextBold>
                 {leftOverCount}{" "}
               </ContentTextBold>{" "}
               unsolved)  */}
-              (<ContentTextBold>{count - leftOverCount} </ContentTextBold>{" "}
-              solved){" "}
-              (<ContentTextBold>{STAR.length}</ContentTextBold> starred)
-              (
-              <ContentTextBold>
-                {
-                  Object.values(data).filter((x) =>
-                    x.map((y) => +y.qno).every((z) => solvedQs.includes(z))
-                  ).length
-                }
-                {"/"}
-                {Object.values(data).length}{" "}
-              </ContentTextBold>{" "}
-              tags solved)
-            </ContentText>
-            <ContentText sm>
-              *Note: Click on the tag name highlighted in a different color to
-              view descriptions and time and space complexities of various
-              operations. Use the arrow keys to collapse or expand selected
-              questions. Use Cmd (⌘) + K to toggle the view of all tag
-              questions.
-            </ContentText>
-          </>
-        )}{" "}
-        <Spacer />
-        {data &&
-          selected === 0 &&
-          Object.keys(data)
-            .filter((x) => (x !== "Additional" ? data[x].length > 0 : true))
-            .map((item, key) => (
-              <ContentItem key={item}>
-                <ContentText>
-                  {+key + 1}.&nbsp;
-                  <p
-                    id={`Tag-${item.toLowerCase().split(" ").join("_")}`}
-                    onClick={() => {
-                      if (item !== "Additional") {
-                        window.open(
-                          "/tag/" +
-                            item.toLowerCase().replace(" ", "_") +
-                            "#description",
-                          "_blank"
-                        );
-                      }
-                    }}
-                  >
-                    {item}{" "}
-                    {data[item]
-                      .map((i) => +i.qno)
-                      .every((e) => solvedQs.includes(e))
-                      ? "✅"
-                      : ""}
-                  </p>
-                  &nbsp;({data[item].length})
-                  <IconCont
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      navigate(
-                        `/revision_sheet?tag=${item
-                          .toLowerCase()
-                          .split(" ")
-                          .join("_")}`
-                      );
-                      if (!up.includes(key)) {
-                        setUp([...up, +key]);
-                      } else {
-                        let temp = up.slice();
-                        temp = temp.filter((x) => x !== +key);
-                        setUp(temp);
-                      }
-                    }}
-                  >
-                    {up.includes(key) ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                  </IconCont>
+                  (<ContentTextBold>{count - leftOverCount} </ContentTextBold>{" "}
+                  solved) (<ContentTextBold>{STAR.length}</ContentTextBold>{" "}
+                  starred) (
+                  <ContentTextBold>
+                    {
+                      Object.values(data).filter((x) =>
+                        x.map((y) => +y.qno).every((z) => solvedQs.includes(z))
+                      ).length
+                    }
+                    {"/"}
+                    {Object.values(data).length}{" "}
+                  </ContentTextBold>{" "}
+                  tags solved)
                 </ContentText>
-                {up.includes(key) &&
-                  data[item]
-                    .filter((x) => STAR.includes(+x.qno))
-                    .map(
-                      (value, key) =>
-                        value.title && (
-                          <ParentContent key={value.title}>
-                            <TitleContainer
-                              notMaxW1
-                              onClick={() => {
-                                window.open(
-                                  "/problems/" +
-                                    value.title
-                                      .toLowerCase()
-                                      .split(" ")
-                                      .join("_")
-                                      .replaceAll("?", "%3F") +
-                                    "?tag=" +
-                                    item,
-                                  "_blank"
-                                );
-                              }}
-                            >
-                              <p>
-                                {STAR.includes(+value.qno) && (
-                                  <>
-                                    <FaStar
-                                      style={{
-                                        position: "relative",
-                                        bottom: 2,
-                                        marginRight: 5,
-                                      }}
-                                    />
-                                    {+key + 1},{"  "}
-                                  </>
-                                )}
-                                {value.qno}. {value.title}{" "}
-                                {!solvedQs.includes(+value.qno) ? "🎯" : ""}
-                              </p>
-                            </TitleContainer>
-                          </ParentContent>
-                        )
-                    )}
-                {up.includes(key) &&
-                  data[item]
-                    .filter((x) => !STAR.includes(+x.qno))
-                    .map(
-                      (value, key) =>
-                        value.title && (
-                          <ParentContent key={value.title}>
-                            <TitleContainer
-                              notMaxW1
-                              onClick={() => {
-                                window.open(
-                                  "/problems/" +
-                                    value.title
-                                      .toLowerCase()
-                                      .split(" ")
-                                      .join("_") +
-                                    "?tag=" +
-                                    item,
-                                  "_blank"
-                                );
-                              }}
-                            >
-                              <p>
-                                {+key + 1}, {value.qno}. {value.title}{" "}
-                                {!solvedQs.includes(+value.qno) ? "🎯" : ""}
-                              </p>
-                            </TitleContainer>
-                          </ParentContent>
-                        )
-                    )}
-              </ContentItem>
-            ))}
+                <ContentText sm>
+                  *Note: Click on the tag name highlighted in a different color
+                  to view descriptions and time and space complexities of
+                  various operations. Use the arrow keys to collapse or expand
+                  selected questions. Use Cmd (⌘) + K to toggle the view of all
+                  tag questions.
+                </ContentText>
+              </>
+            )}{" "}
+            <Spacer />
+            {data &&
+              selected === 0 &&
+              Object.keys(data)
+                .filter((x) => (x !== "Additional" ? data[x].length > 0 : true))
+                .map((item, key) => (
+                  <ContentItem key={item}>
+                    <ContentText>
+                      {+key + 1}.&nbsp;
+                      <p
+                        id={`Tag-${item.toLowerCase().split(" ").join("_")}`}
+                        onClick={() => {
+                          if (item !== "Additional") {
+                            window.open(
+                              "/tag/" +
+                                item.toLowerCase().replace(" ", "_") +
+                                "#description",
+                              "_blank"
+                            );
+                          }
+                        }}
+                      >
+                        {item}{" "}
+                        {data[item]
+                          .map((i) => +i.qno)
+                          .every((e) => solvedQs.includes(e))
+                          ? "✅"
+                          : ""}
+                      </p>
+                      &nbsp;({data[item].length})
+                      <IconCont
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          navigate(
+                            `/revision_sheet?tag=${item
+                              .toLowerCase()
+                              .split(" ")
+                              .join("_")}`
+                          );
+                          if (!up.includes(key)) {
+                            setUp([...up, +key]);
+                          } else {
+                            let temp = up.slice();
+                            temp = temp.filter((x) => x !== +key);
+                            setUp(temp);
+                          }
+                        }}
+                      >
+                        {up.includes(key) ? (
+                          <IoIosArrowUp />
+                        ) : (
+                          <IoIosArrowDown />
+                        )}
+                      </IconCont>
+                    </ContentText>
+                    {up.includes(key) &&
+                      data[item]
+                        .filter((x) => STAR.includes(+x.qno))
+                        .map(
+                          (value, key) =>
+                            value.title && (
+                              <ParentContent key={value.title}>
+                                <TitleContainer
+                                  notMaxW1
+                                  onClick={() => {
+                                    window.open(
+                                      "/problems/" +
+                                        value.title
+                                          .toLowerCase()
+                                          .split(" ")
+                                          .join("_")
+                                          .replaceAll("?", "%3F") +
+                                        "?tag=" +
+                                        item,
+                                      "_blank"
+                                    );
+                                  }}
+                                >
+                                  <p>
+                                    {STAR.includes(+value.qno) && (
+                                      <>
+                                        <FaStar
+                                          style={{
+                                            position: "relative",
+                                            bottom: 2,
+                                            marginRight: 5,
+                                          }}
+                                        />
+                                        {+key + 1},{"  "}
+                                      </>
+                                    )}
+                                    {value.qno}. {value.title}{" "}
+                                    {!solvedQs.includes(+value.qno) ? "🎯" : ""}
+                                  </p>
+                                </TitleContainer>
+                              </ParentContent>
+                            )
+                        )}
+                    {up.includes(key) &&
+                      data[item]
+                        .filter((x) => !STAR.includes(+x.qno))
+                        .map(
+                          (value, key) =>
+                            value.title && (
+                              <ParentContent key={value.title}>
+                                <TitleContainer
+                                  notMaxW1
+                                  onClick={() => {
+                                    window.open(
+                                      "/problems/" +
+                                        value.title
+                                          .toLowerCase()
+                                          .split(" ")
+                                          .join("_") +
+                                        "?tag=" +
+                                        item,
+                                      "_blank"
+                                    );
+                                  }}
+                                >
+                                  <p>
+                                    {+key + 1}, {value.qno}. {value.title}{" "}
+                                    {!solvedQs.includes(+value.qno) ? "🎯" : ""}
+                                  </p>
+                                </TitleContainer>
+                              </ParentContent>
+                            )
+                        )}
+                  </ContentItem>
+                ))}
+          </>
+        ) : (
+          <>
+            <ContentText>Loading...</ContentText>
+          </>
+        )}
+
         {selected === 2 && !isDescriptionSet && <FrontendSD />}
         {selected === 3 && !isDescriptionSet && <BackendSD />}
         {(selected === 3 || selected === 2) &&
