@@ -95,7 +95,7 @@ const Navbar = () => {
         console.error("Failed to track event:", error.message);
       }
     }
-    
+
     trackEvent();
   }, []);
 
@@ -120,7 +120,7 @@ const Navbar = () => {
               <NavItem
                 key={i.text}
                 route={i.route === pathname}
-                isHome={!isDark}
+                isHome={!isDark ? 1 : 0}
                 text={i.text}
                 onClick={(e) => handleClick(e, i.route)}
               >
@@ -137,7 +137,7 @@ const Navbar = () => {
               </ScoreText>
             </NavIcon>
           )}
-{/* 
+          {/* 
           {visitors && (
             <NavIcon>
               <ScoreText>
@@ -179,7 +179,7 @@ const Navbar = () => {
         onClose={() => setOpen((open) => !open)}
         placement="left"
         closeIcon={false}
-        isHome={!isDark}
+        isHome={!isDark ? 1 : 0}
         width={window.innerWidth < 576 ? "63vw" : "40vw"}
       >
         <StyledDrawerIconContent>
@@ -187,7 +187,7 @@ const Navbar = () => {
             <NavItem
               key={i.text}
               route={i.route === pathname}
-              isHome={!isDark}
+              isHome={!isDark ? 1 : 0}
               text={i.text}
               onClick={(e) => {
                 handleClick(e, i.route);
@@ -207,7 +207,7 @@ const Navbar = () => {
           }}
         >
           <ProfileAvatar alt="pic" src={ProfileImg} />
-          <NavItem1 isHome={!isDark}>Sai</NavItem1>
+          <NavItem1 isHome={!isDark ? 1 : 0}>Sai</NavItem1>
         </StyledDrawerIconContainer>
       </StyledDrawer>
     </NavContainer>

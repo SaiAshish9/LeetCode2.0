@@ -18,7 +18,7 @@ function App() {
   }, [pathname]);
 
   return (
-    <Container isHome={pathname === "/"}>
+    <Container isHome={pathname === "/" ? 1 : 0}>
       {!["problems"].includes(pathname?.split("/")?.[1]) && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
