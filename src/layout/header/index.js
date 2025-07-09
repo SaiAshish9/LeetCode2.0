@@ -78,12 +78,24 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    fetch("https://counterapi.dev/api/LeetCode/ut_FUeqtMHLYoWbwD6pixSmqHhqYuzPyFYey5yjkHxF/unique-users?unique=true")
-      .then((res) => res.json())
-      .then((data) => {
+    const track = async () => {
+      try {
+        const res = await fetch(
+          "https://counterapi.dev/api/leetcode/unique-visitors?unique=true"
+        );
+
+        if (!res.ok) {
+          throw new Error(`Fetch failed with status: ${res.status}`);
+        }
+
+        const data = await res.json();
         console.log("Unique user count:", data.count);
-      })
-      .catch((err) => console.error("Tracking error:", err));
+      } catch (err) {
+        console.error("Tracking error:", err);
+      }
+    };
+
+    track();
   }, []);
 
   const isDark =
