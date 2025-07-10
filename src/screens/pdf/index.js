@@ -11,6 +11,7 @@ const data = [
   { text: "LLD (W/O Spring)" },
   { text: "DP Patterns" },
   { text: "Amazon and Coupang LPs" },
+  { text: "Matrix Patterns" },
 ];
 const paths = {
   [data[0].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Problem%20Solving%20Patterns_compressed.pdf",
@@ -20,6 +21,7 @@ const paths = {
   [data[4].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Low_Level_Design_(WO_Spring).pdf",
   [data[5].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/DP_Conceptual_Patterns.pdf",
   [data[6].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Amazon_Leadership_Principles.pdf",
+  [data[7].text]: "https://www.notion.so/Matrix-Patterns-11544a9e7db180cf9308f9473cfe4f85",
 };
 
 const PDFs = () => {
