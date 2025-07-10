@@ -58486,41 +58486,6 @@ const QUESTIONS = {
         Line 1 - 9 passes through key 5 which had not been selected in the
         pattern.
       </p>
-      <div class="google-auto-placed ap_container">
-        <ins
-          data-ad-format="auto"
-          class="adsbygoogle adsbygoogle-noablate"
-          data-ad-client="ca-pub-6766885420008650"
-          data-adsbygoogle-status="done"
-          data-ad-status="unfilled"
-        >
-          <div id="aswift_1_host">
-            <iframe
-              id="aswift_1"
-              name="aswift_1"
-              browsingtopics="true"
-              sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-              width="1120"
-              height="0"
-              frameborder="0"
-              marginwidth="0"
-              marginheight="0"
-              vspace="0"
-              hspace="0"
-              allowtransparency="true"
-              scrolling="no"
-              allow="attribution-reporting; run-ad-auction"
-              src="https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&amp;client=ca-pub-6766885420008650&amp;output=html&amp;h=280&amp;adk=490964574&amp;adf=2347765671&amp;pi=t.aa~a.3869206216~i.21~rp.4&amp;w=1120&amp;abgtt=9&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1733440553&amp;num_ads=1&amp;rafmt=1&amp;armr=3&amp;sem=mc&amp;pwprc=2295191326&amp;ad_type=text_image&amp;format=1120x280&amp;url=https%3A%2F%2Fleetcode.ca%2Fall%2F351.html&amp;fwr=0&amp;pra=3&amp;rh=200&amp;rw=1120&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=27&amp;uach=WyJtYWNPUyIsIjEyLjIuMCIsImFybSIsIiIsIjEzNC4wLjY5OTguNDUiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMzQuMC42OTk4LjQ1Il0sWyJOb3Q6QS1CcmFuZCIsIjI0LjAuMC4wIl0sWyJHb29nbGUgQ2hyb21lIiwiMTM0LjAuNjk5OC40NSJdXSwwXQ..&amp;dt=1741792799801&amp;bpp=2&amp;bdt=1198&amp;idt=-M&amp;shv=r20250310&amp;mjsv=m202503100101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D64f09132c9424ca9%3AT%3D1724578154%3ART%3D1741778614%3AS%3DALNI_MYDXNEF8lOSqFgRNdLrQDh7XqxDfQ&amp;gpic=UID%3D00000ed6f53ac83a%3AT%3D1724578154%3ART%3D1741778614%3AS%3DALNI_MaYiD9h0rS-53xvtv1a3iHf4LhmIw&amp;eo_id_str=ID%3D6e827473f394e7e8%3AT%3D1741674484%3ART%3D1741778614%3AS%3DAA-AfjYS7euMj-7xHkifBZmXY6uq&amp;prev_fmts=0x0&amp;nras=2&amp;correlator=4834001966828&amp;frm=20&amp;pv=1&amp;u_tz=330&amp;u_his=8&amp;u_h=900&amp;u_w=1440&amp;u_ah=815&amp;u_aw=1440&amp;u_cd=30&amp;u_sd=1.8&amp;dmc=8&amp;adx=240&amp;ady=1103&amp;biw=1600&amp;bih=769&amp;scr_x=0&amp;scr_y=0&amp;eid=95353387%2C95354315%2C95354338%2C95354598%2C31090900%2C95340253%2C95340255&amp;oid=2&amp;pvsid=1609094273684054&amp;tmod=1360601946&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;fc=1408&amp;brdim=0%2C25%2C0%2C25%2C1440%2C25%2C1440%2C813%2C1600%2C769&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=128&amp;bc=31&amp;bz=0.9&amp;td=1&amp;tdf=2&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;dtd=276"
-              data-google-container-id="a!2"
-              tabindex="0"
-              title="Advertisement"
-              aria-label="Advertisement"
-              data-google-query-id="CM6EnenrhIwDFUOeSwUdEcQWSA"
-              data-load-complete="true"
-            ></iframe>
-          </div>
-        </ins>
-      </div>
 
       <p>
         <b>Valid move:</b> <code>2 - 4 - 1 - 3 - 6</code>

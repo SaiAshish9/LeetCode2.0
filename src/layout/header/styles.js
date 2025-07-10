@@ -142,6 +142,15 @@ export const NavItem = styled.p`
   &:hover {
     color: rgba(255, 255, 255);
   }
+  
+  ${({ hover }) =>
+    hover === 0 &&
+    css`
+      &:hover {
+        color: #eff1f6bf;
+      }
+    `};
+
   ${({ text, route }) =>
     ["HLD", "LLD"].includes(text)
       ? css`
