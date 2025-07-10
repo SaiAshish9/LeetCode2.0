@@ -13,13 +13,13 @@ const data = [
   { text: "Amazon and Coupang LPs" },
 ];
 const paths = {
-  [data[0].text]: "/pdf/Problem Solving Patterns.pdf",
-  [data[1].text]: "/pdf/HLD_Concepts_Brief_Overview.pdf",
-  [data[2].text]: "/pdf/Design Patterns Use Cases.pdf",
-  [data[3].text]: "/pdf/LeetCode_Design_Questions.pdf",
-  [data[4].text]: "/pdf/Low_Level_Design_(WO_Spring).pdf",
-  [data[5].text]: "/pdf/DP_Conceptual_Patterns.pdf",
-  [data[6].text]: "/pdf/Amazon_Leadership_Principles.pdf",
+  [data[0].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Problem%20Solving%20Patterns_compressed.pdf",
+  [data[1].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/HLD_Concepts_Brief_Overview.pdf",
+  [data[2].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Design%20Patterns%20Use%20Cases.pdf",
+  [data[3].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/LeetCode_Design_Questions_compressed.pdf",
+  [data[4].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Low_Level_Design_(WO_Spring).pdf",
+  [data[5].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/DP_Conceptual_Patterns.pdf",
+  [data[6].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Amazon_Leadership_Principles.pdf",
 };
 
 const PDFs = () => {
