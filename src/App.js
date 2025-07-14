@@ -4,6 +4,7 @@ import { Home, Problem, QSList, RevisionSheet } from "./screens";
 import { Container } from "./styles";
 import { useEffect } from "react";
 import PDFs from "./screens/pdf";
+import AdComponent from "./AdComponent";
 
 function App() {
   const { pathname } = useLocation();
@@ -44,6 +45,7 @@ function App() {
         data-ad-format="auto"
         data-full-width-responsive="true"
       /> */}
+      <AdComponent />
     </Container>
   );
 }
