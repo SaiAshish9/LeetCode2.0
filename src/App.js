@@ -37,14 +37,6 @@ function App() {
         <Route path="pdf/*" element={<PDFs />} />
       </Routes>
 
-      {/* <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-1410205709248902"
-        data-ad-slot="1234567890"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      /> */}
       <AdComponent />
     </Container>
   );
