@@ -37,7 +37,7 @@ function App() {
         <Route path="pdf/*" element={<PDFs />} />
       </Routes>
 
-      <AdComponent />
+      {/* <AdComponent /> */}
     </Container>
   );
 }
