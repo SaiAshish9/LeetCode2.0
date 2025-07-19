@@ -21,6 +21,16 @@ export const Container = styled.div`
   canvas {
     background-color: #262626 !important;
   }
+  .monaco-editor,
+  .monaco-diff-editor,
+  .monaco-component {
+    --vscode-focusBorder: transparent !important;
+  }
+  .monaco-editor .cursor {
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+  }
+
   .decorationsOverviewRuler,
   .scrollbar,
   .slider {
