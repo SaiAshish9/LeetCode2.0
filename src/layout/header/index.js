@@ -199,7 +199,7 @@ const Navbar = () => {
           ))}
           {upCount && (
             <NavItem hover={0} route={0} isHome={!isDark ? 1 : 0}>
-              Page Views: <b style={{ color: "#fff" }}>{upCount}</b>
+              Page Views: <b>{upCount}</b>
             </NavItem>
           )}
         </StyledDrawerIconContent>
