@@ -265,7 +265,7 @@ const RevisionSheet = () => {
             }}
             active={selected === 2}
           >
-            <TabText>Frontend System Design (In Progress)</TabText>
+            <TabText>Frontend System Design</TabText>
           </Tab>
           <Tab
             onClick={() => {
@@ -274,7 +274,7 @@ const RevisionSheet = () => {
             }}
             active={selected === 3}
           >
-            <TabText>Backend System Design (In Progress)</TabText>
+            <TabText>Backend System Design</TabText>
           </Tab>
         </TabContainer>
       </Switch>
