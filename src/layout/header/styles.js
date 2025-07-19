@@ -257,7 +257,14 @@ export const ScoreText = styled.p`
 `;
 
 export const ScoreTextSpan = styled.span`
-  color: #fff;
+  ${({ isHome }) =>
+    !isHome
+      ? css`
+          color: #000;
+        `
+      : css`
+          color: #fff;
+        `};
 `;
 
 export const PremiumButton = styled.div`

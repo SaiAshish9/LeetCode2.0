@@ -133,7 +133,10 @@ const Navbar = () => {
           {upCount && (
             <NavIcon>
               <ScoreText>
-                Page Views: <ScoreTextSpan>{upCount}</ScoreTextSpan>
+                Page Views:{" "}
+                <ScoreTextSpan isHome={!isDark ? 1 : 0}>
+                  {upCount}
+                </ScoreTextSpan>
               </ScoreText>
             </NavIcon>
           )}
