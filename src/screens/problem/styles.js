@@ -31,10 +31,11 @@ export const Container = styled.div`
     border-right-color: transparent !important;
   }
 
-  // .monaco-editor .sticky-widget {
-  //   box-shadow: none !important;
-  //   background: transparent !important;
-  // }
+  .monaco-editor .sticky-widget {
+    box-shadow: none !important;
+    background: transparent !important;
+    display: none !important;
+  }
   .decorationsOverviewRuler,
   .scrollbar,
   .slider {
