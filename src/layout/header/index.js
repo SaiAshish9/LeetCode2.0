@@ -69,10 +69,6 @@ const options = [
     route: "/pdf",
   },
   {
-    text: "Top Interview 150",
-    route: "/pdf",
-  },
-  {
     text: "LeetCode 75",
     route: "/leetCode-75",
   },
