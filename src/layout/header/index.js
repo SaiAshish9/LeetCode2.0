@@ -68,6 +68,18 @@ const options = [
     text: "PDFs",
     route: "/pdf",
   },
+  {
+    text: "Top Interview 150",
+    route: "/pdf",
+  },
+  {
+    text: "LeetCode 75",
+    route: "/leetCode-75",
+  },
+  {
+    text: "Top Interview 150",
+    route: "/top-interview-75",
+  },
 ];
 
 const Navbar = () => {
