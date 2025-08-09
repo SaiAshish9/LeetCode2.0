@@ -69,12 +69,14 @@ const options = [
     route: "/pdf",
   },
   {
+    key: "l_75",
     text: "LeetCode 75",
-    route: "/leetCode-75",
+    route: "https://leetcode.com/studyplan/leetcode-75/",
   },
   {
+    key: "l_150",
     text: "Top Interview 150",
-    route: "/top-interview-75",
+    route: "https://leetcode.com/studyplan/top-interview-150/",
   },
 ];
 
@@ -84,9 +86,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [upCount, setUpCount] = useState(null);
 
-  const handleClick = (e, route) => {
+  const handleClick = (e, route, key) => {
     e.preventDefault();
-    navigate(route);
+    if (key === "l_75" || key === "l_150") {
+      window.open(route, "_blank");
+    } else {
+      navigate(route);
+    }
   };
 
   useEffect(() => {
@@ -130,7 +136,7 @@ const Navbar = () => {
                 route={i.route === pathname}
                 isHome={!isDark ? 1 : 0}
                 text={i.text}
-                onClick={(e) => handleClick(e, i.route)}
+                onClick={(e) => handleClick(e, i.route, i.key)}
               >
                 {i.text}
               </NavItem>
