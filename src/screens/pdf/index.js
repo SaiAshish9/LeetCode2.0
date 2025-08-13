@@ -12,16 +12,27 @@ const data = [
   { text: "DP Patterns" },
   { text: "Amazon and Coupang LPs" },
   { text: "Matrix Patterns" },
+  { text: "Design Patterns" },
 ];
 const paths = {
-  [data[0].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Problem%20Solving%20Patterns_compressed.pdf",
-  [data[1].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/HLD_Concepts_Brief_Overview.pdf",
-  [data[2].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Design%20Patterns%20Use%20Cases.pdf",
-  [data[3].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/LeetCode_Design_Questions_compressed.pdf",
-  [data[4].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Low_Level_Design_(WO_Spring).pdf",
-  [data[5].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/DP_Conceptual_Patterns.pdf",
-  [data[6].text]: "https://github.com/SaiAshish9/PDF_Notes/blob/main/Amazon_Leadership_Principles.pdf",
-  [data[7].text]: "https://www.notion.so/Matrix-Patterns-11544a9e7db180cf9308f9473cfe4f85",
+  [data[0].text]:
+    "https://github.com/SaiAshish9/PDF_Notes/blob/main/Problem%20Solving%20Patterns_compressed.pdf",
+  [data[1].text]:
+    "https://github.com/SaiAshish9/PDF_Notes/blob/main/HLD_Concepts_Brief_Overview.pdf",
+  [data[2].text]:
+    "https://github.com/SaiAshish9/PDF_Notes/blob/main/Design%20Patterns%20Use%20Cases.pdf",
+  [data[3].text]:
+    "https://github.com/SaiAshish9/PDF_Notes/blob/main/LeetCode_Design_Questions_compressed.pdf",
+  [data[4].text]:
+    "https://github.com/SaiAshish9/PDF_Notes/blob/main/Low_Level_Design_(WO_Spring).pdf",
+  [data[5].text]:
+    "https://github.com/SaiAshish9/PDF_Notes/blob/main/DP_Conceptual_Patterns.pdf",
+  [data[6].text]:
+    "https://github.com/SaiAshish9/PDF_Notes/blob/main/Amazon_Leadership_Principles.pdf",
+  [data[7].text]:
+    "https://www.notion.so/Matrix-Patterns-11544a9e7db180cf9308f9473cfe4f85",
+  [data[8].text]:
+    "https://github.com/SaiAshish9/PDF_Notes/blob/main/Design%20Patterns.pdf",
 };
 
 const PDFs = () => {
