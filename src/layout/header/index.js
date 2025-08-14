@@ -71,7 +71,7 @@ const options = [
   {
     key: "l_75",
     text: "LeetCode 75",
-    route: "https://github.com/SaiAshish9/LeetCode2.0_Assets/blob/main/LeetCode_75_compressed.pdf",
+    route: "https://github.com/SaiAshish9/PDF_Notes/blob/main/LeetCode_75_compressed.pdf",
   },
   {
     key: "l_150",
