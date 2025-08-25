@@ -4,7 +4,6 @@ import { Home, Problem, QSList, RevisionSheet } from "./screens";
 import { Container } from "./styles";
 import { useEffect } from "react";
 import PDFs from "./screens/pdf";
-import AdComponent from "./AdComponent";
 
 function App() {
   const { pathname } = useLocation();
