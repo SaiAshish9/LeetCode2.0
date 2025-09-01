@@ -83,6 +83,10 @@ export const StyledTableContainer = styled(Table)`
     padding: 11px 8px !important;
   }
 
+  .ant-table-cell-row-cell-hover {
+    background: unset !important;
+  }
+
   .ant-table-thead {
     .ant-table-cell {
       background: rgb(26 26 26) !important;
