@@ -350,7 +350,7 @@ const Problem = () => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [location, revisionData, solutionKeys]);
 
   return (
     <Container>
