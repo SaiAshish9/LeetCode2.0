@@ -152,6 +152,14 @@ export const ProblemText = styled.p`
   @media only screen and (max-width: ${BREAKPOINTS.x100}) {
     top: -1.5px;
   }
+  ${({ nb }) =>
+    nb === 1
+      ? css`
+          font-weight: 300;
+        `
+      : css`
+          font-weight: 500;
+        `};
 `;
 
 export const LeftLI = styled.li`

@@ -380,7 +380,7 @@ const Problem = () => {
               />
             </NavIcon>
             <ProblemText>Problem List</ProblemText>
-            <ProblemText>Navigate using the left and right arrow keys ({"<"} and {">"}).</ProblemText>
+            <ProblemText nb={1}>(Navigate using the left and right keyboard keys ({"<"} and {">"}))</ProblemText>
             <NavIcon>
               <StyledImage
                 style={{ height: "16px" }}
