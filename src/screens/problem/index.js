@@ -303,44 +303,46 @@ const Problem = () => {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === "ArrowRight") {
-        const tag = searchParams.get("tag");
-        const Q = decodeURIComponent(
-          location?.pathname?.split("/problems/")?.[1]
-        );
-        if (tag) {
-          const data = Array.from(new Set(revisionData));
-          const index = data.indexOf(Q);
-          navigate(`/problems/${data[(index + 1) % data.length]}?tag=${tag}`);
-        } else {
-          const data = Array.from(new Set(solutionKeys));
-          const index = data.indexOf(Q);
-          navigate(`/problems/${data[(index + 1) % data.length]}`);
+      if (location && revisionData && solutionKeys) {
+        if (event.key === "ArrowRight") {
+          const tag = searchParams.get("tag");
+          const Q = decodeURIComponent(
+            location?.pathname?.split("/problems/")?.[1]
+          );
+          if (tag) {
+            const data = Array.from(new Set(revisionData));
+            const index = data.indexOf(Q);
+            navigate(`/problems/${data[(index + 1) % data.length]}?tag=${tag}`);
+          } else {
+            const data = Array.from(new Set(solutionKeys));
+            const index = data.indexOf(Q);
+            navigate(`/problems/${data[(index + 1) % data.length]}`);
+          }
         }
-      }
-      if (event.key === "ArrowLeft") {
-        const tag = searchParams.get("tag");
-        const Q = decodeURIComponent(
-          location?.pathname?.split("/problems/")?.[1]
-        );
-        if (tag) {
-          const data = Array.from(new Set(revisionData));
-          const index = data.indexOf(Q);
-          navigate(
-            `/problems/${
-              data[index - 1 >= 0 ? index - 1 : data.length - 1]
-            }?tag=${tag}`
+        if (event.key === "ArrowLeft") {
+          const tag = searchParams.get("tag");
+          const Q = decodeURIComponent(
+            location?.pathname?.split("/problems/")?.[1]
           );
-        } else {
-          const data = Array.from(new Set(solutionKeys));
-          const index = data.indexOf(Q);
-          navigate(
-            `/problems/${
-              index > 1
-                ? data[(index - 1) % data.length]
-                : data[data.length - 1]
-            }`
-          );
+          if (tag) {
+            const data = Array.from(new Set(revisionData));
+            const index = data.indexOf(Q);
+            navigate(
+              `/problems/${
+                data[index - 1 >= 0 ? index - 1 : data.length - 1]
+              }?tag=${tag}`
+            );
+          } else {
+            const data = Array.from(new Set(solutionKeys));
+            const index = data.indexOf(Q);
+            navigate(
+              `/problems/${
+                index > 1
+                  ? data[(index - 1) % data.length]
+                  : data[data.length - 1]
+              }`
+            );
+          }
         }
       }
     };
