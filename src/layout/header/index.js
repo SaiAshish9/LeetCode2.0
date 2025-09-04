@@ -78,6 +78,11 @@ const options = [
     text: "Top Interview 150",
     route: "https://leetcode.com/studyplan/top-interview-150/",
   },
+  {
+    key: "github",
+    text: "Github",
+    route: "https://github.com/SaiAshish9/LeetcodePatterns/",
+  },
 ];
 
 const Navbar = () => {
