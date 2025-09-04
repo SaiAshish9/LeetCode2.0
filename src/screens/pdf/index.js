@@ -30,7 +30,7 @@ const paths = {
   [data[6].text]:
     "https://github.com/SaiAshish9/PDF_Notes/blob/main/Amazon_Leadership_Principles.pdf",
   [data[7].text]:
-    "https://www.notion.so/Matrix-Patterns-11544a9e7db180cf9308f9473cfe4f85",
+    "https://weak-bunny-372.notion.site/Matrix-Patterns-11544a9e7db180cf9308f9473cfe4f85?pvs=74",
   [data[8].text]:
     "https://github.com/SaiAshish9/PDF_Notes/blob/main/Design%20Patterns.pdf",
 };
