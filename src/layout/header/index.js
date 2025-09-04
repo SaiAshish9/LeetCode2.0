@@ -27,6 +27,7 @@ import BellSvg from "../../assets/bell.svg";
 import FireSvg from "../../assets/fire.svg";
 import LogoDark from "../../assets/logo_dark.svg";
 import ProfileImg from "../../assets/l_profile.jpeg";
+import { FaGithub } from "react-icons/fa";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -71,7 +72,8 @@ const options = [
   {
     key: "l_75",
     text: "LeetCode 75",
-    route: "https://github.com/SaiAshish9/PDF_Notes/blob/main/LeetCode_75_compressed.pdf",
+    route:
+      "https://github.com/SaiAshish9/PDF_Notes/blob/main/LeetCode_75_compressed.pdf",
   },
   {
     key: "l_150",
@@ -80,7 +82,11 @@ const options = [
   },
   {
     key: "github",
-    text: "Github",
+    text: (
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <FaGithub /> Patterns Github
+      </div>
+    ),
     route: "https://github.com/SaiAshish9/LeetcodePatterns/",
   },
 ];
@@ -93,7 +99,7 @@ const Navbar = () => {
 
   const handleClick = (e, route, key) => {
     e.preventDefault();
-    if (key === "l_75" || key === "l_150") {
+    if (["l_75", "l_150", "github"].includes(key)) {
       window.open(route, "_blank");
     } else {
       navigate(route);
