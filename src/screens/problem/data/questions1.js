@@ -64473,7 +64473,7 @@ l a d y`}
       </p>
 
       <pre>
-        <strong>Input:</strong> nums = [1,2,3]
+        <strong>Input:</strong> nums = [1,2,3] <br />
         <strong>Output:</strong> [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]{" "}
         <br />
       </pre>
