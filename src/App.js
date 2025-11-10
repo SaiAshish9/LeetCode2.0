@@ -26,18 +26,54 @@ function App() {
   }, []);
 
   return (
-    <Container isHome={pathname === "/" ? 1 : 0}>
-      {!["problems"].includes(pathname?.split("/")?.[1]) && <Header />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="tag/*" element={<QSList />} />
-        <Route path="problems/*" element={<Problem />} />
-        <Route path="revision_sheet/*" element={<RevisionSheet />} />
-        <Route path="pdf/*" element={<PDFs />} />
-      </Routes>
+    // <Container isHome={pathname === "/" ? 1 : 0}>
+    //   {!["problems"].includes(pathname?.split("/")?.[1]) && <Header />}
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="tag/*" element={<QSList />} />
+    //     <Route path="problems/*" element={<Problem />} />
+    //     <Route path="revision_sheet/*" element={<RevisionSheet />} />
+    //     <Route path="pdf/*" element={<PDFs />} />
+    //   </Routes>
 
-      {/* <AdComponent /> */}
-    </Container>
+    //   {/* <AdComponent /> */}
+    // </Container>
+    <>
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "#fff",
+          paddingTop: "2rem",
+        }}
+      >
+        {[...Array(3).keys()].map((i) => (
+          <div
+            key={i}
+            style={{
+              width: "30rem",
+              height: "10rem",
+              margin: "1rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            {[...Array(3).keys()].map((j) => (
+              <div
+                key={i + j}
+                style={{
+                  width: "33.33%",
+                  height: "10rem",
+                  backgroundColor: (i + j) % 2 ? "#000" : "blue",
+                  margin: "1rem 0.5rem",
+                }}
+              ></div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
