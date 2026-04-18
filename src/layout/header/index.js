@@ -183,7 +183,7 @@ const Navbar = () => {
           <CircularAvatar
             onClick={() => {
               window.open(
-                "https://www.linkedin.com/in/%F0%9F%9A%80-sai-ashish-237784188/",
+                "https://www.linkedin.com/in/saiashish9/",
                 "_blank"
               );
             }}
